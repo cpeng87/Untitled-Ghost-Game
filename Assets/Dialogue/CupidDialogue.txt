@@ -1,0 +1,14 @@
+[Order]
+I would like a {item}, please.
+
+[Success]
+Thank you so much! Nothing like a {item} to clear my mind.
+[End]
+
+[Failure]
+What is this? Is this even edible...?
+[End]
+
+[Story]
+You should play limbus company.
+[End]
