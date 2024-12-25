@@ -66,7 +66,13 @@ public class OrderManager : MonoBehaviour
         if (result)
         {
             List<string> successDialogue = TagReplacer(currGhost.success, "{item}", activeOrders[currActiveOrder].recipeName);
-            DialogueManager.Instance.StartDialogue(currGhost.ghostName, successDialogue);
+            //add story dialogue as well
+            int storyIndex = GameManager.Instance.ghostManager.GetStoryIndex(currGhost.ghostName);
+            GameManager.Instance.ghostManager.IncrementStoryIndex(currGhost.ghostName);
+            List<string> storyDialogue = currGhost.story[storyIndex];
+            List<string> combinedDialogue = successDialogue;
+            combinedDialogue.AddRange(storyDialogue);
+            DialogueManager.Instance.StartDialogue(currGhost.ghostName, combinedDialogue);
             GameManager.Instance.AddCurrency(activeOrders[currActiveOrder].price);
         }
         else

@@ -17,6 +17,11 @@ public class UIManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    public void MakeOrderButton()
+    {
+        GameManager.Instance.orderManager.MakeOrder();
+    }
+
     public void UpdateCurrency(int newValue)
     {
         currencyField.text = "Currency: " + newValue;

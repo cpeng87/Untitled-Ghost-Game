@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 69912026}
   - component: {fileID: 69912025}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Make Order
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -202,9 +202,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1472765268}
-        m_TargetAssemblyTypeName: OrderManager, Assembly-CSharp
-        m_MethodName: MakeOrder
+      - m_Target: {fileID: 739209226}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: MakeOrderButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
