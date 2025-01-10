@@ -12,6 +12,8 @@ public class DialogueManager : MonoBehaviour
 
     private List<string> currDialogue = new List<string>();
     private int currIndex; // index of current dialogue
+    private bool deleteGhost = false;
+    private int seatNum = -1;
 
     private void Awake()
     {
@@ -53,8 +55,15 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    //
-    public void StartDialogue(string name, List<string> dialogue)
+    public void CompleteOrderDialogue(string name, List<string> dialogue, int seatNum)
+    {
+        StartDialogue(name, dialogue, seatNum);
+        //delete ghost signal
+        deleteGhost = true;
+        this.seatNum = seatNum;
+    }
+
+    public void StartDialogue(string name, List<string> dialogue, int seatNum)
     {
         panel.SetActive(true);
         nameField.text = name;
@@ -62,6 +71,7 @@ public class DialogueManager : MonoBehaviour
         currDialogue = dialogue;
         currIndex = 0;
         GameManager.Instance.SwitchToDialogue();
+        CameraManager.Instance.SwapToSeatCamera(seatNum);
     }
 
     //increments curring index and updates ui display. If reached end of dialogue, ends the dialogue
@@ -84,6 +94,12 @@ public class DialogueManager : MonoBehaviour
         panel.SetActive(false);
         GameManager.Instance.SwitchToMain();
         currDialogue = null;
+        CameraManager.Instance.SwapToMainCamera();
+        if (deleteGhost)
+        {
+            GhostSpawningManager.Instance.DeleteSpawnedGhost(seatNum);
+        }
+        deleteGhost = false;
     }
 
     //returns in the format of success, failure, and then a list of story dialogues in a tuple

@@ -7,6 +7,9 @@ public class GhostManager : MonoBehaviour
     public Dictionary<string, GameObject> ghostNameToGameObjDict = new Dictionary<string, GameObject>();
     public Dictionary<string, Ghost> ghostNameToScriptableDict = new Dictionary<string, Ghost>();
     public Dictionary<string, int> ghostNameToStoryIndex = new Dictionary<string, int>();
+    public Dictionary<Recipe, List<Ghost>> recipeToGhostsDict = new Dictionary<Recipe, List<Ghost>>();
+    // public List<GhostObj> unlockedGhosts = new List<GhostObj>();
+    public Ghost[] activeGhosts;
 
     public void Setup()
     {
@@ -17,7 +20,20 @@ public class GhostManager : MonoBehaviour
             ghostNameToScriptableDict.Add(currGhost.ghostName, currGhost);
             ghostNameToGameObjDict.Add(currGhost.ghostName, ghost);
             ghostNameToStoryIndex.Add(currGhost.ghostName, 0);
+            foreach (Recipe recipe in currGhost.recipesOrdered)
+            {
+                if (recipeToGhostsDict.ContainsKey(recipe))
+                {
+                    recipeToGhostsDict[recipe].Add(currGhost);
+                }
+                else
+                {
+                    recipeToGhostsDict.Add(recipe, new List<Ghost>());
+                    recipeToGhostsDict[recipe].Add(currGhost);
+                }
+            }
         }
+        activeGhosts = new Ghost[GameManager.Instance.maxGhosts];
     }
 
     public GameObject GetGhostObjFromName(string name)
@@ -72,4 +88,95 @@ public class GhostManager : MonoBehaviour
         Debug.Log("Ghost with name: " + name + " does not exist in the dictionary.");
         return -1;
     }
+
+    public List<Ghost> GetGhostsFromRecipe(Recipe recipe)
+    {
+        if (recipeToGhostsDict.ContainsKey(recipe))
+        {
+            return recipeToGhostsDict[recipe];
+        }
+        else
+        {
+            return new List<Ghost>();
+        }
+    }
+
+    public bool CheckGhostIsActive(Ghost ghost)
+    {
+        foreach (Ghost otherGhost in activeGhosts)
+        {
+            if (ghost == otherGhost)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public bool IsActiveFull()
+    {
+        int activeCount = 0;
+
+        foreach (Ghost ghost in activeGhosts)
+        {
+            if (ghost != null)
+            {
+                activeCount++;
+            }
+        }
+
+        if (activeCount == GameManager.Instance.maxGhosts)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+
+    public bool HasActive()
+    {
+        foreach (Ghost ghost in activeGhosts)
+        {
+            if (ghost != null)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+    public bool AddActiveGhost(Ghost newGhost)
+    {
+        Debug.Log("adding active ghost");
+        if (!IsActiveFull())
+        {
+            for (int i = 0; i < activeGhosts.Length; i++)
+            {
+                if (activeGhosts[i] == null)
+                {
+                    activeGhosts[i] = newGhost;
+                    return true;
+                }
+            }
+        }
+        
+        Debug.Log("Max ghosts reached! No null spot found.");
+        return false;
+    }
+
+    public void RemoveActiveGhost(Ghost ghost)
+    {
+        for (int i = 0; i < activeGhosts.Length; i++)
+        {
+            if (activeGhosts[i] == ghost)
+            {
+                activeGhosts[i] = null;
+            }
+        }
+    }
+
 }

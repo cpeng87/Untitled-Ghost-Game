@@ -7,13 +7,15 @@ public class Order
     public string minigame;
     public string recipeName;
     public int price;
+    public int seatNum;
 
-    public Order(string ghostName, string minigame, string recipeName, int price)
+    public Order(string ghostName, string minigame, string recipeName, int price, int seatNum)
     {
         this.ghostName = ghostName;
         this.minigame = minigame;
         this.recipeName = recipeName;
         this.price = price;
+        this.seatNum = seatNum;
     }
 }
 public class OrderManager : MonoBehaviour
@@ -23,7 +25,7 @@ public class OrderManager : MonoBehaviour
 
     //Randomized a recipe that is avaliable to order. Adds that order and triggers dialogue for the order
     //Returns whether it is a success or fail to tell the object in Ghostobj to switch states
-    public bool TakeOrder(string name, List<string> orderDialogue, List<Recipe> recipes)
+    public bool TakeOrder(string name, List<string> orderDialogue, List<Recipe> recipes, int seatNum)
     {
 
         List<Recipe> possibleRecipe = new List<Recipe>();
@@ -41,10 +43,11 @@ public class OrderManager : MonoBehaviour
         }
         int selectedIndex = (int) (Random.value * possibleRecipe.Count);
 
-        activeOrders.Add(new Order(name, recipes[selectedIndex].minigame, recipes[selectedIndex].recipeName, recipes[selectedIndex].sellPrice));
+        activeOrders.Add(new Order(name, recipes[selectedIndex].minigame, recipes[selectedIndex].recipeName, recipes[selectedIndex].sellPrice, seatNum));
         currActiveOrder = activeOrders.Count - 1;
         orderDialogue = TagReplacer(orderDialogue, "{item}", recipes[selectedIndex].recipeName);
-        DialogueManager.Instance.StartDialogue(name, orderDialogue);
+        DialogueManager.Instance.StartDialogue(name, orderDialogue, seatNum);
+        Debug.Log("Size of orders: " + activeOrders.Count);
         return true;
     }
 
@@ -52,6 +55,7 @@ public class OrderManager : MonoBehaviour
     public void MakeOrder()
     {
         GameManager.Instance.SwitchToMinigame(activeOrders[0].minigame);
+        currActiveOrder = 0;
     }
 
     //completes an order
@@ -72,15 +76,17 @@ public class OrderManager : MonoBehaviour
             List<string> storyDialogue = currGhost.story[storyIndex];
             List<string> combinedDialogue = successDialogue;
             combinedDialogue.AddRange(storyDialogue);
-            DialogueManager.Instance.StartDialogue(currGhost.ghostName, combinedDialogue);
+            DialogueManager.Instance.CompleteOrderDialogue(currGhost.ghostName, combinedDialogue, activeOrders[currActiveOrder].seatNum);
             GameManager.Instance.AddCurrency(activeOrders[currActiveOrder].price);
         }
         else
         {
             List<string> failureDialogue = TagReplacer(currGhost.failure, "{item}", activeOrders[currActiveOrder].recipeName);
-            DialogueManager.Instance.StartDialogue(currGhost.ghostName, failureDialogue);
+            DialogueManager.Instance.CompleteOrderDialogue(currGhost.ghostName, failureDialogue, activeOrders[currActiveOrder].seatNum);
         }
         activeOrders.RemoveAt(currActiveOrder);
+        GameManager.Instance.ghostManager.RemoveActiveGhost(currGhost);
+        Debug.Log("Completed order!");
     }
 
     //helper method to replace tags in strings
@@ -93,5 +99,30 @@ public class OrderManager : MonoBehaviour
             rtn.Add(dialogue[i].Replace(tag, newString));
         }
         return rtn;
+    }
+
+    public int GetSeatNum(string ghostName)
+    {
+        foreach (Order order in activeOrders)
+        {
+            if (order.ghostName == ghostName)
+            {
+                return order.seatNum;
+            }
+        }
+        Debug.Log("Could not find seat num for ghost with name: " + ghostName + ". An error has occured.");
+        return -1;
+    }
+
+    public bool HasActiveOrder(string ghostName)
+    {
+        foreach (Order order in activeOrders)
+        {
+            if (order.ghostName == ghostName)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }

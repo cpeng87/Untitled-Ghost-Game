@@ -19,8 +19,9 @@ public class GameManager : MonoBehaviour
     public List<string> minigames = new List<string>();
     private int currency;
     public List<Recipe> unlockedRecipes = new List<Recipe>();
-    // public List<Ghost> ghosts = new List<Ghost>();
+    public List<Recipe> recipes = new List<Recipe>();
     public State state;
+    public int maxGhosts;
 
     public bool parsedDialogue = false;
 
@@ -98,4 +99,33 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
+
+    // public void SpawnGhost()
+    // {
+    //     if (ghostManager.IsActiveFull() == true)
+    //     {
+    //         return;
+    //     }
+    //     List<Ghost> possibleGhost = new List<Ghost>();
+    //     foreach (Recipe recipe in unlockedRecipes)
+    //     {
+    //         possibleGhost.AddRange(ghostManager.GetGhostsFromRecipe(recipe));
+    //     }
+    //     //randomize a index to check spawn, if alr has active order, keep reroll, until no active order or 100 rerolls
+    //     int index = (int) (Random.value * possibleGhost.Count);
+    //     int count = 0;
+    //     while (ghostManager.CheckGhostIsActive(possibleGhost[index]) == true)
+    //     {
+    //         if (count > 100)
+    //         {
+    //             Debug.Log("Cannot spawn any ghost, maxed rolls");
+    //             return;
+    //         }
+    //         index = (int) (Random.value * possibleGhost.Count);
+    //         count++;
+    //     }
+
+    //     ghostManager.AddActiveGhost(possibleGhost[index]);
+
+    // }
 }
