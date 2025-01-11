@@ -70,7 +70,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptable: {fileID: 11400000, guid: 101493e60bcc17e47bd367a34fa5b828, type: 2}
-  hasTakedOrder: 0
 --- !u!1001 &9035675346904606501
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -198,7 +197,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptable: {fileID: 11400000, guid: 101493e60bcc17e47bd367a34fa5b828, type: 2}
-  hasTakedOrder: 0
 --- !u!136 &661386596327651397
 CapsuleCollider:
   m_ObjectHideFlags: 0

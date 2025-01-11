@@ -20,7 +20,7 @@ public class Order
 }
 public class OrderManager : MonoBehaviour
 {
-    public List<Order> activeOrders = new List<Order>();
+    public List<Order> activeOrders = new List<Order>();  //list of active orders for ghosts
     private int currActiveOrder = -1;  //keeps track of the current order being worked on after make order is pressed. normally set to -1 to indicate no current order being worked on
 
     //Randomized a recipe that is avaliable to order. Adds that order and triggers dialogue for the order
@@ -54,6 +54,11 @@ public class OrderManager : MonoBehaviour
     //calls game manager to switch to the minigame! Currently does the first order.
     public void MakeOrder()
     {
+        if (activeOrders.Count == 0)
+        {
+            Debug.Log("No active orders.");
+            return;
+        }
         GameManager.Instance.SwitchToMinigame(activeOrders[0].minigame);
         currActiveOrder = 0;
     }
@@ -72,6 +77,7 @@ public class OrderManager : MonoBehaviour
             List<string> successDialogue = TagReplacer(currGhost.success, "{item}", activeOrders[currActiveOrder].recipeName);
             //add story dialogue as well
             int storyIndex = GameManager.Instance.ghostManager.GetStoryIndex(currGhost.ghostName);
+            Debug.Log("story Index: " + storyIndex);
             GameManager.Instance.ghostManager.IncrementStoryIndex(currGhost.ghostName);
             List<string> storyDialogue = currGhost.story[storyIndex];
             List<string> combinedDialogue = successDialogue;
@@ -101,6 +107,7 @@ public class OrderManager : MonoBehaviour
         return rtn;
     }
 
+    //returns seat number based on name of ghost, returns -1 if not found
     public int GetSeatNum(string ghostName)
     {
         foreach (Order order in activeOrders)
@@ -114,6 +121,7 @@ public class OrderManager : MonoBehaviour
         return -1;
     }
 
+    //returns true if ghost has an active order, false otherwise
     public bool HasActiveOrder(string ghostName)
     {
         foreach (Order order in activeOrders)

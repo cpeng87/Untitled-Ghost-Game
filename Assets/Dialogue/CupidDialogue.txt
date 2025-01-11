@@ -10,5 +10,13 @@ What is this? Is this even edible...?
 [End]
 
 [Story]
-You should play limbus company.
+insert basic greeting and intro
+[End]
+
+[Story]
+friendly chatter
+[End]
+
+[Story]
+third stage
 [End]

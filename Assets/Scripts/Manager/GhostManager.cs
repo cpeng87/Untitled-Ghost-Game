@@ -3,17 +3,17 @@ using System.Collections.Generic;
 
 public class GhostManager : MonoBehaviour
 {
-    public List<GameObject> ghosts;
+    public List<GameObject> ghosts;  //list of all ghosts 
     public Dictionary<string, GameObject> ghostNameToGameObjDict = new Dictionary<string, GameObject>();
     public Dictionary<string, Ghost> ghostNameToScriptableDict = new Dictionary<string, Ghost>();
     public Dictionary<string, int> ghostNameToStoryIndex = new Dictionary<string, int>();
     public Dictionary<Recipe, List<Ghost>> recipeToGhostsDict = new Dictionary<Recipe, List<Ghost>>();
-    // public List<GhostObj> unlockedGhosts = new List<GhostObj>();
-    public Ghost[] activeGhosts;
+    public Ghost[] activeGhosts; //array of ghosts that have been spawned. Limited by maxghosts in GameManager
 
+    //setup dictionaries and activeghosts
     public void Setup()
     {
-        // settting up both dictionaries
+        // settting up dictionaries
         foreach (GameObject ghost in ghosts)
         {
             Ghost currGhost = ghost.GetComponent<GhostObj>().GetScriptable();
@@ -66,12 +66,14 @@ public class GhostManager : MonoBehaviour
         if (ghostNameToStoryIndex.ContainsKey(name))
         {
             Ghost ghost = GetGhostScriptableFromName(name);
-            if (ghost.story.Count - 1 >= ghostNameToStoryIndex[name])
+            Debug.Log("Story count:" + ghost.story.Count + " , story index: " + ghostNameToStoryIndex[name]);
+            if (ghost.story.Count - 1 <= ghostNameToStoryIndex[name])
             {
                 Debug.Log("Reached end of dialogue, will not increment");
             }
             else
             {
+                Debug.Log("Incrementing story index");
                 ghostNameToStoryIndex[name] = ghostNameToStoryIndex[name] + 1;
             }
             return;

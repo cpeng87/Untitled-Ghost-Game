@@ -6,15 +6,17 @@ public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance { get; private set; }
 
+    //ui elements
     [SerializeField] private GameObject panel;
     [SerializeField] private TMP_Text nameField;
     [SerializeField] private TMP_Text dialogueField;
 
-    private List<string> currDialogue = new List<string>();
+    private List<string> currDialogue = new List<string>();   //collection of dialogue lines for the current dialogue
     private int currIndex; // index of current dialogue
-    private bool deleteGhost = false;
-    private int seatNum = -1;
+    private bool deleteGhost = false;  //flag for if the ghost needs to be deleted at the end of the dialogue
+    private int seatNum = -1;   //keeps track of current dialogue ghost's seat number
 
+    // singleton
     private void Awake()
     {
         if (Instance == null)
@@ -27,6 +29,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    //parses each ghost's dialogue from the .txt file and sets the lines in the scriptable ghost object
     private void Start()
     {
         if (GameManager.Instance.parsedDialogue == false)
@@ -44,6 +47,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    //advance dialogue when clicked down and in dialogue state
     private void Update()
     {
         if (GameManager.Instance.state == State.Dialogue)
@@ -55,6 +59,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    //starts dialogue and flags that the ghost should be deleted once the dialogue is complete, set seatnum so correct ghost is deleted
     public void CompleteOrderDialogue(string name, List<string> dialogue, int seatNum)
     {
         StartDialogue(name, dialogue, seatNum);
@@ -63,6 +68,7 @@ public class DialogueManager : MonoBehaviour
         this.seatNum = seatNum;
     }
 
+    //starts dialogue by activating dialogue ui and swaps to the correct seat number camera
     public void StartDialogue(string name, List<string> dialogue, int seatNum)
     {
         panel.SetActive(true);
@@ -166,6 +172,7 @@ public class DialogueManager : MonoBehaviour
                 }
             }
         }
+        Debug.Log(story.Count);
         return (success, failure, order, story);
     }
 }

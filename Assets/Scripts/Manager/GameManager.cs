@@ -9,6 +9,7 @@ public enum State
     Dialogue
 }
 
+//manages state of game
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
@@ -25,6 +26,7 @@ public class GameManager : MonoBehaviour
 
     public bool parsedDialogue = false;
 
+    //singleton
     private void Awake()
     {
         if (Instance == null)
@@ -40,7 +42,6 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        SceneManager.sceneLoaded += OnSceneLoaded;
         state = State.Main;
         orderManager = GetComponent<OrderManager>();
         ghostManager = GetComponent<GhostManager>();
@@ -84,48 +85,4 @@ public class GameManager : MonoBehaviour
         UIManager.Instance.UpdateCurrency(currency);
         Debug.Log("Currency: " + currency);
     }
-
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        Debug.Log("OnSceneLoaded: " + scene.name);
-
-        if (state == State.Main)
-        {
-            Debug.Log("Main state loaded. Initialize UI elements here.");
-        }
-    }
-
-    private void OnDestroy()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
-
-    // public void SpawnGhost()
-    // {
-    //     if (ghostManager.IsActiveFull() == true)
-    //     {
-    //         return;
-    //     }
-    //     List<Ghost> possibleGhost = new List<Ghost>();
-    //     foreach (Recipe recipe in unlockedRecipes)
-    //     {
-    //         possibleGhost.AddRange(ghostManager.GetGhostsFromRecipe(recipe));
-    //     }
-    //     //randomize a index to check spawn, if alr has active order, keep reroll, until no active order or 100 rerolls
-    //     int index = (int) (Random.value * possibleGhost.Count);
-    //     int count = 0;
-    //     while (ghostManager.CheckGhostIsActive(possibleGhost[index]) == true)
-    //     {
-    //         if (count > 100)
-    //         {
-    //             Debug.Log("Cannot spawn any ghost, maxed rolls");
-    //             return;
-    //         }
-    //         index = (int) (Random.value * possibleGhost.Count);
-    //         count++;
-    //     }
-
-    //     ghostManager.AddActiveGhost(possibleGhost[index]);
-
-    // }
 }

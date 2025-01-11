@@ -5,11 +5,12 @@ public class GhostSpawningManager : MonoBehaviour
 {
     public static GhostSpawningManager Instance { get; private set; }
     public List<GameObject> seats = new List<GameObject>(); //dependent on maxGhosts in gameManager, should be the same number
-    private Vector3[] positions;
-    private float ghostSpawnTimer = 0f;
-    private List<GameObject> spawnedGhosts = new List<GameObject>();
-    [SerializeField] private float ghostSpawnCooldown;
+    private Vector3[] positions;  // extracted positions of the seats from the seats List, size = maxGhosts from gamemanager
+    private float ghostSpawnTimer = 0f;  //keeps track of time passed 
+    private List<GameObject> spawnedGhosts = new List<GameObject>();  //keeps track of ghost gameobject spawned in the scene
+    [SerializeField] private float ghostSpawnCooldown;  //time for new ghost spawn
 
+    //singleton
     private void Awake()
     {
         if (Instance == null)
@@ -22,6 +23,7 @@ public class GhostSpawningManager : MonoBehaviour
         }
     }
 
+    //Sets up positions array and loads in ghost gameobjects based on ghostManager's active ghosts
     void Start()
     {
         positions = new Vector3[seats.Count];
@@ -41,13 +43,14 @@ public class GhostSpawningManager : MonoBehaviour
             SpawnGhost();
             ghostSpawnTimer = 0;
         }
-        else if (ghostSpawnTimer > ghostSpawnCooldown)
+        else if (ghostSpawnTimer > ghostSpawnCooldown && GameManager.Instance.state == State.Main)
         {
             SpawnGhost();
             ghostSpawnTimer = 0;
         }
     }
 
+    //reloads ghost objects based on ghostmanager's activeghosts
     public void UpdateGhostObjs()
     {
         //delete currently spawned ghosts
@@ -74,6 +77,7 @@ public class GhostSpawningManager : MonoBehaviour
 
     }
 
+    //spawns a new ghost, randomly selects ghost based on possible (recipes unlocked), adds to active ghosts and reloads ghost gameobjects
     public void SpawnGhost()
     {
         Debug.Log("Spawning Ghost");
@@ -106,9 +110,10 @@ public class GhostSpawningManager : MonoBehaviour
         UpdateGhostObjs();
     }
 
+    //deletes gameobject and removes from spawned ghosts list
     public void DeleteSpawnedGhost(int seatNum)
     {
-        
+
         Destroy(spawnedGhosts[seatNum]);
         spawnedGhosts.RemoveAt(seatNum);
     }
