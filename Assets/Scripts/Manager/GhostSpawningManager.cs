@@ -31,19 +31,23 @@ public class GhostSpawningManager : MonoBehaviour
         {
             positions[i] = seats[i].transform.position;
         }
+        ghostSpawnTimer = 0f;
         UpdateGhostObjs();
     }
 
     // Update is called once per frame
     void Update()
     {
-        ghostSpawnTimer += Time.deltaTime;
-        if (GameManager.Instance.ghostManager.HasActive() == false) //no ghosts in shop
+        if (GameManager.Instance.state == State.Main)
+        {
+            ghostSpawnTimer += Time.deltaTime;
+        }
+        if (GameManager.Instance.ghostManager.HasActive() == false && ghostSpawnTimer > 1.5f) //no ghosts in shop
         {
             SpawnGhost();
             ghostSpawnTimer = 0;
         }
-        else if (ghostSpawnTimer > ghostSpawnCooldown && GameManager.Instance.state == State.Main)
+        if (ghostSpawnTimer > ghostSpawnCooldown)
         {
             SpawnGhost();
             ghostSpawnTimer = 0;
@@ -91,7 +95,6 @@ public class GhostSpawningManager : MonoBehaviour
         {
             possibleGhost.AddRange(GameManager.Instance.ghostManager.GetGhostsFromRecipe(recipe));
         }
-        Debug.Log("Possible ghosts size: " + possibleGhost.Count);
         //randomize a index to check spawn, if alr has active order, keep reroll, until no active order or 100 rerolls
         int index = (int) (Random.value * possibleGhost.Count);
         int count = 0;

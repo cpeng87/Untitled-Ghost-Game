@@ -13,7 +13,7 @@ public class DialogueManager : MonoBehaviour
 
     private List<string> currDialogue = new List<string>();   //collection of dialogue lines for the current dialogue
     private int currIndex; // index of current dialogue
-    private bool deleteGhost = false;  //flag for if the ghost needs to be deleted at the end of the dialogue
+    private bool completeOrder = false;  //flag for if the ghost needs to be deleted at the end of the dialogue
     private int seatNum = -1;   //keeps track of current dialogue ghost's seat number
 
     // singleton
@@ -64,7 +64,7 @@ public class DialogueManager : MonoBehaviour
     {
         StartDialogue(name, dialogue, seatNum);
         //delete ghost signal
-        deleteGhost = true;
+        completeOrder = true;
         this.seatNum = seatNum;
     }
 
@@ -77,6 +77,8 @@ public class DialogueManager : MonoBehaviour
         currDialogue = dialogue;
         currIndex = 0;
         GameManager.Instance.SwitchToDialogue();
+        this.seatNum = seatNum;
+        Debug.Log("Seat number of dialogue: " + seatNum);
         CameraManager.Instance.SwapToSeatCamera(seatNum);
     }
 
@@ -101,11 +103,12 @@ public class DialogueManager : MonoBehaviour
         GameManager.Instance.SwitchToMain();
         currDialogue = null;
         CameraManager.Instance.SwapToMainCamera();
-        if (deleteGhost)
+        if (completeOrder)
         {
             GhostSpawningManager.Instance.DeleteSpawnedGhost(seatNum);
+            GameManager.Instance.orderManager.RemoveCompletedOrder();
         }
-        deleteGhost = false;
+        completeOrder = false;
     }
 
     //returns in the format of success, failure, and then a list of story dialogues in a tuple
@@ -172,7 +175,6 @@ public class DialogueManager : MonoBehaviour
                 }
             }
         }
-        Debug.Log(story.Count);
         return (success, failure, order, story);
     }
 }

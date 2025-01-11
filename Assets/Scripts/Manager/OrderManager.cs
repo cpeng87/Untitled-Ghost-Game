@@ -77,7 +77,6 @@ public class OrderManager : MonoBehaviour
             List<string> successDialogue = TagReplacer(currGhost.success, "{item}", activeOrders[currActiveOrder].recipeName);
             //add story dialogue as well
             int storyIndex = GameManager.Instance.ghostManager.GetStoryIndex(currGhost.ghostName);
-            Debug.Log("story Index: " + storyIndex);
             GameManager.Instance.ghostManager.IncrementStoryIndex(currGhost.ghostName);
             List<string> storyDialogue = currGhost.story[storyIndex];
             List<string> combinedDialogue = successDialogue;
@@ -90,8 +89,13 @@ public class OrderManager : MonoBehaviour
             List<string> failureDialogue = TagReplacer(currGhost.failure, "{item}", activeOrders[currActiveOrder].recipeName);
             DialogueManager.Instance.CompleteOrderDialogue(currGhost.ghostName, failureDialogue, activeOrders[currActiveOrder].seatNum);
         }
-        activeOrders.RemoveAt(currActiveOrder);
+    }
+
+    public void RemoveCompletedOrder()
+    {
+        Ghost currGhost = GameManager.Instance.ghostManager.GetGhostScriptableFromName(activeOrders[currActiveOrder].ghostName);
         GameManager.Instance.ghostManager.RemoveActiveGhost(currGhost);
+        activeOrders.RemoveAt(currActiveOrder);
         Debug.Log("Completed order!");
     }
 

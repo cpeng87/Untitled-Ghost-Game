@@ -66,14 +66,12 @@ public class GhostManager : MonoBehaviour
         if (ghostNameToStoryIndex.ContainsKey(name))
         {
             Ghost ghost = GetGhostScriptableFromName(name);
-            Debug.Log("Story count:" + ghost.story.Count + " , story index: " + ghostNameToStoryIndex[name]);
             if (ghost.story.Count - 1 <= ghostNameToStoryIndex[name])
             {
                 Debug.Log("Reached end of dialogue, will not increment");
             }
             else
             {
-                Debug.Log("Incrementing story index");
                 ghostNameToStoryIndex[name] = ghostNameToStoryIndex[name] + 1;
             }
             return;
