@@ -151,7 +151,6 @@ public class GhostManager : MonoBehaviour
 
     public bool AddActiveGhost(Ghost newGhost)
     {
-        Debug.Log("adding active ghost");
         if (!IsActiveFull())
         {
             for (int i = 0; i < activeGhosts.Length; i++)

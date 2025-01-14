@@ -116,7 +116,7 @@ public class GhostSpawningManager : MonoBehaviour
     //deletes gameobject and removes from spawned ghosts list
     public void DeleteSpawnedGhost(int seatNum)
     {
-
+        Debug.Log("seat num to destroy: " + seatNum);
         Destroy(spawnedGhosts[seatNum]);
         spawnedGhosts.RemoveAt(seatNum);
     }
