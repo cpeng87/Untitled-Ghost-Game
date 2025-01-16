@@ -1,2 +1,2 @@
 # Untitled-Ghost-Game
-wah
+Welcome to the Cafe!
