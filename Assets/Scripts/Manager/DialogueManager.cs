@@ -52,7 +52,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (GameManager.Instance.state == State.Dialogue)
         {
-            if (Input.GetKeyDown(KeyCode.N))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 AdvanceDialogue();
             }
