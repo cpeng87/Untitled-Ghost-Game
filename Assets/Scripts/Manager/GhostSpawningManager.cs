@@ -23,7 +23,12 @@ public class GhostSpawningManager : MonoBehaviour
         }
     }
 
+    //A dictionary to contain a GameObject (key) and its assigned seat (value)
+    IDictionary<GameObject, Vector3> ghost_with_seat;
+    //A dictionary to contain a GameObject (key)and its change in position toward its seat (value)
+    IDictionary<GameObject, Vector3> ghost_with_speed;
     //Sets up positions array and loads in ghost gameobjects based on ghostManager's active ghosts
+
     void Start()
     {
         positions = new Vector3[seats.Count];
@@ -32,8 +37,13 @@ public class GhostSpawningManager : MonoBehaviour
             positions[i] = seats[i].transform.position;
         }
         ghostSpawnTimer = 0f;
+        ghost_with_seat = new Dictionary<GameObject, Vector3>();
+        ghost_with_speed = new Dictionary<GameObject, Vector3>();
         UpdateGhostObjs();
     }
+
+    
+
 
     // Update is called once per frame
     void Update()
@@ -52,29 +62,71 @@ public class GhostSpawningManager : MonoBehaviour
             SpawnGhost();
             ghostSpawnTimer = 0;
         }
+
+        //For every GameObject that has been spawned (key) and calculated speed for said GameObject (value)
+        foreach(KeyValuePair<GameObject, Vector3> entry in ghost_with_speed)
+        {
+            //If the GameObject's position is not at its seat, move it by its speed
+            if (ghost_with_seat[entry.Key].x > entry.Key.transform.position.x)
+            {
+                entry.Key.transform.position += entry.Value;
+            }
+            //If it has moved to far, place it in its seat
+            else
+            {
+                entry.Key.transform.position = ghost_with_seat[entry.Key];
+            }
+        }
     }
+    
+    //Spawning point for newly active ghosts, before they move to their seat
+    Vector3 door = new Vector3(-9, 0,-10);
+
+    //Variable to store the amount of game updates between a ghost spawning at the door and getting to their seat
+    float speed = 850;
+
 
     //reloads ghost objects based on ghostmanager's activeghosts
     public void UpdateGhostObjs()
     {
+        //Commented out this code so that moving ghost wouldn't be deleted/respawned
         //delete currently spawned ghosts
-        for (int i = 0; i < spawnedGhosts.Count; i++)
+        /*for (int i = 0; i < spawnedGhosts.Count; i++)
         {
             Destroy(spawnedGhosts[i]);
-        }
-        spawnedGhosts = new List<GameObject>();
+        }*/
+        //spawnedGhosts = new List<GameObject>();
+
         Ghost[] activeGhosts = GameManager.Instance.ghostManager.activeGhosts;
         for (int i = 0; i < activeGhosts.Length; i++)
         {
-            if (activeGhosts[i] != null)
+            //Declare a boolean to represent if a seat has a GameObject already assigned to it
+            bool seat_taken = false;
+
+            //For every spawned ghost, check if their seat is the same as the ghost in activeGhosts
+            foreach(KeyValuePair<GameObject, Vector3> keyValuePair in ghost_with_seat)
             {
-                GameObject newGhost = Instantiate(GameManager.Instance.ghostManager.GetGhostObjFromName(activeGhosts[i].ghostName), positions[i], Quaternion.identity);
+                if (positions[i] == keyValuePair.Value) { seat_taken = true; break; }
+            }
+
+            //Only do this if the active ghost isn't null and the seat they're assigned to is not taken
+            if (activeGhosts[i] != null && !seat_taken)
+            {
+                
+                GameObject newGhost = Instantiate(GameManager.Instance.ghostManager.GetGhostObjFromName(activeGhosts[i].ghostName), door, Quaternion.identity);
                 GhostObj ghostObj = newGhost.GetComponent<GhostObj>();
                 ghostObj.SetSeatNum(i);
                 if (GameManager.Instance.orderManager.HasActiveOrder(ghostObj.GetScriptable().ghostName) == true)
                 {
                     ghostObj.SetHasTakenOrder(true);
                 }
+
+                //Add the GameObject to the two dictionaries, calculating the needed speed for the ghost_with_speed dictionary
+                ghost_with_speed.Add(newGhost, new Vector3 (Mathf.Abs(positions[i].x - door.x)/speed, 
+                    Mathf.Abs(positions[i].y - door.y)/speed, 
+                    Mathf.Abs(positions[i].z - door.z)/speed));
+                ghost_with_seat.Add(newGhost, positions[i]);
+
                 spawnedGhosts.Add(newGhost);
             }
         }
