@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class RecipeShopManager : MonoBehaviour
 {
+    public static RecipeShopManager Instance { get; private set; }
     
     public GameObject recipePrefab;
     
@@ -17,6 +18,18 @@ public class RecipeShopManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI currencyText;
     [SerializeField] private Button recipeShopOpenButton;
     [SerializeField] private Button recipeShopReturnButton;
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
