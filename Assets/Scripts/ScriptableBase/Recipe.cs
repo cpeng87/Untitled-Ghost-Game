@@ -8,4 +8,5 @@ public class Recipe : ScriptableObject
     public int sellPrice; //how much you get when you make and sell one of these items
     public int buyPrice; //how much you pay when you buy from recipe store
     public string minigame;
+    public bool isBought = false; //Whether the player has the recipe or not
 }
