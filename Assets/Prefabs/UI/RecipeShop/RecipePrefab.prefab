@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5497288435314664735}
   - component: {fileID: 7624895419177096805}
   - component: {fileID: 2561462466488311353}
+  - component: {fileID: 668940976805817802}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -75,6 +76,35 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &668940976805817802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989471217899260513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8174727766980604570}
+          m_TargetAssemblyTypeName: Manager.RecipeShop.RecipeClickHandler, Assembly-CSharp
+          m_MethodName: RecipeClicked
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2681798631242755480
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,6 +386,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5395742091493682487}
+  - component: {fileID: 8174727766980604570}
   m_Layer: 5
   m_Name: RecipePrefab
   m_TagString: Untagged
@@ -385,3 +416,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8174727766980604570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7703420820620632800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b5949b7f8e3c0b498a7c632b035de6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 2561462466488311353}
+  nameText: {fileID: 4377760542591526142}
+  costText: {fileID: 7729078910175603103}
