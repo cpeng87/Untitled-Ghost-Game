@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
@@ -16,6 +17,8 @@ namespace Manager.RecipeShop
         [SerializeField] private bool shouldDebug = false; 
         //Recipes to populate the shop with
         [SerializeField] private List<Recipe> recipes;
+        [SerializeField] private string recipePurchasePromptMessage = "Confirm purchase";
+        [SerializeField] private string recipeSalePromptMessage = "Confirm sale";
         
         //UI references
         [Header("UI References")]
@@ -24,6 +27,10 @@ namespace Manager.RecipeShop
         [SerializeField] private TextMeshProUGUI currencyText;
         [SerializeField] private Button recipeShopOpenButton;
         [SerializeField] private Button recipeShopReturnButton;
+        [SerializeField] private GameObject recipeTransactionConfirmationPromptUI;
+        [SerializeField] private TextMeshProUGUI recipeTransactionMessagePromptText;
+        
+        private Tuple<Recipe, RecipeClickHandler> currentRecipe;
         private void Awake()
         {
             if (Instance == null)
@@ -91,35 +98,77 @@ namespace Manager.RecipeShop
         //Checks if the recipe needs to be bought or sold based on its status
         public void HandleRecipeClick(Recipe recipeData, RecipeClickHandler recipeClickHandler)
         {
-            //Attempt to buy the recipe
+            //Store current recipe under consideration
+            currentRecipe = new Tuple<Recipe, RecipeClickHandler>(recipeData, recipeClickHandler);
+            
+            //Show prompt to buy the recipe
             if (!recipeData.isBought)
             {
-                if (GameManager.Instance.GetCurrency() >= recipeData.buyPrice)
-                {
-                    if(shouldDebug) Debug.Log($"You have enough to buy the recipe : ({recipeData.name}). Bought for {recipeData.buyPrice}!");
-                    
-                    //Buy the recipe
-                    recipeData.isBought = true;
-                    //Move the recipe towards the end of the shop (because sold)
-                    recipeClickHandler.gameObject.transform.SetSiblingIndex(-1);
-                    recipeClickHandler.SetRecipeSold();
-                    
-                    //Update currency
-                    GameManager.Instance.AddCurrency(-recipeData.buyPrice);
-                }
-                else
-                {
-                    if(shouldDebug) Debug.Log($"You don't have enough to buy this recipe!({recipeData.name})");
-                }
+                ShowTransactionConfirmationPrompt(true);
+                
             } //TODO: Work on selling logic
             else //Already bought, cannot be sold
             {
                 if(shouldDebug) Debug.Log($"You cannot sell this recipe currently!({recipeData.name})");
             }
             
+        }
+        
+        //Shows the UI prompt to ask the user if they want to confirm purchasing/selling a recipe
+        private void ShowTransactionConfirmationPrompt(bool isRecipeBought)
+        {
+            recipeTransactionMessagePromptText.text = isRecipeBought ? recipePurchasePromptMessage : recipeSalePromptMessage;
+
+            recipeTransactionConfirmationPromptUI.SetActive(true);
+        }
+
+        private void HideTransactionConfirmationPrompt()
+        {
+            recipeTransactionConfirmationPromptUI.SetActive(false);
+        }
+
+        public void CompleteTransaction(bool transactionWasConfirmed)
+        {
+            if (currentRecipe == null)
+            {
+                Debug.LogError("No recipe selected when completing the transaction!");
+                return;
+            }
+            
+            //Cancel the transaction
+            if (!transactionWasConfirmed)
+            {
+                CancelTransaction();
+                return;
+            }
+            
+            //Attempt to buy the recipe
+            if (!currentRecipe.Item1.isBought)
+            {
+                if (GameManager.Instance.GetCurrency() >= currentRecipe.Item1.buyPrice)
+                {
+                    if(shouldDebug) Debug.Log($"You have enough to buy the recipe : ({currentRecipe.Item1.name}). Bought for {currentRecipe.Item1.buyPrice}!");
+                        
+                    //Buy the recipe
+                    currentRecipe.Item1.isBought = true;
+                    //Move the recipe towards the end of the shop (because sold)
+                    currentRecipe.Item2.gameObject.transform.SetSiblingIndex(-1);
+                    currentRecipe.Item2.SetRecipeSold();
+                        
+                    //Update currency
+                    GameManager.Instance.AddCurrency(-currentRecipe.Item1.buyPrice);
+                }
+                else
+                {
+                    if(shouldDebug) Debug.Log($"You don't have enough to buy this recipe!({currentRecipe.Item1.name})");
+                }
+            }
+            
             //After buying or selling, update currency value
             UpdateCurrencyData();
             
+            //Upon transaction completion, hide the transaction prompt
+            CancelTransaction();
         }
 
         private void UpdateCurrencyData()
@@ -134,12 +183,24 @@ namespace Manager.RecipeShop
             // Update visual currency display
             UpdateCurrencyData();
             
+            //Incase a transaction is open, cancel it 
+            CancelTransaction();
+            
             //Show the recipe shop UI
             recipeShopUI.SetActive(true);
         
             //Show and hide relevant buttons
             recipeShopOpenButton.gameObject.SetActive(false);
             recipeShopReturnButton.gameObject.SetActive(true);
+        }
+
+        private void CancelTransaction()
+        {
+            //Unset recipe under consideration
+            currentRecipe = null;
+            
+            //Hide transaction prompt screen in case open
+            HideTransactionConfirmationPrompt();
         }
 
         private void HideRecipeShop()
@@ -149,6 +210,9 @@ namespace Manager.RecipeShop
             //Show and hide relevant buttons
             recipeShopReturnButton.gameObject.SetActive(false);
             recipeShopOpenButton.gameObject.SetActive(true);
+            
+            //Cancel transaction in the case that a transaction is being considered
+            CancelTransaction();
         }
 
         private void OnDestroy()
