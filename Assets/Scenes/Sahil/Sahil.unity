@@ -2012,7 +2012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recipePrefab: {fileID: 7703420820620632800, guid: 36fb202216d990e47a890a3af45eb289, type: 3}
-  shouldDebug: 1
+  shouldDebug: 0
   recipes:
   - {fileID: 11400000, guid: dfa2f1f023711ee4a9c81b609afceedf, type: 2}
   - {fileID: 11400000, guid: 605f77bbb025a2a41820b9917c4d8643, type: 2}

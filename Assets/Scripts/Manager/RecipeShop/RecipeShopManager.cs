@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,9 +10,9 @@ namespace Manager.RecipeShop
     {
         
         public static RecipeShopManager Instance { get; private set; }
-    
+        
+        [Header("Settings")]
         public GameObject recipePrefab;
-
         [SerializeField] private bool shouldDebug = false; 
         //Recipes to populate the shop with
         [SerializeField] private List<Recipe> recipes;
@@ -21,12 +20,14 @@ namespace Manager.RecipeShop
         [SerializeField] private string recipeSalePromptMessage = "Confirm sale";
         
         //UI references
-        [Header("UI References")]
+        [Header("General UI References")]
         [SerializeField] private GameObject recipeShopUI;
         [SerializeField] private GameObject recipesContainer;
         [SerializeField] private TextMeshProUGUI currencyText;
         [SerializeField] private Button recipeShopOpenButton;
         [SerializeField] private Button recipeShopReturnButton;
+        
+        [Header("Transaction Prompt UI")]
         [SerializeField] private GameObject recipeTransactionConfirmationPromptUI;
         [SerializeField] private TextMeshProUGUI recipeTransactionMessagePromptText;
         
@@ -175,7 +176,7 @@ namespace Manager.RecipeShop
         {
             if(shouldDebug) Debug.Log($"Updating currency data to: {GameManager.Instance.GetCurrency()}");
 
-            currencyText.text = "Currency: $" + GameManager.Instance.GetCurrency().ToSafeString();
+            currencyText.text = "Currency: $" + GameManager.Instance.GetCurrency().ToString();
         }
     
         private void ShowRecipeShop()
