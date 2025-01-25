@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c743a236a76f204a87dae151ef1c653, type: 3}
-  m_Name: Tea
+  m_Name: Apple
   m_EditorClassIdentifier: 
-  recipeName: Tea
+  recipeName: Apple
   sellPrice: 12
   buyPrice: 0
   minigame: Tea

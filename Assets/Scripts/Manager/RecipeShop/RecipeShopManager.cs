@@ -14,7 +14,7 @@ namespace Manager.RecipeShop
     
         //Recipes to populate the shop with
         [SerializeField] private List<Recipe> recipes;
-    
+        
         //UI references
         [SerializeField] private GameObject recipeShopUI;
         [SerializeField] private GameObject recipesContainer;
@@ -53,33 +53,66 @@ namespace Manager.RecipeShop
         {
             // Update currency text
             SetCurrencyData();
+            
+            Queue<Recipe> soldRecipesQueue = new Queue<Recipe>();
  
             //Iterate through all recipes
             foreach (Recipe recipe in recipes)
             {
+                //Store sold recipes in a queue to display in the end
+                if (recipe.isBought)
+                {
+                    soldRecipesQueue.Enqueue(recipe);
+                    continue;
+                }
                 //Instantiate recipe UI and populate data in recipe prefab
                 GameObject recipeGameObject = Instantiate(recipePrefab, recipesContainer.transform);
                 RecipeClickHandler recipeClickHandler = recipeGameObject.GetComponent<RecipeClickHandler>();
                 recipeClickHandler.SetRecipe(recipe);
                 
             }
-            
+
             //TODO: Ensure sold items are displayed last (either use temporary stack or list )
+            //Display sold items towards the end
+            while (soldRecipesQueue.Count > 0)
+            {
+                Recipe recipe = soldRecipesQueue.Dequeue();
+                
+                //Instantiate recipe UI and populate data in recipe prefab
+                GameObject recipeGameObject = Instantiate(recipePrefab, recipesContainer.transform);
+                RecipeClickHandler recipeClickHandler = recipeGameObject.GetComponent<RecipeClickHandler>();
+                recipeClickHandler.SetRecipe(recipe);
+            }
+            
         }
 
         //Checks if the recipe needs to be bought or sold based on its status
-        public void HandleRecipeClick(Recipe recipeData)
+        public void HandleRecipeClick(Recipe recipeData, GameObject recipeShopObject)
         {
             //TODO: Handle recipe being bought or sold 
-
-            if (GameManager.Instance.GetCurrency() >= recipeData.buyPrice)
+            
+            //Attempt to buy the recipe
+            if (!recipeData.isBought)
             {
-                Debug.Log($"You have enough to buy this recipe!({recipeData.name})");
+                if (GameManager.Instance.GetCurrency() >= recipeData.buyPrice)
+                {
+                    Debug.Log($"You have enough to buy this recipe!({recipeData.name})");
+                    //Buy the recipe
+                    recipeData.isBought = true;
+                    //Move the recipe towards the end (because sold)
+                    recipeShopObject.transform.SetSiblingIndex(-1);
+                }
+                else
+                {
+                    Debug.Log($"You don't have enough to buy this recipe!({recipeData.name})");
+                }
             }
-            else
+            //TODO: Change behavior to allow selling of recipes
+            else //Already bought, cannot be sold
             {
-                Debug.Log($"You don't have enough to buy this recipe!({recipeData.name})");
+                Debug.Log($"You cannot sell this recipe currently!({recipeData.name})");
             }
+            
         }
 
         private void SetCurrencyData()

@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c743a236a76f204a87dae151ef1c653, type: 3}
   m_Name: Coffee
   m_EditorClassIdentifier: 
-  name: Coffee
-  price: 5
+  recipeName: 
+  sellPrice: 0
+  buyPrice: 0
+  minigame: 
+  isBought: 0

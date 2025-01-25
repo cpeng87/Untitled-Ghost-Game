@@ -1746,8 +1746,8 @@ MonoBehaviour:
   recipes:
   - {fileID: 11400000, guid: dfa2f1f023711ee4a9c81b609afceedf, type: 2}
   - {fileID: 11400000, guid: 605f77bbb025a2a41820b9917c4d8643, type: 2}
-  - {fileID: 11400000, guid: 605f77bbb025a2a41820b9917c4d8643, type: 2}
-  - {fileID: 11400000, guid: 605f77bbb025a2a41820b9917c4d8643, type: 2}
+  - {fileID: 11400000, guid: f40e383c289e45c4faf35bc09f47e558, type: 2}
+  - {fileID: 11400000, guid: 834329719021fa94fafdb2feacf50271, type: 2}
   recipeShopUI: {fileID: 1659048128}
   recipesContainer: {fileID: 294602702}
   currencyText: {fileID: 1112148117}
