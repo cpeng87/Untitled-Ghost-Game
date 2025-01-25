@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,11 +12,13 @@ namespace Manager.RecipeShop
         public static RecipeShopManager Instance { get; private set; }
     
         public GameObject recipePrefab;
-    
+
+        [SerializeField] private bool shouldDebug = false; 
         //Recipes to populate the shop with
         [SerializeField] private List<Recipe> recipes;
         
         //UI references
+        [Header("UI References")]
         [SerializeField] private GameObject recipeShopUI;
         [SerializeField] private GameObject recipesContainer;
         [SerializeField] private TextMeshProUGUI currencyText;
@@ -51,15 +54,15 @@ namespace Manager.RecipeShop
 
         private void PopulateShop()
         {
-            // Update currency text
-            SetCurrencyData();
+            // Update visual currency display
+            UpdateCurrencyData();
             
             Queue<Recipe> soldRecipesQueue = new Queue<Recipe>();
  
             //Iterate through all recipes
             foreach (Recipe recipe in recipes)
             {
-                //Store sold recipes in a queue to display in the end
+                //Store sold recipes in a queue to display towards the end
                 if (recipe.isBought)
                 {
                     soldRecipesQueue.Enqueue(recipe);
@@ -71,8 +74,7 @@ namespace Manager.RecipeShop
                 recipeClickHandler.SetRecipe(recipe);
                 
             }
-
-            //TODO: Ensure sold items are displayed last (either use temporary stack or list )
+            
             //Display sold items towards the end
             while (soldRecipesQueue.Count > 0)
             {
@@ -87,41 +89,52 @@ namespace Manager.RecipeShop
         }
 
         //Checks if the recipe needs to be bought or sold based on its status
-        public void HandleRecipeClick(Recipe recipeData, GameObject recipeShopObject)
+        public void HandleRecipeClick(Recipe recipeData, RecipeClickHandler recipeClickHandler)
         {
-            //TODO: Handle recipe being bought or sold 
-            
             //Attempt to buy the recipe
             if (!recipeData.isBought)
             {
                 if (GameManager.Instance.GetCurrency() >= recipeData.buyPrice)
                 {
-                    Debug.Log($"You have enough to buy this recipe!({recipeData.name})");
+                    if(shouldDebug) Debug.Log($"You have enough to buy the recipe : ({recipeData.name}). Bought for {recipeData.buyPrice}!");
+                    
                     //Buy the recipe
                     recipeData.isBought = true;
-                    //Move the recipe towards the end (because sold)
-                    recipeShopObject.transform.SetSiblingIndex(-1);
+                    //Move the recipe towards the end of the shop (because sold)
+                    recipeClickHandler.gameObject.transform.SetSiblingIndex(-1);
+                    recipeClickHandler.SetRecipeSold();
+                    
+                    //Update currency
+                    GameManager.Instance.AddCurrency(-recipeData.buyPrice);
                 }
                 else
                 {
-                    Debug.Log($"You don't have enough to buy this recipe!({recipeData.name})");
+                    if(shouldDebug) Debug.Log($"You don't have enough to buy this recipe!({recipeData.name})");
                 }
-            }
-            //TODO: Change behavior to allow selling of recipes
+            } //TODO: Work on selling logic
             else //Already bought, cannot be sold
             {
-                Debug.Log($"You cannot sell this recipe currently!({recipeData.name})");
+                if(shouldDebug) Debug.Log($"You cannot sell this recipe currently!({recipeData.name})");
             }
+            
+            //After buying or selling, update currency value
+            UpdateCurrencyData();
             
         }
 
-        private void SetCurrencyData()
+        private void UpdateCurrencyData()
         {
-            currencyText.text = "Currency: $" + GameManager.Instance.GetCurrency().ToString();
+            if(shouldDebug) Debug.Log($"Updating currency data to: {GameManager.Instance.GetCurrency()}");
+
+            currencyText.text = "Currency: $" + GameManager.Instance.GetCurrency().ToSafeString();
         }
     
         private void ShowRecipeShop()
         {
+            // Update visual currency display
+            UpdateCurrencyData();
+            
+            //Show the recipe shop UI
             recipeShopUI.SetActive(true);
         
             //Show and hide relevant buttons
