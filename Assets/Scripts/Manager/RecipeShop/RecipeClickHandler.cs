@@ -30,7 +30,7 @@ namespace Manager.RecipeShop
         public void RecipeClicked()
         {
             Debug.Log("Recipe clicked: " + currentRecipe.name);
-            RecipeShopManager.onRecipeClick?.Invoke(currentRecipe);
+            RecipeShopManager.Instance.HandleRecipeClick(currentRecipe);
         }
     
     }

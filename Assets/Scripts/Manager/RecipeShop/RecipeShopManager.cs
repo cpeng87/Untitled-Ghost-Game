@@ -8,8 +8,6 @@ namespace Manager.RecipeShop
     public class RecipeShopManager : MonoBehaviour
     {
         
-        public delegate void OnRecipeClick(Recipe recipeData);
-        public static OnRecipeClick onRecipeClick;
         public static RecipeShopManager Instance { get; private set; }
     
         public GameObject recipePrefab;
@@ -18,7 +16,8 @@ namespace Manager.RecipeShop
         [SerializeField] private List<Recipe> recipes;
     
         //UI references
-        [SerializeField] private GameObject recipeShop;
+        [SerializeField] private GameObject recipeShopUI;
+        [SerializeField] private GameObject recipesContainer;
         [SerializeField] private TextMeshProUGUI currencyText;
         [SerializeField] private Button recipeShopOpenButton;
         [SerializeField] private Button recipeShopReturnButton;
@@ -36,17 +35,14 @@ namespace Manager.RecipeShop
     
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
-        {
-            //Bind appropriate function to delegate
-            onRecipeClick = HandleRecipeClick;
-            
+        { 
             //Set shop data including recipes and currency
             PopulateShop();
         
             //Initially hide and show relevant gameobjects
             recipeShopOpenButton.gameObject.SetActive(true);
             recipeShopReturnButton.gameObject.SetActive(false);
-            recipeShop.gameObject.SetActive(false);
+            recipeShopUI.gameObject.SetActive(false);
         
             //Binds buttons to their respective functions
             recipeShopOpenButton.onClick.AddListener(ShowRecipeShop);
@@ -61,25 +57,29 @@ namespace Manager.RecipeShop
             //Iterate through all recipes
             foreach (Recipe recipe in recipes)
             {
-                GameObject recipeGameObject = Instantiate(recipePrefab, recipeShop.transform);
-                //Get RecipeClickHandler
+                //Instantiate recipe UI and populate data in recipe prefab
+                GameObject recipeGameObject = Instantiate(recipePrefab, recipesContainer.transform);
                 RecipeClickHandler recipeClickHandler = recipeGameObject.GetComponent<RecipeClickHandler>();
-                //Store recipe on script
                 recipeClickHandler.SetRecipe(recipe);
                 
             }
             
-            //Instantiate and populate data in recipe prefab
-        
-            //While populating, get RecipeEventHandler.cs and add HandleRecipeClick listener 
-        
-            //Add to shop content
+            //TODO: Ensure sold items are displayed last (either use temporary stack or list )
         }
 
         //Checks if the recipe needs to be bought or sold based on its status
-        private void HandleRecipeClick(Recipe recipeData)
+        public void HandleRecipeClick(Recipe recipeData)
         {
-        
+            //TODO: Handle recipe being bought or sold 
+
+            if (GameManager.Instance.GetCurrency() >= recipeData.buyPrice)
+            {
+                Debug.Log($"You have enough to buy this recipe!({recipeData.name})");
+            }
+            else
+            {
+                Debug.Log($"You don't have enough to buy this recipe!({recipeData.name})");
+            }
         }
 
         private void SetCurrencyData()
@@ -89,7 +89,7 @@ namespace Manager.RecipeShop
     
         private void ShowRecipeShop()
         {
-            recipeShop.SetActive(true);
+            recipeShopUI.SetActive(true);
         
             //Show and hide relevant buttons
             recipeShopOpenButton.gameObject.SetActive(false);
@@ -98,7 +98,7 @@ namespace Manager.RecipeShop
 
         private void HideRecipeShop()
         {
-            recipeShop.SetActive(false);
+            recipeShopUI.SetActive(false);
         
             //Show and hide relevant buttons
             recipeShopReturnButton.gameObject.SetActive(false);
