@@ -15,4 +15,8 @@ public class PauseScript1 : MonoBehaviour
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
     }
+    public void ExitToDesktop()
+    {
+        Application.Quit();
+    }
 }
