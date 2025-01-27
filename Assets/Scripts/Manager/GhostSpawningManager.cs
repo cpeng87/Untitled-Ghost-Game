@@ -9,6 +9,7 @@ public class GhostSpawningManager : MonoBehaviour
     private float ghostSpawnTimer = 0f;  //keeps track of time passed 
     private List<GameObject> spawnedGhosts = new List<GameObject>();  //keeps track of ghost gameobject spawned in the scene
     [SerializeField] private float ghostSpawnCooldown;  //time for new ghost spawn
+    public AudioSource DoorSFX;
 
     //singleton
     private void Awake()
@@ -40,6 +41,7 @@ public class GhostSpawningManager : MonoBehaviour
         ghost_with_seat = new Dictionary<GameObject, Vector3>();
         ghost_with_speed = new Dictionary<GameObject, Vector3>();
         UpdateGhostObjs();
+        //AudioSource = GetComponent<AudioSource>();
     }
 
     
@@ -162,6 +164,10 @@ public class GhostSpawningManager : MonoBehaviour
         }
 
         GameManager.Instance.ghostManager.AddActiveGhost(possibleGhost[index]);
+
+        DoorSFX.Stop(); //stops all current SFX for door playing beforehand
+        DoorSFX.Play();
+
         UpdateGhostObjs();
     }
 
