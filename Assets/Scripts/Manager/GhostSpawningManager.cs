@@ -172,4 +172,9 @@ public class GhostSpawningManager : MonoBehaviour
         Destroy(spawnedGhosts[seatNum]);
         spawnedGhosts.RemoveAt(seatNum);
     }
+
+    public GameObject GetSpawnedGhost(int seatNum)
+    {
+        return spawnedGhosts[seatNum];
+    }
 }

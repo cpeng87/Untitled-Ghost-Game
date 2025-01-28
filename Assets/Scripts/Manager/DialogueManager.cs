@@ -16,6 +16,11 @@ public class DialogueManager : MonoBehaviour
     private bool completeOrder = false;  //flag for if the ghost needs to be deleted at the end of the dialogue
     private int seatNum = -1;   //keeps track of current dialogue ghost's seat number
 
+    // (Joseph Seo 1 / 18 / 25) Parameters for changing expression
+    // Done as GameObjects for now, but you can change it to whatever you want here
+    GameObject currentGhostObject;
+    // [SerializeField] private GhostManager ghostManager;
+
     // singleton
     private void Awake()
     {
@@ -84,20 +89,38 @@ public class DialogueManager : MonoBehaviour
         this.seatNum = seatNum;
         Debug.Log("Seat number of dialogue: " + seatNum);
         CameraManager.Instance.SwapToSeatCamera(seatNum);
+        currentGhostObject = GhostSpawningManager.Instance.GetSpawnedGhost(seatNum);
     }
 
     //increments curring index and updates ui display. If reached end of dialogue, ends the dialogue
     public void AdvanceDialogue()
     {
         currIndex += 1;
+
+        // (Joseph 1 / 18 / 25) Potential implementation is just have a check here for any emotions and if so, play that then advance again
+        // Do through animator for now, change implementation if needed later
         if (currIndex >= currDialogue.Count)
         {
             EndDialogue();
         }
         else
         {
-            dialogueField.text = currDialogue[currIndex];
+            if (currDialogue[currIndex].Contains("{play}")) {
+                PlayAnimation(currDialogue[currIndex].Substring(6).Trim());
+                AdvanceDialogue();
+            } else {
+                dialogueField.text = currDialogue[currIndex];
+            }
+
         }
+    }
+
+    private void PlayAnimation(string animation) {
+        Animator ghostAnimator = currentGhostObject.GetComponentInChildren<Animator>();
+        // Debug.Log(ghostAnimator.gameObject.name);
+        Debug.Log(animation);
+        ghostAnimator.Play(animation);
+        // Debug.Log("Hit play animation!");
     }
 
     //hides the ui elements, and switches state to main
