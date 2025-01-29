@@ -69,4 +69,12 @@ public class CameraManager : MonoBehaviour
         backCamera.gameObject.SetActive(false);
         mainCamera.gameObject.SetActive(true);
     }
+
+    public void SwapToCutsceneCamera()
+    {
+        frontCamera.gameObject.SetActive(false);
+        middleCamera.gameObject.SetActive(false);
+        backCamera.gameObject.SetActive(false);
+        mainCamera.gameObject.SetActive(false);
+    }
 }
