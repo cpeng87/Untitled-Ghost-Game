@@ -40,6 +40,7 @@ public class GhostSpawningManager : MonoBehaviour
         ghost_with_seat = new Dictionary<GameObject, Vector3>();
         ghost_with_speed = new Dictionary<GameObject, Vector3>();
         UpdateGhostObjs();
+        //AudioSource = GetComponent<AudioSource>();
     }
 
     
@@ -162,6 +163,7 @@ public class GhostSpawningManager : MonoBehaviour
         }
 
         GameManager.Instance.ghostManager.AddActiveGhost(possibleGhost[index]);
+
         UpdateGhostObjs();
     }
 
