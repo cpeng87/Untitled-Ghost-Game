@@ -3,9 +3,10 @@ using UnityEngine;
 public class GhostObj : Clickable
 {
     [SerializeField] private Ghost scriptable;   //ghost information
+    [SerializeField] private Animator animator; //animator for the game
     private bool hasTakenOrder;   //flags whether order has been taken or not
     private int seatNum;   //seat number of the current ghost
-
+    
     //checks if the ghost order has been taken, if not, takes order when ghost is clicked on
     protected override void OnClicked()
     {

@@ -85,4 +85,9 @@ public class GameManager : MonoBehaviour
         UIManager.Instance.UpdateCurrency(currency);
         Debug.Log("Currency: " + currency);
     }
+
+    public int GetCurrency()
+    {
+        return currency;
+    }
 }

@@ -16,3 +16,4 @@ MonoBehaviour:
   sellPrice: 12
   buyPrice: 0
   minigame: Tea
+  isBought: 0
