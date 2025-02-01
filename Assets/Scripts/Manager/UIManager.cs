@@ -19,7 +19,7 @@ public class UIManager : MonoBehaviour
     }
     public void MakeOrderButton()
     {
-        GameManager.Instance.orderManager.MakeOrder();
+        TicketManager.Instance.ShowOrders();
     }
 
     public void UpdateCurrency(int newValue)
