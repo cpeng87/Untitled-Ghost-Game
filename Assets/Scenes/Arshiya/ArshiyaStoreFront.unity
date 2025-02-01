@@ -327,6 +327,7 @@ GameObject:
   m_Component:
   - component: {fileID: 81915027}
   - component: {fileID: 81915026}
+  - component: {fileID: 81915028}
   m_Layer: 0
   m_Name: Dialogue Manager
   m_TagString: Untagged
@@ -364,6 +365,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &81915028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81915025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38923701cad22684db4651f79e1b1a2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 1046601947}
+  wiggleStart: 0
+  wiggleEnd: 0
+  shakyStart: 0
+  shakyEnd: 0
+  frequency: 2
+  amplitude: 5
+  speed: 2
 --- !u!1 &275908537
 GameObject:
   m_ObjectHideFlags: 0
@@ -1043,7 +1064,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -367.5127}
+  m_AnchoredPosition: {x: 0, y: -314}
   m_SizeDelta: {x: 0, y: -735.0264}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &793297276
@@ -1118,8 +1139,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -37.017033}
-  m_SizeDelta: {x: 1861.1064, y: 213.265}
+  m_AnchoredPosition: {x: -0.0025329, y: 0.4496}
+  m_SizeDelta: {x: 1028, y: 53.2004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1046601947
 MonoBehaviour:
@@ -1141,7 +1162,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '[Dialogue]'
+  m_text: <wiggle>[Dialogue]</wiggle>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d196d5669ef939d4eaea38e2eb818198, type: 2}
   m_sharedMaterial: {fileID: 5265687828343391479, guid: d196d5669ef939d4eaea38e2eb818198, type: 2}
