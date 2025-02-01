@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
 
 public class Order
 {
@@ -52,15 +53,23 @@ public class OrderManager : MonoBehaviour
     }
 
     //calls game manager to switch to the minigame! Currently does the first order.
-    public void MakeOrder()
+    public void MakeOrder(int orderIdx)
     {
         if (activeOrders.Count == 0)
         {
             Debug.Log("No active orders.");
             return;
         }
-        GameManager.Instance.SwitchToMinigame(activeOrders[0].minigame);
-        currActiveOrder = 0;
+
+        if (orderIdx < 0 || orderIdx >= activeOrders.Count)
+        {
+            Debug.Log("Invalid index for order.");
+        }
+
+        TicketManager.Instance.HideOrders();
+
+        GameManager.Instance.SwitchToMinigame(activeOrders[orderIdx].minigame);
+        currActiveOrder = orderIdx;
     }
 
     //completes an order
