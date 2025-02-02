@@ -377,14 +377,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38923701cad22684db4651f79e1b1a2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 1046601947}
-  wiggleStart: 0
-  wiggleEnd: 0
-  shakyStart: 0
-  shakyEnd: 0
-  frequency: 2
-  amplitude: 5
+  frequency: 1
+  amplitude: 1
   speed: 2
+  jitterAmount: 1
+  boldOffset: 5
+  boldSpacingOffset: 0.5
+  italicOffset: 5
+  textMesh: {fileID: 1046601947}
 --- !u!1 &275908537
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,7 +1162,24 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <wiggle>[Dialogue]</wiggle>
+  m_text: '<bold> <wiggle> bold and wiggly </wiggle> </bold>
+
+
+    <bold> <shaky>
+    bold and shaky </shaky> </bold>
+
+
+    <italic> <wiggle> italic and wiggly </wiggle>
+    </italic>
+
+
+    <italic> <shaky> italic and shaky </shaky> </italic>
+
+
+    <bold>
+    <italic> bold and italic </italic> </bold>
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d196d5669ef939d4eaea38e2eb818198, type: 2}
   m_sharedMaterial: {fileID: 5265687828343391479, guid: d196d5669ef939d4eaea38e2eb818198, type: 2}
