@@ -6,13 +6,13 @@ using UnityEngine.UI;
 
 public class TicketManager : MonoBehaviour
 {
-    public static TicketManager Instance { get; private set;}
+    public static TicketManager Instance { get; private set; }
     public List<string> tickets = new List<string>(); //list of active tickets on ordersPanel
-    public GameObject ordersPanel; //full UI of the pop up
-    public GameObject orderTicket; //individual ticket prefab
+    [SerializeField] private GameObject ordersPanel; //full UI of the pop up
+    [SerializeField] private GameObject orderTicket; //individual ticket prefab
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Awake()
+    private void Awake()
     {
         if (Instance == null)
         {
