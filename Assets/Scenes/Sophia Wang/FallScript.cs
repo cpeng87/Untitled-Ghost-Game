@@ -5,6 +5,6 @@ public class FallScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //do something to fail
-        SubmitPancakes.onFinish(true);
+        SubmitPancakes.failed = true;
     }
 }
