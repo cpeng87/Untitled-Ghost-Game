@@ -5,6 +5,6 @@ public class FallScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //do something to fail
-        Debug.Log("You failed!");
+        SubmitPancakes.onFinish(true);
     }
 }
