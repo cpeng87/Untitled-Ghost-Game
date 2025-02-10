@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 6309455104540937070}
   - component: {fileID: 1182275716867520712}
   - component: {fileID: 6224546653645456157}
-  - component: {fileID: -1791653319137334699}
-  m_Layer: 0
+  - component: {fileID: 1274283889334768225}
+  - component: {fileID: -1957494023366874838}
+  m_Layer: 3
   m_Name: beef_Steak_Raw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +101,7 @@ Rigidbody2D:
   m_Simulated: 0
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
@@ -115,7 +116,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!61 &-1791653319137334699
+--- !u!61 &1274283889334768225
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -161,3 +162,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.74428225, y: 0.1400006}
   m_EdgeRadius: 0
+--- !u!114 &-1957494023366874838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902271098695974524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ffcb480412f3fe4a921ef3bd9cc1702, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

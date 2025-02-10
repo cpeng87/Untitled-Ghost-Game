@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 8303555772077970351}
   - component: {fileID: 877752023491917652}
   - component: {fileID: 1945580665566553934}
-  - component: {fileID: 3276678524867339010}
-  m_Layer: 0
+  - component: {fileID: -7034976135806605774}
+  - component: {fileID: -5235299399590785373}
+  m_Layer: 3
   m_Name: fish_Slice_1_Raw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +101,7 @@ Rigidbody2D:
   m_Simulated: 0
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
@@ -115,7 +116,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!61 &3276678524867339010
+--- !u!61 &-7034976135806605774
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -161,3 +162,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.47890887, y: 0.19626608}
   m_EdgeRadius: 0
+--- !u!114 &-5235299399590785373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3214593466492448795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ffcb480412f3fe4a921ef3bd9cc1702, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

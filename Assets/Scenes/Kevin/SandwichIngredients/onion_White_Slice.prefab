@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 7240926067911653214}
   - component: {fileID: 8932783393572699814}
   - component: {fileID: 3518663438741607085}
-  - component: {fileID: 2721556835904002134}
-  m_Layer: 0
+  - component: {fileID: 6728737108276546510}
+  - component: {fileID: -305359628327870188}
+  m_Layer: 3
   m_Name: onion_White_Slice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +101,7 @@ Rigidbody2D:
   m_Simulated: 0
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
@@ -115,7 +116,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!61 &2721556835904002134
+--- !u!61 &6728737108276546510
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -161,3 +162,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.1746876, y: 0.05873492}
   m_EdgeRadius: 0
+--- !u!114 &-305359628327870188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015709771234235295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ffcb480412f3fe4a921ef3bd9cc1702, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

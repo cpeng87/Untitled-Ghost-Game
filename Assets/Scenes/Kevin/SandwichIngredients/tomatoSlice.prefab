@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 1173375276114764290}
   - component: {fileID: 3377654944934703718}
   - component: {fileID: -4247589807557799010}
-  - component: {fileID: 3930246363999336449}
-  m_Layer: 0
+  - component: {fileID: 4769915935442305353}
+  - component: {fileID: -5469861588188688566}
+  m_Layer: 3
   m_Name: tomatoSlice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +101,7 @@ Rigidbody2D:
   m_Simulated: 0
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
@@ -115,7 +116,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!61 &3930246363999336449
+--- !u!61 &4769915935442305353
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -161,3 +162,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.9865511, y: 0.05302144}
   m_EdgeRadius: 0
+--- !u!114 &-5469861588188688566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6213259828783532099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ffcb480412f3fe4a921ef3bd9cc1702, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
