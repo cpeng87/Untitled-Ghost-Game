@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
 
     public List<string> minigames = new List<string>();
     private int currency;
+    private int satisfactionLevel;
     public List<Recipe> unlockedRecipes = new List<Recipe>();
     public List<Recipe> recipes = new List<Recipe>();
     public State state;
@@ -84,5 +85,27 @@ public class GameManager : MonoBehaviour
         currency += added;
         UIManager.Instance.UpdateCurrency(currency);
         Debug.Log("Currency: " + currency);
+    }
+
+    public void IncreaseSatisfaction()
+    {
+        ++satisfactionLevel;
+        UIManager.Instance.UpdateSatisfaction(satisfactionLevel);
+    }
+
+    public void DecreaseSatisfaction()
+    {
+        --satisfactionLevel;
+        UIManager.Instance.UpdateSatisfaction(satisfactionLevel);
+    }
+
+    public int GetCurrency()
+    {
+        return currency;
+    }
+
+    public int GetSatisfactionLevel()
+    {
+        return satisfactionLevel;
     }
 }
