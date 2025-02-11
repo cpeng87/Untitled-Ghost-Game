@@ -3,8 +3,8 @@ using UnityEngine;
 public class GhostObj : Clickable
 {
     [SerializeField] private Ghost scriptable;   //ghost information
-    [SerializeField] private Animator animator; //animator for the game
     [SerializeField] private Animator idleAnimator;
+    [SerializeField] private Animator orderNotificationAnimator; //animator for the notification
     private bool hasTakenOrder;   //flags whether order has been taken or not
     private int seatNum;   //seat number of the current ghost
     private bool isIdle = false; // flag to check if ghost is idle
@@ -14,7 +14,7 @@ public class GhostObj : Clickable
     void Start() {
         // Get animator component from ghost prefab
         idleAnimator = GetComponentInChildren<Animator>();
-        if (idleAnimator == null)
+        if (idleAnimator == null || orderNotificationAnimator == null)
         {
             Debug.LogWarning($"{gameObject.name} is missing an Animator component!");
             return;
@@ -29,6 +29,7 @@ public class GhostObj : Clickable
             return;
         }
         hasTakenOrder = GameManager.Instance.orderManager.TakeOrder(scriptable.ghostName, scriptable.order, scriptable.recipesOrdered, seatNum);
+        SetOrderNotification(false);
     }
 
     public void SetSeatNum(int newSeatNum)
@@ -38,6 +39,7 @@ public class GhostObj : Clickable
             Debug.Log("Invalid seat number");
         }
         seatNum = newSeatNum;
+        SetOrderNotification(true);
     }
 
     public Ghost GetScriptable()
@@ -80,5 +82,10 @@ public class GhostObj : Clickable
                 idleAnimator.SetBool("IsFloating", false);
             }
         }
+    }
+
+    private void SetOrderNotification(bool b)
+    {
+        orderNotificationAnimator.SetBool("isActive", b);
     }
 }
