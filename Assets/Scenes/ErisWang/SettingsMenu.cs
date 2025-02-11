@@ -8,7 +8,7 @@ public class SettingsMenu : MonoBehaviour
     [SerializeField] private Slider masterSlider;
     [SerializeField] private Slider musicSlider;
 
-    // Placeholders: list of icons that are used in the OptionsMeny game object
+    // Placeholders: list of icons that are used in the OptionsMenu game object
     [SerializeField] private RawImage masterOnIcon;
     [SerializeField] private RawImage masterOffIcon;
     [SerializeField] private RawImage musicOnIcon;
@@ -19,21 +19,26 @@ public class SettingsMenu : MonoBehaviour
 
     private void Start()
     {
-        LoadVolume();
-
         masterSlider.onValueChanged.AddListener(SetMasterVolume);
         musicSlider.onValueChanged.AddListener(SetMusicVolume);
 
         masterSlider.value = PlayerPrefs.GetFloat("masterVolume", 1f);
         musicSlider.value = PlayerPrefs.GetFloat("musicVolume", 1f);
 
+        LoadVolume();
+
         UpdateIcons();
+
+        Button hideButton = GameObject.Find("Exit Button").GetComponent<Button>();
+        hideButton.onClick.AddListener(HideSettingsMenu);
     }
 
     public void SetMasterVolume(float volume)
     {
         volume = Mathf.Clamp(volume, 0.0001f, 1f);
-        audioMixer.SetFloat("master", Mathf.Log10(volume) * 20);
+        if (!masterMuted) {
+            audioMixer.SetFloat("master", Mathf.Log10(volume) * 20);
+        }
         PlayerPrefs.SetFloat("masterVolume", volume);
         PlayerPrefs.Save();
     }
@@ -41,19 +46,16 @@ public class SettingsMenu : MonoBehaviour
     public void SetMusicVolume(float volume)
     {
         volume = Mathf.Clamp(volume, 0.0001f, 1f);
-        audioMixer.SetFloat("music", Mathf.Log10(volume) * 20);
+        if (!musicMuted)
+        {
+            audioMixer.SetFloat("music", Mathf.Log10(volume) * 20);
+        }
         PlayerPrefs.SetFloat("musicVolume", volume);
         PlayerPrefs.Save();
     }
 
     private void LoadVolume()
     {
-        float masterVolume = PlayerPrefs.GetFloat("masterVolume", 1f);
-        float musicVolume = PlayerPrefs.GetFloat("musicVolume", 1f);
-
-        masterSlider.value = masterVolume;
-        musicSlider.value = musicVolume;
-
         masterMuted = PlayerPrefs.GetInt("masterMuted", 0) == 1;
         musicMuted = PlayerPrefs.GetInt("musicMuted", 0) == 1;
 
@@ -63,6 +65,7 @@ public class SettingsMenu : MonoBehaviour
         }
         else
         {
+            float masterVolume = PlayerPrefs.GetFloat("masterVolume", 1f);
             audioMixer.SetFloat("master", Mathf.Log10(masterVolume) * 20);
         }
 
@@ -72,6 +75,7 @@ public class SettingsMenu : MonoBehaviour
         }
         else
         {
+            float musicVolume = PlayerPrefs.GetFloat("musicVolume", 1f);
             audioMixer.SetFloat("music", Mathf.Log10(musicVolume) * 20);
         }
 
@@ -123,5 +127,10 @@ public class SettingsMenu : MonoBehaviour
 
         musicOnIcon.enabled = !musicMuted;
         musicOffIcon.enabled = musicMuted;
+    }
+
+    public void HideSettingsMenu()
+    {
+        gameObject.active = false;
     }
 }
