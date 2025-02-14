@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: -8495091815378147984}
   - component: {fileID: 6203404171838845244}
   - component: {fileID: -1274252309384544905}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: mushroom_Sliced_Raw
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

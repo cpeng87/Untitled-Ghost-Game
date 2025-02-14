@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 8977996778531434384}
   - component: {fileID: -755611323985569877}
   - component: {fileID: -7478702255975893341}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: sandwichBun_Bottom
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,7 +101,7 @@ Rigidbody2D:
   m_Simulated: 0
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1000
+  m_Mass: 1000000
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1

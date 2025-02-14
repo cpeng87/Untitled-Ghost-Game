@@ -5,9 +5,14 @@ using System.Collections.Generic;
 
 public class MiniGame : MonoBehaviour
 {
+    public static MiniGame Instance;
+
     [SerializeField] private Transform[] blockPrefabs;
     [SerializeField] private Transform blockHolder;
     [SerializeField] private TMPro.TextMeshProUGUI livesText;
+    [SerializeField] private TMPro.TextMeshProUGUI countdownText;
+    [SerializeField] private TMPro.TextMeshProUGUI successText;
+    [SerializeField] private TMPro.TextMeshProUGUI failText;
 
     public Transform currentBlock = null;
     private Rigidbody2D currentRigidbody;
@@ -24,8 +29,15 @@ public class MiniGame : MonoBehaviour
     private bool isCheckingSuccess = false;
     private float successTimer = 3f;
     private bool allIngredientsPlaced = false;
-    public static List<bool> check = new List<bool>();
+    private HashSet<GameObject> connectedIngredients = new HashSet<GameObject>();
+    private HashSet<GameObject> placedIngredients = new HashSet<GameObject>();
+    private Coroutine successCheckCoroutine;
 
+
+    void Awake()
+    {
+        Instance = this;
+    }
 
     void Start()
     {
@@ -34,6 +46,22 @@ public class MiniGame : MonoBehaviour
         GenerateSandwichOrder();
         SpawnNewBlock();
     }
+
+    public IEnumerator RemoveLife()
+    {
+        livesRemaining = Mathf.Max(livesRemaining - 1, 0);
+        livesText.text = livesRemaining.ToString();
+
+        if (livesRemaining == 0)
+        {
+            playing = false;
+            failText.gameObject.SetActive(true);
+            failText.text = "Failed!";
+            yield return new WaitForSeconds(2f);
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Kevin");
+        }
+    }
+
 
     private void GenerateSandwichOrder()
     {
@@ -45,6 +73,7 @@ public class MiniGame : MonoBehaviour
         if (currentIngredientIndex >= sandwichOrder.Length)
         {
             allIngredientsPlaced = true;
+            CheckForSuccess();
             return;
         }
 
@@ -89,47 +118,54 @@ public class MiniGame : MonoBehaviour
         }
     }
 
-    public void RemoveLife()
+    public void RegisterIngredientCollision(GameObject ingredient)
     {
-        livesRemaining = Mathf.Max(livesRemaining - 1, 0);
-        livesText.text = livesRemaining.ToString();
-        if (livesRemaining == 0)
-        {
-            playing = false;
-        }
+        connectedIngredients.Add(ingredient);
+        CheckForSuccess();
+    }
+
+    public void UnregisterIngredientCollision(GameObject ingredient)
+    {
+        connectedIngredients.Remove(ingredient);
+        CheckForSuccess();
     }
 
     private void CheckForSuccess()
     {
-        bool containsFalse = false;
-        for (int j = 0; j < check.Count; j++)
+        if (allIngredientsPlaced && connectedIngredients.Count == placedIngredients.Count)
         {
-            if (check[j] == false)
+            if (successCheckCoroutine == null)
             {
-                containsFalse = true;
-                break;
+                successCheckCoroutine = StartCoroutine(SuccessCheckTimer());
             }
-        }
-
-        if (containsFalse)
-        {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("SandwichGame");
         }
         else
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Kevin");
+            if (successCheckCoroutine != null)
+            {
+                StopCoroutine(successCheckCoroutine);
+                successCheckCoroutine = null;
+                countdownText.gameObject.SetActive(false);
+            }
         }
     }
 
-    public void CheckAllIngredientsConnectedTrue()
+    private IEnumerator SuccessCheckTimer()
     {
-        check.Add(true);
-        CheckForSuccess();
-    }
-    
-    public void CheckAllIngredientsConnectedFalse()
-    {
-        check.Add(false);
-        CheckForSuccess();
+        countdownText.gameObject.SetActive(true);
+        for (int i = 3; i > 0; i--)
+        {
+            countdownText.text = i.ToString();
+            yield return new WaitForSeconds(1f);
+        }
+        countdownText.gameObject.SetActive(false);
+
+        if (connectedIngredients.Count == placedIngredients.Count)
+        {
+            successText.gameObject.SetActive(true);
+            successText.text = "Success!";
+            yield return new WaitForSeconds(2f);
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Kevin");
+        }
     }
 }

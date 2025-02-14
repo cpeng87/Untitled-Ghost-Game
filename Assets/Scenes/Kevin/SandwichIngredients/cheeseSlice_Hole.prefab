@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: -7998956785501259830}
   - component: {fileID: 4887182376594177213}
   - component: {fileID: -4775307583828943722}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: cheeseSlice_Hole
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

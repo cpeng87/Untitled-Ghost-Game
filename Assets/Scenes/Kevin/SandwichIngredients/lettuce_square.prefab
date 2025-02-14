@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: -3020824475976408897}
   - component: {fileID: 1248870535458819389}
   - component: {fileID: -2770041142812532694}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: lettuce_square
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

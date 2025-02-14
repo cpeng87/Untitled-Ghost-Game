@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 742461304868375175}
   - component: {fileID: 118891835073008689}
   - component: {fileID: 3331403707551118380}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: cucumberSlice
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

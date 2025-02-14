@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 1945580665566553934}
   - component: {fileID: -7034976135806605774}
   - component: {fileID: -5235299399590785373}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: fish_Slice_1_Raw
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

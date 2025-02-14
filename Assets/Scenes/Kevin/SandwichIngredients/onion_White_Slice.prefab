@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 3518663438741607085}
   - component: {fileID: 6728737108276546510}
   - component: {fileID: -305359628327870188}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: onion_White_Slice
-  m_TagString: Untagged
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
