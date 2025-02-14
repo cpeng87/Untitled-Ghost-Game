@@ -169,6 +169,8 @@ public class GhostSpawningManager : MonoBehaviour
     public void DeleteSpawnedGhost(int seatNum)
     {
         Debug.Log("seat num to destroy: " + seatNum);
+        ghost_with_seat.Remove(spawnedGhosts[seatNum]);
+        ghost_with_speed.Remove(spawnedGhosts[seatNum]);
         Destroy(spawnedGhosts[seatNum]);
         spawnedGhosts.RemoveAt(seatNum);
     }
