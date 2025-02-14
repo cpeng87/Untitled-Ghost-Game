@@ -4,18 +4,17 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Tilt
-  - Moving
+  - Pancake
+  - Ingredient
   - Sandwich
-  - TopBun
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ingredient
+  - 
   - Water
   - UI
-  - Camera
+  - 
   - 
   - 
   - 
