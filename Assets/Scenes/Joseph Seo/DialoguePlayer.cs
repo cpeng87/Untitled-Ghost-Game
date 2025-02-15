@@ -9,7 +9,7 @@ public class DialoguePlayer : MonoBehaviour
     public static DialoguePlayer Instance { get; private set; }
     [SerializeField] private DialogueRunner dialogueRunner;
 
-    private string currentOrder;    // Variable kept for  
+    private string currentOrder;
     private int seatNum = -1;
 
     private void Awake()
@@ -40,8 +40,12 @@ public class DialoguePlayer : MonoBehaviour
         target.GetComponent<Animator>().Play(animation);
     }
 
-    public string GetOrder() {
-        return currentOrder;
+    [YarnFunction("GetOrder")]
+    public static string GetOrder() {
+        // int selectedIndex = (int) (Random.value * 3);
+        // string[] names = {"tea", "coffee", "milk"};
+        // return names[selectedIndex];
+        return DialoguePlayer.Instance.currentOrder;
     }
 
     // This function physically hurts me to write
