@@ -13,6 +13,7 @@ public class GhostObj : Clickable
 
     void Start() {
         // Get animator component from ghost prefab
+        Debug.Log("A GHOST IS SPAWNING IN");
         idleAnimator = GetComponentInChildren<Animator>();
         if (idleAnimator == null || orderNotificationAnimator == null)
         {
@@ -24,6 +25,7 @@ public class GhostObj : Clickable
     //checks if the ghost order has been taken, if not, takes order when ghost is clicked on
     protected override void OnClicked()
     {
+        Debug.Log("CLICKED ME");
         if (hasTakenOrder)
         {
             return;
@@ -61,6 +63,14 @@ public class GhostObj : Clickable
 
     void Update() {
         // Update ghost state if it is idle/floating
+        if (Input.GetKeyDown("space")) {
+            if (hasTakenOrder)
+            {
+                return;
+            }
+            hasTakenOrder = GameManager.Instance.orderManager.TakeOrder(scriptable.ghostName, scriptable.order, scriptable.recipesOrdered, seatNum);
+            SetOrderNotification(false);
+        }
         if (IsCustomerIdle())
         {
             idleTime += Time.deltaTime;
