@@ -179,4 +179,13 @@ public class GhostSpawningManager : MonoBehaviour
     {
         return spawnedGhosts[seatNum];
     }
+
+    public GameObject GetSpawnedGhost(string name) {
+        foreach(GameObject ghost in spawnedGhosts) {
+            if (ghost.GetComponent<GhostObj>().GetScriptable().ghostName.Equals(name)) {
+                return ghost;
+            }
+        }
+        return null;
+    }
 }

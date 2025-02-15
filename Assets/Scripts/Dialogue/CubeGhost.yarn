@@ -1,0 +1,37 @@
+﻿title: CubeOrder
+tags:
+---
+Cube: I'd like a {GetOrder()} please.
+<<setCam "Main Camera">>
+===
+title: CubeSuccess
+tags:
+---
+Cube: Thank you.
+Cube: Dummy.
+<<startStory "Cube">>
+===
+title: CubeFailure
+tags:
+---
+Cube: ...?
+// <<setCam "Main Camera">>
+===
+title: CubeStory
+tags:
+---
+Cube: I am a Cube.
+<<play Cube bounce>>
+Cube: And I shall remain as such.
+// <<setCam "Main Camera">>
+<<setNext "Cube" "CubeStory2">>
+===
+title: CubeStory2
+tags:
+---
+Cube: Yes, I am indeed a cube that exists within this plane.
+<<play Cube bounce>>
+Cube: And I shall remain as such.
+// <<setCam "Main Camera">>
+<<setNext "Cube" "CubeStory">>
+===
