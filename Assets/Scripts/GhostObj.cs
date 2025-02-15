@@ -19,17 +19,21 @@ public class GhostObj : Clickable
             Debug.LogWarning($"{gameObject.name} is missing an Animator component!");
             return;
         }
+        if (idleAnimator != null)
+        {
+            idleAnimator.SetBool("IsFloating", true);
+        }
     }
     
     //checks if the ghost order has been taken, if not, takes order when ghost is clicked on
     protected override void OnClicked()
     {
-        if (hasTakenOrder)
+        if (isIdle != true || hasTakenOrder)
         {
             return;
         }
-        hasTakenOrder = GameManager.Instance.orderManager.TakeOrder(scriptable.ghostName, scriptable.order, scriptable.recipesOrdered, seatNum);
         SetOrderNotification(false);
+        hasTakenOrder = GameManager.Instance.orderManager.TakeOrder(scriptable.ghostName, scriptable.order, scriptable.recipesOrdered, seatNum);
     }
 
     public void SetSeatNum(int newSeatNum)
@@ -39,7 +43,7 @@ public class GhostObj : Clickable
             Debug.Log("Invalid seat number");
         }
         seatNum = newSeatNum;
-        SetOrderNotification(true);
+        // SetOrderNotification(true);
     }
 
     public Ghost GetScriptable()
@@ -66,22 +70,24 @@ public class GhostObj : Clickable
             idleTime += Time.deltaTime;
             if (idleTime >= idleThreshold)
             {
+                SetOrderNotification(true);
                 isIdle = true;
-                if (idleAnimator != null)
-                {
-                    idleAnimator.SetBool("IsFloating", true);
-                }
+                // if (idleAnimator != null)
+                // {
+                //     idleAnimator.SetBool("IsFloating", true);
+                // }
             }
         }
-        else
-        {
-            idleTime = 0f;
-            isIdle = false;
-            if (idleAnimator != null)
-            {
-                idleAnimator.SetBool("IsFloating", false);
-            }
-        }
+        base.Update();
+        // else
+        // {
+        //     idleTime = 0f;
+        //     isIdle = false;
+        //     if (idleAnimator != null)
+        //     {
+        //         idleAnimator.SetBool("IsFloating", false);
+        //     }
+        // }
     }
 
     private void SetOrderNotification(bool b)
