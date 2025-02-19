@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Tilt
   - Moving
+  - Note
   layers:
   - Default
   - TransparentFX
