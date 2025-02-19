@@ -92,11 +92,13 @@ public class OrderManager : MonoBehaviour
             combinedDialogue.AddRange(storyDialogue);
             DialogueManager.Instance.CompleteOrderDialogue(currGhost.ghostName, combinedDialogue, activeOrders[currActiveOrder].seatNum);
             GameManager.Instance.AddCurrency(activeOrders[currActiveOrder].price);
+            GameManager.Instance.IncreaseSatisfaction();
         }
         else
         {
             List<string> failureDialogue = TagReplacer(currGhost.failure, "{item}", activeOrders[currActiveOrder].recipeName);
             DialogueManager.Instance.CompleteOrderDialogue(currGhost.ghostName, failureDialogue, activeOrders[currActiveOrder].seatNum);
+            GameManager.Instance.DecreaseSatisfaction();
         }
     }
 
