@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Ghost Shader
+  m_Name: Ghost Shader 7
   m_Shader: {fileID: -6465566751694194690, guid: 9eca5b3cfbada6f498226ae648e429f5, type: 3}
   m_Parent: {fileID: -876546973899608171, guid: 9eca5b3cfbada6f498226ae648e429f5, type: 3}
   m_ModifiedSerializedProperties: 0
@@ -31,7 +31,7 @@ Material:
     - _FresnelPower: 1.73
     - _QueueControl: 0
     m_Colors:
-    - _InnerColor: {r: 0.83444834, g: 0.61471677, b: 0.5148388, a: 0.75686276}
+    - _InnerColor: {r: 1.4342462, g: 0.116363265, b: 0.6144253, a: 0.75686276}
     - _OuterColor: {r: 2.3712986, g: 2.3712986, b: 2.3712986, a: 0}
     - _Position: {r: 0, g: 0.3, b: 0, a: 0}
   m_BuildTextureStacks: []
