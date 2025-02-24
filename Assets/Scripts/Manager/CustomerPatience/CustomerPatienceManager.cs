@@ -17,7 +17,7 @@ namespace Manager.CustomerPatience
 
         public GameObject customerPatienceUIPanel;
         public GameObject patiencePrefab;
-        public float defaultPatienceTime = 2.0f;
+        public float defaultPatienceTime = 6.0f;
         
         private List<GhostPatienceData> m_ghostsPatienceDataList;
         //Maps a ghost game object's instance ID to an index in the ghostPatienceList
@@ -39,15 +39,19 @@ namespace Manager.CustomerPatience
             //Attach the ghost's patience UI to the patience UI panel
             GameObject ghostPatienceUIPrefab = Instantiate(patiencePrefab, customerPatienceUIPanel.transform);
             
+            //Get patience UI script and store a reference of the ghost gameobject
+            CustomerPatienceUI patienceUIScript = ghostPatienceUIPrefab.GetComponent<CustomerPatienceUI>();
+            patienceUIScript.StoreGhost(ghost);
+            
             GhostPatienceData ghostPatienceData = new GhostPatienceData
             {
                 totalPatienceTime = defaultPatienceTime,
                 timeRemaining = defaultPatienceTime,
                 ghostGameobject = ghost,
                 ghostUIGameobject = ghostPatienceUIPrefab,
-                customerPatienceUIScript = ghostPatienceUIPrefab.GetComponent<CustomerPatienceUI>()
+                customerPatienceUIScript = patienceUIScript
             };
-            
+
             m_ghostsPatienceDataList.Add(ghostPatienceData);
             //Map instance ID to ghostPatienceList index
             m_ghostIDPatienceIndexMap.Add(ghost.GetInstanceID(), m_ghostsPatienceDataList.Count - 1);
