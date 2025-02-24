@@ -19,9 +19,9 @@ namespace Manager.CustomerPatience
         public GameObject patiencePrefab;
         public float defaultPatienceTime = 6.0f;
         
-        private List<GhostPatienceData> m_ghostsPatienceDataList;
+        private List<GhostPatienceData> m_ghostsPatienceDataList = new List<GhostPatienceData>();
         //Maps a ghost game object's instance ID to an index in the ghostPatienceList
-        private Dictionary<int, int> m_ghostIDPatienceIndexMap;
+        private Dictionary<int, int> m_ghostIDPatienceIndexMap = new Dictionary<int, int>();
         private void Awake()
         {
             if (Instance == null)
@@ -90,6 +90,8 @@ namespace Manager.CustomerPatience
         // Update is called once per frame
         void Update()
         {
+            if (m_ghostsPatienceDataList.Count == 0)
+                return;
             
             //Iterate through all ghosts 
             for (int index = 0; index < m_ghostsPatienceDataList.Count; ++index)
