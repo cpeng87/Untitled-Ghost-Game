@@ -29,10 +29,16 @@ public class GhostObj : Clickable
     //checks if the ghost order has been taken, if not, takes order when ghost is clicked on
     protected override void OnClicked()
     {
+        Debug.Log("Click");
+        //TODO: Remove || Debug
+        this.GetComponent<CustomerPatienceDebug>().TogglePatienceMode(gameObject);
+        
         if (isIdle != true || hasTakenOrder)
         {
             return;
         }
+        
+        
         SetOrderNotification(false);
         hasTakenOrder = GameManager.Instance.orderManager.TakeOrder(scriptable.ghostName, scriptable.order, scriptable.recipesOrdered, seatNum);
     }
@@ -93,16 +99,16 @@ public class GhostObj : Clickable
 
     private void SetOrderNotification(bool b)
     {
-        orderNotificationAnimator.SetBool("isActive", b);
+        // orderNotificationAnimator.SetBool("isActive", b);
         
         //Convey to Customer Patience Manager to enable or disable this Ghost's patience timer 
-        if (b == false) //Take the order
-        {
-            CustomerPatienceManager.Instance.StartGhostPatienceTimer(gameObject);
-        }
-        else //Stop patience timer
-        {
-            CustomerPatienceManager.Instance.StopGhostPatienceTimer(gameObject.GetInstanceID());
-        }
+        // if (b == false) //Take the order
+        // {
+        //     CustomerPatienceManager.Instance.StartGhostPatienceTimer(gameObject);
+        // }
+        // else //Stop patience timer
+        // {
+        //     CustomerPatienceManager.Instance.StopGhostPatienceTimer(gameObject.GetInstanceID());
+        // }
     }
 }

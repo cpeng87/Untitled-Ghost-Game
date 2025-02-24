@@ -15,7 +15,7 @@ public class CustomerPatienceUI : MonoBehaviour
     
     public void SetProgress(float progressRatio)
     {
-        m_progressBar.fillAmount = 1.0f - progressRatio;
+        m_progressBar.fillAmount = progressRatio;
     }
 
     private void Update()

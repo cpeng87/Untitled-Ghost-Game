@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Manager.CustomerPatience
 {
@@ -16,7 +17,7 @@ namespace Manager.CustomerPatience
         public static CustomerPatienceManager Instance { get; private set; }
 
         public GameObject customerPatienceUIPanel;
-        public GameObject patiencePrefab;
+        public GameObject patienceUIPrefab;
         public float defaultPatienceTime = 6.0f;
         
         private List<GhostPatienceData> m_ghostsPatienceDataList = new List<GhostPatienceData>();
@@ -32,12 +33,23 @@ namespace Manager.CustomerPatience
             {
                 Destroy(gameObject);
             }
+
+            if (customerPatienceUIPanel == null)
+            {
+                Debug.LogWarning("Warning | CustomerPatienceManager: CustomerPatienceUIPanel is not assigned");
+            }
+            
+            if (patienceUIPrefab == null)
+            {
+                Debug.LogWarning("Warning | CustomerPatienceManager: patienceUIPrefab is not assigned");
+            }
         }
         public void StartGhostPatienceTimer(GameObject ghost)
         {
-            Debug.Log("GhostPatience started for ghost: " + ghost.name);
+            // Debug.Log("GhostPatience started for ghost: " + ghost.name);
+            
             //Attach the ghost's patience UI to the patience UI panel
-            GameObject ghostPatienceUIPrefab = Instantiate(patiencePrefab, customerPatienceUIPanel.transform);
+            GameObject ghostPatienceUIPrefab = Instantiate(patienceUIPrefab, customerPatienceUIPanel.transform);
             
             //Get patience UI script and store a reference of the ghost gameobject
             CustomerPatienceUI patienceUIScript = ghostPatienceUIPrefab.GetComponent<CustomerPatienceUI>();
@@ -61,11 +73,11 @@ namespace Manager.CustomerPatience
         {
             if(!m_ghostIDPatienceIndexMap.ContainsKey(instanceId))
             {
-                Debug.LogError("Error, CustomerPatienceManager: instance ID was not found in the map when stopping ghost's patience");
+                Debug.LogWarning("Warning | CustomerPatienceManager: This ghost doesn't have any ongoing patience timer ");
                 return;
             }
             
-            Debug.Log("GhostPatience stopped for ghost: " + instanceId);
+            // Debug.Log("GhostPatience stopped for ghost: " + instanceId);
             
             //Get ghost patience index from instance id
             int patienceIndex = m_ghostIDPatienceIndexMap[instanceId] ;
@@ -78,7 +90,7 @@ namespace Manager.CustomerPatience
             //TODO: Show different animation if order was completed 
             if (bOrderComplete)
             {
-                
+                Debug.Log("Order complete");
             }
             
             //Remove the ghost patience instance
