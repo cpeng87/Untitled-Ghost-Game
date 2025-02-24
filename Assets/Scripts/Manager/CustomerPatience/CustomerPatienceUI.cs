@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class CustomerPatienceUI : MonoBehaviour
 {
     [SerializeField] private GameObject m_containerObject;
-    [SerializeField] private Image m_progressBar;
+    [SerializeField] private Slider m_progressBarSlider;
 
     private bool bProgressStarted = false;
     private GameObject m_ghost;
@@ -21,12 +21,11 @@ public class CustomerPatienceUI : MonoBehaviour
     public void StoreGhost(GameObject ghost)
     {
         this.m_ghost = ghost;
-        
     }
     
     public void SetProgress(float progressRatio)
     {
-        m_progressBar.fillAmount = progressRatio;
+        m_progressBarSlider.value = progressRatio;
     }
 
     private void Update()
