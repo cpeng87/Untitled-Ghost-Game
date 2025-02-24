@@ -1,3 +1,4 @@
+using Manager.CustomerPatience;
 using UnityEngine;
 
 public class GhostObj : Clickable
@@ -93,5 +94,15 @@ public class GhostObj : Clickable
     private void SetOrderNotification(bool b)
     {
         orderNotificationAnimator.SetBool("isActive", b);
+        
+        //Convey to Customer Patience Manager to enable or disable this Ghost's patience timer 
+        if (b)
+        {
+            CustomerPatienceManager.Instance.StartGhostPatienceTimer(gameObject);
+        }
+        else
+        {
+            CustomerPatienceManager.Instance.StopGhostPatienceTimer(gameObject.GetInstanceID());
+        }
     }
 }

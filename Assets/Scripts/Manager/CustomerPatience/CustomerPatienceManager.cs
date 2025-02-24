@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Manager.CustomerPatience
 {
-    public class GhostPatience
+    public class GhostPatienceData
     {
         public float totalPatienceTime;
         public float timeRemaining;
@@ -13,32 +13,74 @@ namespace Manager.CustomerPatience
     }
     public class CustomerPatienceManager : MonoBehaviour
     {
+        public static CustomerPatienceManager Instance { get; private set; }
 
         public GameObject customerPatienceUIPanel;
         public GameObject patiencePrefab;
-        private List<GhostPatience> ghostsPatienceList;
-
-        public void StartGhostPatience(float totalPatienceTime, GameObject ghost)
+        public float defaultPatienceTime = 2.0f;
+        
+        private List<GhostPatienceData> m_ghostsPatienceDataList;
+        //Maps a ghost game object's instance ID to an index in the ghostPatienceList
+        private Dictionary<int, int> m_ghostIDPatienceIndexMap;
+        private void Awake()
         {
-            
+            if (Instance == null)
+            {
+                Instance = this;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+        }
+        public void StartGhostPatienceTimer(GameObject ghost)
+        {
+            Debug.Log("GhostPatience started for ghost: " + ghost.name);
             //Attach the ghost's patience UI to the patience UI panel
             GameObject ghostPatienceUIPrefab = Instantiate(patiencePrefab, customerPatienceUIPanel.transform);
             
-            GhostPatience ghostPatience = new GhostPatience
+            GhostPatienceData ghostPatienceData = new GhostPatienceData
             {
-                totalPatienceTime = totalPatienceTime,
-                timeRemaining = totalPatienceTime,
+                totalPatienceTime = defaultPatienceTime,
+                timeRemaining = defaultPatienceTime,
                 ghostGameobject = ghost,
                 ghostUIGameobject = ghostPatienceUIPrefab,
                 customerPatienceUIScript = ghostPatienceUIPrefab.GetComponent<CustomerPatienceUI>()
             };
             
-            ghostsPatienceList.Add(ghostPatience);
+            m_ghostsPatienceDataList.Add(ghostPatienceData);
+            //Map instance ID to ghostPatienceList index
+            m_ghostIDPatienceIndexMap.Add(ghost.GetInstanceID(), m_ghostsPatienceDataList.Count - 1);
         }
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
-        {
         
+        public void StopGhostPatienceTimer(int instanceId, bool bOrderComplete = false)
+        {
+            if(!m_ghostIDPatienceIndexMap.ContainsKey(instanceId))
+            {
+                Debug.LogError("Error, CustomerPatienceManager: instance ID was not found in the map when stopping ghost's patience");
+                return;
+            }
+            
+            Debug.Log("GhostPatience stopped for ghost: " + instanceId);
+            
+            //Get ghost patience index from instance id
+            int patienceIndex = m_ghostIDPatienceIndexMap[instanceId] ;
+            
+            //TODO: Change this to an animation (through UI) | For now just destroy the UI gameobject
+            Destroy(m_ghostsPatienceDataList[patienceIndex].ghostUIGameobject);
+            
+            //TODO: Convey to the UI to hide progress bar
+            
+            //TODO: Show different animation if order was completed 
+            if (bOrderComplete)
+            {
+                
+            }
+            
+            //Remove the ghost patience instance
+            m_ghostsPatienceDataList.RemoveAt(patienceIndex);
+            //Remove the ghost from the map
+            m_ghostIDPatienceIndexMap.Remove(instanceId);
         }
 
         // Update is called once per frame
@@ -46,9 +88,9 @@ namespace Manager.CustomerPatience
         {
             
             //Iterate through all ghosts 
-            for (int index = 0; index < ghostsPatienceList.Count; ++index)
+            for (int index = 0; index < m_ghostsPatienceDataList.Count; ++index)
             {
-                GhostPatience ghost  = ghostsPatienceList[index];
+                GhostPatienceData ghost  = m_ghostsPatienceDataList[index];
                 ghost.timeRemaining -= Time.deltaTime;
                 
                 //Set progress for UI
@@ -56,20 +98,16 @@ namespace Manager.CustomerPatience
                 
                 //Stop timer once time runs out
                 if (ghost.timeRemaining <= 0.0f)
-                    PatienceRanOut(index);
+                    PatienceRanOut(ghost.ghostGameobject.GetInstanceID());
                 
             }
         }
 
-        private void PatienceRanOut(int index)
+        private void PatienceRanOut(int instanceId)
         {
-            //For now just destroy the UI gameobject
-            Destroy(ghostsPatienceList[index].ghostUIGameobject);
+            StopGhostPatienceTimer(instanceId);
             
-            //TODO: Convey to the UI to hide progress bar
-
-            //Remove the ghost patience instance
-            ghostsPatienceList.RemoveAt(index);
+            //TODO: Show extra UI if patience runs out
         }
     }
 }
