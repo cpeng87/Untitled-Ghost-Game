@@ -28,6 +28,21 @@ public class CustomerPatienceUI : MonoBehaviour
         m_progressBarSlider.value = progressRatio;
     }
 
+    public void StopPatienceAnimation(bool bOrderComplete)
+    {
+        if (bOrderComplete)
+        {
+            //Show success animation (eg. cheerful animation and sound)
+        }
+        else 
+        {
+            //Show failure animation
+        }
+        
+        //TODO: Remove this and use bOrderComplete for different animations || For now, just destroy this gameobject
+        Destroy(gameObject);
+    }
+
     private void Update()
     {
         //Set UI position to be relative to the ghost gameobject
@@ -45,4 +60,5 @@ public class CustomerPatienceUI : MonoBehaviour
             this.m_containerObject.SetActive(true);
         }
     }
+    
 }

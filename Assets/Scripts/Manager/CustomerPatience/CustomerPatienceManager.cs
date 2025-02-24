@@ -82,23 +82,15 @@ namespace Manager.CustomerPatience
             //Get ghost patience index from instance id
             int patienceIndex = m_ghostIDPatienceIndexMap[instanceId] ;
             
-            //TODO: Change this to an animation (through UI) | For now just destroy the UI gameobject
-            Destroy(m_ghostsPatienceDataList[patienceIndex].ghostUIGameobject);
-            
-            //TODO: Convey to the UI to hide progress bar
-            
-            //TODO: Show different animation if order was completed 
-            if (bOrderComplete)
-            {
-                Debug.Log("Order complete");
-            }
+            //Play stopping patience animation based on whether the order was completed or not 
+            m_ghostsPatienceDataList[patienceIndex].customerPatienceUIScript.StopPatienceAnimation(bOrderComplete);
             
             //Remove the ghost patience instance
             m_ghostsPatienceDataList.RemoveAt(patienceIndex);
             //Remove the ghost from the map
             m_ghostIDPatienceIndexMap.Remove(instanceId);
             
-            //TODO: IMPORTANT: Update all other patience index map entries to reflect their new indices
+            //Update all other patience index map entries to reflect their new indices
             m_ghostIDPatienceIndexMap.Clear();
             for (int index = 0; index < m_ghostsPatienceDataList.Count; ++index)
             {
