@@ -1023,7 +1023,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   customerPatienceUIPanel: {fileID: 746434157}
-  patiencePrefab: {fileID: 2383109448456303924, guid: d2b4bf595a01b8544bceb2eb56084347, type: 3}
+  patienceUIPrefab: {fileID: 2383109448456303924, guid: d2b4bf595a01b8544bceb2eb56084347, type: 3}
   defaultPatienceTime: 6
 --- !u!1 &746434157
 GameObject:

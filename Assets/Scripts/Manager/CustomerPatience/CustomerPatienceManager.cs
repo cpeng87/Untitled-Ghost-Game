@@ -97,6 +97,15 @@ namespace Manager.CustomerPatience
             m_ghostsPatienceDataList.RemoveAt(patienceIndex);
             //Remove the ghost from the map
             m_ghostIDPatienceIndexMap.Remove(instanceId);
+            
+            //TODO: IMPORTANT: Update all other patience index map entries to reflect their new indices
+            m_ghostIDPatienceIndexMap.Clear();
+            for (int index = 0; index < m_ghostsPatienceDataList.Count; ++index)
+            {
+                GhostPatienceData ghostPatienceData = m_ghostsPatienceDataList[index];
+                
+                m_ghostIDPatienceIndexMap.Add(ghostPatienceData.ghostGameobject.GetInstanceID(), index);
+            }
         }
 
         // Update is called once per frame
