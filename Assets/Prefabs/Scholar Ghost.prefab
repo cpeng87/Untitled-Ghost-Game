@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5157552967801394276}
   - component: {fileID: 7572556623501117049}
   - component: {fileID: 2082548472098809409}
-  - component: {fileID: -2188849423117805734}
   m_Layer: 0
   m_Name: Scholar Ghost
   m_TagString: Untagged
@@ -73,18 +72,6 @@ MonoBehaviour:
   scriptable: {fileID: 11400000, guid: bbce32e9a07125c47a73de3d41be49bd, type: 2}
   idleAnimator: {fileID: 0}
   orderNotificationAnimator: {fileID: 0}
---- !u!114 &-2188849423117805734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 943815788098809071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 347f6e4b86de38a42b520a075d056a59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2815270446221360870
 GameObject:
   m_ObjectHideFlags: 0

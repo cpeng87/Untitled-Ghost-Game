@@ -47,6 +47,24 @@ namespace Manager.CustomerPatience
         public void StartGhostPatienceTimer(GameObject ghost)
         {
             // Debug.Log("GhostPatience started for ghost: " + ghost.name);
+
+            if (!patienceUIPrefab)
+            {
+                // Debug.LogWarning("Warning | CustomerPatienceManager: patienceUIPrefab is not assigned when starting ghost patience timer");
+                return;
+            }
+            
+            if (!customerPatienceUIPanel)
+            {
+                // Debug.LogWarning("Warning | CustomerPatienceManager: CustomerPatienceUIPanel is not assigned when starting ghost patience timer");
+                return;
+            }
+            
+            if(m_ghostIDPatienceIndexMap.ContainsKey(ghost.GetInstanceID()))
+            {
+                Debug.LogWarning("Warning | CustomerPatienceManager: This ghost's patience timer has already been started ");
+                return;
+            }
             
             //Attach the ghost's patience UI to the patience UI panel
             GameObject ghostPatienceUIPrefab = Instantiate(patienceUIPrefab, customerPatienceUIPanel.transform);

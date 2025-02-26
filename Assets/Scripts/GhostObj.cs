@@ -30,9 +30,7 @@ public class GhostObj : Clickable
     protected override void OnClicked()
     {
         Debug.Log("Click");
-        //TODO: Remove || Debug
-        this.GetComponent<CustomerPatienceDebug>().TogglePatienceMode(gameObject);
-        
+
         if (isIdle != true || hasTakenOrder)
         {
             return;
@@ -99,16 +97,16 @@ public class GhostObj : Clickable
 
     private void SetOrderNotification(bool b)
     {
-        // orderNotificationAnimator.SetBool("isActive", b);
+         orderNotificationAnimator.SetBool("isActive", b);
         
-        //Convey to Customer Patience Manager to enable or disable this Ghost's patience timer 
-        // if (b == false) //Take the order
-        // {
-        //     CustomerPatienceManager.Instance.StartGhostPatienceTimer(gameObject);
-        // }
-        // else //Stop patience timer
-        // {
-        //     CustomerPatienceManager.Instance.StopGhostPatienceTimer(gameObject.GetInstanceID());
-        // }
+        // Convey to Customer Patience Manager to enable or disable this Ghost's patience timer 
+         if (b) //Start patience timer
+         {
+             CustomerPatienceManager.Instance.StartGhostPatienceTimer(gameObject);
+         }
+         else //Stop patience timer
+         {
+             CustomerPatienceManager.Instance.StopGhostPatienceTimer(gameObject.GetInstanceID());
+         }
     }
 }
