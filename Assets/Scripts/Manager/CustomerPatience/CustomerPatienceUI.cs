@@ -8,7 +8,8 @@ public class CustomerPatienceUI : MonoBehaviour
 {
     [SerializeField] private GameObject m_containerObject;
     [SerializeField] private Slider m_progressBarSlider;
-
+    
+    public Vector3 progressBarOffset = Vector3.zero;
     private bool bProgressStarted = false;
     private GameObject m_ghost;
 
@@ -51,8 +52,8 @@ public class CustomerPatienceUI : MonoBehaviour
         //Convert world position to 3D space
         Vector3 screenPosition = Camera.main.WorldToScreenPoint(ghostWorldPosition);
         
-        //TODO: Add an offset to the position
-        this.transform.position = screenPosition;
+        //Finally set position of UI
+        this.transform.position = screenPosition + progressBarOffset;
         
         if (!bProgressStarted) //Show UI once position has been set initially  
         {
