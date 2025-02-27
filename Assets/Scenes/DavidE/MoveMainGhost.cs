@@ -36,6 +36,7 @@ public class MoveMainGhost : MonoBehaviour
                 moving = false;
                 turning = true;
             }
+            
         
         } else if (turning) {
             Rigidbody body = mcGhost.GetComponent<Rigidbody>();
@@ -49,7 +50,6 @@ public class MoveMainGhost : MonoBehaviour
                 body.transform.rotation = Quaternion.RotateTowards(body.transform.rotation, targetRotation, turnSpeed);
 
                 if (Quaternion.Angle(body.transform.rotation, goal.transform.rotation) < 5f) {
-                    print("it works!");
                     Vector3 lookRotation = Vector3.RotateTowards(body.transform.position, goal.transform.position, .01f, 1f);
                     turning = false;
                     finished = true;
@@ -68,29 +68,22 @@ public class MoveMainGhost : MonoBehaviour
             Rigidbody body = mcGhost.GetComponent<Rigidbody>();
             Rigidbody goal = customer.GetComponent<Rigidbody>();
 
-            print("MC Ghost X: " + body.transform.localPosition.x);
-            print("MC Ghost Z: " + body.transform.localPosition.z);
-            print("Customer X: " + goal.transform.localPosition.x);
-            print("Customer Z: " + goal.transform.localPosition.z);
-
             float distX = math.abs(body.transform.localPosition.x - goal.transform.localPosition.x);
             float distZ = math.abs(body.transform.localPosition.z - goal.transform.localPosition.z);
             //If I feel like it, I'll re-implement the "MC Ghost goes to the most convenient spot" thing I was going for
 
         
             adjustPos.AddComponent<Rigidbody>();
-            adjustPos.GetComponent<Rigidbody>().transform.localPosition = new Vector3(goal.transform.localPosition.x + 2, goal.transform.localPosition.y, goal.transform.localPosition.z);
+            adjustPos.GetComponent<Rigidbody>().transform.localPosition = new Vector3(goal.transform.localPosition.x + 3, goal.transform.localPosition.y, goal.transform.localPosition.z);
             adjustPos.GetComponent<Rigidbody>().useGravity = false;
-
+            
+            Vector3 direction = adjustPos.GetComponent<Rigidbody>().transform.position;
+            direction = new Vector3(direction.x, 0, direction.z);
+            body.transform.LookAt(direction);
+            body.transform.rotation = body.transform.rotation * Quaternion.Euler(0, 90, 0);
+            
             moving = true;
         }
-    }
-
-
-
-    void finishAndTurn() {
-        var step = speed * Time.deltaTime;
-        mcGhost.transform.rotation = Quaternion.RotateTowards(mcGhost.transform.rotation, Quaternion.Euler(customer.transform.position), step);
     }
 
     void cleanUp() {
