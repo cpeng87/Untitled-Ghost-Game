@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Manager.CustomerPatience;
 using TMPro;
 
 public class Order
@@ -83,6 +84,9 @@ public class OrderManager : MonoBehaviour
         Ghost currGhost = GameManager.Instance.ghostManager.GetGhostScriptableFromName(activeOrders[currActiveOrder].ghostName);
         if (result)
         {
+            //Stop ghost's patience timer as order was complete
+            CustomerPatienceManager.Instance.StopGhostPatienceTimer(currGhost.GetInstanceID(), true);
+            
             List<string> successDialogue = TagReplacer(currGhost.success, "{item}", activeOrders[currActiveOrder].recipeName);
             //add story dialogue as well
             int storyIndex = GameManager.Instance.ghostManager.GetStoryIndex(currGhost.ghostName);
