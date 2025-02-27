@@ -20,5 +20,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Minigames/Tea.unity
     guid: c9236cc486cee804c815a330efcf9df2
+  - enabled: 1
+    path: Assets/Scenes/Enzo Waga Okada/Cake Mixing and Baking Minigame/CakeMixing.unity
+    guid: 21217261c2d85274f9a35a15f2122115
+  - enabled: 1
+    path: Assets/Scenes/Enzo Waga Okada/Cake Mixing and Baking Minigame/BakingCake.unity
+    guid: ee759b35a5adf8d41a45ea374cf44a24
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

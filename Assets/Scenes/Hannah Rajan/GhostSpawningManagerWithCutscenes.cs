@@ -10,6 +10,7 @@ public class GhostSpawningManagerWithCutscenes : MonoBehaviour
     private List<GameObject> spawnedGhosts = new List<GameObject>();  //keeps track of ghost gameobject spawned in the scene
     [SerializeField] private float ghostSpawnCooldown;  //time for new ghost spawn
     public AudioSource DoorSFX;
+    public bool isCutscene;
 
     //singleton
     private void Awake()
@@ -42,6 +43,7 @@ public class GhostSpawningManagerWithCutscenes : MonoBehaviour
         ghost_with_speed = new Dictionary<GameObject, Vector3>();
         UpdateGhostObjs();
         //AudioSource = GetComponent<AudioSource>();
+        isCutscene = false;
     }
 
     
@@ -50,35 +52,40 @@ public class GhostSpawningManagerWithCutscenes : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.Instance.state == State.Main)
-        {
-            ghostSpawnTimer += Time.deltaTime;
-        }
-        if (GameManager.Instance.ghostManager.HasActive() == false && ghostSpawnTimer > 1.5f) //no ghosts in shop
-        {
-            SpawnGhost();
-            ghostSpawnTimer = 0;
-        }
-        if (ghostSpawnTimer > ghostSpawnCooldown)
-        {
-            SpawnGhost();
-            ghostSpawnTimer = 0;
-        }
 
-        //For every GameObject that has been spawned (key) and calculated speed for said GameObject (value)
-        foreach(KeyValuePair<GameObject, Vector3> entry in ghost_with_speed)
+        if (!isCutscene) //nothing happens during a cutscene!
         {
-            //If the GameObject's position is not at its seat, move it by its speed
-            if (ghost_with_seat[entry.Key].x > entry.Key.transform.position.x)
+            if (GameManager.Instance.state == State.Main)
             {
-                entry.Key.transform.position += entry.Value;
+                ghostSpawnTimer += Time.deltaTime;
             }
-            //If it has moved to far, place it in its seat
-            else
+            if (GameManager.Instance.ghostManager.HasActive() == false && ghostSpawnTimer > 1.5f) //no ghosts in shop
             {
-                entry.Key.transform.position = ghost_with_seat[entry.Key];
+                SpawnGhost();
+                ghostSpawnTimer = 0;
+            }
+            if (ghostSpawnTimer > ghostSpawnCooldown)
+            {
+                SpawnGhost();
+                ghostSpawnTimer = 0;
+            }
+
+            //For every GameObject that has been spawned (key) and calculated speed for said GameObject (value)
+            foreach (KeyValuePair<GameObject, Vector3> entry in ghost_with_speed)
+            {
+                //If the GameObject's position is not at its seat, move it by its speed
+                if (ghost_with_seat[entry.Key].x > entry.Key.transform.position.x)
+                {
+                    entry.Key.transform.position += entry.Value;
+                }
+                //If it has moved to far, place it in its seat
+                else
+                {
+                    entry.Key.transform.position = ghost_with_seat[entry.Key];
+                }
             }
         }
+        
     }
     
     //Spawning point for newly active ghosts, before they move to their seat
@@ -179,4 +186,24 @@ public class GhostSpawningManagerWithCutscenes : MonoBehaviour
         Destroy(spawnedGhosts[seatNum]);
         spawnedGhosts.RemoveAt(seatNum);
     }
+
+    //for cutscene to get the proper game object for ghosts
+    public List<GameObject> getSpawnedGhosts()
+    {
+        return spawnedGhosts;
+    }
+
+    public GameObject getSpawnedGhostFromGameObject(GameObject desiredGhost)
+    {
+        Ghost desiredGhostScriptable = desiredGhost.GetComponent<GhostObj>().GetScriptable();
+        foreach (GameObject ghost in spawnedGhosts)
+        {
+            if (ghost.GetComponent<GhostObj>().GetScriptable().Equals(desiredGhostScriptable))
+            {
+                return ghost;
+            }
+        }
+        return null;
+    }
+
 }

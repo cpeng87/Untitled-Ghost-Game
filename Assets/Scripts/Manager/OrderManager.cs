@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Manager.CustomerPatience;
 using TMPro;
 
 public class Order
@@ -84,6 +85,7 @@ public class OrderManager : MonoBehaviour
             Debug.Log("There is no current active order, cannot switch seen! If testing disregard...");
         }
         Ghost currGhost = GameManager.Instance.ghostManager.GetGhostScriptableFromName(activeOrders[currActiveOrder].ghostName);
+
         // dialoguePlayer = FindObjectsByType<DialoguePlayer>(FindObjectsSortMode.None)[0];
         // dialoguePlayer.CompleteOrderDialogue(currGhost.ghostName, activeOrders[currActiveOrder].seatNum, result);
         // DialogueManager.Instance.CompleteOrderDialogue(currGhost.ghostName, activeOrders[currActiveOrder].seatNum, result);
@@ -105,6 +107,7 @@ public class OrderManager : MonoBehaviour
         //     List<string> failureDialogue = TagReplacer(currGhost.failure, "{item}", activeOrders[currActiveOrder].recipeName);
         //     DialogueManager.Instance.CompleteOrderDialogue(currGhost.ghostName, failureDialogue, activeOrders[currActiveOrder].seatNum);
         // }
+
     }
 
     public void RemoveCompletedOrder()

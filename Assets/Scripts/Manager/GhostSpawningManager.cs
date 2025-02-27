@@ -9,6 +9,7 @@ public class GhostSpawningManager : MonoBehaviour
     private float ghostSpawnTimer = 0f;  //keeps track of time passed 
     private List<GameObject> spawnedGhosts = new List<GameObject>();  //keeps track of ghost gameobject spawned in the scene
     [SerializeField] private float ghostSpawnCooldown;  //time for new ghost spawn
+    [SerializeField] private Vector3 door = new Vector3(-5.5f, 0.5f,7.5f);
 
     //singleton
     private void Awake()
@@ -80,7 +81,7 @@ public class GhostSpawningManager : MonoBehaviour
     }
     
     //Spawning point for newly active ghosts, before they move to their seat
-    Vector3 door = new Vector3(-9, 0,-10);
+    // Vector3 door = new Vector3(-5.5f, 0.5f,7.5f);
 
     //Variable to store the amount of game updates between a ghost spawning at the door and getting to their seat
     float speed = 850;
@@ -122,9 +123,9 @@ public class GhostSpawningManager : MonoBehaviour
                 }
 
                 //Add the GameObject to the two dictionaries, calculating the needed speed for the ghost_with_speed dictionary
-                ghost_with_speed.Add(newGhost, new Vector3 (Mathf.Abs(positions[i].x - door.x)/speed, 
-                    Mathf.Abs(positions[i].y - door.y)/speed, 
-                    Mathf.Abs(positions[i].z - door.z)/speed));
+                ghost_with_speed.Add(newGhost, new Vector3 ((positions[i].x - door.x)/speed, 
+                    (positions[i].y - door.y)/speed, 
+                    (positions[i].z - door.z)/speed));
                 ghost_with_seat.Add(newGhost, positions[i]);
 
                 spawnedGhosts.Add(newGhost);
