@@ -5,14 +5,26 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Storefront.unity
     guid: ad39f95941dbc9445993858466cdee80
+  - enabled: 1
+    path: Assets/Scenes/Joseph Seo/Storefront.unity
+    guid: 6dffd41be8ad4ae479788283d3d629d7
+  - enabled: 0
+    path: Assets/Scenes/Joseph Seo/Storefront.unity
+    guid: 2794ef7b62de7714aa93f640a7b6904d
   - enabled: 0
     path: Assets/Scenes/MakePlant.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/Minigames/Tea.unity
     guid: c9236cc486cee804c815a330efcf9df2
+  - enabled: 1
+    path: Assets/Scenes/Enzo Waga Okada/Cake Mixing and Baking Minigame/CakeMixing.unity
+    guid: 21217261c2d85274f9a35a15f2122115
+  - enabled: 1
+    path: Assets/Scenes/Enzo Waga Okada/Cake Mixing and Baking Minigame/BakingCake.unity
+    guid: ee759b35a5adf8d41a45ea374cf44a24
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
