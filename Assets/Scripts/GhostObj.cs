@@ -1,3 +1,4 @@
+using Manager.CustomerPatience;
 using UnityEngine;
 
 public class GhostObj : Clickable
@@ -13,6 +14,7 @@ public class GhostObj : Clickable
 
     void Start() {
         // Get animator component from ghost prefab
+        Debug.Log("A GHOST IS SPAWNING IN");
         idleAnimator = GetComponentInChildren<Animator>();
         if (idleAnimator == null || orderNotificationAnimator == null)
         {
@@ -28,10 +30,16 @@ public class GhostObj : Clickable
     //checks if the ghost order has been taken, if not, takes order when ghost is clicked on
     protected override void OnClicked()
     {
+
+        Debug.Log("Click");
+
         if (isIdle != true || hasTakenOrder)
+
         {
             return;
         }
+        
+        
         SetOrderNotification(false);
         hasTakenOrder = GameManager.Instance.orderManager.TakeOrder(scriptable.ghostName, scriptable.order, scriptable.recipesOrdered, seatNum);
     }
@@ -65,6 +73,14 @@ public class GhostObj : Clickable
 
     void Update() {
         // Update ghost state if it is idle/floating
+        if (Input.GetKeyDown("space")) {
+            if (hasTakenOrder)
+            {
+                return;
+            }
+            hasTakenOrder = GameManager.Instance.orderManager.TakeOrder(scriptable.ghostName, scriptable.order, scriptable.recipesOrdered, seatNum);
+            SetOrderNotification(false);
+        }
         if (IsCustomerIdle())
         {
             idleTime += Time.deltaTime;
@@ -92,6 +108,16 @@ public class GhostObj : Clickable
 
     private void SetOrderNotification(bool b)
     {
-        orderNotificationAnimator.SetBool("isActive", b);
+         orderNotificationAnimator.SetBool("isActive", b);
+        
+        // Convey to Customer Patience Manager to enable or disable this Ghost's patience timer 
+         if (b) //Start patience timer
+         {
+             CustomerPatienceManager.Instance.StartGhostPatienceTimer(gameObject);
+         }
+         else //Stop patience timer
+         {
+             CustomerPatienceManager.Instance.StopGhostPatienceTimer(gameObject.GetInstanceID());
+         }
     }
 }

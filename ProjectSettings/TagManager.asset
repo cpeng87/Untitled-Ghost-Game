@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Tilt
   - Moving
-  - Pancake
+  - Note
   layers:
   - Default
   - TransparentFX
@@ -43,9 +43,6 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Background
-    uniqueID: 4260049765
     locked: 0
   m_RenderingLayers:
   - Default
