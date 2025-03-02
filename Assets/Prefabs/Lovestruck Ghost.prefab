@@ -70,8 +70,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptable: {fileID: 11400000, guid: 101493e60bcc17e47bd367a34fa5b828, type: 2}
-  animator: {fileID: 0}
   idleAnimator: {fileID: 0}
+  orderNotificationAnimator: {fileID: 0}
 --- !u!1001 &1998904791088470474
 PrefabInstance:
   m_ObjectHideFlags: 0

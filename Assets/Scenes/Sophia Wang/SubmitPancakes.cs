@@ -15,15 +15,13 @@ public class SubmitPancakes : MonoBehaviour
         {
             //set to main scene
             //fail dialogue
-            Debug.Log("You failed!");
             result = false;
         } else
         {
             //set to main scene
             //success dialogue
-            Debug.Log("You succeeded!");
             result = true;
         }
-        //GameManager.Instance.CompleteMinigame(result);
+       GameManager.Instance.CompleteMinigame(result);
     }    
 }

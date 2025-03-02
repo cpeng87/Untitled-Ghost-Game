@@ -8,6 +8,7 @@ TagManager:
   - Moving
   - Pancake
   - MuffinTin
+  - Note
   layers:
   - Default
   - TransparentFX
