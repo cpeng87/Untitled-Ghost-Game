@@ -6,7 +6,8 @@ TagManager:
   tags:
   - Tilt
   - Moving
-  - Note
+  - Pancake
+  - Particle
   layers:
   - Default
   - TransparentFX
@@ -15,9 +16,6 @@ TagManager:
   - Water
   - UI
   - Camera
-  - 
-  - 
-  - 
   - 
   - 
   - 
