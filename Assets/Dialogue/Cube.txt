@@ -11,4 +11,10 @@ Thank you.
 
 [Story]
 I am a cube.
+{play} bounce
+And I shall remain as such.
+[End]
+
+[Story]
+I am a second cube.
 [End]

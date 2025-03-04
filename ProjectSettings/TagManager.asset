@@ -4,9 +4,12 @@
 TagManager:
   serializedVersion: 3
   tags:
+  - Tilt
+  - Moving
   - Pancake
-  - Ingredient
-  - Sandwich
+  - MuffinTin
+  - Note
+  - Particle
   layers:
   - Default
   - TransparentFX
@@ -14,12 +17,9 @@ TagManager:
   - 
   - Water
   - UI
+  - Camera
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Bowl
   - 
   - 
   - 
