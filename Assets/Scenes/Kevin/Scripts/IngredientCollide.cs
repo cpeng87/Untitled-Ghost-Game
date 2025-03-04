@@ -4,7 +4,7 @@ using System.Linq;
 
 public class IngredientCollide : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D c)
+    private void OnTriggerEnter(Collider c)
     {
         if (c.attachedRigidbody != null && c.gameObject.CompareTag("Ingredient"))
         {
@@ -12,7 +12,7 @@ public class IngredientCollide : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D c)
+    private void OnTriggerExit(Collider c)
     {
         if (c.attachedRigidbody != null && c.gameObject.CompareTag("Ingredient"))
         {

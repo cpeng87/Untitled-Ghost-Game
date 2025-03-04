@@ -15,8 +15,8 @@ public class MiniGame : MonoBehaviour
     [SerializeField] private TMPro.TextMeshProUGUI failText;
 
     public Transform currentBlock = null;
-    private Rigidbody2D currentRigidbody;
-    private Vector2 blockStartPosition = new Vector2(0f, 4f);
+    private Rigidbody currentRigidbody;
+    private Vector2 blockStartPosition = new Vector2(0f, 0.5f);
     private float blockSpeed = 8f;
     private float blockSpeedIncrement = 0.5f;
     private int blockDirection = 1;
@@ -80,7 +80,7 @@ public class MiniGame : MonoBehaviour
         Transform selectedPrefab = sandwichOrder[currentIngredientIndex];
         currentBlock = Instantiate(selectedPrefab, blockHolder);
         currentBlock.position = blockStartPosition;
-        currentRigidbody = currentBlock.GetComponent<Rigidbody2D>();
+        currentRigidbody = currentBlock.GetComponent<Rigidbody>();
         blockSpeed += blockSpeedIncrement;
     }
 
@@ -95,6 +95,7 @@ public class MiniGame : MonoBehaviour
     {
         if (currentBlock && playing)
         {
+            currentRigidbody.isKinematic = true;
             float moveAmount = Time.deltaTime * blockSpeed * blockDirection;
             currentBlock.position += new Vector3(moveAmount, 0, 0);
 
@@ -107,7 +108,7 @@ public class MiniGame : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 currentBlock = null;
-                currentRigidbody.simulated = true;
+                currentRigidbody.isKinematic = false;
                 StartCoroutine(DelayedSpawn());
             }
         }
@@ -152,18 +153,10 @@ public class MiniGame : MonoBehaviour
 
     private IEnumerator SuccessCheckTimer()
     {
-        countdownText.gameObject.SetActive(true);
-        for (int i = 3; i > 0; i--)
-        {
-            countdownText.text = i.ToString();
-            yield return new WaitForSeconds(1f);
-        }
-        countdownText.gameObject.SetActive(false);
-
         if (connectedIngredients.Count == placedIngredients.Count)
         {
             successText.gameObject.SetActive(true);
-            successText.text = "Success!";
+            successText.text = "Sandwich Complete!";
             yield return new WaitForSeconds(2f);
             UnityEngine.SceneManagement.SceneManager.LoadScene("Kevin");
         }
