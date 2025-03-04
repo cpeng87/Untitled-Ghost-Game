@@ -1,5 +1,6 @@
 ﻿title: CubeOrder
 tags:
+position: -54,-23
 ---
 Cube: I'd like a {GetOrder()} please.
     -> On it
@@ -10,6 +11,7 @@ Cube: I'd like a {GetOrder()} please.
 ===
 title: CubeSuccess
 tags:
+position: -173,132
 ---
 Cube: Thank you.
 Cube: Dummy.
@@ -17,12 +19,14 @@ Cube: Dummy.
 ===
 title: CubeFailure
 tags:
+position: -112,-180
 ---
 Cube: ...?
 // <<setCam "Main Camera">>
 ===
 title: CubeStory
 tags:
+position: 192,50
 ---
 Cube: I am a Cube.
 <<play Cube bounce>>
@@ -42,6 +46,7 @@ Cube: But what do you choose to be?
 ===
 title: CubeStory2
 tags:
+position: 54,198
 ---
 Cube: Yes, I am indeed a cube that exists within this plane.
 <<play Cube bounce>>
@@ -52,6 +57,7 @@ Cube: And I shall remain as such.
 ===
 title: CubeStory3
 tags:
+position: 126,-162
 ---
 Cube: Thank you for the drink.
 <<play Cube bounce>>

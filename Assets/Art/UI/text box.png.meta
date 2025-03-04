@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8b87301c0fd5dd043a2dfb929aee6d0d
+guid: a0c836e262b443f4ebebbbb873adcc12
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,23 +97,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Blank Dark Green Name Box_0
+      name: text box_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 5
         y: 0
-        width: 324
-        height: 66
+        width: 1245
+        height: 278
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 46, y: 34, z: 45, w: 24}
+      border: {x: 80, y: 68, z: 85, w: 55}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 521410f3b39854d41ba1f2445941aa11
-      internalID: -2131071278
+      spriteID: 2a769ff4ae0361e408884d0dfae5dabf
+      internalID: -1967485313
       vertices: []
       indices: 
       edges: []
@@ -122,7 +122,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5cb1fda9e96727e44b4673a0bee42ac1
+    spriteID: 30f30b0d33687e440a6fcc252ea79901
     internalID: 0
     vertices: []
     indices: 
@@ -132,7 +132,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Blank Dark Green Name Box_0: -2131071278
+      text box_0: -1967485313
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
