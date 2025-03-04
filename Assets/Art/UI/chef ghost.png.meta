@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8b87301c0fd5dd043a2dfb929aee6d0d
+guid: 8f7aa432c552666408b576e294d1f3ed
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -95,34 +95,12 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Blank Dark Green Name Box_0
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 0
-        width: 324
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 46, y: 34, z: 45, w: 24}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 521410f3b39854d41ba1f2445941aa11
-      internalID: -2131071278
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5cb1fda9e96727e44b4673a0bee42ac1
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -131,8 +109,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Blank Dark Green Name Box_0: -2131071278
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
