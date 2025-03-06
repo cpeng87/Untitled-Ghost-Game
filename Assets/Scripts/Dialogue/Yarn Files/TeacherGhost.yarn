@@ -3,6 +3,7 @@ tags:
 position: -54,-23
 ---
 Teacher Ghost: Ah, what a lovely day! May I please have an {GetOrder()}, darling? Thank you!
+<<setCam "Main Camera">>
 ===
 
 title: TeacherSuccess
@@ -11,6 +12,7 @@ position: -173,132
 ---
 Teacher Ghost: Oh, my! How did you make this perfect dish more enriching and exquisite than before?
 Teacher Ghost: You never fail to surprise me, my dear - take care!
+<<setCam "Main Camera">>
 ===
 
 title: TeacherFailure
@@ -19,6 +21,7 @@ position: -112,-180
 ---
 Teacher Ghost: Oh, dear... thank you for your efforts, darling, but I'm afraid this wasn't what I was asking for.
 Teacher Ghost: It's alright, I'm sure you'll do better next time.
+<<setCam "Main Camera">>
 ===
 
 title: TeacherStory1
@@ -34,6 +37,7 @@ Teacher Ghost: I love my students dearly, you see, almost as if they were my own
 Teacher Ghost: Now, I believe it's your turn. Cafe Ghost, is it?
 Teacher Ghost: I love how you've made a home for yourself in the afterlife - such rich colors and inviting tones indeed! It shows your blooming character and your love to serve others.
 Teacher Ghost: Now, I do have to get back to my students, so I bid you farewell. See you soon, dear!
+<<setCam "Main Camera">>
 ===
 
 title: TeacherStory2
@@ -51,6 +55,7 @@ Teacher Ghost: Ah, I've been rambling again.
 Teacher Ghost: I know life's end is a hard topic to bring up, so I understand why you haven't told me yours - and you never have to, my dear!
 Teacher Ghost: I'm sorry for intruding on such a personal topic, but thank you for patiently listening.
 Teacher Ghost: I'll be seeing you soon, darling.
+<<setCam "Main Camera">>
 ===
 
 title: TeacherStory3
@@ -71,6 +76,7 @@ Teacher Ghost: Written books?
 Teacher Ghost: I... I'm sorry dear, was I saying all of that aloud?
 Teacher Ghost: I... I think I'll take a day off today. I think the children will understand.
 Teacher Ghost: I'll see you soon, dear.
+<<setCam "Main Camera">>
 ===
 
 title: TeacherStory4
@@ -88,4 +94,5 @@ Teacher Ghost: They deserve knowledge as much as any other ghost, and I know it!
 Teacher Ghost: They're good kids... and I need to keep on helping them.
 Teacher Ghost: You're always welcome to my schoolhouse, my dear - I know it might not be below your level of knowledge, but you can always learn a thing or two from the children.
 Teacher Ghost: See you soon, darling, and thank you!
+<<setCam "Main Camera">>
 ===

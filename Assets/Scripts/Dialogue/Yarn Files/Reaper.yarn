@@ -3,6 +3,7 @@ tags:
 position: -54,-23
 ---
 Reaper: Could I get a {GetOrder()}, please? As far as the decoration goes, surprise me!
+<<setCam "Main Camera">>
 ===
 
 title: ReaperSuccess
@@ -10,6 +11,7 @@ tags:
 position: -173,132
 ---
 Reaper: Thank you very much, it's delicious! What a creative design, as well.
+<<setCam "Main Camera">>
 ===
 
 title: ReaperStory1
@@ -49,6 +51,7 @@ Reaper: Well, I am not able to define clearly what exactly it was that you regre
     ->I doubt that will help...
         Reaper: No use being pessimistic about it, is there? Give it a try. The ghosts here aren't so different from you.
 Reaper: Until the next time we cross paths, try to get to know some of them! I hope to hear good news during my next visit.
+<<setCam "Main Camera">>
 ===
 
 // title: ReaperStory2

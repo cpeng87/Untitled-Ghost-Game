@@ -3,6 +3,7 @@ tags:
 position: -54,-23
 ---
 Lawyer Ghost: Ughhh, that court case knocked the wind out of me... may I have an {GetOrder()} to lift my spirits, please?
+<<setCam "Main Camera">>
 ===
 
 title: LawyerSuccess
@@ -10,6 +11,7 @@ tags:
 position: -173,132
 ---
 Lawyer Ghost: WOAH! I didn't know how badly I needed this. I gotta go to the court hearing, but thank you for making me the best thing I've had this morning.
+<<setCam "Main Camera">>
 ===
 
 title: LawyerFailure
@@ -18,6 +20,7 @@ position: -112,-180
 ---
 Lawyer Ghost: This case has been hell on earth - or I guess, hell in the afterlife - and this didn't really help me as much as I thought it would.
 Lawyer Ghost: Thanks for trying, but I've gotta get back to solving this case... again...
+<<setCam "Main Camera">>
 ===
 
 title: LawyerStory1
@@ -28,6 +31,7 @@ Lawyer Ghost: Hey, I've been meaning to ask you a couple questions. No, I'm not 
 Lawyer Ghost: Have you heard anything about... a dog?
 Lawyer Ghost: I don't even remember anything about my passing, and I just really hope he's alright. I really hope I didn't order a hot chocolate back then - my dog loves to try and steal my drinks.
 Lawyer Ghost: Anyway, I don't mean to interrupt your services to others... thanks for your time.
+<<setCam "Main Camera">>
 ===
 
 title: LawyerStory2
@@ -39,6 +43,7 @@ Lawyer Ghost: Every case down here, such as theft or divorce, has a nicer and mo
 Lawyer Ghost: Speaking of life... have you heard anything about my dog? Things are kind of hazy, but I remember a storm... did I die in a flood? A hurricane?
 Lawyer Ghost: No, it couldn't be a hurricane - I would've known about it a week in advance and left... right?
 Lawyer Ghost: I... I need to think more about this. Thank you for your time.
+<<setCam "Main Camera">>
 ===
 
 title: LawyerStory3
@@ -54,6 +59,7 @@ Lawyer Ghost: Well, at least they still have some sense of value and love.
 Lawyer Ghost: The only thing I have left is my life's work, and honestly, I should be content with just that.
 Lawyer Ghost: Yet... you know you're the only ghost that looks at me in the eye? The rest of them think I'm going to persecute them in court or interrogate them for a crime or even... take a bribe??
 Lawyer Ghost: What kind of ghost do they think I am - I need to calm down. Thanks for your time, again.
+<<setCam "Main Camera">>
 ===
 
 title: LawyerStory4
@@ -70,6 +76,7 @@ Lawyer Ghost: I loved him, I did... I just couldn't love or take care of myself.
 Lawyer Ghost: Others didn't see me for me and saw the reflection of society, so I poured my self-worth into my work... but at what cost?
 Lawyer Ghost: I need to find my dog.
 Lawyer Ghost: Please tell me if you find him. Thank you for your time.
+<<setCam "Main Camera">>
 ===
 
 title: LawyerStory5
@@ -85,6 +92,7 @@ Lawyer Ghost: My mistakes are a part of my journey, and  I need to love myself f
 Lawyer Ghost: I think I'm going to take a break from the lawyer stuff for a bit to work on myself.
 Lawyer Ghost: Well, before I self-reflect some more, I need to meet Dog Ghost for a cup of mocha - ironically, he loves chocolate.
 Lawyer Ghost: Thanks for your time.
+<<setCam "Main Camera">>
 ===
 
 title: LawyerStory6
@@ -99,4 +107,5 @@ Lawyer Ghost: Dog Ghost can be my partner attorney, the ace up my sleeve. With h
 Lawyer Ghost: We'll restore justice to humanity the way the creation of the law intended to.
 Lawyer Ghost: I truly can't wait - thanks for listening to me, even if I just blabbed at you like you were my therapist. It means a lot to me.
 Lawyer Ghost: Now, go serve your other customers - I'm sure you'll help them as much as you've helped me.
+<<setCam "Main Camera">>
 ===

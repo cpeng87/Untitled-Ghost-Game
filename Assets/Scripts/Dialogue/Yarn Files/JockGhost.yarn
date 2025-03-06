@@ -3,6 +3,7 @@ tags:
 position: -54,-23
 ---
 Jock Ghost: Can't wait to get my daily pump! And I don't just mean the workout - can I have an {GetOrder()}, please?
+<<setCam "Main Camera">>
 ===
 
 title: JockSuccess
@@ -11,6 +12,7 @@ position: -173,132
 ---
 Jock Ghost: Ahhhh, that hits the spot! Speaking of spots, I'd love to spot you at the gym.
 Jock Ghost: Can't wait to mix my protein powder into my {GetOrder()} and get my PR thanks to you!
+<<setCam "Main Camera">>
 ===
 
 title: JockFailure
@@ -20,6 +22,7 @@ position: -112,-180
 Jock Ghost: Dude. This is TOTALLY gonna throw off my PR.
 Jock Ghost: It's not even worth adding my protein powder.
 Jock Ghost: Just know that when I train and condition to failure today, I'm gonna think about this awful {GetOrder()}.
+<<setCam "Main Camera">>
 ===
 
 title: JockStory1
@@ -32,6 +35,7 @@ Jock Ghost: Yeah, I don't really have too much else to me.
 Jock Ghost: I mean, there's my job at Tycoon Ghost's construction site, but like... it's not that interesting.
 Jock Ghost: You know what else is interesting? I got my first ghost bicep vein in the afterlife!
 Jock Ghost: Isn't that sick?
+<<setCam "Main Camera">>
 ===
 
 title: JockStory2
@@ -47,6 +51,7 @@ Jock Ghost: It's always been that way for me - always someone with the stronger 
 Jock Ghost: Maybe I should try lat-tes to try and get them back?
 Jock Ghost: Get it?...
 Jock Ghost: Yeah, I never had a shot at being the best comedian.
+<<setCam "Main Camera">>
 ===
 
 title: JockStory3
@@ -60,6 +65,7 @@ Jock Ghost: That's what I told him, and he looked at me funny, saying his Platin
 Jock Ghost: Is my physique really that... good?
 Jock Ghost: It always seems to dull in the reflection.
 Jock Ghost: Maybe I'm just looking at the mirror wrong.
+<<setCam "Main Camera">>
 ===
 
 title: JockStory4
@@ -75,4 +81,5 @@ Jock Ghost: I worked for it.
 Jock Ghost: And... I deserve to revel in my hard-earned talents.
 Jock Ghost: I deserve to be confident... maybe as confident as Musician ghost is with his instruments.
 Jock Ghost: Just... let me know when you need a gym bro, yeah? I'd love to share my workouts with you and all of the afterlife.
+<<setCam "Main Camera">>
 ===
