@@ -1,0 +1,86 @@
+title: ActorOrder
+tags:
+position: -54,-23
+---
+Actor Ghost: Hey barista, one {GetOrder()}, please!
+===
+
+title: ActorSuccess
+tags:
+position: -173,132
+---
+Actor Ghost: Wow, this is amazing, I can see why you're a barista! Great stuff! Truly a master at work~!
+===
+
+title: ActorFailure
+tags:
+position: -112,-180
+---
+Actor Ghost: Bleurgh- What is this?
+Actor Ghost: How could you serve something like this to someone as famous as me?
+Actor Ghost: If I left a review on this place, you'd be out of business in minutes!
+===
+
+title: ActorStory1
+tags:
+position: 169,38
+---
+Actor Ghost: Yep, it's me. The one! The only!!
+Actor Ghost: You know me from the hit shows The Workplace, Acquaintances, Tournament of seats, yep, it's me in the flesh, or I guess in the spirit. And no, I don't do autographs.
+Actor Ghost: WHAT?!
+Actor Ghost: You don't know who I am?
+Actor Ghost: Were you living under a rock for your whole life?! I guess it is a nice change of pace though.
+Actor Ghost: Well, see ya around, barista~!
+===
+
+title: ActorStory2
+tags:
+position: 169,38
+---
+Actor Ghost: Hmm, my fame?
+Actor Ghost: Oh, it was absolutely a~mazing!
+Actor Ghost: I got invites to all of the events in Hollyboo. 
+Actor Ghost: You know, at some point in fame, people just start giving you free stuff: money, food, drinks, even property!
+Actor Ghost: Like this one time, this chick gifted me their giant stuffed animal that was nearly twice my size!
+Actor Ghost: Honestly I was shocked, but hey, who says no to free things, hm?
+Actor Ghost: And opportunities, I was absolutely SWIMMING in them.
+Actor Ghost: But the best part was the parties!
+Actor Ghost: Every!
+Actor Ghost: DAY!
+Actor Ghost: Never a boring moment with those people. Man, those were the times.
+===
+
+title: ActorStory3
+tags:
+position: 169,38
+---
+Actor Ghost: Why am I a ghost?
+Actor Ghost: Well, heh- I really did have everything everyone could imagine.
+Actor Ghost: But you know... what even comes after that? Even amidst all of the flashing lights, people, and drinks, I-I can't shake off this sense of� loneliness?
+Actor Ghost: Like what comes after all of this? I have fun, but once excitement leaves me and I find myself alone in the mansion, everything just feels so�empty.
+Actor Ghost: Ugh, this depressing stuff does NOT suit me at all.
+Actor Ghost: I'm a star after all! I can't be seen moping around like this!
+===
+
+title: ActorStory4
+tags:
+position: 169,38
+---
+Actor Ghost: You know, barista, it's kind of exhausting to stay under the spotlight for your whole life.
+Actor Ghost: Everyone's always clamoring around you to get a chance at that next opportunity.
+Actor Ghost: Hah, out of all my friends, who even knows me... for me?
+Actor Ghost: I've acted in countless movies that explore this very topic but, funnily enough, I still haven't found the answer myself.
+Actor Ghost: There's this nagging voice in the back of my head that tells me everyone just wants to use me in their career...
+Actor Ghost: That everyone only loves the confident and cocky world-famous actor persona I've built, but I really wonder if it's true.
+===
+
+title: ActorStory5
+tags:
+position: 169,38
+---
+Actor Ghost: I know I've kinda just been one-sidedly ranting to you this whole time, but... I have to admit, it really made me think about my life.
+Actor Ghost: Haha, this is so un-star-like. Like c'mon man.
+Actor Ghost: But still, it's nice to actually have someone listen to you, for once.
+Actor Ghost: Just me, and not the persona that I've created. Made me really appreciate the ones that don't just latch onto my and my stardom...
+Actor Ghost: Thanks, man. See you, barista~! Aaaaaand cut!
+===

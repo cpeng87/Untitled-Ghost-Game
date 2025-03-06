@@ -43,7 +43,11 @@ public class OrderManager : MonoBehaviour
             Debug.Log("No possible recipes, something went terribly wrong.");
             return false;
         }
-        int selectedIndex = (int) (Random.value * possibleRecipe.Count);
+        Debug.Log("Possible recipes: " + possibleRecipe);
+        int selectedIndex = (int) (Random.value * (possibleRecipe.Count));
+        Debug.Log(possibleRecipe.Count);
+        Debug.Log("Selected index: " + selectedIndex);
+        Debug.Log("Selected recipe: " + possibleRecipe[selectedIndex].recipeName);
 
         activeOrders.Add(new Order(name, recipes[selectedIndex].minigame, recipes[selectedIndex].recipeName, recipes[selectedIndex].sellPrice, seatNum));
         currActiveOrder = activeOrders.Count - 1;

@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/Storefront.unity
+    path: Assets/Scenes/MainStorefront.unity
     guid: ad39f95941dbc9445993858466cdee80
   - enabled: 1
     path: Assets/Scenes/Joseph Seo/Storefront.unity
@@ -26,5 +26,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Enzo Waga Okada/Cake Mixing and Baking Minigame/BakingCake.unity
     guid: ee759b35a5adf8d41a45ea374cf44a24
+  - enabled: 1
+    path: Assets/Scenes/Sophia Wang/Pancakes.unity
+    guid: b5cd565fde6854ef88c4677caf5e3378
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
