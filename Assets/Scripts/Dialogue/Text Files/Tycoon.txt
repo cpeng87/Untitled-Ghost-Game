@@ -1,0 +1,60 @@
+[Order]
+One {item}. Impress me, and I may sponsor your pitiful business.
+[End]
+
+[Success]
+Hmmm…not half bad. You’ll make a good underling.
+[End]
+
+[Failure]
+You use my money and generosity for garbage like this? You’re fired!
+[End]
+
+[Story]
+What, don’t you recognize your own boss? Oh, I’m only the most influential ghost to ever exist. 
+I own Ghost Groceries, and Ghost Real Estate, and Ghost Gambling, and Ghost Automotives, and Ghost Banking, and really every business that any ghost could ever buy from. 
+Even Ghost Recipes, which my records show you’ve been buying more from than most ghosts do in a deathtime. 
+Maybe I’ll even give you a discount, for being a loyal customer. 5% off purchases of $500 or more, how’s that sound?
+[End]
+
+[Story]
+Well, I came to see how my little pet project was doing again, aren’t you honored? It is a good businessman’s duty to…take care of their ventures. 
+I do own 30% of your cafe’s stock, so it wouldn’t benefit either of us if your little business tanked, yes? Oh, you didn’t know? Well, your little business has had quite the meteoric rise in the Ghost Stock Market! 
+Also owned by me, of course. 
+And your only competition are my businesses. 
+But still, you should be proud! You’re outdoing Ghost Caffeine by 12%.
+[End]
+
+[Story]
+What am I attached to? Money, of course. I need to be rich!
+Much richer than I am now.
+Then, I’ll be satisfied and my soul will be able to rest. I’m sure of it - what else could I possibly want in the world than money? 
+Money is power, money is happiness, money is fulfillment. And make no mistake, I am not lacking in any.
+[End]
+
+[Story]
+“What are you earning so much money for -” what other reason than to have it! 
+Money makes the world go round, you can’t live without it!
+….Though, we’re all dead. Well, for food – or no, for living costs – well. 
+A house! 
+Protection from, um.
+…There has to be a use for money.
+I mean, everyone uses it to buy things from me, right?
+But - what can I even do with it, if I’m the only one selling? I don’t - I don’t know.
+[End]
+
+[Story]
+…I see what you meant, now.
+My wealth, my fortunes - they were all worthless all along, weren’t they?
+What was I holding onto so tightly?
+Some - powerless, empty, currency?
+…I don’t know what to do.
+Who am I meant to be, if not a Tycoon? What could I possibly want, if not money?
+….and can I ever really pass on, if I’ll never have enough money to satisfy my greed?
+[End]
+
+[Story]
+I’ve decided to leave.
+I’m quitting all my businesses. You can keep yours, of course - it was always entirely yours to begin with.
+I’m going away - far, far away from here - anywhere else in the world, so that I can look for something that will truly make me happy. I know now that it isn’t money, thanks to you. I think I’ve gotten quite sick of money, ha! …But I’ll be leaving. Take care, alright?
+[End]
