@@ -8,6 +8,7 @@ public class DialoguePlayer : MonoBehaviour
 {
     public static DialoguePlayer Instance { get; private set; }
     [SerializeField] private DialogueRunner dialogueRunner;
+    [SerializeField] private FancyDialogue fd;
 
     private string currentOrder;
     private int seatNum = -1;
@@ -31,6 +32,7 @@ public class DialoguePlayer : MonoBehaviour
         dialogueRunner.AddCommandHandler<string>("startStory", StartStoryDialogue);
         dialogueRunner.AddCommandHandler<string, string>("setNext", SetNextDialogue);
         dialogueRunner.AddCommandHandler("end", EndDialogue);
+        dialogueRunner.AddCommandHandler("reset", Reset);
     }
 
     public static void PlayAnimation(string name, string animation) {
@@ -46,6 +48,10 @@ public class DialoguePlayer : MonoBehaviour
         // string[] names = {"tea", "coffee", "milk"};
         // return names[selectedIndex];
         return DialoguePlayer.Instance.currentOrder;
+    }
+
+    public void Reset() {
+        fd.Reset();
     }
 
     // This function physically hurts me to write
