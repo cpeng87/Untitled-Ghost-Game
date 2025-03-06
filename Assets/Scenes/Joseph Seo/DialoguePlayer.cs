@@ -97,7 +97,7 @@ public class DialoguePlayer : MonoBehaviour
         this.seatNum = seatNum;
         this.currentOrder = recipe; 
         CameraManager.Instance.SwapToSeatCamera(seatNum);
-        dialogueRunner.StartDialogue(ghostName + "Order");
+        dialogueRunner.StartDialogue(ghostName.Split(' ')[0] + "Order");
     }
 
     public void CompleteOrderDialogue(string ghostName, int seatNum, bool res) {

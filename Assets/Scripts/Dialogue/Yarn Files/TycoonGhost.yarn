@@ -3,6 +3,7 @@ tags:
 position: -54,-23
 ---
 Tycoon Ghost: One {GetOrder()}. Impress me, and I may sponsor your pitiful business.
+<<setCam "Main Camera">>
 ===
 
 title: TycoonSuccess
@@ -10,6 +11,7 @@ tags:
 position: -173,132
 ---
 Tycoon Ghost: Hmmm... not half bad. You'll make a good underling.
+<<setCam "Main Camera">>
 ===
 
 title: TycoonFailure
@@ -17,6 +19,7 @@ tags:
 position: -112,-180
 ---
 Tycoon Ghost: You use my money and generosity for garbage like this? You're fired!
+<<setCam "Main Camera">>
 ===
 
 title: TycoonStory1
@@ -27,6 +30,7 @@ Tycoon Ghost: What, don't you recognize your own boss? Oh, I'm only the most inf
 Tycoon Ghost: I own Ghost Groceries, and Ghost Real Estate, and Ghost Gambling, and Ghost Automotives, and Ghost Banking, and really every business that any ghost could ever buy from. 
 Tycoon Ghost: Even Ghost Recipes, which my records show you've been buying more from than most ghosts do in a deathtime. 
 Tycoon Ghost: Maybe I'll even give you a discount, for being a loyal customer. 5% off purchases of $500 or more, how's that sound?
+<<setCam "Main Camera">>
 ===
 
 title: TycoonStory2
@@ -38,6 +42,7 @@ Tycoon Ghost: I do own 30% of your cafe's stock, so it wouldn't benefit either o
 Tycoon Ghost: Also owned by me, of course. 
 Tycoon Ghost: And your only competition are my businesses. 
 Tycoon Ghost: But still, you should be proud! You're outdoing Ghost Caffeine by 12%.
+<<setCam "Main Camera">>
 ===
 
 title: TycoonStory3
@@ -48,6 +53,7 @@ Tycoon Ghost: What am I attached to? Money, of course. I need to be rich!
 Tycoon Ghost: Much richer than I am now.
 Tycoon Ghost: Then, I'll be satisfied and my soul will be able to rest. I'm sure of it - what else could I possibly want in the world than money? 
 Tycoon Ghost: Money is power, money is happiness, money is fulfillment. And make no mistake, I am not lacking in any.
+<<setCam "Main Camera">>
 ===
 
 title: TycoonStory4
@@ -62,6 +68,7 @@ Tycoon Ghost: Protection from, um.
 Tycoon Ghost: ...There has to be a use for money.
 Tycoon Ghost: I mean, everyone uses it to buy things from me, right?
 Tycoon Ghost: But - what can I even do with it, if I'm the only one selling? I don't - I don't know.
+<<setCam "Main Camera">>
 ===
 
 title: TycoonStory5
@@ -75,6 +82,7 @@ Tycoon Ghost: Some - powerless, empty, currency?
 Tycoon Ghost: ...I don't know what to do.
 Tycoon Ghost: Who am I meant to be, if not a Tycoon? What could I possibly want, if not money?
 Tycoon Ghost: ...and can I ever really pass on, if I'll never have enough money to satisfy my greed?
+<<setCam "Main Camera">>
 ===
 
 title: TycoonStory6
@@ -86,4 +94,5 @@ Tycoon Ghost: I'm quitting all my businesses. You can keep yours, of course - it
 Tycoon Ghost: I'm going away - far, far away from here - anywhere else in the world, so that I can look for something that will truly make me happy.
 Tycoon Ghost: I know now that it isn't money, thanks to you. I think I've gotten quite sick of money, ha! ...But I'll be leaving.
 Tycoon Ghost: Take care, alright?
+<<setCam "Main Camera">>
 ===
