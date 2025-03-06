@@ -111,13 +111,14 @@ public class GhostObj : Clickable
          orderNotificationAnimator.SetBool("isActive", b);
         
         // Convey to Customer Patience Manager to enable or disable this Ghost's patience timer 
-         if (b) //Start patience timer
-         {
-             CustomerPatienceManager.Instance.StartGhostPatienceTimer(gameObject);
-         }
-         else //Stop patience timer
-         {
-             CustomerPatienceManager.Instance.StopGhostPatienceTimer(gameObject.GetInstanceID());
-         }
+        //  if (b) //Start patience timer
+        //  {
+        //     CustomerPatienceManager.Instance.StartGhostPatienceTimer(gameObject);
+             
+        //  }
+        //  else //Stop patience timer
+        //  {
+        //      CustomerPatienceManager.Instance.StopGhostPatienceTimer(gameObject.GetInstanceID());
+        //  }
     }
 }
