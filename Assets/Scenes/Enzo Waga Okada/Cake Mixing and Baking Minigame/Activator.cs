@@ -13,6 +13,7 @@ public class Activator : MonoBehaviour {
         if (Input.GetKeyDown(key) && active) {
             if (note.transform.position.x <= 0.2f && note.transform.position.x >= -0.2f) {
                 Destroy(note);
+                GameManager.Instance.CompleteMinigame(true);
             }
 
         }

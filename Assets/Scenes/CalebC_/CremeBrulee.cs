@@ -22,6 +22,7 @@ public class CremeBrulee : MonoBehaviour
     private void GameSuccess()
     {
         Debug.Log("You Win!");
+        GameManager.Instance.CompleteMinigame(true);
     }
 
 
