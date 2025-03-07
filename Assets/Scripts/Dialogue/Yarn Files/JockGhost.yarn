@@ -12,7 +12,7 @@ position: -173,132
 ---
 Jock Ghost: Ahhhh, that hits the spot! Speaking of spots, I'd love to spot you at the gym.
 Jock Ghost: Can't wait to mix my protein powder into my {GetOrder()} and get my PR thanks to you!
-<<setCam "Main Camera">>
+<<startStory JockStory>>
 ===
 
 title: JockFailure

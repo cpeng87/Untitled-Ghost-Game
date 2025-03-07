@@ -114,22 +114,31 @@ public class DialoguePlayer : MonoBehaviour
         this.seatNum = seatNum;
         this.currentOrder = recipe; 
         CameraManager.Instance.SwapToSeatCamera(seatNum);
-        dialogueRunner.StartDialogue(ghostName.Split(' ')[0] + "Order");
+        ghostName = ghostName.Replace(" ", "");
+        if (ghostName.Contains("Ghost"))
+        {
+            ghostName = ghostName.Replace("Ghost", "");
+        }
+        dialogueRunner.StartDialogue(ghostName + "Order");
     }
 
     public void CompleteOrderDialogue(string ghostName, int seatNum, bool res) {
         CameraManager.Instance.SwapToSeatCamera(seatNum);
         this.seatNum = seatNum;
+
+        string parsedName = ghostName.Replace(" ", "");
+        parsedName = parsedName.Replace("Ghost", "");
         
         if (res) {
             isSuccess = true;
-            dialogueRunner.StartDialogue(ghostName.Split(' ')[0] + "Success");
+            dialogueRunner.StartDialogue(parsedName + "Success");
         } else {
             isDeleting = true;
-            dialogueRunner.StartDialogue(ghostName.Split(' ')[0] + "Failure");
+            dialogueRunner.StartDialogue(parsedName + "Failure");
         }
     }
 
+    //i feel like there is an easier way to do this... but alas...
     private void OnDialogueComplete()
     {
         if (isDeleting)

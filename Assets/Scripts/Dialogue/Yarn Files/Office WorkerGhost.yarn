@@ -11,7 +11,7 @@ tags:
 position: -173,132
 ---
 Office Worker Ghost: Oh, this {GetOrder()} is delicious. You're quite good at your job, aren't you?
-<<setCam "Main Camera">>
+<<startStory OfficeWorkerStory>>
 ===
 
 title: OfficeWorkerFailure

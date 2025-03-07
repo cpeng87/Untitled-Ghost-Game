@@ -11,7 +11,7 @@ tags:
 position: -173,132
 ---
 Actor Ghost: Wow, this is amazing, I can see why you're a barista! Great stuff! Truly a master at work~!
-<<setCam "Main Camera">>
+<<startStory ActorStory>>
 ===
 
 title: ActorFailure
