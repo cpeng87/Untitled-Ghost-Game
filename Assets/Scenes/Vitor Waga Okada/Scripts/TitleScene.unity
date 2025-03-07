@@ -425,6 +425,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: startGame
       objectReference: {fileID: 0}
+    - target: {fileID: 3071724310104812309, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071724310104812309, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d890091a222c1b444bc18ced08c9a1a2, type: 3}
     - target: {fileID: 3962906137682589179, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -521,6 +529,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: closeGame
       objectReference: {fileID: 0}
+    - target: {fileID: 7082566942472162199, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_text
+      value: Mourning Brew
+      objectReference: {fileID: 0}
+    - target: {fileID: 7082566942472162199, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7082566942472162199, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7082566942472162199, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7082566942472162199, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8794624138599639998, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
       propertyPath: m_Colors.m_PressedColor.b
       value: 0.78431374
@@ -597,7 +625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TitleScreen: {fileID: 7091936122881665857}
   OptionsScreen: {fileID: 381483004045174633}
-  StartGameAfterScreen: Storefront
+  StartGameAfterScreen: MainStorefront
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
