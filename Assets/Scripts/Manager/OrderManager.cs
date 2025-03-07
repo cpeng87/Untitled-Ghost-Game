@@ -120,7 +120,9 @@ public class OrderManager : MonoBehaviour
     public void RemoveCompletedOrder()
     {
         Ghost currGhost = GameManager.Instance.ghostManager.GetGhostScriptableFromName(activeOrders[currActiveOrder].ghostName);
+        Debug.Log(currGhost.name);
         GameManager.Instance.ghostManager.RemoveActiveGhost(currGhost);
+        GhostSpawningManager.Instance.DeleteSpawnedGhost(activeOrders[currActiveOrder].seatNum);
         activeOrders.RemoveAt(currActiveOrder);
         Debug.Log("Completed order!");
     }

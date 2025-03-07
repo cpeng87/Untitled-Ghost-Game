@@ -1,8 +1,8 @@
-title: Setup
-tags: setup
----
-<<declare $storyNum = 0>>
-===
+// title: Setup
+// tags: setup
+// ---
+// <<declare $storyNum = 0>>
+// ===
 
 title: LovestruckOrder
 tags:
@@ -18,10 +18,8 @@ position: -173,132
 ---
 Lovestruck Ghost: Thank you! This place would make such a cute first date... Maybe I'll finally meet someone here!
 // <<declare $storyName = "">>
-<<set $storyName = "LovestruckStory">>
-<<set $storyName = $storyName + string($storyNum)>>
 <<startStory LovestruckStory>>
-<<setCam "Main Camera">>
+// <<setCam "Main Camera">>
 ===
 
 title: LovestruckFailure
@@ -42,7 +40,6 @@ Lovestruck Ghost: Old habits... I used to be quite good at setting people up on 
 Lovestruck Ghost: All my friends would come to me for dating advice...
 Lovestruck Ghost: Hm? Oh, no, I never dated anyone myself. Never seemed to be able to find the right person.
 Lovestruck Ghost: I'd like to, though...doesn't everyone? Romance just sounds so dreamy...
-<<set $storyNum = $storyNum + 1>>
 <<setCam "Main Camera">>
 ===
 
@@ -53,7 +50,6 @@ position: 0,0
 Lovestruck Ghost: Did you watch that new rom-com that came out? 
 Lovestruck Ghost: Could you keep an ear out to see if anyone else is interested in romance?
 Lovestruck Ghost: Oh, really? You'd do that for me? Thanks so much! Let me know if anyone else is a romance fan!
-<<set $storyNum = $storyNum + 1>>
 <<setCam "Main Camera">>
 ===
 
@@ -66,7 +62,6 @@ Lovestruck Ghost: I didn't even know what to say. I told them I needed some time
 Lovestruck Ghost: I've had a lot of time to think about it but I still don't really know what I would have said. 
 Lovestruck Ghost: If there was anyone I was going to fall in love with, it would have been them - they were everything I ever wanted. But I didn't. 
 Lovestruck Ghost: Ah! Sorry, I've just been sitting here and taking up your time... Thanks for listening!
-<<set $storyNum = $storyNum + 1>>
 <<setCam "Main Camera">>
 ===
 
@@ -82,7 +77,6 @@ Lovestruck Ghost: Maybe I never really wanted to.
 Lovestruck Ghost: Here, I've got some bittersweet chocolates.
 Lovestruck Ghost: I always wanted to give this to a crush, but I think you should have it.
 Lovestruck Ghost: Thanks for always listening to me.
-<<set $storyNum = -1>>
 <<setCam "Main Camera">>
 
 ===
