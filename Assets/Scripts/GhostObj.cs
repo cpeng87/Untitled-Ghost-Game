@@ -14,7 +14,6 @@ public class GhostObj : Clickable
 
     void Start() {
         // Get animator component from ghost prefab
-        Debug.Log("A GHOST IS SPAWNING IN");
         idleAnimator = GetComponentInChildren<Animator>();
         if (idleAnimator == null || orderNotificationAnimator == null)
         {

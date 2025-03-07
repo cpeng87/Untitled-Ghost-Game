@@ -14,7 +14,10 @@ public class DialoguePlayer : MonoBehaviour
     private int storyNum;
     private int seatNum = -1;
 
-    private bool isCompletingOrder;
+    private bool isSuccess = false;
+    private bool isDeleting = false;
+
+    
 
     private void Awake()
     {
@@ -36,6 +39,10 @@ public class DialoguePlayer : MonoBehaviour
         dialogueRunner.AddCommandHandler<string, string>("setNext", SetNextDialogue);
         dialogueRunner.AddCommandHandler("end", EndDialogue);
         dialogueRunner.AddCommandHandler("reset", Reset);
+
+        // dialogueRunner.onDialogueComplete += OnDialogueComplete;
+        dialogueRunner.onDialogueComplete.AddListener(OnDialogueComplete);
+
     }
 
     public static void PlayAnimation(string name, string animation) {
@@ -113,11 +120,29 @@ public class DialoguePlayer : MonoBehaviour
     public void CompleteOrderDialogue(string ghostName, int seatNum, bool res) {
         CameraManager.Instance.SwapToSeatCamera(seatNum);
         this.seatNum = seatNum;
-        isCompletingOrder = true;
+        
         if (res) {
+            isSuccess = true;
             dialogueRunner.StartDialogue(ghostName.Split(' ')[0] + "Success");
         } else {
+            isDeleting = true;
             dialogueRunner.StartDialogue(ghostName.Split(' ')[0] + "Failure");
         }
+    }
+
+    private void OnDialogueComplete()
+    {
+        if (isDeleting)
+        {
+            GameManager.Instance.orderManager.RemoveCompletedOrder();
+            isDeleting = false;
+            isSuccess = false;
+            GameManager.Instance.state = State.Main;
+        }
+        if (isSuccess)
+        {
+            isDeleting = true;
+        }
+        GameManager.Instance.state = State.Main;
     }
 }

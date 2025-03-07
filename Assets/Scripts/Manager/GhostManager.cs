@@ -179,4 +179,16 @@ public class GhostManager : MonoBehaviour
         }
     }
 
+    public int GetSeatNum(Ghost ghost)
+    {
+        for (int i = 0; i < activeGhosts.Length; i++)
+        {
+            if (activeGhosts[i] == ghost)
+            {
+                return i;
+            }
+        }
+        return -1;
+    }
+
 }

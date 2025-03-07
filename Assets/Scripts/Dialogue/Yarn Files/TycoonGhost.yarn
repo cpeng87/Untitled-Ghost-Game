@@ -11,7 +11,7 @@ tags:
 position: -173,132
 ---
 Tycoon Ghost: Hmmm... not half bad. You'll make a good underling.
-<<setCam "Main Camera">>
+<<startStory TycoonStory>>
 ===
 
 title: TycoonFailure
