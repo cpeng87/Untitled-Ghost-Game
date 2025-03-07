@@ -11,7 +11,7 @@ tags:
 position: -173,132
 ---
 Weeb Ghost: Sweet! This is just what I need to fuel my gamer focus!
-<<setCam "Main Camera">>
+<<startStory WeebStory>>
 ===
 
 title: WeebFailure

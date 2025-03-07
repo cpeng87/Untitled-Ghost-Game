@@ -11,7 +11,7 @@ tags:
 position: -173,132
 ---
 Lawyer Ghost: WOAH! I didn't know how badly I needed this. I gotta go to the court hearing, but thank you for making me the best thing I've had this morning.
-<<setCam "Main Camera">>
+<<startStory LawyerStory>>
 ===
 
 title: LawyerFailure

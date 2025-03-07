@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 047e48fa05ad86942909fc0ef3ff09f0, type: 3}
+  m_Name: News Reporter Ghost
+  m_EditorClassIdentifier: 
+  ghostName: News Reporter Ghost
+  dialogue: {fileID: -8253061345870894857, guid: 66b547016d9bae34dac8a8f6de3b1009, type: 3}
+  success: []
+  failure: []
+  order: []
+  numStory: 5
+  recipesOrdered: []

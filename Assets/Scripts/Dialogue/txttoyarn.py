@@ -34,21 +34,26 @@ def parse_dialogue(file_path):
         for line in lines:
             if (line.startswith("[") == False):
                 # body_lines.append(file_path.rsplit('.',1)[0] + ": " + line)
-                new_line = ghost_title + ": " + line
+                new_line = ghost_title + " Ghost" + ": " + line
                 new_line = new_line.replace("{item}", "{GetOrder()}")
                 new_line = new_line.replace("’", "'")
+                new_line = new_line.replace("…", "...")
                 body_lines.append(new_line)
         body = "\n".join(body_lines)
-        
+        if (line.startswith("[Success]")):
+            next_action = '<<startStory' + ghost_title + 'Story>>'
+        else:
+            next_action = '<<setCam "Main Camera">>'
+
         # Build the Yarn Spinner section
-        yarn_section = f"{yarn_title}\n{tags}\n{position}\n---\n{body}\n===\n"
+        yarn_section = f"{yarn_title}\n{tags}\n{position}\n---\n{body}\n{next_action}\n===\n"
         yarn_sections.append(yarn_section)
 
     # Join all sections and return
     return "\n".join(yarn_sections)
 
 # Example usage
-input_file = "Musician.txt"
+input_file = "News Reporter.txt"
 output_file = input_file.rsplit('.',1)[0] + "Ghost.yarn"
 
 # Parse the dialogue and write to output file

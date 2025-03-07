@@ -11,8 +11,8 @@ tags:
 position: -173,132
 ---
 Jock Ghost: Ahhhh, that hits the spot! Speaking of spots, I'd love to spot you at the gym.
-Jock Ghost: Can't wait to mix my protein powder into my {GetOrder()} and get my PR thanks to you!
-<<setCam "Main Camera">>
+Jock Ghost: Can't wait to mix my protein powder into this and get my PR thanks to you!
+<<startStory JockStory>>
 ===
 
 title: JockFailure
@@ -21,7 +21,7 @@ position: -112,-180
 ---
 Jock Ghost: Dude. This is TOTALLY gonna throw off my PR.
 Jock Ghost: It's not even worth adding my protein powder.
-Jock Ghost: Just know that when I train and condition to failure today, I'm gonna think about this awful {GetOrder()}.
+Jock Ghost: Just know that when I train and condition to failure today, I'm gonna think about this awful dish...
 <<setCam "Main Camera">>
 ===
 
