@@ -67,7 +67,7 @@ public class GhostManager : MonoBehaviour
         {
             Ghost ghost = GetGhostScriptableFromName(name);
             if (ghost != null)
-                if (ghost.numStory - 1 <= ghostNameToStoryIndex[name])
+                if (ghost.numStory <= ghostNameToStoryIndex[name])
                 {
                     Debug.Log("Reached end of dialogue, will not increment");
                 }

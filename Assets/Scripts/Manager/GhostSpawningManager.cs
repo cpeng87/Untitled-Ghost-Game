@@ -9,7 +9,7 @@ public class GhostSpawningManager : MonoBehaviour
     private float ghostSpawnTimer = 0f;  //keeps track of time passed 
     public (GameObject, bool)[] spawnedGhosts;  //keeps track of ghost gameobject spawned in the scene, and whether it is moving or not
     [SerializeField] private float ghostSpawnCooldown;  //time for new ghost spawn
-    [SerializeField] private Vector3 door = new Vector3(-5.5f, 0.5f,7.5f);
+    [SerializeField] private Vector3 door = new Vector3(-6f, 0.5f,-7f);
     [SerializeField] private float ghostSpeed = 3f;
 
     //singleton
