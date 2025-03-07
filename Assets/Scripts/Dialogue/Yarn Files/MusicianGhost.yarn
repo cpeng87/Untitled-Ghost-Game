@@ -3,6 +3,7 @@ tags:
 position: -54,-23
 ---
 Musician: Hmm... I need something to get my creative juices flowing. Get me something that'll put a pep in my step, like a catchy pop song. How about a {GetOrder()}?
+<<setCam "Main Camera">>
 ===
 
 title: MusicianSuccess
@@ -10,6 +11,7 @@ tags:
 position: -173,132
 ---
 Musician: Wow... this {GetOrder()} hits all the right notes!
+<<setCam "Main Camera">>
 ===
 
 title: MusicianFailure
@@ -17,6 +19,7 @@ tags:
 position: -112,-180
 ---
 Musician: This tastes... off-key...
+<<setCam "Main Camera">>
 ===
 
 title: MusicianStory1
@@ -29,6 +32,7 @@ Musician: Honestly, I thought dying would fix my bad ear, but that ringing in my
 Musician: At first, I thought it was just fatigue... maybe my late nights of practicing were getting to me. But, over time, the noise kept getting worse, reverberating into my passions.
 Musician: It drove me crazy not knowing whether my performances were in the wrong key, and every practice session fell flat.
 Musician: It's been a while since I've put on a performance, but I'd like to think I'm a good inspiration away from getting back to my peak.
+<<setCam "Main Camera">>
 ===
 
 title: MusicianStory2
@@ -42,6 +46,7 @@ Musician: But days turned into weeks turned into months, and I had nothing to sh
 Musician: I couldn't put on a performance like I used to. Over time, I started losing my composure.
 Musician: I became... obsessed with the way people viewed my music.
 Musician: After all, music was my world... what's a person got to stand on when their world crumbles around them?
+<<setCam "Main Camera">>
 ===
 
 title: MusicianStory3
@@ -52,6 +57,7 @@ Musician: Losing my hearing wasn't all minor, though.
 Musician: Have you ever met someone and you're both thinking in harmony?
 Musician: For me, that was Jock Ghost. Meeting him felt like getting the band back together... we rode the same highs, felt the same pain, and shared the same tears.
 Musician: It was cathartic being able to meet someone who really understood bathing in the limelight... then waking up one day to realize that the world had moved on without us.
+<<setCam "Main Camera">>
 ===
 
 title: MusicianStory
@@ -66,4 +72,5 @@ Musician: What's a person got to stand on when their world crumbles around them?
 Musician: Only themselves.
 Musician: Just like Jock Ghost didn't need medals to prove that he was a sportsman, I didn't need chart-toppers or huge audiences to prove that I was a musician.
 Musician: It was the passion that drove us to become those things, and I think I'm ready to start playing music again... for nobody but myself.
+<<setCam "Main Camera">>
 ===

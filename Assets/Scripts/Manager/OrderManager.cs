@@ -88,12 +88,15 @@ public class OrderManager : MonoBehaviour
         {
             Debug.Log("There is no current active order, cannot switch seen! If testing disregard...");
         }
+        Debug.Log("completing order....");
         Ghost currGhost = GameManager.Instance.ghostManager.GetGhostScriptableFromName(activeOrders[currActiveOrder].ghostName);
 
         // dialoguePlayer = FindObjectsByType<DialoguePlayer>(FindObjectsSortMode.None)[0];
         // dialoguePlayer.CompleteOrderDialogue(currGhost.ghostName, activeOrders[currActiveOrder].seatNum, result);
         // DialogueManager.Instance.CompleteOrderDialogue(currGhost.ghostName, activeOrders[currActiveOrder].seatNum, result);
         DialoguePlayer.Instance.CompleteOrderDialogue(currGhost.ghostName, activeOrders[currActiveOrder].seatNum, result);
+        GameManager.Instance.ghostManager.IncrementStoryIndex(currGhost.ghostName);
+        GameManager.Instance.AddCurrency(activeOrders[currActiveOrder].price);
         // if (result)
         // {
         //     // List<string> successDialogue = TagReplacer(currGhost.success, "{item}", activeOrders[currActiveOrder].recipeName);

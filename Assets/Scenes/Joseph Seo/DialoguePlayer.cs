@@ -11,7 +11,10 @@ public class DialoguePlayer : MonoBehaviour
     [SerializeField] private FancyDialogue fd;
 
     private string currentOrder;
+    private int storyNum;
     private int seatNum = -1;
+
+    private bool isCompletingOrder;
 
     private void Awake()
     {
@@ -50,6 +53,12 @@ public class DialoguePlayer : MonoBehaviour
         return DialoguePlayer.Instance.currentOrder;
     }
 
+    // [YarnFunction("GetStoryNum")]
+    // public static int GetStoryNum()
+    // {
+    //     return DialoguePlayer.Instance.storyNum;
+    // }
+
     public void Reset() {
         fd.Reset();
     }
@@ -70,13 +79,14 @@ public class DialoguePlayer : MonoBehaviour
         }
     }
 
-    public void StartStoryDialogue(string ghostName) {
-        StartCoroutine(StoryDialogue(ghostName));
+    public void StartStoryDialogue(string storyToStart) {
+        Debug.Log(storyToStart);
+        StartCoroutine(StoryDialogue(storyToStart));
     }
 
-    private IEnumerator StoryDialogue(string ghostName) {
+    private IEnumerator StoryDialogue(string storyTitle) {
         yield return new WaitForSeconds(0.01f);
-        dialogueRunner.StartDialogue(DialogueManager.Instance.GetNextDialogue(ghostName));
+        dialogueRunner.StartDialogue(DialogueManager.Instance.GetNextDialogue(storyTitle));
     }
 
     public void SetNextDialogue(string name, string dialogueNode) {
@@ -97,18 +107,17 @@ public class DialoguePlayer : MonoBehaviour
         this.seatNum = seatNum;
         this.currentOrder = recipe; 
         CameraManager.Instance.SwapToSeatCamera(seatNum);
-        dialogueRunner.StartDialogue(ghostName + "Order");
+        dialogueRunner.StartDialogue(ghostName.Split(' ')[0] + "Order");
     }
 
     public void CompleteOrderDialogue(string ghostName, int seatNum, bool res) {
         CameraManager.Instance.SwapToSeatCamera(seatNum);
         this.seatNum = seatNum;
+        isCompletingOrder = true;
         if (res) {
-            dialogueRunner.StartDialogue(ghostName + "Success");
+            dialogueRunner.StartDialogue(ghostName.Split(' ')[0] + "Success");
         } else {
-            dialogueRunner.StartDialogue(ghostName + "Failure");
+            dialogueRunner.StartDialogue(ghostName.Split(' ')[0] + "Failure");
         }
     }
-
-
 }
