@@ -23,4 +23,9 @@ public class PausePanelHandler : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void ExitToTitle()
+    {
+        SceneManager.LoadScene("TitleScene");
+    }
 }

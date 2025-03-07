@@ -19,7 +19,7 @@ public class UIManager : MonoBehaviour
         }
     }
     public void MakeOrderButton()
-    {
+    { //toggle orders panel visibility
         TicketManager.Instance.ShowOrders();
     }
 
