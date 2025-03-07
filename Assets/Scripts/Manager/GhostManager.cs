@@ -66,14 +66,15 @@ public class GhostManager : MonoBehaviour
         if (ghostNameToStoryIndex.ContainsKey(name))
         {
             Ghost ghost = GetGhostScriptableFromName(name);
-            if (ghost.story.Count - 1 <= ghostNameToStoryIndex[name])
-            {
-                Debug.Log("Reached end of dialogue, will not increment");
-            }
-            else
-            {
-                ghostNameToStoryIndex[name] = ghostNameToStoryIndex[name] + 1;
-            }
+            if (ghost != null)
+                if (ghost.numStory - 1 <= ghostNameToStoryIndex[name])
+                {
+                    Debug.Log("Reached end of dialogue, will not increment");
+                }
+                else
+                {
+                    ghostNameToStoryIndex[name] = ghostNameToStoryIndex[name] + 1;
+                }
             return;
         }
         Debug.Log("Ghost with name: " + name + " does not exist in the dictionary.");

@@ -72,13 +72,16 @@ public class DialogueManager : MonoBehaviour
         Debug.Log(ghostName + " " + nextString);
     }
 
+    //yo we gotta rename these variables i genuninely cant do this anymore AAAAAAAAAAAAAAAAAAAAAAAAAAA
     public string GetNextDialogue(string ghostName) {
         string nextDialogue = null;
         Debug.Log("Grabbing the next dialogue for " + ghostName);
         if (ghostNameToNextDialogue.ContainsKey(ghostName)) {
             nextDialogue = ghostNameToNextDialogue[ghostName];
         } else {
-            nextDialogue = ghostName + "Story";
+            // pray for me
+            ghostName = ghostName.Substring(0, ghostName.Length - 5);
+            nextDialogue = ghostName + "Story" + GameManager.Instance.ghostManager.GetStoryIndex(ghostName + " Ghost");
         }
         Debug.Log("Next dialogue is " + nextDialogue);
         return nextDialogue;

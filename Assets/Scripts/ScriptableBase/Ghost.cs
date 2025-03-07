@@ -9,7 +9,8 @@ public class Ghost : ScriptableObject
     public List<string> success;
     public List<string> failure;
     public List<string> order;
-    public List<List<string>> story;
+    // public List<List<string>> story;
+    public int numStory;  // starts at 1
     public List<Recipe> recipesOrdered;
 
 }
