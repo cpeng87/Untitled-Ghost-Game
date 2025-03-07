@@ -95,7 +95,7 @@ public class OrderManager : MonoBehaviour
         // dialoguePlayer.CompleteOrderDialogue(currGhost.ghostName, activeOrders[currActiveOrder].seatNum, result);
         // DialogueManager.Instance.CompleteOrderDialogue(currGhost.ghostName, activeOrders[currActiveOrder].seatNum, result);
         DialoguePlayer.Instance.CompleteOrderDialogue(currGhost.ghostName, activeOrders[currActiveOrder].seatNum, result);
-        GameManager.Instance.ghostManager.IncrementStoryIndex(currGhost.ghostName);
+        // GameManager.Instance.ghostManager.IncrementStoryIndex(currGhost.ghostName);
         GameManager.Instance.AddCurrency(activeOrders[currActiveOrder].price);
         // if (result)
         // {
@@ -164,5 +164,10 @@ public class OrderManager : MonoBehaviour
             }
         }
         return false;
+    }
+
+    public string GetCurrActiveOrderName()
+    {
+        return activeOrders[currActiveOrder].ghostName;
     }
 }

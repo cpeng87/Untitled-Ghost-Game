@@ -131,6 +131,7 @@ public class DialoguePlayer : MonoBehaviour
         
         if (res) {
             isSuccess = true;
+            Debug.Log("starting dialogue: " + parsedName + "Success");
             dialogueRunner.StartDialogue(parsedName + "Success");
         } else {
             isDeleting = true;
@@ -143,6 +144,7 @@ public class DialoguePlayer : MonoBehaviour
     {
         if (isDeleting)
         {
+            GameManager.Instance.ghostManager.IncrementStoryIndex(GameManager.Instance.orderManager.GetCurrActiveOrderName());
             GameManager.Instance.orderManager.RemoveCompletedOrder();
             isDeleting = false;
             isSuccess = false;

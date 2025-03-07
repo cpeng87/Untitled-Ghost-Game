@@ -31,7 +31,7 @@ Material:
     - _FresnelPower: 1.73
     - _QueueControl: 0
     m_Colors:
-    - _InnerColor: {r: 0.70710677, g: 0.70710677, b: 0.70710677, a: 0.75686276}
+    - _InnerColor: {r: 0.2675826, g: 0.25142747, b: 0.2981131, a: 0.75686276}
     - _OuterColor: {r: 2.3712986, g: 2.3712986, b: 2.3712986, a: 0}
     - _Position: {r: 0, g: 0.3, b: 0, a: 0}
   m_BuildTextureStacks: []

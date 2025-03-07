@@ -10,7 +10,7 @@ title: MusicianSuccess
 tags:
 position: -173,132
 ---
-Musician: Wow... this {GetOrder()} hits all the right notes!
+Musician: Wow... this hits all the right notes!
 <<startStory MusicianStory>>
 ===
 
@@ -60,7 +60,7 @@ Musician: It was cathartic being able to meet someone who really understood bath
 <<setCam "Main Camera">>
 ===
 
-title: MusicianStory
+title: MusicianStory4
 tags:
 position: 169,38
 ---
