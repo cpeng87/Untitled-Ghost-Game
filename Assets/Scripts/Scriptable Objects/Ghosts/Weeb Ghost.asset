@@ -20,5 +20,6 @@ MonoBehaviour:
   - What is this? Is this even edible...?
   order:
   - I would like a Tea, please.
+  numStory: 0
   recipesOrdered:
-  - {fileID: 11400000, guid: 536cb770bc83d064eba8d39f5417fdfa, type: 2}
+  - {fileID: 11400000, guid: ea3987c484745a2438022c3ec953ace6, type: 2}

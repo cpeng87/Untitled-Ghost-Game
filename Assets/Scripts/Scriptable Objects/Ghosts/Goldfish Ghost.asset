@@ -22,4 +22,4 @@ MonoBehaviour:
   - I would like a Tea, please.
   numStory: 0
   recipesOrdered:
-  - {fileID: 11400000, guid: 572f15a56812c1d429c91069f69fe7dc, type: 2}
+  - {fileID: 11400000, guid: 605f77bbb025a2a41820b9917c4d8643, type: 2}

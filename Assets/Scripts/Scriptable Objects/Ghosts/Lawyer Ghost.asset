@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Lawyer Ghost
   m_EditorClassIdentifier: 
   ghostName: Lawyer Ghost
-  dialogue: {fileID: -8253061345870894857, guid: e51b38bca64545843a25a7718ed1cde1, type: 3}
+  dialogue: {fileID: -8253061345870894857, guid: 9d5136b6017df654785c6a98b4f72812, type: 3}
   success:
   - Thank you so much! Nothing like a {dish} to clear my mind.
   failure:
@@ -22,4 +22,4 @@ MonoBehaviour:
   - I would like a Tea, please.
   numStory: 0
   recipesOrdered:
-  - {fileID: 11400000, guid: 572f15a56812c1d429c91069f69fe7dc, type: 2}
+  - {fileID: 11400000, guid: baee20edc5d1a534bbe65a31bea14d1b, type: 2}

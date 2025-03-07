@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: Musician Ghost
   m_EditorClassIdentifier: 
   ghostName: Musician Ghost
-  dialogue: {fileID: -8253061345870894857, guid: e51b38bca64545843a25a7718ed1cde1, type: 3}
+  dialogue: {fileID: -8253061345870894857, guid: 1f2549ff3f19a734bb26ebf1c8631c6e, type: 3}
   success:
   - Thank you so much! Nothing like a {dish} to clear my mind.
   failure:
   - What is this? Is this even edible...?
   order:
   - I would like a Tea, please.
+  numStory: 0
   recipesOrdered:
-  - {fileID: 11400000, guid: 536cb770bc83d064eba8d39f5417fdfa, type: 2}
+  - {fileID: 11400000, guid: 2c8944e5acd276242a1dacb709fa93d3, type: 2}
