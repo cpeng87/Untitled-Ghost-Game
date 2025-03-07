@@ -18,4 +18,5 @@ MonoBehaviour:
   failure: []
   order: []
   numStory: 7
-  recipesOrdered: []
+  recipesOrdered:
+  - {fileID: 11400000, guid: 605f77bbb025a2a41820b9917c4d8643, type: 2}
