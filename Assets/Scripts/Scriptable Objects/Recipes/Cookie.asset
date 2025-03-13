@@ -15,5 +15,5 @@ MonoBehaviour:
   recipeName: Cookie
   sellPrice: 12
   buyPrice: 0
-  minigame: Cookie Minigame
+  minigame: Cookie
   isBought: 0
