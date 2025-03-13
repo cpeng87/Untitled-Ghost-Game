@@ -163,7 +163,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   androidMinAspectRatio: 1
   applicationIdentifier:
-    Standalone: com.DefaultCompany.PCG-Project-2-Plants
+    Standalone: com.DefaultCompany.Mourning-Brew
   buildNumber:
     Standalone: 0
     VisionOS: 0
