@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Manager.CustomerPatience;
 using TMPro;
 
 public class Order
@@ -42,13 +43,20 @@ public class OrderManager : MonoBehaviour
             Debug.Log("No possible recipes, something went terribly wrong.");
             return false;
         }
-        int selectedIndex = (int) (Random.value * possibleRecipe.Count);
+        Debug.Log("Possible recipes: " + possibleRecipe);
+        int selectedIndex = (int) (Random.value * (possibleRecipe.Count));
+        Debug.Log(possibleRecipe.Count);
+        Debug.Log("Selected index: " + selectedIndex);
+        Debug.Log("Selected recipe: " + possibleRecipe[selectedIndex].recipeName);
 
         activeOrders.Add(new Order(name, recipes[selectedIndex].minigame, recipes[selectedIndex].recipeName, recipes[selectedIndex].sellPrice, seatNum));
         currActiveOrder = activeOrders.Count - 1;
-        orderDialogue = TagReplacer(orderDialogue, "{item}", recipes[selectedIndex].recipeName);
-        DialogueManager.Instance.StartDialogue(name, orderDialogue, seatNum);
-        Debug.Log("Size of orders: " + activeOrders.Count);
+        DialoguePlayer.Instance.StartOrderDialogue(name, recipes[selectedIndex].recipeName, seatNum);
+        // dialoguePlayer = FindObjectsByType<DialoguePlayer>(FindObjectsSortMode.None)[0];
+        // dialoguePlayer.StartOrderDialogue(name, recipes[selectedIndex].recipeName, seatNum);
+        // orderDialogue = TagReplacer(orderDialogue, "{item}", recipes[selectedIndex].recipeName);
+        // DialogueManager.Instance.StartDialogue(name, orderDialogue, seatNum);
+        // Debug.Log("Size of orders: " + activeOrders.Count);
         return true;
     }
 
@@ -80,32 +88,41 @@ public class OrderManager : MonoBehaviour
         {
             Debug.Log("There is no current active order, cannot switch seen! If testing disregard...");
         }
+        Debug.Log("completing order....");
         Ghost currGhost = GameManager.Instance.ghostManager.GetGhostScriptableFromName(activeOrders[currActiveOrder].ghostName);
-        if (result)
-        {
-            List<string> successDialogue = TagReplacer(currGhost.success, "{item}", activeOrders[currActiveOrder].recipeName);
-            //add story dialogue as well
-            int storyIndex = GameManager.Instance.ghostManager.GetStoryIndex(currGhost.ghostName);
-            GameManager.Instance.ghostManager.IncrementStoryIndex(currGhost.ghostName);
-            List<string> storyDialogue = currGhost.story[storyIndex];
-            List<string> combinedDialogue = successDialogue;
-            combinedDialogue.AddRange(storyDialogue);
-            DialogueManager.Instance.CompleteOrderDialogue(currGhost.ghostName, combinedDialogue, activeOrders[currActiveOrder].seatNum);
-            GameManager.Instance.AddCurrency(activeOrders[currActiveOrder].price);
-            GameManager.Instance.IncreaseSatisfaction();
-        }
-        else
-        {
-            List<string> failureDialogue = TagReplacer(currGhost.failure, "{item}", activeOrders[currActiveOrder].recipeName);
-            DialogueManager.Instance.CompleteOrderDialogue(currGhost.ghostName, failureDialogue, activeOrders[currActiveOrder].seatNum);
-            GameManager.Instance.DecreaseSatisfaction();
-        }
+
+        // dialoguePlayer = FindObjectsByType<DialoguePlayer>(FindObjectsSortMode.None)[0];
+        // dialoguePlayer.CompleteOrderDialogue(currGhost.ghostName, activeOrders[currActiveOrder].seatNum, result);
+        // DialogueManager.Instance.CompleteOrderDialogue(currGhost.ghostName, activeOrders[currActiveOrder].seatNum, result);
+        DialoguePlayer.Instance.CompleteOrderDialogue(currGhost.ghostName, activeOrders[currActiveOrder].seatNum, result);
+        GameManager.Instance.ghostManager.IncrementStoryIndex(currGhost.ghostName);
+        GameManager.Instance.AddCurrency(activeOrders[currActiveOrder].price);
+        // if (result)
+        // {
+        //     // List<string> successDialogue = TagReplacer(currGhost.success, "{item}", activeOrders[currActiveOrder].recipeName);
+        //     // //add story dialogue as well
+        //     // int storyIndex = GameManager.Instance.ghostManager.GetStoryIndex(currGhost.ghostName);
+        //     // GameManager.Instance.ghostManager.IncrementStoryIndex(currGhost.ghostName);
+        //     // List<string> storyDialogue = currGhost.story[storyIndex];
+        //     // List<string> combinedDialogue = successDialogue;
+        //     // combinedDialogue.AddRange(storyDialogue);
+        //     // DialogueManager.Instance.CompleteOrderDialogue(currGhost.ghostName, combinedDialogue, activeOrders[currActiveOrder].seatNum);
+        //     // GameManager.Instance.AddCurrency(activeOrders[currActiveOrder].price);
+        // }
+        // else
+        // {
+        //     List<string> failureDialogue = TagReplacer(currGhost.failure, "{item}", activeOrders[currActiveOrder].recipeName);
+        //     DialogueManager.Instance.CompleteOrderDialogue(currGhost.ghostName, failureDialogue, activeOrders[currActiveOrder].seatNum);
+        // }
+
     }
 
     public void RemoveCompletedOrder()
     {
         Ghost currGhost = GameManager.Instance.ghostManager.GetGhostScriptableFromName(activeOrders[currActiveOrder].ghostName);
+        Debug.Log(currGhost.name);
         GameManager.Instance.ghostManager.RemoveActiveGhost(currGhost);
+        GhostSpawningManager.Instance.DeleteSpawnedGhost(activeOrders[currActiveOrder].seatNum);
         activeOrders.RemoveAt(currActiveOrder);
         Debug.Log("Completed order!");
     }

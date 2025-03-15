@@ -17,5 +17,6 @@ MonoBehaviour:
   success: []
   failure: []
   order: []
+  numStory: 0
   recipesOrdered:
-  - {fileID: 11400000, guid: 605f77bbb025a2a41820b9917c4d8643, type: 2}
+  - {fileID: 11400000, guid: baee20edc5d1a534bbe65a31bea14d1b, type: 2}

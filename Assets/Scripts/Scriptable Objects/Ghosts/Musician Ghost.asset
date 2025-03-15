@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 047e48fa05ad86942909fc0ef3ff09f0, type: 3}
+  m_Name: Musician Ghost
+  m_EditorClassIdentifier: 
+  ghostName: Musician Ghost
+  dialogue: {fileID: -8253061345870894857, guid: 1f2549ff3f19a734bb26ebf1c8631c6e, type: 3}
+  success:
+  - Thank you so much! Nothing like a {dish} to clear my mind.
+  failure:
+  - What is this? Is this even edible...?
+  order:
+  - I would like a Tea, please.
+  numStory: 0
+  recipesOrdered:
+  - {fileID: 11400000, guid: 2c8944e5acd276242a1dacb709fa93d3, type: 2}

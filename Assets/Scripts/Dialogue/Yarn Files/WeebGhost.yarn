@@ -1,0 +1,93 @@
+title: WeebOrder
+tags:
+position: -54,-23
+---
+Weeb Ghost: Can I get a {GetOrder()}? Hurry, please, I need to get back on my ranked grind, ASAP.
+<<setCam "Main Camera">>
+===
+
+title: WeebSuccess
+tags:
+position: -173,132
+---
+Weeb Ghost: Sweet! This is just what I need to fuel my gamer focus!
+<<setCam "Main Camera">>
+===
+
+title: WeebFailure
+tags:
+position: -112,-180
+---
+Weeb Ghost: Eugh, gross! Barista diff for real, bro, just ff already...
+<<setCam "Main Camera">>
+===
+
+title: WeebStory1
+tags:
+position: 169,38
+---
+Weeb Ghost: Y'know, you're actually speaking to a Grandmaster player.
+Weeb Ghost: What?
+Weeb Ghost: You don't know what that means?
+Weeb Ghost: Heh... normies... you wouldn't understand.
+Weeb Ghost: I'm going to be a huge pro gamer someday.
+Weeb Ghost: If you ever want to play sometime, we can duo queue. I'll carry you, don't worry.
+===
+
+title: WeebStory2
+tags:
+position: 169,38
+---
+Weeb Ghost: I was the president of my high school anime club, so I know what I'm saying when I tell you that... you're strong.
+Weeb Ghost: Stand proud.
+Weeb Ghost: What, nothing?
+Weeb Ghost: My genius is wasted on you.
+Weeb Ghost: I don't know why I'm spending precious time here talking to you, anyways.
+Weeb Ghost: I need to hit Challenger, I'm so close to it.
+Weeb Ghost: Then, maybe my dad will... nevermind.
+===
+
+title: WeebStory3
+tags:
+position: 169,38
+---
+Weeb Ghost: I wonder if I'll ever see my dad around, in the afterlife.
+Weeb Ghost: I mean, I'm fine even if he doesn't!
+Weeb Ghost: I have my waifu Seraphine to keep me company.
+Weeb Ghost: Just... it'd be nice to have his attention, for once.
+Weeb Ghost: Anyways, once I hit Challenger, he'll have to pay attention to me! I'll be famous. I'll be everywhere, on TV and everything. Just watch!
+===
+
+title: WeebStory4
+tags:
+position: 169,38
+---
+Weeb Ghost: Why do I want to be Challenger?
+Weeb Ghost: Well, loads of reasons, obviously! I'll be super famous so my dad will see me on TV, I'll make loads of money so my dad won't have to work, and I'll get loads of ladies so my dad won't think I'm lonely!
+Weeb Ghost: And, well... he was proud of me when I hit silver, wasn't he? And silver's nothing.
+Weeb Ghost: Low elo.
+Weeb Ghost: Just imagine how much more proud he'll be when I hit the highest tier.
+===
+
+title: WeebStory5
+tags:
+position: 169,38
+---
+Weeb Ghost: I... uh, I met my dad the other day.
+Weeb Ghost: He, he wanted to apologize to me?
+Weeb Ghost: And he said... he was proud of me.
+Weeb Ghost: Even though I'm not Challenger, or a pro gamer, or have a girlfriend.
+Weeb Ghost: So, um. I don't think I'll be able to carry you anymore, if you do want to play.
+Weeb Ghost: I...I want to make the most of my time with my dad.
+===
+
+title: WeebStory6
+tags:
+position: 169,38
+---
+Weeb Ghost: I think I might be leaving soon. Just a gut feeling, I guess.
+Weeb Ghost: I thought I was here to hit Challenger, but honestly?
+Weeb Ghost: Hall of Heroes doesn't even seem that important anymore, now that my dad's here with me.
+Weeb Ghost: So... you know how it is. GG go next.
+Weeb Ghost: I hope you find what you're looking for, whatever it is.
+===

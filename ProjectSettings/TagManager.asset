@@ -6,7 +6,10 @@ TagManager:
   tags:
   - Tilt
   - Moving
+  - Pancake
+  - MuffinTin
   - Note
+  - Particle
   layers:
   - Default
   - TransparentFX
@@ -16,10 +19,7 @@ TagManager:
   - UI
   - Camera
   - 
-  - 
-  - 
-  - 
-  - 
+  - Bowl
   - 
   - 
   - 

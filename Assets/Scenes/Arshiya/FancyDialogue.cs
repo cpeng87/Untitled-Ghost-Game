@@ -25,8 +25,6 @@ public class FancyDialogue : MonoBehaviour
     private Vector3[] vertices;
     private TMP_TextInfo textInfo;
 
-
-
     private struct TagRanges {
         public int start;
         public int end;
@@ -42,12 +40,31 @@ public class FancyDialogue : MonoBehaviour
     void Start()
     {
         textInfo = textMesh.textInfo;
-        //originalText = textMesh.text;
+        // Debug.Log(textInfo);
+        // originalText = textMesh.text;
         finalText = "";
+    }
+
+    public void Evaluate() {
+        textInfo = textMesh.textInfo;
+        // originalText = textMesh.text;
+        finalText = "";
+    }
+
+    public void Reset() {
+        wiggleRanges = new List<TagRanges>();
+        shakyRanges = new List<TagRanges>();
+        boldRanges = new List<TagRanges>();
+        italicRanges = new List<TagRanges>();
+        Debug.Log("Reset");
     }
 
     void Update()
     {
+        // textInfo = textMesh.textInfo;
+        // //originalText = textMesh.text;
+        // finalText = "";
+        // textMesh.ClearMesh(false);
         parseTags(textMesh.text);
         textMesh.text = finalText;
         textMesh.ForceMeshUpdate();
@@ -121,6 +138,7 @@ public class FancyDialogue : MonoBehaviour
 
                 italicRanges.Add(new TagRanges { start = start, end = parsedText.Length - 1 });
                 i = endTagIndex + "</italic>".Length - 1;
+                // Debug.Log("Range is " + start + " to " + endTagIndex);
                 continue;
             }
 
@@ -262,6 +280,7 @@ public class FancyDialogue : MonoBehaviour
     }
 
     private void Italic() {
+        Debug.Log("Itallic Ranges are" + italicRanges);
         for (int i = 0; i < textInfo.characterCount; i++) {
             TMP_CharacterInfo curChar = textInfo.characterInfo[i];
             if (!curChar.isVisible) {

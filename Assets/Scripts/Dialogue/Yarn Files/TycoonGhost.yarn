@@ -1,0 +1,98 @@
+title: TycoonOrder
+tags:
+position: -54,-23
+---
+Tycoon Ghost: One {GetOrder()}. Impress me, and I may sponsor your pitiful business.
+<<setCam "Main Camera">>
+===
+
+title: TycoonSuccess
+tags:
+position: -173,132
+---
+Tycoon Ghost: Hmmm... not half bad. You'll make a good underling.
+<<startStory TycoonStory>>
+===
+
+title: TycoonFailure
+tags:
+position: -112,-180
+---
+Tycoon Ghost: You use my money and generosity for garbage like this? You're fired!
+<<setCam "Main Camera">>
+===
+
+title: TycoonStory1
+tags:
+position: 169,38
+---
+Tycoon Ghost: What, don't you recognize your own boss? Oh, I'm only the most influential ghost to ever exist. 
+Tycoon Ghost: I own Ghost Groceries, and Ghost Real Estate, and Ghost Gambling, and Ghost Automotives, and Ghost Banking, and really every business that any ghost could ever buy from. 
+Tycoon Ghost: Even Ghost Recipes, which my records show you've been buying more from than most ghosts do in a deathtime. 
+Tycoon Ghost: Maybe I'll even give you a discount, for being a loyal customer. 5% off purchases of $500 or more, how's that sound?
+<<setCam "Main Camera">>
+===
+
+title: TycoonStory2
+tags:
+position: 169,38
+---
+Tycoon Ghost: Well, I came to see how my little pet project was doing again, aren't you honored? It is a good businessman's duty to... take care of their ventures. 
+Tycoon Ghost: I do own 30% of your cafe's stock, so it wouldn't benefit either of us if your little business tanked, yes? Oh, you didn't know? Well, your little business has had quite the meteoric rise in the Ghost Stock Market! 
+Tycoon Ghost: Also owned by me, of course. 
+Tycoon Ghost: And your only competition are my businesses. 
+Tycoon Ghost: But still, you should be proud! You're outdoing Ghost Caffeine by 12%.
+<<setCam "Main Camera">>
+===
+
+title: TycoonStory3
+tags:
+position: 169,38
+---
+Tycoon Ghost: What am I attached to? Money, of course. I need to be rich!
+Tycoon Ghost: Much richer than I am now.
+Tycoon Ghost: Then, I'll be satisfied and my soul will be able to rest. I'm sure of it - what else could I possibly want in the world than money? 
+Tycoon Ghost: Money is power, money is happiness, money is fulfillment. And make no mistake, I am not lacking in any.
+<<setCam "Main Camera">>
+===
+
+title: TycoonStory4
+tags:
+position: 169,38
+---
+Tycoon Ghost: ...What are you earning so much money for ...what other reason than to have it! 
+Tycoon Ghost: Money makes the world go round, you can't live without it!
+Tycoon Ghost: ...Though, we're all dead. Well, for food... or no, for living costs... well. 
+Tycoon Ghost: A house! 
+Tycoon Ghost: Protection from, um.
+Tycoon Ghost: ...There has to be a use for money.
+Tycoon Ghost: I mean, everyone uses it to buy things from me, right?
+Tycoon Ghost: But - what can I even do with it, if I'm the only one selling? I don't - I don't know.
+<<setCam "Main Camera">>
+===
+
+title: TycoonStory5
+tags:
+position: 169,38
+---
+Tycoon Ghost: ...I see what you meant, now.
+Tycoon Ghost: My wealth, my fortunes - they were all worthless all along, weren't they?
+Tycoon Ghost: What was I holding onto so tightly?
+Tycoon Ghost: Some - powerless, empty, currency?
+Tycoon Ghost: ...I don't know what to do.
+Tycoon Ghost: Who am I meant to be, if not a Tycoon? What could I possibly want, if not money?
+Tycoon Ghost: ...and can I ever really pass on, if I'll never have enough money to satisfy my greed?
+<<setCam "Main Camera">>
+===
+
+title: TycoonStory6
+tags:
+position: 169,38
+---
+Tycoon Ghost: I've decided to leave.
+Tycoon Ghost: I'm quitting all my businesses. You can keep yours, of course - it was always entirely yours to begin with.
+Tycoon Ghost: I'm going away - far, far away from here - anywhere else in the world, so that I can look for something that will truly make me happy.
+Tycoon Ghost: I know now that it isn't money, thanks to you. I think I've gotten quite sick of money, ha! ...But I'll be leaving.
+Tycoon Ghost: Take care, alright?
+<<setCam "Main Camera">>
+===

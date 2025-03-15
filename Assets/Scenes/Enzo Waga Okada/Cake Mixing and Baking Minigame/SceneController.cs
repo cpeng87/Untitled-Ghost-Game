@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour
 {
-    private float timer = 20f;
+    private float timer = 10f;
 
     void Update()
     {

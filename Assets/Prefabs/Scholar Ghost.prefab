@@ -70,8 +70,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptable: {fileID: 11400000, guid: bbce32e9a07125c47a73de3d41be49bd, type: 2}
-  animator: {fileID: 0}
   idleAnimator: {fileID: 0}
+  orderNotificationAnimator: {fileID: 0}
 --- !u!1 &2815270446221360870
 GameObject:
   m_ObjectHideFlags: 0
