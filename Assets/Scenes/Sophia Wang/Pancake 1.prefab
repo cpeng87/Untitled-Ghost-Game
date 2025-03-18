@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7154264733467464016
+--- !u!1 &4016939484062786648
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,49 +8,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6581091835799967070}
-  - component: {fileID: 4078094258354646797}
-  - component: {fileID: 8287370298362917435}
-  - component: {fileID: 4503932852348522058}
-  - component: {fileID: 1886321062072331479}
-  - component: {fileID: 3631865911621366421}
+  - component: {fileID: 4327275906928980251}
+  - component: {fileID: 7071271419676959900}
+  - component: {fileID: 5259848785376169975}
+  - component: {fileID: 5463823006573078705}
+  - component: {fileID: 6035478307195509875}
+  - component: {fileID: 6144529610104261529}
   m_Layer: 0
-  m_Name: Pancake
-  m_TagString: Pancake
+  m_Name: Pancake 1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6581091835799967070
+--- !u!4 &4327275906928980251
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7154264733467464016}
+  m_GameObject: {fileID: 4016939484062786648}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.46, y: 1.37, z: -0}
-  m_LocalScale: {x: 3.697504, y: 0.9981811, z: 3.697504}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 175, y: 174.99995, z: 124.999985}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4078094258354646797
+  m_Father: {fileID: 3030974691849206587}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!33 &7071271419676959900
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7154264733467464016}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &8287370298362917435
+  m_GameObject: {fileID: 4016939484062786648}
+  m_Mesh: {fileID: -2622822358205375046, guid: a9fc6e2ab0eb3b04fa36f4e67e288b91, type: 3}
+--- !u!23 &5259848785376169975
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7154264733467464016}
+  m_GameObject: {fileID: 4016939484062786648}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 064e1f9e4f7f4e54b8ca77792586195e, type: 2}
+  - {fileID: -6478536213147159724, guid: a9fc6e2ab0eb3b04fa36f4e67e288b91, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -89,13 +89,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &4503932852348522058
+--- !u!114 &5463823006573078705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4016939484062786648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830ea0fb455c64c67a7f26a1bdf0eafd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pancakePrefab: {fileID: 8287844338899726699}
+--- !u!54 &6035478307195509875
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7154264733467464016}
+  m_GameObject: {fileID: 4016939484062786648}
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
@@ -116,13 +129,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!65 &1886321062072331479
+--- !u!65 &6144529610104261529
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7154264733467464016}
+  m_GameObject: {fileID: 4016939484062786648}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -135,18 +148,37 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.88210243, y: 0.4477897, z: 0.8887459}
-  m_Center: {x: 0.029792747, y: 0.03511995, z: 0.015051627}
---- !u!114 &3631865911621366421
-MonoBehaviour:
+  m_Size: {x: 0.021265363, y: 0.021135764, z: 0.0027651384}
+  m_Center: {x: 0.00015386922, y: -0.000019839837, z: 0.0023785695}
+--- !u!1 &8287844338899726699
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7154264733467464016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 830ea0fb455c64c67a7f26a1bdf0eafd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pancakePrefab: {fileID: 7154264733467464016}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3030974691849206587}
+  m_Layer: 0
+  m_Name: Pancake 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3030974691849206587
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8287844338899726699}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.2277398, y: 0.13574833, z: -1.4786532}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4327275906928980251}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
