@@ -126,8 +126,8 @@ public class DialoguePlayer : MonoBehaviour
         CameraManager.Instance.SwapToSeatCamera(seatNum);
         this.seatNum = seatNum;
 
-        string parsedName = ghostName.Replace(" ", "");
-        parsedName = parsedName.Replace("Ghost", "");
+        string parsedName = ghostName.Replace(" Ghost", "");
+        parsedName = parsedName.Replace(" ", "");
         
         if (res) {
             isSuccess = true;

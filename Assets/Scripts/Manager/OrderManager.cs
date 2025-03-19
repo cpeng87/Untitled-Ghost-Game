@@ -57,10 +57,10 @@ public class OrderManager : MonoBehaviour
         // orderDialogue = TagReplacer(orderDialogue, "{item}", recipes[selectedIndex].recipeName);
         // DialogueManager.Instance.StartDialogue(name, orderDialogue, seatNum);
         // Debug.Log("Size of orders: " + activeOrders.Count);
+        SortOrders();
         return true;
     }
 
-    //calls game manager to switch to the minigame! Currently does the first order.
     public void MakeOrder(int orderIdx)
     {
         if (activeOrders.Count == 0)
@@ -97,6 +97,7 @@ public class OrderManager : MonoBehaviour
         DialoguePlayer.Instance.CompleteOrderDialogue(currGhost.ghostName, activeOrders[currActiveOrder].seatNum, result);
         // GameManager.Instance.ghostManager.IncrementStoryIndex(currGhost.ghostName);
         GameManager.Instance.AddCurrency(activeOrders[currActiveOrder].price);
+        SortOrders();
         // if (result)
         // {
         //     // List<string> successDialogue = TagReplacer(currGhost.success, "{item}", activeOrders[currActiveOrder].recipeName);
@@ -169,5 +170,10 @@ public class OrderManager : MonoBehaviour
     public string GetCurrActiveOrderName()
     {
         return activeOrders[currActiveOrder].ghostName;
+    }
+
+    private void SortOrders()
+    {
+        activeOrders.Sort((order1, order2) => order1.seatNum.CompareTo(order2.seatNum));
     }
 }

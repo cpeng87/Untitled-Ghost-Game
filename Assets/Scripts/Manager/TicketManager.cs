@@ -65,7 +65,7 @@ public class TicketManager : MonoBehaviour
         texts[2].text = "Reward: " + order.price.ToString();
 
         // Set button functionality
-        ticket.GetComponentInChildren<Button>().onClick.AddListener(() => GameManager.Instance.orderManager.MakeOrder(tickets.Count - 1));
+        ticket.GetComponentInChildren<Button>().onClick.AddListener(() => GameManager.Instance.orderManager.MakeOrder(order.seatNum));
     }
 
     public void ToggleOrders()
