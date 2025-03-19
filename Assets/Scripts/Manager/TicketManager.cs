@@ -68,6 +68,18 @@ public class TicketManager : MonoBehaviour
         ticket.GetComponentInChildren<Button>().onClick.AddListener(() => GameManager.Instance.orderManager.MakeOrder(tickets.Count - 1));
     }
 
+    public void ToggleOrders()
+    {
+        if (ordersPanel.activeSelf == false)
+        {
+            ShowOrders();
+        }
+        else
+        {
+            HideOrders();
+        }
+    }
+
     public void ShowOrders()
     {
         if (GameManager.Instance.orderManager.activeOrders.Count > 0 && !ordersPanel.activeSelf)

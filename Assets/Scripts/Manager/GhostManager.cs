@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class GhostManager : MonoBehaviour
 {
-    public List<GameObject> ghosts;  //list of all ghosts 
+    public List<GameObject> ghosts;  //list of all ghosts
     public Dictionary<string, GameObject> ghostNameToGameObjDict = new Dictionary<string, GameObject>();
     public Dictionary<string, Ghost> ghostNameToScriptableDict = new Dictionary<string, Ghost>();
     public Dictionary<string, int> ghostNameToStoryIndex = new Dictionary<string, int>();
