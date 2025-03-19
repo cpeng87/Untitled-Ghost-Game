@@ -89,6 +89,7 @@ public class DialoguePlayer : MonoBehaviour
     public void StartStoryDialogue(string storyToStart) {
         Debug.Log(storyToStart);
         StartCoroutine(StoryDialogue(storyToStart));
+        GameManager.Instance.state = State.Dialogue;
     }
 
     private IEnumerator StoryDialogue(string storyTitle) {
@@ -106,6 +107,7 @@ public class DialoguePlayer : MonoBehaviour
         Debug.Log("SeatNumber is " + seatNum);
         GhostSpawningManager.Instance.DeleteSpawnedGhost(seatNum);
         GameManager.Instance.orderManager.RemoveCompletedOrder();
+        GameManager.Instance.state = State.Main;
     }
 
     // Specific Order Dialogue
@@ -120,6 +122,7 @@ public class DialoguePlayer : MonoBehaviour
         }
         ghostName = ghostName.Replace(" ", "");
         dialogueRunner.StartDialogue(ghostName + "Order");
+        GameManager.Instance.state = State.Dialogue;
     }
 
     public void CompleteOrderDialogue(string ghostName, int seatNum, bool res) {
@@ -137,6 +140,7 @@ public class DialoguePlayer : MonoBehaviour
             isDeleting = true;
             dialogueRunner.StartDialogue(parsedName + "Failure");
         }
+        GameManager.Instance.state = State.Dialogue;
     }
 
     //i feel like there is an easier way to do this... but alas...

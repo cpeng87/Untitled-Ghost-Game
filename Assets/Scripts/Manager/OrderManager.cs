@@ -76,6 +76,14 @@ public class OrderManager : MonoBehaviour
 
         TicketManager.Instance.HideOrders();
 
+        Debug.Log("counting orders...");
+        Debug.Log(activeOrders.Count);
+        foreach (Order aorder in activeOrders)
+        {   
+            Debug.Log(aorder.ghostName);
+            Debug.Log(aorder.seatNum);
+        }
+        Debug.Log("done counting");
         GameManager.Instance.SwitchToMinigame(activeOrders[orderIdx].minigame);
         currActiveOrder = orderIdx;
     }

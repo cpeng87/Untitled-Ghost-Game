@@ -109,6 +109,7 @@ public class TicketManager : MonoBehaviour
     //loads in assets for ordersPanel
     public void SetUpOrdersPanel()
     {
+        Debug.Log("setting up orders panel");
         // Get rid of old tickets
         while (ordersPanel.transform.GetChild(0).GetChild(0).childCount > 1)
         {
@@ -118,5 +119,6 @@ public class TicketManager : MonoBehaviour
         // Set the order panel to inactive
         ordersPanel.SetActive(false);
         orderTicket.SetActive(false);
+        Debug.Log(ordersPanel.activeSelf);
     }
 }
