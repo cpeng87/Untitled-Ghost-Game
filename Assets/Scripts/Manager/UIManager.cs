@@ -21,7 +21,10 @@ public class UIManager : MonoBehaviour
     }
     public void MakeOrderButton()
     { //toggle orders panel visibility
-        TicketManager.Instance.ToggleOrders();
+        if (GameManager.Instance.state == State.Main)
+        {
+            TicketManager.Instance.ToggleOrders();
+        }
     }
 
     public void UpdateCurrency(int newValue)

@@ -32,7 +32,7 @@ public class GhostObj : Clickable
 
         Debug.Log("Click");
 
-        if (isIdle != true || hasTakenOrder)
+        if (isIdle != true || hasTakenOrder || GameManager.Instance.state != State.Main)
 
         {
             return;

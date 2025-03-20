@@ -89,7 +89,6 @@ public class DialoguePlayer : MonoBehaviour
     public void StartStoryDialogue(string storyToStart) {
         Debug.Log(storyToStart);
         StartCoroutine(StoryDialogue(storyToStart));
-        GameManager.Instance.state = State.Dialogue;
     }
 
     private IEnumerator StoryDialogue(string storyTitle) {
@@ -98,6 +97,7 @@ public class DialoguePlayer : MonoBehaviour
     }
 
     public void SetNextDialogue(string name, string dialogueNode) {
+        // GameManager.Instance.state = State.Dialogue;
         DialogueManager.Instance.SetNextDialogue(name, dialogueNode);
     }
 
@@ -140,7 +140,6 @@ public class DialoguePlayer : MonoBehaviour
             isDeleting = true;
             dialogueRunner.StartDialogue(parsedName + "Failure");
         }
-        GameManager.Instance.state = State.Dialogue;
     }
 
     //i feel like there is an easier way to do this... but alas...
@@ -154,10 +153,13 @@ public class DialoguePlayer : MonoBehaviour
             isSuccess = false;
             GameManager.Instance.state = State.Main;
         }
-        if (isSuccess)
+        else if (isSuccess)
         {
             isDeleting = true;
         }
-        GameManager.Instance.state = State.Main;
+        else
+        {
+            GameManager.Instance.state = State.Main;
+        }
     }
 }
