@@ -114,11 +114,11 @@ public class DialoguePlayer : MonoBehaviour
         this.seatNum = seatNum;
         this.currentOrder = recipe; 
         CameraManager.Instance.SwapToSeatCamera(seatNum);
-        ghostName = ghostName.Replace(" ", "");
-        if (ghostName.Contains("Ghost"))
+        if (ghostName.Contains(" Ghost"))
         {
-            ghostName = ghostName.Replace("Ghost", "");
+            ghostName = ghostName.Replace(" Ghost", "");
         }
+        ghostName = ghostName.Replace(" ", "");
         dialogueRunner.StartDialogue(ghostName + "Order");
     }
 

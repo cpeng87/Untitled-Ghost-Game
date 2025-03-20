@@ -11,7 +11,7 @@ tags:
 position: -173,132
 ---
 Reaper: Thank you very much, it's delicious! What a creative design, as well.
-<<setCam "Main Camera">>
+<<startStory ReaperStory>>
 ===
 
 title: ReaperStory1
