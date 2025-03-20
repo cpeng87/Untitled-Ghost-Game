@@ -11,7 +11,7 @@ tags:
 position: -173,132
 ---
 Goldfish Ghost: THE SCHOOL OF KINDRED GOLDFISH SPIRITS IS SATISFIED BY YOUR ACTIONS.
-<<setCam "Main Camera">>
+<<startStory GoldfishStory>>
 ===
 
 title: GoldfishFailure

@@ -39,4 +39,9 @@ public class UIManager : MonoBehaviour
             satisfactionField.text = "Customers are not currently satisfied! \n Be careful when making orders!";
         }
     }
+
+    public void SwapToMainCameraButton()
+    {
+        CameraManager.Instance.SwapToMainCamera();
+    }
 }

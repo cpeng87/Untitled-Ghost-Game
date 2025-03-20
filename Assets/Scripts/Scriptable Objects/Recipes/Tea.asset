@@ -15,5 +15,5 @@ MonoBehaviour:
   recipeName: Tea
   sellPrice: 12
   buyPrice: 0
-  minigame: Tea
+  minigame: Emily_Tea
   isBought: 0

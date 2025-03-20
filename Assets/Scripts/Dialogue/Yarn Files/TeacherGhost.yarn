@@ -12,7 +12,7 @@ position: -173,132
 ---
 Teacher Ghost: Oh, my! How did you make this perfect dish more enriching and exquisite than before?
 Teacher Ghost: You never fail to surprise me, my dear - take care!
-<<setCam "Main Camera">>
+<<startStory TeacherStory>>
 ===
 
 title: TeacherFailure

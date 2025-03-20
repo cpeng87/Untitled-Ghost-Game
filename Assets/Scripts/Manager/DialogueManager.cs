@@ -79,9 +79,8 @@ public class DialogueManager : MonoBehaviour
         if (ghostNameToNextDialogue.ContainsKey(ghostName)) {
             nextDialogue = ghostNameToNextDialogue[ghostName];
         } else {
-            // pray for me
-            ghostName = ghostName.Substring(0, ghostName.Length - 5);
-            nextDialogue = ghostName + "Story" + GameManager.Instance.ghostManager.GetStoryIndex(ghostName + " Ghost");
+            string parsedName = ghostName.Replace("Story", "");
+            nextDialogue = parsedName + "Story" + GameManager.Instance.ghostManager.GetStoryIndex(GameManager.Instance.orderManager.GetCurrActiveOrderName());
         }
         Debug.Log("Next dialogue is " + nextDialogue);
         return nextDialogue;

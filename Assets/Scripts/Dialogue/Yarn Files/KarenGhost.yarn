@@ -11,7 +11,7 @@ tags:
 position: -173,132
 ---
 Karen Ghost: Success: This! Well, this... hmph! You're lucky I'm even paying for it!
-<<setCam "Main Camera">>
+<<startStory KarenStory>>
 ===
 
 title: KarenFailure

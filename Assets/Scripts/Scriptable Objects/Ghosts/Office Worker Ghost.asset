@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Office Worker Ghost
   m_EditorClassIdentifier: 
   ghostName: Office Worker Ghost
-  dialogue: {fileID: -8253061345870894857, guid: 4e431ac135904654ebb1c9f6feef3292, type: 3}
+  dialogue: {fileID: -8253061345870894857, guid: 139c5ad05f6e6b141949ef4d6bdea989, type: 3}
   success:
   - Thank you so much! Nothing like a {dish} to clear my mind.
   failure:
   - What is this? Is this even edible...?
   order:
   - I would like a Tea, please.
-  numStory: 0
+  numStory: 6
   recipesOrdered:
   - {fileID: 11400000, guid: 605f77bbb025a2a41820b9917c4d8643, type: 2}

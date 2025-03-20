@@ -19,7 +19,7 @@ public class GhostManager : MonoBehaviour
             Ghost currGhost = ghost.GetComponent<GhostObj>().GetScriptable();
             ghostNameToScriptableDict.Add(currGhost.ghostName, currGhost);
             ghostNameToGameObjDict.Add(currGhost.ghostName, ghost);
-            ghostNameToStoryIndex.Add(currGhost.ghostName, 0);
+            ghostNameToStoryIndex.Add(currGhost.ghostName, 1);
             foreach (Recipe recipe in currGhost.recipesOrdered)
             {
                 if (recipeToGhostsDict.ContainsKey(recipe))
@@ -67,12 +67,13 @@ public class GhostManager : MonoBehaviour
         {
             Ghost ghost = GetGhostScriptableFromName(name);
             if (ghost != null)
-                if (ghost.numStory <= ghostNameToStoryIndex[name])
+                if (ghost.numStory == ghostNameToStoryIndex[name])
                 {
                     Debug.Log("Reached end of dialogue, will not increment");
                 }
                 else
                 {
+                    Debug.Log("incrementing story index");
                     ghostNameToStoryIndex[name] = ghostNameToStoryIndex[name] + 1;
                 }
             return;
