@@ -21,9 +21,6 @@ public class BobaPotController : MonoBehaviour
         bobaProgress.minValue = 0;
         bobaProgress.maxValue = neededBoba;
         childCollider = GameObject.Find("Pot/Circle");
-        Rigidbody rb = childCollider.GetComponent<Rigidbody>();
-        rb.sleepThreshold = 0;
-        rb.WakeUp();
     }
 
     void Update()
@@ -89,7 +86,7 @@ public class BobaPotController : MonoBehaviour
         bobaProgress.value = bobaCounter;
     }
 
-    //ran when submit button is pressed. Verifies if amount of tea particles caught is greater than the needed to pass.
+    //ran when submit button is pressed. Verifies if amount of boba caught is greater than the needed to pass.
     //Completes the minigame and passes result to the gameManager.
     public void CheckResults()
     {

@@ -2,8 +2,20 @@ using UnityEngine;
 
 public class BobaCollision : MonoBehaviour
 {
+    private Rigidbody rb;
+
     private bool isTriggered = false; //ensures boba doesn't infinitely update the counter 
 
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+        rb.sleepThreshold = 0;
+    }
+    private void FixedUpdate() //fix the physics 
+    {
+        rb.WakeUp();
+        Debug.Log(rb.IsSleeping());
+    }
     private void OnTriggerEnter(Collider collider)
     {
 
@@ -32,6 +44,6 @@ public class BobaCollision : MonoBehaviour
                 var script = potPrefab.GetComponent<BobaPotController>();
                 script.OnBobaRemove(); //update boba counter
             }
-        }
+        } 
     }
 }
