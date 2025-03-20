@@ -22,7 +22,7 @@ public class Order
 }
 public class OrderManager : MonoBehaviour
 {
-    public List<Order> activeOrders = new List<Order>();  //list of active orders for ghosts
+    public Order[] activeOrders = new Order[3];  //list of active orders for ghosts
     private int currActiveOrder = -1;  //keeps track of the current order being worked on after make order is pressed. normally set to -1 to indicate no current order being worked on
 
     //Randomized a recipe that is avaliable to order. Adds that order and triggers dialogue for the order
@@ -49,40 +49,33 @@ public class OrderManager : MonoBehaviour
         Debug.Log("Selected index: " + selectedIndex);
         Debug.Log("Selected recipe: " + possibleRecipe[selectedIndex].recipeName);
 
-        activeOrders.Add(new Order(name, recipes[selectedIndex].minigame, recipes[selectedIndex].recipeName, recipes[selectedIndex].sellPrice, seatNum));
-        currActiveOrder = activeOrders.Count - 1;
+        activeOrders[seatNum] = new Order(name, recipes[selectedIndex].minigame, recipes[selectedIndex].recipeName, recipes[selectedIndex].sellPrice, seatNum);
+        currActiveOrder = seatNum;
         DialoguePlayer.Instance.StartOrderDialogue(name, recipes[selectedIndex].recipeName, seatNum);
         // dialoguePlayer = FindObjectsByType<DialoguePlayer>(FindObjectsSortMode.None)[0];
         // dialoguePlayer.StartOrderDialogue(name, recipes[selectedIndex].recipeName, seatNum);
         // orderDialogue = TagReplacer(orderDialogue, "{item}", recipes[selectedIndex].recipeName);
         // DialogueManager.Instance.StartDialogue(name, orderDialogue, seatNum);
         // Debug.Log("Size of orders: " + activeOrders.Count);
-        SortOrders();
+        // SortOrders();
         return true;
     }
 
     public void MakeOrder(int orderIdx)
     {
-        if (activeOrders.Count == 0)
+        if (GetNumActiveOrder() == 0)
         {
             Debug.Log("No active orders.");
             return;
         }
 
-        if (orderIdx < 0 || orderIdx >= activeOrders.Count)
+        if (orderIdx < 0 || orderIdx >= GetNumActiveOrder())
         {
             Debug.Log("Invalid index for order.");
         }
 
         TicketManager.Instance.HideOrders();
 
-        Debug.Log("counting orders...");
-        Debug.Log(activeOrders.Count);
-        foreach (Order aorder in activeOrders)
-        {   
-            Debug.Log(aorder.ghostName);
-            Debug.Log(aorder.seatNum);
-        }
         Debug.Log("done counting");
         GameManager.Instance.SwitchToMinigame(activeOrders[orderIdx].minigame);
         currActiveOrder = orderIdx;
@@ -105,7 +98,7 @@ public class OrderManager : MonoBehaviour
         DialoguePlayer.Instance.CompleteOrderDialogue(currGhost.ghostName, activeOrders[currActiveOrder].seatNum, result);
         // GameManager.Instance.ghostManager.IncrementStoryIndex(currGhost.ghostName);
         GameManager.Instance.AddCurrency(activeOrders[currActiveOrder].price);
-        SortOrders();
+        // SortOrders();
         // if (result)
         // {
         //     // List<string> successDialogue = TagReplacer(currGhost.success, "{item}", activeOrders[currActiveOrder].recipeName);
@@ -132,7 +125,7 @@ public class OrderManager : MonoBehaviour
         Debug.Log(currGhost.name);
         GameManager.Instance.ghostManager.RemoveActiveGhost(currGhost);
         GhostSpawningManager.Instance.DeleteSpawnedGhost(activeOrders[currActiveOrder].seatNum);
-        activeOrders.RemoveAt(currActiveOrder);
+        activeOrders[currActiveOrder] = null;
         Debug.Log("Completed order!");
     }
 
@@ -167,9 +160,12 @@ public class OrderManager : MonoBehaviour
     {
         foreach (Order order in activeOrders)
         {
-            if (order.ghostName == ghostName)
+            if (order != null)
             {
-                return true;
+                if (order.ghostName == ghostName)
+                {
+                    return true;
+                }
             }
         }
         return false;
@@ -180,8 +176,16 @@ public class OrderManager : MonoBehaviour
         return activeOrders[currActiveOrder].ghostName;
     }
 
-    private void SortOrders()
+    public int GetNumActiveOrder()
     {
-        activeOrders.Sort((order1, order2) => order1.seatNum.CompareTo(order2.seatNum));
+        int counter = 0;
+        foreach (Order order in activeOrders)
+        {
+            if (order != null)
+            {
+                counter += 1;
+            }
+        }
+        return counter;
     }
 }

@@ -82,7 +82,7 @@ public class TicketManager : MonoBehaviour
 
     public void ShowOrders()
     {
-        if (GameManager.Instance.orderManager.activeOrders.Count > 0 && !ordersPanel.activeSelf)
+        if (GameManager.Instance.orderManager.GetNumActiveOrder() > 0 && !ordersPanel.activeSelf)
         {
             // Reset visible tickets
             SetUpOrdersPanel();
@@ -93,7 +93,10 @@ public class TicketManager : MonoBehaviour
             // Add each order to panel
             foreach (Order order in GameManager.Instance.orderManager.activeOrders)
             {
-                AddOrderToPanel(order);
+                if (order != null)
+                {
+                    AddOrderToPanel(order);
+                }
             }
 
             // Show the orders panel
