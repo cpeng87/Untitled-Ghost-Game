@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private TMP_Text currencyField;
     [SerializeField] private TMP_Text satisfactionField;
+
     private void Awake()
     {
         if (Instance == null)
@@ -20,7 +21,10 @@ public class UIManager : MonoBehaviour
     }
     public void MakeOrderButton()
     { //toggle orders panel visibility
-        TicketManager.Instance.ShowOrders();
+        if (GameManager.Instance.state == State.Main)
+        {
+            TicketManager.Instance.ToggleOrders();
+        }
     }
 
     public void UpdateCurrency(int newValue)
