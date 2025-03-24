@@ -14,7 +14,6 @@ public class GhostObj : Clickable
 
     void Start() {
         // Get animator component from ghost prefab
-        Debug.Log("A GHOST IS SPAWNING IN");
         idleAnimator = GetComponentInChildren<Animator>();
         if (idleAnimator == null || orderNotificationAnimator == null)
         {
@@ -33,7 +32,7 @@ public class GhostObj : Clickable
 
         Debug.Log("Click");
 
-        if (isIdle != true || hasTakenOrder)
+        if (isIdle != true || hasTakenOrder || GameManager.Instance.state != State.Main)
 
         {
             return;
@@ -111,13 +110,14 @@ public class GhostObj : Clickable
          orderNotificationAnimator.SetBool("isActive", b);
         
         // Convey to Customer Patience Manager to enable or disable this Ghost's patience timer 
-         if (b) //Start patience timer
-         {
-             CustomerPatienceManager.Instance.StartGhostPatienceTimer(gameObject);
-         }
-         else //Stop patience timer
-         {
-             CustomerPatienceManager.Instance.StopGhostPatienceTimer(gameObject.GetInstanceID());
-         }
+        //  if (b) //Start patience timer
+        //  {
+        //     CustomerPatienceManager.Instance.StartGhostPatienceTimer(gameObject);
+             
+        //  }
+        //  else //Stop patience timer
+        //  {
+        //      CustomerPatienceManager.Instance.StopGhostPatienceTimer(gameObject.GetInstanceID());
+        //  }
     }
 }

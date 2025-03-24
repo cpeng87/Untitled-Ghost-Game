@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
 
     public void CompleteMinigame(bool isSuccess)
     {
-        StartCoroutine(LoadSceneAndCompleteOrder("Storefront", isSuccess));
+        StartCoroutine(LoadSceneAndCompleteOrder("MainStorefront", isSuccess));
     }
 
     private IEnumerator LoadSceneAndCompleteOrder(string sceneName, bool isSuccess)

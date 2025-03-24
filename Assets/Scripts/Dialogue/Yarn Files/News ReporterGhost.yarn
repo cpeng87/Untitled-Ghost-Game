@@ -1,0 +1,108 @@
+title: NewsReporterOrder
+tags:
+position: -54,-23
+---
+News Reporter Ghost: Reporting live... or I guess dead, heh... may I have an {GetOrder()}, please? Thanks...
+<<setCam "Main Camera">>
+===
+
+title: NewsReporterSuccess
+tags:
+position: -173,132
+---
+News Reporter Ghost: Woah... if I had a broadcast still, I'd thank you live for the spark of joy you've given me.
+<<startStory NewsReporterStory>>
+===
+
+title: NewsReporterFailure
+tags:
+position: -112,-180
+---
+News Reporter Ghost: Sadly not the kick I needed, but I guess it's deserved... I'll come again tomorrow...
+<<setCam "Main Camera">>
+===
+
+title: NewsReporterStory1
+tags:
+position: 169,38
+---
+News Reporter Ghost: O-oh! I don't think we've met yet... but I don't think you want to.
+News Reporter Ghost: I'm News Reporter Ghost, but I don't really run news stories or interviews anymore.
+News Reporter Ghost: While you're here, I want to thank you for your service.
+News Reporter Ghost: If I still had a news station, I'd continuously advertise you. You've made a good impact on the ghosts, as far as I've seen, which... is more than I have done....
+News Reporter Ghost: What? You want to know... my story?
+News Reporter Ghost: I thought it was well known enough, but... you're the first ghost to ask me for my perspective directly from me.
+News Reporter Ghost: Maybe I will... next time.
+<<setCam "Main Camera">>
+===
+
+title: NewsReporterStory2
+tags:
+position: 169,38
+---
+News Reporter Ghost: Well, I've had a lot of time to think... and even though it'll change your views on me, I think it's worth it to tell you.
+News Reporter Ghost: Maybe it'll help me... but I digress.
+News Reporter Ghost: Where do I start?
+News Reporter Ghost: When I was but a small boy, I dreamed of giving every story light within the community.
+News Reporter Ghost: I watched my friends' stories get trashed and erased, and I wanted to make an impact.
+News Reporter Ghost: So, I continued that pipedream, went to a couple universities, and became a pretty famous news reporter.
+News Reporter Ghost: The headlines I released, the stories I told... they were for the whole world to see every morning at 11 and every evening at 6.
+News Reporter Ghost: It was good. I felt like I could make a difference, like I could change the world... and then the story came.
+News Reporter Ghost: I... I don't think I'm ready to tell you the rest of the pain yet.
+News Reporter Ghost: I'm sorry, but I need a bit of time. I've never communicated this to someone and it's... hard.
+News Reporter Ghost: I'll fill you in... next time.
+<<setCam "Main Camera">>
+===
+
+title: NewsReporterStory3
+tags:
+position: 169,38
+---
+News Reporter Ghost: Sigh... I need to get this off my chest before it kills me.
+News Reporter Ghost: Well, the microphone through my chest did kill me, metaphorically, so it wouldn't be the first time.
+News Reporter Ghost: Anyway... I had previously described my excitement to change the world.
+News Reporter Ghost: One fateful day, I had to research a court trial about a serial killer who hurt so many innocent people.
+News Reporter Ghost: One of those people... let's just say I had personal stakes in this trial. So, when a person was brought to light, I immediately accused them... on live television.
+News Reporter Ghost: You know how the media is - it's so easy to twist and spin into your own narrative, and because I was so well-known, it became other people's narratives, too.
+News Reporter Ghost: The person was hated across the world, and the trial was an easy one to predict with my hands in it.
+News Reporter Ghost: I continued to release press after press against them, consumed with a desire to prove the world that I was right... but I was really just trying to justify condemning a person to myself.
+News Reporter Ghost: I... I was selfish. I realize that now. And... as selfish as it is, I need a bit more time.
+News Reporter Ghost: I'll finish the story... next time.
+<<setCam "Main Camera">>
+===
+
+title: NewsReporterStory4
+tags:
+position: 169,38
+---
+News Reporter Ghost: Hello, and... thank you for listening to this story so far.
+News Reporter Ghost: Normally, I tell a news story in one go, but I think the detail calls for more parts.
+News Reporter Ghost: Last time, I described my selfish desire to condemn the person in the trial.
+News Reporter Ghost: Lawyer Ghost found me before the trial and chatted with me - well, chatted is a very loose word.
+News Reporter Ghost: He ended up punching me in the eye, and I guess it stuck with me.
+News Reporter Ghost: He left me some evidence, too, and it showed what I had feared to be true.
+News Reporter Ghost: The person was innocent - they were a scapegoat to an undercover terrorist organization.
+News Reporter Ghost: How could I have been so wrong?
+News Reporter Ghost: I wanted to share everyone's stories to the world, but I chose my own story, my own narrative, over them in the end.
+News Reporter Ghost: Eventually, I turned myself in, spent some time in prison, and let my successor tell the story of how I was wrong.
+News Reporter Ghost: It still haunts me to this day... as much as a memory can haunt a ghost.
+News Reporter Ghost: You see why it was so hard to tell you this?
+News Reporter Ghost: I made an impact on the world that I couldn't fix or erase... and now I'm left to deal with it alone, because how could anyone love me or care for me after all I've done?
+News Reporter Ghost: I... oh, this ripped the memories out of my chest.
+News Reporter Ghost: I'll see you... next time.
+<<setCam "Main Camera">>
+===
+
+title: NewsReporterStory5
+tags:
+position: 169,38
+---
+News Reporter Ghost: Hi, again. I... I didn't acknowledge your care last time to hear my side of the story, and I appreciate it.
+News Reporter Ghost: I don't think I can do anything about this, and it's going to be a scar that forever remains... but ultimately, it doesn't have to define me.
+News Reporter Ghost: It's a terrible thing I've done, but... if I'm willing to change, that's what matters.
+News Reporter Ghost: I recognize my errors, and... I need to go find Lawyer Ghost and talk to him.
+News Reporter Ghost: I need to go find that person in the afterlife and apologize.
+News Reporter Ghost: I can't fix everything, but I can at least make amends and give them and myself... peace.
+News Reporter Ghost: Thank you for providing me peace, and I'll see you... next time.
+<<setCam "Main Camera">>
+===

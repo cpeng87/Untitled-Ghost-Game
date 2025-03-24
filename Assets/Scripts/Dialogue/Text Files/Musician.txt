@@ -1,0 +1,48 @@
+[Order]
+Hmm… I need something to get my creative juices flowing. Get me something that’ll put a pep in my step, like a catchy pop song. How about a {item}? 
+[End]
+
+[Success]
+Wow – this {item} hits all the right notes! 
+[End]
+
+[Failure]
+This tastes… off-key…
+[End]
+
+[Story]
+What was that? 
+Sorry, my hearing isn’t as good as it used to be. 
+Honestly, I thought dying would fix my bad ear, but that ringing in my right ear is annoying as ever.
+At first, I thought it was just fatigue – maybe my late nights of practicing were getting to me. But, over time, the noise kept getting worse, reverberating into my passions.
+It drove me crazy not knowing whether my performances were in the wrong key, and every practice session fell flat.
+It’s been a while since I’ve put on a performance, but I’d like to think I’m a good inspiration away from getting back to my peak.
+[End]
+
+[Story]
+Honestly, when I lost half of my hearing, it felt like my world was out-of-sync.
+My motivation started slipping, and my frustration grew.
+Despite that, I still thought I could keep going like nothing happened.
+But days turned into weeks turned into months, and I had nothing to show for it.
+I couldn’t put on a performance like I used to. Over time, I started losing my composure.
+I became… obsessed with the way people viewed my music.
+After all, music was my world – what’s a person got to stand on when their world crumbles around them?
+[End]
+
+[Story]
+Losing my hearing wasn’t all minor, though.
+Have you ever met someone and you’re both thinking in harmony?
+For me, that was Jock Ghost. Meeting him felt like getting the band back together – we rode the same highs, felt the same pain, and shared the same tears.
+It was cathartic being able to meet someone who really understood bathing in the limelight… then waking up one day to realize that the world had moved on without us. 
+[End]
+
+[Story]
+Something Jock Ghost said struck a chord in me:
+“Yknow, I used to compete a lot. Every time I stepped up to that first-place square, I’d strike a sick pose. I thought that all those cheers, all the medals I got, those were what made it all worth it. But… looking back? I think I just loved the game for what it was.”
+For the first time since I’d started falling, I had a moment of clarity.
+I stopped thinking about what I had lost and instead focused on what I had in the first place.
+What’s a person got to stand on when their world crumbles around them?
+Only themselves.
+Just like Jock Ghost didn’t need medals to prove that he was a sportsman, I didn’t need chart-toppers or huge audiences to prove that I was a musician.
+It was the passion that drove us to become those things, and I think I’m ready to start playing music again – for nobody but myself.
+[End]

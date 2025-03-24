@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private TMP_Text currencyField;
     [SerializeField] private TMP_Text satisfactionField;
+
     private void Awake()
     {
         if (Instance == null)
@@ -19,8 +20,11 @@ public class UIManager : MonoBehaviour
         }
     }
     public void MakeOrderButton()
-    {
-        TicketManager.Instance.ShowOrders();
+    { //toggle orders panel visibility
+        if (GameManager.Instance.state == State.Main)
+        {
+            TicketManager.Instance.ToggleOrders();
+        }
     }
 
     public void UpdateCurrency(int newValue)
@@ -38,5 +42,10 @@ public class UIManager : MonoBehaviour
         {
             satisfactionField.text = "Customers are not currently satisfied! \n Be careful when making orders!";
         }
+    }
+
+    public void SwapToMainCameraButton()
+    {
+        CameraManager.Instance.SwapToMainCamera();
     }
 }

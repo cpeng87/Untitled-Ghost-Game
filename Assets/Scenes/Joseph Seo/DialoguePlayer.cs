@@ -8,9 +8,16 @@ public class DialoguePlayer : MonoBehaviour
 {
     public static DialoguePlayer Instance { get; private set; }
     [SerializeField] private DialogueRunner dialogueRunner;
+    [SerializeField] private FancyDialogue fd;
 
     private string currentOrder;
+    private int storyNum;
     private int seatNum = -1;
+
+    private bool isSuccess = false;
+    private bool isDeleting = false;
+
+    
 
     private void Awake()
     {
@@ -31,6 +38,11 @@ public class DialoguePlayer : MonoBehaviour
         dialogueRunner.AddCommandHandler<string>("startStory", StartStoryDialogue);
         dialogueRunner.AddCommandHandler<string, string>("setNext", SetNextDialogue);
         dialogueRunner.AddCommandHandler("end", EndDialogue);
+        dialogueRunner.AddCommandHandler("reset", Reset);
+
+        // dialogueRunner.onDialogueComplete += OnDialogueComplete;
+        dialogueRunner.onDialogueComplete.AddListener(OnDialogueComplete);
+
     }
 
     public static void PlayAnimation(string name, string animation) {
@@ -46,6 +58,16 @@ public class DialoguePlayer : MonoBehaviour
         // string[] names = {"tea", "coffee", "milk"};
         // return names[selectedIndex];
         return DialoguePlayer.Instance.currentOrder;
+    }
+
+    // [YarnFunction("GetStoryNum")]
+    // public static int GetStoryNum()
+    // {
+    //     return DialoguePlayer.Instance.storyNum;
+    // }
+
+    public void Reset() {
+        fd.Reset();
     }
 
     // This function physically hurts me to write
@@ -64,16 +86,18 @@ public class DialoguePlayer : MonoBehaviour
         }
     }
 
-    public void StartStoryDialogue(string ghostName) {
-        StartCoroutine(StoryDialogue(ghostName));
+    public void StartStoryDialogue(string storyToStart) {
+        Debug.Log(storyToStart);
+        StartCoroutine(StoryDialogue(storyToStart));
     }
 
-    private IEnumerator StoryDialogue(string ghostName) {
+    private IEnumerator StoryDialogue(string storyTitle) {
         yield return new WaitForSeconds(0.01f);
-        dialogueRunner.StartDialogue(DialogueManager.Instance.GetNextDialogue(ghostName));
+        dialogueRunner.StartDialogue(DialogueManager.Instance.GetNextDialogue(storyTitle));
     }
 
     public void SetNextDialogue(string name, string dialogueNode) {
+        // GameManager.Instance.state = State.Dialogue;
         DialogueManager.Instance.SetNextDialogue(name, dialogueNode);
     }
 
@@ -83,6 +107,7 @@ public class DialoguePlayer : MonoBehaviour
         Debug.Log("SeatNumber is " + seatNum);
         GhostSpawningManager.Instance.DeleteSpawnedGhost(seatNum);
         GameManager.Instance.orderManager.RemoveCompletedOrder();
+        GameManager.Instance.state = State.Main;
     }
 
     // Specific Order Dialogue
@@ -91,18 +116,50 @@ public class DialoguePlayer : MonoBehaviour
         this.seatNum = seatNum;
         this.currentOrder = recipe; 
         CameraManager.Instance.SwapToSeatCamera(seatNum);
+        if (ghostName.Contains(" Ghost"))
+        {
+            ghostName = ghostName.Replace(" Ghost", "");
+        }
+        ghostName = ghostName.Replace(" ", "");
         dialogueRunner.StartDialogue(ghostName + "Order");
+        GameManager.Instance.state = State.Dialogue;
     }
 
     public void CompleteOrderDialogue(string ghostName, int seatNum, bool res) {
         CameraManager.Instance.SwapToSeatCamera(seatNum);
         this.seatNum = seatNum;
+
+        string parsedName = ghostName.Replace(" Ghost", "");
+        parsedName = parsedName.Replace(" ", "");
+        
         if (res) {
-            dialogueRunner.StartDialogue(ghostName + "Success");
+            isSuccess = true;
+            Debug.Log("starting dialogue: " + parsedName + "Success");
+            dialogueRunner.StartDialogue(parsedName + "Success");
         } else {
-            dialogueRunner.StartDialogue(ghostName + "Failure");
+            isDeleting = true;
+            dialogueRunner.StartDialogue(parsedName + "Failure");
         }
     }
 
-
+    //i feel like there is an easier way to do this... but alas...
+    private void OnDialogueComplete()
+    {
+        if (isDeleting)
+        {
+            GameManager.Instance.ghostManager.IncrementStoryIndex(GameManager.Instance.orderManager.GetCurrActiveOrderName());
+            GameManager.Instance.orderManager.RemoveCompletedOrder();
+            isDeleting = false;
+            isSuccess = false;
+            GameManager.Instance.state = State.Main;
+        }
+        else if (isSuccess)
+        {
+            isDeleting = true;
+        }
+        else
+        {
+            GameManager.Instance.state = State.Main;
+        }
+    }
 }

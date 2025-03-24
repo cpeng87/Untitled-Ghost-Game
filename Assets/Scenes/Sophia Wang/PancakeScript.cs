@@ -33,6 +33,7 @@ public class PancakeScript : MonoBehaviour
         if (clicked)
         {
             moved = true;
+            Debug.Log(startPosition);
             Instantiate(pancakePrefab, startPosition, Quaternion.identity);
         }
     }

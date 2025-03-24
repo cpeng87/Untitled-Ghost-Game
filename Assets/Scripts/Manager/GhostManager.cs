@@ -3,12 +3,14 @@ using System.Collections.Generic;
 
 public class GhostManager : MonoBehaviour
 {
-    public List<GameObject> ghosts;  //list of all ghosts 
+    public List<GameObject> ghosts;  //list of all ghosts
     public Dictionary<string, GameObject> ghostNameToGameObjDict = new Dictionary<string, GameObject>();
     public Dictionary<string, Ghost> ghostNameToScriptableDict = new Dictionary<string, Ghost>();
     public Dictionary<string, int> ghostNameToStoryIndex = new Dictionary<string, int>();
     public Dictionary<Recipe, List<Ghost>> recipeToGhostsDict = new Dictionary<Recipe, List<Ghost>>();
     public Ghost[] activeGhosts; //array of ghosts that have been spawned. Limited by maxghosts in GameManager
+    // public Ghost reaper;
+    // public GameObject reaperObj;
 
     //setup dictionaries and activeghosts
     public void Setup()
@@ -19,7 +21,7 @@ public class GhostManager : MonoBehaviour
             Ghost currGhost = ghost.GetComponent<GhostObj>().GetScriptable();
             ghostNameToScriptableDict.Add(currGhost.ghostName, currGhost);
             ghostNameToGameObjDict.Add(currGhost.ghostName, ghost);
-            ghostNameToStoryIndex.Add(currGhost.ghostName, 0);
+            ghostNameToStoryIndex.Add(currGhost.ghostName, 1);
             foreach (Recipe recipe in currGhost.recipesOrdered)
             {
                 if (recipeToGhostsDict.ContainsKey(recipe))
@@ -66,14 +68,16 @@ public class GhostManager : MonoBehaviour
         if (ghostNameToStoryIndex.ContainsKey(name))
         {
             Ghost ghost = GetGhostScriptableFromName(name);
-            if (ghost.story.Count - 1 <= ghostNameToStoryIndex[name])
-            {
-                Debug.Log("Reached end of dialogue, will not increment");
-            }
-            else
-            {
-                ghostNameToStoryIndex[name] = ghostNameToStoryIndex[name] + 1;
-            }
+            if (ghost != null)
+                if (ghost.numStory == ghostNameToStoryIndex[name])
+                {
+                    Debug.Log("Reached end of dialogue, will not increment");
+                }
+                else
+                {
+                    Debug.Log("incrementing story index");
+                    ghostNameToStoryIndex[name] = ghostNameToStoryIndex[name] + 1;
+                }
             return;
         }
         Debug.Log("Ghost with name: " + name + " does not exist in the dictionary.");
@@ -176,6 +180,18 @@ public class GhostManager : MonoBehaviour
                 activeGhosts[i] = null;
             }
         }
+    }
+
+    public int GetSeatNum(Ghost ghost)
+    {
+        for (int i = 0; i < activeGhosts.Length; i++)
+        {
+            if (activeGhosts[i] == ghost)
+            {
+                return i;
+            }
+        }
+        return -1;
     }
 
 }

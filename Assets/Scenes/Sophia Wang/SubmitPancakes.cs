@@ -3,10 +3,10 @@ using System.Collections;
 
 public class SubmitPancakes : MonoBehaviour
 {
-    private static int pancakes;
-    public static bool failed = false;
+    private int pancakes;
+    public bool failed = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public static void onFinish()
+    public void onFinish()
     {
         GameObject[] allPancakes = GameObject.FindGameObjectsWithTag("Pancake");
         pancakes = allPancakes.Length - 1;
@@ -23,5 +23,10 @@ public class SubmitPancakes : MonoBehaviour
             result = true;
         }
        GameManager.Instance.CompleteMinigame(result);
-    }    
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        //do something to fail
+        failed = true;
+    }
 }
