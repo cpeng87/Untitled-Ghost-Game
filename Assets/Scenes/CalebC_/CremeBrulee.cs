@@ -5,24 +5,26 @@ public class CremeBrulee : MonoBehaviour
 {
 
     public Slider progressSlider;
+    public RingScript ringScript;
 
-    //Increases the value of the slider by 0.1 every time a fire particle impacts the Creme Brulee
-    private void OnParticleCollision(GameObject other)
+    public void Update()
     {
-        progressSlider.value += 0.1f;
-
-        //If the Creme Brulee is struck when the slider is a specific interval, trigger the game success
-        if (progressSlider.value >= 85 && progressSlider.value <= 95)
+        if(progressSlider.value >= 85)
         {
             GameSuccess();
         }
+    }
+
+    public void IncreaseSlider(float value)
+    {
+        progressSlider.value += value;
     }
 
     
     private void GameSuccess()
     {
         Debug.Log("You Win!");
-        GameManager.Instance.CompleteMinigame(true);
+        //GameManager.Instance.CompleteMinigame(true);
     }
 
 
