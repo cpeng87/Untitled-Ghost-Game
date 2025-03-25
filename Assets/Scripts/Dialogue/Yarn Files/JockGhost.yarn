@@ -2,7 +2,7 @@ title: JockOrder
 tags:
 position: -54,-23
 ---
-Jock Ghost: Can't wait to get my daily pump! And I don't just mean the workout - can I have an {GetOrder()}, please?
+Jock Ghost: <wiggle> Can't wait to get my daily pump! </wiggle> And I don't just mean the workout - can I have an {GetOrder()}, please?
 <<setCam "Main Camera">>
 ===
 
@@ -19,7 +19,7 @@ title: JockFailure
 tags:
 position: -112,-180
 ---
-Jock Ghost: Dude. This is TOTALLY gonna throw off my PR.
+Jock Ghost: <italic> Dude. </italic> This is TOTALLY gonna throw off my PR.
 Jock Ghost: It's not even worth adding my protein powder.
 Jock Ghost: Just know that when I train and condition to failure today, I'm gonna think about this awful dish...
 <<setCam "Main Camera">>
@@ -33,7 +33,7 @@ Jock Ghost: You wanna... hear about my love for the gym?
 Jock Ghost: No?
 Jock Ghost: Yeah, I don't really have too much else to me.
 Jock Ghost: I mean, there's my job at Tycoon Ghost's construction site, but like... it's not that interesting.
-Jock Ghost: You know what else is interesting? I got my first ghost bicep vein in the afterlife!
+Jock Ghost: You know what else is interesting? <wiggle> I got my first ghost bicep vein in the afterlife! </wiggle>
 Jock Ghost: Isn't that sick?
 <<setCam "Main Camera">>
 ===
@@ -77,7 +77,7 @@ Jock Ghost: Strength training versus high intensity versus crossfit? Skullcrushe
 Jock Ghost: No, skullcrushers isn't how I died... but you know what?
 Jock Ghost: I have so much knowledge about the gym that others don't.
 Jock Ghost: That... is a knowledge base that few possess, but I have it.
-Jock Ghost: I worked for it.
+Jock Ghost: <italic> I worked for it. </italic>
 Jock Ghost: And... I deserve to revel in my hard-earned talents.
 Jock Ghost: I deserve to be confident... maybe as confident as Musician ghost is with his instruments.
 Jock Ghost: Just... let me know when you need a gym bro, yeah? I'd love to share my workouts with you and all of the afterlife.

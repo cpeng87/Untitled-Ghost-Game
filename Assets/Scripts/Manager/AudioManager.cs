@@ -5,7 +5,6 @@ using Random = UnityEngine.Random;
 
 public class AudioManager : MonoBehaviour
 {
-
     public static AudioManager Instance { get; private set; }
     
     [SerializeField] private Music[] music;
@@ -82,5 +81,15 @@ public class AudioManager : MonoBehaviour
         {
             Debug.LogWarning("Song " + soundName + " not found!");
         }
+    }
+
+    public void PlaySound(AudioClip sound)
+    {
+        if (sound == null)
+        {
+            Debug.Log("Sound to play is null");
+            return;
+        }
+        soundSource.PlayOneShot(sound);
     }
 }

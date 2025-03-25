@@ -84,7 +84,6 @@ public class FancyDialogue : MonoBehaviour
                 parsedText.Append(s[i]);
                 continue;
             }
-
             // Handle <wiggle> tag
             if (s.Substring(i).StartsWith("<wiggle>", System.StringComparison.OrdinalIgnoreCase)) {
                 int start = parsedText.Length;

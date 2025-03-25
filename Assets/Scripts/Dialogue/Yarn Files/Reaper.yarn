@@ -2,7 +2,7 @@ title: ReaperOrder
 tags:
 position: -54,-23
 ---
-Reaper: Could I get a {GetOrder()}, please? As far as the decoration goes, surprise me!
+Reaper: Could I get a {GetOrder()}, please? As far as the decoration goes, <wiggle> surprise me! </wiggle>
 <<setCam "Main Camera">>
 ===
 
@@ -10,7 +10,7 @@ title: ReaperSuccess
 tags:
 position: -173,132
 ---
-Reaper: Thank you very much, it's delicious! What a creative design, as well.
+Reaper: Thank you very much, <wiggle> it's delicious! </wiggle> What a creative design, as well.
 <<startStory ReaperStory>>
 ===
 
@@ -18,7 +18,7 @@ title: ReaperStory1
 tags:
 position: 0,0
 ---
-Reaper: Hello, dear, how are you settling into purgatory? 
+Reaper: Hello, dear, how are you settling into purgatory?
     -> Good, I suppose...
         Reaper: That's good to hear. 
     -> Not too well, it's a bit of an adjustment

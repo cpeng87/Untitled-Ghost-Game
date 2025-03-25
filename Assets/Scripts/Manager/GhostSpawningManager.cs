@@ -109,21 +109,22 @@ public class GhostSpawningManager : MonoBehaviour
 
         int reaperIndex = GameManager.Instance.ghostManager.GetStoryIndex("Reaper");
 
-        // reaper spawns hardcoded >.> erm
-        // if (reaperIndex == 1)
-        // {  
-        //     Ghost reaperScriptable = GameManager.Instance.ghostManager.GetGhostScriptableFromName("Reaper");
-        //     if (GameManager.Instance.ghostManager.CheckGhostIsActive(reaperScriptable) == false)
-        //     {
-        //         GameManager.Instance.ghostManager.AddActiveGhost(reaperScriptable);
-        //         int reaperSeatNum = GameManager.Instance.ghostManager.GetSeatNum(reaperScriptable);
-        //         Debug.Log(reaperSeatNum);
-        //         GameObject reaperObj = Instantiate(GameManager.Instance.ghostManager.GetGhostObjFromName("Reaper"), door, Quaternion.identity);
-        //         reaperObj.GetComponent<GhostObj>().SetSeatNum(reaperSeatNum);
-        //         spawnedGhosts[reaperSeatNum] = (reaperObj, true);
-        //         return;
-        //     }
-        // }
+        //reaper spawns hardcoded >.> erm
+        if (reaperIndex == 1)
+        {  
+            Ghost reaperScriptable = GameManager.Instance.ghostManager.GetGhostScriptableFromName("Reaper");
+            if (GameManager.Instance.ghostManager.CheckGhostIsActive(reaperScriptable) == false)
+            {
+                GameManager.Instance.ghostManager.AddActiveGhost(reaperScriptable);
+                int reaperSeatNum = GameManager.Instance.ghostManager.GetSeatNum(reaperScriptable);
+                Debug.Log(reaperSeatNum);
+                GameObject reaperObj = Instantiate(GameManager.Instance.ghostManager.GetGhostObjFromName("Reaper"), door, Quaternion.identity);
+                reaperObj.GetComponent<GhostObj>().SetSeatNum(reaperSeatNum);
+                spawnedGhosts[reaperSeatNum] = (reaperObj, true);
+                AudioManager.Instance.PlaySound("DoorChime");
+            }
+            return;
+        }
         List<Ghost> possibleGhost = new List<Ghost>();
         foreach (Recipe recipe in GameManager.Instance.unlockedRecipes)
         {
@@ -146,6 +147,7 @@ public class GhostSpawningManager : MonoBehaviour
         GameObject newGhost = Instantiate(GameManager.Instance.ghostManager.GetGhostObjFromName(possibleGhost[index].ghostName), door, Quaternion.identity);
         newGhost.GetComponent<GhostObj>().SetSeatNum(seatNum);
         spawnedGhosts[seatNum] = (newGhost, true);
+        AudioManager.Instance.PlaySound("DoorChime");
     }
 
     //deletes gameobject and removes from spawned ghosts list
