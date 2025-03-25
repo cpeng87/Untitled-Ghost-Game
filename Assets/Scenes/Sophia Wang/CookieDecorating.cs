@@ -5,7 +5,6 @@ public class CookieDecorating : MonoBehaviour
     [SerializeField] private Camera cam;
     [SerializeField] private int xs = 1024;
     [SerializeField] private int ys = 1024;
-    private int radius = 512;
     [SerializeField] private int brushSize = 40;
     [SerializeField] private Color brushColor;
     [SerializeField] Material mat;
@@ -46,8 +45,11 @@ public class CookieDecorating : MonoBehaviour
         if (Physics.Raycast(ray, out hit, 10f))
         {
             point.position = hit.point;
-            x = (int)((point.localPosition.x - topLeftCorner.localPosition.x) * xMult); 
+            x = (int)((point.localPosition.x - topLeftCorner.localPosition.x) * xMult);
+            x = xs - x;
             y = (int)((point.localPosition.y - topLeftCorner.localPosition.y) * yMult);
+            //x = (int)((point.localPosition.x - bottomRightCorner.localPosition.x) * xMult);
+            //y = (int)((topLeftCorner.localPosition.y - point.localPosition.y) * yMult);
             ChangePixelsAroundPoint(); 
         }
         else
@@ -71,8 +73,6 @@ public class CookieDecorating : MonoBehaviour
     }
     private void DrawBrush(int xPix, int yPix) 
     {
-        //if ((x - xPix) * (x - xPix) + (y - yPix) * (y - yPix) <= radius * radius)
-        //{
             int i = xPix - brushSize + 1, j = yPix - brushSize + 1, maxi = xPix + brushSize - 1, maxj = yPix + brushSize - 1;
             if (i < 0) 
                 i = 0;
@@ -86,11 +86,12 @@ public class CookieDecorating : MonoBehaviour
             {
                 for (int y = j; y <= maxj; y++)
                 {
-                    if ((x - xPix) * (x - xPix) + (y - yPix) * (y - yPix) <= brushSize * brushSize) 
-                        colorMap[x * ys + y] = brushColor;
+                    if ((x - xPix) * (x - xPix) + (y - yPix) * (y - yPix) <= brushSize * brushSize)
+                    {
+                        colorMap[(xs - x) * ys + y] = brushColor;
+                    }
                 }
             }
-        //}  
     }
     private void SetTexture() 
     {
