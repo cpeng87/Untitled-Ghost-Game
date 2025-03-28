@@ -20,13 +20,13 @@ public class Vegetable : DraggableObject
     }
 
     private void FixedUpdate()
-{
-    if (!isDraggable)
     {
-        transform.position = targetPosition;
-        transform.rotation = Quaternion.Euler(0f, 90f, 0f);
+        if (!isDraggable)
+        {
+            transform.position = targetPosition;
+            transform.rotation = Quaternion.Euler(0f, 90f, 0f);
+        }
     }
-}
 
     public void OnTriggerEnter(Collider other) {
         if (isChopped) {
