@@ -1,6 +1,13 @@
 using UnityEngine;
 using System.Collections.Generic;
 
+public enum Arc
+{
+    Passion,
+    Connection,
+    
+}
+
 [CreateAssetMenu(fileName = "Ghost", menuName = "Ghost", order = 0)]
 public class Ghost : ScriptableObject 
 {

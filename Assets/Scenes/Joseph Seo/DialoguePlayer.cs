@@ -97,6 +97,7 @@ public class DialoguePlayer : MonoBehaviour
     }
 
     public void SetNextDialogue(string name, string dialogueNode) {
+        // GameManager.Instance.state = State.Dialogue;
         DialogueManager.Instance.SetNextDialogue(name, dialogueNode);
     }
 
@@ -106,6 +107,7 @@ public class DialoguePlayer : MonoBehaviour
         Debug.Log("SeatNumber is " + seatNum);
         GhostSpawningManager.Instance.DeleteSpawnedGhost(seatNum);
         GameManager.Instance.orderManager.RemoveCompletedOrder();
+        GameManager.Instance.state = State.Main;
     }
 
     // Specific Order Dialogue
@@ -114,20 +116,21 @@ public class DialoguePlayer : MonoBehaviour
         this.seatNum = seatNum;
         this.currentOrder = recipe; 
         CameraManager.Instance.SwapToSeatCamera(seatNum);
-        ghostName = ghostName.Replace(" ", "");
-        if (ghostName.Contains("Ghost"))
+        if (ghostName.Contains(" Ghost"))
         {
-            ghostName = ghostName.Replace("Ghost", "");
+            ghostName = ghostName.Replace(" Ghost", "");
         }
+        ghostName = ghostName.Replace(" ", "");
         dialogueRunner.StartDialogue(ghostName + "Order");
+        GameManager.Instance.state = State.Dialogue;
     }
 
     public void CompleteOrderDialogue(string ghostName, int seatNum, bool res) {
         CameraManager.Instance.SwapToSeatCamera(seatNum);
         this.seatNum = seatNum;
 
-        string parsedName = ghostName.Replace(" ", "");
-        parsedName = parsedName.Replace("Ghost", "");
+        string parsedName = ghostName.Replace(" Ghost", "");
+        parsedName = parsedName.Replace(" ", "");
         
         if (res) {
             isSuccess = true;
@@ -150,10 +153,13 @@ public class DialoguePlayer : MonoBehaviour
             isSuccess = false;
             GameManager.Instance.state = State.Main;
         }
-        if (isSuccess)
+        else if (isSuccess)
         {
             isDeleting = true;
         }
-        GameManager.Instance.state = State.Main;
+        else
+        {
+            GameManager.Instance.state = State.Main;
+        }
     }
 }

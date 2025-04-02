@@ -181,18 +181,21 @@ namespace Manager.RecipeShop
     
         private void ShowRecipeShop()
         {
-            // Update visual currency display
-            UpdateCurrencyData();
+            if (GameManager.Instance.state == State.Main)
+            {
+                // Update visual currency display
+                UpdateCurrencyData();
+                
+                //Incase a transaction is open, cancel it 
+                CancelTransaction();
+                
+                //Show the recipe shop UI
+                recipeShopUI.SetActive(true);
             
-            //Incase a transaction is open, cancel it 
-            CancelTransaction();
-            
-            //Show the recipe shop UI
-            recipeShopUI.SetActive(true);
-        
-            //Show and hide relevant buttons
-            recipeShopOpenButton.gameObject.SetActive(false);
-            recipeShopReturnButton.gameObject.SetActive(true);
+                //Show and hide relevant buttons
+                recipeShopOpenButton.gameObject.SetActive(false);
+                recipeShopReturnButton.gameObject.SetActive(true);
+            }
         }
 
         private void CancelTransaction()

@@ -18,7 +18,7 @@ title: WeebFailure
 tags:
 position: -112,-180
 ---
-Weeb Ghost: Eugh, gross! Barista diff for real, bro, just ff already...
+Weeb Ghost: <shaky> Eugh, gross! </shaky> Barista diff for real, bro, just ff already...
 <<setCam "Main Camera">>
 ===
 
@@ -27,11 +27,12 @@ tags:
 position: 169,38
 ---
 Weeb Ghost: Y'know, you're actually speaking to a Grandmaster player.
-Weeb Ghost: What?
+Weeb Ghost: <italic> What? </italic>
 Weeb Ghost: You don't know what that means?
 Weeb Ghost: Heh... normies... you wouldn't understand.
 Weeb Ghost: I'm going to be a huge pro gamer someday.
 Weeb Ghost: If you ever want to play sometime, we can duo queue. I'll carry you, don't worry.
+<<setCam "Main Camera">>
 ===
 
 title: WeebStory2
@@ -40,11 +41,12 @@ position: 169,38
 ---
 Weeb Ghost: I was the president of my high school anime club, so I know what I'm saying when I tell you that... you're strong.
 Weeb Ghost: Stand proud.
-Weeb Ghost: What, nothing?
+Weeb Ghost: <italic> What </italic>, nothing?
 Weeb Ghost: My genius is wasted on you.
 Weeb Ghost: I don't know why I'm spending precious time here talking to you, anyways.
 Weeb Ghost: I need to hit Challenger, I'm so close to it.
 Weeb Ghost: Then, maybe my dad will... nevermind.
+<<setCam "Main Camera">>
 ===
 
 title: WeebStory3
@@ -53,9 +55,10 @@ position: 169,38
 ---
 Weeb Ghost: I wonder if I'll ever see my dad around, in the afterlife.
 Weeb Ghost: I mean, I'm fine even if he doesn't!
-Weeb Ghost: I have my waifu Seraphine to keep me company.
+Weeb Ghost: I have my waifu <wiggle> Seraphine </wiggle> to keep me company.
 Weeb Ghost: Just... it'd be nice to have his attention, for once.
 Weeb Ghost: Anyways, once I hit Challenger, he'll have to pay attention to me! I'll be famous. I'll be everywhere, on TV and everything. Just watch!
+<<setCam "Main Camera">>
 ===
 
 title: WeebStory4
@@ -67,6 +70,7 @@ Weeb Ghost: Well, loads of reasons, obviously! I'll be super famous so my dad wi
 Weeb Ghost: And, well... he was proud of me when I hit silver, wasn't he? And silver's nothing.
 Weeb Ghost: Low elo.
 Weeb Ghost: Just imagine how much more proud he'll be when I hit the highest tier.
+<<setCam "Main Camera">>
 ===
 
 title: WeebStory5
@@ -79,6 +83,7 @@ Weeb Ghost: And he said... he was proud of me.
 Weeb Ghost: Even though I'm not Challenger, or a pro gamer, or have a girlfriend.
 Weeb Ghost: So, um. I don't think I'll be able to carry you anymore, if you do want to play.
 Weeb Ghost: I...I want to make the most of my time with my dad.
+<<setCam "Main Camera">>
 ===
 
 title: WeebStory6
@@ -90,4 +95,5 @@ Weeb Ghost: I thought I was here to hit Challenger, but honestly?
 Weeb Ghost: Hall of Heroes doesn't even seem that important anymore, now that my dad's here with me.
 Weeb Ghost: So... you know how it is. GG go next.
 Weeb Ghost: I hope you find what you're looking for, whatever it is.
+<<setCam "Main Camera">>
 ===

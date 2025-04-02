@@ -91,7 +91,15 @@ class Draw : MonoBehaviour
             for (int y = j; y <= maxj; y++)
             {
                 if ((x - xPix) * (x - xPix) + (y - yPix) * (y - yPix) <= brushSize * brushSize)
-                    colorMap[x * totalYPixels + y] = brushColor;
+                {
+                    try
+                    {
+                        colorMap[(totalXPixels - x) * totalYPixels + y] = brushColor;
+                    } catch
+                    {
+                        //do nothing
+                    }
+                }
             }
         }
     }

@@ -3,12 +3,14 @@ using System.Collections.Generic;
 
 public class GhostManager : MonoBehaviour
 {
-    public List<GameObject> ghosts;  //list of all ghosts 
+    public List<GameObject> ghosts;  //list of all ghosts
     public Dictionary<string, GameObject> ghostNameToGameObjDict = new Dictionary<string, GameObject>();
     public Dictionary<string, Ghost> ghostNameToScriptableDict = new Dictionary<string, Ghost>();
     public Dictionary<string, int> ghostNameToStoryIndex = new Dictionary<string, int>();
     public Dictionary<Recipe, List<Ghost>> recipeToGhostsDict = new Dictionary<Recipe, List<Ghost>>();
     public Ghost[] activeGhosts; //array of ghosts that have been spawned. Limited by maxghosts in GameManager
+    // public Ghost reaper;
+    // public GameObject reaperObj;
 
     //setup dictionaries and activeghosts
     public void Setup()

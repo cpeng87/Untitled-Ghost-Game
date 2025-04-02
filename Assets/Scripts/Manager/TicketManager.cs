@@ -65,12 +65,24 @@ public class TicketManager : MonoBehaviour
         texts[2].text = "Reward: " + order.price.ToString();
 
         // Set button functionality
-        ticket.GetComponentInChildren<Button>().onClick.AddListener(() => GameManager.Instance.orderManager.MakeOrder(tickets.Count - 1));
+        ticket.GetComponentInChildren<Button>().onClick.AddListener(() => GameManager.Instance.orderManager.MakeOrder(order.seatNum));
+    }
+
+    public void ToggleOrders()
+    {
+        if (ordersPanel.activeSelf == false)
+        {
+            ShowOrders();
+        }
+        else
+        {
+            HideOrders();
+        }
     }
 
     public void ShowOrders()
     {
-        if (GameManager.Instance.orderManager.activeOrders.Count > 0 && !ordersPanel.activeSelf)
+        if (GameManager.Instance.orderManager.GetNumActiveOrder() > 0 && !ordersPanel.activeSelf)
         {
             // Reset visible tickets
             SetUpOrdersPanel();
@@ -81,7 +93,10 @@ public class TicketManager : MonoBehaviour
             // Add each order to panel
             foreach (Order order in GameManager.Instance.orderManager.activeOrders)
             {
-                AddOrderToPanel(order);
+                if (order != null)
+                {
+                    AddOrderToPanel(order);
+                }
             }
 
             // Show the orders panel
@@ -97,6 +112,7 @@ public class TicketManager : MonoBehaviour
     //loads in assets for ordersPanel
     public void SetUpOrdersPanel()
     {
+        Debug.Log("setting up orders panel");
         // Get rid of old tickets
         while (ordersPanel.transform.GetChild(0).GetChild(0).childCount > 1)
         {
@@ -106,5 +122,6 @@ public class TicketManager : MonoBehaviour
         // Set the order panel to inactive
         ordersPanel.SetActive(false);
         orderTicket.SetActive(false);
+        Debug.Log(ordersPanel.activeSelf);
     }
 }
