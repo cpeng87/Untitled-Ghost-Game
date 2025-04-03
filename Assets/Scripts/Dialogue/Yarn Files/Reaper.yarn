@@ -3,6 +3,7 @@ tags:
 position: -54,-23
 ---
 Reaper: Could I get a {GetOrder()}, please? As far as the decoration goes, <wiggle> surprise me! </wiggle>
+<<reset>>
 <<setCam "Main Camera">>
 ===
 
@@ -11,6 +12,7 @@ tags:
 position: -173,132
 ---
 Reaper: Thank you very much, <wiggle> it's delicious! </wiggle> What a creative design, as well.
+<<reset>>
 <<startStory ReaperStory>>
 ===
 

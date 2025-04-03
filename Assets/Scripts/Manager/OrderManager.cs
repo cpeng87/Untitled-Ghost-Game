@@ -27,7 +27,8 @@ public class OrderManager : MonoBehaviour
 
     //Randomized a recipe that is avaliable to order. Adds that order and triggers dialogue for the order
     //Returns whether it is a success or fail to tell the object in Ghostobj to switch states
-    public bool TakeOrder(string name, List<string> orderDialogue, List<Recipe> recipes, int seatNum)
+    // public bool TakeOrder(string name, List<string> orderDialogue, List<Recipe> recipes, int seatNum)
+    public bool TakeOrder(string name, List<Recipe> recipes, int seatNum)
     {
 
         List<Recipe> possibleRecipe = new List<Recipe>();

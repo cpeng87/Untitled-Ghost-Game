@@ -11,6 +11,7 @@ tags:
 position: -173,132
 ---
 Actor Ghost: Wow, this is amazing, I can see why you're a barista! Great stuff! <wiggle> Truly a master at work~! </wiggle>
+<<reset>>
 <<startStory ActorStory>>
 ===
 
@@ -30,11 +31,14 @@ position: 169,38
 ---
 Actor Ghost: Yep, it's me. <italic> The one! </italic> The only!! 
 Actor Ghost: <italic> The only!! </italic> 
+<<reset>>
 Actor Ghost: You know me from the hit shows The Workplace, Acquaintances, Tournament of seats, yep, it's me in the flesh, or I guess in the spirit. And no, I don't do autographs.
 Actor Ghost: <italic> WHAT?! </italic>
+<<reset>>
 Actor Ghost: You don't know who I am?
 Actor Ghost: Were you living under a rock for your whole life?! I guess it is a nice change of pace though.
 Actor Ghost: <wiggle> Well, see ya around, barista~! </wiggle>
+<<reset>>
 <<setCam "Main Camera">>
 ===
 
@@ -44,14 +48,17 @@ position: 169,38
 ---
 Actor Ghost: Hmm, my fame?
 Actor Ghost: Oh, it was absolutely <wiggle> a~mazing! </wiggle>
+<<reset>>
 Actor Ghost: I got invites to all of the events in Hollyboo. 
 Actor Ghost: You know, at some point in fame, people just start giving you free stuff: money, food, drinks, even property!
 Actor Ghost: Like this one time, this chick gifted me their giant stuffed animal that was nearly twice my size!
 Actor Ghost: Honestly I was shocked, but hey, who says no to free things, hm?
 Actor Ghost: And opportunities, I was absolutely <italic> SWIMMING </italic> in them.
+<<reset>>
 Actor Ghost: But the best part was the parties!
 Actor Ghost: Every!
 Actor Ghost: <italic> DAY! </italic>
+<<reset>>
 Actor Ghost: Never a boring moment with those people. Man, those were the times.
 <<setCam "Main Camera">>
 ===
@@ -62,8 +69,8 @@ position: 169,38
 ---
 Actor Ghost: Why am I a ghost?
 Actor Ghost: Well, heh- I really did have everything everyone could imagine.
-Actor Ghost: But you know... what even comes after that? Even amidst all of the flashing lights, people, and drinks, I-I can't shake off this sense of� loneliness?
-Actor Ghost: Like what comes after all of this? I have fun, but once excitement leaves me and I find myself alone in the mansion, everything just feels so�empty.
+Actor Ghost: But you know... what even comes after that? Even amidst all of the flashing lights, people, and drinks, I-I can't shake off this sense of... loneliness?
+Actor Ghost: Like what comes after all of this? I have fun, but once excitement leaves me and I find myself alone in the mansion, everything just feels so...empty.
 Actor Ghost: Ugh, this depressing stuff does NOT suit me at all.
 Actor Ghost: I'm a star after all! I can't be seen moping around like this!
 <<setCam "Main Camera">>
@@ -91,5 +98,6 @@ Actor Ghost: Haha, this is so un-star-like. Like c'mon man.
 Actor Ghost: But still, it's nice to actually have someone listen to you, for once.
 Actor Ghost: Just me, and not the persona that I've created. Made me really appreciate the ones that don't just latch onto my and my stardom...
 Actor Ghost: Thanks, man. <wiggle> See you, barista~! </wiggle> Aaaaaand cut!
+<<reset>>
 <<setCam "Main Camera">>
 ===
