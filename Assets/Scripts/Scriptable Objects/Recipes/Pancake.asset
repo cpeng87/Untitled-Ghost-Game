@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Pancake
   m_EditorClassIdentifier: 
   recipeName: Pancake
-  sellPrice: 12
-  buyPrice: 0
+  sellPrice: 15
+  buyPrice: 12
   minigame: Pancakes
-  isBought: 0
+  unlockArc: 0

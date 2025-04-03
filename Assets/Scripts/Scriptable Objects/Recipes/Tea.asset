@@ -17,3 +17,4 @@ MonoBehaviour:
   buyPrice: 0
   minigame: Emily_Tea
   isBought: 0
+  unlockArc: 3

@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     public List<Recipe> recipes = new List<Recipe>();
     public State state;
     public int maxGhosts;
+    public Arc arc;
 
     public bool parsedDialogue = false;
 
@@ -44,9 +45,22 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         state = State.Main;
+        arc = Arc.Passion;
         orderManager = GetComponent<OrderManager>();
         ghostManager = GetComponent<GhostManager>();
         ghostManager.Setup();
+    }
+
+    public void AddUnlockedRecipe(Recipe recipe)
+    {
+        if (unlockedRecipes.Contains(recipe))
+        {
+            Debug.Log("Already have that recipe");
+        }
+        else
+        {
+            unlockedRecipes.Add(recipe);
+        }
     }
 
     public void SwitchToMinigame(string minigameName)

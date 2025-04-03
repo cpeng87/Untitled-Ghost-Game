@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CremeBrulee
   m_EditorClassIdentifier: 
   recipeName: Creme Brulee
-  sellPrice: 12
-  buyPrice: 0
+  sellPrice: 22
+  buyPrice: 36
   minigame: CremeBrulee
-  isBought: 0
+  unlockArc: 1

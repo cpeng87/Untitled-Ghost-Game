@@ -23,3 +23,4 @@ MonoBehaviour:
   numStory: 4
   recipesOrdered:
   - {fileID: 11400000, guid: 536cb770bc83d064eba8d39f5417fdfa, type: 2}
+  arc: 3

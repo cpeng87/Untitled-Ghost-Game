@@ -155,7 +155,7 @@ public class GhostSpawningManager : MonoBehaviour
         
         int index = (int) (UnityEngine.Random.value * possibleGhost.Count);
         index = Math.Abs(index);
-        int count = 0
+        int count = 0;
         Debug.Log("Index for chosen ghost: " + index);
         if (possibleGhost.Count == 0) {
             Debug.Log("No customers are left. All of them have been completed!");

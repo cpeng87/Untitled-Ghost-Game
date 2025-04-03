@@ -24,7 +24,8 @@ namespace Manager.RecipeShop
             //Set recipe visual information
             nameText.text = recipe.name;
             costText.text = "$ "+recipe.buyPrice.ToString();
-            soldText.gameObject.SetActive(recipe.isBought);
+            soldText.gameObject.SetActive(RecipeShopManager.Instance.IsRecipeBought(recipe));
+            // soldText.gameObject.SetActive(recipe.isBought);
 
             //TODO: Set image info
         }
