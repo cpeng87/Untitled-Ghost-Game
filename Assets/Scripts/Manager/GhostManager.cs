@@ -78,6 +78,11 @@ public class GhostManager : MonoBehaviour
                     Debug.Log("incrementing story index");
                     ghostNameToStoryIndex[name] = ghostNameToStoryIndex[name] + 1;
                 }
+                /*
+                if (ghost.numStory == ghostNameToStoryIndex[name]) {
+                    GameManager.Instance.unlockedRecipes.Add(ghost.)
+                }
+                */
             return;
         }
         Debug.Log("Ghost with name: " + name + " does not exist in the dictionary.");

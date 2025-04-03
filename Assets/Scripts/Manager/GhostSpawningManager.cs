@@ -1,5 +1,9 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using System;
+using JetBrains.Annotations;
+using System.Drawing.Text;
 
 public class GhostSpawningManager : MonoBehaviour
 {
@@ -126,20 +130,47 @@ public class GhostSpawningManager : MonoBehaviour
             return;
         }
         List<Ghost> possibleGhost = new List<Ghost>();
+
+
+        /*
         foreach (Recipe recipe in GameManager.Instance.unlockedRecipes)
         {
             possibleGhost.AddRange(GameManager.Instance.ghostManager.GetGhostsFromRecipe(recipe));
         }
-        int index = (int) (Random.value * possibleGhost.Count);
-        int count = 0;
-        while (GameManager.Instance.ghostManager.CheckGhostIsActive(possibleGhost[index]) == true || possibleGhost[index].ghostName == "Reaper")
+        */
+        
+
+        
+        foreach (Recipe recipe in GameManager.Instance.unlockedRecipes)
+        {
+            List<Ghost> ghostRangePerRecipe = GameManager.Instance.ghostManager.GetGhostsFromRecipe(recipe);
+            for (int i = ghostRangePerRecipe.Count - 1; i >= 0; i--) {
+                Ghost g = ghostRangePerRecipe[i];
+                if (g.numStory < GameManager.Instance.ghostManager.GetStoryIndex(g.ghostName)) {
+                    ghostRangePerRecipe.RemoveAt(i);
+                }
+            }
+            possibleGhost.AddRange(ghostRangePerRecipe);
+        }
+        
+        int index = (int) (UnityEngine.Random.value * possibleGhost.Count);
+        index = Math.Abs(index);
+        int count = 0
+        Debug.Log("Index for chosen ghost: " + index);
+        if (possibleGhost.Count == 0) {
+            Debug.Log("No customers are left. All of them have been completed!");
+            return;
+        }
+        while (GameManager.Instance.ghostManager.CheckGhostIsActive(possibleGhost[index]) == true)
+        //while (GameManager.Instance.ghostManager.CheckGhostIsActive(possibleGhost[index]) == true || possibleGhost[index].ghostName == "Reaper")
+
         {
             if (count > 100)
             {
                 Debug.Log("Cannot spawn any ghost, maxed rolls");
                 return;
             }
-            index = (int) (Random.value * possibleGhost.Count);
+            index = (int) (UnityEngine.Random.value * possibleGhost.Count);
             count++;
         }
         GameManager.Instance.ghostManager.AddActiveGhost(possibleGhost[index]);
@@ -170,4 +201,6 @@ public class GhostSpawningManager : MonoBehaviour
         }
         return null;
     }
+
 }
+
