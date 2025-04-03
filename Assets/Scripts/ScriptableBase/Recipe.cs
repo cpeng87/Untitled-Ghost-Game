@@ -1,4 +1,5 @@
 using UnityEngine;
+// using UnityEngine.UI;
 using System.Collections.Generic;
 
 [CreateAssetMenu(fileName = "Recipe", menuName = "Recipe", order = 0)]
@@ -10,4 +11,5 @@ public class Recipe : ScriptableObject
     public string minigame;
     // public bool isBought = false; //Whether the player has the recipe or not
     public Arc unlockArc;
+    public Sprite foodImage;
 }

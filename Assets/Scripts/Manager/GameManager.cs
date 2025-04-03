@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public enum State
 {
     Main,
-    Dialogue
+    Dialogue,
+    Recipe
 }
 
 //manages state of game

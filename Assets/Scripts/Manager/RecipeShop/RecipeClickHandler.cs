@@ -10,12 +10,9 @@ namespace Manager.RecipeShop
         [SerializeField] private TextMeshProUGUI nameText;
         [SerializeField] private TextMeshProUGUI costText;
         [SerializeField] private GameObject soldText;
+        [SerializeField] private Image foodImage;
         
         private Recipe currentRecipe;
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
-        {
-        }
 
         public void SetRecipe(Recipe recipe)
         {
@@ -27,7 +24,7 @@ namespace Manager.RecipeShop
             soldText.gameObject.SetActive(RecipeShopManager.Instance.IsRecipeBought(recipe));
             // soldText.gameObject.SetActive(recipe.isBought);
 
-            //TODO: Set image info
+            foodImage.sprite = recipe.foodImage;
         }
 
         public void RecipeClicked()

@@ -200,6 +200,7 @@ namespace Manager.RecipeShop
                 //Show and hide relevant buttons
                 recipeShopOpenButton.gameObject.SetActive(false);
                 recipeShopReturnButton.gameObject.SetActive(true);
+                GameManager.Instance.state = State.Recipe;
             }
         }
 
@@ -222,6 +223,7 @@ namespace Manager.RecipeShop
             
             //Cancel transaction in the case that a transaction is being considered
             CancelTransaction();
+            GameManager.Instance.state = State.Main;
         }
 
         private void OnDestroy()
