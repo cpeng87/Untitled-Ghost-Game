@@ -53,7 +53,7 @@ def parse_dialogue(file_path):
     return "\n".join(yarn_sections)
 
 # Example usage
-input_file = "News Reporter.txt"
+input_file = "Reaper.txt"
 output_file = input_file.rsplit('.',1)[0] + "Ghost.yarn"
 
 # Parse the dialogue and write to output file

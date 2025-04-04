@@ -16,5 +16,5 @@ MonoBehaviour:
   sellPrice: 20
   buyPrice: 28
   minigame: 
-  isBought: 0
-  unlockArc: 1
+  unlockArc: 2
+  foodImage: {fileID: 0}

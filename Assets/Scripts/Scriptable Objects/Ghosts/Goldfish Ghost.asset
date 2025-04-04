@@ -14,13 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ghostName: Goldfish Ghost
   dialogue: {fileID: -8253061345870894857, guid: 2e0e2dc313237da468e3a4126165753a, type: 3}
-  success:
-  - Thank you so much! Nothing like a {dish} to clear my mind.
-  failure:
-  - What is this? Is this even edible...?
-  order:
-  - I would like a Tea, please.
   numStory: 5
   recipesOrdered:
   - {fileID: 11400000, guid: 605f77bbb025a2a41820b9917c4d8643, type: 2}
-  arc: 3
+  arc: 4

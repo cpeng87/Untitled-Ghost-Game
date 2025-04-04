@@ -15,6 +15,7 @@ public class GhostSpawningManager : MonoBehaviour
     [SerializeField] private float ghostSpawnCooldown;  //time for new ghost spawn
     [SerializeField] private Vector3 door = new Vector3(-6f, 0.5f,-7f);
     [SerializeField] private float ghostSpeed = 3f;
+    private bool isReaperSpawn = false;
 
     //singleton
     private void Awake()
@@ -129,6 +130,26 @@ public class GhostSpawningManager : MonoBehaviour
             }
             return;
         }
+
+        if (isReaperSpawn)
+        {
+            Ghost reaperScriptable = GameManager.Instance.ghostManager.GetGhostScriptableFromName("Reaper");
+            if (GameManager.Instance.ghostManager.CheckGhostIsActive(reaperScriptable) == false)
+            {
+                GameManager.Instance.ghostManager.AddActiveGhost(reaperScriptable);
+                int reaperSeatNum = GameManager.Instance.ghostManager.GetSeatNum(reaperScriptable);
+                Debug.Log(reaperSeatNum);
+                GameObject reaperObj = Instantiate(GameManager.Instance.ghostManager.GetGhostObjFromName("Reaper"), door, Quaternion.identity);
+                reaperObj.GetComponent<GhostObj>().SetSeatNum(reaperSeatNum);
+                spawnedGhosts[reaperSeatNum] = (reaperObj, true);
+                AudioManager.Instance.PlaySound("DoorChime");
+            }
+            isReaperSpawn = false;
+            return;
+        }
+
+        //if finish arc ghosts
+        
         List<Ghost> possibleGhost = new List<Ghost>();
 
 
@@ -140,15 +161,19 @@ public class GhostSpawningManager : MonoBehaviour
         */
         
 
-        
         foreach (Recipe recipe in GameManager.Instance.unlockedRecipes)
         {
             List<Ghost> ghostRangePerRecipe = GameManager.Instance.ghostManager.GetGhostsFromRecipe(recipe);
             for (int i = ghostRangePerRecipe.Count - 1; i >= 0; i--) {
                 Ghost g = ghostRangePerRecipe[i];
-                if (g.numStory < GameManager.Instance.ghostManager.GetStoryIndex(g.ghostName)) {
+                // made a completed ghost list so using that instead
+                if (GameManager.Instance.ghostManager.IsComplete(g))
+                {
                     ghostRangePerRecipe.RemoveAt(i);
                 }
+                // if (g.numStory < GameManager.Instance.ghostManager.GetStoryIndex(g.ghostName)) {
+                //     ghostRangePerRecipe.RemoveAt(i);
+                // }
             }
             possibleGhost.AddRange(ghostRangePerRecipe);
         }
@@ -161,9 +186,7 @@ public class GhostSpawningManager : MonoBehaviour
             Debug.Log("No customers are left. All of them have been completed!");
             return;
         }
-        while (GameManager.Instance.ghostManager.CheckGhostIsActive(possibleGhost[index]) == true)
-        //while (GameManager.Instance.ghostManager.CheckGhostIsActive(possibleGhost[index]) == true || possibleGhost[index].ghostName == "Reaper")
-
+        while (GameManager.Instance.ghostManager.CheckGhostIsActive(possibleGhost[index]) == true || possibleGhost[index].ghostName == "Reaper")
         {
             if (count > 100)
             {
@@ -200,6 +223,11 @@ public class GhostSpawningManager : MonoBehaviour
             }
         }
         return null;
+    }
+
+    public void SetIsReaperSpawn(bool val)
+    {
+        isReaperSpawn = val;
     }
 
 }

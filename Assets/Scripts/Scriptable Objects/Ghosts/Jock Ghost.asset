@@ -14,10 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ghostName: Jock Ghost
   dialogue: {fileID: -8253061345870894857, guid: 02483331a47bc1d4f86fe165ead6a17a, type: 3}
-  success: []
-  failure: []
-  order: []
   numStory: 4
   recipesOrdered:
   - {fileID: 11400000, guid: 2c8944e5acd276242a1dacb709fa93d3, type: 2}
-  arc: 0
+  arc: 1

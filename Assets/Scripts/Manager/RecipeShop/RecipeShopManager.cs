@@ -33,6 +33,7 @@ namespace Manager.RecipeShop
         
         private Tuple<Recipe, RecipeClickHandler> currentRecipe;
         public static List<Recipe> boughtRecipes = new List<Recipe>();
+        private List<GameObject> currRecipeCards = new List<GameObject>();
         private void Awake()
         {
             if (Instance == null)
@@ -49,7 +50,7 @@ namespace Manager.RecipeShop
         void Start()
         { 
             //Set shop data including recipes and currency
-            PopulateShop();
+            // PopulateShop();
         
             //Initially hide and show relevant gameobjects
             recipeShopOpenButton.gameObject.SetActive(true);
@@ -63,6 +64,10 @@ namespace Manager.RecipeShop
 
         private void PopulateShop()
         {
+            foreach (GameObject card in currRecipeCards)
+            {
+                Destroy(card);
+            }
             // Update visual currency display
             UpdateCurrencyData();
             
@@ -81,6 +86,7 @@ namespace Manager.RecipeShop
                 if (recipe.unlockArc == GameManager.Instance.arc)
                 {
                     GameObject recipeGameObject = Instantiate(recipePrefab, recipesContainer.transform);
+                    currRecipeCards.Add(recipeGameObject);
                     RecipeClickHandler recipeClickHandler = recipeGameObject.GetComponent<RecipeClickHandler>();
                     recipeClickHandler.SetRecipe(recipe);
                 }
@@ -188,6 +194,7 @@ namespace Manager.RecipeShop
         {
             if (GameManager.Instance.state == State.Main)
             {
+                PopulateShop();
                 // Update visual currency display
                 UpdateCurrencyData();
                 

@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         state = State.Main;
-        arc = Arc.Passion;
+        arc = Arc.Beginning;
         orderManager = GetComponent<OrderManager>();
         ghostManager = GetComponent<GhostManager>();
         ghostManager.Setup();
@@ -122,5 +122,15 @@ public class GameManager : MonoBehaviour
     public int GetSatisfactionLevel()
     {
         return satisfactionLevel;
+    }
+
+    public void UpdateArc()
+    {
+        arc = (Arc) ((int) arc + 1);
+
+        if (arc == Arc.None)
+        {
+            //play ending scene you beat the game!!
+        }
     }
 }

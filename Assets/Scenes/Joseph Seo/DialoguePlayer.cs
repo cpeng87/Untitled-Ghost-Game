@@ -148,6 +148,10 @@ public class DialoguePlayer : MonoBehaviour
         if (isDeleting)
         {
             GameManager.Instance.ghostManager.IncrementStoryIndex(GameManager.Instance.orderManager.GetCurrActiveOrderName());
+            if (GameManager.Instance.orderManager.GetCurrActiveOrderName() == "Reaper")
+            {
+                GameManager.Instance.UpdateArc();
+            }
             GameManager.Instance.orderManager.RemoveCompletedOrder();
             isDeleting = false;
             isSuccess = false;

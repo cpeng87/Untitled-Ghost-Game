@@ -14,13 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ghostName: Actor Ghost
   dialogue: {fileID: -8253061345870894857, guid: 8e319e9743f894248a7f220e258c9f23, type: 3}
-  success:
-  - Thank you so much! Nothing like a {dish} to clear my mind.
-  failure:
-  - What is this? Is this even edible...?
-  order:
-  - I would like a Tea, please.
   numStory: 5
   recipesOrdered:
-  - {fileID: 11400000, guid: 2c8944e5acd276242a1dacb709fa93d3, type: 2}
+  - {fileID: 11400000, guid: 536cb770bc83d064eba8d39f5417fdfa, type: 2}
   arc: 1

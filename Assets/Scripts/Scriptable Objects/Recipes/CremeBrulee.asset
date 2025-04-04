@@ -16,5 +16,5 @@ MonoBehaviour:
   sellPrice: 22
   buyPrice: 36
   minigame: CremeBrulee
-  unlockArc: 1
+  unlockArc: 2
   foodImage: {fileID: 21300000, guid: 767fb8c90a458fb469119f86d7ce8964, type: 3}
