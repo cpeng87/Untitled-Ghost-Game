@@ -35,7 +35,7 @@ Reaper: Oh, no time spent is ever a waste. And I quite disagree that you "didn't
         Reaper: Of course! Would you count a moment as worthwhile if it made one person happy, even if they were a complete stranger to you?
             -> Yeah, of course
             -> Mmm... I guess
-Reaper: Then, try extending that kindness to yourself. 
+        Reaper: Then, try extending that kindness to yourself. 
 Reaper: Then, you see, you already have some memories of your life that meant something! We'll work our way up to believing your entire life was meaningful.
 Reaper: It seems we've discovered why you are here, at least. That's a great start; many ghosts cannot identify one single regret when they first arrive. 
 Reaper: Well, I'd like to guide you to believe that the life you lived held meaning - that yes, you did have worthwhile dreams and meaningful connections and a tangible impact.
@@ -45,8 +45,8 @@ Reaper: But, in the meantime, I can recommend your cafe to a couple of ghosts I 
         Reaper: Good, then I'll be directing some new faces your way soon. 
     -> I doubt that will help...
         Reaper: No use being pessimistic about it, is there? Give it a try. The ghosts here aren't so different from you.
-Reaper: Oh yes, I think the recipe shop will be of great use to you. After all, different ghosts prefer different dishes after all.
-Reaper: Until the next time we cross paths, try to get to know some of them! I hope to hear good news during my next visit.
+Reaper: Oh yes, I almost forgot - I believe the recipe shop will be of great use to you. After all, different ghosts prefer different dishes. Do take a look when you have time.
+Reaper: Until the next time we cross paths, try to get to know some of the other residents in purgatory! I hope to hear good news during my next visit.
 <<setCam "Main Camera">>
 ===
 
@@ -58,26 +58,26 @@ Reaper: How are you doing, dear friend? It's been a long while since we've last 
     -> Well, I've met quite a few new customers on your recommendation, though I'm not sure that counts as an adventure.
     -> I don't see anything outside of this cafe, I wouldn't call that "new adventures".
 Reaper: Well, meeting new people is always an adventure! The stories they have lived through, the insights they could share - even as one who has spent an eternity listening to people's stories, there is still a sense of adventure I get from every new life's tale. 
-Cafe Ghost: Yeah, I guess so. In that case, I have plenty of "adventures" to share.
-Reaper: Oh, do tell! If you don't mind, of course, and it isn't anything too private to share.
-    -> Well, there was this businessman, who was obsessed with money...
-        Reaper: Ah, Tycoon Ghost. I'm glad you got to speak with him; his case was unique in that it's rare ghosts come in with the wrong conception of what their greatest regret was. Did you empathize with his situation?
-            -> I did empathize with him, to an extent...
-            -> But I don't think I'm here for a similar reason.
-                Reaper: I see, I see. We can't yet eliminate all connections, but parental, at least, is out of the question then.
-    -> I met a boy who really loved working out...
-        Reaper: Ah, Jock Ghost? Yes, his deep passion for athleticism made quite an impression, as did his regrets about never achieving his goals. Do you think your reason to stay may be similar?
-            -> I did empathize with him...
-            -> But I don't think I'm here for a similar reason.
-                Reaper: I see, I see. We can't yet eliminate all connections, but parental, at least, is out of the question then.
-Cafe Ghost: Still, that's not really a real adventure, is it? I'm trapped here.
-    Reaper: I see why you could feel trapped here. Purgatory is, in essence, a prison - a place where ghosts are forced to confront the life they lived, without the distractions that come with a full life.
-    Reaper: But I certainly never meant for it to feel like one. As limiting as purgatory is, it is also freeing. Free from the expectations and limitations of life, of common sense, and of many fears.
-    Reaper: You need not worry about making a living, or making an impact, or being remembered, or what people expect of you - here, you are nameless and needless, and all the freer for it to find what it is you truly want.
-        -> I guess so, yeah. I wouldn't have been able to start this cafe otherwise.
-            Reaper: And what a lovely cafe it is. I hope you are proud of what you've created here, regardless of whether it's your heart's desire or not.
-        -> Still, I don't think owning a coffee shop is what I always wanted.
-            Reaper: Maybe not, or I suppose you would have already passed on, no? But that doesn't mean it wasn't still something you wanted to do. 
+    -> Yeah, I guess so. In that case, I have plenty of "adventures" to share.
+        Reaper: Oh, do tell! If you don't mind, of course, and it isn't anything too private to share.
+            -> Well, there was this businessman, who was obsessed with money...
+                Reaper: Ah, Tycoon Ghost. I'm glad you got to speak with him; his case was unique in that it's rare ghosts come in with the wrong conception of what their greatest regret was. Did you empathize with his situation?
+                    -> I did empathize with him, to an extent...
+                    -> But I don't think I'm here for a similar reason.
+                        Reaper: I see, I see. We can eliminate that as a possibility then.
+            -> I met a boy who really loved working out...
+                Reaper: Ah, Jock Ghost? Yes, his deep passion for athleticism made quite an impression, as did his regrets about never achieving his goals. Do you think your reason to stay may be similar?
+                    -> I did empathize with him...
+                    -> But I don't think I'm here for a similar reason.
+                        Reaper: I see, I see. We can eliminate that as a possibility then.
+    -> Still, that's not really a real adventure, is it? I'm trapped here.
+        Reaper: I see why you could feel trapped here. Purgatory is, in essence, a prison - a place where ghosts are forced to confront the life they lived, without the distractions that come with a full life.
+        Reaper: But I certainly never meant for it to feel like one. As limiting as purgatory is, it is also freeing. Free from the expectations and limitations of life, of common sense, and of many fears.
+        Reaper: You need not worry about making a living, or making an impact, or being remembered, or what people expect of you - here, you are nameless and needless, and all the freer for it to find what it is you truly want.
+            -> I guess so, yeah. I wouldn't have been able to start this cafe otherwise.
+                Reaper: And what a lovely cafe it is. I hope you are proud of what you've created here, regardless of whether it's your heart's desire or not.
+            -> Still, I don't think owning a coffee shop is what I always wanted.
+                Reaper: Maybe not, or I suppose you would have already passed on, no? But that doesn't mean it wasn't still something you wanted to do. 
 Reaper: But let's stay on topic, shall we?
 Reaper: From your conversations with customers, have you been able to reflect on your own life?
     -> Well, quite a few ghosts have been talking about their life's passions...
@@ -122,7 +122,7 @@ Reaper: In your eyes, what really defines a "passion" or a "dream"? Is it a conc
                 Reaper:  These people, what set them apart is that they loved one single thing - a sport, or a craft, or a study - enough to dedicate their whole life to doing it. And that's beautiful to behold, but your goals are no lesser just because they are non-singular.
                 Reaper: And you did have goals, no matter how you might protest it.
                 Reaper: You hoped for a good job, no? A stable income? Maybe a place of your own, or a good circle of friends?
-                Cafe Ghost: Small ones, I guess.
+                Cafe Ghost: Small goals, I guess.
                 Reaper: Right, and that's all you needed to keep moving. Let me ask you this, then - did you not enjoy your journey? 
                 Reaper: Did you not enjoy the charms of daily life? The outings with your friends, the hobbies you paid for through your job, the satisfaction of a comfortable life? Humans take many things for granted quite easily.
                 Reaper: I hope that you can look back on your life and see the journey you took - between goals, between small wishes, all the challenges and triumphs you had. There is no real difference between you and these people you envy.
@@ -167,7 +167,7 @@ Reaper: Well, it's been quite some time since I last visited. Your cafe looks lo
 Reaper: You mentioned that you felt as though none of the connections you made with other people held significance. Is that still true?
     -> Well, it's not that they didn't have significance, just that...they weren't particularly unique, you know? The relationships themselves, I mean, not the people.
         Reaper: Hmm. Your relationships weren't unique? I'm afraid I have a hard time understanding quite what you mean.
-            -> Just about everyone has family, and friends, and maybe a couple dates. There isn't anyone I can point to and say, that person is everything to me. You know? I wish I could, I feel bad not being able to. But I can't. It's like my relationships were meaningless.
+            Cafe Ghost: Just about everyone has family, and friends, and maybe a couple dates. There isn't anyone I can point to and say, that person is everything to me. You know? I wish I could, I feel bad not being able to. But I can't. It's like my relationships were meaningless.
     -> Yeah, I just felt like...I didn't have any relationships that held the sort of power and understanding and care that so many other people have.
         Reaper: You mean in comparison to others, your relationships didn't feel strong enough?
             Cafe Ghost: Yeah, exactly. I didn't have a perfect, ever-supportive family, or an unbreakable friendship, or a fairy-tale romance. I just had...people, who cared most of the time, and who I trusted most of the time. That doesn't feel like enough. My relationships just didn't feel...meaningful.
