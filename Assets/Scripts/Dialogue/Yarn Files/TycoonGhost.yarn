@@ -19,6 +19,7 @@ tags:
 position: -112,-180
 ---
 Tycoon Ghost: You use my money and generosity for garbage like this? <shaky> You're fired! </shaky>
+<<reset>>
 <<setCam "Main Camera">>
 ===
 

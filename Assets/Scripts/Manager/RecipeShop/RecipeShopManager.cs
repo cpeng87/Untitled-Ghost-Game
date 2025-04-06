@@ -32,6 +32,8 @@ namespace Manager.RecipeShop
         [SerializeField] private TextMeshProUGUI recipeTransactionMessagePromptText;
         
         private Tuple<Recipe, RecipeClickHandler> currentRecipe;
+        public static List<Recipe> boughtRecipes = new List<Recipe>();
+        private List<GameObject> currRecipeCards = new List<GameObject>();
         private void Awake()
         {
             if (Instance == null)
@@ -48,7 +50,7 @@ namespace Manager.RecipeShop
         void Start()
         { 
             //Set shop data including recipes and currency
-            PopulateShop();
+            // PopulateShop();
         
             //Initially hide and show relevant gameobjects
             recipeShopOpenButton.gameObject.SetActive(true);
@@ -62,6 +64,10 @@ namespace Manager.RecipeShop
 
         private void PopulateShop()
         {
+            foreach (GameObject card in currRecipeCards)
+            {
+                Destroy(card);
+            }
             // Update visual currency display
             UpdateCurrencyData();
             
@@ -71,15 +77,19 @@ namespace Manager.RecipeShop
             foreach (Recipe recipe in recipes)
             {
                 //Store sold recipes in a queue to display towards the end
-                if (recipe.isBought)
+                if (boughtRecipes.Contains(recipe))
                 {
                     soldRecipesQueue.Enqueue(recipe);
                     continue;
                 }
                 //Instantiate recipe UI and populate data in recipe prefab
-                GameObject recipeGameObject = Instantiate(recipePrefab, recipesContainer.transform);
-                RecipeClickHandler recipeClickHandler = recipeGameObject.GetComponent<RecipeClickHandler>();
-                recipeClickHandler.SetRecipe(recipe);
+                if (recipe.unlockArc == GameManager.Instance.arc)
+                {
+                    GameObject recipeGameObject = Instantiate(recipePrefab, recipesContainer.transform);
+                    currRecipeCards.Add(recipeGameObject);
+                    RecipeClickHandler recipeClickHandler = recipeGameObject.GetComponent<RecipeClickHandler>();
+                    recipeClickHandler.SetRecipe(recipe);
+                }
                 
             }
             
@@ -103,7 +113,7 @@ namespace Manager.RecipeShop
             currentRecipe = new Tuple<Recipe, RecipeClickHandler>(recipeData, recipeClickHandler);
             
             //Show prompt to buy the recipe
-            if (!recipeData.isBought)
+            if (boughtRecipes.Contains(recipeData) == false)
             {
                 ShowTransactionConfirmationPrompt(true);
                 
@@ -144,18 +154,19 @@ namespace Manager.RecipeShop
             }
             
             //Attempt to buy the recipe
-            if (!currentRecipe.Item1.isBought)
+            if (boughtRecipes.Contains(currentRecipe.Item1) == false)
             {
                 if (GameManager.Instance.GetCurrency() >= currentRecipe.Item1.buyPrice)
                 {
                     if(shouldDebug) Debug.Log($"You have enough to buy the recipe : ({currentRecipe.Item1.name}). Bought for {currentRecipe.Item1.buyPrice}!");
                         
                     //Buy the recipe
-                    currentRecipe.Item1.isBought = true;
+                    // currentRecipe.Item1.isBought = true;
+                    boughtRecipes.Add(currentRecipe.Item1);
                     //Move the recipe towards the end of the shop (because sold)
                     currentRecipe.Item2.gameObject.transform.SetSiblingIndex(-1);
                     currentRecipe.Item2.SetRecipeSold();
-                        
+                    GameManager.Instance.AddUnlockedRecipe(currentRecipe.Item1);
                     //Update currency
                     GameManager.Instance.AddCurrency(-currentRecipe.Item1.buyPrice);
                 }
@@ -183,6 +194,7 @@ namespace Manager.RecipeShop
         {
             if (GameManager.Instance.state == State.Main)
             {
+                PopulateShop();
                 // Update visual currency display
                 UpdateCurrencyData();
                 
@@ -195,10 +207,11 @@ namespace Manager.RecipeShop
                 //Show and hide relevant buttons
                 recipeShopOpenButton.gameObject.SetActive(false);
                 recipeShopReturnButton.gameObject.SetActive(true);
+                GameManager.Instance.state = State.Recipe;
             }
         }
 
-        private void CancelTransaction()
+        public void CancelTransaction()
         {
             //Unset recipe under consideration
             currentRecipe = null;
@@ -217,6 +230,7 @@ namespace Manager.RecipeShop
             
             //Cancel transaction in the case that a transaction is being considered
             CancelTransaction();
+            GameManager.Instance.state = State.Main;
         }
 
         private void OnDestroy()
@@ -224,6 +238,15 @@ namespace Manager.RecipeShop
             //Unbind buttons before destruction
             recipeShopOpenButton.onClick.RemoveListener(ShowRecipeShop);
             recipeShopReturnButton.onClick.RemoveListener(HideRecipeShop);
+        }
+
+        public bool IsRecipeBought(Recipe recipe)
+        {
+            if (boughtRecipes.Contains(recipe))
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

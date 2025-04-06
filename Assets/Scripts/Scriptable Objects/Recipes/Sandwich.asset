@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Sandwich
   m_EditorClassIdentifier: 
   recipeName: Sandwich
-  sellPrice: 12
-  buyPrice: 0
+  sellPrice: 18
+  buyPrice: 24
   minigame: SandwichGame
-  isBought: 0
+  unlockArc: 1
+  foodImage: {fileID: 21300000, guid: 1d62c4ac75f868648bda16835a9cc478, type: 3}

@@ -13,10 +13,8 @@ MonoBehaviour:
   m_Name: Reaper
   m_EditorClassIdentifier: 
   ghostName: Reaper
-  dialogue: {fileID: -8253061345870894857, guid: 06c2b2e17cbfe2f429b20112d83c39ca, type: 3}
-  success: []
-  failure: []
-  order: []
+  dialogue: {fileID: -8253061345870894857, guid: 54a186942b23c294da7ec3b13bb152fe, type: 3}
   numStory: 4
   recipesOrdered:
   - {fileID: 11400000, guid: baee20edc5d1a534bbe65a31bea14d1b, type: 2}
+  arc: 4

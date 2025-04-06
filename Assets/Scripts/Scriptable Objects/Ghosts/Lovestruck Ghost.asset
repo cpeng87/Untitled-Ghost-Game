@@ -14,12 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ghostName: Lovestruck Ghost
   dialogue: {fileID: 4900000, guid: 0d378294df0554e40b4352774213624a, type: 3}
-  success:
-  - Thank you so much! Nothing like a {dish} to clear my mind.
-  failure:
-  - What is this? Is this even edible...?
-  order:
-  - I would like a Tea, please.
   numStory: 4
   recipesOrdered:
   - {fileID: 11400000, guid: 536cb770bc83d064eba8d39f5417fdfa, type: 2}
+  arc: 4
