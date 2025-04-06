@@ -2,7 +2,7 @@ title: ReaperOrder
 tags:
 position: -54,-23
 ---
-Reaper Ghost: Could I get a {GetOrder()}, please? As far as the decoration goes, surprise me!
+Reaper Ghost: Could I get a {GetOrder()}, please? As far as the decoration goes, <wiggle> surprise me! </wiggle>
 <<setCam "Main Camera">>
 ===
 
