@@ -7007,7 +7007,7 @@ PrefabInstance:
     - target: {fileID: -4683669308469848369, guid: 87f4604bc8e46cb48b853e66c88fb494, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: ea176d9da619bd040944a62d3c90b7b2, type: 2}
+      objectReference: {fileID: 2100000, guid: 19f7d74cb78eac84ea21e4e949a7bfe7, type: 2}
     - target: {fileID: 919132149155446097, guid: 87f4604bc8e46cb48b853e66c88fb494, type: 3}
       propertyPath: m_Name
       value: ChalkBoard
@@ -7410,7 +7410,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1194871745244336917, guid: 3b09e429754326e4196ed1635846ddcb, type: 3}
       propertyPath: ghosts.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1194871745244336917, guid: 3b09e429754326e4196ed1635846ddcb, type: 3}
       propertyPath: 'ghosts.Array.data[0]'
@@ -7431,7 +7431,7 @@ PrefabInstance:
     - target: {fileID: 1194871745244336917, guid: 3b09e429754326e4196ed1635846ddcb, type: 3}
       propertyPath: 'ghosts.Array.data[4]'
       value: 
-      objectReference: {fileID: 4663965477092494701, guid: 349a0fc8233db06498bb68ccfbec84df, type: 3}
+      objectReference: {fileID: 1134409268995214072, guid: 5d58ff3425db7a443b84e16ce5bb4fa5, type: 3}
     - target: {fileID: 1194871745244336917, guid: 3b09e429754326e4196ed1635846ddcb, type: 3}
       propertyPath: 'ghosts.Array.data[5]'
       value: 
