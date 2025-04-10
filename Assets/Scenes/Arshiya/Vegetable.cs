@@ -11,6 +11,7 @@ public class Vegetable : DraggableObject
     [SerializeField] private GameObject[] parts;
     [SerializeField] private int chops;
     [SerializeField] private bool canChop;
+    [SerializeField] private float inc;
     public override void Start() {
         isDraggable = true;
         isChopped = false;
@@ -29,11 +30,11 @@ public class Vegetable : DraggableObject
     }
 
     public void OnTriggerEnter(Collider other) {
-        if (isChopped) {
-            return;
-        }
+        // if (isChopped) {
+        //     return;
+        // }
         //lock the object in place
-        if (other.gameObject.name == "choppingTarget") {
+        if (other.gameObject.name == "choppingTarget" && !isChopped) {
             isDraggable = false;
             targetPosition = new Vector3(-1.3409998416900635f, -1.6769999265670777f, -2.5799999237060549f);
         }
@@ -43,7 +44,9 @@ public class Vegetable : DraggableObject
         if (other.gameObject.name == "knife" && canChop) {
             canChop = false;
             parts[chops].transform.position = targetPosition + new Vector3(-(chops % 2 == 0 ? 1 : -1), 0f, 0f);
-            parts[chops].GetComponent<DraggableObject>().enabled = true;
+            parts[chops].GetComponent<VegetablePart>().enabled = true;
+            parts[chops].GetComponent<BoxCollider>().enabled = true;
+            FindObjectOfType<SoupManager>().AddToProgress(inc);
         }
     }
 
@@ -53,7 +56,8 @@ public class Vegetable : DraggableObject
             if (chops == 2) {
                 isChopped = true;
                 GetComponent<BoxCollider>().enabled = false;
-                parts[chops].GetComponent<DraggableObject>().enabled = true;
+                parts[chops].GetComponent<BoxCollider>().enabled = true;
+                parts[chops].GetComponent<VegetablePart>().enabled = true;
             } else {
                 canChop = true;
             }

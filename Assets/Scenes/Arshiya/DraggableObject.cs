@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 public class DraggableObject : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler
 {
     private Camera mainCamera;
-    private bool isDragging = false;
+    protected bool isDragging = false;
     private Vector3 offset;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
