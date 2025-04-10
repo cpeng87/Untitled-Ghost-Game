@@ -36,6 +36,7 @@ public class MusicTrackPlayer : MonoBehaviour
 
     public void ChangeSong()
     {
-        AudioManager.Instance.RandomSong();
+        // AudioManager.Instance.RandomSong();
+        AudioManager.Instance.NextSong();
     }
 }

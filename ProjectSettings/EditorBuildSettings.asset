@@ -47,5 +47,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cynthia Peng/MainStorefront.unity
     guid: 1b240a24af432024eb367873af503c21
+  - enabled: 1
+    path: Assets/Scenes/Cynthia Peng/Intro Scene.unity
+    guid: 69624d3f6bf70ee4d8f586d2725a47b8
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
