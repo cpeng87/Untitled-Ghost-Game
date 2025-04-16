@@ -27,6 +27,7 @@ public class TeapotController : MonoBehaviour
     private float totalEmittedParticles = 0;
     public Slider teaProgress;
     [SerializeField] private int neededParticles;
+    [SerializeField] ParticleSystem teaSteamParticles;
 
     void Start()
     {
@@ -138,6 +139,7 @@ public class TeapotController : MonoBehaviour
 
         //update slider
         teaProgress.value = teaCounter;
+        teaSteamParticles.Play();
     }
 
     //ran when submit button is pressed. Verifies if amount of tea particles caught is greater than the needed to pass.
