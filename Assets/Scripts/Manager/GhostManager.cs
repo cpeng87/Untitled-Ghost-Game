@@ -4,6 +4,7 @@ using System.Collections.Generic;
 public class GhostManager : MonoBehaviour
 {
     public List<GameObject> ghosts;  //list of all ghosts
+    public Dictionary<Ghost, bool> completedGhostsDict = new Dictionary<Ghost, bool>();
     public Dictionary<string, GameObject> ghostNameToGameObjDict = new Dictionary<string, GameObject>();
     public Dictionary<string, Ghost> ghostNameToScriptableDict = new Dictionary<string, Ghost>();
     public Dictionary<string, int> ghostNameToStoryIndex = new Dictionary<string, int>();
@@ -22,6 +23,7 @@ public class GhostManager : MonoBehaviour
             ghostNameToScriptableDict.Add(currGhost.ghostName, currGhost);
             ghostNameToGameObjDict.Add(currGhost.ghostName, ghost);
             ghostNameToStoryIndex.Add(currGhost.ghostName, 1);
+            completedGhostsDict.Add(currGhost, false);
             foreach (Recipe recipe in currGhost.recipesOrdered)
             {
                 if (recipeToGhostsDict.ContainsKey(recipe))
@@ -72,15 +74,51 @@ public class GhostManager : MonoBehaviour
                 if (ghost.numStory == ghostNameToStoryIndex[name])
                 {
                     Debug.Log("Reached end of dialogue, will not increment");
+                    Debug.Log("ONE GHOST COMPLETE");
+                    completedGhostsDict[ghost] = true;
+                    if (ghost.arc != Arc.None)
+                    {
+                        if (IsArcComplete())
+                        {
+                            // set reaper to next spawn
+                            GhostSpawningManager.Instance.SetIsReaperSpawn(true);
+                        }
+                    }
                 }
                 else
                 {
                     Debug.Log("incrementing story index");
                     ghostNameToStoryIndex[name] = ghostNameToStoryIndex[name] + 1;
+                    // if (ghostNameToStoryIndex[name] == ghost.numStory)
+                    // {
+                    //     completedGhostsDict[ghost] = true;
+                    //     if (ghost.arc != Arc.None)
+                    //     {
+                    //         if (IsArcComplete())
+                    //         {
+                    //             // set reaper to next spawn
+                    //             GhostSpawningManager.Instance.SetIsReaperSpawn(true);
+                    //         }
+                    //     }
+                    // }
                 }
             return;
         }
         Debug.Log("Ghost with name: " + name + " does not exist in the dictionary.");
+    }
+
+    public bool IsArcComplete()
+    {
+        Arc currArc = GameManager.Instance.arc;
+
+        foreach (var (ghost, isComplete) in completedGhostsDict)
+        {
+            if (ghost.arc == currArc && isComplete == false)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     public int GetStoryIndex(string name)
@@ -192,6 +230,15 @@ public class GhostManager : MonoBehaviour
             }
         }
         return -1;
+    }
+
+    public bool IsComplete(Ghost ghost)
+    {
+        if (completedGhostsDict.ContainsKey(ghost))
+        {
+            return (completedGhostsDict[ghost]);
+        }
+        return false;
     }
 
 }

@@ -14,9 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ghostName: Scholar Ghost
   dialogue: {fileID: 4900000, guid: a4e07d8349958d945ae8b8ba5474da00, type: 3}
-  success: []
-  failure: []
-  order: []
   numStory: 0
   recipesOrdered:
   - {fileID: 11400000, guid: baee20edc5d1a534bbe65a31bea14d1b, type: 2}
+  arc: 4

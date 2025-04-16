@@ -14,9 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ghostName: Ghostwriter Ghost
   dialogue: {fileID: -8253061345870894857, guid: d01a9b522b0ecf248ac4a2c29f19f7e5, type: 3}
-  success: []
-  failure: []
-  order: []
   numStory: 7
   recipesOrdered:
   - {fileID: 11400000, guid: 605f77bbb025a2a41820b9917c4d8643, type: 2}
+  arc: 3

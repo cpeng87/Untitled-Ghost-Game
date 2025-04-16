@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public enum State
 {
     Main,
-    Dialogue
+    Dialogue,
+    Recipe
 }
 
 //manages state of game
@@ -24,6 +25,7 @@ public class GameManager : MonoBehaviour
     public List<Recipe> recipes = new List<Recipe>();
     public State state;
     public int maxGhosts;
+    public Arc arc;
 
     public bool parsedDialogue = false;
 
@@ -44,9 +46,22 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         state = State.Main;
+        arc = Arc.Beginning;
         orderManager = GetComponent<OrderManager>();
         ghostManager = GetComponent<GhostManager>();
         ghostManager.Setup();
+    }
+
+    public void AddUnlockedRecipe(Recipe recipe)
+    {
+        if (unlockedRecipes.Contains(recipe))
+        {
+            Debug.Log("Already have that recipe");
+        }
+        else
+        {
+            unlockedRecipes.Add(recipe);
+        }
     }
 
     public void SwitchToMinigame(string minigameName)
@@ -107,5 +122,15 @@ public class GameManager : MonoBehaviour
     public int GetSatisfactionLevel()
     {
         return satisfactionLevel;
+    }
+
+    public void UpdateArc()
+    {
+        arc = (Arc) ((int) arc + 1);
+
+        if (arc == Arc.None)
+        {
+            //play ending scene you beat the game!!
+        }
     }
 }

@@ -36,7 +36,7 @@ public class GhostObj : Clickable
         }
     
         SetOrderNotification(false);
-        hasTakenOrder = GameManager.Instance.orderManager.TakeOrder(scriptable.ghostName, scriptable.order, scriptable.recipesOrdered, seatNum);
+        hasTakenOrder = GameManager.Instance.orderManager.TakeOrder(scriptable.ghostName, scriptable.recipesOrdered, seatNum);
     }
 
     public void SetSeatNum(int newSeatNum)

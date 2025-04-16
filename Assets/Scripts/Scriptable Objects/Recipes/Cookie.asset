@@ -17,3 +17,4 @@ MonoBehaviour:
   buyPrice: 0
   minigame: Cookie
   isBought: 0
+  unlockArc: 3

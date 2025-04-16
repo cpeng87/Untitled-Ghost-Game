@@ -16,4 +16,5 @@ MonoBehaviour:
   sellPrice: 12
   buyPrice: 0
   minigame: Emily_Tea
-  isBought: 0
+  unlockArc: 4
+  foodImage: {fileID: 0}
