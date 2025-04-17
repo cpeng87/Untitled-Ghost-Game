@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 047e48fa05ad86942909fc0ef3ff09f0, type: 3}
-  m_Name: Doctor Ghost
+  m_Name: Karen Ghost
   m_EditorClassIdentifier: 
-  ghostName: Doctor Ghost
-  dialogue: {fileID: -8253061345870894857, guid: 868e5a239e6ec234c85e89e0d6c2974b, type: 3}
+  ghostName: Karen Ghost
+  dialogue: {fileID: -8253061345870894857, guid: c21240865ff231f4294053989ac41931, type: 3}
   numStory: 4
   recipesOrdered:
-  - {fileID: 11400000, guid: 105e795d82953114f959071cd672cfeb, type: 2}
-  arc: 3
+  - {fileID: 11400000, guid: 2c8944e5acd276242a1dacb709fa93d3, type: 2}
+  arc: 4

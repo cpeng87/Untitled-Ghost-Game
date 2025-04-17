@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 047e48fa05ad86942909fc0ef3ff09f0, type: 3}
-  m_Name: Doctor Ghost
+  m_Name: Architecture Ghost
   m_EditorClassIdentifier: 
-  ghostName: Doctor Ghost
-  dialogue: {fileID: -8253061345870894857, guid: 868e5a239e6ec234c85e89e0d6c2974b, type: 3}
-  numStory: 4
+  ghostName: Architecture Ghost
+  dialogue: {fileID: -8253061345870894857, guid: 96bcae69313bcfc4ea3b25bdaa6b296d, type: 3}
+  numStory: 5
   recipesOrdered:
-  - {fileID: 11400000, guid: 105e795d82953114f959071cd672cfeb, type: 2}
-  arc: 3
+  - {fileID: 11400000, guid: 605f77bbb025a2a41820b9917c4d8643, type: 2}
+  arc: 1

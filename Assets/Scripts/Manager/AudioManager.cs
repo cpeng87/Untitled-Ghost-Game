@@ -33,10 +33,24 @@ public class AudioManager : MonoBehaviour
         //Random Song for now
         // RandomSong();
         //change to play arc's song
-        musicSource.Stop();
-        musicSource.clip = music[currIndex].clip;
-        musicSource.Play();
-        OnSongChanged?.Invoke(music[currIndex].name);
+        if (GameManager.Instance == null)
+        {
+            musicSource.Stop();
+            musicSource.clip = music[currIndex].clip;
+            musicSource.Play();
+        }
+        else
+        {
+            int arcIndex = (int) GameManager.Instance.arc - 1;
+            if (arcIndex < 0)
+            {
+                arcIndex = 0;
+            }
+            musicSource.Stop();
+            musicSource.clip = music[arcIndex].clip;
+            musicSource.Play();
+            OnSongChanged?.Invoke(music[arcIndex].name);
+        }
     }
     
     /// <summary>
