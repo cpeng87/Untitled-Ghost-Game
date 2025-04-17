@@ -15,6 +15,6 @@ MonoBehaviour:
   recipeName: Tea
   sellPrice: 12
   buyPrice: 0
-  minigame: Emily_Tea
+  minigame: Tea
   unlockArc: 4
   foodImage: {fileID: 0}

@@ -126,7 +126,7 @@ public class TeapotController : MonoBehaviour
     // tilts the teapot based on the mouse's y movement. Limited by max tilt angle.
     private void HandleTilting()
     {
-        float mouseDeltaX = Input.GetAxis("Mouse Y") * -1; // Flip the direction
+        float mouseDeltaX = Input.GetAxis("Mouse Y"); // Flip the direction
         tiltAngle += mouseDeltaX * tiltSensitivity;
         tiltAngle = Mathf.Clamp(tiltAngle, -maxTiltAngle, maxTiltAngle);
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, tiltAngle);
