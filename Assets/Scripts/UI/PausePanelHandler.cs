@@ -9,6 +9,7 @@ public class PausePanelHandler : MonoBehaviour
     {
         pauseMenu.SetActive(true);
         //This layers a pause to prevent weird Timescale stuff when showing tutorial hints
+
         PauseManager.AddPause(this.gameObject);
         PauseManager.SetPauseState(true);
     }
@@ -26,6 +27,9 @@ public class PausePanelHandler : MonoBehaviour
 
     public void ExitToTitle()
     {
+        GameManager.Instance = null;
+        PauseManager.RemovePause(this.gameObject);
+        PauseManager.SetPauseState(false);
         SceneManager.LoadScene("TitleScene");
     }
 }

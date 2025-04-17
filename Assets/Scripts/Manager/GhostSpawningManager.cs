@@ -44,6 +44,10 @@ public class GhostSpawningManager : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.Instance == null)
+        {
+            return;
+        }
         if (GameManager.Instance.state == State.Main)
         {
             ghostSpawnTimer += Time.deltaTime;

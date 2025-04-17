@@ -12,6 +12,7 @@ public class AudioManager : MonoBehaviour
     private Dictionary<string, AudioClip> musicDict;
     private Dictionary<string, AudioClip> soundDict;
     private string currentSong;
+    private int currIndex = 0;
     
     [SerializeField] private AudioSource musicSource;
     [SerializeField] private AudioSource soundSource; //We may want to pool audio sources or switch to a different method
@@ -30,7 +31,12 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         //Random Song for now
-        RandomSong();
+        // RandomSong();
+        //change to play arc's song
+        musicSource.Stop();
+        musicSource.clip = music[currIndex].clip;
+        musicSource.Play();
+        OnSongChanged?.Invoke(music[currIndex].name);
     }
     
     /// <summary>
@@ -59,11 +65,36 @@ public class AudioManager : MonoBehaviour
         int index = Random.Range(0, music.Length);
         while (music[index].name == currentSong) index = Random.Range(0, music.Length);
         currentSong = music[index].name;
+        currIndex = index;
         musicSource.Stop();
         musicSource.clip = music[index].clip;
         musicSource.Play();
         //OnSongChanged?.Invoke(CurrentSong);
         OnSongChanged?.Invoke(music[index].name);
+    }
+
+    public void NextSong()
+    {
+        //pays the next song on the list
+        currIndex = (currIndex + 1) % music.Length;
+        Debug.Log("Music Index: " + currIndex);
+        currentSong = music[currIndex].name;
+        musicSource.Stop();
+        musicSource.clip = music[currIndex].clip;
+        musicSource.Play();
+        OnSongChanged?.Invoke(music[currIndex].name);
+    }
+    public void NextSong(int index)
+    {
+        if (index < music.Length)
+        {
+            currIndex = index;
+            currentSong = music[currIndex].name;
+            musicSource.Stop();
+            musicSource.clip = music[currIndex].clip;
+            musicSource.Play();
+            OnSongChanged?.Invoke(music[currIndex].name);
+        }
     }
     
     /// <summary>

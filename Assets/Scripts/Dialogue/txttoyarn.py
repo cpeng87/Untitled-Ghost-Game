@@ -54,7 +54,8 @@ def parse_dialogue(file_path):
 
 # Example usage
 input_file = "Reaper.txt"
-output_file = input_file.rsplit('.',1)[0] + "Ghost.yarn"
+output_file = input_file.rsplit('.',1)[0]
+# output_file = input_file.rsplit('.',1)[0] + "Ghost.yarn"
 
 # Parse the dialogue and write to output file
 parsed_output = parse_dialogue(input_file)

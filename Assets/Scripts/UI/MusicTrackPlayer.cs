@@ -14,6 +14,7 @@ public class MusicTrackPlayer : MonoBehaviour
         {
             Debug.LogError($"{name} is missing references to UI elements");
         }
+        ArcEvent.OnArcChanged += ChangeArcMusic;
     }
     private void OnEnable()
     {
@@ -36,6 +37,17 @@ public class MusicTrackPlayer : MonoBehaviour
 
     public void ChangeSong()
     {
-        AudioManager.Instance.RandomSong();
+        // AudioManager.Instance.RandomSong();
+        AudioManager.Instance.NextSong();
+    }
+
+    public void ChangeSong(int index)
+    {
+        AudioManager.Instance.NextSong(index);
+    }
+    private void ChangeArcMusic()
+    {
+        // subtract 1 for the the beginning arc
+        ChangeSong((int) GameManager.Instance.arc - 1);
     }
 }

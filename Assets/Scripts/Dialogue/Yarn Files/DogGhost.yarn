@@ -1,0 +1,34 @@
+﻿title: DogOrder
+tags:
+position: -54,-23
+---
+Dog Ghost: Woof woof! Wo woof?
+<<setCam "Main Camera">>
+===
+
+title: DogSuccess
+tags:
+position: -173,132
+---
+Ghostwriter Ghost: <wiggle>Woof woof! WOOF!</wiggle>
+<<reset>>
+<<startStory DogStory>>
+===
+
+title: DogFailure
+tags:
+position: -112,-180
+---
+Dog Ghost: Woof...<shaky>grr...</shaky>
+<<reset>>
+<<setCam "Main Camera">>
+===
+
+title: DogStory1
+tags:
+position: 169,38
+---
+Dog Ghost: Woof woof woof! woof! wo-woof!! <wiggle>Woof woof!</wiggle>
+<<reset>>
+<<setCam "Main Camera">>
+===

@@ -83,7 +83,7 @@ namespace Manager.RecipeShop
                     continue;
                 }
                 //Instantiate recipe UI and populate data in recipe prefab
-                if (recipe.unlockArc == GameManager.Instance.arc)
+                if ((int) recipe.unlockArc <= (int) GameManager.Instance.arc)
                 {
                     GameObject recipeGameObject = Instantiate(recipePrefab, recipesContainer.transform);
                     currRecipeCards.Add(recipeGameObject);
