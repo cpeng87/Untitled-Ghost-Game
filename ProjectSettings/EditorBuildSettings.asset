@@ -65,5 +65,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Anisa/Tea.unity
     guid: a220bcd5170f84b5db5c3573d57fb7ec
+  - enabled: 1
+    path: Assets/Scenes/Hannah Rajan/Boba.unity
+    guid: def3b22991feb42ea995639d95d1d981
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

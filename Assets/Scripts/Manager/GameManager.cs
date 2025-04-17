@@ -133,6 +133,22 @@ public class GameManager : MonoBehaviour
             StartCoroutine(LoadEndScene());
             return;
         }
+
+        // TODO: Update the Tree Petal VFX based on the current arc
+        switch (arc)
+        {
+            case Arc.Passion:
+                // Set the VFX
+                break;
+            case Arc.Connection:
+                // Set the VFX 
+                break;
+            case Arc.Legacy:
+                // Set the VFX
+                break;
+            default:
+                break;
+        }
         ArcEvent.TriggerArcChanged();
     }
 
