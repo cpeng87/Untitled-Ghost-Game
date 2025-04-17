@@ -15,6 +15,7 @@ MonoBehaviour:
   recipeName: Muffin
   sellPrice: 15
   buyPrice: 30
-  minigame: 
+  minigame: MuffinMinigame
   unlockArc: 3
   foodImage: {fileID: 21300000, guid: c54c45e84d4e6274da5eadb37fb75481, type: 3}
+

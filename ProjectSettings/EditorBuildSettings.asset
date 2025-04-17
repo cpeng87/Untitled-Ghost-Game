@@ -68,5 +68,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hannah Rajan/Boba.unity
     guid: def3b22991feb42ea995639d95d1d981
+  - enabled: 1
+    path: Assets/Scenes/Anisa/MuffinMinigame.unity
+    guid: 38f9ba16f6c994a128fed918e81dfcd9
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
