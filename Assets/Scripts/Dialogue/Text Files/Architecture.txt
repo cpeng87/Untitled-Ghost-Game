@@ -1,0 +1,68 @@
+[Order]
+Somewhere between eight and twenty-six feet tall… oh, mine apologies. Erm… might I have [Item] with a side of columnfee… coffee… yeah.
+[End]
+
+[Success]
+Aaah… that was truly satisfying. Good body… good structure. I daresay even the great Socrates couldn’t question this conclusion!
+[End]
+
+[Failure]
+Of all things that art built and constructed upon the earth… nothing is made that is worse than this… or some such.
+[End]
+
+[Story]
+Greetings, I am curious. Hast thou ever truly… truly loved something of thine?Sort of how one might love… thy own child?
+I hath.
+Hast thou ever laid eyes upon a building built in the Greek or Roman style? The temple in Athens, for example?
+The columns… the ionic columns employed for those sorts of building art of my own design.
+They art a thing of beauty, no? All between eight and twenty-six feet tall traditionally.
+Every column that is modeled after those columns wouldn’t exist if not for me… but it matters not.
+Thou hast never heard of me, the records hath shunned me… I… I believe I ought to return back to my columns now.
+[End]
+
+[Story]
+G-good morrow, canst thou help me understand something?
+How can it be that mine passion beareth no fruit, no matter what love I pour upon it? 
+Mine columns wert, no, ART everything to me. Cannot anyone understand that?
+Is the world blind to mine efforts? 
+The very castles from which thine rulers reign art built in MINE OWN style and yet it is shunned in favor of some… pedestrian affair?
+…Ah, my apologies. I ought not burden thee with mine own insufficiencies, I am told that a profession has spawned from such actions today…
+My columns… I must return to my columns.
+[End]
+
+[Story]
+Day’s greetings, spirit. Might I ask thee a question?
+Thou art always working, it seems. Dost thou, perhaps, share a passion like mine own? For making… for creation?
+But I must ask, what is there to be so fond of in the realm of coffee and tea?
+Thy art is intended to be consumed, no? So thy art wilt never withstand the torrent of time, no?
+Thou wilt place thine heart… thine very soul into this…knowing it will avail thee nothing? Tis’ madness… the very idea…
+It… isn’t about the product? Speak plainly, if you would.
+How canst thou pour so much dedication into something, when what is made matters not?
+About something else, thou sayeth? What… What could possibly exist that would warrant such effort? I must dwell upon this further.
+[End]
+
+[Story] 
+Good morrow, noble spirit. 
+Aye… I have returned. I… hast pondered upon thine… strange method of thought, and I believe I understand it now.
+Prithee, correct me if I stray, but mayhaps thine passion is one of results within people?
+Thine physical craft may disappear into the bodies of ghosts, yet it builds itself into the mortar of their hearts and minds… forever intertwined with their souls. Is that why thou hast toiled so?”
+…I see. Thou hast no grand design?
+‘Tis solely the love of the craft that drives you so?
+Yet, the effect that thine works hath upon the spirits that dwell in this cafe cannot be understated.
+Thou denieth thine passion, yet it is clear that thou hold thine profession close to thine heart. Harken unto my words, dearest Cafe Ghost, for now I shall provide unto thee a ponderance of mine own.
+For what, pray tell, dost thou toil?
+Dost thou toil for the sake of the other ghosts, or dost thou satisfy thy own craving with thine craft? I know not.
+I will return anon, ponder as thou wilt.
+[End]
+
+[Story]
+Good morrow, cafe ghost.
+Hast thou pondered upon the query I presented to thee?
+Ah, thou hast answered well, thine mind hath produced a strong foundation from which to build… a glorious foundation ripe to be developed by columns built upon it, especially ones of the ionic school of archi- oh, tarry me not, I merely jest.
+Speaking plainly, I believe my time here shalt come to an end shortly.
+I… believe that my post-life hath been indelibly altered by thee, and I have been commissioned by that peculiar monocle-wearing ghost to oversee a ‘bloody beautiful construction project’.
+A rather odd way of speaking, he doth possess.
+As for thee, just as the great Odysseus wandered for ten years, thou wilt no doubt do the same.
+What is undeniable, no matter how many moons pass, is that passion shalt find thee, and rest within thine heart.
+Farewell, noble ghost.
+[End]

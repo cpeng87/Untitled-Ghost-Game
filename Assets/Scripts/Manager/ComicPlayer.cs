@@ -17,6 +17,7 @@ public class ComicPlayer : MonoBehaviour
     private int index = 0;
     [SerializeField] private float typewriterSpeed;
     [SerializeField] private float fadeTime = 0.4f;
+    [SerializeField] private string nextScene;
 
     private void Start()
     {
@@ -101,7 +102,7 @@ public class ComicPlayer : MonoBehaviour
 
     private IEnumerator CompleteComic()
     {
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("MainStorefront");
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(nextScene);
         while (!asyncLoad.isDone)
         {
             yield return null;

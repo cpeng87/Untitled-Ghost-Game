@@ -1,0 +1,95 @@
+title: WizardOrder
+tags:
+position: -54,-23
+---
+Wizard Ghost: My, the {GetOrder()} has been stated in the tomes to... increase one's <italic>magical prowess and mana retention...</italic> <wiggle>yes, yes,</wiggle> I will take one.
+<<reset>>
+<<setCam "Main Camera">>
+===
+
+title: WizardSuccess
+tags:
+position: -173,132
+---
+Wizard Ghost: Ah, I can feel my magical powers <shaky>surging...</shaky> I will be sure to recommend this location to the others...
+<<reset>>
+<<startStory WizardStory>>
+===
+
+title: WizardFailure
+tags:
+position: -112,-180
+---
+Wizard Ghost: It seems as though the ancients were mistaken. I certainly felt my magic flicker for a moment. Hmm... I must record this so that no others go through this sorrow as well.
+<<setCam "Main Camera">>
+===
+
+title: WizardStory1
+tags:
+position: 169,38
+---
+Wizard Ghost: Ah, let me introduce myself. I am one of the ancient wizards of the lands, known as <wiggle><bold>Xetharion Xenon Xylarthos</bold></wiggle>, <wiggle><bold>Seer of the Astral Plane</bold></wiggle> and <wiggle><bold>Sage of the Enchanted Woods</bold></wiggle>.
+<<reset>>
+Wizard Ghost: I have devoted myself to the study of <italic>magic.</italic>
+<<reset>>
+Wizard Ghost: <wiggle>Yes...</wiggle> The world holds many great powers, and I was born with the exceptional ability to harness their forces and strengths...
+<<reset>>
+<<setCam "Main Camera">>
+===
+
+title: WizardStory2
+tags:
+position: 169,38
+---
+Wizard Ghost: Ah, you wish to know about my studies with magic?
+Wizard Ghost: Magic is in the world all around us, yet, many of us are more attuned to it than others. Being one of the <italic>chosen</italic>, I have devoted my life to these duties... <wiggle>yes, duties...</wiggle> to protect the world from the malevolent beings that plague the spirit realm.
+<<reset>>
+Wizard Ghost: How do we do this? <italic>Quartz, purified holy water...</italic> and of course a <italic>salt magic circle</italic> should seal the area for many years to come...
+<<reset>>
+<<setCam "Main Camera">>
+===
+
+title: WizardStory3
+tags:
+position: 169,38
+---
+Wizard Ghost: Have I ever cast a spell?
+Wizard Ghost: Ah, the public misunderstands the use of magic...
+Wizard Ghost: One must not rely on the arcane so easily, yes. As a wizard of the <wiggle><bold>Sect of the Enchanted Woods</bold></wiggle>, I swore on my life that I would use my powers to <italic>protect</italic> others from learning of the arcane world.
+<<reset>>
+Wizard Ghost: So, of course I have... <wiggle>yes, yes.</wiggle> But the public? They shall <shaky>NEVER.</shaky>
+<<reset>>
+Wizard Ghost: You see, my brethren and I have also sworn to never allow anyone into the world of magic... it is quite... <italic>dangerous</italic> and can only be handled by the greatest of wizards...
+<<reset>>
+<<setCam "Main Camera">>
+===
+
+title: WizardStory4
+tags:
+position: 169,38
+---
+Wizard Ghost: Other wizards?
+Wizard Ghost: <wiggle>Yes, yes...</wiggle> we form discreet societies where we discuss <italic>sensitive arcane matters</italic>...
+<<reset>>
+Wizard Ghost: We gather at the guild hall, hidden from the prying eyes of the populace, and begin our weekly congregation...
+Wizard Ghost: Tea, of course, is the best beverage to enhance one's mana, so indubitably a kettle of the <italic>finest</italic> quality is present at every meeting...
+<<reset>>
+Wizard Ghost: To learn more about the arcane world around us, we exchange tomes and other magical novels and forage for magic-imbued items such as <italic>sprightly mushrooms</italic> and <italic>shimmery rocks</italic> and <italic>ornate crystals...</italic> <wiggle>mmm yes...</wiggle>
+<<reset>>
+Wizard Ghost: It is one of the greatest joys of my life...
+<<setCam "Main Camera">>
+===
+
+title: WizardStory5
+tags:
+position: 169,38
+---
+Wizard Ghost: Many do not believe in my magic and have ridiculed me for my behaviors, condemning my wizardly existence by saying it was all fake...
+Wizard Ghost: You know,  sometimes I begin to doubt it too... After all, when one lacks proof, their faith... wavers...
+Wizard Ghost: Ah, but I myself have <italic>proof</italic> of course, yes...
+<<reset>>
+Wizard Ghost: But I simply cannot reveal my powers to the public...
+Wizard Ghost: I must continue onward, <italic>protecting the world from the shadows...</italic> as to not forsake my people and myself...
+<<reset>>
+<<setCam "Main Camera">>
+===

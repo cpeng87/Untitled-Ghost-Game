@@ -29,4 +29,9 @@ public class SubmitPancakes : MonoBehaviour
         //do something to fail
         failed = true;
     }
+
+    public void GiveUpMinigame()
+    {
+        GameManager.Instance.CompleteMinigame(false);
+    }
 }

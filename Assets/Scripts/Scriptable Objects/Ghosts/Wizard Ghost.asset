@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Wizard Ghost
   m_EditorClassIdentifier: 
   ghostName: Wizard Ghost
-  dialogue: {fileID: -8253061345870894857, guid: e51b38bca64545843a25a7718ed1cde1, type: 3}
-  numStory: 0
+  dialogue: {fileID: -8253061345870894857, guid: c346a18ee58e37d4da90c61a15b7021d, type: 3}
+  numStory: 5
   recipesOrdered:
-  - {fileID: 11400000, guid: ea3987c484745a2438022c3ec953ace6, type: 2}
+  - {fileID: 11400000, guid: 605f77bbb025a2a41820b9917c4d8643, type: 2}
   arc: 4

@@ -84,6 +84,18 @@ public class AudioManager : MonoBehaviour
         musicSource.Play();
         OnSongChanged?.Invoke(music[currIndex].name);
     }
+    public void NextSong(int index)
+    {
+        if (index < music.Length)
+        {
+            currIndex = index;
+            currentSong = music[currIndex].name;
+            musicSource.Stop();
+            musicSource.clip = music[currIndex].clip;
+            musicSource.Play();
+            OnSongChanged?.Invoke(music[currIndex].name);
+        }
+    }
     
     /// <summary>
     /// Play a sound effect. Chen: This jit ain't tested at all lmao

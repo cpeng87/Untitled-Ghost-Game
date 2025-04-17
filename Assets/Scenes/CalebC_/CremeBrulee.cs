@@ -7,13 +7,13 @@ public class CremeBrulee : MonoBehaviour
     public Slider progressSlider;
     public RingScript ringScript;
 
-    public void Update()
-    {
-        if(progressSlider.value >= 85)
-        {
-            GameSuccess();
-        }
-    }
+    // public void Update()
+    // {
+    //     if(progressSlider.value >= 85)
+    //     {
+    //         GameSuccess();
+    //     }
+    // }
 
     public void IncreaseSlider(float value)
     {
@@ -21,11 +21,27 @@ public class CremeBrulee : MonoBehaviour
     }
 
     
-    private void GameSuccess()
+    // private void GameSuccess()
+    // {
+    //     Debug.Log("You Win!");
+    //     //GameManager.Instance.CompleteMinigame(true);
+    // }
+
+    public void CheckResults()
     {
-        Debug.Log("You Win!");
-        //GameManager.Instance.CompleteMinigame(true);
+        bool result = progressSlider.value >= 85;
+        if(result)
+        {
+            Debug.Log("success");
+        }
+        else
+        {
+            Debug.Log("fail");
+        }
+        GameManager.Instance.CompleteMinigame(result);
     }
+
+    
 
 
 }

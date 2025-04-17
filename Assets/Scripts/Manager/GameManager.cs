@@ -130,7 +130,20 @@ public class GameManager : MonoBehaviour
 
         if (arc == Arc.None)
         {
-            //play ending scene you beat the game!!
+            StartCoroutine(LoadEndScene());
+            return;
+        }
+        ArcEvent.TriggerArcChanged();
+    }
+
+
+    private IEnumerator LoadEndScene()
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("End Scene");
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
         }
     }
+
 }
