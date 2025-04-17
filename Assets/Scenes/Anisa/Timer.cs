@@ -25,6 +25,11 @@ public class Timer : MonoBehaviour
             UpdateTimerText(timeRemaining);
             Debug.Log("Time left: " + timeRemaining);
         }
+        if (timeRemaining <= 0)
+        {
+            isRunning = false;
+            GameManager.Instance.CompleteMinigame(false);
+        }
         
     }
 
