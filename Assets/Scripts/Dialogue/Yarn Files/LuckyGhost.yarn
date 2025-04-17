@@ -1,0 +1,70 @@
+title: LuckyOrder
+tags:
+position: -54,-23
+---
+Lucky Ghost: H-hi... C-Could I get a {GetOrder()}? Oh... I-I don't think I have enough- Oh! A coin!
+<<setCam "Main Camera">>
+===
+
+title: LuckySuccess
+tags:
+position: -173,132
+---
+Lucky Ghost: O-oh, thank you!
+<<startStory LuckyStory>>
+===
+
+title: LuckyFailure
+tags:
+position: -112,-180
+---
+Lucky Ghost: W-what is this? I-I've never seen anything like this before...
+<<setCam "Main Camera">>
+===
+
+title: LuckyStory1
+tags:
+position: 169,38
+---
+Lucky Ghost: O-Oh hello... Everyone calls me Lucky Ghost... but I'm not sure where that comes from...
+Lucky Ghost: I mean... I've gotten free coffee from  a lot of ghosts... since they happened to have an extra...
+Lucky Ghost: And although some restaurants forget my order... they always give me a free item or pay for my meal...
+Lucky Ghost: And teachers never called on me in class when they were randomly selecting students...
+Lucky Ghost: B-but I've never won the lottery or anything...
+<<setCam "Main Camera">>
+===
+
+title: LuckyStory2
+tags:
+position: 169,38
+---
+Lucky Ghost: O-oh... my luck...?
+Lucky Ghost: I-I do appreciate the free stuff... but since it's random... I guess I'm not particularly proud of it...
+Lucky Ghost: P-people keep saying I just got lucky in life... b-but I tried so hard...!!
+Lucky Ghost: But t-they just brush me off and say it's all because I'm just lucky...
+<<setCam "Main Camera">>
+===
+
+title: LuckyStory3
+tags:
+position: 169,38
+---
+Lucky Ghost: H-hey do you want a free coffee... oh right... you run a cafe...I-I was so excited too...
+Lucky Ghost: O-oh, d-did I just come here for that...? Well, I-I just wanted to chat...
+Lucky Ghost: Some of the other ghosts were saying that I should have been g-grateful to be so lucky... but I-I still had problems and everything else...
+Lucky Ghost: Like do they think I can write an essay with pure luck...?
+Lucky Ghost: Or I-I don't know... make close friends...? 
+Lucky Ghost: And... be happy just because I'm lucky...?
+<<setCam "Main Camera">>
+===
+
+title: LuckyStory4
+tags:
+position: 169,38
+---
+Lucky Ghost: Hello again!
+Lucky Ghost: I-I guess I just wanted to say... it's just really nice to have someone listen... instead of invalidating all my problems...
+Lucky Ghost: My luck may have its ups and downs, but I do think finding this cafe was lucky...!
+Lucky Ghost: Thank you for everything...!
+<<setCam "Main Camera">>
+===

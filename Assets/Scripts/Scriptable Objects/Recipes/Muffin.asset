@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c743a236a76f204a87dae151ef1c653, type: 3}
-  m_Name: Coffee
+  m_Name: Muffin
   m_EditorClassIdentifier: 
-  recipeName: Coffee
-  sellPrice: 20
-  buyPrice: 28
+  recipeName: Muffin
+  sellPrice: 15
+  buyPrice: 30
   minigame: 
-  unlockArc: 2
-  foodImage: {fileID: 0}
+  unlockArc: 3
+  foodImage: {fileID: 21300000, guid: c54c45e84d4e6274da5eadb37fb75481, type: 3}
