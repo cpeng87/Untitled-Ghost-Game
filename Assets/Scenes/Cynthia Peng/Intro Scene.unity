@@ -189,6 +189,7 @@ MonoBehaviour:
     panelImage: {fileID: 0}
   typewriterSpeed: 0.01
   fadeTime: 0.4
+  nextScene: MainStorefront
 --- !u!1 &104397688
 GameObject:
   m_ObjectHideFlags: 0

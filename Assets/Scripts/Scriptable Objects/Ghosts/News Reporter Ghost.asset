@@ -16,5 +16,5 @@ MonoBehaviour:
   dialogue: {fileID: -8253061345870894857, guid: 66b547016d9bae34dac8a8f6de3b1009, type: 3}
   numStory: 5
   recipesOrdered:
-  - {fileID: 11400000, guid: 572f15a56812c1d429c91069f69fe7dc, type: 2}
+  - {fileID: 11400000, guid: ea3987c484745a2438022c3ec953ace6, type: 2}
   arc: 3
