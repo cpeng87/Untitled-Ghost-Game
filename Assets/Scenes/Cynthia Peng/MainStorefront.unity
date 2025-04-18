@@ -6339,7 +6339,7 @@ PrefabInstance:
     - target: {fileID: -6080291340529099320, guid: 2c4ce463e80169946bbf3ee04ce18f83, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 5000d4d6f05df9749bb0499238b3a4b2, type: 2}
+      objectReference: {fileID: 2100000, guid: 249ceab2c40da4c4f8bf0f9587977263, type: 2}
     - target: {fileID: 919132149155446097, guid: 2c4ce463e80169946bbf3ee04ce18f83, type: 3}
       propertyPath: m_Name
       value: standing menu
@@ -6347,7 +6347,7 @@ PrefabInstance:
     - target: {fileID: 6189763093166633170, guid: 2c4ce463e80169946bbf3ee04ce18f83, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 5000d4d6f05df9749bb0499238b3a4b2, type: 2}
+      objectReference: {fileID: 2100000, guid: 249ceab2c40da4c4f8bf0f9587977263, type: 2}
     - target: {fileID: 8053751242254320760, guid: 2c4ce463e80169946bbf3ee04ce18f83, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 

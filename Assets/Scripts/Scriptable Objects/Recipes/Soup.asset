@@ -16,5 +16,5 @@ MonoBehaviour:
   sellPrice: 28
   buyPrice: 34
   minigame: Soup
-  unlockArc: 4
+  unlockArc: 2
   foodImage: {fileID: 0}

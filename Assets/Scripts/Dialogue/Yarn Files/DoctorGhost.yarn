@@ -1,0 +1,79 @@
+title: DoctorOrder
+tags:
+position: -54,-23
+---
+Doctor Ghost: I'm feeling like having an {GetOrder()} right now, think you can make me one real quick?
+<<setCam "Main Camera">>
+===
+
+title: DoctorSuccess
+tags:
+position: -173,132
+---
+Doctor Ghost: <wiggle>Ah~</wiggle> The drinks here really hit the spot. I should prescribe them to my patients next time~
+<<reset>>
+<<startStory DoctorStory>>
+===
+
+title: DoctorFailure
+tags:
+position: -112,-180
+---
+Doctor Ghost: Urp... I... think I need some medication for this... Sorry...
+<<setCam "Main Camera">>
+===
+
+title: DoctorStory1
+tags:
+position: 169,38
+---
+Doctor Ghost: You know, this small little shop really reminds me of the coffee shop near the medical school I attended.
+Doctor Ghost: The barista there always had a huge smile on her face as she gave everyone their orders. She messes up a few times, but she always tries her best.
+Doctor Ghost: Keep it up, I'm sure it will all pay off one day.
+<<setCam "Main Camera">>
+===
+
+title: DoctorStory2
+tags:
+position: 169,38
+---
+Doctor Ghost: You know, it always amazes me how much someone's life can change through someone else's actions.
+Doctor Ghost: As a doctor, I've treated so many patients. Some of them were old, barely hanging on to life but still fighting to stay with their loved ones as long as possible.
+Doctor Ghost: Others were young, hurt by things out of their control. People of all ages and backgrounds all come to the hospital for the same purpose, for another chance at life.
+Doctor Ghost: Whenever I see their smile or the smile of their loved ones, I realize how much I changed their lives.
+Doctor Ghost: When I was young, I never could have imagined what direction my life would go. But it was all thanks to a stranger that I became who I am today.
+Doctor Ghost: I hope I can find them one day so I can thank them.
+<<setCam "Main Camera">>
+===
+
+title: DoctorStory3
+tags:
+position: 169,38
+---
+Doctor Ghost: Hey... Have you seen... Never mind.
+Doctor Ghost: This shouldn't be something I should bother you with. If you wish to know, however, I'm looking for a certain soldier.
+Doctor Ghost: He was the stranger I mentioned last time. I heard from some other ghosts that he might have been seen here.
+Doctor Ghost: I... I have to find him.
+Doctor Ghost: He was the reason why I lived to be a doctor.
+Doctor Ghost: Why I... even got a chance live in the first place.
+Doctor Ghost: I had an illness when I was young. And because our village didn't have a doctor, I was certain I was going to die.
+Doctor Ghost: But when our village was attacked by some enemies, that soldier saved me
+Doctor Ghost: I didn't want his sacrifice to be in vain, so I pushed myself to live.
+Doctor Ghost: When relief came and the doctors there cured me, I dedicated myself to become a doctor as well.
+<<setCam "Main Camera">>
+===
+
+title: DoctorStory4
+tags:
+position: 169,38
+---
+Doctor Ghost: I finally found him! The Soldier!
+Doctor Ghost: I'm so glad I was able to find him, though it seemed like he had forgotten all about me.
+Doctor Ghost: I didn't recognize him at first, but the dog tag he had was the one the soldier who saved me had, so it must be them!
+Doctor Ghost: He tried to be humble when I thanked him for what he did, but there's no way I could just brush it off!
+Doctor Ghost: He was the one who motivated me to keep going! To live for others! If it weren't for him, I would have either died by those enemy soldiers or died from my illness.
+Doctor Ghost: I.. I think I'm ready to move on now that I was able to say my thanks.
+Doctor Ghost: I'm really glad that this place existed.
+Doctor Ghost: Thank you for the drinks. I'm sure that they helped change some people's lives for the better.
+<<setCam "Main Camera">>
+===
