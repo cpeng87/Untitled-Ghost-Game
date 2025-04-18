@@ -222,6 +222,10 @@ namespace Manager.RecipeShop
 
         private void HideRecipeShop()
         {
+            foreach (GameObject card in currRecipeCards)
+            {
+                Destroy(card);
+            }
             recipeShopUI.SetActive(false);
         
             //Show and hide relevant buttons
