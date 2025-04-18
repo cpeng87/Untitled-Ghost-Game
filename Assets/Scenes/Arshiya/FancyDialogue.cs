@@ -279,7 +279,7 @@ public class FancyDialogue : MonoBehaviour
     }
 
     private void Italic() {
-        Debug.Log("Itallic Ranges are" + italicRanges);
+        //Debug.Log("Itallic Ranges are" + italicRanges);
         for (int i = 0; i < textInfo.characterCount; i++) {
             TMP_CharacterInfo curChar = textInfo.characterInfo[i];
             if (!curChar.isVisible) {

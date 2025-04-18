@@ -147,6 +147,8 @@ public class TeapotController : MonoBehaviour
     public void CheckResults()
     {
         bool result = teaCounter >= neededParticles;
+        Debug.Log("Tea Counter: " + teaCounter);
+        Debug.Log("Needed Particles: " + neededParticles);
         if (result)
         {
             Debug.Log("success");
