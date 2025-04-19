@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/MainStorefront (outdated.unity
     guid: ad39f95941dbc9445993858466cdee80
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Joseph Seo/Storefront.unity
     guid: 6dffd41be8ad4ae479788283d3d629d7
   - enabled: 0

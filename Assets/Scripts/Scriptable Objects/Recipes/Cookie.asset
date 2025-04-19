@@ -16,5 +16,5 @@ MonoBehaviour:
   sellPrice: 12
   buyPrice: 0
   minigame: Cookie
-  unlockArc: 3
+  unlockArc: 4
   foodImage: {fileID: 0}
