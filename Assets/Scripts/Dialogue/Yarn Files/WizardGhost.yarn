@@ -10,7 +10,7 @@ title: WizardSuccess
 tags:
 position: -173,132
 ---
-Wizard Ghost: Ah, this is incredible! This {GetOrder()} has shown me its true power! I must thank you, dear mortal!
+Wizard Ghost: Ah, this is incredible! This has shown me its true power! I must thank you, dear mortal!
 <<startStory WizardStory>>
 ===
 
@@ -18,7 +18,7 @@ title: WizardFailure
 tags:
 position: -112,-180
 ---
-Wizard Ghost: Gah! This {GetOrder()} reeks of a curse! Are you trying to damper my powers, dear mortal?! You must be more careful with your tonics!
+Wizard Ghost: Gah! This reeks of a curse! Are you trying to damper my powers, dear mortal?! You must be more careful with your tonics!
 <<setCam "Main Camera">>
 ===
 
