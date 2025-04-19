@@ -16,6 +16,8 @@ public class SoupManager : MonoBehaviour
 
     [SerializeField] private TMP_Text timer;
 
+    private bool isComplete;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -30,13 +32,37 @@ public class SoupManager : MonoBehaviour
         timer.text = timer.text = "Time Remaining: " + Mathf.FloorToInt(timeLeft).ToString();
 
         SetProgress();
+        if (isComplete == false)
+        {
+            if (timeLeft <= 0) {
+                // Time.timeScale = 0f;
+                Debug.Log("you lost :(");
+                GameManager.Instance.CompleteMinigame(false);
+                isComplete = true;
+            } else if (progress >= 100) {
+                // Time.timeScale = 0f;
+                Debug.Log("you win :D");
+                GameManager.Instance.CompleteMinigame(true);
+                isComplete = true;
+            }
+        }
+    }
 
-        if (timeLeft <= 0) {
-            Time.timeScale = 0f;
-            Debug.Log("you lost :(");
-        } else if (progress >= 100) {
-            Time.timeScale = 0f;
+    public void CompleteSoup()
+    {
+        if (progress >= 100)
+        {
+            // Time.timeScale = 0f;
             Debug.Log("you win :D");
+            isComplete = true;
+            GameManager.Instance.CompleteMinigame(true);
+        }
+        else
+        {
+            // Time.timeScale = 0f;
+            Debug.Log("you lost :(");
+            isComplete = true;
+            GameManager.Instance.CompleteMinigame(false);
         }
     }
 
