@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 047e48fa05ad86942909fc0ef3ff09f0, type: 3}
+  m_Name: Soldier Ghost
+  m_EditorClassIdentifier: 
+  ghostName: Soldier Ghost
+  dialogue: {fileID: -8253061345870894857, guid: b8c06c6705d429542bd384beba6f3a75, type: 3}
+  numStory: 5
+  recipesOrdered:
+  - {fileID: 11400000, guid: 105e795d82953114f959071cd672cfeb, type: 2}
+  arc: 3

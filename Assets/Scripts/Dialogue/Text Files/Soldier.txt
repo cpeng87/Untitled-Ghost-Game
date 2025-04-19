@@ -1,0 +1,61 @@
+[Order]
+My head is a bit fuzzy… could I have an order of the {item} please?
+[End]
+
+[Success]
+Thanks for the {item}. I feel like I’m starting to remember things…
+[End]
+
+[Failure]
+<shaky>Argh…</shaky> My headache is flaring up again… I should go…
+[End]
+
+[Story]
+Excuse me… But do you know where I am…?
+I… I can’t seem to remember who or where I am… I’ve been having this terrible headache ever since… Ever since what…?
+Anyways, thank you for the drink… It’s helping to soothe my headache, even if it’s only a little.
+My name is… What was it…?
+It looks like I’m dressed like a soldier so… I guess you can call me Soldier Ghost.
+[End]
+
+[Story]
+The war… <shaky>The war…!</shaky>
+How… how did I forget about the war? How is the war right now?
+Are… Are we winning…?
+You… You don’t know about the war…?
+How is that possible… This is one of the largest wars we’ve had since the Continental War!
+A war that I… barely made a difference in… I was hoping to have changed this time but… I guess I’m just not good enough…
+Like look at me. I’m back here, forced to recover just because of a headache that I got from… What did I get it from again…? 
+[End]
+
+[Story]
+Ah… That’s right…
+Doctor Ghost was telling me about a soldier who saved their life when they were only a child…
+I wish I could be like that soldier… At this rate, the war will be over by the time I recover.
+I… I need to hurry up and get better faster.
+If it weren’t for this headache then maybe I could go back to the front lines.
+I… Didn’t have the greatest childhood… But if I can leave something behind… some kind of legacy or maybe some victory…
+Maybe my life will have worth living.
+[End]
+
+[Story]
+Oh, I found a dog tag in my pocket the other day. The name faded out but it felt… familiar to me.
+When I look at this dog tag, I get vague memories of the battlefield…
+I remember scenes of gunfire and explosions everywhere… I could faintly remember the smell of steel and blood. I was on foot but… 
+Why does that seem so off…
+I saw… an enemy pointing their gun at a child, but their face is eluding me right now…
+All I remember is tackling that enemy and pinning them down to let that kid escape…
+I hope that child got out safely…
+The enemy surrounded me after that before… Well, I shouldn’t talk about something like that in a cafe…
+[End]
+
+[Story]
+I-I remember now…
+I-I was a pilot in the war but… I was shot down before I could do anything significant…That’s why I was on the ground…
+But… that child I saved…
+Apparently it was Doctor Ghost!
+They recognized my dog tag when I showed it to them.
+I’m… so glad they got away safely… Doctor Ghost wanted to thank me for saving him but… I just did what anyone else would’ve done. 
+Thank you for giving me these drinks, they helped me remember something important.
+Something I can proudly take with me to the next life.
+[End]
