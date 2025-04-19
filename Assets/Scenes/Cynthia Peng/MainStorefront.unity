@@ -11605,28 +11605,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1194871745244336917, guid: 3b09e429754326e4196ed1635846ddcb, type: 3}
       propertyPath: ghosts.Array.size
-      value: 21
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1194871745244336917, guid: 3b09e429754326e4196ed1635846ddcb, type: 3}
       propertyPath: 'ghosts.Array.data[0]'
       value: 
-      objectReference: {fileID: 325712848959035657, guid: 8dd34201ed615cc44a14ce4795729fab, type: 3}
+      objectReference: {fileID: 4663965477092494701, guid: 349a0fc8233db06498bb68ccfbec84df, type: 3}
     - target: {fileID: 1194871745244336917, guid: 3b09e429754326e4196ed1635846ddcb, type: 3}
       propertyPath: 'ghosts.Array.data[1]'
       value: 
-      objectReference: {fileID: 4663965477092494701, guid: f00b20ee47827ec4a84ab6e7e4b4db76, type: 3}
+      objectReference: {fileID: 4663965477092494701, guid: 45d8e9ae9f42e8d4d8630b356aeb14f8, type: 3}
     - target: {fileID: 1194871745244336917, guid: 3b09e429754326e4196ed1635846ddcb, type: 3}
       propertyPath: 'ghosts.Array.data[2]'
       value: 
-      objectReference: {fileID: 4663965477092494701, guid: b4a3a94ebdbb2cd40a1fb95200d352f9, type: 3}
+      objectReference: {fileID: 4663965477092494701, guid: 9cdf08821252dfc42972ff6b886d0a0b, type: 3}
     - target: {fileID: 1194871745244336917, guid: 3b09e429754326e4196ed1635846ddcb, type: 3}
       propertyPath: 'ghosts.Array.data[3]'
       value: 
-      objectReference: {fileID: 536465950246416582, guid: a4bd51edfdcd4c84b86858d546649440, type: 3}
+      objectReference: {fileID: 4663965477092494701, guid: 349a0fc8233db06498bb68ccfbec84df, type: 3}
     - target: {fileID: 1194871745244336917, guid: 3b09e429754326e4196ed1635846ddcb, type: 3}
       propertyPath: 'ghosts.Array.data[4]'
       value: 
-      objectReference: {fileID: 4663965477092494701, guid: 45d8e9ae9f42e8d4d8630b356aeb14f8, type: 3}
+      objectReference: {fileID: 4663965477092494701, guid: 349a0fc8233db06498bb68ccfbec84df, type: 3}
     - target: {fileID: 1194871745244336917, guid: 3b09e429754326e4196ed1635846ddcb, type: 3}
       propertyPath: 'ghosts.Array.data[5]'
       value: 
@@ -11693,11 +11693,11 @@ PrefabInstance:
       objectReference: {fileID: 4663965477092494701, guid: 8828647e6d4315f46bb6cf7882832668, type: 3}
     - target: {fileID: 1242055107049372399, guid: 3b09e429754326e4196ed1635846ddcb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.49228
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1242055107049372399, guid: 3b09e429754326e4196ed1635846ddcb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.610861
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1242055107049372399, guid: 3b09e429754326e4196ed1635846ddcb, type: 3}
       propertyPath: m_LocalPosition.z
