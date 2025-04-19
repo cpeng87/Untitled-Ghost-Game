@@ -12,12 +12,17 @@ public class Vegetable : DraggableObject
     [SerializeField] private int chops;
     [SerializeField] private bool canChop;
     [SerializeField] private float inc;
+
+    private float originalY;
+    private float originalZ;
     public override void Start() {
         isDraggable = true;
         isChopped = false;
         chops = 0;
         canChop = true;
         base.Start();
+        originalY = transform.position.y;
+        originalZ = transform.position.z;
     }
 
     private void FixedUpdate()
@@ -26,6 +31,14 @@ public class Vegetable : DraggableObject
         {
             transform.position = targetPosition;
             transform.rotation = Quaternion.Euler(0f, 90f, 0f);
+        }
+        if (transform.position.y <= originalY)
+        {
+            transform.position = new Vector3(transform.position.x, originalY, transform.position.z);
+        }
+        if (transform.position.z != originalZ)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, originalZ);
         }
     }
 

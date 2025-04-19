@@ -5,6 +5,11 @@ public class Cookbook : MonoBehaviour
     public static bool paused = false;
     public GameObject cookbookUI;
 
+    private void Start()
+    {
+        Pause();
+    }
+
     public void Resume() {
         cookbookUI.SetActive(false);
         Time.timeScale = 1f;
