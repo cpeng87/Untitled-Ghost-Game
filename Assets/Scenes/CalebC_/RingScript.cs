@@ -10,7 +10,7 @@ public class RingScript : MonoBehaviour
     private float end_x;
     private float end_y;
 
-    private float speed=2f;
+    private float speed=4f;
 
     public static int score;
 
