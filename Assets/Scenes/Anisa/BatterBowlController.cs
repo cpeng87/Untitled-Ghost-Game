@@ -5,8 +5,9 @@ public class BatterBowlController : MonoBehaviour
     private Vector3 offset;
     private bool isDragging = false;
     private bool isTilting = false;
-    private float tiltAngle = 0f;
+    public float tiltAngle = 0f;
     private float originalZ;
+    private float originalY;
     [Header("Tilt Settings")]
     public float tiltSensitivity = 10f;
     public float maxTiltAngle = 40f;
@@ -24,24 +25,27 @@ public class BatterBowlController : MonoBehaviour
     void Start()
     {
         originalZ = transform.position.z;
+        originalY = transform.position.y;
     }
 
     //takes in point clicked and moves the bowl to the location dragged to
     private void HandleMoving()
     {
+        // Cast a ray from the mouse position into the 3D world
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
+            // Use the hit point's x and z, but override y with originalY
             Vector3 targetPosition = hit.point + offset;
 
+            // Clamp x and z values within bounds
             float clampedX = Mathf.Clamp(targetPosition.x, xBound.x, xBound.y);
-            float clampedY = Mathf.Clamp(targetPosition.y, yBound.x, yBound.y);
             float clampedZ = Mathf.Clamp(targetPosition.z, zBound.x, zBound.y);
 
-            transform.position = new Vector3(clampedX, clampedY, clampedZ); //, originalZ);
+            // Set the position while keeping the y position fixed at originalY
+            transform.position = new Vector3(clampedX, originalY, clampedZ);
         }
     }
-
     // tilts the bowl based on the mouse's y movement. Limited by max tilt angle.
     private void HandleTilting()
     {

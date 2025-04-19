@@ -15,6 +15,6 @@ MonoBehaviour:
   recipeName: Cookie
   sellPrice: 12
   buyPrice: 0
-  minigame: Cookie
-  unlockArc: 3
+  minigame: SandwichGame
+  unlockArc: 4
   foodImage: {fileID: 0}

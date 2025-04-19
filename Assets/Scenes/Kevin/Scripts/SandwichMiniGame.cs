@@ -47,19 +47,32 @@ public class MiniGame : MonoBehaviour
         SpawnNewBlock();
     }
 
-    public IEnumerator RemoveLife()
-    {
-        livesRemaining = Mathf.Max(livesRemaining - 1, 0);
-        livesText.text = livesRemaining.ToString();
+    // public IEnumerator RemoveLife()
+    // {
+    //     livesRemaining = Mathf.Max(livesRemaining - 1, 0);
+    //     livesText.text = livesRemaining.ToString();
 
-        if (livesRemaining == 0)
-        {
-            playing = false;
-            failText.gameObject.SetActive(true);
-            failText.text = "Failed!";
-            yield return new WaitForSeconds(2f);
-            UnityEngine.SceneManagement.SceneManager.LoadScene("MainStorefront");
-        }
+    //     if (livesRemaining == 0)
+    //     {
+    //         playing = false;
+    //         failText.gameObject.SetActive(true);
+    //         failText.text = "Failed!";
+    //         yield return new WaitForSeconds(2f);
+    //         UnityEngine.SceneManagement.SceneManager.LoadScene("MainStorefront");
+    //     }
+    // }
+
+    public void Fail()
+    {
+        StartCoroutine(FailCoroutine());
+    }
+
+    private IEnumerator FailCoroutine()
+    {
+        failText.gameObject.SetActive(true);
+        failText.text = "Failed!";
+        yield return new WaitForSeconds(1f);
+        GameManager.Instance.CompleteMinigame(false);
     }
 
 

@@ -694,7 +694,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1506696168}
+      - m_Target: {fileID: 2093634845}
         m_TargetAssemblyTypeName: TeapotController, Assembly-CSharp
         m_MethodName: CheckResults
         m_Mode: 1
