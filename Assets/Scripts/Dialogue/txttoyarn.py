@@ -53,7 +53,7 @@ def parse_dialogue(file_path):
     return "\n".join(yarn_sections)
 
 # Example usage
-input_file = "CS Major.txt"
+input_file = "Wizard.txt"
 # output_file = input_file.rsplit('.',1)[0]
 output_file = input_file.rsplit('.',1)[0] + "Ghost.yarn"
 

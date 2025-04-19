@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c743a236a76f204a87dae151ef1c653, type: 3}
   m_Name: Pancake
   m_EditorClassIdentifier: 
-  recipeName: Pancake
+  recipeName: Pancakes
   sellPrice: 15
   buyPrice: 12
   minigame: Pancakes

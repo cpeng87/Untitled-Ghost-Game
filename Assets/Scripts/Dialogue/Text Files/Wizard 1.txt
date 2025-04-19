@@ -1,0 +1,98 @@
+[Order]
+Dear mortal, please fetch me an {item} with arcane energy befitting a powerful sorcerer! (That would be me, of course.)
+[End]
+
+[Success]
+Ah, this is incredible! This {item} has shown me its true power! I must thank you, dear mortal! 
+[End]
+
+[Failure]
+Gah! This {item} reeks of a curse! Are you trying to damper my powers, dear mortal?! You must be more careful with your tonics!
+[End]
+
+[Story]
+Ah, you want to know about me, dear mortal? Ohoho, I’m glad you’ve asked!
+You may call me <wiggle> Emrys, master of the arcane arts! </wiggle>
+Say, have you ever thought about doing an apprenticeship in sorcery? I can show you the world in its purest form!
+Spectacle!
+Discovery!
+Third adjective!
+Yes, yes, I see it now - The look in your eyes!
+You want to be my pupil, no? Ah, wait - You are skeptical of who I say I am!
+Yes, yes, a fair choice to be wary. But, I promise you, dear mortal, that I am truthful about my knowledge of this world.
+In fact, when I return to this cafe, I shall show you some of my teachings!
+That will prove my status, and will empower you to unlock your true potential!
+I must be going now, but I shall see you again soon, dear mortal!
+[End]
+
+
+[Story]
+Hello once again, dear mortal! It is I, Emrys, yet again!
+Are you ready to begin your first lesson?
+Today, I shall teach you… spellcasting!
+We shall start with a basic levitation spell. Try to levitate the dish you just served me!
+Close your eyes, and imagine it floating slowly upwards. As if it is weightless, similar to you and I…
+Aha!
+You’ve done- Huh?
+What do you mean, you “just picked it up”?
+Nonsense, mortal, be proud of your magical abilities! You are not my apprentice for nothing!
+No need to fear, though, as the next lesson shall be much more challenging!
+Be prepared, dear mortal!
+[End]
+
+
+[Story]
+Dear mortal, it is I! Yet again!
+What a pleasure it is to see my apprentice doing so well!
+Now, I did say this lesson would be more challenging - I challenge you to adorn this dish with a fitting magical rune!
+No need to worry, though. You have proven yourself capable of the task!
+…
+Aha! My apprentice has done it yet again!
+As you can see, oftentimes crafting runes is not a matter of planning!
+When your heart is set on a certain rune, your body shall follow - Just like in our realm!
+Planning only serves to hold you back, my dear mortal!
+We only have a limited time in any plane of existence, and getting caught up in dreadful numbers and statistics is only a plague on your natural talent!
+Ahem, perhaps I have grown too philosophical for one lesson.
+Well, no matter!
+Be excited for our next session, dear mortal! I shall teach you something that has never been seen before, and is sure to change your entire existence!
+Until then!
+[End]
+
+
+[Story]
+My dear mortal, I have returned for your most important lesson of all!
+Today, I will be introducing you to… necromancy!
+To be completely honest with you, er… I have never successfully performed the necromancy ritual.
+But I know the process, and will teach it to you! First, think of your past life, and one thing you truly loved about it.
+Then, think of something you truly despised about it - <wiggle>I can think of a number of ideas for this one.</wiggle>
+Then, with all the honesty in your heart, say the words <italic>volo vivere</italic>.
+You shall feel a change in your spirit if you have performed it correctly.
+…
+Ah. It seems that the ritual has failed yet again.
+Well, no matter, my dear apprentice - Even a wizard such as I cannot truly understand why the ritual fails.
+But I do have my suspicions - For myself, at least.
+It becomes… incredibly difficult for me to find reasons I loved my past life each time I attempt the ritual.
+And when I do find the reasons, they appear incredibly… trivial, compared to what I spent most of my life doing.
+I was not a wizard in my past life, but with each passing day, I wished that I was.
+I yearned for control over my own destiny that I could never have - I only found it in my silly dreams of wizardry.
+But alas, not everyone’s life is meant to be what they desire. Or at least, that is what I have assured myself. Ah…
+[End]
+
+
+[Story]
+Hello, dear mortal!
+It is I, Emrys - Unfortunately, it seems I have run out of lessons to teach you, and thus, we have reached the end of your apprenticeship.
+I have known you for a short time, but I truly believe you are the most gifted apprentice I could ever have taken on.
+And truly, I am thankful that I have finally met someone willing to place their trust in me, and my sorcery - Thank you.
+I hope, above all else, that you are finding fulfillment, brewing coffee for us ghosts.
+Is that what you desired in life, too? Or is it a new journey? Ah, no matter - I trust you to continue what makes you happy.
+As for myself, well… Ever since our last session, I have been deep in thought.
+And now, I have decided to swear off necromancy. Our lesson made me realize that perhaps, I have been holding too tightly onto regrets from a life bygone, despite becoming what I so desperately wanted to be back then.
+I, Emrys Alistair Artemis Evander - <wiggle>perhaps I should shorten some of my names</wiggle> - am a wizard, and I am in control over my own destiny!
+I am no longer shackled to graphs and statistics!
+Now, I shall continue my journey to discover all of this realm’s secrets, and share the joys of magic with every soul I can find!
+And perhaps, once I learn enough, I can return to this humble cafe, and teach you all I know once again, dear mortal.
+I admit, I will miss our talks of sorcery over coffee for as long as we are separated.
+But this is not goodbye - In fact, this is only the start of our journey!
+So, until next time, my dear mortal - Take care of yourself, and remember that the great Emrys will always be watching over you.
+[End]

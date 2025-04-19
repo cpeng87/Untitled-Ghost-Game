@@ -42,7 +42,7 @@ public class AudioManager : MonoBehaviour
         else
         {
             int arcIndex = (int) GameManager.Instance.arc - 1;
-            if (arcIndex < 0)
+            if (arcIndex < 0 || arcIndex >= music.Length)
             {
                 arcIndex = 0;
             }

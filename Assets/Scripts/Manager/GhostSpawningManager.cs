@@ -70,7 +70,7 @@ public class GhostSpawningManager : MonoBehaviour
             {
                 Vector3 direction = (positions[i] - spawnedGhosts[i].Item1.transform.position).normalized;
                 spawnedGhosts[i].Item1.transform.position += ghostSpeed * direction * Time.deltaTime;
-                if (Vector3.Distance(spawnedGhosts[i].Item1.transform.position, positions[i]) <= 0.005f)
+                if (Vector3.Distance(spawnedGhosts[i].Item1.transform.position, positions[i]) <= 0.1f)
                 {
                     spawnedGhosts[i].Item2 = false;
                     spawnedGhosts[i].Item1.transform.position = positions[i];
