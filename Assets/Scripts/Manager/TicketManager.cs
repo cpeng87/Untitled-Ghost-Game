@@ -10,6 +10,7 @@ public class TicketManager : MonoBehaviour
     public List<string> tickets = new List<string>(); //list of active tickets on ordersPanel
     [SerializeField] private GameObject ordersPanel; //full UI of the pop up
     [SerializeField] private GameObject orderTicket; //individual ticket prefab
+    [SerializeField] private Animator makeOrderNotifAnimator;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
@@ -26,11 +27,16 @@ public class TicketManager : MonoBehaviour
         SetUpOrdersPanel();
     }
 
+    private void Start()
+    {
+        SetMakeOrderNotif(false);
+    }
+
     void Update()
     {
         if (ordersPanel.activeSelf)
         {
-            if (Input.GetMouseButtonDown(0)) 
+            if (Input.GetMouseButtonDown(0))
             {
                 if (!EventSystem.current.IsPointerOverGameObject())
                 {
@@ -38,7 +44,7 @@ public class TicketManager : MonoBehaviour
                 }
             }
         }
-    } 
+    }
 
     public void AddOrderToPanel(Order order)
     {
@@ -73,6 +79,7 @@ public class TicketManager : MonoBehaviour
         if (ordersPanel.activeSelf == false)
         {
             ShowOrders();
+            SetMakeOrderNotif(false);
         }
         else
         {
@@ -122,6 +129,10 @@ public class TicketManager : MonoBehaviour
         // Set the order panel to inactive
         ordersPanel.SetActive(false);
         orderTicket.SetActive(false);
-        Debug.Log(ordersPanel.activeSelf);
+    }
+    
+    public void SetMakeOrderNotif(bool b)
+    {
+        makeOrderNotifAnimator.SetBool("isActive", b);
     }
 }

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ghostName: News Reporter Ghost
   dialogue: {fileID: -8253061345870894857, guid: 66b547016d9bae34dac8a8f6de3b1009, type: 3}
-  numStory: 5
+  numStory: 3
   recipesOrdered:
   - {fileID: 11400000, guid: ea3987c484745a2438022c3ec953ace6, type: 2}
   arc: 3

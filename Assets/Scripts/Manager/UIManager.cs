@@ -7,6 +7,8 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private TMP_Text currencyField;
     [SerializeField] private TMP_Text satisfactionField;
+    // [SerializeField] private Animator makeOrderNotifAnimator;
+    // [SerializeField] private Animator recipeNotifAnimator;
 
     private void Awake()
     {
@@ -48,4 +50,9 @@ public class UIManager : MonoBehaviour
     {
         CameraManager.Instance.SwapToMainCamera();
     }
+
+    // private void SetRecipeShopNotif(bool b)
+    // {
+    //     recipeNotifAnimator.SetBool("isActive", b);
+    // }
 }

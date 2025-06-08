@@ -11,7 +11,7 @@ public class SubmitPancakes : MonoBehaviour
         GameObject[] allPancakes = GameObject.FindGameObjectsWithTag("Pancake");
         pancakes = allPancakes.Length - 1;
         bool result = false;
-        if (pancakes < 10 || failed)
+        if (pancakes < 6 || failed)
         {
             //set to main scene
             //fail dialogue

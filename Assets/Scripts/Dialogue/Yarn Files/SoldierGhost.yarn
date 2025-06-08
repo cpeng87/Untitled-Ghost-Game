@@ -10,7 +10,7 @@ title: SoldierSuccess
 tags:
 position: -173,132
 ---
-Soldier Ghost: Thanks for the {GetOrder()}. I feel like I'm starting to remember things...
+Soldier Ghost: Thanks for the this. I feel like I'm starting to remember things...
 <<startStory SoldierStory>>
 ===
 
