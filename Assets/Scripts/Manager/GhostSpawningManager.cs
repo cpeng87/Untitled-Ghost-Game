@@ -156,7 +156,6 @@ public class GhostSpawningManager : MonoBehaviour
         
         List<Ghost> possibleGhost = new List<Ghost>();
 
-
         /*
         foreach (Recipe recipe in GameManager.Instance.unlockedRecipes)
         {
@@ -181,13 +180,50 @@ public class GhostSpawningManager : MonoBehaviour
             }
             possibleGhost.AddRange(ghostRangePerRecipe);
         }
-        
+
+        List<Ghost> arcGhost = new List<Ghost>();
+        List<Ghost> sideGhost = new List<Ghost>();
+
+        foreach (Ghost ghost in possibleGhost)
+        {
+            if (ghost.arc == GameManager.Instance.arc)
+            {
+                arcGhost.Add(ghost);
+            }
+            else
+            {
+                sideGhost.Add(ghost);
+            }
+        }
+
+        if (arcGhost.Count != 0 && sideGhost.Count != 0)
+        {
+            float rand = UnityEngine.Random.value;
+            if (rand < 0.65f) // main story ghost
+            {
+                possibleGhost = arcGhost;
+            }
+            else
+            {
+                possibleGhost = sideGhost;
+            }
+        }
+        else if (arcGhost.Count == 0)
+        {
+            possibleGhost = sideGhost;
+        }
+        else
+        {
+            possibleGhost = arcGhost;
+        }
+
         int index = (int) (UnityEngine.Random.value * possibleGhost.Count);
         index = Math.Abs(index);
         int count = 0;
-        Debug.Log("Index for chosen ghost: " + index);
+        
         if (possibleGhost.Count == 0) {
             Debug.Log("No customers are left. All of them have been completed!");
+            // RecipeShopManager.Instance.SetRecipeShopNotif(true);
             return;
         }
         while (GameManager.Instance.ghostManager.CheckGhostIsActive(possibleGhost[index]) == true || possibleGhost[index].ghostName == "Reaper")

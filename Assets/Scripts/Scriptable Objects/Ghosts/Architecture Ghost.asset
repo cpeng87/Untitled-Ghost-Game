@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ghostName: Architecture Ghost
   dialogue: {fileID: -8253061345870894857, guid: 96bcae69313bcfc4ea3b25bdaa6b296d, type: 3}
-  numStory: 5
+  numStory: 3
   recipesOrdered:
   - {fileID: 11400000, guid: 605f77bbb025a2a41820b9917c4d8643, type: 2}
   arc: 4

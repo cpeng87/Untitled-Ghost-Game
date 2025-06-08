@@ -25,7 +25,7 @@ public class GhostObj : Clickable
             idleAnimator.SetBool("IsFloating", true);
         }
     }
-    
+
     //checks if the ghost order has been taken, if not, takes order when ghost is clicked on
     protected override void OnClicked()
     {
@@ -34,9 +34,10 @@ public class GhostObj : Clickable
         {
             return;
         }
-    
+
         SetOrderNotification(false);
         hasTakenOrder = GameManager.Instance.orderManager.TakeOrder(scriptable.ghostName, scriptable.recipesOrdered, seatNum);
+        TicketManager.Instance.SetMakeOrderNotif(true);
     }
 
     public void SetSeatNum(int newSeatNum)
@@ -92,7 +93,7 @@ public class GhostObj : Clickable
 
     private void SetOrderNotification(bool b)
     {
-         orderNotificationAnimator.SetBool("isActive", b);
+        orderNotificationAnimator.SetBool("isActive", b);
     }
 }
 

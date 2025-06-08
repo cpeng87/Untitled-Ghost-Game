@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ghostName: Teacher Ghost
   dialogue: {fileID: -8253061345870894857, guid: 8f007efd011d808489a4ef04363849a4, type: 3}
-  numStory: 4
+  numStory: 3
   recipesOrdered:
   - {fileID: 11400000, guid: ea3987c484745a2438022c3ec953ace6, type: 2}
   arc: 3
