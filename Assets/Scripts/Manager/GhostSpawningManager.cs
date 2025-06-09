@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using System;
 using JetBrains.Annotations;
 using System.Drawing.Text;
+using Manager.RecipeShop;
 
 public class GhostSpawningManager : MonoBehaviour
 {
@@ -109,10 +110,8 @@ public class GhostSpawningManager : MonoBehaviour
 
     public void SpawnGhost()
     {
-        Debug.Log("Spawning Ghost");
         if (GameManager.Instance.ghostManager.IsActiveFull() == true)
         {
-            Debug.Log("Full seats!");
             return;
         }
 
@@ -156,27 +155,15 @@ public class GhostSpawningManager : MonoBehaviour
         
         List<Ghost> possibleGhost = new List<Ghost>();
 
-        /*
-        foreach (Recipe recipe in GameManager.Instance.unlockedRecipes)
-        {
-            possibleGhost.AddRange(GameManager.Instance.ghostManager.GetGhostsFromRecipe(recipe));
-        }
-        */
-        
-
         foreach (Recipe recipe in GameManager.Instance.unlockedRecipes)
         {
             List<Ghost> ghostRangePerRecipe = GameManager.Instance.ghostManager.GetGhostsFromRecipe(recipe);
             for (int i = ghostRangePerRecipe.Count - 1; i >= 0; i--) {
                 Ghost g = ghostRangePerRecipe[i];
-                // made a completed ghost list so using that instead
                 if (GameManager.Instance.ghostManager.IsComplete(g))
                 {
                     ghostRangePerRecipe.RemoveAt(i);
                 }
-                // if (g.numStory < GameManager.Instance.ghostManager.GetStoryIndex(g.ghostName)) {
-                //     ghostRangePerRecipe.RemoveAt(i);
-                // }
             }
             possibleGhost.AddRange(ghostRangePerRecipe);
         }
@@ -223,7 +210,7 @@ public class GhostSpawningManager : MonoBehaviour
         
         if (possibleGhost.Count == 0) {
             Debug.Log("No customers are left. All of them have been completed!");
-            // RecipeShopManager.Instance.SetRecipeShopNotif(true);
+            RecipeShopManager.Instance.SetRecipeShopNotif(true);
             return;
         }
         while (GameManager.Instance.ghostManager.CheckGhostIsActive(possibleGhost[index]) == true || possibleGhost[index].ghostName == "Reaper")
