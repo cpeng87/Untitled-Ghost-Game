@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c743a236a76f204a87dae151ef1c653, type: 3}
-  m_Name: Cake
+  m_Name: Pancakes
   m_EditorClassIdentifier: 
-  recipeName: Cake
-  sellPrice: 12
-  buyPrice: 24
-  minigame: Cake
-  unlockArc: 3
-  foodImage: {fileID: 21300000, guid: 54bbc1d03b8824845a15b423084d9deb, type: 3}
+  recipeName: Pancakes
+  sellPrice: 15
+  buyPrice: 12
+  minigame: Pancakes
+  unlockArc: 1
+  foodImage: {fileID: 21300000, guid: 745b0100901a10741a97e7b7ea9fb8c3, type: 3}
