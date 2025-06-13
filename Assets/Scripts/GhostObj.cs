@@ -22,7 +22,8 @@ public class GhostObj : Clickable
         }
         if (idleAnimator != null)
         {
-            idleAnimator.SetBool("IsFloating", true);
+            // idleAnimator.SetBool("IsFloating", true);
+            idleAnimator.Play("IdleFloat", 0, Random.value);
         }
     }
 
