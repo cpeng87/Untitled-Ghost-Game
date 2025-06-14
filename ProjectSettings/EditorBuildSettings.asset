@@ -35,7 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Enzo Waga Okada/Cake Mixing and Baking Minigame/Cake Minigame.unity
     guid: ab3f324b22f2adc44b7928de49cfd93e
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Sophia Wang/Cookie.unity
     guid: 25b4a5cc2521d4d76a0cc9b65503998c
   - enabled: 1
@@ -80,8 +80,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cynthia Peng/Muffin.unity
     guid: efee2a6dc7eda2543a27640566d17bf9
-  - enabled: 1
-    path: Assets/Scenes/Ty/Cookie.unity
-    guid: 768352561b3b2f4419818cc0d7ae62a4
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
