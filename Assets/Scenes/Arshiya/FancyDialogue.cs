@@ -56,7 +56,6 @@ public class FancyDialogue : MonoBehaviour
         shakyRanges = new List<TagRanges>();
         boldRanges = new List<TagRanges>();
         italicRanges = new List<TagRanges>();
-        Debug.Log("Reset");
     }
 
     void Update()

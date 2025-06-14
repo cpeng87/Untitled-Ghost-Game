@@ -20,7 +20,6 @@ public class GhostManager : MonoBehaviour
         foreach (GameObject ghost in ghosts)
         {
             Ghost currGhost = ghost.GetComponent<GhostObj>().GetScriptable();
-            Debug.Log(currGhost.ghostName);
             ghostNameToScriptableDict.Add(currGhost.ghostName, currGhost);
             ghostNameToGameObjDict.Add(currGhost.ghostName, ghost);
             ghostNameToStoryIndex.Add(currGhost.ghostName, 1);

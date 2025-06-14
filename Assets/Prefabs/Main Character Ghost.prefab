@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1231925068382317707}
   - component: {fileID: 7316898764475293369}
-  - component: {fileID: 3903791397171189805}
   - component: {fileID: 171586686787514701}
   m_Layer: 0
   m_Name: Main Character Ghost
@@ -58,21 +57,6 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0.25, z: 0}
---- !u!114 &3903791397171189805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 229544183946542268}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c991398eed8cff4ba96b54fb6705a77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scriptable: {fileID: 11400000, guid: b3bf3482029f8474eae71bbfc43649df, type: 2}
-  idleAnimator: {fileID: 171586686787514701}
-  orderNotificationAnimator: {fileID: 0}
 --- !u!95 &171586686787514701
 Animator:
   serializedVersion: 7

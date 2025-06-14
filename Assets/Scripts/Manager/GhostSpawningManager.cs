@@ -125,7 +125,6 @@ public class GhostSpawningManager : MonoBehaviour
             {
                 GameManager.Instance.ghostManager.AddActiveGhost(reaperScriptable);
                 int reaperSeatNum = GameManager.Instance.ghostManager.GetSeatNum(reaperScriptable);
-                Debug.Log(reaperSeatNum);
                 GameObject reaperObj = Instantiate(GameManager.Instance.ghostManager.GetGhostObjFromName("Reaper"), door, Quaternion.identity);
                 reaperObj.GetComponent<GhostObj>().SetSeatNum(reaperSeatNum);
                 spawnedGhosts[reaperSeatNum] = (reaperObj, true);
@@ -141,7 +140,6 @@ public class GhostSpawningManager : MonoBehaviour
             {
                 GameManager.Instance.ghostManager.AddActiveGhost(reaperScriptable);
                 int reaperSeatNum = GameManager.Instance.ghostManager.GetSeatNum(reaperScriptable);
-                Debug.Log(reaperSeatNum);
                 GameObject reaperObj = Instantiate(GameManager.Instance.ghostManager.GetGhostObjFromName("Reaper"), door, Quaternion.identity);
                 reaperObj.GetComponent<GhostObj>().SetSeatNum(reaperSeatNum);
                 spawnedGhosts[reaperSeatNum] = (reaperObj, true);

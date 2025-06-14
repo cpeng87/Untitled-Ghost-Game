@@ -134,7 +134,7 @@ public class DialoguePlayer : MonoBehaviour
         
         if (res) {
             isSuccess = true;
-            Debug.Log("starting dialogue: " + parsedName + "Success");
+            Debug.Log("Starting dialogue: " + parsedName + "Success");
             dialogueRunner.StartDialogue(parsedName + "Success");
         } else {
             isDeleting = true;

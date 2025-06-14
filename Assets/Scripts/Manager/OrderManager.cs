@@ -44,11 +44,7 @@ public class OrderManager : MonoBehaviour
             Debug.Log("No possible recipes, something went terribly wrong.");
             return false;
         }
-        Debug.Log("Possible recipes: " + possibleRecipe);
-        int selectedIndex = (int) (Random.value * (possibleRecipe.Count));
-        Debug.Log(possibleRecipe.Count);
-        Debug.Log("Selected index: " + selectedIndex);
-        Debug.Log("Selected recipe: " + possibleRecipe[selectedIndex].recipeName);
+        int selectedIndex = (int) (Random.value * possibleRecipe.Count);
 
         activeOrders[seatNum] = new Order(name, recipes[selectedIndex].minigame, recipes[selectedIndex].recipeName, recipes[selectedIndex].sellPrice, seatNum);
         currActiveOrder = seatNum;
@@ -121,7 +117,6 @@ public class OrderManager : MonoBehaviour
     public void RemoveCompletedOrder()
     {
         Ghost currGhost = GameManager.Instance.ghostManager.GetGhostScriptableFromName(activeOrders[currActiveOrder].ghostName);
-        Debug.Log(currGhost.name);
         GameManager.Instance.ghostManager.RemoveActiveGhost(currGhost);
         GhostSpawningManager.Instance.DeleteSpawnedGhost(activeOrders[currActiveOrder].seatNum);
         activeOrders[currActiveOrder] = null;
