@@ -102,6 +102,23 @@ public class GameManager : MonoBehaviour
         Debug.Log("Updated Currency: " + currency);
     }
 
+    public bool SubtractCurrency(int subtracted)
+    {
+        currency -= subtracted;
+        bool rtn = true;
+        // if (currency < 0)
+        // {
+        //     currency = 0;
+        //     rtn = false;
+        // }
+        if (state == State.Main)
+        {
+            UIManager.Instance.UpdateCurrency(currency);
+        }
+        Debug.Log("Updated Currency: " + currency);
+        return rtn;
+    }
+
     public void IncreaseSatisfaction()
     {
         ++satisfactionLevel;

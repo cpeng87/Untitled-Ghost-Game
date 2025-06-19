@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Clickable : MonoBehaviour
 {
-    public void Update()
+    protected virtual void Update()
     {
         if (Input.GetMouseButtonUp(0))
         {

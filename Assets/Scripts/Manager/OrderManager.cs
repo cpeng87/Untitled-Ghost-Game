@@ -170,6 +170,11 @@ public class OrderManager : MonoBehaviour
         return activeOrders[currActiveOrder].ghostName;
     }
 
+    public int GetCurrActiveOrderPrice()
+    {
+        return activeOrders[currActiveOrder].price;
+    }
+
     public int GetNumActiveOrder()
     {
         int counter = 0;
