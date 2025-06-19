@@ -34,12 +34,12 @@ title: LovestruckStory1
 tags:
 position: 0,0
 ---
-Lovestruck Ghost: Are you looking for love? 
-Lovestruck Ghost: Oh? Are you interested in anyone? Sorry, don't mean to pry!
-Lovestruck Ghost: Old habits... I used to be quite good at setting people up on dates!
-Lovestruck Ghost: All my friends would come to me for dating advice...
+Lovestruck Ghost: Sorry, don't mean to pry, but are you interested in anyone? Romantically of course!
+Lovestruck Ghost: Old habits... I used to be quite good at setting people up on dates! 
+Lovestruck Ghost: All my friends would come to me for dating advice... and it seemed to work for them!
 Lovestruck Ghost: Hm? Oh, no, I never dated anyone myself. Never seemed to be able to find the right person.
 Lovestruck Ghost: I'd like to, though...doesn't everyone? Romance just sounds so dreamy...
+Lovestruck Ghost: Let me know if anyone else is a romance fan, I'd love to get to know them!
 <<setCam "Main Camera">>
 ===
 
@@ -47,9 +47,12 @@ title: LovestruckStory2
 tags:
 position: 0,0
 ---
-Lovestruck Ghost: Did you watch that new rom-com that came out? 
-Lovestruck Ghost: Could you keep an ear out to see if anyone else is interested in romance?
-Lovestruck Ghost: Oh, really? You'd do that for me? Thanks so much! Let me know if anyone else is a romance fan!
+Lovestruck Ghost: Someone confessed to me, before I died. It was my best friend, actually! Totally caught me off guard. 
+Lovestruck Ghost: I didn't even know what to say. I told them I needed some time to respond, but then, well...I guess I never did. 
+Lovestruck Ghost: I've had a lot of time to think about it but I still don't really know what I would have said. 
+Lovestruck Ghost: If there was anyone I was going to fall in love with, it would have been them - they were everything I ever wanted. But I didn't. 
+Lovestruck Ghost: I guess that spark just wasn't there...
+Lovestruck Ghost: Ah! Sorry, I've just been sitting here and taking up your time... Thanks for listening!
 <<setCam "Main Camera">>
 ===
 
@@ -57,34 +60,14 @@ title: LovestruckStory3
 tags:
 position: 0,0
 ---
-Lovestruck Ghost: Someone confessed to me, before I died. It was my best friend, actually! Totally caught me off guard. 
-Lovestruck Ghost: I didn't even know what to say. I told them I needed some time to respond, but then, well...I guess I never did. 
-Lovestruck Ghost: I've had a lot of time to think about it but I still don't really know what I would have said. 
-Lovestruck Ghost: If there was anyone I was going to fall in love with, it would have been them - they were everything I ever wanted. But I didn't. 
-Lovestruck Ghost: Ah! Sorry, I've just been sitting here and taking up your time... Thanks for listening!
-<<setCam "Main Camera">>
-===
-
-title: LovestruckStory4
-tags:
-position: 0,0
----
 Lovestruck Ghost: Hi again! Oh, you found someone who wants to meet me? Oh...I...Thank you, but I think I have to turn them down. 
 Lovestruck Ghost: I've been thinking a lot lately, and I've realized that I...I think I liked the idea of falling in love more than I actually really wanted to.
 Lovestruck Ghost: Everyone always seemed so happy when I helped matchmake them, yknow? And I wanted that for myself. 
-Lovestruck Ghost: But I think I'm happy, right now. And maybe I don't need to fall in love.
-Lovestruck Ghost: Maybe I never really wanted to.
+Lovestruck Ghost: But I think I'm happy, right now. And maybe I don't need to fall in love just because everyone around me does.
+Lovestruck Ghost: Maybe I never even really wanted to.
 Lovestruck Ghost: Here, I've got some bittersweet chocolates.
 Lovestruck Ghost: I always wanted to give this to a crush, but I think you should have it.
 Lovestruck Ghost: Thanks for always listening to me.
 <<setCam "Main Camera">>
 
-===
-
-title: LovestruckStory-1
-tags:
-position: 0,0
----
-Lovestruck Ghost: Thanks!
-<<setCam "Main Camera">>
 ===
