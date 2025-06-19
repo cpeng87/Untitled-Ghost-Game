@@ -10,7 +10,7 @@ public enum State
     Recipe
 }
 
-//manages state of game
+// Manages the state of the game
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
 
     public bool parsedDialogue = false;
 
-    //singleton
+    // Singleton
     private void Awake()
     {
         if (Instance == null)
@@ -66,24 +66,159 @@ public class GameManager : MonoBehaviour
 
     public void SwitchToMinigame(string minigameName)
     {
-        SceneManager.LoadScene(minigameName);
+        StartCoroutine(SwitchToSceneCoroutine(minigameName));
     }
 
     public void CompleteMinigame(bool isSuccess)
     {
-        StartCoroutine(LoadSceneAndCompleteOrder("MainStorefront", isSuccess));
+        StartCoroutine(CompleteMinigameCoroutine("MainStorefront", isSuccess));
     }
 
-    private IEnumerator LoadSceneAndCompleteOrder(string sceneName, bool isSuccess)
+    private IEnumerator SwitchToSceneCoroutine(string sceneName)
     {
+        // Get the loading screen
+        LoadingScreen loadingScreen = FindObjectOfType<LoadingScreen>();
+        if (loadingScreen != null)
+        {
+            // Wait for the fade-in to complete
+            yield return loadingScreen.FadeIn();
+        }
+
+        // Load the new scene
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
         while (!asyncLoad.isDone)
         {
             yield return null;
         }
+    }
+
+    private IEnumerator CompleteMinigameCoroutine(string sceneName, bool isSuccess)
+    {
+        // Get the loading screen
+        LoadingScreen loadingScreen = FindObjectOfType<LoadingScreen>();
+        if (loadingScreen != null)
+        {
+            // Wait for the fade-in to complete
+            yield return loadingScreen.FadeIn();
+        }
+
+        // Load the new scene
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+
+        // Complete the order
         orderManager.CompleteOrder(isSuccess);
         state = State.Dialogue;
+
+        // Optionally fade out the loading screen after loading
+        if (loadingScreen != null)
+        {
+            loadingScreen.FadeOut();
+        }
     }
+
+
+// using System.Collections;
+// using System.Collections.Generic;
+// using UnityEngine;
+// using UnityEngine.SceneManagement;
+
+// public enum State
+// {
+//     Main,
+//     Dialogue,
+//     Recipe
+// }
+
+// //manages state of game
+// public class GameManager : MonoBehaviour
+// {
+//     public static GameManager Instance;
+
+//     public OrderManager orderManager;
+//     public GhostManager ghostManager;
+
+//     public List<string> minigames = new List<string>();
+//     private int currency;
+//     private int satisfactionLevel;
+//     public List<Recipe> unlockedRecipes = new List<Recipe>();
+//     public List<Recipe> recipes = new List<Recipe>();
+//     public State state;
+//     public int maxGhosts;
+//     public Arc arc;
+
+//     public bool parsedDialogue = false;
+
+//     //singleton
+//     private void Awake()
+//     {
+//         if (Instance == null)
+//         {
+//             Instance = this;
+//             DontDestroyOnLoad(gameObject);
+//         }
+//         else
+//         {
+//             Destroy(gameObject);
+//         }
+//     }
+
+//     void Start()
+//     {
+//         state = State.Main;
+//         arc = Arc.Beginning;
+//         orderManager = GetComponent<OrderManager>();
+//         ghostManager = GetComponent<GhostManager>();
+//         ghostManager.Setup();
+//     }
+
+//     public void AddUnlockedRecipe(Recipe recipe)
+//     {
+//         if (unlockedRecipes.Contains(recipe))
+//         {
+//             Debug.Log("Already have that recipe");
+//         }
+//         else
+//         {
+//             unlockedRecipes.Add(recipe);
+//         }
+//     }
+
+//     public void SwitchToMinigame(string minigameName)
+//     {
+//         FindObjectOfType<LoadingScreen>().FadeIn();
+//         SceneManager.LoadScene(minigameName);
+//     }
+
+//     public void CompleteMinigame(bool isSuccess)
+//     {
+//         FindObjectOfType<LoadingScreen>().FadeIn();
+//         StartCoroutine(LoadSceneAndCompleteOrder("MainStorefront", isSuccess));
+//     }
+    
+//     private IEnumerator SwitchToSceneCoroutine(string sceneName)
+//     {
+//         LoadingScreen loadingScreen = FindObjectOfType<LoadingScreen>();
+//         if (loadingScreen != null)
+//         {
+//             yield return loadingScreen.FadeIn(); // Wait for FadeIn to complete
+//         }
+//         SceneManager.LoadScene(sceneName);
+//     }
+
+//     private IEnumerator LoadSceneAndCompleteOrder(string sceneName, bool isSuccess)
+//     {
+//         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
+//         while (!asyncLoad.isDone)
+//         {
+//             yield return null;
+//         }
+//         orderManager.CompleteOrder(isSuccess);
+//         state = State.Dialogue;
+//     }
 
     public void SwitchToMain()
     {

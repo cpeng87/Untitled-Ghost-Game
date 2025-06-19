@@ -3720,18 +3720,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 123045379}
-    - target: {fileID: 525450974451836453, guid: 5f9982a84e2c2244f995176746863650, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CompleteSoup
-      objectReference: {fileID: 0}
-    - target: {fileID: 525450974451836453, guid: 5f9982a84e2c2244f995176746863650, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SoupManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 851081815785426457, guid: 5f9982a84e2c2244f995176746863650, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4183684766604020512, guid: 5f9982a84e2c2244f995176746863650, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -3816,14 +3804,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame UI
       objectReference: {fileID: 0}
-    - target: {fileID: 5710961476601231261, guid: 5f9982a84e2c2244f995176746863650, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5777183789576469962, guid: 5f9982a84e2c2244f995176746863650, type: 3}
-      propertyPath: m_Texture
-      value: 
-      objectReference: {fileID: 2800000, guid: 46e8b2b3f7848bb4aa4dc2a25ec46e0b, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -56,7 +56,7 @@ public class SoupManager : MonoBehaviour
 
     public void CompleteSoup()
     {
-        if (mixProgress >= 100)
+        if (mixProgress >= 95)
         {
             // Time.timeScale = 0f;
             isComplete = true;

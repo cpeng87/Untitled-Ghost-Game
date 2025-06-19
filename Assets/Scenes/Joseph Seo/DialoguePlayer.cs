@@ -39,6 +39,7 @@ public class DialoguePlayer : MonoBehaviour
         dialogueRunner.AddCommandHandler<string, string>("setNext", SetNextDialogue);
         dialogueRunner.AddCommandHandler("end", EndDialogue);
         dialogueRunner.AddCommandHandler("reset", Reset);
+        dialogueRunner.AddCommandHandler<bool>("reaperPitch", ReaperPitch);
 
         // dialogueRunner.onDialogueComplete += OnDialogueComplete;
         dialogueRunner.onDialogueComplete.AddListener(OnDialogueComplete);
@@ -70,15 +71,24 @@ public class DialoguePlayer : MonoBehaviour
         fd.Reset();
     }
 
+    public void ReaperPitch(bool val)
+    {
+        AudioManager.Instance.SetReaperPitch(val);
+    }
+
     // This function physically hurts me to write
     // Also outdated with other camera changes
-    public static void SetCamera(string cameraName) {
+    public static void SetCamera(string cameraName)
+    {
         Transform cameras = CameraManager.Instance.transform;
         Transform camToSwitchTo = cameras.Find(cameraName);
-        if (camToSwitchTo) {
-            for (int i = 0; i < cameras.childCount; i++) {
-                Transform cam = cameras.GetChild(i); 
-                if (!cam.name.Equals(cameraName)) {
+        if (camToSwitchTo)
+        {
+            for (int i = 0; i < cameras.childCount; i++)
+            {
+                Transform cam = cameras.GetChild(i);
+                if (!cam.name.Equals(cameraName))
+                {
                     cam.gameObject.SetActive(false);
                 }
             }
@@ -114,7 +124,7 @@ public class DialoguePlayer : MonoBehaviour
     // Function called to queue up the order dialogue
     public void StartOrderDialogue(string ghostName, string recipe, int seatNum) {
         this.seatNum = seatNum;
-        this.currentOrder = recipe; 
+        this.currentOrder = recipe;
         CameraManager.Instance.SwapToSeatCamera(seatNum);
         if (ghostName.Contains(" Ghost"))
         {
@@ -128,7 +138,6 @@ public class DialoguePlayer : MonoBehaviour
     public void CompleteOrderDialogue(string ghostName, int seatNum, bool res) {
         CameraManager.Instance.SwapToSeatCamera(seatNum);
         this.seatNum = seatNum;
-
         string parsedName = ghostName.Replace(" Ghost", "");
         parsedName = parsedName.Replace(" ", "");
         

@@ -10,8 +10,9 @@ public class GhostManager : MonoBehaviour
     public Dictionary<string, int> ghostNameToStoryIndex = new Dictionary<string, int>();
     public Dictionary<Recipe, List<Ghost>> recipeToGhostsDict = new Dictionary<Recipe, List<Ghost>>();
     public Ghost[] activeGhosts; //array of ghosts that have been spawned. Limited by maxghosts in GameManager
-    // public Ghost reaper;
-    // public GameObject reaperObj;
+                                 // public Ghost reaper;
+                                 // public GameObject reaperObj;
+    public bool reaperPitch = false;
 
     //setup dictionaries and activeghosts
     public void Setup()
@@ -204,7 +205,7 @@ public class GhostManager : MonoBehaviour
                 }
             }
         }
-        
+
         Debug.Log("Max ghosts reached! No null spot found.");
         return false;
     }
