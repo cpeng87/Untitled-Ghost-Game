@@ -56,22 +56,23 @@ public class TicketManager : MonoBehaviour
         tickets.Add(ticket.name);
 
         // Set ticket's parent
-        ticket.transform.SetParent(ordersPanel.transform.GetChild(0).GetChild(0));
+        ticket.transform.SetParent(ordersPanel.transform.GetChild(0));
 
         // Set width and height of ticket
-        ticket.transform.localScale = new Vector3(0.5f, 2.0f, 1.0f);
+        ticket.transform.localScale = new Vector3(1f, 1f, 1f);
 
         // Set ticket to active
         ticket.SetActive(true);
 
         // Put order stuff on ticket
-        TextMeshProUGUI[] texts = ticket.GetComponentsInChildren<TextMeshProUGUI>();
-        texts[0].text = order.ghostName;
-        texts[1].text = "Order: " + order.recipeName;
-        texts[2].text = "Reward: " + order.price.ToString();
+        // TextMeshProUGUI[] texts = ticket.GetComponentsInChildren<TextMeshProUGUI>();
+        // texts[0].text = order.ghostName;
+        // texts[1].text = "Order: " + order.recipeName;
+        // texts[2].text = "Reward: " + order.price.ToString();
+        ticket.GetComponent<Ticket>().SetTicket(order.ghostName, order.recipeName, order.foodImage, order.seatNum);
 
         // Set button functionality
-        ticket.GetComponentInChildren<Button>().onClick.AddListener(() => GameManager.Instance.orderManager.MakeOrder(order.seatNum));
+        // ticket.GetComponentInChildren<Button>().onClick.AddListener(() => GameManager.Instance.orderManager.MakeOrder(order.seatNum));
     }
 
     public void ToggleOrders()
@@ -120,9 +121,9 @@ public class TicketManager : MonoBehaviour
     public void SetUpOrdersPanel()
     {
         // Get rid of old tickets
-        while (ordersPanel.transform.GetChild(0).GetChild(0).childCount > 1)
+        while (ordersPanel.transform.GetChild(0).childCount > 0)
         {
-            DestroyImmediate(ordersPanel.transform.GetChild(0).GetChild(0).GetChild(1).gameObject);
+            DestroyImmediate(ordersPanel.transform.GetChild(0).GetChild(0).gameObject);
         }
 
         // Set the order panel to inactive

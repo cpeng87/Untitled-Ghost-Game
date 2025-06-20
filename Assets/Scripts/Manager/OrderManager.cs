@@ -10,14 +10,16 @@ public class Order
     public string recipeName;
     public int price;
     public int seatNum;
+    public Sprite foodImage;
 
-    public Order(string ghostName, string minigame, string recipeName, int price, int seatNum)
+    public Order(string ghostName, string minigame, string recipeName, int price, int seatNum, Sprite foodImage)
     {
         this.ghostName = ghostName;
         this.minigame = minigame;
         this.recipeName = recipeName;
         this.price = price;
         this.seatNum = seatNum;
+        this.foodImage = foodImage;
     }
 }
 public class OrderManager : MonoBehaviour
@@ -46,7 +48,7 @@ public class OrderManager : MonoBehaviour
         }
         int selectedIndex = (int) (Random.value * possibleRecipe.Count);
 
-        activeOrders[seatNum] = new Order(name, recipes[selectedIndex].minigame, recipes[selectedIndex].recipeName, recipes[selectedIndex].sellPrice, seatNum);
+        activeOrders[seatNum] = new Order(name, recipes[selectedIndex].minigame, recipes[selectedIndex].recipeName, recipes[selectedIndex].sellPrice, seatNum, recipes[selectedIndex].foodImage);
         currActiveOrder = seatNum;
         DialoguePlayer.Instance.StartOrderDialogue(name, recipes[selectedIndex].recipeName, seatNum);
         // dialoguePlayer = FindObjectsByType<DialoguePlayer>(FindObjectsSortMode.None)[0];
