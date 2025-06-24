@@ -6,14 +6,14 @@ using Random = UnityEngine.Random;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance { get; private set; }
-    
+
     [SerializeField] private Music[] music;
     [SerializeField] private Sound[] sound;
     private Dictionary<string, AudioClip> musicDict;
     private Dictionary<string, AudioClip> soundDict;
     private string currentSong;
     private int currIndex = 0;
-    
+
     [SerializeField] private AudioSource musicSource;
     [SerializeField] private AudioSource soundSource; //We may want to pool audio sources or switch to a different method
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -41,7 +41,7 @@ public class AudioManager : MonoBehaviour
         }
         else
         {
-            int arcIndex = (int) GameManager.Instance.arc - 1;
+            int arcIndex = (int)GameManager.Instance.arc - 1;
             if (arcIndex < 0 || arcIndex >= music.Length)
             {
                 arcIndex = 0;
@@ -52,7 +52,7 @@ public class AudioManager : MonoBehaviour
             OnSongChanged?.Invoke(music[arcIndex].name);
         }
     }
-    
+
     /// <summary>
     /// Changes the song that's currently playing.
     /// </summary>
@@ -72,7 +72,7 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Song " + songName + " not found!");
         }
     }
-    
+
     public void RandomSong()
     {
         //Get a song index that's different than what's already playing
@@ -110,7 +110,7 @@ public class AudioManager : MonoBehaviour
             OnSongChanged?.Invoke(music[currIndex].name);
         }
     }
-    
+
     /// <summary>
     /// Play a sound effect. Chen: This jit ain't tested at all lmao
     /// Theoretically PlayOnShot can play multiple sounds without interrupting another one?
@@ -136,5 +136,17 @@ public class AudioManager : MonoBehaviour
             return;
         }
         soundSource.PlayOneShot(sound);
+    }
+
+    public void SetReaperPitch(bool val)
+    {
+        if (val)
+        {
+            soundSource.pitch = 0.75f;
+        }
+        else
+        {
+            soundSource.pitch = 1f;
+        }
     }
 }

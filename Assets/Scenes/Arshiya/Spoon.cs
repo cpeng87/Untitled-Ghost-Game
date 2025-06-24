@@ -11,6 +11,13 @@ public class Spoon : DraggableObject
     private StirState stirState = StirState.Idle;
 
     [SerializeField] private float inc;
+    private SoupManager soupManager;
+
+    public override void Start()
+    {
+        soupManager = FindObjectOfType<SoupManager>();
+        base.Start();
+    }
 
     private void Update()
     {
@@ -32,16 +39,18 @@ public class Spoon : DraggableObject
         if (Mathf.Abs(xPos - minX) < threshold && stirState == StirState.WentRight)
         {
             // Full cycle: left -> right -> left
-            Debug.Log("Full stir!");
-            FindObjectOfType<SoupManager>().AddToProgress(inc);
+            // Debug.Log("Full stir!");
+            soupManager.AddToMixProgress(inc);
             stirState = StirState.Idle;
         }
-        else if (Mathf.Abs(xPos - maxX) < threshold && stirState == StirState.WentLeft)
+        if (Mathf.Abs(xPos - maxX) < threshold && stirState == StirState.WentLeft)
         {
+            soupManager.AddToMixProgress(inc);
             stirState = StirState.WentRight;
         }
         else if (Mathf.Abs(xPos - minX) < threshold && stirState == StirState.Idle)
         {
+            soupManager.AddToMixProgress(inc);
             stirState = StirState.WentLeft;
         }
     }

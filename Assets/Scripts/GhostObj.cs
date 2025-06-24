@@ -67,7 +67,7 @@ public class GhostObj : Clickable
         return !Input.anyKey;
     }
 
-    void Update() {
+    protected override void Update() {
         // Update ghost state if it is idle/floating
         // if (Input.GetKeyDown("space")) {
         //     if (hasTakenOrder)
