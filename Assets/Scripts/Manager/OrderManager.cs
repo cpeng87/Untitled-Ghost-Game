@@ -81,7 +81,7 @@ public class OrderManager : MonoBehaviour
 
     //completes an order
     //if success, say success dialogue and get money, if fail say fail dialogue.
-    public void CompleteOrder(bool result)
+    public void CompleteOrder(bool result, bool chefSkip)
     {
         if (currActiveOrder == -1)
         {
@@ -94,7 +94,14 @@ public class OrderManager : MonoBehaviour
         // DialogueManager.Instance.CompleteOrderDialogue(currGhost.ghostName, activeOrders[currActiveOrder].seatNum, result);
         DialoguePlayer.Instance.CompleteOrderDialogue(currGhost.ghostName, activeOrders[currActiveOrder].seatNum, result);
         // GameManager.Instance.ghostManager.IncrementStoryIndex(currGhost.ghostName);
-        GameManager.Instance.AddCurrency(activeOrders[currActiveOrder].price);
+        if (chefSkip)
+        {
+            GameManager.Instance.AddCurrency(-2 * activeOrders[currActiveOrder].price); 
+        } else
+        {
+            GameManager.Instance.AddCurrency(activeOrders[currActiveOrder].price);
+        }
+        
         // SortOrders();
         // if (result)
         // {

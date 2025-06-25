@@ -17,9 +17,8 @@ public class GhostSpawningManager : MonoBehaviour
     [SerializeField] private float ghostSpawnCooldown;  //time for new ghost spawn
     [SerializeField] private Vector3 door = new Vector3(-6f, 0.5f,-7f);
     [SerializeField] private float ghostSpeed = 5f;
-    [SerializeField] private float rotationSpeed = 270f;
-    private float minRotationSpeed = 90;
-    private float minGhostSpeed = 3;
+    [SerializeField] private float rotationSpeed = 135f;
+    private float minRotationSpeed = 45f;
     private Quaternion RotationGoal1 = Quaternion.Euler(0f, -90f, 0f);
     private Quaternion RotationGoal2 = Quaternion.Euler(0f, 0f, 0f);
     private bool isReaperSpawn = false;
@@ -100,7 +99,7 @@ public class GhostSpawningManager : MonoBehaviour
                     {
                         float relativeDistZ = Math.Abs(positions[i].z - spawnedGhosts[i].Item1.transform.position.z);
                         float totalDistZ = Math.Abs(door.z - positions[i].z);
-                        float smoothAdjustment = (relativeDistZ + minGhostSpeed) / totalDistZ; //formula which modifies the movement speed to have smooth deceleration
+                        float smoothAdjustment = (float) (relativeDistZ + totalDistZ * 0.67) / totalDistZ; //formula which modifies the movement speed to have smooth deceleration
                         spawnedGhosts[i].Item1.transform.position += ghostSpeed * smoothAdjustment * Time.deltaTime * Vector3.forward;
                     }
                 }
@@ -116,7 +115,7 @@ public class GhostSpawningManager : MonoBehaviour
                     {
                         float relativeDistZ = Math.Abs(positions[i].x - spawnedGhosts[i].Item1.transform.position.x);
                         float totalDistX = Math.Abs(door.x - positions[i].x);
-                        float smoothAdjustment = (relativeDistZ + minGhostSpeed) / totalDistX; //formula which modifies the movement speed to have smooth deceleration
+                        float smoothAdjustment = (float) (relativeDistZ + totalDistX * 0.67) / totalDistX; //formula which modifies the movement speed to have smooth deceleration
                         spawnedGhosts[i].Item1.transform.position += ghostSpeed * smoothAdjustment * Time.deltaTime * Vector3.right;
                     }
                 }
