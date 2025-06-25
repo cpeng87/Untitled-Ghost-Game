@@ -55,7 +55,7 @@ PrefabInstance:
     - target: {fileID: 1630794972795428178, guid: 8ff19a2b9e4b7574bb8391288e10b3fc, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 419791c41fdf8d74ab75f6bfdf89a5e9, type: 2}
+      objectReference: {fileID: 2100000, guid: 6398bcdd3bf583e48b08dc02931b1621, type: 2}
     - target: {fileID: 6868716418057165105, guid: 8ff19a2b9e4b7574bb8391288e10b3fc, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -138,6 +138,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 10.764
       objectReference: {fileID: 0}
+    - target: {fileID: -4683669308469848369, guid: 838193c6e7be6ab4a81753f7b6b12797, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e67bd44fd8948ba4eb186dd521d6ce70, type: 2}
+    - target: {fileID: -4683669308469848369, guid: 838193c6e7be6ab4a81753f7b6b12797, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 46b59323dc4414c48ae12da08b557d36, type: 2}
+    - target: {fileID: -4683669308469848369, guid: 838193c6e7be6ab4a81753f7b6b12797, type: 3}
+      propertyPath: 'm_Materials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 46b59323dc4414c48ae12da08b557d36, type: 2}
+    - target: {fileID: -4683669308469848369, guid: 838193c6e7be6ab4a81753f7b6b12797, type: 3}
+      propertyPath: 'm_Materials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f7703b9cc29b4544aa8f63da5a27a8ef, type: 2}
     - target: {fileID: 919132149155446097, guid: 838193c6e7be6ab4a81753f7b6b12797, type: 3}
       propertyPath: m_Name
       value: WeebGhost_Katana

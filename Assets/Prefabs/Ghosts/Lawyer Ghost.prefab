@@ -165,7 +165,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 8fee135e06f0b6944b658096e1530d62, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: e36684246fe7c9b489a6df0bfb1dbc93, type: 2}
+      objectReference: {fileID: 2100000, guid: 6df7dadab2810eb44afa3e15c07dc224, type: 2}
     - target: {fileID: 919132149155446097, guid: 8fee135e06f0b6944b658096e1530d62, type: 3}
       propertyPath: m_Name
       value: lawyer bowtie
@@ -235,7 +235,7 @@ PrefabInstance:
     - target: {fileID: -1206874426333947015, guid: e1ea456c9f4790d44873a524d3aeccc1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 3dca4ebdd222e9a44967f02bbe2e168e, type: 2}
+      objectReference: {fileID: 2100000, guid: a1ceeab32bc40204da0f364b88bcea8a, type: 2}
     - target: {fileID: 919132149155446097, guid: e1ea456c9f4790d44873a524d3aeccc1, type: 3}
       propertyPath: m_Name
       value: ghostbase2
@@ -337,7 +337,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 6ec36b25d51001d4781e711720f8ff73, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: c6b01184bbb3b1f469171753e9aa7e71, type: 2}
+      objectReference: {fileID: 2100000, guid: f60717aabcf5d5a49a202b2f90bdb153, type: 2}
     - target: {fileID: 919132149155446097, guid: 6ec36b25d51001d4781e711720f8ff73, type: 3}
       propertyPath: m_Name
       value: lawyer mustache
@@ -415,7 +415,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: d39d0b6da2517594d8a7e6bd4803cda6, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: c6b01184bbb3b1f469171753e9aa7e71, type: 2}
+      objectReference: {fileID: 2100000, guid: f60717aabcf5d5a49a202b2f90bdb153, type: 2}
     - target: {fileID: 919132149155446097, guid: d39d0b6da2517594d8a7e6bd4803cda6, type: 3}
       propertyPath: m_Name
       value: lawyer suitcase

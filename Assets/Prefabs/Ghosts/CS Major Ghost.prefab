@@ -125,7 +125,7 @@ PrefabInstance:
     - target: {fileID: -1206874426333947015, guid: e1ea456c9f4790d44873a524d3aeccc1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: ebe25a2504438684ea9d636bc559a260, type: 2}
+      objectReference: {fileID: 2100000, guid: 56b7852f1a58a284994f5064f1fdd667, type: 2}
     - target: {fileID: 919132149155446097, guid: e1ea456c9f4790d44873a524d3aeccc1, type: 3}
       propertyPath: m_Name
       value: ghostbase2 (1)
@@ -312,6 +312,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: ebe25a2504438684ea9d636bc559a260, type: 2}
+    - target: {fileID: -678588488315902003, guid: 225be71675fdb1640a132b836553d2a2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d1c7888eacd82674b9e693bc843a4aa9, type: 2}
     - target: {fileID: 919132149155446097, guid: 225be71675fdb1640a132b836553d2a2, type: 3}
       propertyPath: m_Name
       value: CS Ghost

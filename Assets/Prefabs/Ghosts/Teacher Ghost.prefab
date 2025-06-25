@@ -162,6 +162,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -84.736
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b6ac3ca61a447b1409fc78bfd857042c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f7703b9cc29b4544aa8f63da5a27a8ef, type: 2}
     - target: {fileID: 919132149155446097, guid: b6ac3ca61a447b1409fc78bfd857042c, type: 3}
       propertyPath: m_Name
       value: TeacherGhost_Glasses (1)
@@ -236,6 +240,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 219132b35aa0f96419dd7dfc948f0cc9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d446bde7c0e2d4d46b3acb71c2bccbea, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 219132b35aa0f96419dd7dfc948f0cc9, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9f29fcfa9da3a93449e24e82b3457721, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 219132b35aa0f96419dd7dfc948f0cc9, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9f29fcfa9da3a93449e24e82b3457721, type: 2}
     - target: {fileID: 919132149155446097, guid: 219132b35aa0f96419dd7dfc948f0cc9, type: 3}
       propertyPath: m_Name
       value: TeacherGhost_Book (1)
@@ -305,7 +321,7 @@ PrefabInstance:
     - target: {fileID: -1206874426333947015, guid: e1ea456c9f4790d44873a524d3aeccc1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 67ca916f76a3a4f459333f9c598fe23f, type: 2}
+      objectReference: {fileID: 2100000, guid: f89b0a2fa84bb9a479a6ebc29be092d8, type: 2}
     - target: {fileID: 919132149155446097, guid: e1ea456c9f4790d44873a524d3aeccc1, type: 3}
       propertyPath: m_Name
       value: ghostbase2

@@ -95,7 +95,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 503c0dca91e5be741bd6b0227b63842b, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 44566ac7906fa50418693e88e5f3ed09, type: 2}
+      objectReference: {fileID: 2100000, guid: 6df7dadab2810eb44afa3e15c07dc224, type: 2}
     - target: {fileID: 919132149155446097, guid: 503c0dca91e5be741bd6b0227b63842b, type: 3}
       propertyPath: m_Name
       value: clothes
@@ -173,7 +173,15 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: ac259a994c47372418aa94d4a852e66a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 44566ac7906fa50418693e88e5f3ed09, type: 2}
+      objectReference: {fileID: 2100000, guid: 6df7dadab2810eb44afa3e15c07dc224, type: 2}
+    - target: {fileID: -7511558181221131132, guid: ac259a994c47372418aa94d4a852e66a, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 31675b9dc36e0e8428d165f98a3e3457, type: 2}
+    - target: {fileID: -7511558181221131132, guid: ac259a994c47372418aa94d4a852e66a, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f7703b9cc29b4544aa8f63da5a27a8ef, type: 2}
     - target: {fileID: 919132149155446097, guid: ac259a994c47372418aa94d4a852e66a, type: 3}
       propertyPath: m_Name
       value: pencil
@@ -243,7 +251,7 @@ PrefabInstance:
     - target: {fileID: 1630794972795428178, guid: 8ff19a2b9e4b7574bb8391288e10b3fc, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 419791c41fdf8d74ab75f6bfdf89a5e9, type: 2}
+      objectReference: {fileID: 2100000, guid: 6398bcdd3bf583e48b08dc02931b1621, type: 2}
     - target: {fileID: 6868716418057165105, guid: 8ff19a2b9e4b7574bb8391288e10b3fc, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -412,6 +420,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -251.374
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9d4a5dd0ece90bc4d8fc8eb5c1e4e253, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: be3f3cf491a469d4ea87ae70b414e170, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d4a5dd0ece90bc4d8fc8eb5c1e4e253, type: 3}
       propertyPath: m_Name
       value: blueprint (1)

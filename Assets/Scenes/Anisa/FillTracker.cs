@@ -6,6 +6,7 @@ public class FillTracker : MonoBehaviour
     private Slider progressBar;
     public bool isFull = false;
     public float currentFillLevel = 0f;
+    public float numParticles;
 
     [SerializeField] GameObject progressBarPrefab;
     [SerializeField] Transform canvasTransform; 

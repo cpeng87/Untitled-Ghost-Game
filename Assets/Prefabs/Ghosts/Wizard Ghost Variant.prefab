@@ -162,6 +162,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: d6d6442c46ea5174ba8cb6925c6263e3, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 25181997b5cf67c43ac9ffbfaa119b15, type: 2}
+    - target: {fileID: -7511558181221131132, guid: d6d6442c46ea5174ba8cb6925c6263e3, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 46b59323dc4414c48ae12da08b557d36, type: 2}
     - target: {fileID: 919132149155446097, guid: d6d6442c46ea5174ba8cb6925c6263e3, type: 3}
       propertyPath: m_Name
       value: WizardGhost_Wand
@@ -239,7 +247,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: b99dc4ba79d83104fa9a8f37f1c63e57, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
-      objectReference: {fileID: 2100000, guid: 9c648de2cc641eb48946fd22305f61d5, type: 2}
+      objectReference: {fileID: 2100000, guid: 2a7a57057e2cd2b4d971a92b249a7af3, type: 2}
     - target: {fileID: 919132149155446097, guid: b99dc4ba79d83104fa9a8f37f1c63e57, type: 3}
       propertyPath: m_Name
       value: WizardGhost_Hat
@@ -309,7 +317,7 @@ PrefabInstance:
     - target: {fileID: -1206874426333947015, guid: e1ea456c9f4790d44873a524d3aeccc1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 308e9e5ef990b6b4283de9088fd4b7ae, type: 2}
+      objectReference: {fileID: 2100000, guid: 512b4533485d2184a996d8cfe070bce4, type: 2}
     - target: {fileID: 919132149155446097, guid: e1ea456c9f4790d44873a524d3aeccc1, type: 3}
       propertyPath: m_Name
       value: ghostbase2

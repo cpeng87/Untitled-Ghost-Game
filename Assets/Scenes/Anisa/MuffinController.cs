@@ -1,32 +1,48 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class MuffinController : MonoBehaviour
 {
 
     private bool result;
+    [SerializeField] private List<FillTracker> fillTrackers = new List<FillTracker>();
+    [SerializeField] private float marginOfError;
 
-    public void checkCompletion() 
+    public void checkCompletion()
     {
-        if (MuffinsComplete()) 
+        if (MuffinsComplete())
         {
             Debug.Log("All muffins are complete!");
             GameManager.Instance.CompleteMinigame(true);
-        } else
+        }
+        else
         {
             GameManager.Instance.CompleteMinigame(false);
         }
     }
 
+    private void Update()
+    {
+        float sum = 1f;
+        foreach (FillTracker fillTracker in fillTrackers)
+        {
+            sum += fillTracker.currentFillLevel;
+        }
+        foreach (FillTracker fillTracker in fillTrackers)
+        {
+            fillTracker.GetProgressBar().value = fillTracker.currentFillLevel / sum;
+        }
+    }
+
     bool MuffinsComplete() 
     {
-        FillTracker[] fillTrackers = GetComponentsInChildren<FillTracker>();
         foreach (FillTracker fillTracker in fillTrackers) 
         {
-            if (!fillTracker.isFull) 
+            if (fillTracker.GetProgressBar().value < 0.33 - marginOfError || fillTracker.GetProgressBar().value > 0.33 + marginOfError) 
             {
-                return false; // If any muffin is not complete, return false
+                return false;
             }
         }
-        return true; // All muffins are complete
+        return true;
     }
 }

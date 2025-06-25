@@ -11,6 +11,7 @@ public class TicketManager : MonoBehaviour
     [SerializeField] private GameObject ordersPanel; //full UI of the pop up
     [SerializeField] private GameObject orderTicket; //individual ticket prefab
     [SerializeField] private Animator makeOrderNotifAnimator;
+    [SerializeField] private GameObject ticketParent;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
@@ -56,7 +57,7 @@ public class TicketManager : MonoBehaviour
         tickets.Add(ticket.name);
 
         // Set ticket's parent
-        ticket.transform.SetParent(ordersPanel.transform.GetChild(0));
+        ticket.transform.SetParent(ticketParent.transform);
 
         // Set width and height of ticket
         ticket.transform.localScale = new Vector3(1f, 1f, 1f);
@@ -121,9 +122,9 @@ public class TicketManager : MonoBehaviour
     public void SetUpOrdersPanel()
     {
         // Get rid of old tickets
-        while (ordersPanel.transform.GetChild(0).childCount > 0)
+        while (ticketParent.transform.childCount > 0)
         {
-            DestroyImmediate(ordersPanel.transform.GetChild(0).GetChild(0).gameObject);
+            DestroyImmediate(ticketParent.transform.GetChild(0).gameObject);
         }
 
         // Set the order panel to inactive

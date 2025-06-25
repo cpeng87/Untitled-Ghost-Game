@@ -166,6 +166,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8672923644344864415, guid: 56113947f4066f34d87114fe36640d46, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d984d17a82fd78e46af9ffbc5e8db2e4, type: 2}
     - target: {fileID: 919132149155446097, guid: 56113947f4066f34d87114fe36640d46, type: 3}
       propertyPath: m_Name
       value: bum_ghost_hoodie
@@ -305,7 +309,7 @@ PrefabInstance:
     - target: {fileID: -1206874426333947015, guid: e1ea456c9f4790d44873a524d3aeccc1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 308e9e5ef990b6b4283de9088fd4b7ae, type: 2}
+      objectReference: {fileID: 2100000, guid: 512b4533485d2184a996d8cfe070bce4, type: 2}
     - target: {fileID: 919132149155446097, guid: e1ea456c9f4790d44873a524d3aeccc1, type: 3}
       propertyPath: m_Name
       value: ghostbase2

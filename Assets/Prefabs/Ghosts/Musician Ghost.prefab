@@ -87,7 +87,7 @@ PrefabInstance:
     - target: {fileID: -1206874426333947015, guid: e1ea456c9f4790d44873a524d3aeccc1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: f9a5e02c694d36b4982b13b45296cb88, type: 2}
+      objectReference: {fileID: 2100000, guid: eca41548a6f72734f858256ba12ac0ce, type: 2}
     - target: {fileID: 919132149155446097, guid: e1ea456c9f4790d44873a524d3aeccc1, type: 3}
       propertyPath: m_Name
       value: ghostbase2
@@ -181,10 +181,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7918335002988649766, guid: 738cfda29c08a014f852ce6deb45ed03, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d1c7888eacd82674b9e693bc843a4aa9, type: 2}
+    - target: {fileID: -1439730007547781893, guid: 738cfda29c08a014f852ce6deb45ed03, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f7703b9cc29b4544aa8f63da5a27a8ef, type: 2}
+    - target: {fileID: 882129737928793925, guid: 738cfda29c08a014f852ce6deb45ed03, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d1c7888eacd82674b9e693bc843a4aa9, type: 2}
     - target: {fileID: 919132149155446097, guid: 738cfda29c08a014f852ce6deb45ed03, type: 3}
       propertyPath: m_Name
       value: Headphones
       objectReference: {fileID: 0}
+    - target: {fileID: 7071182760956848314, guid: 738cfda29c08a014f852ce6deb45ed03, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f7703b9cc29b4544aa8f63da5a27a8ef, type: 2}
+    - target: {fileID: 7202271454713460447, guid: 738cfda29c08a014f852ce6deb45ed03, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f7703b9cc29b4544aa8f63da5a27a8ef, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: -8700617353114198275, guid: 738cfda29c08a014f852ce6deb45ed03, type: 3}
@@ -335,6 +355,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: guitar
       objectReference: {fileID: 0}
+    - target: {fileID: 3616844112969948802, guid: c8a5df7b13880bc40b3c28e2ae419474, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9326593b306e03e469ccbb2d9780e3bc, type: 2}
+    - target: {fileID: 3616844112969948802, guid: c8a5df7b13880bc40b3c28e2ae419474, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7b26f924ac0d0e742a4ced088d9949ba, type: 2}
+    - target: {fileID: 3616844112969948802, guid: c8a5df7b13880bc40b3c28e2ae419474, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f21699215f9d824b9d0ead371956e84, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: -8700617353114198275, guid: c8a5df7b13880bc40b3c28e2ae419474, type: 3}
@@ -411,6 +443,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: beanie
       objectReference: {fileID: 0}
+    - target: {fileID: 6317578925029434746, guid: 0089786ee2f561447af1654df5f4bf6b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e9c815bbbdf14094788ecfcfe66bdc8e, type: 2}
+    - target: {fileID: 7202271454713460447, guid: 0089786ee2f561447af1654df5f4bf6b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e9c815bbbdf14094788ecfcfe66bdc8e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: -8700617353114198275, guid: 0089786ee2f561447af1654df5f4bf6b, type: 3}

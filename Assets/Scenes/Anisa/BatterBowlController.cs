@@ -58,6 +58,24 @@ public class BatterBowlController : MonoBehaviour
 
     // Fill individual muffin cups by using a plane and updating its height to simulate filling process using particles
     void FillMuffinCup(Collider cupCollider, FillTracker tracker) {
+        // Transform fillPlane = cupCollider.transform.GetChild(1);
+        // ParticleSystem.Particle[] particles = new ParticleSystem.Particle[pourParticles.particleCount];
+        // int numParticles = pourParticles.GetParticles(particles);
+
+        // foreach (var particle in particles)
+        // {
+        //     // Check if the particle is inside the cup
+        //     if (cupCollider.bounds.Contains(particle.position))
+        //     {
+        //         // Increase fill level based on particles in the cup
+        //         tracker.currentFillLevel += Time.deltaTime * 0.001f;
+        //         tracker.currentFillLevel = Mathf.Clamp01(tracker.currentFillLevel); // Ensure fill level is between 0 and 1
+        //         // UpdateFillProgress(tracker, tracker.currentFillLevel, numParticles);
+        //         UpdateFillProgress(tracker, tracker.currentFillLevel, numParticles);
+
+        //     }
+        // }
+        
         Transform fillPlane = cupCollider.transform.GetChild(1);
         ParticleSystem.Particle[] particles = new ParticleSystem.Particle[pourParticles.particleCount];
         int numParticles = pourParticles.GetParticles(particles);
@@ -68,9 +86,12 @@ public class BatterBowlController : MonoBehaviour
             if (cupCollider.bounds.Contains(particle.position))
             {
                 // Increase fill level based on particles in the cup
-                tracker.currentFillLevel += Time.deltaTime * 0.001f;
-                tracker.currentFillLevel = Mathf.Clamp01(tracker.currentFillLevel); // Ensure fill level is between 0 and 1
-                UpdateFillProgress(tracker, tracker.currentFillLevel, numParticles);
+                tracker.currentFillLevel += 1;
+                // tracker.currentFillLevel = Mathf.Clamp01(tracker.currentFillLevel); // Ensure fill level is between 0 and 1
+                // UpdateFillProgress(tracker, tracker.currentFillLevel, numParticles);
+                
+                // UpdateFillProgress(tracker, tracker.currentFillLevel, numParticles);
+                
             }
         }
 
@@ -81,22 +102,27 @@ public class BatterBowlController : MonoBehaviour
     }
 
     // Update individual muffin cup's progress slider and fill state
-    void UpdateFillProgress(FillTracker tracker, float currentLevel, int numParticles) {
+    void UpdateFillProgress(FillTracker tracker, float currentLevel, int numParticles)
+    {
+        // //Vanilla
+        // var progressBar = tracker.GetProgressBar();
+
+        // // Cup will be full only if min amount of batter was added upto certain height
+        // float minParticleCount = 100;
+        // progressBar.value = Mathf.Min(currentLevel / maxFillHeight, (float)numParticles / minParticleCount);
+
+        // if (progressBar.value >= 1.0f && numParticles >= minParticleCount)
+        // {
+        //     Debug.Log("Cup is full!");
+        //     tracker.isFull = true;
+        // } 
+        // else 
+        // {
+        //     tracker.isFull = false;
+        // }
         var progressBar = tracker.GetProgressBar();
 
-        // Cup will be full only if min amount of batter was added upto certain height
-        float minParticleCount = 100;
-        progressBar.value = Mathf.Min(currentLevel / maxFillHeight, (float)numParticles / minParticleCount);
-
-        if (progressBar.value >= 1.0f && numParticles >= minParticleCount)
-        {
-            Debug.Log("Cup is full!");
-            tracker.isFull = true;
-        } 
-        else 
-        {
-            tracker.isFull = false;
-        }
+        // currentLevel / muffinController.GetTotalParticles
     }
 
     void Update()
