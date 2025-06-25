@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 class Draw : MonoBehaviour
 {
@@ -6,7 +8,7 @@ class Draw : MonoBehaviour
     [SerializeField] private Camera cam;
     [SerializeField] private int totalXPixels = 1024;
     [SerializeField] private int totalYPixels = 512;
-    [SerializeField] private int brushSize = 4;
+    [SerializeField] private int brushSize = 2;
     [SerializeField] private Color brushColor;
     [SerializeField] private bool useInterpolation = true;
     [SerializeField] private Transform topLeftCorner;
@@ -22,6 +24,8 @@ class Draw : MonoBehaviour
     [SerializeField] private int lastY = 0;
     [SerializeField] private float xMult;
     [SerializeField] private float yMult;
+    [SerializeField] private Material referenceMaterial;
+    private Texture2D textureGoal;
 
     private void Start()
     {
@@ -34,6 +38,18 @@ class Draw : MonoBehaviour
 
         xMult = totalXPixels / (bottomRightCorner.localPosition.x - topLeftCorner.localPosition.x);
         yMult = totalYPixels / (bottomRightCorner.localPosition.y - topLeftCorner.localPosition.y);
+
+        textureGoal = new Texture2D(300, 300);
+        
+        for (int i = 0; i < textureGoal.height; i++)
+        {
+            for (int j = 0; j < textureGoal.width; j++)
+            {
+                textureGoal.SetPixel(i, j, Color.grey);
+            }
+
+        }
+        textureGoal.Apply();
     }
 
     private void Update()
@@ -115,6 +131,49 @@ class Draw : MonoBehaviour
         for (int i = 0; i < colorMap.Length; i++)
             colorMap[i] = new Color(200, 160, 130); //Color.white;
         SetTexture();
+    }
+
+
+    private bool IsPixelActive(Color color)
+    {
+        // Consider a pixel active if not transparent and not black
+        return color.a > 0.01f && (color.r > 0.01f || color.g > 0.01f || color.b > 0.01f);
+    }
+
+    public float CalculateAccuracy()
+    {
+        Color[] colorData = generatedTexture.GetPixels();
+        Color[] goal = textureGoal.GetPixels();
+
+        int pixelsInside = 0;
+        int pixelsOutside = 0;
+
+        for (int i = 0; i < Math.Min(colorData.Length,goal.Length); i++)
+        {
+            Color generatedColors = colorData[i];
+            Color referenceColors = goal[i];
+
+            if (IsPixelActive(generatedColors))
+            {
+                if (IsPixelActive(referenceColors))
+                {
+                    pixelsInside++;
+                }
+                else
+                {
+                    pixelsOutside++;
+                }
+            }
+        }
+
+        int totalPixels = pixelsInside + pixelsOutside;
+        float percentInside = pixelsInside / totalPixels;
+        //float percentOutside = pixelsOutside / totalPixels;
+
+        //return (float)(percentInside - (0.5 * percentOutside));
+
+        Debug.Log("Inside: " + pixelsInside + "\nOutside: " + pixelsOutside);
+        return (float)(percentInside);
     }
 
 }

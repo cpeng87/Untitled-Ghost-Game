@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 5d56d7898e7b06648abfe8750d3659a4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - cam: {instanceID: 0}
+  - mat: {instanceID: 0}
+  - topLeftCorner: {instanceID: 0}
+  - bottomRightCorner: {instanceID: 0}
+  - point: {instanceID: 0}
+  - textureGoal: {fileID: 2800000, guid: 666afc64884d4b24d8f9fcd28f22f9f7, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

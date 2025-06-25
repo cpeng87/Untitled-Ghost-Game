@@ -69,9 +69,9 @@ public class GameManager : MonoBehaviour
         StartCoroutine(SwitchToSceneCoroutine(minigameName));
     }
 
-    public void CompleteMinigame(bool isSuccess)
+    public void CompleteMinigame(bool isSuccess, bool chefSkip = false)
     {
-        StartCoroutine(CompleteMinigameCoroutine("MainStorefront", isSuccess));
+        StartCoroutine(CompleteMinigameCoroutine("MainStorefront", isSuccess, chefSkip));
     }
 
     private IEnumerator SwitchToSceneCoroutine(string sceneName)
@@ -92,7 +92,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private IEnumerator CompleteMinigameCoroutine(string sceneName, bool isSuccess)
+    private IEnumerator CompleteMinigameCoroutine(string sceneName, bool isSuccess, bool chefSkip)
     {
         // Get the loading screen
         LoadingScreen loadingScreen = FindObjectOfType<LoadingScreen>();
@@ -110,7 +110,7 @@ public class GameManager : MonoBehaviour
         }
 
         // Complete the order
-        orderManager.CompleteOrder(isSuccess);
+        orderManager.CompleteOrder(isSuccess, chefSkip);
         state = State.Dialogue;
 
         // Optionally fade out the loading screen after loading
