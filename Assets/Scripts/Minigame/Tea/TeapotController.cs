@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TeapotController : MonoBehaviour
+public class TeapotController : MinigameCompletion
 {
     private Vector3 offset;
     private bool isDragging = false;
@@ -23,7 +23,7 @@ public class TeapotController : MonoBehaviour
 
     [SerializeField] private int teaCounter;
     private int maxTeaParticles = 200;
-    private bool outOfTea = false;
+    public bool outOfTea = false;
     private float totalEmittedParticles = 0;
     public Slider teaProgress;
     [SerializeField] private int neededParticles;
@@ -36,6 +36,7 @@ public class TeapotController : MonoBehaviour
         //set slider values based on neededparticles
         teaProgress.minValue = 0;
         teaProgress.maxValue = neededParticles;
+        pourParticles.Stop();
     }
 
     void Update()
@@ -46,6 +47,7 @@ public class TeapotController : MonoBehaviour
             float emissionRate = pourParticles.emission.rateOverTime.constant;
             float deltaParticles = emissionRate * Time.deltaTime;
             totalEmittedParticles += deltaParticles;
+            Debug.Log("IS EMITTING");
 
             if (totalEmittedParticles >= maxTeaParticles)
             {
@@ -139,6 +141,7 @@ public class TeapotController : MonoBehaviour
 
         //update slider
         teaProgress.value = teaCounter;
+        CheckResults();
         teaSteamParticles.Play();
     }
 
@@ -147,16 +150,9 @@ public class TeapotController : MonoBehaviour
     public void CheckResults()
     {
         bool result = teaCounter >= neededParticles;
-        Debug.Log("Tea Counter: " + teaCounter);
-        Debug.Log("Needed Particles: " + neededParticles);
         if (result)
         {
-            Debug.Log("success");
+            minigameResult.MinigameResult(result);
         }
-        else
-        {
-            Debug.Log("fail");
-        }
-        GameManager.Instance.CompleteMinigame(result);
     }
 }

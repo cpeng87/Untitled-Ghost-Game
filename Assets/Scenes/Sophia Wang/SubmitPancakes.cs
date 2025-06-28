@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class SubmitPancakes : MonoBehaviour
+public class SubmitPancakes : MinigameCompletion
 {
     private int pancakes;
     public bool failed = false;
@@ -22,16 +22,11 @@ public class SubmitPancakes : MonoBehaviour
             //success dialogue
             result = true;
         }
-       GameManager.Instance.CompleteMinigame(result);
+        minigameResult.MinigameResult(result);
     }
     private void OnTriggerEnter(Collider other)
     {
         //do something to fail
-        failed = true;
-    }
-
-    public void GiveUpMinigame()
-    {
-        GameManager.Instance.CompleteMinigame(false);
+        minigameResult.MinigameResult(false);
     }
 }

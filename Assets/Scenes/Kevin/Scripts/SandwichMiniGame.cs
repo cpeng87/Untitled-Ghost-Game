@@ -3,8 +3,7 @@ using UnityEngine;
 using System.Linq;
 using System.Collections.Generic;
 
-public class MiniGame : MonoBehaviour
-{
+public class MiniGame : MinigameCompletion {
     public static MiniGame Instance;
 
     [SerializeField] private Transform[] blockPrefabs;
@@ -32,7 +31,6 @@ public class MiniGame : MonoBehaviour
     private HashSet<GameObject> connectedIngredients = new HashSet<GameObject>();
     private HashSet<GameObject> placedIngredients = new HashSet<GameObject>();
     private Coroutine successCheckCoroutine;
-
 
     void Awake()
     {
@@ -64,16 +62,16 @@ public class MiniGame : MonoBehaviour
 
     public void Fail()
     {
-        StartCoroutine(FailCoroutine());
+        minigameResult.MinigameResult(false);
     }
 
-    private IEnumerator FailCoroutine()
-    {
-        failText.gameObject.SetActive(true);
-        failText.text = "Failed!";
-        yield return new WaitForSeconds(1f);
-        GameManager.Instance.CompleteMinigame(false);
-    }
+    // private IEnumerator FailCoroutine()
+    // {
+    //     failText.gameObject.SetActive(true);
+    //     failText.text = "Failed!";
+    //     yield return new WaitForSeconds(1f);
+    //     GameManager.Instance.CompleteMinigame(false);
+    // }
 
 
     private void GenerateSandwichOrder()
@@ -148,31 +146,24 @@ public class MiniGame : MonoBehaviour
     {
         if (allIngredientsPlaced && connectedIngredients.Count == placedIngredients.Count)
         {
-            if (successCheckCoroutine == null)
-            {
-                successCheckCoroutine = StartCoroutine(SuccessCheckTimer());
-            }
+            minigameResult.MinigameResult(true);
         }
-        else
-        {
-            if (successCheckCoroutine != null)
-            {
-                StopCoroutine(successCheckCoroutine);
-                successCheckCoroutine = null;
-                countdownText.gameObject.SetActive(false);
-            }
-        }
+        // else
+        // {
+        //     if (successCheckCoroutine != null)
+        //     {
+        //         StopCoroutine(successCheckCoroutine);
+        //         successCheckCoroutine = null;
+        //         countdownText.gameObject.SetActive(false);
+        //     }
+        // }
     }
 
-    private IEnumerator SuccessCheckTimer()
-    {
-        if (connectedIngredients.Count == placedIngredients.Count)
-        {
-            successText.gameObject.SetActive(true);
-            successText.text = "Sandwich Complete!";
-            yield return new WaitForSeconds(2f);
-            UnityEngine.SceneManagement.SceneManager.LoadScene("MainStorefront");
-            GameManager.Instance.CompleteMinigame(true);
-        }
-    }
+    // private IEnumerator SuccessCheckTimer()
+    // {
+    //     if (connectedIngredients.Count == placedIngredients.Count)
+    //     {
+    //         successFail.MinigameResult(true);
+    //     }
+    // }
 }

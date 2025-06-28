@@ -18,7 +18,7 @@ public class GhostSpawningManager : MonoBehaviour
     [SerializeField] private Vector3 door = new Vector3(-6f, 0.5f,-7f);
     [SerializeField] private float ghostSpeed = 5f;
     [SerializeField] private float rotationSpeed = 135f;
-    private float minRotationSpeed = 45f;
+    private float minRotationSpeed = 90f;
     private Quaternion RotationGoal1 = Quaternion.Euler(0f, -90f, 0f);
     private Quaternion RotationGoal2 = Quaternion.Euler(0f, 0f, 0f);
     private bool isReaperSpawn = false;
@@ -99,8 +99,8 @@ public class GhostSpawningManager : MonoBehaviour
                     {
                         float relativeDistZ = Math.Abs(positions[i].z - spawnedGhosts[i].Item1.transform.position.z);
                         float totalDistZ = Math.Abs(door.z - positions[i].z);
-                        float smoothAdjustment = (float) (relativeDistZ + totalDistZ * 0.67) / totalDistZ; //formula which modifies the movement speed to have smooth deceleration
-                        spawnedGhosts[i].Item1.transform.position += ghostSpeed * smoothAdjustment * Time.deltaTime * Vector3.forward;
+                        float smoothAdjustment = (float)(relativeDistZ + totalDistZ * 0.67) / totalDistZ; //formula which modifies the movement speed to have smooth deceleration
+                        spawnedGhosts[i].Item1.transform.position += ghostSpeed * Time.deltaTime * Vector3.forward;
                     }
                 }
                 else
@@ -115,8 +115,8 @@ public class GhostSpawningManager : MonoBehaviour
                     {
                         float relativeDistZ = Math.Abs(positions[i].x - spawnedGhosts[i].Item1.transform.position.x);
                         float totalDistX = Math.Abs(door.x - positions[i].x);
-                        float smoothAdjustment = (float) (relativeDistZ + totalDistX * 0.67) / totalDistX; //formula which modifies the movement speed to have smooth deceleration
-                        spawnedGhosts[i].Item1.transform.position += ghostSpeed * smoothAdjustment * Time.deltaTime * Vector3.right;
+                        float smoothAdjustment = (float)(relativeDistZ + totalDistX * 0.67) / totalDistX; //formula which modifies the movement speed to have smooth deceleration
+                        spawnedGhosts[i].Item1.transform.position += ghostSpeed * Time.deltaTime * Vector3.right;
                     }
                 }
 
@@ -156,7 +156,7 @@ public class GhostSpawningManager : MonoBehaviour
         }
 
     }
-
+    
     public void SpawnGhost()
     {
         if (GameManager.Instance.ghostManager.IsActiveFull() == true)
@@ -202,17 +202,15 @@ public class GhostSpawningManager : MonoBehaviour
         
         List<Ghost> possibleGhost = new List<Ghost>();
 
-        foreach (Recipe recipe in GameManager.Instance.unlockedRecipes)
+        foreach (Ghost ghost in GameManager.Instance.ghostManager.GetGhostScriptables())
         {
-            List<Ghost> ghostRangePerRecipe = GameManager.Instance.ghostManager.GetGhostsFromRecipe(recipe);
-            for (int i = ghostRangePerRecipe.Count - 1; i >= 0; i--) {
-                Ghost g = ghostRangePerRecipe[i];
-                if (GameManager.Instance.ghostManager.IsComplete(g))
+            if ((int)ghost.arc <= (int)GameManager.Instance.arc)
+            {
+                if (GameManager.Instance.ghostManager.IsComplete(ghost) == false)
                 {
-                    ghostRangePerRecipe.RemoveAt(i);
+                    possibleGhost.Add(ghost);
                 }
             }
-            possibleGhost.AddRange(ghostRangePerRecipe);
         }
 
         List<Ghost> arcGhost = new List<Ghost>();
@@ -278,11 +276,132 @@ public class GhostSpawningManager : MonoBehaviour
         AudioManager.Instance.PlaySound("DoorChime");
     }
 
+    // public void SpawnGhost()
+    // {
+    //     if (GameManager.Instance.ghostManager.IsActiveFull() == true)
+    //     {
+    //         return;
+    //     }
+
+    //     int reaperIndex = GameManager.Instance.ghostManager.GetStoryIndex("Reaper");
+
+    //     //reaper spawns hardcoded >.> erm
+    //     if (reaperIndex == 1)
+    //     {  
+    //         Ghost reaperScriptable = GameManager.Instance.ghostManager.GetGhostScriptableFromName("Reaper");
+    //         if (GameManager.Instance.ghostManager.CheckGhostIsActive(reaperScriptable) == false)
+    //         {
+    //             GameManager.Instance.ghostManager.AddActiveGhost(reaperScriptable);
+    //             int reaperSeatNum = GameManager.Instance.ghostManager.GetSeatNum(reaperScriptable);
+    //             GameObject reaperObj = Instantiate(GameManager.Instance.ghostManager.GetGhostObjFromName("Reaper"), door, Quaternion.identity);
+    //             reaperObj.GetComponent<GhostObj>().SetSeatNum(reaperSeatNum);
+    //             spawnedGhosts[reaperSeatNum] = (reaperObj, true);
+    //             AudioManager.Instance.PlaySound("DoorChime");
+    //         }
+    //         return;
+    //     }
+
+    //     if (isReaperSpawn)
+    //     {
+    //         Ghost reaperScriptable = GameManager.Instance.ghostManager.GetGhostScriptableFromName("Reaper");
+    //         if (GameManager.Instance.ghostManager.CheckGhostIsActive(reaperScriptable) == false)
+    //         {
+    //             GameManager.Instance.ghostManager.AddActiveGhost(reaperScriptable);
+    //             int reaperSeatNum = GameManager.Instance.ghostManager.GetSeatNum(reaperScriptable);
+    //             GameObject reaperObj = Instantiate(GameManager.Instance.ghostManager.GetGhostObjFromName("Reaper"), door, Quaternion.identity);
+    //             reaperObj.GetComponent<GhostObj>().SetSeatNum(reaperSeatNum);
+    //             spawnedGhosts[reaperSeatNum] = (reaperObj, true);
+    //             AudioManager.Instance.PlaySound("DoorChime");
+    //         }
+    //         isReaperSpawn = false;
+    //         return;
+    //     }
+
+    //     //if finish arc ghosts
+
+    //     List<Ghost> possibleGhost = new List<Ghost>();
+
+    //     foreach (Recipe recipe in GameManager.Instance.unlockedRecipes)
+    //     {
+    //         List<Ghost> ghostRangePerRecipe = GameManager.Instance.ghostManager.GetGhostsFromRecipe(recipe);
+    //         for (int i = ghostRangePerRecipe.Count - 1; i >= 0; i--) {
+    //             Ghost g = ghostRangePerRecipe[i];
+    //             if (GameManager.Instance.ghostManager.IsComplete(g))
+    //             {
+    //                 ghostRangePerRecipe.RemoveAt(i);
+    //             }
+    //         }
+    //         possibleGhost.AddRange(ghostRangePerRecipe);
+    //     }
+
+    //     List<Ghost> arcGhost = new List<Ghost>();
+    //     List<Ghost> sideGhost = new List<Ghost>();
+
+    //     foreach (Ghost ghost in possibleGhost)
+    //     {
+    //         if (ghost.arc == GameManager.Instance.arc)
+    //         {
+    //             arcGhost.Add(ghost);
+    //         }
+    //         else
+    //         {
+    //             sideGhost.Add(ghost);
+    //         }
+    //     }
+
+    //     if (arcGhost.Count != 0 && sideGhost.Count != 0)
+    //     {
+    //         float rand = UnityEngine.Random.value;
+    //         if (rand < 0.65f) // main story ghost
+    //         {
+    //             possibleGhost = arcGhost;
+    //         }
+    //         else
+    //         {
+    //             possibleGhost = sideGhost;
+    //         }
+    //     }
+    //     else if (arcGhost.Count == 0)
+    //     {
+    //         possibleGhost = sideGhost;
+    //     }
+    //     else
+    //     {
+    //         possibleGhost = arcGhost;
+    //     }
+
+    //     int index = (int) (UnityEngine.Random.value * possibleGhost.Count);
+    //     index = Math.Abs(index);
+    //     int count = 0;
+
+    //     if (possibleGhost.Count == 0) {
+    //         Debug.Log("No customers are left. All of them have been completed!");
+    //         RecipeShopManager.Instance.SetRecipeShopNotif(true);
+    //         return;
+    //     }
+    //     while (GameManager.Instance.ghostManager.CheckGhostIsActive(possibleGhost[index]) == true || possibleGhost[index].ghostName == "Reaper")
+    //     {
+    //         if (count > 100)
+    //         {
+    //             Debug.Log("Cannot spawn any ghost, maxed rolls");
+    //             return;
+    //         }
+    //         index = (int) (UnityEngine.Random.value * possibleGhost.Count);
+    //         count++;
+    //     }
+    //     GameManager.Instance.ghostManager.AddActiveGhost(possibleGhost[index]);
+    //     int seatNum = GameManager.Instance.ghostManager.GetSeatNum(possibleGhost[index]);
+    //     GameObject newGhost = Instantiate(GameManager.Instance.ghostManager.GetGhostObjFromName(possibleGhost[index].ghostName), door, Quaternion.identity);
+    //     newGhost.GetComponent<GhostObj>().SetSeatNum(seatNum);
+    //     spawnedGhosts[seatNum] = (newGhost, true);
+    //     AudioManager.Instance.PlaySound("DoorChime");
+    // }
+
     //deletes gameobject and removes from spawned ghosts list
     public void DeleteSpawnedGhost(int seatNum)
     {
         Destroy(spawnedGhosts[seatNum].Item1);
-        spawnedGhosts[seatNum] = (null,false);
+        spawnedGhosts[seatNum] = (null, false);
     }
 
     public GameObject GetSpawnedGhost(int seatNum)

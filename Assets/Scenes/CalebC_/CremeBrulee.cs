@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CremeBrulee : MonoBehaviour
+public class CremeBrulee : MinigameCompletion
 {
 
     public Slider progressSlider;
@@ -18,6 +18,7 @@ public class CremeBrulee : MonoBehaviour
     public void IncreaseSlider(float value)
     {
         progressSlider.value += value;
+        CheckResults();
     }
 
     
@@ -29,19 +30,10 @@ public class CremeBrulee : MonoBehaviour
 
     public void CheckResults()
     {
-        bool result = progressSlider.value >= 85;
+        bool result = progressSlider.value >= 100;
         if(result)
         {
-            Debug.Log("success");
+            minigameResult.MinigameResult(true);
         }
-        else
-        {
-            Debug.Log("fail");
-        }
-        GameManager.Instance.CompleteMinigame(result);
     }
-
-    
-
-
 }

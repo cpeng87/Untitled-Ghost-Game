@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class MuffinController : MonoBehaviour
+public class MuffinController : MinigameCompletion
 {
 
     private bool result;
@@ -12,12 +12,11 @@ public class MuffinController : MonoBehaviour
     {
         if (MuffinsComplete())
         {
-            Debug.Log("All muffins are complete!");
-            GameManager.Instance.CompleteMinigame(true);
+            minigameResult.MinigameResult(true);
         }
         else
         {
-            GameManager.Instance.CompleteMinigame(false);
+            minigameResult.MinigameResult(false);
         }
     }
 

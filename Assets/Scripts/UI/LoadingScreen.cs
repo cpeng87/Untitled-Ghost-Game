@@ -35,7 +35,7 @@ public class LoadingScreen : MonoBehaviour
         while (elapsedTime < fadeDuration)
         {
             canvasGroup.alpha = Mathf.Lerp(startAlpha, endAlpha, elapsedTime / fadeDuration);
-            elapsedTime += Time.deltaTime;
+            elapsedTime += Time.unscaledDeltaTime; // Use unscaled time to ensure real-world seconds
             yield return null;
         }
 

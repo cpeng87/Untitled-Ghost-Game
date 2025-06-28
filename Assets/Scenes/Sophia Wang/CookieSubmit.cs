@@ -1,9 +1,8 @@
 using UnityEngine;
 
-public class CookieSubmit : MonoBehaviour
-{
-    public static void onFinish()
+public class CookieSubmit : MinigameCompletion {
+    public void onFinish()
     {
-        GameManager.Instance.CompleteMinigame(true);
+        minigameResult.MinigameResult(true);
     }
 }

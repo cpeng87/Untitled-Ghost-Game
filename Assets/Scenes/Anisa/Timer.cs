@@ -6,7 +6,7 @@ public class Timer : MonoBehaviour
 
     public TextMeshProUGUI timerText;
     private float timeRemaining;
-    public float timeLimit = 120f;
+    public float timeLimit = 60f;
     public bool isRunning = true;
 
     void Start()

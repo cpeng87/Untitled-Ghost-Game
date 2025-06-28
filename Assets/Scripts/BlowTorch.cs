@@ -15,6 +15,11 @@ public class BlowTorch : MonoBehaviour
 
     public TMP_Text text;
 
+    private void Start()
+    {
+        fireEffect.Stop();
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
