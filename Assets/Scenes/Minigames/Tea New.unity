@@ -219,9 +219,21 @@ PrefabInstance:
       propertyPath: m_Texture
       value: 
       objectReference: {fileID: 2800000, guid: 2f726c701b150f3409147e463a0a7bb3, type: 3}
+    - target: {fileID: 7667094889036070224, guid: 01259773b8fa2d5489406b9b13bb2ca7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1634944611}
+    - target: {fileID: 7667094889036070224, guid: 01259773b8fa2d5489406b9b13bb2ca7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CheckResults
+      objectReference: {fileID: 0}
+    - target: {fileID: 7667094889036070224, guid: 01259773b8fa2d5489406b9b13bb2ca7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TeapotController, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 7746032235670997297, guid: 01259773b8fa2d5489406b9b13bb2ca7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8458281332327396408, guid: 01259773b8fa2d5489406b9b13bb2ca7, type: 3}
       propertyPath: m_IsActive
@@ -6064,9 +6076,11 @@ MonoBehaviour:
   pourParticles: {fileID: 1634944616}
   pourThreshold: 20
   teaCounter: 0
+  maxTeaParticles: 200
   outOfTea: 0
   teaProgress: {fileID: 1178908487}
   neededParticles: 130
+  overflowParticles: 160
   teaSteamParticles: {fileID: 1611836453}
 --- !u!23 &1634944612
 MeshRenderer:

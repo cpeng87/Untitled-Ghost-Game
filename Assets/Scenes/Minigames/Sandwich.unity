@@ -3593,6 +3593,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1955742253}
   m_CullTransparentMesh: 1
+--- !u!4 &6981520625996872681
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7757600620028846419}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 0.9951206, w: -0.098666266}
+  m_LocalPosition: {x: -2.2578013, y: -5.9427853, z: -6.462719}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 191.325}
+--- !u!1 &7757600620028846419
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6981520625996872681}
+  m_Layer: 0
+  m_Name: zSandwich
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3613,3 +3644,4 @@ SceneRoots:
   - {fileID: 309576319}
   - {fileID: 1453621256}
   - {fileID: 1917952350}
+  - {fileID: 6981520625996872681}

@@ -3,7 +3,7 @@ tags:
 position: -54,-23
 ---
 <<reaperPitch true>>
-Reaper Ghost: Could I get a {GetOrder()}, please? As far as the decoration goes, <wiggle> surprise me! </wiggle>
+Reaper: Could I get a {GetOrder()}, please? As far as the decoration goes, <wiggle> surprise me! </wiggle>
 <<reaperPitch false>>
 <<setCam "Main Camera">>
 ===
@@ -13,7 +13,7 @@ tags:
 position: -173,132
 ---
 <<reaperPitch true>>
-Reaper Ghost: Thank you very much, it's delicious! What a creative design, as well.
+Reaper: Thank you very much, it's delicious! What a creative design, as well.
 <<reaperPitch false>>
 <<reset>>
 <<startStory ReaperStory>>
@@ -55,7 +55,6 @@ Reaper: Perhaps by speaking to them, you may discover that you can learn about y
         Reaper: Good, then I'll be directing some new faces your way soon. 
     -> I doubt that will help...
         Reaper: No use being pessimistic about it, is there? Give it a try. The ghosts here aren't so different from you.
-Reaper: Oh yes, I almost forgot - I believe the recipe shop will be of great use to you. After all, different ghosts prefer different dishes. Do take a look when you have time.
 Reaper: Until the next time we cross paths, try to get to know some of the other residents in purgatory! I hope to hear good news during my next visit.
 <<reaperPitch false>>
 <<setCam "Main Camera">>
@@ -178,8 +177,6 @@ Reaper: In your eyes, what really defines a "passion" or a "dream"? Is it a conc
         Reaper: Both have dreams, even if you think your own are somehow less worthy. And both have journeys. 
         Reaper: If you enjoyed yours, that's all that matters. 
 Reaper: Oh dear, I do believe I've spent a tad too much time talking with you. My tea's gone cold! But, we'll have plenty more time to discuss in the future.
-Reaper: Oh yes, Chef Ghost did tell me to let you know that they've added new recipes to their shop and they look absolutely delightful.
-Reaper: Think about what I've said, alright? Until next time, dear.
 Reaper: I'll keep recommending customers here. Not only for the counseling, either - these pastries are delectable.
 <<reaperPitch false>>
 <<setCam "Main Camera">>

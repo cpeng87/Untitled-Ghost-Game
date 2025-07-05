@@ -3187,6 +3187,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5402274406427930543, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
+      propertyPath: typewriterEffectSpeed
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5550689386744822248, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
@@ -3243,6 +3247,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8295263585548992041, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8631564280081156798, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
@@ -3251,7 +3259,8 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6375241207451315769, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -7247,6 +7256,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 105854230925103740, guid: 1a7aa02123203af4e906e3e4436b4331, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4855604172790233318, guid: 1a7aa02123203af4e906e3e4436b4331, type: 3}
       propertyPath: music.Array.size
       value: 3
@@ -9995,6 +10008,10 @@ PrefabInstance:
       objectReference: {fileID: 3913648602975631478, guid: 26c217238d2052744bb32008a8a144e0, type: 3}
     - target: {fileID: 1194871745244336917, guid: 3b09e429754326e4196ed1635846ddcb, type: 3}
       propertyPath: 'ghosts.Array.data[22]'
+      value: 
+      objectReference: {fileID: 4663965477092494701, guid: 89eab924a3acde1409307fc04e89da01, type: 3}
+    - target: {fileID: 1194871745244336917, guid: 3b09e429754326e4196ed1635846ddcb, type: 3}
+      propertyPath: 'ghosts.Array.data[23]'
       value: 
       objectReference: {fileID: 4663965477092494701, guid: 89eab924a3acde1409307fc04e89da01, type: 3}
     - target: {fileID: 1242055107049372399, guid: 3b09e429754326e4196ed1635846ddcb, type: 3}

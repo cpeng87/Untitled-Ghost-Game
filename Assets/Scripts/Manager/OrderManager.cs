@@ -94,12 +94,9 @@ public class OrderManager : MonoBehaviour
         // DialogueManager.Instance.CompleteOrderDialogue(currGhost.ghostName, activeOrders[currActiveOrder].seatNum, result);
         DialoguePlayer.Instance.CompleteOrderDialogue(currGhost.ghostName, activeOrders[currActiveOrder].seatNum, result);
         // GameManager.Instance.ghostManager.IncrementStoryIndex(currGhost.ghostName);
-        if (chefSkip)
+        if (!chefSkip)
         {
-            GameManager.Instance.AddCurrency(-2 * activeOrders[currActiveOrder].price); 
-        } else
-        {
-            GameManager.Instance.AddCurrency(activeOrders[currActiveOrder].price);
+            GameManager.Instance.AddCurrency(1);
         }
         
         // SortOrders();
@@ -129,7 +126,6 @@ public class OrderManager : MonoBehaviour
         GameManager.Instance.ghostManager.RemoveActiveGhost(currGhost);
         GhostSpawningManager.Instance.DeleteSpawnedGhost(activeOrders[currActiveOrder].seatNum);
         activeOrders[currActiveOrder] = null;
-        Debug.Log("Completed order!");
     }
 
     //helper method to replace tags in strings

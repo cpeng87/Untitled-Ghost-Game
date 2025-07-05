@@ -1,13 +1,14 @@
 using UnityEngine;
 using TMPro;
 
-public class Timer : MonoBehaviour
+public class Timer : MinigameCompletion
 {
 
     public TextMeshProUGUI timerText;
     private float timeRemaining;
     public float timeLimit = 60f;
     public bool isRunning = true;
+
 
     void Start()
     {
@@ -25,10 +26,11 @@ public class Timer : MonoBehaviour
             UpdateTimerText(timeRemaining);
             // Debug.Log("Time left: " + timeRemaining);
         }
-        if (timeRemaining <= 0)
+        if (timeRemaining <= 0 && isRunning)
         {
             isRunning = false;
-            GameManager.Instance.CompleteMinigame(false);
+            // GameManager.Instance.CompleteMinigame(false);
+            minigameResult.MinigameResult(false);
         }
         
     }

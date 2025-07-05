@@ -38,12 +38,12 @@ public class RingScript : MonoBehaviour
     {
         if(ring.transform.localScale.x >= end_x)
         {
-            ring.transform.localScale -= new Vector3((speed*0.0015f), 0, 0);
+            ring.transform.localScale -= new Vector3((speed * 0.3f * Time.deltaTime), 0, 0);
         }
 
         if(ring.transform.localScale.y >= end_y)
         {
-            ring.transform.localScale -= new Vector3(0, speed * 0.001f, 0);
+            ring.transform.localScale -= new Vector3(0, speed * 0.2f * Time.deltaTime, 0);
         }
 
         if(ring.transform.localScale.x <= end_x && ring.transform.localScale.y <= end_y)
@@ -71,12 +71,12 @@ public class RingScript : MonoBehaviour
     public static string ScoreToString(int score)
     {
         Debug.Log(score);
-        if(score >= 0 && score <= 1)
+        if (score >= 0 && score <= 1)
         {
             return "Great! +10";
         }
-        else if(score >= -1 && score <= 2)
-        { 
+        else if (score >= -1 && score <= 2)
+        {
             return "Okay. +2";
         }
         else

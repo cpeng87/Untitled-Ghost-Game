@@ -515,6 +515,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minigame UI
       objectReference: {fileID: 0}
+    - target: {fileID: 5103800312055446228, guid: 01259773b8fa2d5489406b9b13bb2ca7, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: bad538dab9a9943408e4a4384ac00aad, type: 3}
     - target: {fileID: 7667094889036070224, guid: 01259773b8fa2d5489406b9b13bb2ca7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

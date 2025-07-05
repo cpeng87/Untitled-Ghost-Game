@@ -204,6 +204,7 @@ public class GhostSpawningManager : MonoBehaviour
 
         foreach (Ghost ghost in GameManager.Instance.ghostManager.GetGhostScriptables())
         {
+            Debug.Log(ghost.ghostName + " : " + ghost.arc);
             if ((int)ghost.arc <= (int)GameManager.Instance.arc)
             {
                 if (GameManager.Instance.ghostManager.IsComplete(ghost) == false)

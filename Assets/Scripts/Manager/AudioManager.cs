@@ -47,9 +47,12 @@ public class AudioManager : MonoBehaviour
                 arcIndex = 0;
             }
             musicSource.Stop();
-            musicSource.clip = music[arcIndex].clip;
-            musicSource.Play();
-            OnSongChanged?.Invoke(music[arcIndex].name);
+            if (music.Length > arcIndex)
+            {
+                musicSource.clip = music[arcIndex].clip;
+                musicSource.Play();
+                OnSongChanged?.Invoke(music[arcIndex].name);
+            }
         }
     }
 

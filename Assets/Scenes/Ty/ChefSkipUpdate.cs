@@ -1,38 +1,65 @@
 using TMPro;
 using UnityEngine;
 
-public class ChefSkipUpdate : MonoBehaviour
+public class ChefSkipUpdate : MinigameCompletion
 {
+    [SerializeField] private GameObject skipMinigamePopup;
     [SerializeField] public TMP_Text currencyField;
     [SerializeField] public TMP_Text costField;
+    [SerializeField] private int chefCost = 3;
+    [SerializeField] private GameObject currencyError;
+
+    private void Start()
+    {
+        skipMinigamePopup.SetActive(false);
+        currencyError.SetActive(false);
+    }
+
+    public void ToggleSkipPopup()
+    {
+        if (!skipMinigamePopup.active)
+        {
+            UpdateCostField();
+            UpdateCurrencyField();
+            skipMinigamePopup.SetActive(true);
+        }
+        else
+        {
+            skipMinigamePopup.SetActive(false);
+        }
+    }
+
     public void PayChef()
     {
         int currency = GameManager.Instance.GetCurrency();
-        int orderPrice = GameManager.Instance.orderManager.GetCurrActiveOrderPrice();
 
-        if (currency >= 2 * orderPrice)
+        if (currency >= chefCost)
         {
             Debug.Log("Chef success");
 
-            GameManager.Instance.CompleteMinigame(true, chefSkip: true);
+            GameManager.Instance.SubtractCurrency(3);
+            ToggleSkipPopup();
+            skipMinigamePopup.SetActive(false);
+            minigameResult.MinigameResult(true);
         }
         else
         {
             Debug.Log("Chef fail");
+            skipMinigamePopup.SetActive(false);
+            currencyError.SetActive(true);
         }
     }
 
-    public void updateCostField()
+    public void UpdateCostField()
     {
-        int orderPrice = GameManager.Instance.orderManager.GetCurrActiveOrderPrice();
-        costField.text = "Minigame will be skipped. This action will cost TWICE the value of the food/drink being served - this will cost (" + 2 * orderPrice + ").";
-        Debug.Log("current cost: " + orderPrice);
+        costField.text = "Minigame will be skipped. This action will cost " + chefCost + " coins.";
+        Debug.Log("current cost: " + chefCost);
     }
 
-    public void updateCurrencyField() 
+    public void UpdateCurrencyField() 
     {
         int currency = GameManager.Instance.GetCurrency();
-        currencyField.text = "Currency: " + currency;
-        Debug.Log("current currency: " + currency);
+        currencyField.text = "Currency: " + chefCost;
+        Debug.Log("current currency: " + chefCost);
     }
 }

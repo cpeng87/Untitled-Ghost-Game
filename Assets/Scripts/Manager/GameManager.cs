@@ -111,6 +111,7 @@ public class GameManager : MonoBehaviour
 
         // Complete the order
         orderManager.CompleteOrder(isSuccess, chefSkip);
+        Time.timeScale = 1;
         state = State.Dialogue;
 
         // Optionally fade out the loading screen after loading
