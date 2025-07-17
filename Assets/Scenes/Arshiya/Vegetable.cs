@@ -5,7 +5,7 @@ public class Vegetable : Clickable
 {
     // [SerializeField] private bool isDraggable;
     [SerializeField] private bool isChopped;
-    [SerializeField] private Vector3 targetPosition = new Vector3(-1.3409998416900635f, -1.6769999265670777f, -2.5799999237060549f);
+    private Vector3 targetPosition = new Vector3(-1.5f, -1.7f, -3f);
 
     [SerializeField] private GameObject[] parts;
     [SerializeField] private int chops;
@@ -38,7 +38,7 @@ public class Vegetable : Clickable
     {
         if (soupManager.GetNumPartOnBoard() == 0)
         {
-            transform.rotation = Quaternion.Euler(0f, 90f, 0f);
+            transform.eulerAngles = new Vector3(transform.eulerAngles.x, -90, transform.eulerAngles.z);
             // targetPosition = new Vector3(-1.3409998416900635f, -1.6769999265670777f, -2.5799999237060549f);
             this.gameObject.transform.position = targetPosition;
             soupManager.AddNumPartOnBoard(3);

@@ -31,7 +31,7 @@ public class UIManager : MonoBehaviour
 
     public void UpdateCurrency(int newValue)
     {
-        currencyField.text = "Currency: " + newValue;
+        currencyField.text = "Coins: " + newValue;
     }
 
     public void UpdateSatisfaction(int satisfactionLevel)

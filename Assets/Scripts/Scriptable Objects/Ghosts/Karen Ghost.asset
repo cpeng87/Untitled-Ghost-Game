@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ghostName: Karen Ghost
   dialogue: {fileID: -8253061345870894857, guid: c21240865ff231f4294053989ac41931, type: 3}
-  numStory: 3
+  numStory: 1
   recipesOrdered:
   - {fileID: 11400000, guid: 2c8944e5acd276242a1dacb709fa93d3, type: 2}
   arc: -1

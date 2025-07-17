@@ -219,9 +219,21 @@ PrefabInstance:
       propertyPath: m_Texture
       value: 
       objectReference: {fileID: 2800000, guid: 2f726c701b150f3409147e463a0a7bb3, type: 3}
+    - target: {fileID: 7667094889036070224, guid: 01259773b8fa2d5489406b9b13bb2ca7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1634944611}
+    - target: {fileID: 7667094889036070224, guid: 01259773b8fa2d5489406b9b13bb2ca7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CheckResults
+      objectReference: {fileID: 0}
+    - target: {fileID: 7667094889036070224, guid: 01259773b8fa2d5489406b9b13bb2ca7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TeapotController, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 7746032235670997297, guid: 01259773b8fa2d5489406b9b13bb2ca7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8458281332327396408, guid: 01259773b8fa2d5489406b9b13bb2ca7, type: 3}
       propertyPath: m_IsActive
@@ -820,7 +832,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7574804278579071200, guid: b4b00a1f46ab9c24bac8f28af868724a, type: 3}
   m_PrefabInstance: {fileID: 1758251517}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2083208836}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
@@ -6064,9 +6076,11 @@ MonoBehaviour:
   pourParticles: {fileID: 1634944616}
   pourThreshold: 20
   teaCounter: 0
+  maxTeaParticles: 200
   outOfTea: 0
   teaProgress: {fileID: 1178908487}
   neededParticles: 130
+  overflowParticles: 160
   teaSteamParticles: {fileID: 1611836453}
 --- !u!23 &1634944612
 MeshRenderer:
@@ -11076,6 +11090,34 @@ PrefabInstance:
       propertyPath: m_Value
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7574804278579071200, guid: b4b00a1f46ab9c24bac8f28af868724a, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7574804278579071200, guid: b4b00a1f46ab9c24bac8f28af868724a, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7574804278579071200, guid: b4b00a1f46ab9c24bac8f28af868724a, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2083208837}
+    - target: {fileID: 7574804278579071200, guid: b4b00a1f46ab9c24bac8f28af868724a, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7574804278579071200, guid: b4b00a1f46ab9c24bac8f28af868724a, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateColor
+      objectReference: {fileID: 0}
+    - target: {fileID: 7574804278579071200, guid: b4b00a1f46ab9c24bac8f28af868724a, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GradientSlider, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7574804278579071200, guid: b4b00a1f46ab9c24bac8f28af868724a, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8463260179957165976, guid: b4b00a1f46ab9c24bac8f28af868724a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -11172,7 +11214,10 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 2108125975910713892, guid: b4b00a1f46ab9c24bac8f28af868724a, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5928113793627153436, guid: b4b00a1f46ab9c24bac8f28af868724a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2083208837}
   m_SourcePrefab: {fileID: 100100000, guid: b4b00a1f46ab9c24bac8f28af868724a, type: 3}
 --- !u!1 &1763095189
 GameObject:
@@ -11679,6 +11724,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1951398767}
   m_CullTransparentMesh: 1
+--- !u!114 &2056953051 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3939839308502865543, guid: b4b00a1f46ab9c24bac8f28af868724a, type: 3}
+  m_PrefabInstance: {fileID: 1758251517}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &2083208836 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5928113793627153436, guid: b4b00a1f46ab9c24bac8f28af868724a, type: 3}
+  m_PrefabInstance: {fileID: 1758251517}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2083208837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083208836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89efbefd77f9e4825902d8a443dc3cc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 0, b: 0, a: 1}
+    key1: {r: 1, g: 0.86808574, b: 0.21568626, a: 1}
+    key2: {r: 0.09266748, g: 1, b: 0.12358767, a: 0}
+    key3: {r: 1, g: 0.8028251, b: 0.21568626, a: 0}
+    key4: {r: 1, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 42598
+    ctime2: 47513
+    ctime3: 52428
+    ctime4: 65535
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: -1
+    m_NumColorKeys: 5
+    m_NumAlphaKeys: 2
+  image: {fileID: 2056953051}
 --- !u!1 &2106615044
 GameObject:
   m_ObjectHideFlags: 0

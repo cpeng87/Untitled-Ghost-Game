@@ -2,7 +2,7 @@ title: KarenOrder
 tags:
 position: -54,-23
 ---
-Karen Ghost: One caramel iced coffee with extra whipped cream, sprinkles, 2 shots of expresso, and a unicorn decoration.
+Karen Ghost: One {GetOrder()}. It better be fresh from the kitchen! I don't accept anything less than the best.
 <<setCam "Main Camera">>
 ===
 
@@ -10,7 +10,7 @@ title: KarenSuccess
 tags:
 position: -173,132
 ---
-Karen Ghost: Success: This! Well, this... hmph! You're lucky I'm even paying for it!
+Karen Ghost: This! Well, this... hmph! You're lucky I'm even paying for it!
 <<startStory KarenStory>>
 ===
 
@@ -18,7 +18,7 @@ title: KarenFailure
 tags:
 position: -112,-180
 ---
-Karen Ghost: Failure: What is this! DISGUSTING!!! I want you FIRED! Who is your boss?!? ...you're self employed?
+Karen Ghost: What is this! DISGUSTING!!! I want you FIRED! Who is your boss?!? ...you're self employed?
 <<setCam "Main Camera">>
 ===
 
@@ -27,30 +27,9 @@ tags:
 position: 0,0
 ---
 Karen Ghost: Well, I certainly don't see what all the fuss is about. This looks like any old raggedy coffee shop to me.
-<<setCam "Main Camera">>
-===
-
-title: KarenStory2
-tags:
-position: 0,0
----
 Karen Ghost: I'm only here because the other cafes always mess up my order! Hmph. Don't get a big head about it.
-<<setCam "Main Camera">>
-===
-
-title: KarenStory3
-tags:
-position: 0,0
----
 Karen Ghost: How I died?? Do you have no manners?!? Not that it's any of your business, but I was... left behind, during a camping trip, and I... didn't have a way out of the forest.
 Karen Ghost: There, happy?
-<<setCam "Main Camera">>
-===
-
-title: KarenStory4
-tags:
-position: 0,0
----
 Karen Ghost: Why I'm still here? ...I guess I was just waiting for someone to look for me.
 Karen Ghost: Not that it matters now, anyways. I'm a ghost, and anyone who might've come for me is dead now.
 <<setCam "Main Camera">>

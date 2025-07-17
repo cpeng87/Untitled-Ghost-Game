@@ -94,7 +94,7 @@ public class OrderManager : MonoBehaviour
         // DialogueManager.Instance.CompleteOrderDialogue(currGhost.ghostName, activeOrders[currActiveOrder].seatNum, result);
         DialoguePlayer.Instance.CompleteOrderDialogue(currGhost.ghostName, activeOrders[currActiveOrder].seatNum, result);
         // GameManager.Instance.ghostManager.IncrementStoryIndex(currGhost.ghostName);
-        if (!chefSkip)
+        if (!chefSkip && result)
         {
             GameManager.Instance.AddCurrency(1);
         }

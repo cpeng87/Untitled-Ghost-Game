@@ -47,13 +47,6 @@ Soldier Ghost: You... You don't know about the war...?
 Soldier Ghost: How is that possible... This is one of the largest wars we've had since the Continental War!
 Soldier Ghost: A war that I... barely made a difference in... I was hoping to have changed this time but... I guess I'm just not good enough...
 Soldier Ghost: Like look at me. I'm back here, forced to recover just because of a headache that I got from... What did I get it from again...?
-<<setCam "Main Camera">>
-===
-
-title: SoldierStory3
-tags:
-position: 169,38
----
 Soldier Ghost: Ah... That's right...
 Soldier Ghost: Doctor Ghost was telling me about a soldier who saved their life when they were only a child...
 Soldier Ghost: I wish I could be like that soldier... At this rate, the war will be over by the time I recover.
@@ -64,7 +57,7 @@ Soldier Ghost: Maybe my life will have worth living.
 <<setCam "Main Camera">>
 ===
 
-title: SoldierStory4
+title: SoldierStory3
 tags:
 position: 169,38
 ---
@@ -79,7 +72,7 @@ Soldier Ghost: The enemy surrounded me after that before... Well, I shouldn't ta
 <<setCam "Main Camera">>
 ===
 
-title: SoldierStory5
+title: SoldierStory4
 tags:
 position: 169,38
 ---

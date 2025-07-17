@@ -32,16 +32,6 @@ News Reporter Ghost: While you're here, I want to thank you for your service.
 News Reporter Ghost: If I still had a news station, I'd continuously advertise you. You've made a good impact on the ghosts, as far as I've seen, which... is more than I have done...
 News Reporter Ghost: What? You want to know... my story?
 News Reporter Ghost: I thought it was well known enough, but... you're the first ghost to ask me for my perspective directly from me.
-News Reporter Ghost: Maybe I will... next time.
-<<setCam "Main Camera">>
-===
-
-title: NewsReporterStory2
-tags:
-position: 169,38
----
-News Reporter Ghost: Well, I've had a lot of time to think... and even though it'll change your views on me, I think it's worth it to tell you.
-News Reporter Ghost: Maybe it'll help me... but I digress.
 News Reporter Ghost: Where do I start?
 News Reporter Ghost: When I was but a small boy, I dreamed of giving every story light within the community.
 News Reporter Ghost: I watched my friends' stories get trashed and erased, and I wanted to make an impact.
@@ -54,30 +44,17 @@ News Reporter Ghost: I'll fill you in... next time.
 <<setCam "Main Camera">>
 ===
 
-title: NewsReporterStory3
+title: NewsReporterStory2
 tags:
 position: 169,38
 ---
 News Reporter Ghost: Sigh... I need to get this off my chest before it kills me.
-News Reporter Ghost: Well, the microphone through my chest did kill me, metaphorically, so it wouldn't be the first time.
 News Reporter Ghost: Anyway... I had previously described my excitement to change the world.
 News Reporter Ghost: One fateful day, I had to research a court trial about a serial killer who hurt so many innocent people.
 News Reporter Ghost: One of those people... let's just say I had personal stakes in this trial. So, when a person was brought to light, I immediately accused them... on live television.
 News Reporter Ghost: You know how the media is - it's so easy to twist and spin into your own narrative, and because I was so well-known, it became other people's narratives, too.
 News Reporter Ghost: The person was hated across the world, and the trial was an easy one to predict with my hands in it.
 News Reporter Ghost: I continued to release press after press against them, consumed with a desire to prove the world that I was right... but I was really just trying to justify condemning a person to myself.
-News Reporter Ghost: I... I was selfish. I realize that now. And... as selfish as it is, I need a bit more time.
-News Reporter Ghost: I'll finish the story... next time.
-<<setCam "Main Camera">>
-===
-
-title: NewsReporterStory4
-tags:
-position: 169,38
----
-News Reporter Ghost: Hello, and... thank you for listening to this story so far.
-News Reporter Ghost: Normally, I tell a news story in one go, but I think the detail calls for more parts.
-News Reporter Ghost: Last time, I described my selfish desire to condemn the person in the trial.
 News Reporter Ghost: Lawyer Ghost found me before the trial and chatted with me - well, chatted is a very loose word.
 News Reporter Ghost: He ended up punching me in the eye, and I guess it stuck with me.
 News Reporter Ghost: He left me some evidence, too, and it showed what I had feared to be true.
@@ -93,7 +70,7 @@ News Reporter Ghost: I'll see you... next time.
 <<setCam "Main Camera">>
 ===
 
-title: NewsReporterStory5
+title: NewsReporterStory3
 tags:
 position: 169,38
 ---

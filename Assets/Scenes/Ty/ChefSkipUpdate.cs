@@ -40,7 +40,7 @@ public class ChefSkipUpdate : MinigameCompletion
             GameManager.Instance.SubtractCurrency(3);
             ToggleSkipPopup();
             skipMinigamePopup.SetActive(false);
-            minigameResult.MinigameResult(true);
+            minigameResult.MinigameResult(true, true);
         }
         else
         {
@@ -52,14 +52,13 @@ public class ChefSkipUpdate : MinigameCompletion
 
     public void UpdateCostField()
     {
-        costField.text = "Minigame will be skipped. This action will cost " + chefCost + " coins.";
+        costField.text = "Minigame will be skipped. This action will cost " + chefCost + " currency.";
         Debug.Log("current cost: " + chefCost);
     }
 
     public void UpdateCurrencyField() 
     {
         int currency = GameManager.Instance.GetCurrency();
-        currencyField.text = "Currency: " + chefCost;
-        Debug.Log("current currency: " + chefCost);
+        currencyField.text = "Coins: " + currency;
     }
 }

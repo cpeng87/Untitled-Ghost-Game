@@ -6,6 +6,7 @@ public class MinigameSuccessFail : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI successText;
     [SerializeField] private TextMeshProUGUI failText;
+    private bool isComplete;
 
     private void Start()
     {
@@ -13,12 +14,16 @@ public class MinigameSuccessFail : MonoBehaviour
         failText.enabled = false;
     }
 
-    public void MinigameResult(bool result)
+    public void MinigameResult(bool result, bool chefSkip = false)
     {
-        StartCoroutine(ShowTextAndPauseGame(result));
+        if (!isComplete)
+        {
+            isComplete = true;
+            StartCoroutine(ShowTextAndPauseGame(result, chefSkip));
+        }
     }
 
-    private IEnumerator ShowTextAndPauseGame(bool result)
+    private IEnumerator ShowTextAndPauseGame(bool result, bool chefSkip)
     {
         if (result)
         {
@@ -35,6 +40,6 @@ public class MinigameSuccessFail : MonoBehaviour
 
         Time.timeScale = 1;
 
-        GameManager.Instance.CompleteMinigame(result);
+        GameManager.Instance.CompleteMinigame(result, chefSkip);
     }
 }

@@ -170,7 +170,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -150, y: 50}
+  m_AnchoredPosition: {x: -150, y: 84}
   m_SizeDelta: {x: 600, y: 50}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &8232268298226600293
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Currency: 0'
+  m_text: 'Coins: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d196d5669ef939d4eaea38e2eb818198, type: 2}
   m_sharedMaterial: {fileID: 5265687828343391479, guid: d196d5669ef939d4eaea38e2eb818198, type: 2}
@@ -228,8 +228,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 48
+  m_fontSizeBase: 48
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -639,8 +639,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1011, y: 505}
+  m_AnchoredPosition: {x: 0, y: 8.458}
+  m_SizeDelta: {x: 1118.9844, y: 673.8242}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8825800263579014335
 CanvasRenderer:
@@ -663,14 +663,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -1967485313, guid: a0c836e262b443f4ebebbbb873adcc12, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1683,7 +1683,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -100, y: 52}
+  m_AnchoredPosition: {x: -106, y: 52}
   m_SizeDelta: {x: 266.6051, y: 82.79489}
   m_Pivot: {x: 1, y: 0}
 --- !u!222 &3114190233221126259
@@ -2432,7 +2432,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -355.5, y: 190}
+  m_AnchoredPosition: {x: -355.5, y: 234}
   m_SizeDelta: {x: -911, y: -430}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &128807894537291084
@@ -2490,8 +2490,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 56
-  m_fontSizeBase: 56
+  m_fontSize: 64
+  m_fontSizeBase: 64
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2987,7 +2987,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -645, y: 52}
+  m_AnchoredPosition: {x: -754, y: 52}
   m_SizeDelta: {x: 266.6051, y: 82.79489}
   m_Pivot: {x: 1, y: 0}
 --- !u!222 &8337652035299376474
@@ -3270,8 +3270,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -355.5, y: 127.5}
-  m_SizeDelta: {x: -1011, y: -455}
+  m_AnchoredPosition: {x: -346, y: 153}
+  m_SizeDelta: {x: -933.4091, y: -455}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4483353159687225868
 CanvasRenderer:
@@ -3301,8 +3301,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Minigame will be skipped. This action will cost TWICE the value of the
-    food/drink being served- this will cost (*).
+  m_text: Minigame will be skipped. This action will cost 3 coins.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d196d5669ef939d4eaea38e2eb818198, type: 2}
   m_sharedMaterial: {fileID: 5265687828343391479, guid: d196d5669ef939d4eaea38e2eb818198, type: 2}
@@ -3329,8 +3328,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3385,12 +3384,12 @@ GameObject:
   - component: {fileID: 2114377517384050456}
   - component: {fileID: 5544277281717215742}
   m_Layer: 5
-  m_Name: 'TODO: REPLACE WITH CHEF IMAGE'
+  m_Name: Chef Ghost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8313207328224279379
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3407,8 +3406,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1102, y: 505}
+  m_AnchoredPosition: {x: 0, y: -97}
+  m_SizeDelta: {x: 322.96, y: 288.6577}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2114377517384050456
 CanvasRenderer:
@@ -3438,7 +3437,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: bad538dab9a9943408e4a4384ac00aad, type: 3}
+  m_Texture: {fileID: 2800000, guid: 697da5202da0a32469a9515cf87c4d57, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0

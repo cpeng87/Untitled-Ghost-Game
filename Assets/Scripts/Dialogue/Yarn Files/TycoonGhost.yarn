@@ -31,6 +31,10 @@ Tycoon Ghost: What, don't you recognize your own boss? Oh, I'm only the most inf
 Tycoon Ghost: I own Ghost Groceries, and Ghost Real Estate, and Ghost Gambling, and Ghost Automotives, and Ghost Banking, and really every business that any ghost could ever buy from. 
 Tycoon Ghost: Even Ghost Recipes, which my records show you've been buying more from than most ghosts do in a deathtime. 
 Tycoon Ghost: Maybe I'll even give you a discount, for being a loyal customer. 5% off purchases of $500 or more, how's that sound?
+Tycoon Ghost: I do own 30% of your cafe's stock, so it wouldn't benefit either of us if your little business tanked, yes? Oh, you didn't know? Well, your little business has had quite the meteoric rise in the Ghost Stock Market! 
+Tycoon Ghost: Also owned by me, of course. 
+Tycoon Ghost: And your only competition are my businesses. 
+Tycoon Ghost: But still, you should be proud! You're outdoing Ghost Caffeine by 12%.
 <<setCam "Main Camera">>
 ===
 
@@ -39,28 +43,10 @@ tags:
 position: 169,38
 ---
 Tycoon Ghost: Well, I came to see how my little pet project was doing again, aren't you honored? It is a good businessman's duty to... take care of their ventures. 
-Tycoon Ghost: I do own 30% of your cafe's stock, so it wouldn't benefit either of us if your little business tanked, yes? Oh, you didn't know? Well, your little business has had quite the meteoric rise in the Ghost Stock Market! 
-Tycoon Ghost: Also owned by me, of course. 
-Tycoon Ghost: And your only competition are my businesses. 
-Tycoon Ghost: But still, you should be proud! You're outdoing Ghost Caffeine by 12%.
-<<setCam "Main Camera">>
-===
-
-title: TycoonStory3
-tags:
-position: 169,38
----
 Tycoon Ghost: What am I attached to? Money, of course. I need to be rich!
 Tycoon Ghost: Much richer than I am now.
 Tycoon Ghost: Then, I'll be satisfied and my soul will be able to rest. I'm sure of it - what else could I possibly want in the world than money? 
 Tycoon Ghost: Money is power, money is happiness, money is fulfillment. And make no mistake, I am not lacking in any.
-<<setCam "Main Camera">>
-===
-
-title: TycoonStory4
-tags:
-position: 169,38
----
 Tycoon Ghost: ...What are you earning so much money for ...what other reason than to have it! 
 Tycoon Ghost: Money makes the world go round, you can't live without it!
 Tycoon Ghost: ...Though, we're all dead. Well, for food... or no, for living costs... well. 
@@ -72,7 +58,7 @@ Tycoon Ghost: But - what can I even do with it, if I'm the only one selling? I d
 <<setCam "Main Camera">>
 ===
 
-title: TycoonStory5
+title: TycoonStory3
 tags:
 position: 169,38
 ---
@@ -86,7 +72,7 @@ Tycoon Ghost: ...and can I ever really pass on, if I'll never have enough money 
 <<setCam "Main Camera">>
 ===
 
-title: TycoonStory6
+title: TycoonStory4
 tags:
 position: 169,38
 ---

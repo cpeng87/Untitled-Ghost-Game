@@ -57,13 +57,6 @@ Musician Ghost: Losing my hearing wasn't all minor, though.
 Musician Ghost: Have you ever met someone and you're both thinking in harmony?
 Musician Ghost: For me, that was Jock Ghost. Meeting him felt like getting the band back together... we rode the same highs, felt the same pain, and shared the same tears.
 Musician Ghost: It was cathartic being able to meet someone who really understood bathing in the limelight... then waking up one day to realize that the world had moved on without us.
-<<setCam "Main Camera">>
-===
-
-title: MusicianStory4
-tags:
-position: 169,38
----
 Musician Ghost: Something Jock Ghost said struck a chord in me:
 Musician Ghost: ...Yknow, I used to compete a lot. Every time I stepped up to that first-place square, I'd strike a sick pose. I thought that all those cheers, all the medals I got, those were what made it all worth it. But... looking back? I think I just loved the game for what it was...
 Musician Ghost: For the first time since I'd started falling, I had a moment of clarity.

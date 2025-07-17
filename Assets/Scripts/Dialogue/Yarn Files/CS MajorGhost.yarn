@@ -33,15 +33,6 @@ CS Major Ghost: I'm not really ready to go run around and play in the fields or 
 CS Major Ghost: I'm CS Major ghost... at least as far as I remember.
 CS Major Ghost: The grind's been hard, but apparently it was enough to let me end up here... ish?
 CS Major Ghost: I'm not too sure, but I've been too busy catching up on sleep now that I have the time.
-CS Major Ghost: It's... been nice, but I don't really know what to do.
-CS Major Ghost: Anyway, it was good chatting with you. Maybe I'll use our dialogue in the next application I create... if I ever decide to create again.
-<<setCam "Main Camera">>
-===
-
-title: CSMajorStory2
-tags:
-position: 169,38
----
 CS Major Ghost: You know, I used to cut out a bunch of things for CS.
 CS Major Ghost: Who cares about sleep when you have SoulCode, grades, and 5 projects to worry about?
 CS Major Ghost: I mean, I didn't just need the degree - I needed a guaranteed job. 
@@ -51,10 +42,11 @@ CS Major Ghost: I mean, I can still use my laptop and make things... but why wou
 CS Major Ghost: No, seriously - what do I do? I could... pfft... be in a play?? Go do arts and crafts?? Hah! I'm a CS Major, how could I possibly be creative??
 CS Major Ghost: Hah... haha... hah... how can I even find something to do if my only skill is useless here?
 CS Major Ghost: Eh, whatever - time to go crash at home, that's enough touching grass for today.
+CS Major Ghost: Anyway, it was good chatting with you. Maybe I'll use our dialogue in the next application I create... if I ever decide to create again.
 <<setCam "Main Camera">>
 ===
 
-title: CSMajorStory3
+title: CSMajorStory2
 tags:
 position: 169,38
 ---
@@ -71,7 +63,7 @@ CS Major Ghost: I'll figure out how to talk to women from GhostTube tutorials or
 <<setCam "Main Camera">>
 ===
 
-title: CSMajorStory4
+title: CSMajorStory3
 tags:
 position: 169,38
 ---
@@ -90,7 +82,7 @@ CS Major Ghost: Yeah, you know what, I'm just going to go back home and stare at
 <<setCam "Main Camera">>
 ===
 
-title: CSMajorStory5
+title: CSMajorStory4
 tags:
 position: 169,38
 ---

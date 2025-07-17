@@ -30,30 +30,14 @@ position: 169,38
 Ghostwriter Ghost: Oh, wait, you're talking to me?
 Ghostwriter Ghost: Yes! <wiggle> Hi!! </wiggle> I see you run this cafe - I wrote a story about a cafe romance once, you know?
 <<reset>>
-Ghostwriter Ghost: It wasn't anything great, and I wasn't happy with it, but you know cafe stories are all the rage nowadays, so my author said it would sell...
+Ghostwriter Ghost: It wasn't anything great, and I wasn't happy with it, but you know cafe stories are all the rage nowadays, so it would sell...
 Ghostwriter Ghost: Oh, not that I'm some money-chaser or anything!
 Ghostwriter Ghost: It's just, well, I also need to eat...
-<<setCam "Main Camera">>
-===
-
-title: GhostwriterStory2
-tags:
-position: 169,38
----
-Ghostwriter Ghost: Your cafe is really great!
-Ghostwriter Ghost: I used to come to places like this all the time to write.
+Ghostwriter Ghost: But I used to come to places like this all the time to write!
 Ghostwriter Ghost: The author I worked for also liked cafes, so we often met over coffee or something.
 Ghostwriter Ghost: What?
 Ghostwriter Ghost: Oh, my author? Well, I'm a ghostwriter, after all.
 Ghostwriter Ghost: I write the work, my author puts her name on it, and it gets shipped out!
-Ghostwriter Ghost: I'm really - quite fine with this, of course! I don't do well with fame, and the spotlight, and all. Yeah.
-<<setCam "Main Camera">>
-===
-
-title: GhostwriterStory3
-tags:
-position: 169,38
----
 Ghostwriter Ghost: Hey, have you ever read anything I've written?
 Ghostwriter Ghost: Maybe "Battle and Tranquility"? Or "Small Cottage on the Meadow"?
 Ghostwriter Ghost: <wiggle> Oh, yes, I wrote those! </wiggle>
@@ -62,10 +46,11 @@ Ghostwriter Ghost: I'm so happy you know them, I loved writing those so much!
 Ghostwriter Ghost: Did - do you know my name? I was listed as, uh, an editor on those books, I think - under the acknowledgements, for sure!
 Ghostwriter Ghost: - no? ...well, no one remembers anyone except the author, of course.
 Ghostwriter Ghost: I shouldn't be surprised.
+Ghostwriter Ghost: I'm really - quite fine with this, of course! I don't do well with fame, and the spotlight, and all. Yeah.
 <<setCam "Main Camera">>
 ===
 
-title: GhostwriterStory4
+title: GhostwriterStory2
 tags:
 position: 169,38
 ---
@@ -76,14 +61,7 @@ Ghostwriter Ghost: None of my works got any offers, and I just really, <italic> 
 <<reset>>
 Ghostwriter Ghost: I didn't care that it was under a different name, at the time.
 Ghostwriter Ghost: I...I'm not sure when I suddenly started caring.
-<<setCam "Main Camera">>
-===
-
-title: GhostwriterStory5
-tags:
-position: 169,38
----
-Ghostwriter Ghost: Hey, I thought about it more, and, well. I did want recognition.
+Ghostwriter Ghost: Well, I did want recognition.
 Ghostwriter Ghost: I wanted so badly to talk to the people I've inspired, to be able to speak publicly about my experience writing, to see that I had done something for the world, and have other people tell me that too.
 Ghostwriter Ghost: And, well, I'm still frustrated about it.
 Ghostwriter Ghost: That I never got to do that, that I never had the courage to become an author all on my own.
@@ -91,7 +69,7 @@ Ghostwriter Ghost: But...maybe it's not too late to?
 <<setCam "Main Camera">>
 ===
 
-title: GhostwriterStory6
+title: GhostwriterStory3
 tags:
 position: 169,38
 ---
@@ -102,17 +80,7 @@ Ghostwriter Ghost: I just wanted to write, and for someone to read my work, and 
 Ghostwriter Ghost: And - people did, right? Lots of people! Even if it wasn't my name.
 Ghostwriter Ghost: Maybe that's enough.
 Ghostwriter Ghost: Maybe, now that I can write under my own name, I'll feel like it's enough.
-<<setCam "Main Camera">>
-===
-
-title: GhostwriterStory7
-tags:
-position: 169,38
----
-Ghostwriter Ghost: Hey, Cafe Ghost! This might be the last time I see you, so here. It's my new book!
-Ghostwriter Ghost: I just published it today, under my own name this time, and I wanted you to be the first to read it.
 Ghostwriter Ghost: I owe a lot to you for listening to me talk. It might not seem like much to you, but it helped me a bunch.
-Ghostwriter Ghost: I've done everything I wanted, really, and I think it's time I let myself be happy with what I've accomplished.
-Ghostwriter Ghost: I hope you like my book!
+Ghostwriter Ghost: I think it's time I let myself be happy with what I've accomplished.
 <<setCam "Main Camera">>
 ===

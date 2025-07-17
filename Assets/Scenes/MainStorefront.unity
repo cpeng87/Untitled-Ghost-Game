@@ -629,7 +629,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0ad7e0c148823e54aa439b14f2e4c717, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.436902
+      value: -6.51
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0ad7e0c148823e54aa439b14f2e4c717, type: 3}
       propertyPath: m_LocalPosition.y
@@ -637,7 +637,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0ad7e0c148823e54aa439b14f2e4c717, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.7166028
+      value: 5.75
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0ad7e0c148823e54aa439b14f2e4c717, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2919,7 +2919,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4835003728686394542, guid: cc63b60294aed7640bc62dbb596eecc4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.11
+      value: 0.97
       objectReference: {fileID: 0}
     - target: {fileID: 4835003728686394542, guid: cc63b60294aed7640bc62dbb596eecc4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3211,6 +3211,10 @@ PrefabInstance:
       propertyPath: recipeShopOpenButton
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6743233794005758191, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6826422743197176786, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -3247,6 +3251,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8292511265645242801, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
+      propertyPath: m_text
+      value: 'Coins: 0'
+      objectReference: {fileID: 0}
     - target: {fileID: 8295263585548992041, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -3258,6 +3266,10 @@ PrefabInstance:
     - target: {fileID: 8716906259618167843, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918481778839248917, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6375241207451315769, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
@@ -7262,23 +7274,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4855604172790233318, guid: 1a7aa02123203af4e906e3e4436b4331, type: 3}
       propertyPath: music.Array.size
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4855604172790233318, guid: 1a7aa02123203af4e906e3e4436b4331, type: 3}
       propertyPath: music.Array.data[0].clip
       value: 
-      objectReference: {fileID: 8300000, guid: a6f0d43b17fc1e74a8c4040f6d3c009b, type: 3}
+      objectReference: {fileID: 8300000, guid: 4d4b6ffe78ae52d4d952975d9acea915, type: 3}
     - target: {fileID: 4855604172790233318, guid: 1a7aa02123203af4e906e3e4436b4331, type: 3}
       propertyPath: music.Array.data[0].name
-      value: Spring
+      value: Fall
       objectReference: {fileID: 0}
     - target: {fileID: 4855604172790233318, guid: 1a7aa02123203af4e906e3e4436b4331, type: 3}
       propertyPath: music.Array.data[1].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 4d4b6ffe78ae52d4d952975d9acea915, type: 3}
+      objectReference: {fileID: 8300000, guid: d3b2a337fab414a47b1b603035c06165, type: 3}
     - target: {fileID: 4855604172790233318, guid: 1a7aa02123203af4e906e3e4436b4331, type: 3}
       propertyPath: music.Array.data[1].name
-      value: Fall
+      value: Winter
       objectReference: {fileID: 0}
     - target: {fileID: 4855604172790233318, guid: 1a7aa02123203af4e906e3e4436b4331, type: 3}
       propertyPath: music.Array.data[2].clip
@@ -7685,27 +7697,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 085ab5e2f4e9107479e3b94ee492ed93, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.863702
+      value: -5.67
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 085ab5e2f4e9107479e3b94ee492ed93, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.072229
+      value: 7.75
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 085ab5e2f4e9107479e3b94ee492ed93, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7065501
+      value: 0.7035133
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 085ab5e2f4e9107479e3b94ee492ed93, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.028053049
+      value: 0.07119683
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 085ab5e2f4e9107479e3b94ee492ed93, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7065501
+      value: 0.7035134
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 085ab5e2f4e9107479e3b94ee492ed93, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.028053049
+      value: 0.071196824
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 085ab5e2f4e9107479e3b94ee492ed93, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7717,7 +7729,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 085ab5e2f4e9107479e3b94ee492ed93, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 4.547
+      value: 11.558
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 085ab5e2f4e9107479e3b94ee492ed93, type: 3}
       propertyPath: m_Name
