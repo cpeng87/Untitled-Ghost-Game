@@ -10,6 +10,9 @@ TagManager:
   - MuffinTin
   - Note
   - Particle
+  - Donut
+  - LeftTong
+  - RightTong
   layers:
   - Default
   - TransparentFX
@@ -20,6 +23,9 @@ TagManager:
   - Camera
   - 
   - Bowl
+  - 
+  - 
+  - 
   - 
   - 
   - 
