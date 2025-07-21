@@ -33,26 +33,17 @@ Architecture Ghost: Hast thou ever laid eyes upon a building built in the Greek 
 Architecture Ghost: The columns... the ionic columns employed for those sorts of building art of my own design.
 Architecture Ghost: They art a thing of beauty, no? All between eight and twenty-six feet tall traditionally.
 Architecture Ghost: Every column that is modeled after those columns wouldn't exist if not for me... but it matters not.
-Architecture Ghost: Thou hast never heard of me, the records hath shunned me... I... I believe I ought to return back to my columns now.
-<<setCam "Main Camera">>
-===
-
-title: ArchitectureStory2
-tags:
-position: 169,38
----
-Architecture Ghost: G-good morrow, canst thou help me understand something?
 Architecture Ghost: How can it be that mine passion beareth no fruit, no matter what love I pour upon it? 
 Architecture Ghost: Mine columns wert, no, ART everything to me. Cannot anyone understand that?
 Architecture Ghost: Is the world blind to mine efforts? 
 Architecture Ghost: The very castles from which thine rulers reign art built in <shaky> MINE OWN </shaky> style and yet it is shunned in favor of some... pedestrian affair?
 <<reset>>
 Architecture Ghost: ...Ah, my apologies. I ought not burden thee with mine own insufficiencies, I am told that a profession has spawned from such actions today...
-Architecture Ghost: My columns... I must return to my columns.
+Architecture Ghost: Thou hast never heard of me, the records hath shunned me... I... I believe I ought to return back to my columns now.
 <<setCam "Main Camera">>
 ===
 
-title: ArchitectureStory3
+title: ArchitectureStory2
 tags:
 position: 169,38
 ---
@@ -63,29 +54,17 @@ Architecture Ghost: Thy art is intended to be consumed, no? So thy art wilt neve
 Architecture Ghost: Thou wilt place thine heart... thine very soul into this...knowing it will avail thee nothing? Tis' madness... the very idea...
 Architecture Ghost: It... isn't about the product? Speak plainly, if you would.
 Architecture Ghost: How canst thou pour so much dedication into something, when what is made matters not?
-Architecture Ghost: About something else, thou sayeth? What... What could possibly exist that would warrant such effort? I must dwell upon this further.
-<<setCam "Main Camera">>
-===
-
-title: ArchitectureStory4
-tags:
-position: 169,38
----
-Architecture Ghost: Good morrow, noble spirit. 
-Architecture Ghost: Aye... I have returned. I... hast pondered upon thine... strange method of thought, and I believe I understand it now.
-Architecture Ghost: Prithee, correct me if I stray, but mayhaps thine passion is one of results within people?
-Architecture Ghost: Thine physical craft may disappear into the bodies of ghosts, yet it builds itself into the mortar of their hearts and minds... forever intertwined with their souls. Is that why thou hast toiled so?�
-Architecture Ghost: ...I see. Thou hast no grand design?
-Architecture Ghost: ...Tis solely the love of the craft that drives you so?
-Architecture Ghost: Yet, the effect that thine works hath upon the spirits that dwell in this cafe cannot be understated.
+Architecture Ghost: About something else, thou sayeth?
+Architecture Ghost: ...I see. Thou hast no grand design? ...Tis solely the love of the craft that drives you so?
+Architecture Ghost: Thine physical craft may disappear into the bodies of ghosts, yet it builds itself into the mortar of their hearts and minds... forever intertwined with their souls. Is that why thou hast toiled so?
+Architecture Ghost: The effect that thine works hath upon the spirits that dwell in this cafe cannot be understated.
 Architecture Ghost: Thou denieth thine passion, yet it is clear that thou hold thine profession close to thine heart. Harken unto my words, dearest Cafe Ghost, for now I shall provide unto thee a ponderance of mine own.
-Architecture Ghost: For what, pray tell, dost thou toil?
 Architecture Ghost: Dost thou toil for the sake of the other ghosts, or dost thou satisfy thy own craving with thine craft? I know not.
 Architecture Ghost: I will return anon, ponder as thou wilt.
 <<setCam "Main Camera">>
 ===
 
-title: ArchitectureStory5
+title: ArchitectureStory3
 tags:
 position: 169,38
 ---

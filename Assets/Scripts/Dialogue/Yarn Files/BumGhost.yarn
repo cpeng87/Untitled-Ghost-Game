@@ -32,19 +32,10 @@ Bum Ghost: Unfortunately, the folks here seem to like to call me 'Bum Ghost'.
 Bum Ghost: I know, REAAAL flattering, ain't it?
 Bum Ghost: Just cause I look like one and never got a job don't mean you gotta point it out all the time.
 Bum Ghost: Anyway, back to you. You seem to have all sorts of interests... a bit indecisive on how your cafe looks too, aren't you?
-Bum Ghost: If you're anything like me, I'd suggest you settle on a style, and fast, before someone accuses you of being too flip-floppy. Catch you around, er... Caf!
-<<setCam "Main Camera">>
-===
-
-title: BumStory2
-tags:
-position: 169,38
----
-Bum Ghost: Hey, nice seeing you again. Hm? You wanted to talk to me about ideas?
+Bum Ghost: Hm? You wanted to talk to me about ideas?
 Bum Ghost: Hmm... well, I'd say you should go full into the plant theme, like a plant cafe and- no, wait: what if you went more historical?
 Bum Ghost: Like having that weirdo who likes columns... no... ah, wait, what if...
 Bum Ghost: ...
-Bum Ghost: Nevermind, forget I said anything, I can't get my head screwed on tight enough to give you a decent decision.
 Bum Ghost: I probably just made you more indecisive... I'm sorry.
 Bum Ghost: You probably figured it out by now, but that's why the good ol' G.R calls me 'Indecisive Ghost'... since I am obviously indecisive. 
 Bum Ghost: There I go again, messing up someone else's good ideas and never-
@@ -53,7 +44,7 @@ Bum Ghost: Thanks, C.G... I'll think about what you said.
 <<setCam "Main Camera">>
 ===
 
-title: BumStory3
+title: BumStory2
 tags:
 position: 169,38
 ---
@@ -63,10 +54,9 @@ Bum Ghost: Have you ever heard an academic talk?
 Bum Ghost: Sometimes, they'll say that the reason that academia is so appealing is because it allows them to explore the world of concepts, ideas, theory, things like that...
 Bum Ghost: You... want to hear about my life?
 Bum Ghost: I... really don't think it's worth talking about, there wasn't much there, after all. It also isn't particularly happy.
-Bum Ghost: Not everybody died with a big story or with a smile on their face. You'd be better off asking that muscle dude's life, or maybe that column dude, or the nice teacher lady.
-Bum Ghost: You really wanna know, huh? Fine, suit yourself.
-Bum Ghost: I was born poor, then I went through life not being able to figure anything out for myself, wasting all of my already poor parents' money, then I died because somebody wasn't looking where he was going and ran into me.
-Bum Ghost: Are you satisfied? It isn't a happy story.
+Bum Ghost: Not everybody died with a big story or with a smile on their face. 
+Bum Ghost: I never had the means went through life not being able to figure anything out for myself, then I died because somebody wasn't looking where he was going and crashed into me.
+Bum Ghost: It isn't a happy story.
 Bum Ghost: Strange, isn't it? The world is so big and filled with ideas, concepts, people, things, and yet... I didn't ever get a chance to do anything in it.
 Bum Ghost: You... don't think it's bad that I never figured myself out?
 Bum Ghost: Hah, you sound just like my folks. They always supported my stupid ideas...
@@ -74,7 +64,7 @@ Bum Ghost: I'll... get back to you. I need to think about some things. Catch you
 <<setCam "Main Camera">>
 ===
 
-title: BumStory4
+title: BumStory3
 tags:
 position: 169,38
 ---
@@ -83,7 +73,8 @@ Bum Ghost: I thought about what you said earlier, and I wanted to try again. If 
 Bum Ghost: I... thought about it, and I believe I haven't been entirely forthright with the way that I presented my life earlier.
 Bum Ghost: Thank you... let's see... I was born poor, that much is true, but we lived near a college campus.
 Bum Ghost: The people there were nice and I was allowed to audit a bunch of lectures even though I didn't formally attend.
-Bum Ghost: My dad was a carpenter, and so I usually helped him make things to make ends meet, but when I had nothing to do, I went to the college. Eventually on my 20th birthday, my parents surprised me with... tuition. I know, not exactly the most exciting thing, but it made me, just, unfathomably happy.
+Bum Ghost: My dad was a carpenter, and so I usually helped him make things to make ends meet, but when I had nothing to do, I went to the college. Eventually on my 20th birthday, my parents surprised me with... tuition.
+Bum Ghost: I know, not exactly the most exciting thing, but it made me, just, unfathomably happy.
 Bum Ghost: I took all sorts of classes in all sorts of disciplines, I learned about... just about everything.
 Bum Ghost: Mathematics, science, western and eastern classics, music, tech, computer science, anatomy, rudimentary law... everything.
 Bum Ghost: Yet, even as my parents and advisors pushed me to choose something... I just couldn't. I wanted to learn more, explore more. By the time I realized my money ran out? It was already too late.
@@ -97,7 +88,7 @@ Bum Ghost: Thanks for listening, Caf-Caf, I really do appreciate your time. I'll
 <<setCam "Main Camera">>
 ===
 
-title: BumStory5
+title: BumStory4
 tags:
 position: 169,38
 ---

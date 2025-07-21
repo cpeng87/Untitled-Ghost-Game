@@ -557,9 +557,9 @@ GameObject:
   - component: {fileID: 637644002}
   - component: {fileID: 637644003}
   m_Layer: 8
-  m_Name: TiltCollider
+  m_Name: Raypoint
   m_TagString: Tilt
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -572,7 +572,7 @@ Transform:
   m_GameObject: {fileID: 637644001}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.038, y: 0, z: 0}
+  m_LocalPosition: {x: -0.33, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -595,7 +595,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.32141256, y: 0.9999999, z: 1}
   m_Center: {x: -0.33929372, y: 0, z: 0}
@@ -6537,7 +6537,7 @@ MonoBehaviour:
   zBound: {x: -100, y: 100}
   pourParticles: {fileID: 726704741}
   pourThreshold: 45
-  tiltCollider: {fileID: 0}
+  rayPoint: {fileID: 637644001}
 --- !u!65 &1780036637
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -246,7 +246,11 @@ public class GameManager : MonoBehaviour
     {
         currency += added;
         UIManager.Instance.UpdateCurrency(currency);
-        Debug.Log("Updated Currency: " + currency);
+    }
+
+    public void UpdateCurrency()
+    {
+        UIManager.Instance.UpdateCurrency(currency);
     }
 
     public bool SubtractCurrency(int subtracted)

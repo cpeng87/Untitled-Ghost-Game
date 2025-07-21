@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Activator : MonoBehaviour {
+public class Activator : MinigameCompletion {
     public KeyCode key;
     bool active = false;
     GameObject note;
@@ -13,7 +13,7 @@ public class Activator : MonoBehaviour {
         if (Input.GetKeyDown(key) && active) {
             if (note.transform.position.x <= 0.2f && note.transform.position.x >= -0.2f) {
                 Destroy(note);
-                GameManager.Instance.CompleteMinigame(true);
+                minigameResult.MinigameResult(true);
             }
 
         }

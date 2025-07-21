@@ -1225,6 +1225,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PayChef
       objectReference: {fileID: 0}
+    - target: {fileID: 9219635529411028117, guid: 01259773b8fa2d5489406b9b13bb2ca7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 11.112671
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1546,6 +1550,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1886321062072331479, guid: cf3a2bbab74e04e3abea15bd6035032c, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: c2f9f34f400a51d408e24e1673e79eea, type: 2}
     - target: {fileID: 6581091835799967070, guid: cf3a2bbab74e04e3abea15bd6035032c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.969999

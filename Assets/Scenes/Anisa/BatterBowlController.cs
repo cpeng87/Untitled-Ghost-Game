@@ -20,7 +20,8 @@ public class BatterBowlController : MonoBehaviour
     public float pourThreshold = 20f;
     [Header("Muffin Fill Parameters")]
     private float maxFillHeight = 0.4f; // The max amount of batter that can be filled
-    public Collider tiltCollider;
+    public GameObject rayPoint;
+    // public Collider tiltCollider;
 
     void Start()
     {
@@ -48,33 +49,26 @@ public class BatterBowlController : MonoBehaviour
         }
     }
     // tilts the bowl based on the mouse's y movement. Limited by max tilt angle.
+    // private void HandleTilting()
+    // {
+    //     float mouseDeltaX = Input.GetAxis("Mouse Y") * -1; // Flip the direction
+    //     tiltAngle += mouseDeltaX * tiltSensitivity;
+    //     tiltAngle = Mathf.Clamp(tiltAngle, -maxTiltAngle, maxTiltAngle);
+    //     transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, tiltAngle);
+    // }
     private void HandleTilting()
     {
-        float mouseDeltaX = Input.GetAxis("Mouse Y") * -1; // Flip the direction
-        tiltAngle += mouseDeltaX * tiltSensitivity;
-        tiltAngle = Mathf.Clamp(tiltAngle, -maxTiltAngle, maxTiltAngle);
-        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, tiltAngle);
+        tiltAngle = maxTiltAngle;
+        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, maxTiltAngle);
+    }
+    private void HandleUnTilt()
+    {
+        tiltAngle = 0;
+        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0f);
     }
 
     // Fill individual muffin cups by using a plane and updating its height to simulate filling process using particles
     void FillMuffinCup(Collider cupCollider, FillTracker tracker) {
-        // Transform fillPlane = cupCollider.transform.GetChild(1);
-        // ParticleSystem.Particle[] particles = new ParticleSystem.Particle[pourParticles.particleCount];
-        // int numParticles = pourParticles.GetParticles(particles);
-
-        // foreach (var particle in particles)
-        // {
-        //     // Check if the particle is inside the cup
-        //     if (cupCollider.bounds.Contains(particle.position))
-        //     {
-        //         // Increase fill level based on particles in the cup
-        //         tracker.currentFillLevel += Time.deltaTime * 0.001f;
-        //         tracker.currentFillLevel = Mathf.Clamp01(tracker.currentFillLevel); // Ensure fill level is between 0 and 1
-        //         // UpdateFillProgress(tracker, tracker.currentFillLevel, numParticles);
-        //         UpdateFillProgress(tracker, tracker.currentFillLevel, numParticles);
-
-        //     }
-        // }
         
         Transform fillPlane = cupCollider.transform.GetChild(1);
         ParticleSystem.Particle[] particles = new ParticleSystem.Particle[pourParticles.particleCount];
@@ -87,39 +81,14 @@ public class BatterBowlController : MonoBehaviour
             {
                 // Increase fill level based on particles in the cup
                 tracker.currentFillLevel += 1;
-                // tracker.currentFillLevel = Mathf.Clamp01(tracker.currentFillLevel); // Ensure fill level is between 0 and 1
-                // UpdateFillProgress(tracker, tracker.currentFillLevel, numParticles);
-                
-                // UpdateFillProgress(tracker, tracker.currentFillLevel, numParticles);
                 
             }
         }
-
-        // Update the fill plane's position based on fill level
-        // Vector3 newFillPosition = fillPlane.localPosition;
-        // newFillPosition.y = Mathf.Lerp(0f, maxFillHeight, tracker.currentFillLevel);
-        // fillPlane.localPosition = newFillPosition;
     }
 
     // Update individual muffin cup's progress slider and fill state
     void UpdateFillProgress(FillTracker tracker, float currentLevel, int numParticles)
     {
-        // //Vanilla
-        // var progressBar = tracker.GetProgressBar();
-
-        // // Cup will be full only if min amount of batter was added upto certain height
-        // float minParticleCount = 100;
-        // progressBar.value = Mathf.Min(currentLevel / maxFillHeight, (float)numParticles / minParticleCount);
-
-        // if (progressBar.value >= 1.0f && numParticles >= minParticleCount)
-        // {
-        //     Debug.Log("Cup is full!");
-        //     tracker.isFull = true;
-        // } 
-        // else 
-        // {
-        //     tracker.isFull = false;
-        // }
         var progressBar = tracker.GetProgressBar();
 
         // currentLevel / muffinController.GetTotalParticles
@@ -132,20 +101,23 @@ public class BatterBowlController : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out RaycastHit hit))
             {
-                Debug.Log(hit.collider);
-                //clicked on main body collider, begin moving the bowl
                 if (hit.collider.gameObject == gameObject)
                 {
                     isDragging = true;
                     offset = transform.position - hit.point;
                 }
-                //clicked left side of bowl, begin tilting it
-                else if (hit.collider.CompareTag("Tilt"))
-                {
-                    isTilting = true;
-                    tiltCollider = hit.collider;
-                }
             }
+        }
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            isTilting = true;
+            HandleTilting();
+        }
+        else
+        {
+            isTilting = false;
+            HandleUnTilt();
         }
 
         if (Input.GetMouseButton(0))
@@ -153,10 +125,6 @@ public class BatterBowlController : MonoBehaviour
             if (isDragging)
             {
                 HandleMoving();
-            }
-            else if (isTilting)
-            {
-                HandleTilting();
             }
         }
 
@@ -169,20 +137,11 @@ public class BatterBowlController : MonoBehaviour
         // Check tilt 
         if (tiltAngle > pourThreshold)
         {
-            // // Check if there is a muffin cup under the bowl to pour batter
-            // Vector3 rayOrigin = tiltCollider.bounds.center;
-            // Vector3 rayDirection = -transform.right;
-
-            // if (Physics.Raycast(rayOrigin, rayDirection, out RaycastHit hit)) {
-
-            // If the object is muffin tin, begin pouring particles until it is full
-            // if (hit.collider.CompareTag("MuffinTin")) {
-            // Debug.Log("start pouring!"); 
             if (!pourParticles.isEmitting)
             {
                 pourParticles.Play();
             }
-            Vector3 rayOrigin = tiltCollider.bounds.center;
+            Vector3 rayOrigin = rayPoint.transform.position;
             Vector3 rayDirection = -transform.right;
             if (Physics.Raycast(rayOrigin, rayDirection, out RaycastHit hit))
             {
@@ -192,25 +151,9 @@ public class BatterBowlController : MonoBehaviour
                     if (!fillTracker.isFull)
                     {
                         FillMuffinCup(hit.collider, fillTracker);
-
-                        // }
-                        // } else {
-                        //     if (pourParticles.isEmitting)
-                        //     {
-                        //         pourParticles.Stop();
-                        //     }
-                        // }
-                        // }
                     }
                 }
             }
-            // else
-            // {
-            //     if (pourParticles.isEmitting)
-            //     {
-            //         pourParticles.Stop();
-            //     }
-            // }
         }
         else
         {

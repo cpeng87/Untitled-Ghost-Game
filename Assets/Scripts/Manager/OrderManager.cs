@@ -98,6 +98,10 @@ public class OrderManager : MonoBehaviour
         {
             GameManager.Instance.AddCurrency(1);
         }
+        else
+        {
+            GameManager.Instance.UpdateCurrency();
+        }
         
         // SortOrders();
         // if (result)

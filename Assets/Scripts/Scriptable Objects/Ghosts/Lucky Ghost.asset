@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ghostName: Lucky Ghost
   dialogue: {fileID: -8253061345870894857, guid: ffbfbd8ebaab5844996ce925092a8698, type: 3}
-  numStory: 3
+  numStory: 2
   recipesOrdered:
   - {fileID: 11400000, guid: 105e795d82953114f959071cd672cfeb, type: 2}
   arc: -1

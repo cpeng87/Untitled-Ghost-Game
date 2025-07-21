@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ghostName: Soldier Ghost
   dialogue: {fileID: -8253061345870894857, guid: b8c06c6705d429542bd384beba6f3a75, type: 3}
-  numStory: 3
+  numStory: 4
   recipesOrdered:
   - {fileID: 11400000, guid: bb3877ff9af98f74f9de8ff2bbd6eef4, type: 2}
   arc: 3
