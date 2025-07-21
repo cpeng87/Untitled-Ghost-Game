@@ -3549,7 +3549,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 471, y: 0}
+  m_AnchoredPosition: {x: 583, y: -78}
   m_SizeDelta: {x: 806.2214, y: 688.4146}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &981386864
@@ -3572,21 +3572,21 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Kevin Park\tProgramming\r\nMicah Xu\tWriting/Design\r\nLio Liang\t2D Art,
-    Writing/Design\r\nElliott Chen\tProgramming\r\nAdithi Amirtharaj\t2D Art, 3D
-    Art\r\nDavid Elman\tProgramming\r\nPhillip Abraham\tWriting/Design\r\nMelody
-    Wilson \t3D Art\r\r\nMonia Hossain\t2D Art, 3D Art\n\nDon't see your name? Fill
-    out the credits form!!"
+  m_text: "Aaron Chen: Writing/Design\r\nAllison Lu: 3D Art, Programming\nKevin Park:
+    Programming\r\nMicah Xu: Writing/Design\r\nLio Liang: 2D Art, Writing/Design\r\nElliott
+    Chen: Programming\r\nAdithi Amirtharaj: 2D Art, 3D Art\r\nDavid Elman: Programming\r\nPhillip
+    Abraham: Writing/Design\r\nMelody Wilson : 3D Art\r\r\nMonia Hossain: 2D Art,
+    3D Art\nNicolas Suttles: 3D Art"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d196d5669ef939d4eaea38e2eb818198, type: 2}
+  m_sharedMaterial: {fileID: 5265687828343391479, guid: d196d5669ef939d4eaea38e2eb818198, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4281156179
+  m_fontColor: {r: 0.3254902, g: 0.25882354, b: 0.1764706, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6189,7 +6189,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -455.975, y: 0}
+  m_AnchoredPosition: {x: -421, y: -78}
   m_SizeDelta: {x: 806.2214, y: 688.4146}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1615664009
@@ -6212,22 +6212,22 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Hannah Rajan\tProgramming, Writing/Design\r\nSahil Chawla\tProgramming\r\nKatya
-    Gaidachuk \t3D Art\r\nAnisa Aisha Ahmed\t3D Art, Programming\r\nTy Jeng\t2D Art\r\nLi
-    Fan\t2D Art\r\nAlexa Shoop\t3D Art, Audio\r\nJolie Chen\t2D Art\r\nSophia Wang\tProgramming,
-    Writing/Design, Audio\r\nArshiya Rahman\tProgramming\r\nCaleb Copley\tProgramming\r\nRyan
-    Eti\t3D Art\r\nEvan Thomas\tProgramming\r\nAaron Chen\tWriting/Design\r\nAllison
-    Lu\t3D Art, Programming\r\n"
+  m_text: "Cynthia Peng: Project Lead\nNeil Kochhar: Project Lead\nHannah Rajan:
+    Programming, Writing/Design\r\nSahil Chawla: Programming\r\nKatya Gaidachuk:
+    3D Art\r\nAnisa Aisha Ahmed: 3D Art, Programming\r\nTy Jeng: 2D Art, Programming\r\nLi
+    Fan: 2D Art\r\nAlexa Shoop: 3D Art, Audio\r\nJolie Chen: 2D Art\r\nSophia Wang:
+    Programming, Writing/Design, Audio\r\nArshiya Rahman: Programming\r\nCaleb Copley:
+    Programming\r\nRyan Eti: 3D Art\r\nEvan Thomas: Programming\r\r\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d196d5669ef939d4eaea38e2eb818198, type: 2}
+  m_sharedMaterial: {fileID: 5265687828343391479, guid: d196d5669ef939d4eaea38e2eb818198, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4281879386
+  m_fontColor: {r: 0.3529412, g: 0.29411766, b: 0.21960786, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -8484,9 +8484,45 @@ PrefabInstance:
       propertyPath: m_text
       value: Credits
       objectReference: {fileID: 0}
+    - target: {fileID: 221265828705106013, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_fontSize
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 221265828705106013, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: d196d5669ef939d4eaea38e2eb818198, type: 2}
+    - target: {fileID: 221265828705106013, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.17254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 221265828705106013, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.25490198
+      objectReference: {fileID: 0}
+    - target: {fileID: 221265828705106013, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.32156864
+      objectReference: {fileID: 0}
+    - target: {fileID: 221265828705106013, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 221265828705106013, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 5265687828343391479, guid: d196d5669ef939d4eaea38e2eb818198, type: 2}
+    - target: {fileID: 221265828705106013, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4281090386
+      objectReference: {fileID: 0}
+    - target: {fileID: 221265828705106013, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 353303460916813681, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 429
+      value: 371
       objectReference: {fileID: 0}
     - target: {fileID: 888291340331744754, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
       propertyPath: m_Camera
@@ -8495,6 +8531,14 @@ PrefabInstance:
     - target: {fileID: 888291340331744754, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
       propertyPath: m_RenderMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1124953268169637147, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 967.4435
+      objectReference: {fileID: 0}
+    - target: {fileID: 1124953268169637147, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -6.2783
       objectReference: {fileID: 0}
     - target: {fileID: 1227492989037166933, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
       propertyPath: m_Name
@@ -8524,6 +8568,34 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -2131071278, guid: 8b87301c0fd5dd043a2dfb929aee6d0d, type: 3}
+    - target: {fileID: 2447846256660699720, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: d196d5669ef939d4eaea38e2eb818198, type: 2}
+    - target: {fileID: 2447846256660699720, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2447846256660699720, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2447846256660699720, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2447846256660699720, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 5265687828343391479, guid: d196d5669ef939d4eaea38e2eb818198, type: 2}
+    - target: {fileID: 2447846256660699720, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2447846256660699720, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2838217681638832091, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -8592,6 +8664,30 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4181630566918738471, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4181630566918738471, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1911580817, guid: 5978b5703b44acc4784f19edda7d1a4b, type: 3}
+    - target: {fileID: 4181630566918738471, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4181630566918738471, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4181630566918738471, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4272896212319541868, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2131071278, guid: 8b87301c0fd5dd043a2dfb929aee6d0d, type: 3}
     - target: {fileID: 4817674987932464987, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -8730,11 +8826,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7782561613837865465, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7907539845981569250, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 399.8167
+      objectReference: {fileID: 0}
+    - target: {fileID: 7907539845981569250, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 107.8125
+      objectReference: {fileID: 0}
+    - target: {fileID: 7907539845981569250, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7907539845981569250, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -439
+      value: -425.08875
       objectReference: {fileID: 0}
     - target: {fileID: 7983187400965003297, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
       propertyPath: m_IsActive
