@@ -15,6 +15,6 @@ MonoBehaviour:
   recipeName: Boba
   sellPrice: 28
   buyPrice: 34
-  minigame: Tea
+  minigame: Boba
   unlockArc: 4
-  foodImage: {fileID: 0}
+  foodImage: {fileID: 21300000, guid: dc5d7633a22612749b0872c98edfc64d, type: 3}

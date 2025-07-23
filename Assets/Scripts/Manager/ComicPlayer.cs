@@ -18,12 +18,13 @@ public class ComicPlayer : MonoBehaviour
     [SerializeField] private float typewriterSpeed;
     [SerializeField] private float fadeTime = 0.4f;
     [SerializeField] private string nextScene;
+    private bool complete;
 
     private void Start()
     {
         foreach (Panel panel in panels)
         {
-            foreach(TextMeshProUGUI text in panel.texts)
+            foreach (TextMeshProUGUI text in panel.texts)
             {
                 text.enabled = false;
             }
@@ -40,7 +41,11 @@ public class ComicPlayer : MonoBehaviour
     {
         if (panels.Count == index)
         {
-            StartCoroutine(CompleteComic());
+            if (!complete)
+            {
+                StartCoroutine(CompleteComic());
+                complete = true;
+            }
             return;
         }
         Panel panel = panels[index];

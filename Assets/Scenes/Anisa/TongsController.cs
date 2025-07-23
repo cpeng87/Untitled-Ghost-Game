@@ -1,9 +1,9 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-public class TongsController : MonoBehaviour
+public class TongsController : MinigameCompletion
 {
-    float speed = 2f;
+    float speed = 3f;
     float objectHalfWidth = 1f;
     bool isGrabDonut = false;
     Transform grabbedDonut;
@@ -11,12 +11,15 @@ public class TongsController : MonoBehaviour
     float dropHeight = 2f; // Tongs move down by this distance
     bool leftHit = false;
     bool rightHit = false;
-    string leftHitObj = null;
-    string rightHitObj = null;
+    GameObject leftHitObj = null;
+    GameObject rightHitObj = null;
     Camera cam;
     Vector3 camLeftBound;
     Vector3 camRightBound;
     List<ContactPoint> contactPoints;
+    private bool isGrabbing;
+    private bool hasGrabbed;
+    private bool isDown;
 
     void Start()
     {
@@ -40,16 +43,16 @@ public class TongsController : MonoBehaviour
             if (hitPart.CompareTag("LeftTong"))
             {
                 leftHit = true;
-                leftHitObj = collision.gameObject.name;
+                leftHitObj = collision.gameObject;
             }
             else if (hitPart.CompareTag("RightTong"))
             {
                 rightHit = true;
-                rightHitObj = collision.gameObject.name;
+                rightHitObj = collision.gameObject;
             }
         }
         // Pick up the donut only if it's between the left and right ends of tong, and both ends hit the same donut
-        if (leftHit && rightHit && leftHitObj == rightHitObj)
+        if (leftHit && rightHit && leftHitObj == rightHitObj && !isGrabDonut)
         {
             grabbedDonut = collision.gameObject.transform;
             grabbedDonut.SetParent(transform);
@@ -63,6 +66,8 @@ public class TongsController : MonoBehaviour
     {
         Vector3 startPos = transform.position;
         Vector3 dropPos = new Vector3(startPos.x, dropHeight, startPos.z);
+        isGrabbing = true;
+        hasGrabbed = true;
 
         // Move down
         while (transform.position.y > dropHeight)
@@ -79,6 +84,7 @@ public class TongsController : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, upPos, speed * Time.deltaTime);
             yield return null;
         }
+        CheckCompletion();
     }
 
     void Update()
@@ -87,7 +93,7 @@ public class TongsController : MonoBehaviour
         float input = Input.GetAxis("Horizontal");
 
         // Horizontal movement
-        if (input != 0)
+        if (input != 0 && !isGrabbing)
         {
             Vector3 move = new Vector3(input * speed * Time.deltaTime, 0f, 0f);
             transform.position += move;
@@ -111,6 +117,18 @@ public class TongsController : MonoBehaviour
         {
             leftHit = rightHit = false;
             leftHitObj = rightHitObj = null;
+        }
+    }
+
+    private void CheckCompletion()
+    {
+        if (isGrabDonut)
+        {
+            minigameResult.MinigameResult(true);
+        }
+        else
+        {
+            minigameResult.MinigameResult(false);
         }
     }
 }

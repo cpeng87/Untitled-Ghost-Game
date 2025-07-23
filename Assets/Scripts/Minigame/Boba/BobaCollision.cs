@@ -14,14 +14,12 @@ public class BobaCollision : MonoBehaviour
     private void FixedUpdate() //fix the physics 
     {
         rb.WakeUp();
-        Debug.Log(rb.IsSleeping());
     }
     private void OnTriggerEnter(Collider collider)
     {
 
         GameObject potPrefab = GameObject.Find("Pot");
-        GameObject boundsPrefab = GameObject.Find("StrainerAndBounds/Bounds");
-        Debug.Log(collider.gameObject.name);
+        GameObject boundsPrefab = GameObject.Find("StrainerAndBounds/Strainer/Bounds");
 
         if (collider.gameObject.name.Equals(boundsPrefab.name) && !isTriggered) //if the boba hits the bounds collider...
         {
@@ -35,7 +33,7 @@ public class BobaCollision : MonoBehaviour
     private void OnTriggerExit(Collider collider)
     {
         GameObject potPrefab = GameObject.Find("Pot");
-        GameObject boundsPrefab = GameObject.Find("StrainerAndBounds/Bounds");
+        GameObject boundsPrefab = GameObject.Find("StrainerAndBounds/Strainer/Bounds");
         if (collider.gameObject.name.Equals(boundsPrefab.name)) //if the boba leaves the bounds collider...
         {
             if (transform.position.y > boundsPrefab.transform.position.y) { //only if the boba is above the collider!

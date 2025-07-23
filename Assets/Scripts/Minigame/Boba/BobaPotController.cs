@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BobaPotController : MonoBehaviour
+public class BobaPotController : MinigameCompletion
 {
     private bool isTilting = false;
     private float tiltAngle = 0f;
@@ -23,41 +23,41 @@ public class BobaPotController : MonoBehaviour
         childCollider = GameObject.Find("Pot/Circle");
     }
 
-    void Update()
-    {
+    // void Update()
+    // {
 
-        if (GetComponent<BobaSpawner>().bobaDoneSpawning()) //only start moving if the boba is done spawning
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                if (Physics.Raycast(ray, out RaycastHit hit))
-                {
-                    Debug.Log(hit.collider.gameObject.name);
-                    //clicked on main body collider, begin tilting the pot
-                    if (hit.collider.gameObject == gameObject || hit.collider.gameObject == childCollider)
-                    {
-                        isTilting = true;
-                        Debug.Log("TiltingOn");
-                    }
-                }
-            }
+    //     if (GetComponent<BobaSpawner>().bobaDoneSpawning()) //only start moving if the boba is done spawning
+    //     {
+    //         if (Input.GetMouseButtonDown(0))
+    //         {
+    //             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+    //             if (Physics.Raycast(ray, out RaycastHit hit))
+    //             {
+    //                 Debug.Log(hit.collider.gameObject.name);
+    //                 //clicked on main body collider, begin tilting the pot
+    //                 if (hit.collider.gameObject == gameObject || hit.collider.gameObject == childCollider)
+    //                 {
+    //                     isTilting = true;
+    //                     Debug.Log("TiltingOn");
+    //                 }
+    //             }
+    //         }
 
-            if (Input.GetMouseButton(0))
-            {
-                if (isTilting)
-                {
-                    HandleTilting();
-                }
-            }
+    //         if (Input.GetMouseButton(0))
+    //         {
+    //             if (isTilting)
+    //             {
+    //                 HandleTilting();
+    //             }
+    //         }
 
-            //no longer dragging
-            if (Input.GetMouseButtonUp(0))
-            {
-                isTilting = false;
-            }
-        }
-    }
+    //         //no longer dragging
+    //         if (Input.GetMouseButtonUp(0))
+    //         {
+    //             isTilting = false;
+    //         }
+    //     }
+    // }
 
     // tilts the pot based on the mouse's y movement. Limited by max tilt angle.
     private void HandleTilting()
@@ -75,6 +75,7 @@ public class BobaPotController : MonoBehaviour
 
         //update slider
         bobaProgress.value = bobaCounter;
+        CheckResults();
     }
 
     //when boba bounces out of one of the trigger objs (strainer), boba counter decreases :(
@@ -90,16 +91,21 @@ public class BobaPotController : MonoBehaviour
     //Completes the minigame and passes result to the gameManager.
     public void CheckResults()
     {
+        // bool result = bobaCounter >= neededBoba;
+        // if (result)
+        // {
+        //     Debug.Log("success");
+        // }
+        // else
+        // {
+        //     Debug.Log("fail");
+        // }
+        // GameManager.Instance.CompleteMinigame(result);
         bool result = bobaCounter >= neededBoba;
         if (result)
         {
-            Debug.Log("success");
+            minigameResult.MinigameResult(true);
         }
-        else
-        {
-            Debug.Log("fail");
-        }
-        GameManager.Instance.CompleteMinigame(result);
     }
 
     public int getNeededBoba()

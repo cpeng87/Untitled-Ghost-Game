@@ -76,6 +76,11 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void StopSong()
+    {
+        musicSource.Stop();
+    }
+
     public void RandomSong()
     {
         //Get a song index that's different than what's already playing

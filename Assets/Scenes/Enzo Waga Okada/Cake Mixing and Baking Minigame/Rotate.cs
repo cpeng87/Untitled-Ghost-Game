@@ -97,15 +97,13 @@ public class Rotate : MonoBehaviour
                     transform.Rotate(Vector3.forward * -1 * rotateSpeed * Time.deltaTime);
                 }
             }
-        }
+            if (progress > neededProgress)
+            {
+                cakeState = CakeState.Oven;
+                StartCakeOven();
+            }
 
-        if (progress > neededProgress)
-        {
-            cakeState = CakeState.Oven;
-            StartCakeOven();
-            Debug.Log("done");
         }
-
     }
 
     private void StartCakeOven()

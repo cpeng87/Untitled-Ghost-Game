@@ -11,7 +11,8 @@ public class Activator : MinigameCompletion {
 
     void Update() {
         if (Input.GetKeyDown(key) && active) {
-            if (note.transform.position.x <= 0.2f && note.transform.position.x >= -0.2f) {
+            if (note.transform.position.x <= 0.2f && note.transform.position.x >= -0.2f)
+            {
                 Destroy(note);
                 minigameResult.MinigameResult(true);
             }
