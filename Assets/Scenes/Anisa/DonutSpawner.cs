@@ -32,7 +32,7 @@ public class DonutSpawner : MonoBehaviour
 
                     Quaternion rotation = Quaternion.Euler(-45f, 0f, 0f);
                     GameObject currDonut = Instantiate(donut, randomPosition, rotation);
-                    currDonut.transform.localScale = new Vector3(1000f, 1000f, 1000f);
+                    currDonut.transform.localScale = new Vector3(950f, 950f, 950f);
                     donutPositions.Add(randomPosition);
                     placed = true;
                     break;

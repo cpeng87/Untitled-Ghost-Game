@@ -20,6 +20,8 @@ public class TongsController : MinigameCompletion
     private bool isGrabbing;
     private bool hasGrabbed;
     private bool isDown;
+    [SerializeField] private BoxCollider leftTong;
+    [SerializeField] private BoxCollider rightTong;
 
     void Start()
     {
@@ -76,6 +78,9 @@ public class TongsController : MinigameCompletion
             if (isGrabDonut) break;
             yield return null;
         }
+
+        leftTong.enabled = false;
+        rightTong.enabled = false;
 
         // Move back up
         Vector3 upPos = new Vector3(startPos.x, originalPos.y, startPos.z);

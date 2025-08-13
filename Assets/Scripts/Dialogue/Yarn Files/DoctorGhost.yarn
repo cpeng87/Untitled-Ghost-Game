@@ -2,7 +2,7 @@ title: DoctorOrder
 tags:
 position: -54,-23
 ---
-Doctor Ghost: I'm feeling like having an {GetOrder()} right now, think you can make me one real quick?
+Doctor Ghost: I'm feeling like having a {GetOrder()} right now, think you can make me one real quick?
 <<setCam "Main Camera">>
 ===
 

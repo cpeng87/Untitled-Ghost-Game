@@ -2801,6 +2801,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8142293482525791249, guid: ccf183354acd03741b6e37dc6796b51b, type: 3}
+      propertyPath: sound.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8142293482525791249, guid: ccf183354acd03741b6e37dc6796b51b, type: 3}
+      propertyPath: sound.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4cd71b20fc88ecf41b0a7aef9f21898a, type: 3}
+    - target: {fileID: 8142293482525791249, guid: ccf183354acd03741b6e37dc6796b51b, type: 3}
+      propertyPath: sound.Array.data[2].name
+      value: Cutting
+      objectReference: {fileID: 0}
+    - target: {fileID: 8142293482525791249, guid: ccf183354acd03741b6e37dc6796b51b, type: 3}
+      propertyPath: sound.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: b0c69f6a8c57a0c49b668799071a0f6b, type: 3}
+    - target: {fileID: 8142293482525791249, guid: ccf183354acd03741b6e37dc6796b51b, type: 3}
+      propertyPath: sound.Array.data[3].name
+      value: Mix1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8142293482525791249, guid: ccf183354acd03741b6e37dc6796b51b, type: 3}
+      propertyPath: sound.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 80b58a35dd4964d439f85ac2a28e7476, type: 3}
+    - target: {fileID: 8142293482525791249, guid: ccf183354acd03741b6e37dc6796b51b, type: 3}
+      propertyPath: sound.Array.data[4].name
+      value: Mix2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

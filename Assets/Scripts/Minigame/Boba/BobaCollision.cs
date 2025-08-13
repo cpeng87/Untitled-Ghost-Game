@@ -17,7 +17,6 @@ public class BobaCollision : MonoBehaviour
     }
     private void OnTriggerEnter(Collider collider)
     {
-
         GameObject potPrefab = GameObject.Find("Pot");
         GameObject boundsPrefab = GameObject.Find("StrainerAndBounds/Strainer/Bounds");
 
@@ -27,6 +26,7 @@ public class BobaCollision : MonoBehaviour
             //Debug.Log("BobaHitStrainer - " + collider.gameObject.name);
             var script = potPrefab.GetComponent<BobaPotController>();
             script.OnBobaAdd(); // update boba counter
+            AudioManager.Instance.PlaySound("Boba");
         } 
     }
 

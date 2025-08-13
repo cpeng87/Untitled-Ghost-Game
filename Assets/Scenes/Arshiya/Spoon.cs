@@ -38,15 +38,15 @@ public class Spoon : DraggableObject
 
         if (Mathf.Abs(xPos - minX) < threshold && stirState == StirState.WentRight)
         {
-            // Full cycle: left -> right -> left
-            // Debug.Log("Full stir!");
             soupManager.AddToMixProgress(inc);
             stirState = StirState.Idle;
+            AudioManager.Instance.PlaySound("Mix1");
         }
         if (Mathf.Abs(xPos - maxX) < threshold && stirState == StirState.WentLeft)
         {
             soupManager.AddToMixProgress(inc);
             stirState = StirState.WentRight;
+            // AudioManager.Instance.PlaySound("Mix2");
         }
         else if (Mathf.Abs(xPos - minX) < threshold && stirState == StirState.Idle)
         {

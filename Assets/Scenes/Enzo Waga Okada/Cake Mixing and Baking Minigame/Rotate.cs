@@ -33,12 +33,17 @@ public class Rotate : MonoBehaviour
     {
         goalCircle.SetActive(false);
         movingCircle.SetActive(false);
+        AudioManager.Instance.SetSoundLooping(true);
     }
 
     void Update()
     {
         if (cakeState == CakeState.LeftMix || cakeState == CakeState.RightMix || cakeState == CakeState.UpMix || cakeState == CakeState.DownMix)
         {
+            if (Input.GetKeyUp(leftArrow) || Input.GetKeyUp(rightArrow) || Input.GetKeyUp(upArrow) || Input.GetKeyUp(downArrow))
+            {
+                AudioManager.Instance.StopSound();
+            }
             timer += Time.deltaTime;
             if (timer > swapDirectionTime)
             {
@@ -71,7 +76,16 @@ public class Rotate : MonoBehaviour
                 {
                     progress += progressIncrement;
                     transform.Rotate(Vector3.forward * rotateSpeed * Time.deltaTime);
+                    if (!AudioManager.Instance.CheckPlaying())
+                    {
+                        AudioManager.Instance.PlaySound("Mix");
+                    }
                 }
+                else
+                {
+                    AudioManager.Instance.StopSound();
+                }
+
             }
             else if (Input.GetKey(rightArrow))
             {
@@ -79,6 +93,14 @@ public class Rotate : MonoBehaviour
                 {
                     progress += progressIncrement;
                     transform.Rotate(Vector3.forward * -1 * rotateSpeed * Time.deltaTime);
+                    if (!AudioManager.Instance.CheckPlaying())
+                    {
+                        AudioManager.Instance.PlaySound("Mix");
+                    }
+                }
+                else
+                {
+                    AudioManager.Instance.StopSound();
                 }
             }
             else if (Input.GetKey(upArrow))
@@ -87,6 +109,14 @@ public class Rotate : MonoBehaviour
                 {
                     progress += progressIncrement;
                     transform.Rotate(Vector3.forward * rotateSpeed * Time.deltaTime);
+                    if (!AudioManager.Instance.CheckPlaying())
+                    {
+                        AudioManager.Instance.PlaySound("Mix");
+                    }
+                }
+                else
+                {
+                    AudioManager.Instance.StopSound();
                 }
             }
             else if (Input.GetKey(downArrow))
@@ -95,6 +125,14 @@ public class Rotate : MonoBehaviour
                 {
                     progress += progressIncrement;
                     transform.Rotate(Vector3.forward * -1 * rotateSpeed * Time.deltaTime);
+                    if (!AudioManager.Instance.CheckPlaying())
+                    {
+                        AudioManager.Instance.PlaySound("Mix");
+                    }
+                }
+                else
+                {
+                    AudioManager.Instance.StopSound();
                 }
             }
             if (progress > neededProgress)
@@ -102,7 +140,6 @@ public class Rotate : MonoBehaviour
                 cakeState = CakeState.Oven;
                 StartCakeOven();
             }
-
         }
     }
 

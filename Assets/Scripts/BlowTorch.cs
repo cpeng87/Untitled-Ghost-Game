@@ -27,7 +27,6 @@ public class BlowTorch : MonoBehaviour
             StartCoroutine(SprayFire());
         }
     }
-
     
 
     private IEnumerator SprayFire()
@@ -35,22 +34,24 @@ public class BlowTorch : MonoBehaviour
         if (!fireEffect.isPlaying)
         {
             fireEffect.Play();
+            AudioManager.Instance.PlaySound("Blowtorch");
             blowTorch.transform.Rotate(0, 0, -20f);
 
             int currScore = ringScript.GetScore();
             float scoreIncrement = RingScript.ScoreToSliderIncrement(currScore);
 
-            text.color = (scoreIncrement == 10)? Color.green : (scoreIncrement > 0)? Color.yellow: Color.red;
+            text.color = (scoreIncrement == 10) ? Color.green : (scoreIncrement > 0) ? Color.yellow : Color.red;
 
             text.text = RingScript.ScoreToString(currScore);
             slider.IncreaseSlider(scoreIncrement);
             yield return new WaitForSeconds(0.3f);
-            
+
 
 
             fireEffect.Stop();
             blowTorch.transform.Rotate(0, 0, 20f);
             text.text = "";
+            AudioManager.Instance.StopSound();
         }
     }
 }

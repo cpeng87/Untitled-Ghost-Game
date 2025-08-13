@@ -31,14 +31,15 @@ public class TeapotController : MinigameCompletion
     [SerializeField] ParticleSystem teaSteamParticles;
     private bool isComplete = false;
     private float noTeaTimer = 0f;
+    private float pourPauseTimer;
 
     void Start()
     {
         originalZ = transform.position.z;
 
         //set slider values based on neededparticles
-        // teaProgress.minValue = 0;
-        // teaProgress.maxValue = 1;
+        teaProgress.minValue = 0;
+        teaProgress.maxValue = 1;
         pourParticles.Stop();
     }
 
@@ -52,17 +53,22 @@ public class TeapotController : MinigameCompletion
                 minigameResult.MinigameResult(false);
             }
         }
+        pourPauseTimer += Time.deltaTime;
+        if (pourPauseTimer >= 0.1f && !isComplete)
+        {
+            AudioManager.Instance.PauseSound();
+        }
         if (pourParticles.isEmitting)
-            {
-                float emissionRate = pourParticles.emission.rateOverTime.constant;
-                float deltaParticles = emissionRate * Time.deltaTime;
-                totalEmittedParticles += deltaParticles;
+        {
+            float emissionRate = pourParticles.emission.rateOverTime.constant;
+            float deltaParticles = emissionRate * Time.deltaTime;
+            totalEmittedParticles += deltaParticles;
 
-                if (totalEmittedParticles >= maxTeaParticles)
-                {
-                    outOfTea = true;
-                }
+            if (totalEmittedParticles >= maxTeaParticles)
+            {
+                outOfTea = true;
             }
+        }
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -147,6 +153,11 @@ public class TeapotController : MinigameCompletion
     private void OnParticleTrigger()
     {
         teaCounter += 1;
+        AudioManager.Instance.UnPauseSound();
+        if (!AudioManager.Instance.CheckPlaying())
+        {
+            AudioManager.Instance.PlaySound("Pour");
+        }
 
         //update slider
         teaProgress.value = teaCounter * 1.0f / maxTeaParticles;
@@ -157,15 +168,19 @@ public class TeapotController : MinigameCompletion
     //Completes the minigame and passes result to the gameManager.
     public void CheckResults()
     {
-        bool result = teaCounter >= neededParticles && teaCounter < overflowParticles;
+        bool result = teaCounter >= neededParticles && teaCounter < maxTeaParticles;
         if (result && isComplete == false)
         {
             isComplete = true;
+            AudioManager.Instance.UnPauseSound();
+            AudioManager.Instance.StopSound();
             minigameResult.MinigameResult(result);
         }
         else if (!result && isComplete == false)
         {
             isComplete = true;
+            AudioManager.Instance.UnPauseSound();
+            AudioManager.Instance.StopSound();
             minigameResult.MinigameResult(result);
         }
     }

@@ -622,6 +622,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minigameResult: {fileID: 1749849711}
+  leftTong: {fileID: 1583835866}
+  rightTong: {fileID: 958592214}
 --- !u!54 &782366187
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -761,6 +763,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc8571c41d6af4feeaaac1d932b4f122, type: 3}
+--- !u!65 &958592214 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 6062171540225871729, guid: a108ec51403f349ad8d1b1e98868c81d, type: 3}
+  m_PrefabInstance: {fileID: 82133423}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &979990228
 GameObject:
   m_ObjectHideFlags: 0
@@ -824,7 +831,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b782cff6f20d705438d43aa28e46b844, type: 2}
+  - {fileID: 2100000, guid: 31675b9dc36e0e8428d165f98a3e3457, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1187,6 +1194,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 14.09, y: 0, z: 0}
+--- !u!65 &1583835866 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 2700316196849562117, guid: a108ec51403f349ad8d1b1e98868c81d, type: 3}
+  m_PrefabInstance: {fileID: 82133423}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1637801027
 PrefabInstance:
   m_ObjectHideFlags: 0

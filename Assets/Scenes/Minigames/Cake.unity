@@ -1156,9 +1156,9 @@ MonoBehaviour:
   numFlourState: 2
   cakeState: 1
   progress: 0
-  neededProgress: 125
+  neededProgress: 100
   swapDirectionTime: 1.25
-  rotateSpeed: 300
+  rotateSpeed: 500
   progressIncrement: 0.15
   arrow: {fileID: 1949451018}
   goalCircle: {fileID: 1587829184}
@@ -1516,6 +1516,18 @@ PrefabInstance:
     - target: {fileID: 7283448006413846514, guid: ccf183354acd03741b6e37dc6796b51b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8142293482525791249, guid: ccf183354acd03741b6e37dc6796b51b, type: 3}
+      propertyPath: sound.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8142293482525791249, guid: ccf183354acd03741b6e37dc6796b51b, type: 3}
+      propertyPath: sound.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: efda8b85da01f53448b6adbe75240db8, type: 3}
+    - target: {fileID: 8142293482525791249, guid: ccf183354acd03741b6e37dc6796b51b, type: 3}
+      propertyPath: sound.Array.data[2].name
+      value: Mix
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

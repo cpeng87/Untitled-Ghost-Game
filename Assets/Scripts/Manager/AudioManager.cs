@@ -135,6 +135,30 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Song " + soundName + " not found!");
         }
     }
+    public bool CheckPlaying()
+    {
+        return soundSource.isPlaying;
+    }
+
+    public void SetSoundLooping(bool isLooping)
+    {
+        soundSource.loop = isLooping;
+    }
+
+    public void StopSound()
+    {
+        soundSource.Stop();
+    }
+
+    public void PauseSound()
+    {
+        soundSource.Pause();
+    }
+
+    public void UnPauseSound()
+    {
+        soundSource.UnPause();
+    }
 
     public void PlaySound(AudioClip sound)
     {

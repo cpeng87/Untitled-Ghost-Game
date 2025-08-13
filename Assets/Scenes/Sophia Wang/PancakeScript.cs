@@ -7,6 +7,7 @@ public class PancakeScript : MonoBehaviour
     private bool clicked = false;
     [SerializeField] GameObject pancakePrefab;
     private Vector3 startPosition;
+    private bool hasBounced = false;
     private void Start()
     {
         startPosition = transform.position;
@@ -33,8 +34,21 @@ public class PancakeScript : MonoBehaviour
         if (clicked)
         {
             moved = true;
-            Debug.Log(startPosition);
-            Instantiate(pancakePrefab, startPosition, Quaternion.identity);
+            GameObject pancake = Instantiate(pancakePrefab, startPosition, Quaternion.identity);
+            pancake.name = "Pancake";
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (hasBounced)
+        {
+            return;
+        }
+        if (collision.gameObject.name == "Pancake" || collision.gameObject.name == "Plate")
+        {
+            AudioManager.Instance.PlaySound("Pancake");
+            hasBounced = true;
         }
     }
 }

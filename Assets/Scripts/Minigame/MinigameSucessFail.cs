@@ -40,7 +40,7 @@ public class MinigameSuccessFail : MonoBehaviour
 
         Time.timeScale = 0;
 
-        yield return new WaitForSecondsRealtime(2.4f);
+        yield return new WaitForSecondsRealtime(2f);
 
         Time.timeScale = 1;
 

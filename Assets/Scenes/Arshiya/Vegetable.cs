@@ -89,6 +89,7 @@ public class Vegetable : Clickable
             }
             parts[chops].GetComponent<VegetablePart>().enabled = true;
             parts[chops].GetComponent<BoxCollider>().enabled = true;
+            AudioManager.Instance.PlaySound("Cutting");
             // soupManager.AddToProgress(inc);
         }
     }

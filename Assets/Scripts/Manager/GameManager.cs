@@ -294,13 +294,13 @@ public class GameManager : MonoBehaviour
 
     public void UpdateArc()
     {
-        arc = (Arc) ((int) arc + 1);
-
-        if (arc == Arc.None)
+        if (arc == Arc.Legacy)
         {
             StartCoroutine(LoadEndScene());
             return;
         }
+
+        arc = (Arc) ((int) arc + 1);
 
         // TODO: Update the Tree Petal VFX based on the current arc
         switch (arc)

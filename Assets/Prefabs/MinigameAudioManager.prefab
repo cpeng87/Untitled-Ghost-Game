@@ -180,9 +180,9 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 02499343d46f91a4fa137167abbf4b97, type: 3}
   sound:
   - name: Lose
-    clip: {fileID: 8300000, guid: 0ab3377cf4796834a8fdd4880d34af5e, type: 3}
+    clip: {fileID: 8300000, guid: 5a1736a93d1487a44b6b77dfc5d18808, type: 3}
   - name: Win
-    clip: {fileID: 8300000, guid: d8086a7f07de6aa4b8ed22fe643c74f0, type: 3}
+    clip: {fileID: 8300000, guid: 52c8e599462e9284ca23eff9620b507e, type: 3}
   musicSource: {fileID: 5669592600117291530}
   soundSource: {fileID: 6212521937045856379}
 --- !u!1 &4919290956549174464
