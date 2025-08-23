@@ -18,7 +18,6 @@ public class GhostSpawningManager : MonoBehaviour
     [SerializeField] private Vector3 door = new Vector3(-6f, 0.5f,-7f);
     [SerializeField] private float ghostSpeed = 5f;
     [SerializeField] private float rotationSpeed = 135f;
-    private float minRotationSpeed = 90f;
     private Quaternion RotationGoal1 = Quaternion.Euler(0f, -90f, 0f);
     private Quaternion RotationGoal2 = Quaternion.Euler(0f, 0f, 0f);
     private Vector3 pivot1 = new Vector3(-6f, 0.5f, -7f);

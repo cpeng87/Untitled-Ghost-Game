@@ -2803,12 +2803,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8142293482525791249, guid: ccf183354acd03741b6e37dc6796b51b, type: 3}
       propertyPath: sound.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8142293482525791249, guid: ccf183354acd03741b6e37dc6796b51b, type: 3}
       propertyPath: sound.Array.data[2].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 4cd71b20fc88ecf41b0a7aef9f21898a, type: 3}
+      objectReference: {fileID: 8300000, guid: 92ba04428d273fa4281586faa65bddef, type: 3}
     - target: {fileID: 8142293482525791249, guid: ccf183354acd03741b6e37dc6796b51b, type: 3}
       propertyPath: sound.Array.data[2].name
       value: Cutting
@@ -2816,7 +2816,7 @@ PrefabInstance:
     - target: {fileID: 8142293482525791249, guid: ccf183354acd03741b6e37dc6796b51b, type: 3}
       propertyPath: sound.Array.data[3].clip
       value: 
-      objectReference: {fileID: 8300000, guid: b0c69f6a8c57a0c49b668799071a0f6b, type: 3}
+      objectReference: {fileID: 8300000, guid: 88c0d9caa0a514e4fbab2e3a4251e14a, type: 3}
     - target: {fileID: 8142293482525791249, guid: ccf183354acd03741b6e37dc6796b51b, type: 3}
       propertyPath: sound.Array.data[3].name
       value: Mix1
@@ -2824,7 +2824,7 @@ PrefabInstance:
     - target: {fileID: 8142293482525791249, guid: ccf183354acd03741b6e37dc6796b51b, type: 3}
       propertyPath: sound.Array.data[4].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 80b58a35dd4964d439f85ac2a28e7476, type: 3}
+      objectReference: {fileID: 8300000, guid: c5e0a6d8f6b918243b1755ed7c153a26, type: 3}
     - target: {fileID: 8142293482525791249, guid: ccf183354acd03741b6e37dc6796b51b, type: 3}
       propertyPath: sound.Array.data[4].name
       value: Mix2

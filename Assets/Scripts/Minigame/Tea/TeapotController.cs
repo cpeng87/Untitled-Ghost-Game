@@ -26,18 +26,23 @@ public class TeapotController : MinigameCompletion
     public bool outOfTea = false;
     private float totalEmittedParticles = 0;
     public Slider teaProgress;
-    [SerializeField] private int neededParticles;
-    [SerializeField] private int overflowParticles;
+    private int neededParticles;
+    private int overflowParticles;
     [SerializeField] ParticleSystem teaSteamParticles;
     private bool isComplete = false;
     private float noTeaTimer = 0f;
     private float pourPauseTimer;
+
+    //current gradient is at 65 and 80
 
     void Start()
     {
         originalZ = transform.position.z;
 
         //set slider values based on neededparticles
+        neededParticles = (int) (0.65f * 200);
+        overflowParticles = (int) (0.8f * 200);
+
         teaProgress.minValue = 0;
         teaProgress.maxValue = 1;
         pourParticles.Stop();
@@ -45,82 +50,79 @@ public class TeapotController : MinigameCompletion
 
     void Update()
     {
-        if (outOfTea && !isComplete)
+        if (teaCounter > 200 && !isComplete)
         {
-            noTeaTimer += Time.deltaTime;
-            if (noTeaTimer > 2)
+            isComplete = true;
+            AudioManager.Instance.UnPauseSound();
+            AudioManager.Instance.StopSound();
+            minigameResult.MinigameResult(false);
+        }
+        if (!isComplete)
+        {
+            pourPauseTimer += Time.deltaTime;
+            if (pourPauseTimer >= 0.1f)
             {
-                minigameResult.MinigameResult(false);
+                AudioManager.Instance.PauseSound();
             }
-        }
-        pourPauseTimer += Time.deltaTime;
-        if (pourPauseTimer >= 0.1f && !isComplete)
-        {
-            AudioManager.Instance.PauseSound();
-        }
-        if (pourParticles.isEmitting)
-        {
-            float emissionRate = pourParticles.emission.rateOverTime.constant;
-            float deltaParticles = emissionRate * Time.deltaTime;
-            totalEmittedParticles += deltaParticles;
-
-            if (totalEmittedParticles >= maxTeaParticles)
-            {
-                outOfTea = true;
-            }
-        }
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out RaycastHit hit))
-            {
-                //clicked on main body collider, begin moving the teapot
-                if (hit.collider.gameObject == gameObject)
-                {
-                    isDragging = true;
-                    offset = transform.position - hit.point;
-                }
-                //clicked teapot spout, begin tilting the teapot
-                else if (hit.collider.CompareTag("Tilt"))
-                {
-                    isTilting = true;
-                }
-            }
-        }
-        
-        if (Input.GetMouseButton(0))
-        {
-            if (isDragging)
-            {
-                HandleMoving();
-            }
-            else if (isTilting)
-            {
-                HandleTilting();
-            }
-        }
-
-        //no longer dragging
-        if (Input.GetMouseButtonUp(0))
-        {
-            isDragging = false;
-            isTilting = false;
-        }
-
-        // Check tilt angle to emit particles or stop emitting particles
-        if (tiltAngle > pourThreshold && outOfTea == false)
-        {
-            if (!pourParticles.isEmitting)
-            {
-                pourParticles.Play();
-            }
-        }
-        else
-        {
             if (pourParticles.isEmitting)
             {
-                pourParticles.Stop();
+                float emissionRate = pourParticles.emission.rateOverTime.constant;
+                float deltaParticles = emissionRate * Time.deltaTime;
+                totalEmittedParticles += deltaParticles;
+            }
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out RaycastHit hit))
+                {
+                    //clicked on main body collider, begin moving the teapot
+                    if (hit.collider.gameObject == gameObject)
+                    {
+                        isDragging = true;
+                        offset = transform.position - hit.point;
+                    }
+                    //clicked teapot spout, begin tilting the teapot
+                    else if (hit.collider.CompareTag("Tilt"))
+                    {
+                        isTilting = true;
+                    }
+                }
+            }
+            
+            if (Input.GetMouseButton(0))
+            {
+                if (isDragging)
+                {
+                    HandleMoving();
+                }
+                else if (isTilting)
+                {
+                    HandleTilting();
+                }
+            }
+
+            //no longer dragging
+            if (Input.GetMouseButtonUp(0))
+            {
+                isDragging = false;
+                isTilting = false;
+            }
+
+            // Check tilt angle to emit particles or stop emitting particles
+            if (tiltAngle > pourThreshold && outOfTea == false)
+            {
+                if (!pourParticles.isEmitting)
+                {
+                    pourParticles.Play();
+                }
+            }
+            else
+            {
+                if (pourParticles.isEmitting)
+                {
+                    pourParticles.Stop();
+                }
             }
         }
     }
@@ -168,7 +170,7 @@ public class TeapotController : MinigameCompletion
     //Completes the minigame and passes result to the gameManager.
     public void CheckResults()
     {
-        bool result = teaCounter >= neededParticles && teaCounter < maxTeaParticles;
+        bool result = teaCounter >= neededParticles && teaCounter <= overflowParticles;
         if (result && isComplete == false)
         {
             isComplete = true;

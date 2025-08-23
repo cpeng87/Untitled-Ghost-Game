@@ -4,7 +4,6 @@ public class BatterBowlController : MonoBehaviour
 {
     private Vector3 offset;
     private bool isDragging = false;
-    private bool isTilting = false;
     public float tiltAngle = 0f;
     private float originalZ;
     private float originalY;
@@ -19,7 +18,6 @@ public class BatterBowlController : MonoBehaviour
     public ParticleSystem pourParticles;
     public float pourThreshold = 20f;
     [Header("Muffin Fill Parameters")]
-    private float maxFillHeight = 0.4f; // The max amount of batter that can be filled
     public GameObject rayPoint;
     // public Collider tiltCollider;
 
@@ -27,6 +25,7 @@ public class BatterBowlController : MonoBehaviour
     {
         originalZ = transform.position.z;
         originalY = transform.position.y;
+        AudioManager.Instance.SetSoundLooping(true);
         pourParticles.Stop();
     }
 
@@ -55,8 +54,10 @@ public class BatterBowlController : MonoBehaviour
     // }
     private void HandleTilting()
     {
+        // AudioManager.Instance.PlaySound("DownTink");
         tiltAngle = maxTiltAngle;
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, maxTiltAngle);
+
     }
     private void HandleUnTilt()
     {
@@ -93,6 +94,7 @@ public class BatterBowlController : MonoBehaviour
 
     void Update()
     {
+
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -106,15 +108,32 @@ public class BatterBowlController : MonoBehaviour
             }
         }
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            AudioManager.Instance.StopSound();
+            AudioManager.Instance.PlaySound("DownTink");
+        }
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            AudioManager.Instance.StopSound();
+            AudioManager.Instance.PlaySound("UpTink");
+        }
+
+
         if (Input.GetKey(KeyCode.Space))
         {
-            isTilting = true;
             HandleTilting();
+            // if (!AudioManager.Instance.CheckPlaying())
+            // {
+            //     AudioManager.Instance.PlaySound("Pour");
+            // }
         }
         else
         {
-            isTilting = false;
-            HandleUnTilt();
+            if (Time.timeScale == 1)
+            {
+                HandleUnTilt();
+            }
         }
 
         if (Input.GetMouseButton(0))

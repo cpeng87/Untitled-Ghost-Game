@@ -18,7 +18,6 @@ public class DonutSpawner : MonoBehaviour
 
         for (int i = 0; i < numDonuts; i++)
         {
-            bool placed = false;
             for (int attempt = 0; attempt < maxAttemptsPerDonut; attempt++)
             {
                 Vector3 randomPosition = new Vector3(
@@ -34,7 +33,6 @@ public class DonutSpawner : MonoBehaviour
                     GameObject currDonut = Instantiate(donut, randomPosition, rotation);
                     currDonut.transform.localScale = new Vector3(950f, 950f, 950f);
                     donutPositions.Add(randomPosition);
-                    placed = true;
                     break;
                 }
             }

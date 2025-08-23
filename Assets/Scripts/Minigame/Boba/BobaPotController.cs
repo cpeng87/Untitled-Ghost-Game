@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class BobaPotController : MinigameCompletion
 {
-    private bool isTilting = false;
     private float tiltAngle = 0f;
 
     [Header("Tilt Settings")]

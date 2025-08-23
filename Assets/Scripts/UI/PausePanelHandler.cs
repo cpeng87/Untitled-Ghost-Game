@@ -27,7 +27,11 @@ public class PausePanelHandler : MonoBehaviour
 
     public void ExitToTitle()
     {
-        Destroy(GameManager.Instance.gameObject, 1f); 
+        if (GameManager.Instance != null)
+        {
+            Destroy(GameManager.Instance.gameObject, 1f); 
+        }
+
         PauseManager.RemovePause(this.gameObject);
         PauseManager.SetPauseState(false);
         SceneManager.LoadScene("TitleScene");

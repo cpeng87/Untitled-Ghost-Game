@@ -1214,7 +1214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32783d9f4e1f67c4db02fdd6bb5c5c40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minigameResult: {fileID: 0}
+  minigameResult: {fileID: 2253224209323156453}
   timerText: {fileID: 5494119480948820750}
   timeLimit: 60
   isRunning: 1

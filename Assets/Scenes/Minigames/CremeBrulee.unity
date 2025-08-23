@@ -6607,15 +6607,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8142293482525791249, guid: ccf183354acd03741b6e37dc6796b51b, type: 3}
       propertyPath: sound.Array.size
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8142293482525791249, guid: ccf183354acd03741b6e37dc6796b51b, type: 3}
       propertyPath: sound.Array.data[2].clip
       value: 
-      objectReference: {fileID: 8300000, guid: c4c20a68204b7944a985bde1d6388674, type: 3}
+      objectReference: {fileID: 8300000, guid: 1681620c9ef0f7746ba18d843294ac06, type: 3}
     - target: {fileID: 8142293482525791249, guid: ccf183354acd03741b6e37dc6796b51b, type: 3}
       propertyPath: sound.Array.data[2].name
-      value: Blowtorch
+      value: Great
+      objectReference: {fileID: 0}
+    - target: {fileID: 8142293482525791249, guid: ccf183354acd03741b6e37dc6796b51b, type: 3}
+      propertyPath: sound.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 571566c908a1793489d078875c992640, type: 3}
+    - target: {fileID: 8142293482525791249, guid: ccf183354acd03741b6e37dc6796b51b, type: 3}
+      propertyPath: sound.Array.data[3].name
+      value: Okay
+      objectReference: {fileID: 0}
+    - target: {fileID: 8142293482525791249, guid: ccf183354acd03741b6e37dc6796b51b, type: 3}
+      propertyPath: sound.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e42e43579bfec5a4f80b9fa1bf8d9d70, type: 3}
+    - target: {fileID: 8142293482525791249, guid: ccf183354acd03741b6e37dc6796b51b, type: 3}
+      propertyPath: sound.Array.data[4].name
+      value: Bad
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

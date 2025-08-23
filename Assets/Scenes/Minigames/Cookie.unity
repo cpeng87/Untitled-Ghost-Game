@@ -1087,7 +1087,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1037203765}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cd76b7fc9f444a9198e27a3b2de99b2, type: 3}
   m_Name: 
@@ -1758,10 +1758,14 @@ PrefabInstance:
     - target: {fileID: 7667094889036070224, guid: 01259773b8fa2d5489406b9b13bb2ca7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1037203769}
+      objectReference: {fileID: 1801037854}
     - target: {fileID: 7667094889036070224, guid: 01259773b8fa2d5489406b9b13bb2ca7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: onFinish
+      objectReference: {fileID: 0}
+    - target: {fileID: 7667094889036070224, guid: 01259773b8fa2d5489406b9b13bb2ca7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Draw, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -2193,6 +2197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7907d1634dbd4aac80e1d949284e3bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minigameResult: {fileID: 778870411}
   cam: {fileID: 1868435222}
   totalXPixels: 1024
   totalYPixels: 1024
@@ -2488,6 +2493,18 @@ PrefabInstance:
     - target: {fileID: 7283448006413846514, guid: ccf183354acd03741b6e37dc6796b51b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8142293482525791249, guid: ccf183354acd03741b6e37dc6796b51b, type: 3}
+      propertyPath: sound.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8142293482525791249, guid: ccf183354acd03741b6e37dc6796b51b, type: 3}
+      propertyPath: sound.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e8899cf6fcfb4cf448af6807ee1e819f, type: 3}
+    - target: {fileID: 8142293482525791249, guid: ccf183354acd03741b6e37dc6796b51b, type: 3}
+      propertyPath: sound.Array.data[2].name
+      value: Icing
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

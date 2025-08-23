@@ -13,8 +13,6 @@ public class DialogueManager : MonoBehaviour
 
     private List<string> currDialogue = new List<string>();   //collection of dialogue lines for the current dialogue
     private int currIndex; // index of current dialogue
-    private bool completeOrder = false;  //flag for if the ghost needs to be deleted at the end of the dialogue
-    private int seatNum = -1;   //keeps track of current dialogue ghost's seat number
 
     // singleton
     private void Awake()

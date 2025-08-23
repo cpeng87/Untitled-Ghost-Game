@@ -6,8 +6,6 @@ public class Spawner : MonoBehaviour
     [SerializeField] private GameObject obj;
     [SerializeField] private BoxCollider spawnBoundaries;
     // [SerializeField] private int numObjs = 15;
-    [SerializeField] private float radius = 0.25f;
-    [SerializeField] private int maxAttemptsPerEach = 1000;
     [SerializeField] private float frequency = 0.01f;
     private float timer = 0;
 

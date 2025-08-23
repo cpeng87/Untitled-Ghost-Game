@@ -26,7 +26,8 @@ public class BobaCollision : MonoBehaviour
             //Debug.Log("BobaHitStrainer - " + collider.gameObject.name);
             var script = potPrefab.GetComponent<BobaPotController>();
             script.OnBobaAdd(); // update boba counter
-            AudioManager.Instance.PlaySound("Boba");
+            int bobaSound = (int) (Random.value * 3) + 1;
+            AudioManager.Instance.PlaySound("Boba" + bobaSound);
         } 
     }
 

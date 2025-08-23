@@ -1306,7 +1306,7 @@ PrefabInstance:
     - target: {fileID: 8142293482525791249, guid: ccf183354acd03741b6e37dc6796b51b, type: 3}
       propertyPath: sound.Array.data[2].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 31a1101492f7ed345aab25c449e4cdd5, type: 3}
+      objectReference: {fileID: 8300000, guid: 62373222f6f7cc642bc202d89c03d30f, type: 3}
     - target: {fileID: 8142293482525791249, guid: ccf183354acd03741b6e37dc6796b51b, type: 3}
       propertyPath: sound.Array.data[2].name
       value: Pancake

@@ -18,10 +18,10 @@ public class TongsController : MinigameCompletion
     Vector3 camRightBound;
     List<ContactPoint> contactPoints;
     private bool isGrabbing;
-    private bool hasGrabbed;
     private bool isDown;
     [SerializeField] private BoxCollider leftTong;
     [SerializeField] private BoxCollider rightTong;
+    private int attempts = 0;
 
     void Start()
     {
@@ -69,13 +69,16 @@ public class TongsController : MinigameCompletion
         Vector3 startPos = transform.position;
         Vector3 dropPos = new Vector3(startPos.x, dropHeight, startPos.z);
         isGrabbing = true;
-        hasGrabbed = true;
 
         // Move down
         while (transform.position.y > dropHeight)
         {
             transform.position = Vector3.MoveTowards(transform.position, dropPos, speed * Time.deltaTime);
-            if (isGrabDonut) break;
+            if (isGrabDonut)
+            {
+                AudioManager.Instance.PlaySound("Grab");
+                break;
+            }
             yield return null;
         }
 
@@ -90,6 +93,7 @@ public class TongsController : MinigameCompletion
             yield return null;
         }
         CheckCompletion();
+        isGrabbing = false;
     }
 
     void Update()
@@ -133,7 +137,14 @@ public class TongsController : MinigameCompletion
         }
         else
         {
-            minigameResult.MinigameResult(false);
+            if (attempts < 2)
+            {
+                attempts += 1;
+            }
+            else
+            {
+                minigameResult.MinigameResult(false);
+            }
         }
     }
 }

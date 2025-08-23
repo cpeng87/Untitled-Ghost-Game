@@ -17,7 +17,7 @@ public class ChefSkipUpdate : MinigameCompletion
 
     public void ToggleSkipPopup()
     {
-        if (!skipMinigamePopup.active)
+        if (!skipMinigamePopup.activeSelf)
         {
             UpdateCostField();
             UpdateCurrencyField();

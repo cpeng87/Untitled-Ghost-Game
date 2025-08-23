@@ -4,7 +4,6 @@ using UnityEngine.EventSystems;
 public class Vegetable : Clickable
 {
     // [SerializeField] private bool isDraggable;
-    [SerializeField] private bool isChopped;
     private Vector3 targetPosition = new Vector3(-1.5f, -1.7f, -3f);
 
     [SerializeField] private GameObject[] parts;
@@ -20,7 +19,6 @@ public class Vegetable : Clickable
     public void Start()
     {
         // isDraggable = true;
-        isChopped = false;
         chops = 0;
         canChop = true;
         // originalY = transform.position.y;
@@ -99,7 +97,6 @@ public class Vegetable : Clickable
             chops++;
             if (chops == 2)
             {
-                isChopped = true;
                 GetComponent<BoxCollider>().enabled = false;
                 parts[chops].GetComponent<BoxCollider>().enabled = true;
                 parts[chops].GetComponent<VegetablePart>().enabled = true;

@@ -131,6 +131,6 @@ public class SettingsMenu : MonoBehaviour
 
     public void HideSettingsMenu()
     {
-        gameObject.active = false;
+        gameObject.SetActive(false);
     }
 }

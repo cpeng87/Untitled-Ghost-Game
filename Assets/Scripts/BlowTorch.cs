@@ -41,6 +41,8 @@ public class BlowTorch : MonoBehaviour
             float scoreIncrement = RingScript.ScoreToSliderIncrement(currScore);
 
             text.color = (scoreIncrement == 10) ? Color.green : (scoreIncrement > 0) ? Color.yellow : Color.red;
+            string toPlay = (scoreIncrement == 10) ? "Great" : (scoreIncrement > 0) ? "Okay" : "Bad";
+            AudioManager.Instance.PlaySound(toPlay);
 
             text.text = RingScript.ScoreToString(currScore);
             slider.IncreaseSlider(scoreIncrement);

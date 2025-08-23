@@ -10,6 +10,8 @@ public class MuffinController : MinigameCompletion
 
     public void checkCompletion()
     {
+        AudioManager.Instance.StopSound();
+        AudioManager.Instance.SetSoundLooping(false);
         if (MuffinsComplete())
         {
             minigameResult.MinigameResult(true);

@@ -162,10 +162,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1809101505701848030, guid: 86d0b36b3864e6143a67b7b933a187dc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2755e2040e414704f8ecfafec0acedaa, type: 2}
+    - target: {fileID: -531728083434070960, guid: 86d0b36b3864e6143a67b7b933a187dc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2755e2040e414704f8ecfafec0acedaa, type: 2}
     - target: {fileID: 919132149155446097, guid: 86d0b36b3864e6143a67b7b933a187dc, type: 3}
       propertyPath: m_Name
       value: Stethoscope
       objectReference: {fileID: 0}
+    - target: {fileID: 3846100702289836517, guid: 86d0b36b3864e6143a67b7b933a187dc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e67bd44fd8948ba4eb186dd521d6ce70, type: 2}
+    - target: {fileID: 4203848903232874424, guid: 86d0b36b3864e6143a67b7b933a187dc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e67bd44fd8948ba4eb186dd521d6ce70, type: 2}
+    - target: {fileID: 5523250990457688461, guid: 86d0b36b3864e6143a67b7b933a187dc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e67bd44fd8948ba4eb186dd521d6ce70, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -322,6 +342,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1673883016613900629, guid: 8ecf7f7e162a33b46b6c2cffcc090190, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2755e2040e414704f8ecfafec0acedaa, type: 2}
+    - target: {fileID: 590026171466209534, guid: 8ecf7f7e162a33b46b6c2cffcc090190, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e67bd44fd8948ba4eb186dd521d6ce70, type: 2}
     - target: {fileID: 919132149155446097, guid: 8ecf7f7e162a33b46b6c2cffcc090190, type: 3}
       propertyPath: m_Name
       value: Headband

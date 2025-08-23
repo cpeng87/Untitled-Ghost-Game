@@ -248,8 +248,14 @@ namespace Manager.RecipeShop
         private void OnDestroy()
         {
             //Unbind buttons before destruction
-            recipeShopOpenButton.onClick.RemoveListener(ShowRecipeShop);
-            recipeShopReturnButton.onClick.RemoveListener(HideRecipeShop);
+            if (recipeShopOpenButton != null)
+            {
+                recipeShopOpenButton.onClick.RemoveListener(ShowRecipeShop);
+            }
+            if (recipeShopReturnButton != null)
+            {
+                recipeShopReturnButton.onClick.RemoveListener(HideRecipeShop);
+            }
             ArcEvent.OnArcChanged -= RecipeNotifOn;
         }
 

@@ -38,12 +38,12 @@ public class Rotate : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyUp(leftArrow) || Input.GetKeyUp(rightArrow) || Input.GetKeyUp(upArrow) || Input.GetKeyUp(downArrow))
+        {
+            AudioManager.Instance.StopSound();
+        }
         if (cakeState == CakeState.LeftMix || cakeState == CakeState.RightMix || cakeState == CakeState.UpMix || cakeState == CakeState.DownMix)
         {
-            if (Input.GetKeyUp(leftArrow) || Input.GetKeyUp(rightArrow) || Input.GetKeyUp(upArrow) || Input.GetKeyUp(downArrow))
-            {
-                AudioManager.Instance.StopSound();
-            }
             timer += Time.deltaTime;
             if (timer > swapDirectionTime)
             {

@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-class Draw : MonoBehaviour
+class Draw : MinigameCompletion
 {
 
     [SerializeField] private Camera cam;
@@ -26,13 +26,14 @@ class Draw : MonoBehaviour
     [SerializeField] private float yMult;
     [SerializeField] private Material referenceMaterial;
     private Texture2D textureGoal;
+    private bool isComplete;
 
     private void Start()
     {
         colorMap = new Color[totalXPixels * totalYPixels];
         generatedTexture = new Texture2D(totalYPixels, totalXPixels, TextureFormat.RGBA32, false);
         generatedTexture.filterMode = FilterMode.Point;
-        material.SetTexture("_BaseMap", generatedTexture); 
+        material.SetTexture("_BaseMap", generatedTexture);
 
         ResetColor();
 
@@ -40,7 +41,7 @@ class Draw : MonoBehaviour
         yMult = totalYPixels / (bottomRightCorner.localPosition.y - topLeftCorner.localPosition.y);
 
         textureGoal = new Texture2D(300, 300);
-        
+
         for (int i = 0; i < textureGoal.height; i++)
         {
             for (int j = 0; j < textureGoal.width; j++)
@@ -54,9 +55,23 @@ class Draw : MonoBehaviour
 
     private void Update()
     {
+        if (isComplete)
+        {
+            return;
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            AudioManager.Instance.StopSound();
+        }
         if (Input.GetMouseButton(0))
+        {
+            if (!AudioManager.Instance.CheckPlaying())
+            {
+                AudioManager.Instance.PlaySound("Icing");
+            }
             CalculatePixel();
-        else 
+        }
+        else
             pressedLastFrame = false;
     }
 
@@ -69,32 +84,32 @@ class Draw : MonoBehaviour
             point.position = hit.point;
             xPixel = (int)((point.localPosition.x - topLeftCorner.localPosition.x) * xMult);
             yPixel = (int)((point.localPosition.y - topLeftCorner.localPosition.y) * yMult);
-            ChangePixelsAroundPoint(); 
+            ChangePixelsAroundPoint();
         }
         else
-            pressedLastFrame = false; 
+            pressedLastFrame = false;
     }
 
-    private void ChangePixelsAroundPoint() 
+    private void ChangePixelsAroundPoint()
     {
         if (useInterpolation && pressedLastFrame && (lastX != xPixel || lastY != yPixel))
         {
             int dist = (int)Mathf.Sqrt((xPixel - lastX) * (xPixel - lastX) + (yPixel - lastY) * (yPixel - lastY));
-            for (int i = 1; i <= dist; i++) 
+            for (int i = 1; i <= dist; i++)
                 DrawBrush((i * xPixel + (dist - i) * lastX) / dist, (i * yPixel + (dist - i) * lastY) / dist);
         }
-        else 
-            DrawBrush(xPixel, yPixel); 
-        pressedLastFrame = true; 
+        else
+            DrawBrush(xPixel, yPixel);
+        pressedLastFrame = true;
         lastX = xPixel;
         lastY = yPixel;
         SetTexture();
     }
 
-    private void DrawBrush(int xPix, int yPix) 
+    private void DrawBrush(int xPix, int yPix)
     {
-        int i = xPix - brushSize + 1, j = yPix - brushSize + 1, maxi = xPix + brushSize - 1, maxj = yPix + brushSize - 1; 
-        if (i < 0) 
+        int i = xPix - brushSize + 1, j = yPix - brushSize + 1, maxi = xPix + brushSize - 1, maxj = yPix + brushSize - 1;
+        if (i < 0)
             i = 0;
         if (j < 0)
             j = 0;
@@ -111,7 +126,8 @@ class Draw : MonoBehaviour
                     try
                     {
                         colorMap[(totalXPixels - x) * totalYPixels + y] = brushColor;
-                    } catch
+                    }
+                    catch
                     {
                         //do nothing
                     }
@@ -126,7 +142,7 @@ class Draw : MonoBehaviour
         generatedTexture.Apply();
     }
 
-    private void ResetColor() 
+    private void ResetColor()
     {
         for (int i = 0; i < colorMap.Length; i++)
             colorMap[i] = new Color(200, 160, 130); //Color.white;
@@ -148,7 +164,7 @@ class Draw : MonoBehaviour
         int pixelsInside = 0;
         int pixelsOutside = 0;
 
-        for (int i = 0; i < Math.Min(colorData.Length,goal.Length); i++)
+        for (int i = 0; i < Math.Min(colorData.Length, goal.Length); i++)
         {
             Color generatedColors = colorData[i];
             Color referenceColors = goal[i];
@@ -174,6 +190,15 @@ class Draw : MonoBehaviour
 
         Debug.Log("Inside: " + pixelsInside + "\nOutside: " + pixelsOutside);
         return (float)(percentInside);
+    }
+    public void onFinish()
+    {
+        if (!isComplete)
+        {
+            AudioManager.Instance.StopSound();
+            minigameResult.MinigameResult(true);
+            isComplete = true;
+        }
     }
 
 }

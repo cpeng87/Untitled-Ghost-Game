@@ -25,8 +25,6 @@ public class MiniGame : MinigameCompletion {
     private bool playing = true;
     private Transform[] sandwichOrder;
     private int currentIngredientIndex = 0;
-    private bool isCheckingSuccess = false;
-    private float successTimer = 3f;
     private bool allIngredientsPlaced = false;
     private HashSet<GameObject> connectedIngredients = new HashSet<GameObject>();
     private HashSet<GameObject> placedIngredients = new HashSet<GameObject>();
@@ -124,10 +122,10 @@ public class MiniGame : MinigameCompletion {
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("SandwichGame");
-        }
+        // if (Input.GetKeyDown(KeyCode.Escape))
+        // {
+        //     UnityEngine.SceneManagement.SceneManager.LoadScene("SandwichGame");
+        // }
     }
 
     public void RegisterIngredientCollision(GameObject ingredient)

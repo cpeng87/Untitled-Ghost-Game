@@ -16,7 +16,6 @@ public class SoupManager : MinigameCompletion
 
     // [SerializeField] private TMP_Text timer;
 
-    private bool isComplete;
     public int numPartOnBoard;
     [SerializeField] private Slider mixProgressBar;
     private float mixProgress;
@@ -60,7 +59,6 @@ public class SoupManager : MinigameCompletion
         if (mixProgress >= 95)
         {
             // Time.timeScale = 0f;
-            isComplete = true;
             minigameResult.MinigameResult(true);
         }
         // else
