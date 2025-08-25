@@ -13,15 +13,26 @@ public class AudioManager : MonoBehaviour
     private Dictionary<string, AudioClip> soundDict;
     private string currentSong;
     private int currIndex = 0;
+    private string currentScene;
+    
 
     [SerializeField] private AudioSource musicSource;
     [SerializeField] private AudioSource soundSource; //We may want to pool audio sources or switch to a different method
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
+    private Coroutine currentFade;
+
     public static Action<string> OnSongChanged;
     void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Instance.MergeAudio(this);
+            Destroy(this.gameObject);
+            return;
+        }
         Instance = this;
+        DontDestroyOnLoad(this.gameObject);
         musicDict = new Dictionary<string, AudioClip>();
         soundDict = new Dictionary<string, AudioClip>();
         if (musicSource == null) Debug.LogError("Music source in AudioManager is null");
@@ -64,6 +75,7 @@ public class AudioManager : MonoBehaviour
     {
         if (musicDict.TryGetValue(songName, out var clip))
         {
+            if (musicSource.clip == clip) return; //Already playing
             currentSong = songName;
             musicSource.Stop();
             musicSource.clip = clip;
@@ -76,10 +88,73 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Changes the song that's currently playing but now with fade
+    /// </summary>
+    /// <param name="songName"></param>
+    public void PlaySong(string songName, float fadeTime = 1f) {
+
+    if (musicDict.TryGetValue(songName, out var clip))  {
+        if (musicSource.clip == clip && musicSource.isPlaying)
+            return; // already playing
+
+        currentSong = songName;
+
+        if (currentFade != null) StopCoroutine(currentFade);
+        currentFade = StartCoroutine(FadeToNewTrack(clip, fadeTime));
+
+        OnSongChanged?.Invoke(songName);
+    }
+    else  {
+        Debug.LogWarning("Song " + songName + " not found!");
+    }
+}
+
+
+    private System.Collections.IEnumerator FadeToNewTrack(AudioClip newClip, float fadeTime)   {
+    float startVol = musicSource.volume;
+
+    // fade out
+    for (float t = 0; t < fadeTime; t += Time.unscaledDeltaTime)   {
+        musicSource.volume = Mathf.Lerp(startVol, 0, t / fadeTime);
+        yield return null;
+    }
+
+    musicSource.Stop();
+    musicSource.clip = newClip;
+    musicSource.Play();
+
+    // fade in
+    for (float t = 0; t < fadeTime; t += Time.unscaledDeltaTime)   {
+        musicSource.volume = Mathf.Lerp(0, startVol, t / fadeTime);
+        yield return null;
+    }
+
+    musicSource.volume = startVol;
+}
+
     public void StopSong()
     {
         musicSource.Stop();
     }
+
+    public void MergeAudio(AudioManager other)
+{
+    foreach (var m in other.music)  {
+        if (!musicDict.ContainsKey(m.name))
+        {
+            musicDict[m.name] = m.clip;
+        }
+    }
+
+    foreach (var s in other.sound)  {
+        if (!soundDict.ContainsKey(s.name))
+        {
+            soundDict[s.name] = s.clip;
+        }
+    }
+}
+
 
     public void RandomSong()
     {
@@ -181,4 +256,8 @@ public class AudioManager : MonoBehaviour
             soundSource.pitch = 1f;
         }
     }
+
+    public int GetMusicCount() => music.Length;
+    public string GetMusicName(int index) => index >= 0 && index < music.Length ? music[index].name : null;
+
 }
