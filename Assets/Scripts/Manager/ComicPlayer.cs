@@ -34,6 +34,8 @@ public class ComicPlayer : MonoBehaviour
             }
         }
 
+        AudioManager.Instance.PlaySong("Comic");
+
         AdvanceComic();
     }
 

@@ -1,17 +1,16 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class StartScreenController : MonoBehaviour
 {
     [SerializeField] 
     public GameObject TitleScreen;
     public GameObject OptionsScreen;
     public string StartGameAfterScreen;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        AudioManager.Instance.PlaySong("Title");
     }
 
     public void startGame() {

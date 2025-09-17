@@ -14,6 +14,8 @@ public class AudioManager : MonoBehaviour
     private string currentSong;
     private int currIndex = 0;
     private string currentScene;
+    private string savedSong;
+    private float savedTime;
     
 
     [SerializeField] private AudioSource musicSource;
@@ -44,27 +46,27 @@ public class AudioManager : MonoBehaviour
         //Random Song for now
         // RandomSong();
         //change to play arc's song
-        if (GameManager.Instance == null)
-        {
-            musicSource.Stop();
-            musicSource.clip = music[currIndex].clip;
-            musicSource.Play();
-        }
-        else
-        {
-            int arcIndex = (int)GameManager.Instance.arc - 1;
-            if (arcIndex < 0 || arcIndex >= music.Length)
-            {
-                arcIndex = 0;
-            }
-            musicSource.Stop();
-            if (music.Length > arcIndex)
-            {
-                musicSource.clip = music[arcIndex].clip;
-                musicSource.Play();
-                OnSongChanged?.Invoke(music[arcIndex].name);
-            }
-        }
+        // if (GameManager.Instance == null)
+        // {
+        //     musicSource.Stop();
+        //     musicSource.clip = music[currIndex].clip;
+        //     musicSource.Play();
+        // }
+        // else
+        // {
+        //     int arcIndex = (int)GameManager.Instance.arc - 1;
+        //     if (arcIndex < 0 || arcIndex >= music.Length)
+        //     {
+        //         arcIndex = 0;
+        //     }
+        //     musicSource.Stop();
+        //     if (music.Length > arcIndex)
+        //     {
+        //         musicSource.clip = music[arcIndex].clip;
+        //         musicSource.Play();
+        //         OnSongChanged?.Invoke(music[arcIndex].name);
+        //     }
+        // }
     }
 
     /// <summary>
@@ -94,22 +96,46 @@ public class AudioManager : MonoBehaviour
     /// <param name="songName"></param>
     public void PlaySong(string songName, float fadeTime = 1f) {
 
-    if (musicDict.TryGetValue(songName, out var clip))  {
-        if (musicSource.clip == clip && musicSource.isPlaying)
-            return; // already playing
+        if (musicDict.TryGetValue(songName, out var clip))  {
+            if (musicSource.clip == clip && musicSource.isPlaying)
+                return; // already playing
 
-        currentSong = songName;
+            currentSong = songName;
 
-        if (currentFade != null) StopCoroutine(currentFade);
-        currentFade = StartCoroutine(FadeToNewTrack(clip, fadeTime));
+            if (currentFade != null) StopCoroutine(currentFade);
+            currentFade = StartCoroutine(FadeToNewTrack(clip, fadeTime));
 
-        OnSongChanged?.Invoke(songName);
+            OnSongChanged?.Invoke(songName);
+        }
+        else  {
+            Debug.LogWarning("Song " + songName + " not found!");
+        }
     }
-    else  {
-        Debug.LogWarning("Song " + songName + " not found!");
-    }
-}
 
+    public void SaveSong()
+    {
+       savedTime = musicSource.time;
+       savedSong = currentSong;
+    }
+
+    public bool ContinueSong()
+    {
+        if (savedSong != null)
+        {
+            musicSource.clip = musicDict[savedSong];
+            musicSource.time = savedTime;
+            musicSource.Play();
+        }
+        else
+        {
+            return false;
+        }
+
+        savedSong = null;
+        savedTime = 0;
+
+        return true;
+    }
 
     private System.Collections.IEnumerator FadeToNewTrack(AudioClip newClip, float fadeTime)   {
     float startVol = musicSource.volume;

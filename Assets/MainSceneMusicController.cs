@@ -5,6 +5,10 @@ public class MainSceneMusicController : MonoBehaviour
     [SerializeField] private float fadeTime = 1f;
 
     private void Start()  {
+        if (AudioManager.Instance.ContinueSong())
+        {
+            return;
+        }
         if (AudioManager.Instance != null)  {
             string songName;
 

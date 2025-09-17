@@ -47,17 +47,53 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   music:
-  - name: FairyTale
-    clip: {fileID: 8300000, guid: 0e74871cabdc23845a224ac03428ca57, type: 3}
   - name: Spring
-    clip: {fileID: 8300000, guid: 91878dc18f2237e41a92d0f07d463da5, type: 3}
-  - name: Placeholder
-    clip: {fileID: 8300000, guid: 312b055e946dd43b8ba964daeefb64b1, type: 3}
+    clip: {fileID: 8300000, guid: 0364b8175879fa943a18c435278272d6, type: 3}
+  - name: Fall
+    clip: {fileID: 8300000, guid: 4d4b6ffe78ae52d4d952975d9acea915, type: 3}
+  - name: Winter
+    clip: {fileID: 8300000, guid: d3b2a337fab414a47b1b603035c06165, type: 3}
   sound:
   - name: DoorChime
     clip: {fileID: 8300000, guid: 1b410d7a1e4c14e39a873fac96da9112, type: 3}
-  - name: PlaceHolder
-    clip: {fileID: 8300000, guid: 312b055e946dd43b8ba964daeefb64b1, type: 3}
+  - name: Win
+    clip: {fileID: 8300000, guid: 52c8e599462e9284ca23eff9620b507e, type: 3}
+  - name: Lose
+    clip: {fileID: 8300000, guid: 5a1736a93d1487a44b6b77dfc5d18808, type: 3}
+  - name: Great
+    clip: {fileID: 8300000, guid: 1681620c9ef0f7746ba18d843294ac06, type: 3}
+  - name: Okay
+    clip: {fileID: 8300000, guid: 571566c908a1793489d078875c992640, type: 3}
+  - name: Bad
+    clip: {fileID: 8300000, guid: e42e43579bfec5a4f80b9fa1bf8d9d70, type: 3}
+  - name: Boba1
+    clip: {fileID: 8300000, guid: 12ad957034ba9a644963162683cd720b, type: 3}
+  - name: Boba2
+    clip: {fileID: 8300000, guid: cebcd21a190ccf145907ff3ba4b8b9b1, type: 3}
+  - name: Boba3
+    clip: {fileID: 8300000, guid: 97374905f62d04c4c843e3d83d28e1ad, type: 3}
+  - name: Mix
+    clip: {fileID: 8300000, guid: efda8b85da01f53448b6adbe75240db8, type: 3}
+  - name: Icing
+    clip: {fileID: 8300000, guid: e8899cf6fcfb4cf448af6807ee1e819f, type: 3}
+  - name: Grab
+    clip: {fileID: 8300000, guid: e79bdd59c43586149b156b9eb826fdf5, type: 3}
+  - name: UpTink
+    clip: {fileID: 8300000, guid: 279ad896d724b0343a32ab210c48d6db, type: 3}
+  - name: DownTink
+    clip: {fileID: 8300000, guid: 52accd3091d7de6429ae4e46163a8858, type: 3}
+  - name: Pancake
+    clip: {fileID: 8300000, guid: 62373222f6f7cc642bc202d89c03d30f, type: 3}
+  - name: Drop
+    clip: {fileID: 8300000, guid: c42ca045c45bbf247a88a48887ae43bf, type: 3}
+  - name: Cutting
+    clip: {fileID: 8300000, guid: 92ba04428d273fa4281586faa65bddef, type: 3}
+  - name: Mix1
+    clip: {fileID: 8300000, guid: 88c0d9caa0a514e4fbab2e3a4251e14a, type: 3}
+  - name: Mix2
+    clip: {fileID: 8300000, guid: c5e0a6d8f6b918243b1755ed7c153a26, type: 3}
+  - name: Pour
+    clip: {fileID: 8300000, guid: 08f27b7b9c71b874488c5cd79aa4a6cd, type: 3}
   musicSource: {fileID: 2629506111582288496}
   soundSource: {fileID: 3933112506615878686}
 --- !u!1 &5323247890239993855

@@ -74,6 +74,7 @@ public class OrderManager : MonoBehaviour
         }
 
         TicketManager.Instance.HideOrders();
+        AudioManager.Instance.SaveSong();
 
         GameManager.Instance.SwitchToMinigame(activeOrders[orderIdx].minigame);
         currActiveOrder = orderIdx;
@@ -87,6 +88,7 @@ public class OrderManager : MonoBehaviour
         {
             Debug.Log("There is no current active order, cannot switch seen! If testing disregard...");
         }
+        AudioManager.Instance.ContinueSong();
         Ghost currGhost = GameManager.Instance.ghostManager.GetGhostScriptableFromName(activeOrders[currActiveOrder].ghostName);
 
         // dialoguePlayer = FindObjectsByType<DialoguePlayer>(FindObjectsSortMode.None)[0];
