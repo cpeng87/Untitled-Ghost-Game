@@ -9,7 +9,7 @@ public class GhostObj : Clickable
     [SerializeField] private Animator idleAnimator;
     [SerializeField] private Animator orderNotificationAnimator; //animator for the notification
     [SerializeField] private List<Material> faces = new List<Material>();
-    [SerializeField] private MeshRenderer face;
+    [SerializeField] private SkinnedMeshRenderer face;
     private bool hasTakenOrder;   //flags whether order has been taken or not
     private int seatNum;   //seat number of the current ghost
     private bool isIdle = false; // flag to check if ghost is idle
@@ -94,7 +94,6 @@ public class GhostObj : Clickable
 
     public void ChangeFace(string faceName)
     {
-        Debug.Log("Finding face: " + faceName);
         foreach (Material currFace in faces)
         {
             if (currFace.name == faceName)
@@ -103,6 +102,5 @@ public class GhostObj : Clickable
                 return;
             }
         }
-        Debug.Log("Face not found " + faceName);
     }
 }

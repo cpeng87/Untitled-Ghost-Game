@@ -51,12 +51,6 @@ public class OrderManager : MonoBehaviour
         activeOrders[seatNum] = new Order(name, recipes[selectedIndex].minigame, recipes[selectedIndex].recipeName, recipes[selectedIndex].sellPrice, seatNum, recipes[selectedIndex].foodImage);
         currActiveOrder = seatNum;
         DialoguePlayer.Instance.StartOrderDialogue(name, recipes[selectedIndex].recipeName, seatNum);
-        // dialoguePlayer = FindObjectsByType<DialoguePlayer>(FindObjectsSortMode.None)[0];
-        // dialoguePlayer.StartOrderDialogue(name, recipes[selectedIndex].recipeName, seatNum);
-        // orderDialogue = TagReplacer(orderDialogue, "{item}", recipes[selectedIndex].recipeName);
-        // DialogueManager.Instance.StartDialogue(name, orderDialogue, seatNum);
-        // Debug.Log("Size of orders: " + activeOrders.Count);
-        // SortOrders();
         return true;
     }
 
@@ -90,12 +84,8 @@ public class OrderManager : MonoBehaviour
         }
         AudioManager.Instance.ContinueSong();
         Ghost currGhost = GameManager.Instance.ghostManager.GetGhostScriptableFromName(activeOrders[currActiveOrder].ghostName);
-
-        // dialoguePlayer = FindObjectsByType<DialoguePlayer>(FindObjectsSortMode.None)[0];
-        // dialoguePlayer.CompleteOrderDialogue(currGhost.ghostName, activeOrders[currActiveOrder].seatNum, result);
-        // DialogueManager.Instance.CompleteOrderDialogue(currGhost.ghostName, activeOrders[currActiveOrder].seatNum, result);
         DialoguePlayer.Instance.CompleteOrderDialogue(currGhost.ghostName, activeOrders[currActiveOrder].seatNum, result);
-        // GameManager.Instance.ghostManager.IncrementStoryIndex(currGhost.ghostName);
+        
         if (!chefSkip && result)
         {
             GameManager.Instance.AddCurrency(1);

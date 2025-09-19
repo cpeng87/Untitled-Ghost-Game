@@ -46,21 +46,28 @@ Reaper: Oh, no time spent is ever a waste. And I quite disagree that you "didn't
 Reaper: Try and remember some now. Were those memories really "nothing" to you?
     -> ...not all of them, no.
     -> Do they really count if they didn't affect anyone but me?
+        <<changeFace Reaper_Happy>>
         Reaper: Of course! Would you count a moment as worthwhile if it made one person happy, even if they were a complete stranger to you?
             -> Yeah, of course
             -> Mmm... I guess
+        <<changeFace Reaper_Normal>>
         Reaper: Then, try extending that kindness to yourself. 
 Reaper: Then, you see, you already have some memories of your life that meant something! We'll work our way up to believing your entire life was meaningful.
+<<changeFace Reaper_Happy>>
 Reaper: It seems we've discovered why you are here, at least. That's a great start; many ghosts cannot identify one single regret when they first arrive. 
 Reaper: Well, I'd like to guide you to believe that the life you lived held meaning - that yes, you did have worthwhile dreams and meaningful connections and a tangible impact.
+<<changeFace Reaper_Normal>>
 Reaper: But of course, you have all the time in the world to do so, so don't stress too much about it. I suspect you'll need some time alone to think and reminisce on your life. 
 Reaper: But, in the meantime, I can recommend your cafe to a couple of ghosts I know well, who have various reasons for staying.
 Reaper: Perhaps by speaking to them, you may discover that you can learn about yourself as well. What do you say?
     -> I won't turn down free customers
+        <<changeFace Reaper_Happy>>
         Reaper: Good, then I'll be directing some new faces your way soon. 
     -> I doubt that will help...
         Reaper: No use being pessimistic about it, is there? Give it a try. The ghosts here aren't so different from you.
+        <<changeFace Reaper_Happy>>
 Reaper: Until the next time we cross paths, try to get to know some of the other residents in purgatory! I hope to hear good news during my next visit.
+<<changeFace Reaper_Normal>>
 <<reaperPitch false>>
 <<setCam "Main Camera">>
 ===
@@ -70,14 +77,20 @@ tags:
 position: 169,38
 ---
 <<reaperPitch true>>
+<<changeFace Reaper_Happy>>
 Reaper: How are you doing, dear friend?
+<<changeFace Reaper_Normal>>
 Reaper: It's been a long while since we've last spoken; do tell, what new adventures have you experienced?
     -> Well, I've met quite a few customers, though I'm not sure that's an adventure.
     -> I don't see anything outside of this cafe, I wouldn't call that "new adventures".
+<<changeFace Reaper_Happy>>
 Reaper: Well, meeting new people is always an adventure!
+<<changeFace Reaper_Normal>>
 Reaper: The stories they have lived through, the insights they could share - even as one who has spent an eternity listening to people's stories, there is still a sense of adventure I get from every new life's tale. 
     -> Yeah, I guess so. In that case, I have plenty of "adventures" to share.
+        <<changeFace Reaper_Happy>>
         Reaper: Oh, do tell! If you don't mind, of course, and it isn't anything too private to share.
+        <<changeFace Reaper_Normal>>
             -> Well, there was this businessman, who was obsessed with money...
                 Reaper: Ah, Tycoon Ghost. I'm glad you got to speak with him; his case was unique in that it's rare ghosts come in with the wrong conception of what their greatest regret was.
                 Reaper: Did you empathize with his situation?
@@ -112,11 +125,15 @@ Reaper: From your conversations with customers, have you been able to reflect on
 Reaper: To have unfulfilled dreams is a reason for many ghosts to stay behind.
 Reaper: The unfinished masterpiece, the unachievable perfection, the single peak of their existence that they never quite reached.
 Reaper: But for you, you've stated already that you had no dreams at all.
+<<changeFace Reaper_Happy>>
 Reaper: Have you had time to think over that? I'm sure you had some wishes.
+<<changeFace Reaper_Normal>>
 Reaper: Even opening this cafe could be considered a dream of sorts, no?
     -> I wanted to open a cafe, but not ever as a life's goal. I don't think I had one.
     -> No, I've never had any sort of deep passion. I had an aimless sort of life.
+<<changeFace Reaper_Happy>>
 Reaper: Well, nothing wrong with that, you certainly don't need a single goal in life.
+<<changeFace Reaper_Normal>>
 Reaper: Do you regret not having a life's goal, though? What you feel is most important.
     -> Yeah, I think I do regret that.
         Reaper: Ahh, not the regret that you never fulfilled your dream, but regretting that you never had one...well, but it's never too late to start now. If you want a life's goal, all you need is to let yourself.
@@ -145,31 +162,39 @@ Reaper: In your eyes, what really defines a "passion" or a "dream"? Is it a conc
                 Reaper: Despite not having a life goal, did you not enjoy the charms of daily life?
                 Reaper: The outings with your friends, the hobbies you paid for through your job, the satisfaction of a comfortable life?
                 Reaper: Humans take many things for granted quite easily.
+                <<changeFace Reaper_Happy>>
                 Reaper: I hope that you can look back on your life and see the journey you took - between goals, between small wishes, all the challenges and triumphs you had.
                 Reaper: There is no real difference between you and these people you envy.
                 Reaper: Both have dreams, even if you think your own are somehow less worthy.
-                Reaper: And when all is said and done and your goals have been achieved, you find new ones. There is not and has never been an end-all-be-all goal. 
+                Reaper: And when all is said and done and your goals have been achieved, you find new ones. There is not and has never been an end-all-be-all goal.
+                <<changeFace Reaper_Normal>>
             -> No, I envied that they cared about something enough to dedicate their life to it.
                 Reaper: In that case, I believe you'll find it is much more similar to the journey which defines a passion. They loved what they were doing, yes?
                 Reaper: They loved it enough to dedicate their life, and make it the center of their dreams.
                 Reaper:  These people, what set them apart is that they loved one single thing - a sport, or a craft, or a study - enough to dedicate their whole life to doing it.
+                <<changeFace Reaper_Happy>>
                 Reaper: And that's beautiful to behold, but your goals are no lesser just because they are non-singular.
                 Reaper: And you did have goals, no matter how you might protest it.
                 Reaper: You hoped for a good job, no? A stable income? Maybe a place of your own, or a good circle of friends?
+                <<changeFace Reaper_Normal>>
                 <<reaperPitch false>>
                 Cafe Ghost: Small goals, I guess.
                 <<reaperPitch true>>
                 Reaper: Right, and that's all you needed to keep moving. Let me ask you this, then - did you not enjoy your journey? 
                 Reaper: Did you not enjoy the charms of daily life? The outings with your friends, the hobbies you paid for through your job, the satisfaction of a comfortable life?
                 Reaper: Humans take many things for granted quite easily.
+                <<changeFace Reaper_Happy>>
                 Reaper: I hope that you can look back on your life and see the journey you took - between goals, between small wishes, all the challenges and triumphs you had.
                 Reaper: There is no real difference between you and these people you envy.
                 Reaper: Both have dreams, even if you think your own are somehow less worthy. And both have journeys.
                 Reaper: If you enjoyed yours, that's all that matters. 
+                <<changeFace Reaper_Normal>>
     -> ...No, I think it's the journey.
+        <<changeFace Reaper_Happy>>
         Reaper: And you'd be quite right, in my humble opinion.
         Reaper: These people, what set them apart is that they loved one single thing - a sport, or a craft, or a study - enough to dedicate their whole life to doing it.
         Reaper: And that's beautiful to behold, but your goals are no lesser just because they are non-singular. And you did have goals, no matter how you might protest it.
+        <<changeFace Reaper_Normal>>
         Reaper: You hoped for a good job, no? A stable income? Maybe a place of your own, or a good circle of friends?
         <<reaperPitch false>>
         Cafe Ghost: Small ones, I guess.
@@ -177,12 +202,16 @@ Reaper: In your eyes, what really defines a "passion" or a "dream"? Is it a conc
         Reaper: Right, and that's all you needed to keep moving. Let me ask you this, then - did you not enjoy your journey? 
         Reaper: Did you not enjoy the charms of daily life? The outings with your friends, the hobbies you paid for through your job, the satisfaction of a comfortable life?
         Reaper: Humans take many things for granted quite easily.
+        <<changeFace Reaper_Happy>>
         Reaper: I hope that you can look back on your life and see the journey you took - between goals, between small wishes, all the challenges and triumphs you had.
         Reaper: There is no real difference between you and these people you envy.
         Reaper: Both have dreams, even if you think your own are somehow less worthy. And both have journeys. 
         Reaper: If you enjoyed yours, that's all that matters. 
+        <<changeFace Reaper_Normal>>
 Reaper: Oh dear, I do believe I've spent a tad too much time talking with you. My tea's gone cold! But, we'll have plenty more time to discuss in the future.
+<<changeFace Reaper_Happy>>
 Reaper: I'll keep recommending customers here. Not only for the counseling, either - these pastries are delectable.
+<<changeFace Reaper_Normal>>
 <<reaperPitch false>>
 <<setCam "Main Camera">>
 ===
@@ -193,16 +222,24 @@ position: 0,0
 ---
 <<reaperPitch true>>
 Reaper: Well, it's been quite some time since I last visited.
+<<changeFace Reaper_Happy>>
 Reaper: Your cafe looks lovely! So much livelier now, and I see quite a few new menu items? Though I didn't come here to discuss pastries.
+<<changeFace Reaper_Normal>>
 Reaper: Tell me, dear, how have you been? Have you gotten to know a few of the residents here? 
     -> Yep, I've met several! I even helped some of them pass on.
+        <<changeFace Reaper_Happy>>
         Reaper: My, you've been doing my job for me! I must thank you deeply; it was not your responsibility to help them pass on, but you were kind enough to help them anyways. 
+        <<changeFace Reaper_Normal>>
             -> Well, I didn't do it on purpose, so I don't know about kind...
                 Reaper: Regardless of intention, you did a kind deed. And listening to their stories, that was on purpose, yes?
+                <<changeFace Reaper_Happy>>
                 Reaper: Sometimes that's all the help one needs.
+                <<changeFace Reaper_Normal>>
             -> It wasn't very difficult, I'm sure you could've done it
                 Reaper: Ahh, I'm not so sure.
+                <<changeFace Reaper_Happy>>
                 Reaper: It's quite intimidating to talk to the Grim Reaper, no? I suspect quite a few ghosts would be much more willing to talk to a fellow human soul. 
+                <<changeFace Reaper_Normal>>
         Reaper: And by speaking to these ghosts, I'm sure you've connected with quite a few of them.
     -> Yeah, I've met some, but anyone I got to know well disappeared.
         Reaper: I'm sorry to hear that.
@@ -219,7 +256,9 @@ Reaper: Tell me, dear, how have you been? Have you gotten to know a few of the r
                 Reaper: But knowing the ghosts I help are better off at peace, knowing they are no longer bound by regret and remorse, helps settle my grief.
             -> Do you ever miss them? The ghosts who pass on.
                 Reaper: Of course I do. Some stay in purgatory for much, much longer than they even stay alive, and I will admit to finding comfort in their companionship.
+                <<changeFace Reaper_Happy>>
                 Reaper: But not only is it my duty, it is my life's greatest wish that all ghosts may pass on peacefully. I would not, could not, give up that dream for anything. 
+                <<changeFace Reaper_Normal>>
         Reaper: You've clearly connected with quite a few of the residents of purgatory. 
 Reaper: You mentioned that you felt as though none of the connections you made with other people held significance. Is that still true?
     -> Well, it's not that they didn't have significance, just that...they weren't particularly unique, you know? The relationships themselves, I mean, not the people.
@@ -236,12 +275,16 @@ Reaper: You mentioned that you felt as though none of the connections you made w
 <<reaperPitch true>>
 Reaper: Well, let's not look at it that way. All relationships are meaningful.
 Reaper: The difference is that you passed on with all your relationships resolved or healthy enough that you don't feel the need to change them.
+<<changeFace Reaper_Happy>>
 Reaper: That's a blessing, don't you think?
+<<changeFace Reaper_Normal>>
     -> But still, couldn't it be that they didn't mean enough to me to keep me here? My loved ones meant less to me than this stupid sense of inferiority I have.
         Reaper: Let's not invalidate your emotions like that.
         Reaper: Your feelings aren't "stupid", and it is not a bad thing to have wanted more from your life. And you said so yourself - your loved ones are a part of why you are here.
         Reaper: You wished to have more  "meaningful" relationships, no? You wanted to love them more, and be loved more in return.
+        <<changeFace Reaper_Happy>>
         Reaper: I think that is quite sufficient to conclude that they are a significant part of why you are here.
+        <<changeFace Reaper_Normal>>
     -> Maybe, but...I just don't feel like I cared enough about them. Like, in the grand scheme of my life, they mattered less to me than they should have.
     -> I doubt all my relationships ended on a healthy note. Most of mine, at least, just faded away gradually until I didn't know them at all. Can that really be called resolved?
 Reaper: And you want to care about them more?
@@ -260,7 +303,9 @@ Reaper: Are wanting to care and caring truly so different?
         Reaper: The lengths we go for people is important, yes, but even that is relative. It's certainly no way to measure a relationship. At the end of the day, there is no way to measure a relationship against any other.
         Reaper: Just answer this: did these people bring you joy? Comfort? Support, in hard times?
             -> ...Yes.
+                <<changeFace Reaper_Happy>>
                 Reaper: Then there you go. That means something to you, surely. Those emotions that they brought you.
+                <<changeFace Reaper_Normal>>
             -> ...No.
                 Reaper: Oh dear. Well, then, that's certainly a tragic life to have led. None at all? No one in this world has ever touched your heart?
                     -> ...Ok, there were a couple.
@@ -275,13 +320,19 @@ Reaper: Are wanting to care and caring truly so different?
                         Reaper: It's not about the longevity, or the ending, or the effort put into a relationship - it's only about how it makes you feel.
                         Reaper: And I know other humans have made you feel emotions. And, thus, I know that you have had meaningful relations.
     -> ...No, I suppose not.
+        <<changeFace Reaper_Happy>>
         Reaper: Then there you go. Your relationships were meaningful, even to you. Recall just how much comfort, joy, and support you received from these people.
+        <<changeFace Reaper_Normal>>
         Reaper: Were those not significant to you?
         Reaper: Everything is relative, even emotion, and so there is no logic dwelling in comparison.
+        <<changeFace Reaper_Happy>>
         Reaper: The people around you made you happy. That has meaning. 
+        <<changeFace Reaper_Normal>>
 Reaper: Well, unfortunately, I believe I've spent too much time enjoying this treat. I do hope you'll think over what I've said about all relationships holding meaning.
 Reaper: As always, I'll keep referring customers in your direction. Perhaps I shall look for a few who regret the impact they left behind on their passing, hm? Let us investigate this next.
+<<changeFace Reaper_Happy>>
 Reaper: Until next time, Cafe Ghost! I look forward to our next meeting.
+<<changeFace Reaper_Normal>>
 <<reaperPitch false>>
 <<setCam "Main Camera">>
 ===
@@ -291,7 +342,9 @@ tags:
 position: 169,38
 ---
 <<reaperPitch true>>
+<<changeFace Reaper_Happy>>
 Reaper: Hello again, Cafe Ghost! It's lovely to see you again.
+<<changeFace Reaper_Normal>>
 Reaper: Your cafe has certainly come a long way since the day you first arrived. But we aren't here to discuss that, are we?
 Reaper: Do tell, how have you been in the time since my last visit? 
 <<reaperPitch false>>
@@ -301,10 +354,12 @@ Cafe Ghost: I just feel like nothing I did on Earth changed anything, like it di
 Reaper: ...Well, I don't want to invalidate what you are feeling, but I cannot help but disagree fundamentally with the idea that your life was wasted.
 Reaper: For one, the idea that life has a purpose, some concrete destination, is simply ludicrous to me. That there could be a meaning assigned to something as open and diverse as life is simply impossible.
 Reaper: The meaning of life is whatever you make of it, and might I say, you made an incredible life. 
+<<changeFace Reaper_Happy>>
 Reaper: Look at how many people you've reached, how many lives were changed by your presence!
 Reaper: You helped a friend understand their science homework, long ago, and even now they mourn your absence.
 Reaper: You planted a tree, as a child - that's a large oak now, home to a family of little squirrels.
 Reaper: And, in the end, little impact or large, the only person your life should matter to is yourself. 
+<<changeFace Reaper_Normal>>
 Reaper: So, are you really unhappy with the life you led?
     ->...If the purpose of life is whatever I want it to be, then I wanted more than I was.
         Reaper: And that's a heartbreaking way to live. Or, die, I suppose.
@@ -317,10 +372,12 @@ Reaper: So, are you really unhappy with the life you led?
             -> Nah, not really.
                 Reaper: ...Well, it is not the time or place for that philosophical debate. But the point stands that your life had an impact, and furthermore, it shouldn't matter whether or not it had an impact.
         Reaper: Your expectations, your judgement, they are all self-imposed. Societally influenced, of course, but self-imposed nevertheless.
+        <<changeFace Reaper_Happy>>
         Reaper: It never mattered at all whether you had an "impact" or not, except to yourself. 
+        <<changeFace Reaper_Normal>>
 Reaper: But I want you to know that your life was enough.
 Reaper: Let's try and look back at your life, okay? If you can't accept that your life was fulfilling from your perspective, then we'll look at your life from the view of the people around you.
-Reaper:Let's see how you have changed others' lives. And, you don't need to believe me about this, but changing people is the same as changing the world.
+Reaper: Let's see how you have changed others' lives. And, you don't need to believe me about this, but changing people is the same as changing the world.
 Reaper: Now, in your eyes, who do you think you've impacted the most by your presence?
     -> My family.
         Reaper: Your family, hm? Then, do you think that impact was minimal? Do you not believe that you influenced them at all?
@@ -328,9 +385,13 @@ Reaper: Now, in your eyes, who do you think you've impacted the most by your pre
                 Reaper: You're family, you're not always going to be better for each other. The important thing is to try for the better. Did you?
                     -> Yes.
                     -> Well, most of the time.
+                        <<changeFace Reaper_Happy>>
                         Reaper: Then there you go. Is that not enough for you, to have been there for your family?
+                        <<changeFace Reaper_Normal>>
                         Reaper: In my eyes, to have been what someone else considers family is a great honor. And, you can see for yourself how they grieve your absence.
+                        <<changeFace Reaper_Happy>>
                         Reaper: Being so important to another person - is that not reason enough to say you've had an impact?
+                        <<changeFace Reaper_Normal>>
             -> Sure, they care about me, but that doesn't mean I changed their lives.
                 Reaper: Could you imagine life without your family?
                 Reaper: How different of a person you would be, how much lonelier you would be.
@@ -343,33 +404,45 @@ Reaper: Now, in your eyes, who do you think you've impacted the most by your pre
                 Reaper: Just being there, to come home to or see occasionally or remember to call, made you a part of their lives that they now must live without.
                 Reaper: Your death is proof that your life had meaning, because just look at how different it is when you are gone.
                 Reaper: It is not that grief magically appears from thin air. That is how much you meant to them.
+                <<changeFace Reaper_Happy>>
                 Reaper: Being so important to another person - is that not reason enough to say you've had an impact?
+                <<changeFace Reaper_Normal>>
     -> My friends.
+        <<changeFace Reaper_Happy>>
         Reaper: Ahh, your friends. This one, I have proof for sure that you have impacted them!
+        <<changeFace Reaper_Normal>>
         Reaper: You've helped so many souls in purgatory find peace, I can only imagine how many more you've helped in life. 
             -> I didn't do much, I just listened...
                 Reaper: And that's more than many people bother to do. Don't downplay your own kindness - you have helped these people. 
             -> That's just in purgatory though...
                 Reaper: Just because purgatory comes after life does not make it any less real.
+                <<changeFace Reaper_Happy>>
                 Reaper: These ghosts, their distress is not invalid simply because they are dead; and therefore, your kindness is not invalid simply because you are too. 
+                <<changeFace Reaper_Normal>>
         Reaper: But tell me about your friends. How have you impacted them?
             -> I don't think I did, though?
                 Reaper: I believe you did. See, friends can be a bond stronger than any, but they are also not bound by anything other than each other.
                 Reaper: Not like family, or yourself, friends come and go much more often.
+                <<changeFace Reaper_Happy>>
                 Reaper: If you had friends, then that was for a reason. You brought them joy, and they wanted to be around you.
                 Reaper: If that isn't impactful, I don't know what is.
+                <<changeFace Reaper_Normal>>
                 <<reaperPitch false>>
                 Cafe Ghost: Is that really an impact...?
                 <<reaperPitch true>>
+                <<changeFace Reaper_Happy>>
                 Reaper: Of course it is! It's as I've said: changing people is the same as changing the world.
+                <<changeFace Reaper_Normal>>
                 Reaper: If your presence brought your friends happiness, then you were bringing happiness into the world! Creating it out of thin air!
                 Reaper: That's no small thing, is it?
                 Reaper: Now, let me ask you this.
                 Reaper: Is happiness enough for you?
                 Reaper: If your friends did nothing on Earth except bring you happiness, was their presence worthwhile?
             -> We were happy together, but...is that really an impact?
+                <<changeFace Reaper_Happy>>
                 Reaper: Of course it is! It's as I've said: changing people is the same as changing the world.
                 Reaper: If your presence brought your friends happiness, then you were bringing happiness into the world! Creating it out of thin air!
+                <<changeFace Reaper_Normal>>
                 Reaper: That's no small thing, is it?
                 Reaper: Now, let me ask you this.
                 Reaper: Is happiness enough for you?
@@ -384,8 +457,10 @@ Reaper: Now, in your eyes, who do you think you've impacted the most by your pre
         Cafe Ghost: But is that...enough?
         <<reaperPitch true>>
         Reaper: I can't tell you that. That's a question for yourself.
+        <<changeFace Reaper_Happy>>
         Reaper: But I certainly think so, dear.
         Reaper: To me, no one has ever not been enough. 
+        <<changeFace Reaper_Normal>>
     -> No one.
         Reaper: Then that's simply untrue. 
         Reaper: Who knows how many countless small acts of kindness that you've done have made other people's days, or gave them hope, or granted them that courage they needed.
@@ -394,10 +469,12 @@ Reaper: Now, in your eyes, who do you think you've impacted the most by your pre
         Cafe Ghost: But is that...enough?
         <<reaperPitch true>>
         Reaper: I can't tell you that. That's a question for yourself.
+        <<changeFace Reaper_Happy>>
         Reaper: But I certainly think so, dear.
         Reaper: To me, no one has ever not been enough. 
+        <<changeFace Reaper_Normal>>
 <<reaperPitch false>>
-Cafe Ghost: I think...I'm starting to understand what you mean, when you say that I've done is enough.
+Cafe Ghost: I think... I'm starting to understand what you mean, when you say that I've done is enough.
 Cafe Ghost: I did do a lot of things, you know? And met a lot of people, and had a lot of wishes, and maybe even changed a tiny bit of the world.
 Cafe Ghost: Not a lot.
 Cafe Ghost: Not much at all.

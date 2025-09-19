@@ -70,11 +70,8 @@ public class DialoguePlayer : MonoBehaviour
 
     public void ChangeFace(string faceName)
     {
-        Debug.Log("Changing Face");
-
         int seatNum = GameManager.Instance.orderManager.GetCurrActiveOrderSeatNum();
         GameObject ghost = GhostSpawningManager.Instance.GetSpawnedGhost(seatNum);
-        Debug.Log("Changing face of " + ghost);
         ghost.GetComponent<GhostObj>().ChangeFace(faceName);
     }
 
@@ -151,6 +148,12 @@ public class DialoguePlayer : MonoBehaviour
         this.seatNum = seatNum;
         string parsedName = ghostName.Replace(" Ghost", "");
         parsedName = parsedName.Replace(" ", "");
+
+        if (GameManager.Instance.orderManager.GetCurrActiveOrderName() == "Reaper")
+        {
+            //change to reaper song name if changed later on
+            AudioManager.Instance.PlaySong("Reaper");
+        }
         
         if (result) {
             state = DialogueState.Success;
@@ -173,6 +176,8 @@ public class DialoguePlayer : MonoBehaviour
         if (state == DialogueState.Story)
         {
             GameManager.Instance.ghostManager.IncrementStoryIndex(GameManager.Instance.orderManager.GetCurrActiveOrderName());
+
+            //reaper special case
             if (GameManager.Instance.orderManager.GetCurrActiveOrderName() == "Reaper")
             {
                 GameManager.Instance.UpdateArc();

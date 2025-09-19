@@ -10,7 +10,9 @@ title: MusicianSuccess
 tags:
 position: -173,132
 ---
+<<changeFace Musician_Happy>>
 Musician Ghost: Wow... this hits all the right notes!
+<<changeFace Musician_Normal>>
 <<startStory MusicianStory>>
 ===
 

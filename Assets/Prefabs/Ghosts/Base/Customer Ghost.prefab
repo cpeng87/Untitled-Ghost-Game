@@ -106,6 +106,8 @@ MonoBehaviour:
   scriptable: {fileID: 11400000, guid: 101493e60bcc17e47bd367a34fa5b828, type: 2}
   idleAnimator: {fileID: 1384690566036447604}
   orderNotificationAnimator: {fileID: 5908452037486837128}
+  faces: []
+  face: {fileID: 7464676030544879477}
 --- !u!95 &1384690566036447604
 Animator:
   serializedVersion: 7
@@ -589,5 +591,10 @@ PrefabInstance:
 --- !u!4 &4562136531544678831 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8ff19a2b9e4b7574bb8391288e10b3fc, type: 3}
+  m_PrefabInstance: {fileID: 4090762132850787908}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &7464676030544879477 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6868716418057165105, guid: 8ff19a2b9e4b7574bb8391288e10b3fc, type: 3}
   m_PrefabInstance: {fileID: 4090762132850787908}
   m_PrefabAsset: {fileID: 0}

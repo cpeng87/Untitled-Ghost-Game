@@ -54,11 +54,11 @@ MonoBehaviour:
   - name: Winter
     clip: {fileID: 8300000, guid: d3b2a337fab414a47b1b603035c06165, type: 3}
   - name: Comic
-    clip: {fileID: 8300000, guid: d3b2a337fab414a47b1b603035c06165, type: 3}
+    clip: {fileID: 8300000, guid: 0e74871cabdc23845a224ac03428ca57, type: 3}
   - name: Minigame
-    clip: {fileID: 8300000, guid: d3b2a337fab414a47b1b603035c06165, type: 3}
+    clip: {fileID: 8300000, guid: 02499343d46f91a4fa137167abbf4b97, type: 3}
   - name: Title
-    clip: {fileID: 8300000, guid: d3b2a337fab414a47b1b603035c06165, type: 3}
+    clip: {fileID: 8300000, guid: 312b055e946dd43b8ba964daeefb64b1, type: 3}
   sound:
   - name: DoorChime
     clip: {fileID: 8300000, guid: 1b410d7a1e4c14e39a873fac96da9112, type: 3}

@@ -40,7 +40,6 @@ public class DialogueManager : MonoBehaviour
         storyNameToNextDialogue[storyName] = nextString;
     }
 
-    //yo we gotta rename these variables i genuninely cant do this anymore AAAAAAAAAAAAAAAAAAAAAAAAAAA
     public string GetNextDialogue(string storyName) {
         string nextDialogue = null;
         if (storyNameToNextDialogue.ContainsKey(storyName)) {

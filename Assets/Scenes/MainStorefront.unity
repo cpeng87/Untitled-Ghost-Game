@@ -3258,6 +3258,10 @@ PrefabInstance:
       propertyPath: recipeShopOpenButton
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6430564807135760895, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
+      propertyPath: m_Spacing
+      value: 35
+      objectReference: {fileID: 0}
     - target: {fileID: 6743233794005758191, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -3310,6 +3314,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8684103686061824761, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a8bf431ac014a6a43bfd1545a868d04d, type: 3}
     - target: {fileID: 8716906259618167843, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
@@ -7078,6 +7086,18 @@ PrefabInstance:
     - target: {fileID: 105854230925103740, guid: 1a7aa02123203af4e906e3e4436b4331, type: 3}
       propertyPath: m_Name
       value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4855604172790233318, guid: 1a7aa02123203af4e906e3e4436b4331, type: 3}
+      propertyPath: music.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4855604172790233318, guid: 1a7aa02123203af4e906e3e4436b4331, type: 3}
+      propertyPath: music.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: fdc884a993ac4f34db27aebabe32490a, type: 3}
+    - target: {fileID: 4855604172790233318, guid: 1a7aa02123203af4e906e3e4436b4331, type: 3}
+      propertyPath: music.Array.data[6].name
+      value: Reaper
       objectReference: {fileID: 0}
     - target: {fileID: 8270933150336914739, guid: 1a7aa02123203af4e906e3e4436b4331, type: 3}
       propertyPath: m_LocalPosition.x
