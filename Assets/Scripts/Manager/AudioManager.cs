@@ -114,8 +114,9 @@ public class AudioManager : MonoBehaviour
 
     public void SaveSong()
     {
-       savedTime = musicSource.time;
-       savedSong = currentSong;
+        Debug.Log("Saving " +  currentSong);
+        savedTime = musicSource.time;
+        savedSong = currentSong;
     }
 
     public bool ContinueSong()
@@ -124,6 +125,7 @@ public class AudioManager : MonoBehaviour
         {
             musicSource.clip = musicDict[savedSong];
             musicSource.time = savedTime;
+            currentSong = savedSong;
             musicSource.Play();
         }
         else
@@ -196,26 +198,59 @@ public class AudioManager : MonoBehaviour
         OnSongChanged?.Invoke(music[index].name);
     }
 
-    public void NextSong()
+    // public void PlaySong(string songName, float fadeTime = 1f) {
+
+    //     if (musicDict.TryGetValue(songName, out var clip))  {
+    //         if (musicSource.clip == clip && musicSource.isPlaying)
+    //             return; // already playing
+
+    //         currentSong = songName;
+
+    //         if (currentFade != null) StopCoroutine(currentFade);
+    //         currentFade = StartCoroutine(FadeToNewTrack(clip, fadeTime));
+
+    //         OnSongChanged?.Invoke(songName);
+    //     }
+    //     else  {
+    //         Debug.LogWarning("Song " + songName + " not found!");
+    //     }
+    // }
+    public void NextSong(float fadeTime = 1f)
     {
         //pays the next song on the list
         currIndex = (currIndex + 1) % music.Length;
         Debug.Log("Music Index: " + currIndex);
         currentSong = music[currIndex].name;
-        musicSource.Stop();
-        musicSource.clip = music[currIndex].clip;
-        musicSource.Play();
+
+        if (currentFade != null) StopCoroutine(currentFade);
+        currentFade = StartCoroutine(FadeToNewTrack(musicDict[currentSong], fadeTime));
+
+        // musicSource.Stop();
+        // musicSource.clip = music[currIndex].clip;
+        // musicSource.Play();
+
         OnSongChanged?.Invoke(music[currIndex].name);
     }
-    public void NextSong(int index)
+    public void NextSong(int index, float fadeTime = 1f)
     {
         if (index < music.Length)
         {
             currIndex = index;
             currentSong = music[currIndex].name;
-            musicSource.Stop();
-            musicSource.clip = music[currIndex].clip;
-            musicSource.Play();
+
+            if (musicDict.TryGetValue(currentSong, out var clip))  {
+                if (musicSource.clip == clip && musicSource.isPlaying)
+                    return; // already playing
+            }
+
+
+            if (currentFade != null) StopCoroutine(currentFade);
+            currentFade = StartCoroutine(FadeToNewTrack(musicDict[currentSong], fadeTime));
+
+            // musicSource.Stop();
+            // musicSource.clip = music[currIndex].clip;
+            // musicSource.Play();
+
             OnSongChanged?.Invoke(music[currIndex].name);
         }
     }

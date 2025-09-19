@@ -104,26 +104,6 @@ public class OrderManager : MonoBehaviour
         {
             GameManager.Instance.UpdateCurrency();
         }
-        
-        // SortOrders();
-        // if (result)
-        // {
-        //     // List<string> successDialogue = TagReplacer(currGhost.success, "{item}", activeOrders[currActiveOrder].recipeName);
-        //     // //add story dialogue as well
-        //     // int storyIndex = GameManager.Instance.ghostManager.GetStoryIndex(currGhost.ghostName);
-        //     // GameManager.Instance.ghostManager.IncrementStoryIndex(currGhost.ghostName);
-        //     // List<string> storyDialogue = currGhost.story[storyIndex];
-        //     // List<string> combinedDialogue = successDialogue;
-        //     // combinedDialogue.AddRange(storyDialogue);
-        //     // DialogueManager.Instance.CompleteOrderDialogue(currGhost.ghostName, combinedDialogue, activeOrders[currActiveOrder].seatNum);
-        //     // GameManager.Instance.AddCurrency(activeOrders[currActiveOrder].price);
-        // }
-        // else
-        // {
-        //     List<string> failureDialogue = TagReplacer(currGhost.failure, "{item}", activeOrders[currActiveOrder].recipeName);
-        //     DialogueManager.Instance.CompleteOrderDialogue(currGhost.ghostName, failureDialogue, activeOrders[currActiveOrder].seatNum);
-        // }
-
     }
 
     public void RemoveCompletedOrder()
@@ -179,6 +159,11 @@ public class OrderManager : MonoBehaviour
     public string GetCurrActiveOrderName()
     {
         return activeOrders[currActiveOrder].ghostName;
+    }
+
+    public int GetCurrActiveOrderSeatNum()
+    {
+        return activeOrders[currActiveOrder].seatNum;
     }
 
     public int GetCurrActiveOrderPrice()

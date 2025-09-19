@@ -13,7 +13,9 @@ tags:
 position: -173,132
 ---
 <<reaperPitch true>>
+<<changeFace Reaper_Blush>>
 Reaper: Thank you very much, it's delicious! What a creative design, as well.
+<<changeFace Reaper_Normal>>
 <<reaperPitch false>>
 <<reset>>
 <<startStory ReaperStory>>
@@ -27,11 +29,14 @@ position: 169,38
 Reaper: Hello, Cafe Ghost, and welcome to purgatory! I'm honored to be the first customer of your new cafe.
 Reaper: Is everything about it to your tastes? Say the word, and I can have it tailored however you like.
     -> Hi, uh, Mr. Grim Reaper. The cafe is great, yeah.
+        <<changeFace Reaper_Happy>>
         Reaper: No need for such formalities. I'm not exactly the harbinger of death that everyone on Earth paints me to be, you know? Just a shepherd of lost souls like you, dear.
     -> Why exactly am I here, again?
         Reaper:  This is where people go between life and death, when they have lingering regrets from their life that they need to resolve.
+        <<changeFace Reaper_Happy>>
         Reaper: Without the burden of needing to work, eat, sleep, or live by societal standards, ghosts come to purgatory to resolve their last regrets and move on peacefully into the afterlife. 
 Reaper: Remember, feel free to ask me for anything you need. Your peace is my priority, and I'll do all that is in my power to ensure you can reach your happy ending.
+<<changeFace Reaper_Normal>>
 Reaper: That being said, do you have any ideas as to why you might be tied here?
 <<reaperPitch false>>
 Cafe Ghost: ...I regret not doing more with my life - not having close relationships, not having any big dreams, no accomplishments to speak of...Well, thinking back, basically everything.

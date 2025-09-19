@@ -75,7 +75,6 @@ public class GhostManager : MonoBehaviour
                 if (ghost.numStory == ghostNameToStoryIndex[name])
                 {
                     Debug.Log("Reached end of dialogue, will not increment");
-                    Debug.Log("ONE GHOST COMPLETE");
                     completedGhostsDict[ghost] = true;
                     if (ghost.arc != Arc.None)
                     {
@@ -88,20 +87,7 @@ public class GhostManager : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("incrementing story index");
                     ghostNameToStoryIndex[name] = ghostNameToStoryIndex[name] + 1;
-                    // if (ghostNameToStoryIndex[name] == ghost.numStory)
-                    // {
-                    //     completedGhostsDict[ghost] = true;
-                    //     if (ghost.arc != Arc.None)
-                    //     {
-                    //         if (IsArcComplete())
-                    //         {
-                    //             // set reaper to next spawn
-                    //             GhostSpawningManager.Instance.SetIsReaperSpawn(true);
-                    //         }
-                    //     }
-                    // }
                 }
             return;
         }

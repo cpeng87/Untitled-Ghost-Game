@@ -3,6 +3,14 @@ using Yarn.Unity;
 using System.Collections;
 using System.Collections.Generic;
 
+public enum DialogueState
+{
+    None,
+    Success,
+    Fail,
+    Story
+}
+
 [RequireComponent(typeof(DialogueRunner))]
 public class DialoguePlayer : MonoBehaviour
 {
@@ -16,8 +24,9 @@ public class DialoguePlayer : MonoBehaviour
 
     private bool isSuccess = false;
     private bool isDeleting = false;
+    private bool isIncrement = false;
 
-    
+    private DialogueState state = DialogueState.None;
 
     private void Awake()
     {
@@ -40,6 +49,7 @@ public class DialoguePlayer : MonoBehaviour
         dialogueRunner.AddCommandHandler("end", EndDialogue);
         dialogueRunner.AddCommandHandler("reset", Reset);
         dialogueRunner.AddCommandHandler<bool>("reaperPitch", ReaperPitch);
+        dialogueRunner.AddCommandHandler<string>("changeFace", ChangeFace);
 
         // dialogueRunner.onDialogueComplete += OnDialogueComplete;
         dialogueRunner.onDialogueComplete.AddListener(OnDialogueComplete);
@@ -55,17 +65,18 @@ public class DialoguePlayer : MonoBehaviour
 
     [YarnFunction("GetOrder")]
     public static string GetOrder() {
-        // int selectedIndex = (int) (Random.value * 3);
-        // string[] names = {"tea", "coffee", "milk"};
-        // return names[selectedIndex];
         return DialoguePlayer.Instance.currentOrder;
     }
 
-    // [YarnFunction("GetStoryNum")]
-    // public static int GetStoryNum()
-    // {
-    //     return DialoguePlayer.Instance.storyNum;
-    // }
+    public void ChangeFace(string faceName)
+    {
+        Debug.Log("Changing Face");
+
+        int seatNum = GameManager.Instance.orderManager.GetCurrActiveOrderSeatNum();
+        GameObject ghost = GhostSpawningManager.Instance.GetSpawnedGhost(seatNum);
+        Debug.Log("Changing face of " + ghost);
+        ghost.GetComponent<GhostObj>().ChangeFace(faceName);
+    }
 
     public void Reset() {
         fd.Reset();
@@ -135,40 +146,46 @@ public class DialoguePlayer : MonoBehaviour
         GameManager.Instance.state = State.Dialogue;
     }
 
-    public void CompleteOrderDialogue(string ghostName, int seatNum, bool res) {
+    public void CompleteOrderDialogue(string ghostName, int seatNum, bool result) {
         CameraManager.Instance.SwapToSeatCamera(seatNum);
         this.seatNum = seatNum;
         string parsedName = ghostName.Replace(" Ghost", "");
         parsedName = parsedName.Replace(" ", "");
         
-        if (res) {
-            isSuccess = true;
-            Debug.Log("Starting dialogue: " + parsedName + "Success");
+        if (result) {
+            state = DialogueState.Success;
             dialogueRunner.StartDialogue(parsedName + "Success");
         } else {
-            isDeleting = true;
+            state = DialogueState.Fail;
             dialogueRunner.StartDialogue(parsedName + "Failure");
         }
     }
 
-    //i feel like there is an easier way to do this... but alas...
+    private void GhostDialogueReset()
+    {
+        GameManager.Instance.orderManager.RemoveCompletedOrder();
+        GameManager.Instance.state = State.Main;
+        state = DialogueState.None;
+    }
+
     private void OnDialogueComplete()
     {
-        if (isDeleting)
+        if (state == DialogueState.Story)
         {
             GameManager.Instance.ghostManager.IncrementStoryIndex(GameManager.Instance.orderManager.GetCurrActiveOrderName());
             if (GameManager.Instance.orderManager.GetCurrActiveOrderName() == "Reaper")
             {
                 GameManager.Instance.UpdateArc();
             }
-            GameManager.Instance.orderManager.RemoveCompletedOrder();
-            isDeleting = false;
-            isSuccess = false;
-            GameManager.Instance.state = State.Main;
+            GhostDialogueReset();
         }
-        else if (isSuccess)
+        else if (state == DialogueState.Fail)
         {
-            isDeleting = true;
+            GhostDialogueReset();
+        }
+        else if (state == DialogueState.Success)
+        {
+            state = DialogueState.Story;
         }
         else
         {
