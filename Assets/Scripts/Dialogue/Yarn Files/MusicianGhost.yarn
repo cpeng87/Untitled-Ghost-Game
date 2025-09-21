@@ -10,9 +10,9 @@ title: MusicianSuccess
 tags:
 position: -173,132
 ---
-<<changeFace Musician_Happy>>
+<<changeFace Happy>>
 Musician Ghost: Wow... this hits all the right notes!
-<<changeFace Musician_Normal>>
+<<changeFace Normal>>
 <<startStory MusicianStory>>
 ===
 
@@ -20,7 +20,9 @@ title: MusicianFailure
 tags:
 position: -112,-180
 ---
+<<changeFace Sad>>
 Musician Ghost: This tastes... off-key...
+<<changeFace Normal>>
 <<setCam "Main Camera">>
 ===
 
@@ -30,9 +32,11 @@ position: 169,38
 ---
 Musician Ghost: What was that? 
 Musician Ghost: Sorry, my hearing isn't as good as it used to be. 
+<<changeFace Sad>>
 Musician Ghost: Honestly, I thought dying would fix my bad ear, but that ringing in my right ear is annoying as ever.
 Musician Ghost: At first, I thought it was just fatigue... maybe my late nights of practicing were getting to me. But, over time, the noise kept getting worse, reverberating into my passions.
 Musician Ghost: It drove me crazy not knowing whether my performances were in the wrong key, and every practice session fell flat.
+<<changeFace Normal>>
 Musician Ghost: It's been a while since I've put on a performance, but I'd like to think I'm a good inspiration away from getting back to my peak.
 <<setCam "Main Camera">>
 ===
@@ -41,6 +45,7 @@ title: MusicianStory2
 tags:
 position: 169,38
 ---
+<<changeFace Sad>>
 Musician Ghost: Honestly, when I lost half of my hearing, it felt like my world was out-of-sync.
 Musician Ghost: My motivation started slipping, and my frustration grew.
 Musician Ghost: Despite that, I still thought I could keep going like nothing happened.
@@ -48,6 +53,7 @@ Musician Ghost: But days turned into weeks turned into months, and I had nothing
 Musician Ghost: I couldn't put on a performance like I used to. Over time, I started losing my composure.
 Musician Ghost: I became... obsessed with the way people viewed my music.
 Musician Ghost: After all, music was my world... what's a person got to stand on when their world crumbles around them?
+<<changeFace Normal>>
 <<setCam "Main Camera">>
 ===
 
@@ -64,7 +70,9 @@ Musician Ghost: ...Yknow, I used to compete a lot. Every time I stepped up to th
 Musician Ghost: For the first time since I'd started falling, I had a moment of clarity.
 Musician Ghost: I stopped thinking about what I had lost and instead focused on what I had in the first place.
 Musician Ghost: What's a person got to stand on when their world crumbles around them?
+<<changeFace Happy>>
 Musician Ghost: Only themselves.
+<<changeFace Normal>>
 Musician Ghost: Just like Jock Ghost didn't need medals to prove that he was a sportsman, I didn't need chart-toppers or huge audiences to prove that I was a musician.
 Musician Ghost: It was the passion that drove us to become those things, and I think I'm ready to start playing music again... for nobody but myself.
 <<setCam "Main Camera">>
