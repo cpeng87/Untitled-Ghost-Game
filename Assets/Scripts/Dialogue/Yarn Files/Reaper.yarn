@@ -13,7 +13,7 @@ tags:
 position: -173,132
 ---
 <<reaperPitch true>>
-<<emotionChange Blush Scribble>>
+<<emotionChange Blush Flowers>>
 Reaper: Thank you very much, it's delicious! What a creative design, as well.
 <<emotionChange Normal>>
 <<reaperPitch false>>
@@ -168,7 +168,7 @@ Reaper: In your eyes, what really defines a "passion" or a "dream"? Is it a conc
                 Reaper: I hope that you can look back on your life and see the journey you took - between goals, between small wishes, all the challenges and triumphs you had.
                 Reaper: There is no real difference between you and these people you envy.
                 Reaper: Both have dreams, even if you think your own are somehow less worthy.
-                <<emotionChange Happy Flowers>>
+                <<emotionChange None Flowers>>
                 Reaper: And when all is said and done and your goals have been achieved, you find new ones. There is not and has never been an end-all-be-all goal.
                 <<emotionChange Normal>>
             -> No, I envied that they cared about something enough to dedicate their life to it.
@@ -177,7 +177,7 @@ Reaper: In your eyes, what really defines a "passion" or a "dream"? Is it a conc
                 Reaper:  These people, what set them apart is that they loved one single thing - a sport, or a craft, or a study - enough to dedicate their whole life to doing it.
                 <<emotionChange Happy Flowers>>
                 Reaper: And that's beautiful to behold, but your goals are no lesser just because they are non-singular.
-                <<emotionChange Happy>>
+                <<emotionChange None>>
                 Reaper: And you did have goals, no matter how you might protest it.
                 Reaper: You hoped for a good job, no? A stable income? Maybe a place of your own, or a good circle of friends?
                 <<emotionChange Normal>>
@@ -191,7 +191,7 @@ Reaper: In your eyes, what really defines a "passion" or a "dream"? Is it a conc
                 Reaper: I hope that you can look back on your life and see the journey you took - between goals, between small wishes, all the challenges and triumphs you had.
                 Reaper: There is no real difference between you and these people you envy.
                 Reaper: Both have dreams, even if you think your own are somehow less worthy. And both have journeys.
-                <<emotionChange Happy Flowers>>
+                <<emotionChange None Flowers>>
                 Reaper: If you enjoyed yours, that's all that matters. 
                 <<emotionChange Normal>>
     -> ...No, I think it's the journey.
@@ -211,7 +211,7 @@ Reaper: In your eyes, what really defines a "passion" or a "dream"? Is it a conc
         Reaper: I hope that you can look back on your life and see the journey you took - between goals, between small wishes, all the challenges and triumphs you had.
         Reaper: There is no real difference between you and these people you envy.
         Reaper: Both have dreams, even if you think your own are somehow less worthy. And both have journeys. 
-        <<emotionChange Happy Flowers>>
+        <<emotionChange None Flowers>>
         Reaper: If you enjoyed yours, that's all that matters. 
         <<emotionChange Normal>>
 Reaper: Oh dear, I do believe I've spent a tad too much time talking with you. My tea's gone cold! But, we'll have plenty more time to discuss in the future.
@@ -396,7 +396,7 @@ Reaper: Now, in your eyes, who do you think you've impacted the most by your pre
                         Reaper: Then there you go. Is that not enough for you, to have been there for your family?
                         <<emotionChange Normal>>
                         Reaper: In my eyes, to have been what someone else considers family is a great honor. And, you can see for yourself how they grieve your absence.
-                        <<emotionChange Happy Flowers>>
+                        <<emotionChange None Flowers>>
                         Reaper: Being so important to another person - is that not reason enough to say you've had an impact?
                         <<emotionChange Normal>>
             -> Sure, they care about me, but that doesn't mean I changed their lives.

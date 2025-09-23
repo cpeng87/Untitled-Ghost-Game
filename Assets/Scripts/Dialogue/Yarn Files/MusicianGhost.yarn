@@ -50,8 +50,10 @@ Musician Ghost: Honestly, when I lost half of my hearing, it felt like my world 
 Musician Ghost: My motivation started slipping, and my frustration grew.
 Musician Ghost: Despite that, I still thought I could keep going like nothing happened.
 Musician Ghost: But days turned into weeks turned into months, and I had nothing to show for it.
+<<emotionChange None Scribbles>>
 Musician Ghost: I couldn't put on a performance like I used to. Over time, I started losing my composure.
 Musician Ghost: I became... obsessed with the way people viewed my music.
+<<emotionChange None>>
 Musician Ghost: After all, music was my world... what's a person got to stand on when their world crumbles around them?
 <<emotionChange Normal>>
 <<setCam "Main Camera">>
@@ -74,6 +76,8 @@ Musician Ghost: What's a person got to stand on when their world crumbles around
 Musician Ghost: Only themselves.
 <<emotionChange Normal>>
 Musician Ghost: Just like Jock Ghost didn't need medals to prove that he was a sportsman, I didn't need chart-toppers or huge audiences to prove that I was a musician.
+<<emotionChange None Flowers>>
 Musician Ghost: It was the passion that drove us to become those things, and I think I'm ready to start playing music again... for nobody but myself.
+<<emotionChange Normal>>
 <<setCam "Main Camera">>
 ===

@@ -7,7 +7,7 @@ public enum ParticleState
 {
     Flowers,
     Sparkles,
-    Scribble
+    Scribbes
 }
 
 public class GhostObj : Clickable
@@ -151,18 +151,18 @@ public class GhostObj : Clickable
                 }
                 emotionParticles.Play();
             }
-            else if (particle == "Scribble")
+            else if (particle == "Scribbes")
             {
-                if (particleState != ParticleState.Scribble)
+                if (particleState != ParticleState.Scribbes)
                 {
                     foreach (Material particleType in emotionMaterials)
                     {
-                        if (particleType.name == "Scribble")
+                        if (particleType.name == "Scribbes")
                         {
                             emotionParticles.GetComponent<ParticleSystemRenderer>().material = particleType;
                         }
                     }
-                    particleState = ParticleState.Scribble;
+                    particleState = ParticleState.Scribbes;
                 }
                 emotionParticles.Play();
             }

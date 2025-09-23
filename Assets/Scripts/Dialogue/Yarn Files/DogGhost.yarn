@@ -10,8 +10,10 @@ title: DogSuccess
 tags:
 position: -173,132
 ---
+<<emotionChange None Flowers>>
 Ghostwriter Ghost: <wiggle>Woof woof! WOOF!</wiggle>
 <<reset>>
+<<emotionChange None>>
 <<startStory DogStory>>
 ===
 
@@ -19,8 +21,10 @@ title: DogFailure
 tags:
 position: -112,-180
 ---
+<<emotionChange Mad>>
 Dog Ghost: Woof...<shaky>grr...</shaky>
 <<reset>>
+<<emotionChange Mad>>
 <<setCam "Main Camera">>
 ===
 
@@ -28,7 +32,9 @@ title: DogStory1
 tags:
 position: 169,38
 ---
+<<emotionChange None Flowers>>
 Dog Ghost: Woof woof woof! woof! wo-woof!! <wiggle>Woof woof!</wiggle>
 <<reset>>
+<<emotionChange None>>
 <<setCam "Main Camera">>
 ===

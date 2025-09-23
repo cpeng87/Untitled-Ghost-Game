@@ -10,7 +10,9 @@ title: ActorSuccess
 tags:
 position: -173,132
 ---
+<<emotionChange None Sparkles>>
 Actor Ghost: Wow, this is amazing, I can see why you're a barista! Great stuff! <wiggle> Truly a master at work~! </wiggle>
+<<emotionChange None>>
 <<reset>>
 <<startStory ActorStory>>
 ===
@@ -19,7 +21,9 @@ title: ActorFailure
 tags:
 position: -112,-180
 ---
+<<emotionChange None Scribble>>
 Actor Ghost: Bleurgh- What is this?
+<<emotionChange None>>
 Actor Ghost: How could you serve something like this to someone as famous as me?
 Actor Ghost: If I left a review on this place, you'd be out of business in minutes!
 <<setCam "Main Camera">>
@@ -30,13 +34,16 @@ tags:
 position: 169,38
 ---
 Actor Ghost: Yep, it's me. <italic> The one! </italic>
+<<emotionChange None Sparkles>>
 Actor Ghost: <italic> The only!! </italic> 
 <<reset>>
 Actor Ghost: You know me from the hit shows The Workplace, Acquaintances, Tournament of Seats, yep, it's me in the flesh, or I guess in the spirit. And no, I don't do autographs.
-Actor Ghost: <italic> WHAT?! </italic>
+<<emotionChange Shocked>>
+Actor Ghost: <wiggle> WHAT?! </wiggle>
 <<reset>>
 Actor Ghost: You don't know who I am?
 Actor Ghost: Were you living under a rock for your whole life?! I'm possibly the most famous ghost to ever exist!
+<<emotionChange Normal>>
 Actor Ghost: I guess it is a nice change of pace though.
 Actor Ghost: <wiggle> Well, see ya around, barista~! </wiggle>
 <<reset>>
@@ -48,18 +55,21 @@ tags:
 position: 169,38
 ---
 Actor Ghost: Hmm? My fame?
+<<emotionChange None Sparkles>>
 Actor Ghost: I got invites to all of the events in Hollyboo!
 Actor Ghost: You know, at some point in fame, people just start giving you free stuff: money, food, drinks, even property!
 Actor Ghost: But the best part was the parties!
 Actor Ghost: Every!
 Actor Ghost: <italic> DAY! </italic>
 <<reset>>
+<<emotionChange Sad>>
 Actor Ghost: But you know, barista, it's kind of exhausting to stay under the spotlight for your whole life.
 Actor Ghost: Everyone's always clamoring around you to get a chance at that next opportunity.
 Actor Ghost: Hah, out of all my friends, who even knows me... for me?
 Actor Ghost: I've acted in countless movies that explore this very topic but, funnily enough, I still haven't found the answer myself.
 Actor Ghost: There's this nagging voice in the back of my head that tells me everyone just wants to use me in their career...
 Actor Ghost: That everyone only loves the confident and cocky world-famous actor persona I've built, but I really wonder if it's true.
+<<emotionChange Normal>>
 <<setCam "Main Camera">>
 ===
 
@@ -72,7 +82,9 @@ Actor Ghost: Feels like a weight got lifted off of me, haha, though not sure if 
 Actor Ghost: Haha, this is so un-star-like. Like c'mon man.
 Actor Ghost: But still, it's nice to actually have someone listen to you, for once.
 Actor Ghost: Just me, and not the persona that I've created. Made me really appreciate the ones that don't just latch onto my and my stardom...
+<<emotionChange None Sparkles>>
 Actor Ghost: Thanks, man. <wiggle> See you, barista~! </wiggle> Aaaaaand cut!
+<<emotionChange None>>
 <<reset>>
 <<setCam "Main Camera">>
 ===
