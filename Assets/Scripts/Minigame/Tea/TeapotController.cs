@@ -30,7 +30,6 @@ public class TeapotController : MinigameCompletion
     private int overflowParticles;
     [SerializeField] ParticleSystem teaSteamParticles;
     private bool isComplete = false;
-    private float noTeaTimer = 0f;
     private float pourPauseTimer;
 
     //current gradient is at 65 and 80

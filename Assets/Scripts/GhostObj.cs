@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
+public enum ParticleState
+{
+    Flowers,
+    Sparkles,
+    Scribble
+}
+
 public class GhostObj : Clickable
 {
     [SerializeField] private Ghost scriptable;   //ghost information
@@ -11,6 +18,8 @@ public class GhostObj : Clickable
     [SerializeField] private List<Material> faces = new List<Material>();
     [SerializeField] private SkinnedMeshRenderer face;
     [SerializeField] private ParticleSystem emotionParticles;
+    [SerializeField] private List<Material> emotionMaterials = new List<Material>();
+    private ParticleState particleState = ParticleState.Flowers;
     private bool hasTakenOrder;   //flags whether order has been taken or not
     private int seatNum;   //seat number of the current ghost
     private bool isIdle = false; // flag to check if ghost is idle
@@ -93,22 +102,73 @@ public class GhostObj : Clickable
         orderNotificationAnimator.SetBool("isActive", b);
     }
 
-    public void ChangeFace(string faceName)
+    public void EmotionChange(string faceName, string particle = "None")
     {
-        foreach (Material currFace in faces)
+        if (faceName != "None")
         {
-            if (currFace.name == faceName)
+            foreach (Material currFace in faces)
             {
-                face.material = currFace;
-                if (faceName == "Happy")
+                if (currFace.name == faceName)
                 {
-                    emotionParticles.Play();
+                    face.material = currFace;
+                    break;
                 }
-                else if (faceName == "Normal")
+            }
+        }
+        if (particle == "None")
+        {
+            emotionParticles.Stop();
+        }
+        else
+        {
+            if (particle == "Flowers")
+            {
+                if (particleState != ParticleState.Flowers)
                 {
-                    emotionParticles.Stop();
+                    foreach (Material particleType in emotionMaterials)
+                    {
+                        if (particleType.name == "Flowers")
+                        {
+                            emotionParticles.GetComponent<ParticleSystemRenderer>().material = particleType;
+                        }
+                    }
+                    particleState = ParticleState.Flowers;
                 }
-                return;
+                emotionParticles.Play();
+            }
+            else if (particle == "Sparkles")
+            {
+                if (particleState != ParticleState.Sparkles)
+                {
+                    foreach (Material particleType in emotionMaterials)
+                    {
+                        if (particleType.name == "Sparkles")
+                        {
+                            emotionParticles.GetComponent<ParticleSystemRenderer>().material = particleType;
+                        }
+                    }
+                    particleState = ParticleState.Sparkles;
+                }
+                emotionParticles.Play();
+            }
+            else if (particle == "Scribble")
+            {
+                if (particleState != ParticleState.Scribble)
+                {
+                    foreach (Material particleType in emotionMaterials)
+                    {
+                        if (particleType.name == "Scribble")
+                        {
+                            emotionParticles.GetComponent<ParticleSystemRenderer>().material = particleType;
+                        }
+                    }
+                    particleState = ParticleState.Scribble;
+                }
+                emotionParticles.Play();
+            }
+            else
+            {
+                emotionParticles.Stop();
             }
         }
     }

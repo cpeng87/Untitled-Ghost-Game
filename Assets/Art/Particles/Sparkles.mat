@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New Material
+  m_Name: Sparkles
   m_Shader: {fileID: 4800000, guid: 0406db5a14f94604a8c57ccfbc9f3b46, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -42,7 +42,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: dbc37fa87bedaef4ebbaf5f3a960e37c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5be440f690229424abe21c0b5386c1d1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
