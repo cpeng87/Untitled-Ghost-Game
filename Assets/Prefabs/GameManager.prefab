@@ -55,6 +55,7 @@ MonoBehaviour:
   recipes: []
   state: 0
   maxGhosts: 3
+  arc: 0
   parsedDialogue: 0
 --- !u!114 &7943552995929063478
 MonoBehaviour:
@@ -81,10 +82,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ghosts:
-  - {fileID: 5849839697959122125, guid: 3e73500411f207941bc298f8ea682c55, type: 3}
-  - {fileID: 2192215600454572079, guid: fc268233d7a09944e962348325d3f7f5, type: 3}
+  - {fileID: 4663965477092494701, guid: 349a0fc8233db06498bb68ccfbec84df, type: 3}
+  - {fileID: 4663965477092494701, guid: 89eab924a3acde1409307fc04e89da01, type: 3}
   - {fileID: 4687358730033169675, guid: 262fa5d7b7ebf0f4abc52ebab8ab1a8d, type: 3}
   activeGhosts: []
+  reaperPitch: 0
 --- !u!114 &4555743961995624
 MonoBehaviour:
   m_ObjectHideFlags: 0

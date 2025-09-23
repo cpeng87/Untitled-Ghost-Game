@@ -6,6 +6,7 @@ using JetBrains.Annotations;
 using System.Drawing.Text;
 using Manager.RecipeShop;
 using static UnityEngine.GraphicsBuffer;
+using System.Text.RegularExpressions;
 
 public class GhostSpawningManager : MonoBehaviour
 {
@@ -17,10 +18,13 @@ public class GhostSpawningManager : MonoBehaviour
     [SerializeField] private float ghostSpawnCooldown;  //time for new ghost spawn
     [SerializeField] private Vector3 door = new Vector3(-6f, 0.5f,-7f);
     [SerializeField] private float ghostSpeed = 5f;
+    [SerializeField] private float sulkSpeed = 1f;
     [SerializeField] private float rotationSpeed = 135f;
+    [SerializeField] private float minRotationSpeed = 90f;
+    [SerializeField] private float spinSpeed = 125f;
     private Quaternion RotationGoal1 = Quaternion.Euler(0f, -90f, 0f);
     private Quaternion RotationGoal2 = Quaternion.Euler(0f, 0f, 0f);
-    private Vector3 pivot1 = new Vector3(-6f, 0.5f, -7f);
+    private Vector3 pivot1 = new Vector3(-6f, 0.5f, -7f); 
     private bool isReaperSpawn = false;
 
     //singleton
@@ -84,69 +88,120 @@ public class GhostSpawningManager : MonoBehaviour
                 }
                 */
 
-                // DIRECTIONAL LOGIC (MANHATTAN DISTANCE w/ SMOOTH ROTATION) - move forward, turn left, move forward, turn right, move forward, snap to seat position
                 Vector3 distanceDiff = positions[i] - spawnedGhosts[i].Item1.transform.position;
-                if (distanceDiff.x > 2)
+                if (GameManager.Instance.ghostManager.GetGhostScriptableFromName(spawnedGhosts[i].Item1.GetComponent<GhostObj>().GetScriptable().ghostName).walking == Walking.Silly)
                 {
-                    /*
-                    float relativeDistX = Math.Abs(pivot1.x - spawnedGhosts[i].Item1.transform.position.x);
-                    float totalDistX = Math.Abs(door.x - pivot1.x);
-                    float smoothAdjustment = (float)(relativeDistX + totalDistX * 0.33) / totalDistX; //formula which modifies the movement speed to have smooth deceleration
-                    spawnedGhosts[i].Item1.transform.position += ghostSpeed * smoothAdjustment * Time.deltaTime * Vector3.right;
-                    */
-                    spawnedGhosts[i].Item1.transform.position += ghostSpeed * Time.deltaTime * Vector3.right;
-                }
-                else if (distanceDiff.z > 0f)
-                {
-                    if (Math.Abs(Quaternion.Angle(spawnedGhosts[i].Item1.transform.rotation, RotationGoal1)) > 5f)
+                    spawnedGhosts[i].Item1.transform.Rotate(0, -spinSpeed * Time.deltaTime, 0);
+                    // DIRECTIONAL LOGIC (MANHATTAN DISTANCE w/ SMOOTH ROTATION) - move forward, turn left, move forward, turn right, move forward, snap to seat position
+                    if (distanceDiff.x > 2)
                     {
-                        /*
-                        Quaternion currRotation = spawnedGhosts[i].Item1.transform.rotation;
-                        float smoothAdjustment = (Math.Abs(Quaternion.Angle(currRotation, RotationGoal1)) + minRotationSpeed) / 90; //formula which modifies the rotation speed to have smooth deceleration
-                        spawnedGhosts[i].Item1.transform.rotation = Quaternion.RotateTowards(currRotation, RotationGoal1, smoothAdjustment * rotationSpeed * Time.deltaTime);
-                        */
-                        spawnedGhosts[i].Item1.transform.rotation = Quaternion.RotateTowards(spawnedGhosts[i].Item1.transform.rotation, RotationGoal1, rotationSpeed * Time.deltaTime);
+                        spawnedGhosts[i].Item1.transform.position += ghostSpeed * Time.deltaTime * Vector3.right;
                     }
-                    if (Math.Abs(Quaternion.Angle(spawnedGhosts[i].Item1.transform.rotation, RotationGoal1)) < 15f)
+                    else if (distanceDiff.z > 0f)
                     {
-                        /*
-                        float relativeDistZ = Math.Abs(positions[i].z - spawnedGhosts[i].Item1.transform.position.z);
-                        float totalDistZ = Math.Abs(door.z - positions[i].z);
-
-                        float smoothAdjustment = (float) (relativeDistZ + totalDistZ * 0.67) / totalDistZ; //formula which modifies the movement speed to have smooth deceleration
-                        spawnedGhosts[i].Item1.transform.position += ghostSpeed * smoothAdjustment * Time.deltaTime * Vector3.forward;
-                        */
                         spawnedGhosts[i].Item1.transform.position += ghostSpeed * Time.deltaTime * Vector3.forward;
                     }
-                }
-                else
-                {
-                    if (Math.Abs(Quaternion.Angle(spawnedGhosts[i].Item1.transform.rotation, RotationGoal2)) > 5f)
+                    else if (distanceDiff.x > 0f)
                     {
-                        /*
-                        Quaternion currRotation = spawnedGhosts[i].Item1.transform.rotation;
-                        float smoothAdjustment = (Math.Abs(Quaternion.Angle(currRotation, RotationGoal2)) + minRotationSpeed) / 90; //formula which modifies the rotation speed to have smooth deceleration
-                        spawnedGhosts[i].Item1.transform.rotation = Quaternion.RotateTowards(currRotation, RotationGoal2, smoothAdjustment * rotationSpeed * Time.deltaTime);
-                        */
-                        spawnedGhosts[i].Item1.transform.rotation = Quaternion.RotateTowards(spawnedGhosts[i].Item1.transform.rotation, RotationGoal2, rotationSpeed * Time.deltaTime);
+                        spawnedGhosts[i].Item1.transform.position += ghostSpeed * Time.deltaTime * Vector3.right;
                     }
-                    if (Math.Abs(Quaternion.Angle(spawnedGhosts[i].Item1.transform.rotation, RotationGoal2)) < 15f)
+
+                    if (Vector3.Distance(spawnedGhosts[i].Item1.transform.position, positions[i]) <= 0.1f || distanceDiff.x < 0f) //0.1f positional tolerance, extra check to make sure ghost doesnt walk into the counter erm
+                    {
+                        if (Math.Abs(Quaternion.Angle(spawnedGhosts[i].Item1.transform.rotation, RotationGoal2)) < 5f)
+                        {
+                            spawnedGhosts[i].Item2 = false;
+                            spawnedGhosts[i].Item1.transform.position = positions[i]; //lock ghost into position
+                        }
+                    }
+                } else if (GameManager.Instance.ghostManager.GetGhostScriptableFromName(spawnedGhosts[i].Item1.GetComponent<GhostObj>().GetScriptable().ghostName).walking == Walking.Sulking)
+                {
+                    // DIRECTIONAL LOGIC (MANHATTAN DISTANCE w/ SMOOTH ROTATION) - move forward, turn left, move forward, turn right, move forward, snap to seat position
+                    if (distanceDiff.x > 2)
+                    {
+                        spawnedGhosts[i].Item1.transform.position += ghostSpeed * Time.deltaTime * Vector3.right * speedAdj;
+                    }
+                    else if (distanceDiff.z > 0f)
+                    {
+                        spawnedGhosts[i].Item1.transform.position += ghostSpeed * Time.deltaTime * Vector3.forward;
+                    }
+                    else if (distanceDiff.x > 0f)
+                    {
+                        spawnedGhosts[i].Item1.transform.position += ghostSpeed * Time.deltaTime * Vector3.right;
+                    }
+
+                    if (Vector3.Distance(spawnedGhosts[i].Item1.transform.position, positions[i]) <= 0.1f || distanceDiff.x < 0f) //0.1f positional tolerance, extra check to make sure ghost doesnt walk into the counter erm
+                    {
+                        spawnedGhosts[i].Item2 = false;
+                        spawnedGhosts[i].Item1.transform.position = positions[i]; //lock ghost into position
+                        spawnedGhosts[i].Item1.transform.rotation = RotationGoal2;
+                    }
+                } else
+                {
+                    // DIRECTIONAL LOGIC (MANHATTAN DISTANCE w/ SMOOTH ROTATION) - move forward, turn left, move forward, turn right, move forward, snap to seat position
+                    if (distanceDiff.x > 2)
                     {
                         /*
-                        float relativeDistX = Math.Abs(positions[i].x - spawnedGhosts[i].Item1.transform.position.x);
-                        float totalDistX = Math.Abs(door.x - positions[i].x);
-
-                        float smoothAdjustment = (float) (relativeDistX + totalDistX * 0.67) / totalDistX; //formula which modifies the movement speed to have smooth deceleration
+                        float relativeDistX = Math.Abs(pivot1.x - spawnedGhosts[i].Item1.transform.position.x);
+                        float totalDistX = Math.Abs(door.x - pivot1.x);
+                        float smoothAdjustment = (float)(relativeDistX + totalDistX * 0.33) / totalDistX; //formula which modifies the movement speed to have smooth deceleration
                         spawnedGhosts[i].Item1.transform.position += ghostSpeed * smoothAdjustment * Time.deltaTime * Vector3.right;
                         */
                         spawnedGhosts[i].Item1.transform.position += ghostSpeed * Time.deltaTime * Vector3.right;
                     }
-                }
+                    else if (distanceDiff.z > 0f)
+                    {
+                        if (Math.Abs(Quaternion.Angle(spawnedGhosts[i].Item1.transform.rotation, RotationGoal1)) > 5f)
+                        {
+                            /*
+                            Quaternion currRotation = spawnedGhosts[i].Item1.transform.rotation;
+                            float smoothAdjustment = (Math.Abs(Quaternion.Angle(currRotation, RotationGoal1)) + minRotationSpeed) / 90; //formula which modifies the rotation speed to have smooth deceleration
+                            spawnedGhosts[i].Item1.transform.rotation = Quaternion.RotateTowards(currRotation, RotationGoal1, smoothAdjustment * rotationSpeed * Time.deltaTime);
+                            */
+                            spawnedGhosts[i].Item1.transform.rotation = Quaternion.RotateTowards(spawnedGhosts[i].Item1.transform.rotation, RotationGoal1, rotationSpeed * Time.deltaTime);
+                        }
+                        if (Math.Abs(Quaternion.Angle(spawnedGhosts[i].Item1.transform.rotation, RotationGoal1)) < 15f)
+                        {
+                            /*
+                            float relativeDistZ = Math.Abs(positions[i].z - spawnedGhosts[i].Item1.transform.position.z);
+                            float totalDistZ = Math.Abs(door.z - positions[i].z);
 
-                if (Vector3.Distance(spawnedGhosts[i].Item1.transform.position, positions[i]) <= 0.1f || distanceDiff.x < 0f) //0.1f positional tolerance, extra check to make sure ghost doesnt walk into the counter erm
-                {
-                    spawnedGhosts[i].Item2 = false;
-                    spawnedGhosts[i].Item1.transform.position = positions[i]; //lock ghost into position
+                            float smoothAdjustment = (float) (relativeDistZ + totalDistZ * 0.67) / totalDistZ; //formula which modifies the movement speed to have smooth deceleration
+                            spawnedGhosts[i].Item1.transform.position += ghostSpeed * smoothAdjustment * Time.deltaTime * Vector3.forward;
+                            */
+                            spawnedGhosts[i].Item1.transform.position += ghostSpeed * Time.deltaTime * Vector3.forward;
+                        }
+                    }
+                    else if (distanceDiff.x > 0f)
+                    {
+                        if (Math.Abs(Quaternion.Angle(spawnedGhosts[i].Item1.transform.rotation, RotationGoal2)) > 5f)
+                        {
+                            /*
+                            Quaternion currRotation = spawnedGhosts[i].Item1.transform.rotation;
+                            float smoothAdjustment = (Math.Abs(Quaternion.Angle(currRotation, RotationGoal2)) + minRotationSpeed) / 90; //formula which modifies the rotation speed to have smooth deceleration
+                            spawnedGhosts[i].Item1.transform.rotation = Quaternion.RotateTowards(currRotation, RotationGoal2, smoothAdjustment * rotationSpeed * Time.deltaTime);
+                            */
+                            spawnedGhosts[i].Item1.transform.rotation = Quaternion.RotateTowards(spawnedGhosts[i].Item1.transform.rotation, RotationGoal2, rotationSpeed * Time.deltaTime);
+                        }
+                        if (Math.Abs(Quaternion.Angle(spawnedGhosts[i].Item1.transform.rotation, RotationGoal2)) < 15f)
+                        {
+                            /*
+                            float relativeDistX = Math.Abs(positions[i].x - spawnedGhosts[i].Item1.transform.position.x);
+                            float totalDistX = Math.Abs(door.x - positions[i].x);
+
+                            float smoothAdjustment = (float) (relativeDistX + totalDistX * 0.67) / totalDistX; //formula which modifies the movement speed to have smooth deceleration
+                            spawnedGhosts[i].Item1.transform.position += ghostSpeed * smoothAdjustment * Time.deltaTime * Vector3.right;
+                            */
+                            spawnedGhosts[i].Item1.transform.position += ghostSpeed * Time.deltaTime * Vector3.right;
+                        }
+                    }
+
+                    if (Vector3.Distance(spawnedGhosts[i].Item1.transform.position, positions[i]) <= 0.1f || distanceDiff.x < 0f) //0.1f positional tolerance, extra check to make sure ghost doesnt walk into the counter erm
+                    {
+                        spawnedGhosts[i].Item2 = false;
+                        spawnedGhosts[i].Item1.transform.position = positions[i]; //lock ghost into position
+                        spawnedGhosts[i].Item1.transform.rotation = RotationGoal2;
+                    }
                 }
             }
         }
