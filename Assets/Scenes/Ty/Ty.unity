@@ -5836,6 +5836,8 @@ MonoBehaviour:
   door: {x: -6, y: 0.5, z: -7}
   ghostSpeed: 3
   rotationSpeed: 300
+  minRotationSpeed: 90
+  spinSpeed: 125
 --- !u!4 &1443356589
 Transform:
   m_ObjectHideFlags: 0
@@ -9714,20 +9716,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1194871745244336917, guid: 3b09e429754326e4196ed1635846ddcb, type: 3}
       propertyPath: ghosts.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1194871745244336917, guid: 3b09e429754326e4196ed1635846ddcb, type: 3}
       propertyPath: 'ghosts.Array.data[0]'
       value: 
-      objectReference: {fileID: 6711696958532938929, guid: 52adf1d60a08c9a4fa54f0ef30b91f8d, type: 3}
+      objectReference: {fileID: 565673541154834942, guid: b1cbd97c778299143b37ab3cde159311, type: 3}
     - target: {fileID: 1194871745244336917, guid: 3b09e429754326e4196ed1635846ddcb, type: 3}
       propertyPath: 'ghosts.Array.data[1]'
       value: 
-      objectReference: {fileID: 6521650740406013515, guid: c2614e72ea8008c48ac7fd1bed6c244b, type: 3}
+      objectReference: {fileID: 4663965477092494701, guid: 89eab924a3acde1409307fc04e89da01, type: 3}
     - target: {fileID: 1194871745244336917, guid: 3b09e429754326e4196ed1635846ddcb, type: 3}
       propertyPath: 'ghosts.Array.data[2]'
       value: 
-      objectReference: {fileID: 5709744768835600226, guid: a40da57fd46b2274b933cbaef1590dd9, type: 3}
+      objectReference: {fileID: 4663965477092494701, guid: 349a0fc8233db06498bb68ccfbec84df, type: 3}
     - target: {fileID: 1194871745244336917, guid: 3b09e429754326e4196ed1635846ddcb, type: 3}
       propertyPath: 'ghosts.Array.data[3]'
       value: 
