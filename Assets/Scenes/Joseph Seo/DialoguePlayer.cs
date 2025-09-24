@@ -199,5 +199,7 @@ public class DialoguePlayer : MonoBehaviour
         {
             GameManager.Instance.state = State.Main;
         }
+
+        GameManager.Instance.SaveGame();
     }
 }
