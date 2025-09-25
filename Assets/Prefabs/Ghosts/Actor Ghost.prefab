@@ -13,9 +13,29 @@ PrefabInstance:
       value: Actor Ghost
       objectReference: {fileID: 0}
     - target: {fileID: 2082548472098809409, guid: 301bae81fa8d3ca4c89e0f56e789e39a, type: 3}
+      propertyPath: face
+      value: 
+      objectReference: {fileID: 2230729063355077723}
+    - target: {fileID: 2082548472098809409, guid: 301bae81fa8d3ca4c89e0f56e789e39a, type: 3}
       propertyPath: scriptable
       value: 
       objectReference: {fileID: 11400000, guid: b3bf3482029f8474eae71bbfc43649df, type: 2}
+    - target: {fileID: 2082548472098809409, guid: 301bae81fa8d3ca4c89e0f56e789e39a, type: 3}
+      propertyPath: faces.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2082548472098809409, guid: 301bae81fa8d3ca4c89e0f56e789e39a, type: 3}
+      propertyPath: 'faces.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 05b48c49df45b8444b1e6c86149d0659, type: 2}
+    - target: {fileID: 2082548472098809409, guid: 301bae81fa8d3ca4c89e0f56e789e39a, type: 3}
+      propertyPath: 'faces.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 66e731eedf2f51f47a2ccc234e945d36, type: 2}
+    - target: {fileID: 2082548472098809409, guid: 301bae81fa8d3ca4c89e0f56e789e39a, type: 3}
+      propertyPath: 'faces.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 37b781f056371104485e4e1b77a8031e, type: 2}
     - target: {fileID: 5157552967801394276, guid: 301bae81fa8d3ca4c89e0f56e789e39a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -199,7 +219,7 @@ PrefabInstance:
     - target: {fileID: -3699015304206882500, guid: e1ea456c9f4790d44873a524d3aeccc1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 0ec100db14dd349fb80adbddd78268bd, type: 2}
+      objectReference: {fileID: 2100000, guid: 05b48c49df45b8444b1e6c86149d0659, type: 2}
     - target: {fileID: -1206874426333947015, guid: e1ea456c9f4790d44873a524d3aeccc1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -222,6 +242,11 @@ PrefabInstance:
 --- !u!4 &1095668400366601154 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -2491675916492570971, guid: e1ea456c9f4790d44873a524d3aeccc1, type: 3}
+  m_PrefabInstance: {fileID: 5935552368755653991}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &2230729063355077723 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -3699015304206882500, guid: e1ea456c9f4790d44873a524d3aeccc1, type: 3}
   m_PrefabInstance: {fileID: 5935552368755653991}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &3448291582616458704 stripped

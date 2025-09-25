@@ -10,7 +10,9 @@ title: WeebSuccess
 tags:
 position: -173,132
 ---
+<<emotionChange Anime>>
 Weeb Ghost: Sweet! This is just what I need to fuel my gamer focus!
+<<emotionChange Normal>>
 <<startStory WeebStory>>
 ===
 
@@ -18,7 +20,9 @@ title: WeebFailure
 tags:
 position: -112,-180
 ---
+<<emotionChange LockedIn>>
 Weeb Ghost: <shaky> Eugh, gross! </shaky> Barista diff for real, bro, just ff already...
+<<emotionChange Normal>>
 <<setCam "Main Camera">>
 ===
 
@@ -26,10 +30,14 @@ title: WeebStory1
 tags:
 position: 169,38
 ---
+<<emotionChange None Sparkles>>
 Weeb Ghost: Y'know, you're actually speaking to a Grandmaster player.
+<<emotionChange None>>
 Weeb Ghost: <italic> What? </italic>
 Weeb Ghost: You don't know what that means?
+<<emotionChange LockedIn>>
 Weeb Ghost: Heh... normies... you wouldn't understand.
+<<emotionChange Normal>>
 Weeb Ghost: I'm going to be a huge pro gamer someday and everyone will know my name.
 Weeb Ghost: If you ever want to play sometime, we can duo queue. I'll carry you, don't worry, though you better not bring down my rank.
 Weeb Ghost: I need to hit Challenger, I'm so close to it.
@@ -45,12 +53,16 @@ Weeb Ghost: Why do I want to be Challenger?
 Weeb Ghost: Just... it'd be nice to have his attention, for once. My dad that is.
 Weeb Ghost: I wonder if I'll ever see him around in the afterlife.
 Weeb Ghost: I mean, I'm fine even if he doesn't!
+<<emotionChange LockedIn>>
 Weeb Ghost: I have my waifu <wiggle> Seraphine </wiggle> to keep me company.
 <<reset>>
+<<emotionChange Normal>>
 Weeb Ghost: Anyways, once I hit Challenger, he'll have to pay attention to me! I'll be famous. I'll be everywhere, on TV and everything. Just watch!
 Weeb Ghost: Well, loads of reasons, obviously! I'll be super famous so my dad will see me on TV, I'll make loads of money so my dad won't have to work, and I'll get loads of ladies so my dad won't think I'm lonely!
 Weeb Ghost: And, well... he was proud of me when I hit silver, wasn't he? And silver's nothing.
+<<emotionChange LockedIn>>
 Weeb Ghost: Low elo.
+<<emotionChange Normal>>
 Weeb Ghost: Just imagine how much more proud he'll be when I hit the highest tier.
 <<setCam "Main Camera">>
 ===
@@ -68,7 +80,9 @@ Weeb Ghost: I...I want to make the most of my time with my dad.
 Weeb Ghost: I think I might be leaving soon. Just a gut feeling, I guess.
 Weeb Ghost: I thought I was here to hit Challenger, but honestly?
 Weeb Ghost: Hall of Heroes doesn't even seem that important anymore, now that my dad's here with me.
+<<emotionChange LockedIn>>
 Weeb Ghost: So... you know how it is. GG go next.
+<<emotionChange Normal>>
 Weeb Ghost: I hope you find what you're looking for, whatever it is.
 <<setCam "Main Camera">>
 ===

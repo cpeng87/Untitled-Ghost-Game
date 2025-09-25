@@ -34,7 +34,7 @@ public class ComicPlayer : MonoBehaviour
             }
         }
 
-        AudioManager.Instance.PlaySong("Comic");
+        AudioManager.Instance.PlaySong("Once Upon a Time You Died");
 
         AdvanceComic();
     }

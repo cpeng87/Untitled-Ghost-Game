@@ -22,10 +22,6 @@ public class DialoguePlayer : MonoBehaviour
     private int storyNum;
     private int seatNum = -1;
 
-    private bool isSuccess = false;
-    private bool isDeleting = false;
-    private bool isIncrement = false;
-
     private DialogueState state = DialogueState.None;
 
     private void Awake()
@@ -49,7 +45,7 @@ public class DialoguePlayer : MonoBehaviour
         dialogueRunner.AddCommandHandler("end", EndDialogue);
         dialogueRunner.AddCommandHandler("reset", Reset);
         dialogueRunner.AddCommandHandler<bool>("reaperPitch", ReaperPitch);
-        dialogueRunner.AddCommandHandler<string>("changeFace", ChangeFace);
+        dialogueRunner.AddCommandHandler("emotionChange", (string[] args) => EmotionChange(args));
 
         // dialogueRunner.onDialogueComplete += OnDialogueComplete;
         dialogueRunner.onDialogueComplete.AddListener(OnDialogueComplete);
@@ -68,11 +64,18 @@ public class DialoguePlayer : MonoBehaviour
         return DialoguePlayer.Instance.currentOrder;
     }
 
-    public void ChangeFace(string faceName)
+    public void EmotionChange(params string[] args)
     {
         int seatNum = GameManager.Instance.orderManager.GetCurrActiveOrderSeatNum();
         GameObject ghost = GhostSpawningManager.Instance.GetSpawnedGhost(seatNum);
-        ghost.GetComponent<GhostObj>().ChangeFace(faceName);
+        if (args.Length > 1)
+        {
+            ghost.GetComponent<GhostObj>().EmotionChange(args[0], args[1]);
+        }
+        else
+        {
+            ghost.GetComponent<GhostObj>().EmotionChange(args[0]);
+        }
     }
 
     public void Reset() {

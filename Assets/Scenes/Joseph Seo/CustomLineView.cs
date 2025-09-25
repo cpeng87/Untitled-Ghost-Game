@@ -1,10 +1,18 @@
+/*
+Yarn Spinner is licensed to you under the terms found in the file LICENSE.md.
+*/
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+// #if USE_TMP
 using TMPro;
+// #else
+// using TextMeshProUGUI = Yarn.Unity.TMPShim;
+// #endif
 
 namespace Yarn.Unity
 {
@@ -12,8 +20,10 @@ namespace Yarn.Unity
     /// A Dialogue View that presents lines of dialogue, using Unity UI
     /// elements.
     /// </summary>
-    public class CustomLineView : DialogueViewBase
+    public class LineView : DialogueViewBase
     {
+        public GameObject indicator;
+
         /// <summary>
         /// The canvas group that contains the UI elements used by this Line
         /// View.
@@ -151,8 +161,6 @@ namespace Yarn.Unity
         /// </remarks>
         /// <seealso cref="useTypewriterEffect"/>
         public UnityEngine.Events.UnityEvent onPauseEnded;
-
-        public UnityEngine.Events.UnityEvent onDialogueAdvanced;
 
         /// <summary>
         /// The number of characters per second that should appear during a
@@ -337,10 +345,12 @@ namespace Yarn.Unity
                 {
                     continueButton.SetActive(false);
                 }
+                if (indicator != null)
+                {
+                    indicator.SetActive(false);
+                }
 
                 Markup.MarkupParseResult text = dialogueLine.TextWithoutCharacterName;
-                // Final Dialogue Advanced Finished
-                
                 if (characterNameContainer != null && characterNameText != null)
                 {
                     // we are set up to show a character name, but there isn't one
@@ -395,8 +405,6 @@ namespace Yarn.Unity
                 // finish.
                 if (useFadeEffect)
                 {
-                    canvasGroup.alpha = 0;
-                    
                     yield return StartCoroutine(Effects.FadeAlpha(canvasGroup, 0, 1, fadeInTime, currentStopToken));
                     if (currentStopToken.WasInterrupted)
                     {
@@ -434,9 +442,7 @@ namespace Yarn.Unity
                         yield break;
                     }
                 }
-
             }
-            
             currentLine = dialogueLine;
 
             // Run any presentations as a single coroutine. If this is stopped,
@@ -448,6 +454,11 @@ namespace Yarn.Unity
 
             // All of our text should now be visible.
             lineText.maxVisibleCharacters = int.MaxValue;
+
+            if (indicator != null)
+            {
+                indicator.SetActive(true);
+            }
 
             // Our view should at be at full opacity.
             canvasGroup.alpha = 1f;
@@ -492,7 +503,6 @@ namespace Yarn.Unity
             {
                 return;
             }
-            onDialogueAdvanced?.Invoke();
 
             // we may want to change this later so the interrupted
             // animation coroutine is what actually interrupts

@@ -10,8 +10,6 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager Instance { get; private set; }
     private DialoguePlayer _dialoguePlayer;
     private Dictionary<string, string> storyNameToNextDialogue;
-
-    private List<string> currDialogue = new List<string>();   //collection of dialogue lines for the current dialogue
     private int currIndex; // index of current dialogue
 
     // singleton

@@ -93,6 +93,10 @@ public class TongsController : MinigameCompletion
             yield return null;
         }
         CheckCompletion();
+        leftHit = rightHit = false;
+        leftHitObj = rightHitObj = null;
+        leftTong.enabled = true;
+        rightTong.enabled = true;
         isGrabbing = false;
     }
 
@@ -121,12 +125,12 @@ public class TongsController : MinigameCompletion
             StartCoroutine(Grab());
         }
 
-        // Reset variables if failed to grab donut
-        if (transform.position == originalPos)
-        {
-            leftHit = rightHit = false;
-            leftHitObj = rightHitObj = null;
-        }
+        // // Reset variables if failed to grab donut
+        // if (transform.position == originalPos)
+        // {
+        //     leftHit = rightHit = false;
+        //     leftHitObj = rightHitObj = null;
+        // }
     }
 
     private void CheckCompletion()
