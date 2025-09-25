@@ -9837,7 +9837,7 @@ PrefabInstance:
     - target: {fileID: 1194871745244336917, guid: 3b09e429754326e4196ed1635846ddcb, type: 3}
       propertyPath: 'ghosts.Array.data[4]'
       value: 
-      objectReference: {fileID: 4663965477092494701, guid: 349a0fc8233db06498bb68ccfbec84df, type: 3}
+      objectReference: {fileID: 4663965477092494701, guid: 89eab924a3acde1409307fc04e89da01, type: 3}
     - target: {fileID: 1194871745244336917, guid: 3b09e429754326e4196ed1635846ddcb, type: 3}
       propertyPath: 'ghosts.Array.data[5]'
       value: 

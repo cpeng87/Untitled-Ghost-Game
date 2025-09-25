@@ -2,7 +2,9 @@ title: WizardOrder
 tags:
 position: -54,-23
 ---
+<<emotionChange None Sparkles>>
 Wizard Ghost: Dear mortal, please fetch me an {GetOrder()} with arcane energy befitting a powerful sorcerer! (That would be me, of course.)
+<<emotionChange None>>
 <<setCam "Main Camera">>
 ===
 
@@ -18,7 +20,9 @@ title: WizardFailure
 tags:
 position: -112,-180
 ---
+<<emotionChange Magic>>
 Wizard Ghost: Gah! This reeks of a curse! Are you trying to damper my powers, dear mortal?! You must be more careful with your tonics!
+<<emotionChange Normal>>
 <<setCam "Main Camera">>
 ===
 
@@ -27,14 +31,20 @@ tags:
 position: 169,38
 ---
 Wizard Ghost: Ah, you want to know about me, dear mortal? Ohoho, I'm glad you've asked!
+<<emotionChange None Sparkles>>
 Wizard Ghost: You may call me <wiggle> Emrys, master of the arcane arts! </wiggle>
+<<emotionChange None>>
 <<reset>>
 Wizard Ghost: Say, have you ever thought about doing an apprenticeship in sorcery? I can show you the world in its purest form!
+<<emotionChange None Sparkles>>
 Wizard Ghost: Spectacle!
 Wizard Ghost: Discovery!
 Wizard Ghost: Third adjective!
+<<emotionChange None>>
 Wizard Ghost: Yes, yes, I see it now - The look in your eyes!
+<<emotionChange Magic>>
 Wizard Ghost: You want to be my pupil, no? Ah, wait - You are skeptical of who I say I am!
+<<emotionChange Normal>>
 Wizard Ghost: Yes, yes, a fair choice to be wary. But, I promise you, dear mortal, that I am truthful about my knowledge of this world.
 Wizard Ghost: In fact, when I return to this cafe, I shall show you some of my teachings!
 Wizard Ghost: That will prove my status, and will empower you to unlock your true potential!
@@ -48,18 +58,24 @@ position: 169,38
 ---
 Wizard Ghost: Hello once again, dear mortal! It is I, Emrys, yet again!
 Wizard Ghost: Are you ready to begin your first lesson?
+<<emotionChange None Sparkles>>
 Wizard Ghost: Today, I shall teach you... <wiggle> spellcasting! </wiggle>
 <<reset>>
+<<emotionChange None>>
 Wizard Ghost: We shall start with a basic levitation spell. Try to levitate the dish you just served me!
 Wizard Ghost: Close your eyes, and imagine it floating slowly upwards. As if it is weightless, similar to you and I...
+<<emotionChange Magic>>
 Wizard Ghost: <wiggle> Aha! </wiggle>
 <<reset>>
+<<emotionChange Normal>>
 Wizard Ghost: You've done- Huh?
 Wizard Ghost: What do you mean, you "just picked it up"?
 Wizard Ghost: Nonsense, mortal, be proud of your magical abilities! You are not my apprentice for nothing!
 Wizard Ghost: No need to fear, though, as the next lesson shall be much more challenging! <wiggle> Tis was a mere warmup! </wiggle>
 <<reset>>
+<<emotionChange None Sparkles>>
 Wizard Ghost: I shall teach you something that has never been seen before, and is sure to change your entire existence!
+<<emotionChange None>>
 Wizard Ghost: Until then!
 <<setCam "Main Camera">>
 ===
@@ -69,23 +85,30 @@ tags:
 position: 169,38
 ---
 Wizard Ghost: My dear mortal, let us begin most important lesson of all!
+<<emotionChange None Sparkles>>
 Wizard Ghost: Today, I will be introducing you to... necromancy!
+<<emotionChange Sad>>
 Wizard Ghost: To be completely honest with you, er... I have never successfully performed the necromancy ritual.
+<<emotionChange Normal>>
 Wizard Ghost: But I know the process, and will teach it to you! First, think of your past life, and one thing you truly loved about it.
 Wizard Ghost: Then, think of something you truly despised about it - <wiggle>I can think of a number of ideas for this one.</wiggle>
 <<reset>>
+<<emotionChange Magic>>
 Wizard Ghost: Then, with all the honesty in your heart, say the words <italic>volo vivere</italic>.
 <<reset>>
+<<emotionChange Normal>>
 Wizard Ghost: You shall feel a change in your spirit if you have performed it correctly.
 Wizard Ghost: ...
 Wizard Ghost: Ah. It seems that the ritual has failed yet again.
 Wizard Ghost: Well, no matter, my dear apprentice - Even a wizard such as I cannot truly understand why the ritual fails.
+<<emotionChange Sad>>
 Wizard Ghost: But I do have my suspicions - For myself, at least.
 Wizard Ghost: It becomes... incredibly difficult for me to find reasons I loved my past life each time I attempt the ritual.
 Wizard Ghost: And when I do find the reasons, they appear incredibly... trivial, compared to what I spent most of my life doing.
 Wizard Ghost: I was not a wizard in my past life, but with each passing day, I wished that I was.
 Wizard Ghost: I yearned for control over my own destiny that I could never have - I only found it in my silly dreams of wizardry.
 Wizard Ghost: But alas, not everyone's life is meant to be what they desire. Or at least, that is what I have assured myself. Ah...
+<<emotionChange Normal>>
 <<setCam "Main Camera">>
 ===
 
@@ -95,18 +118,25 @@ position: 169,38
 ---
 Wizard Ghost: Hello, dear mortal!
 Wizard Ghost: It is I, Emrys - Unfortunately, it seems I have run out of lessons to teach you, and thus, we have reached the end of your apprenticeship.
+<<emotionChange None Flowers>>
 Wizard Ghost: I have known you for a short time, but I truly believe you are the most gifted apprentice I could ever have taken on.
 Wizard Ghost: And truly, I am thankful that I have finally met someone willing to place their trust in me, and my sorcery - Thank you.
-Wizard Ghost: I hope, above all else, that you are finding fulfillment, brewing coffee for us ghosts.
+Wizard Ghost: I hope, above all else, that you are finding fulfillment, brewing tea and baking pastries for us ghosts.
+<<emotionChange None>>
 Wizard Ghost: Is that what you desired in life, too? Or is it a new journey? Ah, no matter - I trust you to continue what makes you happy.
 Wizard Ghost: As for myself, well... Ever since our last session, I have been deep in thought.
 Wizard Ghost: And now, I have decided to swear off necromancy. Our lesson made me realize that perhaps, I have been holding too tightly onto regrets from a life bygone, despite becoming what I so desperately wanted to be back then.
+<<emotionChange None Sparkles>>
 Wizard Ghost: I, Emrys Alistair Artemis Evander - <wiggle>perhaps I should shorten some of my names</wiggle> - am a wizard, and I am in control over my own destiny!
 <<reset>>
 Wizard Ghost: Now, I shall continue my journey to discover all of this realm's secrets, and share the joys of magic with every soul I can find!
+<<emotionChange None>>
 Wizard Ghost: And perhaps, once I learn enough, I can return to this humble cafe, and teach you all I know once again, dear mortal.
+<<emotionChange Sad>>
 Wizard Ghost: I admit, I will miss our talks of sorcery over coffee for as long as we are separated.
+<<emotionChange Normal Sparkles>>
 Wizard Ghost: But this is not goodbye - In fact, this is only the start of our journey!
 Wizard Ghost: So, until next time, my dear mortal - Take care of yourself, and remember that the great Emrys will always be watching over you.
+<<emotionChange None>>
 <<setCam "Main Camera">>
 ===
