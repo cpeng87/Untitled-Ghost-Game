@@ -320,6 +320,17 @@ public class GameManager : MonoBehaviour
         ArcEvent.TriggerArcChanged();
     }
 
+    public void SaveGame()
+    {
+        SaveData saveData = new SaveData()
+        {
+            state = state,
+            arc = arc,
+            ghostNameToStoryIndex = ghostManager.ghostNameToStoryIndex
+        };
+        SaveManager.SaveGame(saveData);
+    }
+
 
     private IEnumerator LoadEndScene()
     {
