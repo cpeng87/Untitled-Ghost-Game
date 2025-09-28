@@ -18,3 +18,4 @@ MonoBehaviour:
   recipesOrdered:
   - {fileID: 11400000, guid: 105e795d82953114f959071cd672cfeb, type: 2}
   arc: 1
+  walking: 2

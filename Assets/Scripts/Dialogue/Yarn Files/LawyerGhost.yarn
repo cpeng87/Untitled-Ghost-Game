@@ -18,7 +18,9 @@ title: LawyerFailure
 tags:
 position: -112,-180
 ---
+<<emotionChange Sad>>
 Lawyer Ghost: This case has been hell on earth - or I guess, hell in the afterlife - and this didn't really help me as much as I thought it would.
+<<emotionChange Normal>>
 Lawyer Ghost: Thanks for trying, but I've gotta get back to solving this case... again...
 <<setCam "Main Camera">>
 ===
@@ -31,9 +33,13 @@ Lawyer Ghost: Being a lawyer down here is fascinating.
 Lawyer Ghost: Every case down here, such as theft or divorce, has a nicer and more clearcut set of rules than it was when I was alive.
 Lawyer Ghost: Hey, I've been meaning to ask you a couple questions. No, I'm not trying to interrogate you about a murder - you would know if I was, and nobody really gets murdered here.
 Lawyer Ghost: Have you heard anything about... a dog?
+<<emotionChange Sad>>
 Lawyer Ghost: Things are kind of hazy, but I remember a storm... did I die in a flood? A hurricane?
+<<emotionChange Normal>>
 Lawyer Ghost: But I don't really remember the details about my passing, and I just really hope he's alright. I really hope I didn't order a hot chocolate back then - my dog loves to try and steal my drinks.
+<<emotionChange Sad>>
 Lawyer Ghost: No, it couldn't be a hurricane - I would've known about it a week in advance and left... right?
+<<emotionChange Normal>>
 Lawyer Ghost: I... I need to think more about this. Thank you for your time.
 <<setCam "Main Camera">>
 ===
@@ -44,16 +50,19 @@ position: 169,38
 ---
 Lawyer Ghost: Is there really a point to being a lawyer here?
 Lawyer Ghost: I've seen bankers switch to partying and partygoers switch to business... maybe I can just go hide in the corner where nobody will even dare look at me.
+<<emotionChange Sad>>
 Lawyer Ghost: So many ghosts were wronged by society and the court, and I'm probably just their living embodiment of regret... but I digress.
 Lawyer Ghost: ...You know you're the only ghost that looks at me in the eye? The rest of them think I'm going to persecute them in court or interrogate them for a crime or even... take a bribe??
 Lawyer Ghost: I've been thinking a lot about my previous life. I'm pretty sure I did die in a hurricane... I was probably so tired and determined to finish the case that I ignored all warnings and stayed.
+<<emotionChange None Scribbles>>
 Lawyer Ghost: Maybe if I was more efficient at my casework, I could have heeded the warning before?
-Lawyer Ghost: Well, at least they still have some sense of value and love.
 Lawyer Ghost: The only thing I have left is my life's work, and honestly, I should be content with just that.
+<<emotionChange None None>>
 Lawyer Ghost: But my poor, poor dog... He was just a little pup who wanted love.
 Lawyer Ghost: I loved him, I did... I just couldn't love or take care of myself.
 Lawyer Ghost: Others didn't see me for me and saw the reflection of society, so I poured my self-worth into my work... but at what cost?
 Lawyer Ghost: I need to find my dog.
+<<emotionChange Normal>>
 Lawyer Ghost: Please tell me if you find him. Thank you for your time.
 <<setCam "Main Camera">>
 ===
@@ -63,8 +72,10 @@ tags:
 position: 169,38
 ---
 Lawyer Ghost: I finally found my boy... or Dog Ghost, as he goes by now.
+<<emotionChange Sad>>
 Lawyer Ghost: He told me that he just waited for me to come back from the tree falling on me, and when he realized I was gone... he just sat by my body and curled up next to me until he passed, too.
 Lawyer Ghost: I... don't think I can ever forgive myself for leaving him like that.
+<<emotionChange Normal>>
 Lawyer Ghost: But you know what?
 Lawyer Ghost: In all of my self-deprecation and prejudice, I found that it's okay and almost necessary to rely on others.
 Lawyer Ghost: My mistakes are a part of my journey, and  I need to love myself first before I can love others.
@@ -81,10 +92,14 @@ position: 169,38
 Lawyer Ghost: Hello again, and thanks for believing in me.
 Lawyer Ghost: Even though I've been unsure of a lot of things since I got here, I know I want to be a lawyer.
 Lawyer Ghost: I have all the time in the world to solve cases here, so I don't need to push myself the way I did back then.
+<<emotionChange None Sparkles>>
 Lawyer Ghost: This is a new world, where justice is untouched by corruption - all I have to do is ensure that ghosts can get the justice they deserve.
 Lawyer Ghost: Dog Ghost can be my partner attorney, the ace up my sleeve. With his distinct sense of smell and my deduction skills, we'll be unstoppable!
 Lawyer Ghost: We'll restore justice to humanity the way the creation of the law intended to.
+<<emotionChange None None>>
 Lawyer Ghost: I truly can't wait - thanks for listening to me, even if I just blabbed at you like you were my therapist. It means a lot to me.
+<<emotionChange None Flowers>>
 Lawyer Ghost: Now, go serve your other customers - I'm sure you'll help them as much as you've helped me.
+<<emotionChange None None>>
 <<setCam "Main Camera">>
 ===

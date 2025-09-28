@@ -10,7 +10,9 @@ title: SoldierSuccess
 tags:
 position: -173,132
 ---
+<<emotionChange Happy>>
 Soldier Ghost: Thanks for the this. I feel like I'm starting to remember things...
+<<emotionChange Normal>>
 <<startStory SoldierStory>>
 ===
 
@@ -18,7 +20,9 @@ title: SoldierFailure
 tags:
 position: -112,-180
 ---
+<<emotionChange None Scribbles>>
 Soldier Ghost: <shaky>Argh...</shaky> My headache is flaring up again... I should go...
+<<emotionChange None>>
 <<reset>>
 <<setCam "Main Camera">>
 ===
@@ -28,7 +32,9 @@ tags:
 position: 169,38
 ---
 Soldier Ghost: Excuse me... But do you know where I am...?
+<<emotionChange None Scribbles>>
 Soldier Ghost: I... I can't seem to remember who or where I am... I've been having this terrible headache ever since... Ever since what...?
+<<emotionChange Normal>>
 Soldier Ghost: Anyways, thank you for the drink... It's helping to soothe my headache, even if it's only a little.
 Soldier Ghost: My name is... What was it...?
 Soldier Ghost: It looks like I'm dressed like a soldier so... I guess you can call me Soldier Ghost.
@@ -39,20 +45,26 @@ title: SoldierStory2
 tags:
 position: 169,38
 ---
+<<emotionChange War>>
 Soldier Ghost: The war... <shaky>The war...!</shaky>
 <<reset>>
 Soldier Ghost: How... how did I forget about the war? How is the war right now?
 Soldier Ghost: Are... Are we winning...?
+<<emotionChange Normal>>
 Soldier Ghost: You... You don't know about the war...?
 Soldier Ghost: How is that possible... This is one of the largest wars we've had since the Continental War!
+<<emotionChange None Scribbles>>
 Soldier Ghost: A war that I... barely made a difference in... I was hoping to have changed this time but... I guess I'm just not good enough...
 Soldier Ghost: Like look at me. I'm back here, forced to recover just because of a headache that I got from... What did I get it from again...?
+<<emotionChange None>>
 Soldier Ghost: Ah... That's right...
 Soldier Ghost: Doctor Ghost was telling me about a soldier who saved their life when they were only a child...
 Soldier Ghost: I wish I could be like that soldier... At this rate, the war will be over by the time I recover.
 Soldier Ghost: I... I need to hurry up and get better faster.
+<<emotionChange None Scribbles>>
 Soldier Ghost: If it weren't for this headache then maybe I could go back to the front lines.
 Soldier Ghost: I... Didn't have the greatest childhood... But if I can leave something behind... some kind of legacy or maybe some victory...
+<<emotionChange Normal>>
 Soldier Ghost: Maybe my life will have worth living.
 <<setCam "Main Camera">>
 ===
@@ -63,7 +75,9 @@ position: 169,38
 ---
 Soldier Ghost: Oh, I found a dog tag in my pocket the other day. The name faded out but it felt... familiar to me.
 Soldier Ghost: When I look at this dog tag, I get vague memories of the battlefield...
+<<emotionChange War>>
 Soldier Ghost: I remember scenes of gunfire and explosions everywhere... I could faintly remember the smell of steel and blood. I was on foot but... 
+<<emotionChange Normal>>
 Soldier Ghost: Why does that seem so off...
 Soldier Ghost: I saw... an enemy pointing their gun at a child, but their face is eluding me right now...
 Soldier Ghost: All I remember is tackling that enemy and pinning them down to let that kid escape...
@@ -79,10 +93,12 @@ position: 169,38
 Soldier Ghost: I-I remember now...
 Soldier Ghost: I-I was a pilot in the war but... I was shot down before I could do anything significant...That's why I was on the ground...
 Soldier Ghost: But... that child I saved...
+<<emotionChange Happy>>
 Soldier Ghost: Apparently it was Doctor Ghost!
 Soldier Ghost: They recognized my dog tag when I showed it to them.
 Soldier Ghost: I'm... so glad they got away safely... Doctor Ghost wanted to thank me for saving him but... I just did what anyone else would've done. 
 Soldier Ghost: Thank you for giving me these drinks, they helped me remember something important.
 Soldier Ghost: Something I can proudly take with me to the next life.
+<<emotionChange Normal>>
 <<setCam "Main Camera">>
 ===

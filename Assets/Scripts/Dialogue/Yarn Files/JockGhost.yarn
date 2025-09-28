@@ -11,8 +11,11 @@ title: JockSuccess
 tags:
 position: -173,132
 ---
+<<emotionChange None Sparkles>>
 Jock Ghost: Ahhhh, that hits the spot! Speaking of spots, I'd love to spot you at the gym.
+<<emotionChange Confident>>
 Jock Ghost: Can't wait to mix my protein powder into this and get my PR thanks to you!
+<<emotionChange Normal>>
 <<startStory JockStory>>
 ===
 
@@ -22,8 +25,10 @@ position: -112,-180
 ---
 Jock Ghost: <italic> Dude. </italic> This is TOTALLY gonna throw off my PR.
 <<reset>>
+<<emotionChange Sad>>
 Jock Ghost: It's not even worth adding my protein powder.
 Jock Ghost: Just know that when I train and condition to failure today, I'm gonna think about this awful dish...
+<<emotionChange Normal>>
 <<setCam "Main Camera">>
 ===
 
@@ -33,11 +38,14 @@ position: 169,38
 ---
 Jock Ghost: You wanna... hear about my love for the gym?
 Jock Ghost: No?
+<<emotionChange Sad>>
 Jock Ghost: Yeah, I don't really have too much else to me.
 Jock Ghost: I mean, there's my job at Tycoon Ghost's construction site, but like... it's not that interesting.
+<<emotionChange Normal Sparkles>>
 Jock Ghost: You know what else is interesting? <wiggle> I got my first ghost bicep vein in the afterlife! </wiggle>
 <<reset>>
 Jock Ghost: Isn't that sick?
+<<emotionChange None None>>
 <<setCam "Main Camera">>
 ===
 
@@ -46,13 +54,17 @@ tags:
 position: 169,38
 ---
 Jock Ghost: Ah, yeah. I used to be the big shot of town.
+<<emotionChange None Sparkles>>
 Jock Ghost: The biggest macho man that ever machoed.
 Jock Ghost: Even got into the Spirit football team.
+<<emotionChange Sad>>
 Jock Ghost: But, you know, there was somehow someone even more macho-ier than me. 
 Jock Ghost: Somehow more jacked, as if they got a headstart.
 Jock Ghost: It's always been that way for me - always someone with the stronger PR, the bigger bulk, the nicer lats... man, I wish I had my lats in the afterlife.
+<<emotionChange Normal Sparkles>>
 Jock Ghost: Maybe I should try lat-tes to try and get them back?
 Jock Ghost: Get it?...
+<<emotionChange Sad>>
 Jock Ghost: Yeah, I never had a shot at being the best comedian.
 <<setCam "Main Camera">>
 ===
@@ -61,13 +73,17 @@ title: JockStory3
 tags:
 position: 169,38
 ---
-Jock Ghost: This almost reminds me of the conversation I had with Musician Ghost earlier.
+Jock Ghost: I had a conversation with Musician Ghost earlier.
 Jock Ghost: Something about how we both peaked in our respective grindsets to success back then.
+<<emotionChange Sad Scribbles>>
 Jock Ghost: But was that really peaking for me, if I couldn't even beat anyone?
+<<emotionChange Normal None>>
 Jock Ghost: That's what I told him, and he looked at me funny, saying his Platinum records were all he needed to be content with his success and highlight his talent.
 Jock Ghost: Is my physique really that... good?
+<<emotionChange Sad>>
 Jock Ghost: It always seems to dull in the reflection.
 Jock Ghost: Maybe I'm just looking at the mirror wrong.
+<<emotionChange Normal>>
 <<setCam "Main Camera">>
 ===
 
@@ -78,12 +94,15 @@ position: 169,38
 Jock Ghost: Do you know what glute ham raises are?
 Jock Ghost: Strength training versus high intensity versus crossfit? Skullcrushers?
 Jock Ghost: No, skullcrushers isn't how I died... but you know what?
+<<emotionChange None Sparkles>>
 Jock Ghost: I have so much knowledge about the gym that others don't.
 Jock Ghost: That... is a knowledge base that few possess, but I have it.
+<<emotionChange Confident>>
 Jock Ghost: <italic> I worked for it. </italic>
 <<reset>>
 Jock Ghost: And... I deserve to revel in my hard-earned talents.
 Jock Ghost: I deserve to be confident... maybe as confident as Musician ghost is with his instruments.
+<<emotionChange Normal None>>
 Jock Ghost: Just... let me know when you need a gym bro, yeah? I'd love to share my workouts with you and all of the afterlife.
 <<setCam "Main Camera">>
 ===

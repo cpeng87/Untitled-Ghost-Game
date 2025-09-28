@@ -10,7 +10,9 @@ title: LuckySuccess
 tags:
 position: -173,132
 ---
+<<emotionChange Happy Flowers>>
 Lucky Ghost: O-oh, thank you!
+<<emotionChange Normal None>>
 <<startStory LuckyStory>>
 ===
 
@@ -18,7 +20,9 @@ title: LuckyFailure
 tags:
 position: -112,-180
 ---
+<<emotionChange Cry>>
 Lucky Ghost: W-what is this? I-I've never seen anything like this before...
+<<emotionChange Normal>>
 <<setCam "Main Camera">>
 ===
 
@@ -31,7 +35,9 @@ Lucky Ghost: I mean... I've gotten free coffee from  a lot of ghosts... since th
 Lucky Ghost: And although some restaurants forget my order... they always give me a free item or pay for my meal...
 Lucky Ghost: B-but I've never won the lottery or anything...
 Lucky Ghost: I-I do appreciate the free stuff... but since it's random... I guess I'm not particularly proud of it...
+<<emotionChange Cry>>
 Lucky Ghost: P-people keep saying I just got lucky in life... but I tried so hard...!!
+<<emotionChange Normal>>
 Lucky Ghost: But t-they just brush me off and say it's all because I'm just lucky...
 <<setCam "Main Camera">>
 ===
@@ -42,7 +48,9 @@ position: 169,38
 ---
 Lucky Ghost: Hello again!
 Lucky Ghost: I-I guess I just wanted to say... it's just really nice to have someone listen... instead of invalidating all my problems...
+<<emotionChange Happy Flowers>>
 Lucky Ghost: My luck may have its ups and downs, but I do think finding this cafe was lucky...!
 Lucky Ghost: Thank you for everything...!
+<<emotionChange Normal>>
 <<setCam "Main Camera">>
 ===

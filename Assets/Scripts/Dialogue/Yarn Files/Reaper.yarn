@@ -396,7 +396,7 @@ Reaper: Now, in your eyes, who do you think you've impacted the most by your pre
                         Reaper: Then there you go. Is that not enough for you, to have been there for your family?
                         <<emotionChange Normal>>
                         Reaper: In my eyes, to have been what someone else considers family is a great honor. And, you can see for yourself how they grieve your absence.
-                        <<emotionChange None Flowers>>
+                        <<emotionChange Happy Flowers>>
                         Reaper: Being so important to another person - is that not reason enough to say you've had an impact?
                         <<emotionChange Normal>>
             -> Sure, they care about me, but that doesn't mean I changed their lives.

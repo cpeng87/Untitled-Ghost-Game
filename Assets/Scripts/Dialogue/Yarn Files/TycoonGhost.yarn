@@ -2,7 +2,9 @@ title: TycoonOrder
 tags:
 position: -54,-23
 ---
+<<emotionChange Disapproval>>
 Tycoon Ghost: One {GetOrder()}. Impress me, and I may sponsor your pitiful business.
+<<emotionChange Normal>>
 <<setCam "Main Camera">>
 ===
 
@@ -18,7 +20,9 @@ title: TycoonFailure
 tags:
 position: -112,-180
 ---
+<<emotionChange Disapproval>>
 Tycoon Ghost: You use my money and generosity for garbage like this? <shaky> You're fired! </shaky>
+<<emotionChange Normal>>
 <<reset>>
 <<setCam "Main Camera">>
 ===
@@ -32,8 +36,10 @@ Tycoon Ghost: I own Ghost Groceries, and Ghost Real Estate, and Ghost Gambling, 
 Tycoon Ghost: Even Ghost Recipes, which my records show you've been buying more from than most ghosts do in a deathtime. 
 Tycoon Ghost: Maybe I'll even give you a discount, for being a loyal customer. 5% off purchases of $500 or more, how's that sound?
 Tycoon Ghost: I do own 30% of your cafe's stock, so it wouldn't benefit either of us if your little business tanked, yes? Oh, you didn't know? Well, your little business has had quite the meteoric rise in the Ghost Stock Market! 
+<<emotionChange None Sparkles>>
 Tycoon Ghost: Also owned by me, of course. 
 Tycoon Ghost: And your only competition are my businesses. 
+<<emotionChange None None>>
 Tycoon Ghost: But still, you should be proud! You're outdoing Ghost Caffeine by 12%.
 <<setCam "Main Camera">>
 ===
@@ -42,19 +48,28 @@ title: TycoonStory2
 tags:
 position: 169,38
 ---
-Tycoon Ghost: Well, I came to see how my little pet project was doing again, aren't you honored? It is a good businessman's duty to... take care of their ventures. 
+Tycoon Ghost: Well, I came to see how my little pet project was doing again, aren't you honored? It is a good businessman's duty to... take care of their ventures.
+<<emotionChange Normal Sparkles>>
 Tycoon Ghost: What am I attached to? Money, of course. I need to be rich!
+<<emotionChange Thinking None>>
 Tycoon Ghost: Much richer than I am now.
+<<emotionChange Normal None>>
 Tycoon Ghost: Then, I'll be satisfied and my soul will be able to rest. I'm sure of it - what else could I possibly want in the world than money? 
 Tycoon Ghost: Money is power, money is happiness, money is fulfillment. And make no mistake, I am not lacking in any.
 Tycoon Ghost: ...What are you earning so much money for ...what other reason than to have it! 
 Tycoon Ghost: Money makes the world go round, you can't live without it!
+<<emotionChange Thinking>>
 Tycoon Ghost: ...Though, we're all dead. Well, for food... or no, for living costs... well. 
+<<emotionChange Normal>>
 Tycoon Ghost: A house! 
+<<emotionChange Thinking>>
 Tycoon Ghost: Protection from, um.
 Tycoon Ghost: ...There has to be a use for money.
+<<emotionChange Normal>>
 Tycoon Ghost: I mean, everyone uses it to buy things from me, right?
+<<emotionChange Thinking>>
 Tycoon Ghost: But - what can I even do with it, if I'm the only one selling? I don't - I don't know.
+<<emotionChange Normal>>
 <<setCam "Main Camera">>
 ===
 
@@ -62,13 +77,17 @@ title: TycoonStory3
 tags:
 position: 169,38
 ---
+<<emotionChange Thinking>>
 Tycoon Ghost: ...I see what you meant, now.
 Tycoon Ghost: My wealth, my fortunes - they were all worthless all along, weren't they?
+<<emotionChange None Scribbles>>
 Tycoon Ghost: What was I holding onto so tightly?
 Tycoon Ghost: Some - powerless, empty, currency?
+<<emotionChange None None>>
 Tycoon Ghost: ...I don't know what to do.
 Tycoon Ghost: Who am I meant to be, if not a Tycoon? What could I possibly want, if not money?
 Tycoon Ghost: ...and can I ever really pass on, if I'll never have enough money to satisfy my greed?
+<<emotionChange Normal>>
 <<setCam "Main Camera">>
 ===
 

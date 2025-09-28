@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ghostName: Doctor Ghost
   dialogue: {fileID: -8253061345870894857, guid: 868e5a239e6ec234c85e89e0d6c2974b, type: 3}
-  numStory: 4
+  numStory: 3
   recipesOrdered:
   - {fileID: 11400000, guid: 2c8944e5acd276242a1dacb709fa93d3, type: 2}
   arc: 3
+  walking: 0

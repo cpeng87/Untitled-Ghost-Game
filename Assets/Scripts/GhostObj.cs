@@ -151,7 +151,7 @@ public class GhostObj : Clickable
                 }
                 emotionParticles.Play();
             }
-            else if (particle == "Scribbes")
+            else if (particle == "Scribbles")
             {
                 if (particleState != ParticleState.Scribbes)
                 {

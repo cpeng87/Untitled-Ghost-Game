@@ -10,7 +10,9 @@ title: SealSuccess
 tags:
 position: -173,132
 ---
+<<emotionChange None Flowers>>
 Seal Ghost: Ooough, this is gud… bestest fibsh in the world.
+<<emotionChange None>>
 <<startStory SealStory>>
 ===
 
@@ -27,7 +29,9 @@ tags:
 position: 169,38
 ---
 Seal Ghost: Hemlo, I am seal. Do you have da fibsh? Mmh… you have fibsh… just not the ocean kind. I kno you have BEEEEEG fibsh, I really liked the fibsh I had earlier too.
+<<emotionChange None Flowers>>
 Seal Ghost: You made da fibsh? WOA! so cool, and sealy. Am so fat and habby, I could just… Blweeregeg!
+<<emotionChange None>>
 Seal Ghost: Okie, thanks for da fibsh. Goobai.
 <<setCam "Main Camera">>
 ===

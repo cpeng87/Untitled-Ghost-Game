@@ -18,11 +18,11 @@ public class GameManager : MonoBehaviour
     public OrderManager orderManager;
     public GhostManager ghostManager;
 
-    public List<string> minigames = new List<string>();
+    // public List<string> minigames = new List<string>();
     private int currency;
     private int satisfactionLevel;
     public List<Recipe> unlockedRecipes = new List<Recipe>();
-    public List<Recipe> recipes = new List<Recipe>();
+    // public List<Recipe> recipes = new List<Recipe>();
     public State state;
     public int maxGhosts;
     public Arc arc;
