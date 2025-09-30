@@ -1213,7 +1213,7 @@ MonoBehaviour:
   numFlourState: 2
   cakeState: 1
   progress: 0
-  neededProgress: 100
+  neededProgress: 150
   swapDirectionTime: 1.25
   rotateSpeed: 500
   progressIncrement: 0.15
