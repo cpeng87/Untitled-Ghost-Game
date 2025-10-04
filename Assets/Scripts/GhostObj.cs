@@ -157,7 +157,7 @@ public class GhostObj : Clickable
                 {
                     foreach (Material particleType in emotionMaterials)
                     {
-                        if (particleType.name == "Scribbes")
+                        if (particleType.name == "Scribbles")
                         {
                             emotionParticles.GetComponent<ParticleSystemRenderer>().material = particleType;
                         }
