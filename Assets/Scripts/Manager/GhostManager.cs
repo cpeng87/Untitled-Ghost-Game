@@ -41,7 +41,7 @@ public class GhostManager : MonoBehaviour
         activeGhosts = new Ghost[GameManager.Instance.maxGhosts];
     }
 
-    public GameObject GetGhostObjFromName(string name)
+    public GameObject GetGameObjFromName(string name)
     {
         if (ghostNameToGameObjDict.ContainsKey(name))
         {

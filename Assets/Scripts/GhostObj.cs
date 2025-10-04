@@ -2,6 +2,7 @@ using Manager.CustomerPatience;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEditor.UI;
 
 public enum ParticleState
 {
@@ -23,10 +24,12 @@ public class GhostObj : Clickable
     private bool hasTakenOrder;   //flags whether order has been taken or not
     private int seatNum;   //seat number of the current ghost
     private bool isIdle = false; // flag to check if ghost is idle
-    private float idleThreshold = 5f; // idle time threshold, can be set to higher value for longer idle time
+    private float idleThreshold = 0.5f; // idle time threshold, can be set to higher value for longer idle time
     private float idleTime = 0f; // accumulates time until idle threshold is reached
+    private bool isSeated;
 
     void Start() {
+        isSeated = false;
         // Get animator component from ghost prefab
         idleAnimator = GetComponentInChildren<Animator>();
         if (idleAnimator == null || orderNotificationAnimator == null)
@@ -74,6 +77,17 @@ public class GhostObj : Clickable
         hasTakenOrder = newStatus;
     }
 
+    public void SetSeated(bool seatedStatus)
+    {
+        isSeated = seatedStatus;
+        //Debug.Log("seated " + scriptable.ghostName + "'s ahh : " + isSeated);
+    }
+    public bool GetSeated()
+    {
+        //Debug.Log("fetching " + scriptable.ghostName + "'s seat status... : " + isSeated);
+        return isSeated;
+    }
+
     // Condition for checking if the ghost is idle.
     // We can update the condition later (according to game logic)
     private bool IsCustomerIdle()
@@ -82,8 +96,9 @@ public class GhostObj : Clickable
     }
 
     protected override void Update() {
-        if (IsCustomerIdle())
+        if (GetSeated())
         {
+            //Debug.Log("seated!! waiting...");
             idleTime += Time.deltaTime;
             if (idleTime >= idleThreshold)
             {
