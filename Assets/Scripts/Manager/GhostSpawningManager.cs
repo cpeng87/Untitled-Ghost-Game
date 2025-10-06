@@ -109,10 +109,13 @@ public class GhostSpawningManager : MonoBehaviour
 
                         if (Vector3.Distance(spawnedGhosts[i].Item1.transform.position, positions[i]) <= 0.1f || distanceDiff.x < 0f) //0.1f positional tolerance, extra check to make sure ghost doesnt walk into the counter erm
                         {
-                            if (Math.Abs(Quaternion.Angle(spawnedGhosts[i].Item1.transform.rotation, RotationGoal2)) < 5f)
+                            if (Math.Abs(Quaternion.Angle(spawnedGhosts[i].Item1.transform.rotation, RotationGoal2)) < 1f)
                             {
                                 spawnedGhosts[i].Item2 = false;
-                                spawnedGhosts[i].Item1.transform.position = positions[i]; //lock ghost into position
+                                spawnedGhosts[i].Item1.GetComponent<GhostObj>().SetSeated(true);
+                                //GameObject ghost = GameManager.Instance.ghostManager.GetGameObjFromName(spawnedGhosts[i].Item1.GetComponent<GhostObj>().GetScriptable().ghostName);
+                                //ghost.GetComponent<GhostObj>().SetSeated(true);
+                                //spawnedGhosts[i].Item1.transform.position = positions[i]; //lock ghost into position
                             }
                         }
                         break;
@@ -124,22 +127,20 @@ public class GhostSpawningManager : MonoBehaviour
                         }
                         else if (distanceDiff.z > 0f)
                         {
-                            if (Math.Abs(Quaternion.Angle(spawnedGhosts[i].Item1.transform.rotation, RotationGoal1)) > 5f)
+                            if (Math.Abs(Quaternion.Angle(spawnedGhosts[i].Item1.transform.rotation, RotationGoal1)) > 1f)
                             {
                                 spawnedGhosts[i].Item1.transform.rotation = Quaternion.RotateTowards(spawnedGhosts[i].Item1.transform.rotation, RotationGoal1, rotationSpeed * Time.deltaTime);
-                            }
-                            if (Math.Abs(Quaternion.Angle(spawnedGhosts[i].Item1.transform.rotation, RotationGoal1)) < 15f)
+                            } else
                             {
                                 spawnedGhosts[i].Item1.transform.position += ghostSpeed * Time.deltaTime * Vector3.forward * (float)sulkSpeed;
                             }
                         }
                         else if (distanceDiff.x > 0f)
                         {
-                            if (Math.Abs(Quaternion.Angle(spawnedGhosts[i].Item1.transform.rotation, RotationGoal2)) > 5f)
+                            if (Math.Abs(Quaternion.Angle(spawnedGhosts[i].Item1.transform.rotation, RotationGoal2)) > 1f)
                             {
                                 spawnedGhosts[i].Item1.transform.rotation = Quaternion.RotateTowards(spawnedGhosts[i].Item1.transform.rotation, RotationGoal2, rotationSpeed * Time.deltaTime);
-                            }
-                            if (Math.Abs(Quaternion.Angle(spawnedGhosts[i].Item1.transform.rotation, RotationGoal2)) < 15f)
+                            } else
                             {
                                 spawnedGhosts[i].Item1.transform.position += ghostSpeed * Time.deltaTime * Vector3.right * (float)sulkSpeed;
                             }
@@ -148,11 +149,14 @@ public class GhostSpawningManager : MonoBehaviour
                         if (Vector3.Distance(spawnedGhosts[i].Item1.transform.position, positions[i]) <= 0.1f || distanceDiff.x < 0f) //0.1f positional tolerance, extra check to make sure ghost doesnt walk into the counter erm
                         {
                             spawnedGhosts[i].Item2 = false;
-                            spawnedGhosts[i].Item1.transform.position = positions[i]; //lock ghost into position
+                            spawnedGhosts[i].Item1.GetComponent<GhostObj>().SetSeated(true);
+                            //GameObject ghost = GameManager.Instance.ghostManager.GetGameObjFromName(spawnedGhosts[i].Item1.GetComponent<GhostObj>().GetScriptable().ghostName);
+                            //ghost.GetComponent<GhostObj>().SetSeated(true);
+                            //spawnedGhosts[i].Item1.transform.position = positions[i]; //lock ghost into position
                             spawnedGhosts[i].Item1.transform.rotation = RotationGoal2;
                         } else
                         {
-                            sulkSpeed -= 0.0075;
+                            sulkSpeed -= 0.007;
                             if (sulkSpeed < 0)
                             {
                                 sulkSpeed = 1f;
@@ -167,22 +171,20 @@ public class GhostSpawningManager : MonoBehaviour
                         }
                         else if (distanceDiff.z > 0f)
                         {
-                            if (Math.Abs(Quaternion.Angle(spawnedGhosts[i].Item1.transform.rotation, RotationGoal1)) > 5f)
+                            if (Math.Abs(Quaternion.Angle(spawnedGhosts[i].Item1.transform.rotation, RotationGoal1)) > 1f)
                             {
                                 spawnedGhosts[i].Item1.transform.rotation = Quaternion.RotateTowards(spawnedGhosts[i].Item1.transform.rotation, RotationGoal1, rotationSpeed * Time.deltaTime);
-                            }
-                            if (Math.Abs(Quaternion.Angle(spawnedGhosts[i].Item1.transform.rotation, RotationGoal1)) < 15f)
+                            } else
                             {
                                 spawnedGhosts[i].Item1.transform.position += ghostSpeed * Time.deltaTime * Vector3.forward;
                             }
                         }
                         else if (distanceDiff.x > 0f)
                         {
-                            if (Math.Abs(Quaternion.Angle(spawnedGhosts[i].Item1.transform.rotation, RotationGoal2)) > 5f)
+                            if (Math.Abs(Quaternion.Angle(spawnedGhosts[i].Item1.transform.rotation, RotationGoal2)) > 1f)
                             {
                                 spawnedGhosts[i].Item1.transform.rotation = Quaternion.RotateTowards(spawnedGhosts[i].Item1.transform.rotation, RotationGoal2, rotationSpeed * Time.deltaTime);
-                            }
-                            if (Math.Abs(Quaternion.Angle(spawnedGhosts[i].Item1.transform.rotation, RotationGoal2)) < 15f)
+                            } else
                             {
                                 spawnedGhosts[i].Item1.transform.position += ghostSpeed * Time.deltaTime * Vector3.right;
                             }
@@ -191,7 +193,10 @@ public class GhostSpawningManager : MonoBehaviour
                         if (Vector3.Distance(spawnedGhosts[i].Item1.transform.position, positions[i]) <= 0.1f || distanceDiff.x < 0f) //0.1f positional tolerance, extra check to make sure ghost doesnt walk into the counter erm
                         {
                             spawnedGhosts[i].Item2 = false;
-                            spawnedGhosts[i].Item1.transform.position = positions[i]; //lock ghost into position
+                            spawnedGhosts[i].Item1.GetComponent<GhostObj>().SetSeated(true);
+                            //GameObject ghost = GameManager.Instance.ghostManager.GetGameObjFromName(spawnedGhosts[i].Item1.GetComponent<GhostObj>().GetScriptable().ghostName);
+                            //ghost.GetComponent<GhostObj>().SetSeated(true);
+                            //spawnedGhosts[i].Item1.transform.position = positions[i]; //lock ghost into position
                             spawnedGhosts[i].Item1.transform.rotation = RotationGoal2;
                         }
                         break;
@@ -215,7 +220,7 @@ public class GhostSpawningManager : MonoBehaviour
         {
             if (activeGhosts[i] != null)
             {
-                GameObject newGhost = Instantiate(GameManager.Instance.ghostManager.GetGhostObjFromName(activeGhosts[i].ghostName), positions[i], Quaternion.identity);
+                GameObject newGhost = Instantiate(GameManager.Instance.ghostManager.GetGameObjFromName(activeGhosts[i].ghostName), positions[i], Quaternion.identity);
                 
                 GhostObj currGhostObj = newGhost.GetComponent<GhostObj>();
                 currGhostObj.SetSeatNum(i);
@@ -246,7 +251,7 @@ public class GhostSpawningManager : MonoBehaviour
             {
                 GameManager.Instance.ghostManager.AddActiveGhost(reaperScriptable);
                 int reaperSeatNum = GameManager.Instance.ghostManager.GetSeatNum(reaperScriptable);
-                GameObject reaperObj = Instantiate(GameManager.Instance.ghostManager.GetGhostObjFromName("Reaper"), door, Quaternion.identity);
+                GameObject reaperObj = Instantiate(GameManager.Instance.ghostManager.GetGameObjFromName("Reaper"), door, Quaternion.identity);
                 reaperObj.GetComponent<GhostObj>().SetSeatNum(reaperSeatNum);
                 spawnedGhosts[reaperSeatNum] = (reaperObj, true);
                 AudioManager.Instance.PlaySound("DoorChime");
@@ -261,7 +266,7 @@ public class GhostSpawningManager : MonoBehaviour
             {
                 GameManager.Instance.ghostManager.AddActiveGhost(reaperScriptable);
                 int reaperSeatNum = GameManager.Instance.ghostManager.GetSeatNum(reaperScriptable);
-                GameObject reaperObj = Instantiate(GameManager.Instance.ghostManager.GetGhostObjFromName("Reaper"), door, Quaternion.identity);
+                GameObject reaperObj = Instantiate(GameManager.Instance.ghostManager.GetGameObjFromName("Reaper"), door, Quaternion.identity);
                 reaperObj.GetComponent<GhostObj>().SetSeatNum(reaperSeatNum);
                 spawnedGhosts[reaperSeatNum] = (reaperObj, true);
                 AudioManager.Instance.PlaySound("DoorChime");
@@ -343,7 +348,7 @@ public class GhostSpawningManager : MonoBehaviour
         }
         GameManager.Instance.ghostManager.AddActiveGhost(possibleGhost[index]);
         int seatNum = GameManager.Instance.ghostManager.GetSeatNum(possibleGhost[index]);
-        GameObject newGhost = Instantiate(GameManager.Instance.ghostManager.GetGhostObjFromName(possibleGhost[index].ghostName), door, Quaternion.identity);
+        GameObject newGhost = Instantiate(GameManager.Instance.ghostManager.GetGameObjFromName(possibleGhost[index].ghostName), door, Quaternion.identity);
         newGhost.GetComponent<GhostObj>().SetSeatNum(seatNum);
         spawnedGhosts[seatNum] = (newGhost, true);
         AudioManager.Instance.PlaySound("DoorChime");

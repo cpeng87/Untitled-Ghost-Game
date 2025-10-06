@@ -84,7 +84,7 @@ public class CutsceneManager : MonoBehaviour
         } else
         {
 
-            GameObject ghostGameObject = GameManager.Instance.ghostManager.GetGhostObjFromName(ghost.ghostName);
+            GameObject ghostGameObject = GameManager.Instance.ghostManager.GetGameObjFromName(ghost.ghostName);
             ghostGameObject = GhostSpawningManagerWithCutscenes.Instance.getSpawnedGhostFromGameObject(ghostGameObject);
 
             Debug.Log(ghost.name);
