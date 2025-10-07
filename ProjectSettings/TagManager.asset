@@ -13,6 +13,7 @@ TagManager:
   - Donut
   - LeftTong
   - RightTong
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Camera
   - 
   - Bowl
-  - 
+  - Walls
   - 
   - 
   - 

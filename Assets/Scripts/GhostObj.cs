@@ -78,7 +78,7 @@ public class GhostObj : Clickable
     // We can update the condition later (according to game logic)
     private bool IsCustomerIdle()
     {
-        return !Input.anyKey;
+        return !(Input.GetMouseButton(0) || Input.GetKey(KeyCode.Space));
     }
 
     protected override void Update() {
