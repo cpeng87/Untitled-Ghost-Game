@@ -122,7 +122,7 @@ public class GhostSpawningManagerWithCutscenes : MonoBehaviour
             if (activeGhosts[i] != null && !seat_taken)
             {
                 
-                GameObject newGhost = Instantiate(GameManager.Instance.ghostManager.GetGhostObjFromName(activeGhosts[i].ghostName), door, Quaternion.identity);
+                GameObject newGhost = Instantiate(GameManager.Instance.ghostManager.GetGameObjFromName(activeGhosts[i].ghostName), door, Quaternion.identity);
                 GhostObj ghostObj = newGhost.GetComponent<GhostObj>();
                 ghostObj.SetSeatNum(i);
                 if (GameManager.Instance.orderManager.HasActiveOrder(ghostObj.GetScriptable().ghostName) == true)
