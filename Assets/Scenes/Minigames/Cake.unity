@@ -409,6 +409,10 @@ PrefabInstance:
       propertyPath: m_Texture
       value: 
       objectReference: {fileID: 2800000, guid: c6c2aea10f7959144b5bd5c205b41d1e, type: 3}
+    - target: {fileID: 7746032235670997297, guid: 01259773b8fa2d5489406b9b13bb2ca7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

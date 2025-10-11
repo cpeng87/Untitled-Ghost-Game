@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     private int currency;
     private int satisfactionLevel;
     public List<Recipe> unlockedRecipes = new List<Recipe>();
+    public Dictionary<string, bool> hasOpenedTutorial = new Dictionary<string, bool>();
     // public List<Recipe> recipes = new List<Recipe>();
     public State state;
     public int maxGhosts;
@@ -50,6 +51,34 @@ public class GameManager : MonoBehaviour
         orderManager = GetComponent<OrderManager>();
         ghostManager = GetComponent<GhostManager>();
         ghostManager.Setup();
+        SetupTutorialDictionary();
+    }
+
+    private void SetupTutorialDictionary()
+    {
+        foreach (Recipe recipe in unlockedRecipes)
+        {
+            hasOpenedTutorial.Add(recipe.recipeName, false);
+        }
+    }
+
+    public void SetTutorialState(bool state)
+    {
+        string recipe = SceneManager.GetActiveScene().name;
+        if (hasOpenedTutorial.ContainsKey(recipe))
+        {
+            hasOpenedTutorial[recipe] = state;
+        }
+    }
+
+    public bool GetTutorialState()
+    {
+        string recipe = SceneManager.GetActiveScene().name;
+        if (hasOpenedTutorial.ContainsKey(recipe))
+        {
+            return hasOpenedTutorial[recipe];
+        }
+        return false;
     }
 
     public void AddUnlockedRecipe(Recipe recipe)

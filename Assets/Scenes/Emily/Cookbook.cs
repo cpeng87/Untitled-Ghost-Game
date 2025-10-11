@@ -7,13 +7,18 @@ public class Cookbook : MonoBehaviour
 
     private void Start()
     {
-        Pause();
+        cookbookUI.SetActive(false);
+        if (GameManager.Instance.GetTutorialState() == false)
+        {
+            Pause();
+        }
     }
 
     public void Resume() {
         cookbookUI.SetActive(false);
         Time.timeScale = 1f;
         paused = false;
+        GameManager.Instance.SetTutorialState(true);
     }
     public void Pause() {
         cookbookUI.SetActive(true);

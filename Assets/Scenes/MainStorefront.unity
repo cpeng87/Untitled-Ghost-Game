@@ -984,8 +984,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 0.12081015, z: 1}
+  m_Center: {x: 0, y: -0.43959507, z: 0}
 --- !u!23 &253513694
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1337,8 +1337,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 0.089389615, z: 0.7123108}
+  m_Center: {x: 0, y: -0.4553053, z: -0.1438446}
 --- !u!23 &298987831
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6933,6 +6933,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1194871745244336917, guid: 3b09e429754326e4196ed1635846ddcb, type: 3}
+      propertyPath: ghosts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1194871745244336917, guid: 3b09e429754326e4196ed1635846ddcb, type: 3}
+      propertyPath: 'ghosts.Array.data[0]'
+      value: 
+      objectReference: {fileID: 4663965477092494701, guid: 349a0fc8233db06498bb68ccfbec84df, type: 3}
+    - target: {fileID: 1194871745244336917, guid: 3b09e429754326e4196ed1635846ddcb, type: 3}
+      propertyPath: 'ghosts.Array.data[1]'
+      value: 
+      objectReference: {fileID: 3913648602975631478, guid: c615c63fb07297144a542c91eae62998, type: 3}
     - target: {fileID: 1242055107049372399, guid: 3b09e429754326e4196ed1635846ddcb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.8
@@ -10218,6 +10230,10 @@ PrefabInstance:
     - target: {fileID: 5711118978343506272, guid: 1f67b566a97976e47bd7fcce0bc17d19, type: 3}
       propertyPath: m_Name
       value: Loading Screen
+      objectReference: {fileID: 0}
+    - target: {fileID: 5711118978343506272, guid: 1f67b566a97976e47bd7fcce0bc17d19, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
