@@ -21,7 +21,6 @@ position: -112,-180
 <<emotionChange None Scribbles>>
 Goldfish Ghost: THE COUNCIL OF GOLDFISH IS <shaky> DISPLEASED </shaky>. YOU HAVE DISGRACED YOURSELF TO ALL GOLDFISH-KIND.
 <<emotionChange None>>
-<<reset>>
 <<setCam "Main Camera">>
 ===
 
@@ -48,7 +47,6 @@ Goldfish Ghost: WE, REGRETFULLY, HAVE PERISHED AND NO LONGER CAN ACCESS THE MORT
 Goldfish Ghost: WE ARE POWERLESS TO STOP THE DESECRATION OF OUR SPECIES.
 <<emotionChange None Scribbles>>
 Goldfish Ghost: THIS PURGATORY IS A PRISON, AND OUR <shaky> RAGE </shaky> AND CRAVING FOR JUSTICE KEEPS US BOUND HERE ALONGSIDE OUR GREATEST ENEMIES.
-<<reset>>
 Goldfish Ghost: WE CAN ONLY OBSERVE AS MORE ARE SACRIFICED AND JOIN THE SCHOOL.
 Goldfish Ghost: WHY HAS MOTHER NATURE FORSAKEN US LIKE SO?
 <<emotionChange None>>

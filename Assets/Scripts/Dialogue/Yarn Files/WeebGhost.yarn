@@ -48,12 +48,13 @@ tags:
 position: 169,38
 ---
 Weeb Ghost: Why do I want to be Challenger?
+<<emotionChange Sad>>
 Weeb Ghost: Just... it'd be nice to have his attention, for once. My dad that is.
 Weeb Ghost: I wonder if I'll ever see him around in the afterlife.
+<<emotionChange Normal>>
 Weeb Ghost: I mean, I'm fine even if he doesn't!
 <<emotionChange LockedIn>>
 Weeb Ghost: I have my waifu <wiggle> Seraphine </wiggle> to keep me company.
-<<reset>>
 <<emotionChange Normal>>
 Weeb Ghost: Anyways, once I hit Challenger, he'll have to pay attention to me! I'll be famous. I'll be everywhere, on TV and everything. Just watch!
 Weeb Ghost: Well, loads of reasons, obviously! I'll be super famous so my dad will see me on TV, I'll make loads of money so my dad won't have to work, and I'll get loads of ladies so my dad won't think I'm lonely!
@@ -69,13 +70,17 @@ title: WeebStory3
 tags:
 position: 169,38
 ---
+<<emotionChange Sad>>
 Weeb Ghost: I... uh, I met my dad the other day.
 Weeb Ghost: He, he wanted to apologize to me?
 Weeb Ghost: And he said... he was proud of me.
 Weeb Ghost: Even though I'm not Challenger, or a pro gamer, or have a girlfriend.
 Weeb Ghost: So, um. I don't think I'll be able to carry you anymore, if you do want to play.
+<<emotionChange Normal>>
 Weeb Ghost: I...I want to make the most of my time with my dad.
+<<emotionChange Sad>>
 Weeb Ghost: I think I might be leaving soon. Just a gut feeling, I guess.
+<<emotionChange Normal>>
 Weeb Ghost: I thought I was here to hit Challenger, but honestly?
 Weeb Ghost: Hall of Heroes doesn't even seem that important anymore, now that my dad's here with me.
 Weeb Ghost: So... you know how it is. GG go next.

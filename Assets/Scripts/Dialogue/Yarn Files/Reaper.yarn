@@ -17,7 +17,6 @@ position: -173,132
 Reaper: Thank you very much, it's delicious! What a creative design, as well.
 <<emotionChange Normal>>
 <<reaperPitch false>>
-<<reset>>
 <<startStory ReaperStory>>
 ===
 
@@ -26,7 +25,7 @@ tags:
 position: 169,38
 ---
 <<reaperPitch true>>
-Reaper: Hello, Cafe Ghost, and welcome to purgatory! I'm honored to be the first customer of your new cafe.
+Reaper: Hello, <wiggle> Cafe Ghost </wiggle>, and welcome to purgatory! I'm honored to be the first customer of your new cafe.
 Reaper: Is everything about it to your tastes? Say the word, and I can have it tailored however you like.
     -> Hi, uh, Mr. Grim Reaper. The cafe is great, yeah.
         <<emotionChange Happy Flowers>>

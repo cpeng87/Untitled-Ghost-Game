@@ -13,7 +13,6 @@ position: -173,132
 <<emotionChange Content Flowers>>
 Architecture Ghost: Aaah... that was truly satisfying. Good body... good structure. I daresay even the great <italic>Socrates</italic> couldn't question this conclusion!
 <<emotionChange Normal>>
-<<reset>>
 <<startStory ArchitectureStory>>
 ===
 
@@ -44,7 +43,6 @@ Architecture Ghost: How can it be that mine passion beareth no fruit, no matter 
 Architecture Ghost: Mine columns wert, no, <bold> ART </bold> everything to me. Cannot anyone understand that?
 Architecture Ghost: Is the world blind to mine efforts? 
 Architecture Ghost: The very castles from which thine rulers reign art built in <shaky> MINE OWN </shaky> style and yet it is shunned in favor of some... pedestrian affair?
-<<reset>>
 <<emotionChange Content>>
 Architecture Ghost: ...Ah, my apologies. I ought not burden thee with mine own insufficiencies, I am told that a profession has spawned from such actions today...
 <<emotionChange Normal>>

@@ -12,9 +12,7 @@ position: -173,132
 ---
 <<emotionChange None Flowers>>
 Ghostwriter Ghost: Oh, wow, this is delicious! <wiggle> You're like a magical barista! </wiggle> Oh - that's a new idea, I should write that down quickly...
-<<reset>>
 <<emotionChange None>>
-<<reset>>
 <<startStory GhostwriterStory>>
 ===
 
@@ -35,7 +33,6 @@ position: 169,38
 Ghostwriter Ghost: Oh, wait, you're talking to me?
 <<emotionChange None Flowers>>
 Ghostwriter Ghost: Yes! <wiggle> Hi!! </wiggle> I see you run this cafe - I wrote a story about a cafe romance once, you know?
-<<reset>>
 Ghostwriter Ghost: It wasn't anything great, and I wasn't happy with it, but you know cafe stories are all the rage nowadays, so it would sell...
 <<emotionChange None>>
 Ghostwriter Ghost: Oh, not that I'm some money-chaser or anything!
@@ -51,7 +48,6 @@ Ghostwriter Ghost: Hey, have you ever read anything I've written?
 Ghostwriter Ghost: Maybe "Battle and Tranquility"? Or "Small Cottage on the Meadow"?
 <<emotionChange None Flowers>>
 Ghostwriter Ghost: <wiggle> Oh, yes, I wrote those! </wiggle>
-<<reset>>
 Ghostwriter Ghost: I'm so happy you know them, I loved writing those so much!
 <<emotionChange None>>
 Ghostwriter Ghost: Did - do you know my name? I was listed as, uh, an editor on those books, I think - under the acknowledgements, for sure!
@@ -73,7 +69,6 @@ Ghostwriter Ghost: ...Hm, you want to know why I kept ghostwriting instead of pu
 Ghostwriter Ghost: Well, you see... when I first started as a writer, I couldn't get anyone to publish my work.
 <<emotionChange Normal>>
 Ghostwriter Ghost: None of my works got any offers, and I just really, <italic> really </italic> wanted for people to be able to read my work.
-<<reset>>
 Ghostwriter Ghost: I didn't care that it was under a different name, at the time.
 <<emotionChange Sad>>
 Ghostwriter Ghost: I...I'm not sure when I suddenly started caring.

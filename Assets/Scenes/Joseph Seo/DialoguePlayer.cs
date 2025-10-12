@@ -43,7 +43,7 @@ public class DialoguePlayer : MonoBehaviour
         dialogueRunner.AddCommandHandler<string>("startStory", StartStoryDialogue);
         dialogueRunner.AddCommandHandler<string, string>("setNext", SetNextDialogue);
         dialogueRunner.AddCommandHandler("end", EndDialogue);
-        dialogueRunner.AddCommandHandler("reset", Reset);
+        // dialogueRunner.AddCommandHandler("reset", Reset);
         dialogueRunner.AddCommandHandler<bool>("reaperPitch", ReaperPitch);
         dialogueRunner.AddCommandHandler("emotionChange", (string[] args) => EmotionChange(args));
 

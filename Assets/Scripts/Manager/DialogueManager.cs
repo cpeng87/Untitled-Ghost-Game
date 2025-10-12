@@ -38,11 +38,15 @@ public class DialogueManager : MonoBehaviour
         storyNameToNextDialogue[storyName] = nextString;
     }
 
-    public string GetNextDialogue(string storyName) {
+    public string GetNextDialogue(string storyName)
+    {
         string nextDialogue = null;
-        if (storyNameToNextDialogue.ContainsKey(storyName)) {
+        if (storyNameToNextDialogue.ContainsKey(storyName))
+        {
             nextDialogue = storyNameToNextDialogue[storyName];
-        } else {
+        }
+        else
+        {
             string parsedName = storyName.Replace("Story", "");
             nextDialogue = parsedName + "Story" + GameManager.Instance.ghostManager.GetStoryIndex(GameManager.Instance.orderManager.GetCurrActiveOrderName());
         }

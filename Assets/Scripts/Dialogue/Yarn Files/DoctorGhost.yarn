@@ -12,9 +12,7 @@ position: -173,132
 ---
 <<emotionChange Happy Flowers>>
 Doctor Ghost: <wiggle>Ah~</wiggle> The drinks here really hit the spot. I should prescribe them to my patients next time~
-<<reset>>
 <<emotionChange Normal>>
-<<reset>>
 <<startStory DoctorStory>>
 ===
 

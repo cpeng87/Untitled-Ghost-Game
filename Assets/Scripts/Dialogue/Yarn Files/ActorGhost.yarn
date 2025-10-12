@@ -13,7 +13,6 @@ position: -173,132
 <<emotionChange None Sparkles>>
 Actor Ghost: Wow, this is amazing, I can see why you're a barista! Great stuff! <wiggle> Truly a master at work~! </wiggle>
 <<emotionChange None>>
-<<reset>>
 <<startStory ActorStory>>
 ===
 
@@ -21,11 +20,12 @@ title: ActorFailure
 tags:
 position: -112,-180
 ---
-<<emotionChange None Scribble>>
+<<emotionChange Sad Scribble>>
 Actor Ghost: Bleurgh- What is this?
-<<emotionChange None>>
+<<emotionChange Sad>>
 Actor Ghost: How could you serve something like this to someone as famous as me?
 Actor Ghost: If I left a review on this place, you'd be out of business in minutes!
+<<emotionChange Normal>>
 <<setCam "Main Camera">>
 ===
 
@@ -36,17 +36,14 @@ position: 169,38
 Actor Ghost: Yep, it's me. <italic> The one! </italic>
 <<emotionChange None Sparkles>>
 Actor Ghost: <italic> The only!! </italic> 
-<<reset>>
 Actor Ghost: You know me from the hit shows The Workplace, Acquaintances, Tournament of Seats, yep, it's me in the flesh, or I guess in the spirit. And no, I don't do autographs.
 <<emotionChange Shocked>>
 Actor Ghost: <wiggle> WHAT?! </wiggle>
-<<reset>>
 Actor Ghost: You don't know who I am?
 Actor Ghost: Were you living under a rock for your whole life?! I'm possibly the most famous ghost to ever exist!
 <<emotionChange Normal>>
 Actor Ghost: I guess it is a nice change of pace though.
 Actor Ghost: <wiggle> Well, see ya around, barista~! </wiggle>
-<<reset>>
 <<setCam "Main Camera">>
 ===
 
@@ -61,7 +58,6 @@ Actor Ghost: You know, at some point in fame, people just start giving you free 
 Actor Ghost: But the best part was the parties!
 Actor Ghost: Every!
 Actor Ghost: <italic> DAY! </italic>
-<<reset>>
 <<emotionChange Sad>>
 Actor Ghost: But you know, barista, it's kind of exhausting to stay under the spotlight for your whole life.
 Actor Ghost: Everyone's always clamoring around you to get a chance at that next opportunity.
@@ -85,6 +81,5 @@ Actor Ghost: Just me, and not the persona that I've created. Made me really appr
 <<emotionChange None Sparkles>>
 Actor Ghost: Thanks, man. <wiggle> See you, barista~! </wiggle> Aaaaaand cut!
 <<emotionChange None>>
-<<reset>>
 <<setCam "Main Camera">>
 ===

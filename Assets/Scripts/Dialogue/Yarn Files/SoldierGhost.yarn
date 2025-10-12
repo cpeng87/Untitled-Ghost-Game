@@ -23,7 +23,6 @@ position: -112,-180
 <<emotionChange None Scribbles>>
 Soldier Ghost: <shaky>Argh...</shaky> My headache is flaring up again... I should go...
 <<emotionChange None>>
-<<reset>>
 <<setCam "Main Camera">>
 ===
 
@@ -47,7 +46,6 @@ position: 169,38
 ---
 <<emotionChange War>>
 Soldier Ghost: The war... <shaky>The war...!</shaky>
-<<reset>>
 Soldier Ghost: How... how did I forget about the war? How is the war right now?
 Soldier Ghost: Are... Are we winning...?
 <<emotionChange Normal>>

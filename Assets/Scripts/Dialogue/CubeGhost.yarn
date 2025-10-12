@@ -4,13 +4,13 @@ position: -54,-23
 ---
 Cube: I'd like a {GetOrder()} please.
 Cube: <bold> <wiggle> Make it on the double </wiggle> </bold> Make it on the double Make it on the double Make it on the double
-// <<reset>>
+// 
 Cube: <bold> <shaky> Or even on the triple </shaky> </bold>
-// <<reset>>
+// 
 Cube: <italic> <wiggle> The quadruple if you will. </wiggle> </italic>
-// <<reset>>
+// 
 Cube: <italic> <shaky> Bah! </shaky> </italic> Just make it!
-// <<reset>>
+// 
 Cube: Or else we'll have issues.
 Cube: Really really big issues.
     -> On it
