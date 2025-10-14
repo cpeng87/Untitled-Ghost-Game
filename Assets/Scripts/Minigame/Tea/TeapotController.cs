@@ -129,16 +129,12 @@ public class TeapotController : MinigameCompletion
     //takes in point clicked and moves the teapot to the location dragged to
     private void HandleMoving()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out RaycastHit hit))
-        {
-            Vector3 targetPosition = hit.point + offset;
-
-            float clampedX = Mathf.Clamp(targetPosition.x, xBound.x, xBound.y);
-            float clampedY = Mathf.Clamp(targetPosition.y, yBound.x, yBound.y);
-
-            transform.position = new Vector3(clampedX, clampedY, originalZ);
-        }
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.x = Mathf.Clamp(mousePos.x, 0, Screen.width);
+        mousePos.y = Mathf.Clamp(mousePos.y, 0, Screen.height);
+        mousePos = Camera.main.ScreenToWorldPoint(mousePos) + offset;
+        mousePos.z = 0;
+        transform.position = mousePos;
     }
 
     // tilts the teapot based on the mouse's y movement. Limited by max tilt angle.

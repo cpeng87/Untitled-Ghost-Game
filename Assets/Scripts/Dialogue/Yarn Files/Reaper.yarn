@@ -13,7 +13,7 @@ tags:
 position: -173,132
 ---
 <<reaperPitch true>>
-<<emotionChange Blush Flowers>>
+<<emotionChange Blush Scribbles>>
 Reaper: Thank you very much, it's delicious! What a creative design, as well.
 <<emotionChange Normal>>
 <<reaperPitch false>>

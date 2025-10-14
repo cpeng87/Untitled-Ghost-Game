@@ -578,7 +578,7 @@ MonoBehaviour:
   donut: {fileID: 2968915146286547448, guid: bc8571c41d6af4feeaaac1d932b4f122, type: 3}
   spawnBoundaries: {fileID: 739266453}
   numDonuts: 12
-  donutRadius: 0.25
+  donutRadius: 0.4
   maxAttemptsPerDonut: 100
 --- !u!65 &739266453
 BoxCollider:

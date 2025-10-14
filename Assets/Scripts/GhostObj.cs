@@ -2,13 +2,12 @@ using Manager.CustomerPatience;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-using UnityEditor.UI;
 
 public enum ParticleState
 {
     Flowers,
     Sparkles,
-    Scribbes
+    Scribbles
 }
 
 public class GhostObj : Clickable
@@ -168,7 +167,7 @@ public class GhostObj : Clickable
             }
             else if (particle == "Scribbles")
             {
-                if (particleState != ParticleState.Scribbes)
+                if (particleState != ParticleState.Scribbles)
                 {
                     foreach (Material particleType in emotionMaterials)
                     {
@@ -177,7 +176,7 @@ public class GhostObj : Clickable
                             emotionParticles.GetComponent<ParticleSystemRenderer>().material = particleType;
                         }
                     }
-                    particleState = ParticleState.Scribbes;
+                    particleState = ParticleState.Scribbles;
                 }
                 emotionParticles.Play();
             }

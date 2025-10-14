@@ -120,7 +120,7 @@ public class TongsController : MinigameCompletion
         }
 
         // Start grabbing donut
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (!isGrabbing && Input.GetKeyDown(KeyCode.Space))
         {
             StartCoroutine(Grab());
         }

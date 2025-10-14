@@ -35,16 +35,11 @@ public class ChefSkipUpdate : MinigameCompletion
 
         if (currency >= chefCost)
         {
-            Debug.Log("Chef success");
-
             GameManager.Instance.SubtractCurrency(3);
-            ToggleSkipPopup();
             skipMinigamePopup.SetActive(false);
-            minigameResult.MinigameResult(true, true);
         }
         else
         {
-            Debug.Log("Chef fail");
             skipMinigamePopup.SetActive(false);
             currencyError.SetActive(true);
         }

@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
     {
         foreach (Recipe recipe in unlockedRecipes)
         {
-            hasOpenedTutorial.Add(recipe.recipeName, false);
+            hasOpenedTutorial.Add(recipe.minigame, false);
         }
     }
 

@@ -19,8 +19,6 @@ public class BatterBowlController : MonoBehaviour
     public float pourThreshold = 20f;
     [Header("Muffin Fill Parameters")]
     public GameObject rayPoint;
-    // public Collider tiltCollider;
-
     void Start()
     {
         originalZ = transform.position.z;
@@ -32,16 +30,12 @@ public class BatterBowlController : MonoBehaviour
     //takes in point clicked and moves the bowl to the location dragged to
     private void HandleMoving()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out RaycastHit hit))
-        {
-            Vector3 targetPosition = hit.point + offset;
-
-            float clampedX = Mathf.Clamp(targetPosition.x, xBound.x, xBound.y);
-            float clampedY = Mathf.Clamp(targetPosition.y, yBound.x, yBound.y);
-
-            transform.position = new Vector3(clampedX, clampedY, originalZ);
-        }
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.x = Mathf.Clamp(mousePos.x, 0, Screen.width);
+        mousePos.y = Mathf.Clamp(mousePos.y, 0, Screen.height);
+        mousePos = Camera.main.ScreenToWorldPoint(mousePos) + offset;
+        mousePos.z = 0;
+        transform.position = mousePos;
     }
 
     // tilts the bowl based on the mouse's y movement. Limited by max tilt angle.
@@ -95,7 +89,7 @@ public class BatterBowlController : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !isDragging)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out RaycastHit hit))
