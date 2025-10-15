@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class ChefSkipUpdate : MinigameCompletion
 {
@@ -25,6 +26,7 @@ public class ChefSkipUpdate : MinigameCompletion
         }
         else
         {
+            EventSystem.current.SetSelectedGameObject(null);
             skipMinigamePopup.SetActive(false);
         }
     }

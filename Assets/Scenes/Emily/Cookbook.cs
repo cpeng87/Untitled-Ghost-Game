@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Cookbook : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class Cookbook : MonoBehaviour
         cookbookUI.SetActive(false);
         Time.timeScale = 1f;
         paused = false;
+        EventSystem.current.SetSelectedGameObject(null);
         GameManager.Instance.SetTutorialState(true);
     }
     public void Pause() {
