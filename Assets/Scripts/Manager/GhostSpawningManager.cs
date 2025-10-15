@@ -226,9 +226,14 @@ public class GhostSpawningManager : MonoBehaviour
                 currGhostObj.SetSeatNum(i);
                 if (GameManager.Instance.orderManager.HasActiveOrder(activeGhosts[i].ghostName))
                 {
+                    currGhostObj.SetSeated(true);
                     currGhostObj.SetHasTakenOrder(true);
                 }
-                spawnedGhosts[i] = (newGhost,false);
+                else
+                {
+                    currGhostObj.SetSeatedAndIdle();
+                }
+                spawnedGhosts[i] = (newGhost, false);
             }
         }
 

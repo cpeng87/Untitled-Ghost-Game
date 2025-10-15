@@ -9,7 +9,7 @@ public class Cookbook : MonoBehaviour
     private void Start()
     {
         cookbookUI.SetActive(false);
-        if (GameManager.Instance.GetTutorialState() == false)
+        if (GameManager.Instance != null && GameManager.Instance.GetTutorialState() == false)
         {
             Pause();
         }

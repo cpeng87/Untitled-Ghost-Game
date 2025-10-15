@@ -12,10 +12,10 @@ public enum CakeState
 
 public class Rotate : MonoBehaviour
 {
-    public KeyCode leftArrow;
-    public KeyCode rightArrow;
-    public KeyCode upArrow;
-    public KeyCode downArrow;
+    private KeyCode leftArrow = KeyCode.A;
+    private KeyCode rightArrow = KeyCode.D;
+    private KeyCode upArrow = KeyCode.W;
+    private KeyCode downArrow = KeyCode.S;
     public int numFlourState = 2;
     [SerializeField] private CakeState cakeState = CakeState.LeftMix;
     [SerializeField] private float progress;

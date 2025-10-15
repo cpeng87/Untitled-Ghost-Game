@@ -79,25 +79,27 @@ public class GhostObj : Clickable
     public void SetSeated(bool seatedStatus)
     {
         isSeated = seatedStatus;
-        //Debug.Log("seated " + scriptable.ghostName + "'s ahh : " + isSeated);
+        // Debug.Log("seated " + scriptable.ghostName + "'s ahh : " + isSeated);
     }
     public bool GetSeated()
     {
-        //Debug.Log("fetching " + scriptable.ghostName + "'s seat status... : " + isSeated);
+        // Debug.Log("fetching " + scriptable.ghostName + "'s seat status... : " + isSeated);
         return isSeated;
     }
 
-    // Condition for checking if the ghost is idle.
-    // We can update the condition later (according to game logic)
-    private bool IsCustomerIdle()
+    public void SetSeatedAndIdle()
     {
-        return !(Input.GetMouseButton(0) || Input.GetKey(KeyCode.Space));
+        isSeated = true;
+        isIdle = true;
+        if (hasTakenOrder == false)
+        {
+            SetOrderNotification(true);
+        }
     }
 
     protected override void Update() {
-        if (GetSeated())
+        if (!isIdle && GetSeated())
         {
-            //Debug.Log("seated!! waiting...");
             idleTime += Time.deltaTime;
             if (idleTime >= idleThreshold)
             {
