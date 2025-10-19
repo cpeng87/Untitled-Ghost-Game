@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-2123340307806318663
+--- !u!114 &-1610072120704834380
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Wood 2
+  m_Name: Tree Leaf 3
   m_Shader: {fileID: -6465566751694194690, guid: 4c5fa43da2236e54e82cd456fda26d88, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -59,8 +59,8 @@ Material:
     - _Min: 0.3
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Shades: 0.29
+    - _Shades: 0.35
     m_Colors:
-    - _Color: {r: 0.7207546, g: 0.54018456, b: 0.31957987, a: 1}
+    - _Color: {r: 0.22622675, g: 0.3647059, b: 0.18625122, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
