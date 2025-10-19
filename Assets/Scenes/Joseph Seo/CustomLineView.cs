@@ -341,10 +341,10 @@ namespace Yarn.Unity
 
                 // Hide the continue button until presentation is complete (if
                 // we have one).
-                if (continueButton != null)
-                {
-                    continueButton.SetActive(false);
-                }
+                // if (continueButton != null)
+                // {
+                //     continueButton.SetActive(false);
+                // }
                 if (indicator != null)
                 {
                     indicator.SetActive(false);
