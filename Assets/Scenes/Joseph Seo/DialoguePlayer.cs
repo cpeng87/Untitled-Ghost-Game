@@ -176,6 +176,7 @@ public class DialoguePlayer : MonoBehaviour
 
     private void OnDialogueComplete()
     {
+        Reset();
         if (state == DialogueState.Story)
         {
             GameManager.Instance.ghostManager.IncrementStoryIndex(GameManager.Instance.orderManager.GetCurrActiveOrderName());

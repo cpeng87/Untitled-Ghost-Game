@@ -22,6 +22,7 @@ public class TongsController : MinigameCompletion
     [SerializeField] private BoxCollider leftTong;
     [SerializeField] private BoxCollider rightTong;
     private int attempts = 0;
+    [SerializeField] private List<GameObject> lives;
 
     void Start()
     {
@@ -133,6 +134,11 @@ public class TongsController : MinigameCompletion
         // }
     }
 
+    private void LoseLife(int attempt)
+    {
+        lives[3 - attempt].SetActive(false);
+    }
+
     private void CheckCompletion()
     {
         if (isGrabDonut)
@@ -141,11 +147,9 @@ public class TongsController : MinigameCompletion
         }
         else
         {
-            if (attempts < 2)
-            {
-                attempts += 1;
-            }
-            else
+            attempts += 1;
+            LoseLife(attempts);
+            if (attempts >= 3)
             {
                 minigameResult.MinigameResult(false);
             }

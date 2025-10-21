@@ -16,7 +16,7 @@ public class GhostObj : Clickable
     [SerializeField] private Animator idleAnimator;
     [SerializeField] private Animator orderNotificationAnimator; //animator for the notification
     [SerializeField] private List<Material> faces = new List<Material>();
-    [SerializeField] private SkinnedMeshRenderer face;
+    [SerializeField] private Renderer face;
     [SerializeField] private ParticleSystem emotionParticles;
     [SerializeField] private List<Material> emotionMaterials = new List<Material>();
     private ParticleState particleState = ParticleState.Flowers;
@@ -91,10 +91,6 @@ public class GhostObj : Clickable
     {
         isSeated = true;
         isIdle = true;
-        if (hasTakenOrder == false)
-        {
-            SetOrderNotification(true);
-        }
     }
 
     protected override void Update() {
@@ -104,11 +100,13 @@ public class GhostObj : Clickable
             if (idleTime >= idleThreshold)
             {
                 isIdle = true;
-                if (hasTakenOrder == false)
-                {
-                    SetOrderNotification(true);
-                }
             }
+        }
+        if (isIdle && hasTakenOrder == false && GameManager.Instance.state == State.Main)
+        {
+            Debug.Log("SETTING ORDER NOTIF TO TRUE");
+            Debug.Log(GameManager.Instance.state);
+            SetOrderNotification(true);
         }
         base.Update();
     }

@@ -22,7 +22,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Table
   m_Shader: {fileID: -6465566751694194690, guid: 4c5fa43da2236e54e82cd456fda26d88, type: 3}
-  m_Parent: {fileID: 2100000, guid: 7b26f924ac0d0e742a4ced088d9949ba, type: 2}
+  m_Parent: {fileID: 2100000, guid: 0307d80d250694a4e8b3d5f488a9078f, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []

@@ -213,7 +213,7 @@ public class GhostSpawningManager : MonoBehaviour
         //delete currently spawned ghosts
         for (int i = 0; i < spawnedGhosts.Length; i++)
         {
-            spawnedGhosts[i] = (null,false);
+            spawnedGhosts[i] = (null, false);
         }
 
         for (int i = 0; i < activeGhosts.Length; i++)
@@ -221,7 +221,7 @@ public class GhostSpawningManager : MonoBehaviour
             if (activeGhosts[i] != null)
             {
                 GameObject newGhost = Instantiate(GameManager.Instance.ghostManager.GetGameObjFromName(activeGhosts[i].ghostName), positions[i], Quaternion.identity);
-                
+
                 GhostObj currGhostObj = newGhost.GetComponent<GhostObj>();
                 currGhostObj.SetSeatNum(i);
                 if (GameManager.Instance.orderManager.HasActiveOrder(activeGhosts[i].ghostName))
@@ -236,7 +236,6 @@ public class GhostSpawningManager : MonoBehaviour
                 spawnedGhosts[i] = (newGhost, false);
             }
         }
-
     }
     
     public void SpawnGhost()

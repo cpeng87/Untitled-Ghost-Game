@@ -100,6 +100,7 @@ public class GameManager : MonoBehaviour
 
     public void CompleteMinigame(bool isSuccess, bool chefSkip = false)
     {
+        state = State.Dialogue;
         StartCoroutine(CompleteMinigameCoroutine("MainStorefront", isSuccess, chefSkip));
     }
 
@@ -137,11 +138,10 @@ public class GameManager : MonoBehaviour
         {
             yield return null;
         }
-
+        
         // Complete the order
         orderManager.CompleteOrder(isSuccess, chefSkip);
         Time.timeScale = 1;
-        state = State.Dialogue;
 
         // Optionally fade out the loading screen after loading
         if (loadingScreen != null)
