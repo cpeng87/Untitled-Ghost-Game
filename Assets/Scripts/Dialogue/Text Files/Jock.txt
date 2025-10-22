@@ -1,5 +1,5 @@
 [Order]
-Can’t wait to get my daily pump! And I don’t just mean the workout - can I have an {item}, please? 
+Can’t wait to get my daily pump! And I don’t just mean the workout- can I have a {item}, please? 
 [End]
 
 [Success]
@@ -10,7 +10,7 @@ Can’t wait to mix my protein powder into my {item} and get my PR thanks to you
 [Failure]
 Dude. This is TOTALLY gonna throw off my PR.
 It’s not even worth adding my protein powder.
-Just know that when I train and condition to failure today, I’m gonna think about this awful {item}.
+Just know that, when I train and condition to failure today, I’m gonna think about this awful {item}.
 [End]
 
 [Story]
@@ -18,30 +18,31 @@ You wanna… hear about my love for the gym?
 No?
 Yeah, I don’t really have too much else to me.
 I mean, there’s my job at Tycoon Ghost’s construction site, but like… it’s not that interesting.
-You know what else is interesting? I got my first ghost bicep vein in the afterlife!
-Isn’t that sick?
+You know what IS interesting though? I got my first ghost bicep vein in the afterlife!
+Isn’t that sick~?
 [End]
 
 [Story]
 Ah, yeah. I used to be the big shot of town.
 The biggest macho man that ever machoed.
 Even got into the Spirit football team.
-But, you know, there was somehow someone even more macho-ier than me. 
+But, you know… there was somehow someone even more macho-ier than me. 
 Somehow more jacked, as if they got a headstart.
-It’s always been that way for me - always someone with the stronger PR, the bigger bulk, the nicer lats… man, I wish I had my lats in the afterlife.
+It’s always been that way for me… there's always someone with the stronger PR, the bigger bulk, the nicer lats… Man, I wish I had my lats in the afterlife.
 Maybe I should try lat-tes to try and get them back?
-Get it?...
-Yeah, I never had a shot at being the best comedian.
+Get it?
+…
+Yeah, I never had a shot at being a good comedian.
 [End]
 
 [Story]
 This almost reminds me of the conversation I had with Musician Ghost earlier.
-Something about how we both peaked in our respective grindsets to success back then.
-But was that really peaking for me, if I couldn’t even beat anyone?
-That’s what I told him, and he looked at me funny, saying his Platinum records were all he needed to be content with his success and highlight his talent.
-Is my physique really that… good?
+Something about how we both peaked in our respective grindsets back then.
+But was that really peaking for me? …If I couldn’t even beat anyone?
+That’s what I told him, anyway. He looked at me funny, saying his Platinum records were all he needed to be content with his success and talent.
+Is my physique really that good?
 It always seems to dull in the reflection.
-Maybe I’m just looking at the mirror wrong. 
+Maybe… I’m just looking at the mirror wrong. 
 [End]
 
 [Story]
@@ -49,9 +50,9 @@ Do you know what glute ham raises are?
 Strength training versus high intensity versus crossfit? Skullcrushers?
 No, skullcrushers isn’t how I died… but you know what?
 I have so much knowledge about the gym that others don’t.
-That… is a knowledge base that few possess, but I have it.
-I worked for it.
-And… I deserve to revel in my hard-earned talents.
+That's a knowledge base that few possess, but I have it.
+And I worked for it.
+And… I deserve to revel in my hard-earned talents, don't I?
 I deserve to be confident… maybe as confident as Musician ghost is with his instruments.
-Just… let me know when you need a gym bro, yeah? I’d love to share my workouts with you and all of the afterlife.
+Just… let me know when you need a gym bro, yeah? I’d love to share my workouts with you.
 [End]

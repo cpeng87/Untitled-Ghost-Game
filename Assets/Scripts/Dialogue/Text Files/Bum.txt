@@ -1,5 +1,5 @@
 [Order]
-Eeehm, hi. Can I get… a croissant… or maybe a coffee? Just… give me a {item} for now.
+Eeehm, hi. Can I get… a croissant? …or maybe a coffee? Just… give me a {item} for now.
 [End]
 
 [Success]
@@ -11,75 +11,76 @@ You know, I always dreamed of trying every restaurant in the world… I… ought
 [End]
 
 [Story]
-Ah, hello there. Quite a place you got here, seems like you have a lot of influences from a bunch of different places… positively cosmopolitan.
-“My name? Well, when I went to the Grim Reaper and couldn’t decide on a name, he just called me ‘Indecisive Ghost’.
-Unfortunately, the folks here seem to like to call me ‘Bum Ghost’.
+Ah, hello there. Quite a place you got here. Seems like you have a lot of influences from a bunch of different places… positively cosmopolitan.
+My name? Well, when I went to the Grim Reaper, I couldn’t decide on a name. So he just called me ‘Indecisive Ghost’.
+Unfortunately, the folks here like to call me ‘Bum Ghost’.
 I know, REAAAL flattering, ain’t it?
-Just cause I look like one and never got a job don’t mean you gotta point it out all the time.
-Anyway, back to you. You seem to have all sorts of interests… a bit indecisive on how your cafe looks too, aren’t you?
-If you’re anything like me, I’d suggest you settle on a style, and fast, before someone accuses you of being too flip-floppy. Catch you around, er… Caf!
+Just cause I look like one and never got a job don’t mean you gotta point it out all the time…
+Anyway, back to you. You seem to have all sorts of interests… a bit indecisive on how your cafe looks, aren’t you?
+If you’re anything like me, I’d suggest you settle on a style- and fast, before someone accuses you of being too flip-floppy. Catch you around, er… Caf!
 [End]
 
 [Story]
-“Hey, nice seeing you again. Hm? You wanted to talk to me about ideas?
-Hmm… well, I’d say you should go full into the plant theme, like a plant cafe and- no, wait: what if you went more historical?
-Like having that weirdo who likes columns… no… ah, wait, what if…
+Hey, nice seeing you again. Hm? You wanted to talk to me about ideas?
+Hmm… well, I’d say you should go fully into the plant theme, like a plant cafe and- no, wait. What if you went more historical?
+Like having that weirdo who likes columns… no… ah, wait. What if…
 ...
-Nevermind, forget I said anything, I can’t get my head screwed on tight enough to give you a decent decision.
+Nevermind… forget I said anything. I can’t get my head screwed on tight enough to give you a decent decision.
 I probably just made you more indecisive… I’m sorry.
-You probably figured it out by now, but that’s why the good ol’ G.R calls me ‘Indecisive Ghost’... since I am obviously indecisive. 
+You've probably already figured it out by now, but that’s why the good ol’ G.R. calls me ‘Indecisive Ghost’… since I am obviously indecisive. 
 There I go again, messing up someone else’s good ideas and never-
-Oh! You… liked that? I… I must say I am surprised. Nobody’s ever liked it when I start rambling about random stuff.
+Oh! You… liked that? I… I must say, I am surprised. Nobody’s ever liked it when I start rambling about stuff.
 Thanks, C.G… I’ll think about what you said.
 [End]
 
 [Story]
-“Hi hi, it’s me again. I wanted to talk to you about last time.
-Sorry if I got a bit off-topic last time, but sometimes it feels nice to let myself ramble. It’s not so much that I just like the sound of my own voice… I just like to live in the realm of ideas.
+Hi hi, it’s me again. I wanted to talk to you about last time.
+Sorry if I got a bit off-topic last time, but sometimes it feels nice to let myself ramble. Not to the point that I just like the sound of my own voice, but I just like to live in the realm of ideas.
 Have you ever heard an academic talk?
-Sometimes, they’ll say that the reason that academia is so appealing is because it allows them to explore the world of concepts, ideas, theory, things like that…
+Sometimes, they’ll say that the reason that academia is so appealing to them is because it allows them to explore the world of concepts, ideas, theories… things like that.
 You… want to hear about my life?
-I… really don’t think it’s worth talking about, there wasn’t much there, after all. It also isn’t particularly happy.
-Not everybody died with a big story or with a smile on their face. You’d be better off asking that muscle dude’s life, or maybe that column dude, or the nice teacher lady.
+I… really don’t think it’s worth talking about. There wasn’t much there, after all. It also isn’t particularly happy.
+Not everybody died with a big story or with a smile on their face. You’d be better off asking that muscle dude about his life, or maybe that column guy, or even the nice teacher lady.
 You really wanna know, huh? Fine, suit yourself.
-I was born poor, then I went through life not being able to figure anything out for myself, wasting all of my already poor parents’ money, then I died because somebody wasn’t looking where he was going and ran into me.
-Are you satisfied? It isn’t a happy story.
-Strange, isn’t it? The world is so big and filled with ideas, concepts, people, things, and yet… I didn’t ever get a chance to do anything in it.
-“You… don’t think it's bad that I never figured myself out?
+I was born poor, then I went through my whole life not being able to figure anything out for myself, wasting all of my already poor parents’ money. Then, I died because somebody wasn’t looking where they were going and hit me with their truck.
+Are you satisfied? It's not a happy story.
+Strange, isn’t it? The world is so big and filled with ideas, concepts, people, things… and yet, I didn’t ever get a chance to do anything in it.
+You… don’t think it's bad that I never figured myself out?
 Hah, you sound just like my folks. They always supported my stupid ideas…
 I’ll… get back to you. I need to think about some things. Catch you later… uhm… Cafe.
 [End]
 
 [Story]
 Howdy. I’m back.
-I thought about what you said earlier, and I wanted to try again. If you’d be okay with it, could I talk about my life again?
-I… thought about it, and I believe I haven’t been entirely forthright with the way that I presented my life earlier.
-Thank you… let’s see… I was born poor, that much is true, but we lived near a college campus.
-The people there were nice and I was allowed to audit a bunch of lectures even though I didn’t formally attend.
-My dad was a carpenter, and so I usually helped him make things to make ends meet, but when I had nothing to do, I went to the college. Eventually on my 20th birthday, my parents surprised me with… tuition. I know, not exactly the most exciting thing, but it made me, just, unfathomably happy.
-I took all sorts of classes in all sorts of disciplines, I learned about… just about everything.
-Mathematics, science, western and eastern classics, music, tech, computer science, anatomy, rudimentary law… everything.
-Yet, even as my parents and advisors pushed me to choose something… I just couldn’t. I wanted to learn more, explore more. By the time I realized my money ran out? It was already too late.
-I didn’t live long after that, that truck driver made sure of that. When I died, I realized I had a lot of time to think about my life, but I also got to compare my life to other people’s lives.
-It isn’t hard to see why I might think mine was miserable compared to other people’s after all.
-You… don’t think it was miserable that I never became anything? Why?
-Was I happy? Of course I was.
-Even when I didn’t actually attend the college, I still got to hear about what the professors said, and I still got to make friends and talk to them.
-That’s… all that matters? I see, so that’s how you think… interesting. I have to ponder that.
-Thanks for listening, Caf-Caf, I really do appreciate your time. I’ll see you soon.
+Yknow, I thought about what you said earlier, and I wanted to try again. If you’re okay with it, could I talk to you about my life?
+I… thought about it, and I believe I haven’t been entirely… transparent… with the way that I presented my life last time we talked.
+Let’s see… I was born poor- that much is true- but my family and I lived near a college campus.
+The people there were nice, and I was allowed to audit a bunch of lectures even though I didn’t formally attend.
+My dad was a carpenter, and I usually helped him make things to make ends meet. But… when I had nothing to do, I went to the college. Eventually, on my 20th birthday, my parents surprised me with… tuition. I know, I know… not exactly the most exciting thing. But it made me just… unfathomably happy.
+I took all sorts of classes in all sorts of disciplines- I learned about… just about everything.
+Mathematics, science, western and eastern classics, music, tech, computer science, anatomy, rudimentary law- you name it.
+Yet, even as my parents and advisors pushed me to choose something… I just couldn’t. I wanted to learn more, explore more. By the time I realized my money ran out, It was already too late.
+I didn’t live long after that- that truck driver made sure of that. When I died, I realized I had a lot of time to think about my life, compare my life to other people’s lives.
+It's not hard to see why I think my life was miserable compared to other peoples' lives after all.
+You… don’t think it was miserable that I never became anything? …Why?
+Was I happy? Of course I was!
+Even when I didn’t actually attend the college, I still had the chance to learn from the professors and make friends.
+That’s… all that matters? I see, so that’s how you think… interesting. I'll have to ponder that.
+Thanks for listening, Caf-Caf. I really do appreciate your time. I’ll see you soon.
 [End]
 
 [Story]
-Greetings again, C.G. I was thinking the other day about my life, and I think you were right.
-Still, I don’t agree that happiness is everything, but it certainly doesn’t help if I keep telling myself it sucked, no?
-Besides, all of the ghosts here have a reason for being here, right?
-They all have problems, and they’re all dissatisfied in some way. Now, I maintain that my reasons are a bit more… dire than other reasons, but I suppose it's all about perspective.
-What I’m trying to say is… thanks, Caf-Caf. Thanks for listening to me, and thanks for talking with me. You’re a great guy, y’know that? A really helpful little soul.
-What am I gonna do now?
+Greetings again, C.G. I was thinking about what we talked about the other day, and… I think you were right.
+Still, I don’t agree that happiness is everything in life, but it certainly doesn’t help if I keep telling myself it sucked, no?
+Besides, all of the ghosts here have their reasons for being here, right?
+They all have problems, and they’re all dissatisfied in some way. Now, I still think that my reasons are a bit more… concerning, but I suppose it's all about perspective.
+What I’m trying to say is… thanks, Caf-Caf. …For listening to me and for talking with me. You’re a great guy, y’know that?
+…What am I gonna do now?
 Aren’t you nosy, Cafe. Kidding, kidding.
-I think… I want to stay here and watch what the ghosts do.
-That tycoon monocle dude wants to make something, and he even got the column guy to help. I want to wander for a bit… until my metaphorical legs tire.
-I think… I think I miss my parents. They’re not gone yet… but one day they will come.
-When they do… I wanna disappear with them. I don’t know what comes next, but I want to confront whatever it is with them.
+I think… I'll wander for a bit. Until my metaphorical legs tire. 
+And when I'm ready, I want to see what the other ghosts are up to.
+That tycoon monocle dude is trying to make something, and he even got the column guy to help.
+Yknow… I think… I miss my parents. They’re not gone yet, but one day they will come.
+When they do… I want to disappear with them. I don’t know what comes next, but I want to confront whatever it is with them.
 Thanks, Caf. I’ll be seeing you.
 [End]

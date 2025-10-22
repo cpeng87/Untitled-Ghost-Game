@@ -2,7 +2,7 @@ title: OfficeWorkerOrder
 tags:
 position: -54,-23
 ---
-Office Worker Ghost: Just one {GetOrder()}. If you could make it quickly, please? I'm afraid I'm in a bit of a rush...
+Office Worker Ghost: Just one {GetOrder()}. If you could, make it quickly, please. I'm afraid I'm in a bit of a rush...
 <<setCam "Main Camera">>
 ===
 
@@ -21,7 +21,7 @@ tags:
 position: -112,-180
 ---
 <<emotionChange Sad Scribbles>>
-Office Worker: ...It was a waste of my time to come here.
+Office Worker: ...It was a waste of time to come here.
 <<emotionChange Normal>>
 <<setCam "Main Camera">>
 ===
@@ -30,14 +30,14 @@ title: OfficeWorkerStory1
 tags:
 position: 169,38
 ---
-Office Worker: Can't spend too much time here; I've got things to do.
+Office Worker: Can't spend too much time here. I've got things to do.
 Office Worker: I'm looking for my son, you see. He's my... he's my one attachment.
 Office Worker: Hey, you get plenty of ghosts around here, right?
 Office Worker: Would you keep an eye out for him?
-Office Worker: Sorry if I'm being too short with you.
-Office Worker: It's a bad habit from when I was alive, always... rushing through life.
+Office Worker: Sorry if I'm being too blunt with you.
+Office Worker: It's a bad habit from when I was alive. I'm always... rushing through life.
 <<emotionChange Sad>>
-Office Worker: I never made time for anything except work, not even for my family.
+Office Worker: I never made time for anything except work- not even for my family.
 Office Worker: Not even for my son.
 <<emotionChange Normal>>
 <<setCam "Main Camera">>
@@ -47,15 +47,15 @@ title: OfficeWorkerStory2
 tags:
 position: 169,38
 ---
-Office Worker: Hey, you're pretty young, aren't you? My son was too. So I was wondering if, from your perspective... do you think he would hate me?
+Office Worker: Hey, you're pretty young, aren't you? My son was too. So, I was wondering if, from your perspective... do you think he would hate me?
 <<emotionChange Sad>>
 Office Worker: I mean, I was never home.
 Office Worker: I hardly spoke to him, much less treated him like my son.
-Office Worker: I just thought that if I could support his passion... he loves video games, you see, always wanted to be a pro... then, maybe, that would be enough.
+Office Worker: I just thought that, if I could support his passion- he loves video games, you see, and always wanted to be a pro- then, maybe, that would be enough.
 Office Worker: I just... wanted him to be happy.
-Office Worker: Do you think he'd be lonely?
-Office Worker: He must have been, I was hardly ever home, and he's never been great at making new friends.
-Office Worker: I used to get on his case all the time for it back in the day, going on about how he needed to talk to people and go outside more, actually spend the money I was working so hard for him to have.
+Office Worker: Do you think he was lonely?
+Office Worker: He must have been... I was hardly ever home, and he's never been great at making new friends.
+Office Worker: I used to get on his case all the time for it back in the day, going on about how he needed to talk to people and go outside more and actually spend the money I was working so hard for him to have.
 Office Worker: I thought I was helping him, but... maybe I was just pushing him away more.
 <<emotionChange Normal>>
 <<setCam "Main Camera">>
@@ -71,12 +71,12 @@ Office Worker: I thought he needed money, something to chase his dreams with.
 <<emotionChange Sad>>
 Office Worker: What he needed was my time, and I just couldn't stay away from work long enough to see it.
 <<emotionChange Normal>>
-Office Worker: All this time, his passion, his dreams... he did it to make me proud, did you know? And I was. And I am.
+Office Worker: All this time, his passion, his dreams... he did it to make me proud, you know? And I was. And I am.
 Office Worker: Really, there's so much I have to thank you for.
 <<emotionChange Happy Flowers>>
 Office Worker: My son and I are much closer now, and I finally get to spend time with him.
-Office Worker: It's all thanks to you, and your cafe; without you, I never would've realized what my son really wanted, and without your cafe, I never would've found him. 
-Office Worker: So, if this is the last time I see you... thank you. Truly.
+Office Worker: It's all thanks to you and your cafe. Without you, I never would've realized what my son really wanted, and, without your cafe, I never would've found him. 
+Office Worker: So, if this is the last time I see you... Thank you. Truly.
 <<emotionChange Normal>>
 <<setCam "Main Camera">>
 ===

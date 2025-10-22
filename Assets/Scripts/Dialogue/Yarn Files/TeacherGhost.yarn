@@ -2,7 +2,7 @@ title: TeacherOrder
 tags:
 position: -54,-23
 ---
-Teacher Ghost: Ah, what a lovely day! May I please have an {GetOrder()}, darling? Thank you!
+Teacher Ghost: Ah, what a lovely day! May I please have a {GetOrder()}, darling? Thank you!
 <<setCam "Main Camera">>
 ===
 
@@ -34,15 +34,15 @@ position: 0,0
 ---
 Teacher Ghost: Hello, my dear! I fear we haven't had a proper introduction yet.
 Teacher Ghost: I'm Teacher Ghost, and I teach the poor children who passed on too soon.
-Teacher Ghost: It's a dreadful outcome, but no matter how they came here, everyday in the classroom is another day of excitement!
+Teacher Ghost: It's a dreadful outcome, but, no matter how they came here, everyday in the classroom is another day of excitement!
 <<emotionChange Happy Flowers>>
-Teacher Ghost: The kids have so much energy - the other day, a girl flung a lizard into a water pitcher! How intriguing is that?
+Teacher Ghost: The kids have so much energy! The other day, a girl flung a lizard into a water pitcher! How intriguing is that?
 <<emotionChange Normal>>
-Teacher Ghost: And - ah, my apologies, I appear to be rambling.
+Teacher Ghost: And- ah, my apologies, I appear to be rambling.
 Teacher Ghost: I love my students dearly, you see, almost as if they were my own children.
 Teacher Ghost: Now, I believe it's your turn. Cafe Ghost, is it?
 <<emotionChange Happy Flowers>>
-Teacher Ghost: I love how you've made a home for yourself in the afterlife - such rich colors and inviting tones indeed! It shows your blooming character and your love to serve others.
+Teacher Ghost: I love how you've made a home for yourself in the afterlife- such rich colors and inviting tones indeed! It shows your blooming character and your love to serve others.
 <<emotionChange Normal>>
 Teacher Ghost: Now, I do have to get back to my students, so I bid you farewell. See you soon, dear!
 <<setCam "Main Camera">>
@@ -53,16 +53,16 @@ tags:
 position: 0,0
 ---
 Teacher Ghost: Hello, darling! I have a few inquiries for you, if you don't mind.
-Teacher Ghost: No? Oh, you're so kind.
-Teacher Ghost: Well... I was wondering how you feel about talking about... life.
-Teacher Ghost: It's something I've wondered about quite some time. I try not to bring it up in the classroom... for kids to die so young, it must be horrible to recollect.
+Teacher Ghost: You don't? Oh, you're so kind.
+Teacher Ghost: Well... I was wondering how you'd feel about talking about... life.
+Teacher Ghost: It's something I've wondered about quite some time. I try not to bring it up in the classroom... For the kids to die so young, it must be horrible to recollect.
 Teacher Ghost: When newcomers trickle into my school, they often do it for normalcy in the afterlife.
 <<emotionChange Sad>>
-Teacher Ghost: Having friends, learning new things... it's almost as if they didn't die.
+Teacher Ghost: Having friends, learning new things... It's almost as if they didn't die.
 <<emotionChange Normal>>
-Teacher Ghost: Like they were given a second chance.
+Teacher Ghost: ...Like they were given a second chance.
 Teacher Ghost: Ah, I've been rambling again.
-Teacher Ghost: I know life's end is a hard topic to bring up, so I understand why you haven't told me yours - and you never have to, my dear!
+Teacher Ghost: I know life's end is a hard topic to bring up, so I understand why you haven't told me yours- and you never have to, my dear!
 Teacher Ghost: I'm sorry for intruding on such a personal topic, but thank you for patiently listening.
 Teacher Ghost: I'll be seeing you soon, darling.
 <<setCam "Main Camera">>
@@ -72,15 +72,15 @@ title: TeacherStory3
 tags:
 position: 0,0
 ---
-Teacher Ghost: Hello, dear! Thank you for conversing with me once more - that last conversation was quite unbecoming of me.
+Teacher Ghost: Hello, dear! Thank you for conversing with me once more. That last conversation was... quite unbecoming of me.
 Teacher Ghost: I've just often wondered about what I did in my own life.
-Teacher Ghost: I was in a small, desolate town, teaching at most fifteen third-grade children.
+Teacher Ghost: I lived in a small, desolate town, teaching at most fifteen third-grade children.
 <<emotionChange Sad>>
 Teacher Ghost: Meanwhile, Ghostwriter Ghost touched millions of lives with their stories, Musician Ghost captivated millions with their songs, and Actor Ghost had millions of fans desperately awaiting their next release.
 Teacher Ghost: Did I truly make an impact on the world?
-Teacher Ghost: My life's end was quite abrupt and garish, but would anyone notice my legacy? Cry on my grave?
-Teacher Ghost: Hold my hand as I was lowered to the casket?
-Teacher Ghost: I told myself I would take my anxiety over these... existential thoughts to the grave, but I'm here now, expressing the insecurities I never could in life.
+Teacher Ghost: My life's end was quite abrupt and garish, but... would anyone notice my legacy? Cry on my grave?
+Teacher Ghost: ...Hold my hand as I was lowered to the casket?
+Teacher Ghost: I told myself I would take my anxiety and existential thoughts to the grave, but I'm here now, expressing the insecurities I never could in life.
 Teacher Ghost: Should I have gotten promoted?
 Teacher Ghost: Been more ambitious?
 Teacher Ghost: Written books?
@@ -96,19 +96,19 @@ tags:
 position: 0,0
 ---
 Teacher Ghost: Ah, hello darling! I'm feeling a bit better... as one does with the passage of time.
-Teacher Ghost: I was digging into the Strange Case of Dr. Jekyll and Mr. Hyde - you know the book?
+Teacher Ghost: I was digging into the Strange Case of Dr. Jekyll and Mr. Hyde. Do you know the book?
 <<emotionChange Happy Flowers>>
-Teacher Ghost: Phenomenal! Well, I looked into its author, Robert Louis Stevenson, and I found this interesting quote of his - ...don't judge each day by the harvest you reap but by the seeds that you plant...
+Teacher Ghost: Phenomenal! Well, I looked into its author, Robert Louis Stevenson, and I found this interesting quote of his: "...don't judge each day by the harvest you reap but by the seeds that you plant".
 Teacher Ghost: I didn't help just fifteen third-grade children in my life, but I planted the seed of curiosity, determination, and a drive to learn in fifteen children.
 <<emotionChange Normal>>
-Teacher Ghost: I guess my life here counts, too - peculiar, isn't it, that the place I share knowledge to the most people is in the afterlife?
+Teacher Ghost: I guess my life here counts, too. Peculiar, isn't it? That the place where I share my knowledge to the most people is in the afterlife?
 Teacher Ghost: But, no matter.
 Teacher Ghost: Those children need a place to relax and learn.
 <<emotionChange Happy Flowers>>
-Teacher Ghost: They deserve knowledge as much as any other ghost, and I know it!
+Teacher Ghost: They deserve the opportunity to learn as much as any other ghost, and I know it!
 Teacher Ghost: They're good kids... and I need to keep on helping them.
 <<emotionChange Normal>>
-Teacher Ghost: You're always welcome to my schoolhouse, my dear - I know it might not be below your level of knowledge, but you can always learn a thing or two from the children.
-Teacher Ghost: See you soon, darling, and thank you!
+Teacher Ghost: You're always welcome to my schoolhouse, dear. I know it might be a bit below your level of knowledge, but you can always learn a thing or two from the children.
+Teacher Ghost: See you soon, darling! And thank you!
 <<setCam "Main Camera">>
 ===

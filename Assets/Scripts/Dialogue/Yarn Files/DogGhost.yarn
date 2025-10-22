@@ -21,7 +21,7 @@ tags:
 position: -112,-180
 ---
 <<emotionChange Mad>>
-Dog Ghost: Woof...<shaky>grr...</shaky>
+Dog Ghost: Woof... <shaky>grr...</shaky>
 <<emotionChange Mad>>
 <<setCam "Main Camera">>
 ===
