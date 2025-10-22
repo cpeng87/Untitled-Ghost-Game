@@ -80,11 +80,13 @@ public class TicketManager : MonoBehaviour
     {
         if (ordersPanel.activeSelf == false)
         {
+            AudioManager.Instance.PlaySound("ButtonDown");
             ShowOrders();
             SetMakeOrderNotif(false);
         }
         else
         {
+            AudioManager.Instance.PlaySound("ButtonUp");
             HideOrders();
         }
     }

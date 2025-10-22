@@ -63,7 +63,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: fdc884a993ac4f34db27aebabe32490a, type: 3}
   sound:
   - name: DoorChime
-    clip: {fileID: 8300000, guid: 1b410d7a1e4c14e39a873fac96da9112, type: 3}
+    clip: {fileID: 8300000, guid: fa00832b6dd22d248a815f0fcf1ce58a, type: 3}
   - name: Win
     clip: {fileID: 8300000, guid: 52c8e599462e9284ca23eff9620b507e, type: 3}
   - name: Lose
@@ -102,6 +102,10 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: c5e0a6d8f6b918243b1755ed7c153a26, type: 3}
   - name: Pour
     clip: {fileID: 8300000, guid: 08f27b7b9c71b874488c5cd79aa4a6cd, type: 3}
+  - name: ButtonDown
+    clip: {fileID: 8300000, guid: 1751867db322ab148816dbde2afb6067, type: 3}
+  - name: ButtonUp
+    clip: {fileID: 8300000, guid: 51438a85387636b4d86b14c2d8826fd0, type: 3}
   musicSource: {fileID: 2629506111582288496}
   soundSource: {fileID: 3933112506615878686}
 --- !u!1 &5323247890239993855
