@@ -36,8 +36,8 @@ Weeb Ghost: Y'know, you're actually speaking to a Grandmaster player.
 Weeb Ghost: <italic> What? </italic>
 Weeb Ghost: You don't know what that means?
 Weeb Ghost: Heh... normies... you wouldn't understand.
-Weeb Ghost: I'm going to be a huge pro gamer someday and everyone will know my name.
-Weeb Ghost: If you ever want to play sometime, we can duo queue. I'll carry you, don't worry, though you better not bring down my rank.
+Weeb Ghost: I'm going to be a huge pro gamer someday, and everyone will know my name.
+Weeb Ghost: If you ever want to play sometime, we can duo queue. I'll carry you, don't worry. Though you better not bring down my rank.
 Weeb Ghost: I need to hit Challenger, I'm so close to it.
 Weeb Ghost: Then, maybe my dad will... nevermind.
 <<setCam "Main Camera">>
@@ -56,8 +56,8 @@ Weeb Ghost: I mean, I'm fine even if he doesn't!
 <<emotionChange LockedIn>>
 Weeb Ghost: I have my waifu <wiggle> Seraphine </wiggle> to keep me company.
 <<emotionChange Normal>>
-Weeb Ghost: Anyways, once I hit Challenger, he'll have to pay attention to me! I'll be famous. I'll be everywhere, on TV and everything. Just watch!
-Weeb Ghost: Well, loads of reasons, obviously! I'll be super famous so my dad will see me on TV, I'll make loads of money so my dad won't have to work, and I'll get loads of ladies so my dad won't think I'm lonely!
+Weeb Ghost: Anyways, once I hit Challenger, he'll HAVE to pay attention to me! I'll be famous! I'll be everywhere- on TV and everything. Just watch!
+Weeb Ghost: I'll be super famous!! And my dad will see me on TV, and I'll make loads of money so my dad won't have to work, and I'll get loads of ladies so my dad won't think I'm lonely!
 Weeb Ghost: And, well... he was proud of me when I hit silver, wasn't he? And silver's nothing.
 <<emotionChange LockedIn>>
 Weeb Ghost: Low elo.
@@ -72,12 +72,12 @@ position: 169,38
 ---
 <<emotionChange Sad>>
 Weeb Ghost: I... uh, I met my dad the other day.
-Weeb Ghost: He, he wanted to apologize to me?
-Weeb Ghost: And he said... he was proud of me.
+Weeb Ghost: He... he wanted to apologize to me?
+Weeb Ghost: And he said... that he was proud of me.
 Weeb Ghost: Even though I'm not Challenger, or a pro gamer, or have a girlfriend.
-Weeb Ghost: So, um. I don't think I'll be able to carry you anymore, if you do want to play.
+Weeb Ghost: So, um. I don't think I'll be able to carry you anymore, even if you do want to play.
 <<emotionChange Normal>>
-Weeb Ghost: I...I want to make the most of my time with my dad.
+Weeb Ghost: I... I want to make the most of my time with my dad.
 <<emotionChange Sad>>
 Weeb Ghost: I think I might be leaving soon. Just a gut feeling, I guess.
 <<emotionChange Normal>>

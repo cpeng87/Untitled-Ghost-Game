@@ -248,7 +248,7 @@ Reaper: Tell me, dear, how have you been? Have you gotten to know a few of the r
         Reaper: And by speaking to these ghosts, I'm sure you've connected with quite a few of them.
     -> Yeah, I've met some, but anyone I got to know well disappeared.
         Reaper: I'm sorry to hear that.
-        Reaper: Unfortunately, such is the norm in purgatory. Let's try to be happy for them, at least, celebrate that they were able to find peace.
+        Reaper: Unfortunately, such is the norm in purgatory. Let's try to be happy for them, at least, and celebrate that they were able to find peace.
             -> Yeah, you're right
             -> I'm still upset about it
                 Reaper: I understand, and that's a natural reaction.
@@ -258,25 +258,25 @@ Reaper: Tell me, dear, how have you been? Have you gotten to know a few of the r
             -> How do you get over it?
                 Reaper: Well, there is no secret to it.
                 Reaper: Goodbyes will always sting.
-                Reaper: But knowing the ghosts I help are better off at peace, knowing they are no longer bound by regret and remorse, helps settle my grief.
+                Reaper: But knowing the ghosts I help are better off at peace- knowing they are no longer bound by regret and remorse- helps settle my grief.
             -> Do you ever miss them? The ghosts who pass on.
                 Reaper: Of course I do. Some stay in purgatory for much, much longer than they even stay alive, and I will admit to finding comfort in their companionship.
                 <<emotionChange Happy Flowers>>
-                Reaper: But not only is it my duty, it is my life's greatest wish that all ghosts may pass on peacefully. I would not, could not, give up that dream for anything. 
+                Reaper: But not only is it my duty, it is my life's greatest wish that all ghosts may pass on peacefully. I would not- could not- give up that dream for anything. 
                 <<emotionChange Normal>>
         Reaper: You've clearly connected with quite a few of the residents of purgatory. 
 Reaper: You mentioned that you felt as though none of the connections you made with other people held significance. Is that still true?
-    -> Well, it's not that they didn't have significance, just that...they weren't particularly unique, you know? The relationships themselves, I mean, not the people.
+    -> Well, it's not that they didn't have significance, just that... they weren't particularly unique, you know? The relationships themselves, I mean, not the people.
         Reaper: Hmm. Your relationships weren't unique? I'm afraid I have a hard time understanding quite what you mean.
             <<reaperPitch false>>
-            Cafe Ghost: Just about everyone has family, and friends, and maybe a couple dates. There isn't anyone I can point to and say, that person is everything to me. You know?
-            Cafe Ghost: I wish I could, I feel bad not being able to. But I can't. It's like my relationships were meaningless.
-    -> Yeah, I just felt like...I didn't have any relationships that held the sort of power and understanding and care that so many other people have.
+            Cafe Ghost: Just about everyone has family, and friends, and maybe a couple dates. There isn't anyone I can point to and say "that person is everything to me". You know?
+            Cafe Ghost: I wish I could, and I feel bad not being able to. But I can't. It's like my relationships were meaningless.
+    -> Yeah, I just felt like... I didn't have any relationships that held the sort of power and understanding and care that so many other people have.
         Reaper: You mean in comparison to others, your relationships didn't feel strong enough?
             <<reaperPitch false>>
             Cafe Ghost: Yeah, exactly. I didn't have a perfect, ever-supportive family, or an unbreakable friendship, or a fairy-tale romance.
-            Cafe Ghost: I just had...people, who cared most of the time, and who I trusted most of the time.
-            Cafe Ghost: That doesn't feel like enough. My relationships just didn't feel...meaningful.
+            Cafe Ghost: I just had... people, who cared most of the time, and who I trusted most of the time.
+            Cafe Ghost: That doesn't feel like enough. My relationships just didn't feel... meaningful.
 <<reaperPitch true>>
 Reaper: Well, let's not look at it that way. All relationships are meaningful.
 Reaper: The difference is that you passed on with all your relationships resolved or healthy enough that you don't feel the need to change them.
@@ -285,23 +285,23 @@ Reaper: That's a blessing, don't you think?
 <<emotionChange Normal>>
     -> But still, couldn't it be that they didn't mean enough to me to keep me here? My loved ones meant less to me than this stupid sense of inferiority I have.
         Reaper: Let's not invalidate your emotions like that.
-        Reaper: Your feelings aren't "stupid", and it is not a bad thing to have wanted more from your life. And you said so yourself - your loved ones are a part of why you are here.
+        Reaper: Your feelings aren't "stupid", and it is not a bad thing to have wanted more from your life. And you said so yourself- your loved ones are a part of why you are here.
         Reaper: You wished to have more  "meaningful" relationships, no? You wanted to love them more, and be loved more in return.
         <<emotionChange Happy>>
         Reaper: I think that is quite sufficient to conclude that they are a significant part of why you are here.
         <<emotionChange Normal>>
-    -> Maybe, but...I just don't feel like I cared enough about them. Like, in the grand scheme of my life, they mattered less to me than they should have.
-    -> I doubt all my relationships ended on a healthy note. Most of mine, at least, just faded away gradually until I didn't know them at all. Can that really be called resolved?
+    -> Maybe, but... I just don't feel like I cared enough about them. Like, in the grand scheme of my life, they mattered less to me than they should have.
+    -> I doubt all my relationships ended on a healthy note. Most of mine, at least, just gradually faded away until I didn't know them at all. Can that really be called resolved?
 Reaper: And you want to care about them more?
 <<reaperPitch false>>
-Cafe Ghost: Yes. I really wish that I could care that much about them.
+Cafe Ghost: Yes. I really wish that I could care much more about them.
 <<reaperPitch true>>
-Reaper: In my humble opinion, that does sound quite a bit like you do care that much about them, no?
+Reaper: In my humble opinion, that does sound quite a bit like you do care quite a bit about them, no?
 Reaper: Are wanting to care and caring truly so different?
     -> ...Yes. Because only one of them is the one I act on.
         Reaper: Is that what you envy, then? The lengths others go for the people they love?
         Reaper: Every person is different, you know. Some feel less fear. Some people feel more loyalty.
-        Reaper: Some can't think selflessly - it simply doesn't occur to them to consider others.
+        Reaper: Some can't think selflessly- it simply doesn't occur to them to consider others.
         Reaper: Comparing the lengths people would go for you - is that a fair assessment, for either you or them?
         Reaper: Perhaps your mother would be too petrified with fear to fight off a robber for you, while a passing stranger would be confident enough to defend you.
         Reaper: Does that mean that stranger cares for you? Even more than your mother?
@@ -312,7 +312,7 @@ Reaper: Are wanting to care and caring truly so different?
                 Reaper: Then there you go. That means something to you, surely. Those emotions that they brought you.
                 <<emotionChange Normal>>
             -> ...No.
-                Reaper: Oh dear. Well, then, that's certainly a tragic life to have led. None at all? No one in this world has ever touched your heart?
+                Reaper: Oh dear. Well then, that's certainly a tragic life to have led. None at all? No one in this world has ever touched your heart?
                     -> ...Ok, there were a couple.
                         Reaper: Then there you go. That means something to you, surely. Those emotions that they brought you.
                     -> Nope. I'm entirely friendless, loveless, family-less.
@@ -320,9 +320,9 @@ Reaper: Are wanting to care and caring truly so different?
                         Reaper: I would call myself your friend, if you would let me. There are so many people, even in purgatory, who would call you a friend.
                         Reaper: You could even find ghosts desperate for some semblance of a family, if that's what you wanted.
                         Reaper: If you isolate yourself and then despair a lack of relationships, I'm afraid the reason can only be yourself.
-                        Reaper: You have to give others a chance to reach you, if you truly want a real connection.
+                        Reaper: You have to give others a chance to reach you if you truly want a real connection.
                         Reaper: But, besides that, I don't believe that you didn't have any relations whatsoever. Even a stranger passing on the street can brighten your day.
-                        Reaper: It's not about the longevity, or the ending, or the effort put into a relationship - it's only about how it makes you feel.
+                        Reaper: It's not about the longevity, or the ending, or the effort put into a relationship- it's only about how it makes you feel.
                         Reaper: And I know other humans have made you feel emotions. And, thus, I know that you have had meaningful relations.
     -> ...No, I suppose not.
         <<emotionChange Happy>>
@@ -357,14 +357,14 @@ Cafe Ghost: I've talked to a lot of ghosts who had regrets about their impact on
 Cafe Ghost: I just feel like nothing I did on Earth changed anything, like it didn't matter that I lived. Whatever the purpose of life is, I'm sure that I failed to fulfill it.
 <<reaperPitch true>>
 Reaper: ...Well, I don't want to invalidate what you are feeling, but I cannot help but disagree fundamentally with the idea that your life was wasted.
-Reaper: For one, the idea that life has a purpose, some concrete destination, is simply ludicrous to me. That there could be a meaning assigned to something as open and diverse as life is simply impossible.
-Reaper: The meaning of life is whatever you make of it, and might I say, you made an incredible life. 
+Reaper: For one, the idea that life has a purpose- some concrete destination- is simply ludicrous to me. That there could be a meaning assigned to something as open and diverse as life is simply impossible.
+Reaper: The meaning of life is whatever you make of it, and, might I say, you made an incredible life. 
 <<emotionChange Happy Flowers>>
 Reaper: Look at how many people you've reached, how many lives were changed by your presence!
 <<emotionChange Happy>>
-Reaper: You helped a friend understand their science homework, long ago, and even now they mourn your absence.
-Reaper: You planted a tree, as a child - that's a large oak now, home to a family of little squirrels.
-Reaper: And, in the end, little impact or large, the only person your life should matter to is yourself. 
+Reaper: You helped a friend understand their science homework long ago, and even now they mourn your absence.
+Reaper: You planted a tree as a child. That sprout is a large oak now, home to a family of little squirrels.
+Reaper: And, in the end, whether your impact was little or large, the only person your life should matter to is yourself. 
 <<emotionChange Normal>>
 Reaper: So, are you really unhappy with the life you led?
     ->...If the purpose of life is whatever I want it to be, then I wanted more than I was.
@@ -372,19 +372,19 @@ Reaper: So, are you really unhappy with the life you led?
         Reaper: I know you wanted more from yourself, that you expected more from yourself. 
     -> It just doesn't feel like enough, you know? Planting one dumb tree doesn't magically make my life worthwhile.
         Reaper: I assure you, it is only yourself who does not see your life as worthwhile.
-        Reaper: And there's no need to dismiss your actions so quickly, a tree is still a precious life like any other, no?
+        Reaper: And there's no need to dismiss your actions so quickly- a tree is still a precious life like any other, no?
             -> Yeah, I guess so...
-                Reaper:  Your life had an impact, and furthermore, it shouldn't matter whether or not it had an impact.
+                Reaper:  Your life had an impact, and, furthermore, it shouldn't matter whether or not it had an impact.
             -> Nah, not really.
-                Reaper: ...Well, it is not the time or place for that philosophical debate. But the point stands that your life had an impact, and furthermore, it shouldn't matter whether or not it had an impact.
+                Reaper: ...Well, it is neither the time nor place for that philosophical debate. But the point stands that your life had an impact, and, furthermore, it shouldn't matter whether or not it had an impact.
         Reaper: Your expectations, your judgement, they are all self-imposed. Societally influenced, of course, but self-imposed nevertheless.
         <<emotionChange>>
         Reaper: It never mattered at all whether you had an "impact" or not, except to yourself. 
         <<emotionChange Normal>>
 Reaper: But I want you to know that your life was enough.
 Reaper: Let's try and look back at your life, okay? If you can't accept that your life was fulfilling from your perspective, then we'll look at your life from the view of the people around you.
-Reaper: Let's see how you have changed others' lives. And, you don't need to believe me about this, but changing people is the same as changing the world.
-Reaper: Now, in your eyes, who do you think you've impacted the most by your presence?
+Reaper: Let's see how you have changed others' lives. And changing people is the same as changing the world.
+Reaper: Now, in your eyes, who do you think you've impacted the most with your presence?
     -> My family.
         Reaper: Your family, hm? Then, do you think that impact was minimal? Do you not believe that you influenced them at all?
             -> I think I did. I'm not sure if it's for the better.
@@ -394,24 +394,24 @@ Reaper: Now, in your eyes, who do you think you've impacted the most by your pre
                         <<emotionChange Happy>>
                         Reaper: Then there you go. Is that not enough for you, to have been there for your family?
                         <<emotionChange Normal>>
-                        Reaper: In my eyes, to have been what someone else considers family is a great honor. And, you can see for yourself how they grieve your absence.
+                        Reaper: In my eyes, to have been what someone else considers family is a great honor. And you can see for yourself how they grieve your absence.
                         <<emotionChange Happy Flowers>>
-                        Reaper: Being so important to another person - is that not reason enough to say you've had an impact?
+                        Reaper: Being so important to another person- is that not reason enough to say you've had an impact?
                         <<emotionChange Normal>>
             -> Sure, they care about me, but that doesn't mean I changed their lives.
                 Reaper: Could you imagine life without your family?
                 Reaper: How different of a person you would be, how much lonelier you would be.
                 Reaper: Do you not think that they would feel the same without you?
                 <<reaperPitch false>>
-                Cafe Ghost: But...just because they feel that way doesn't mean I was actually changing their lives.
+                Cafe Ghost: But... just because they feel that way doesn't mean I was actually changing their lives.
                 <<reaperPitch true>>
                 Reaper: I must disagree.
                 Reaper: You were a part of their lives, whether you "changed" something or not.
-                Reaper: Just being there, to come home to or see occasionally or remember to call, made you a part of their lives that they now must live without.
+                Reaper: Just being there, to come home to, or see occasionally, or remember to call, made you a part of their lives that they now must live without.
                 Reaper: Your death is proof that your life had meaning, because just look at how different it is when you are gone.
                 Reaper: It is not that grief magically appears from thin air. That is how much you meant to them.
                 <<emotionChange Happy Flowers>>
-                Reaper: Being so important to another person - is that not reason enough to say you've had an impact?
+                Reaper: Being so important to another person- is that not reason enough to say you've had an impact?
                 <<emotionChange Normal>>
     -> My friends.
         <<emotionChange Happy Flowers>>
@@ -419,16 +419,16 @@ Reaper: Now, in your eyes, who do you think you've impacted the most by your pre
         <<emotionChange Normal>>
         Reaper: You've helped so many souls in purgatory find peace, I can only imagine how many more you've helped in life. 
             -> I didn't do much, I just listened...
-                Reaper: And that's more than many people bother to do. Don't downplay your own kindness - you have helped these people. 
+                Reaper: And that's more than many people bother to do. Don't downplay your own kindness- you have helped these people. 
             -> That's just in purgatory though...
                 Reaper: Just because purgatory comes after life does not make it any less real.
                 <<emotionChange Happy>>
-                Reaper: These ghosts, their distress is not invalid simply because they are dead; and therefore, your kindness is not invalid simply because you are too. 
+                Reaper: These ghosts, their distress is not invalid simply because they are dead. Therefore, your kindness is not invalid simply because you are too. 
                 <<emotionChange Normal>>
         Reaper: But tell me about your friends. How have you impacted them?
             -> I don't think I did, though?
                 Reaper: I believe you did. See, friends can be a bond stronger than any, but they are also not bound by anything other than each other.
-                Reaper: Not like family, or yourself, friends come and go much more often.
+                Reaper: Not like family, or yourself. Friends come and go much more often.
                 <<emotionChange Happy Flowers>>
                 Reaper: If you had friends, then that was for a reason. You brought them joy, and they wanted to be around you.
                 Reaper: If that isn't impactful, I don't know what is.
@@ -444,7 +444,7 @@ Reaper: Now, in your eyes, who do you think you've impacted the most by your pre
                 Reaper: Now, let me ask you this.
                 Reaper: Is happiness enough for you?
                 Reaper: If your friends did nothing on Earth except bring you happiness, was their presence worthwhile?
-            -> We were happy together, but...is that really an impact?
+            -> We were happy together, but... is that really an impact?
                 <<emotionChange Happy Flowers>>
                 Reaper: Of course it is! It's as I've said: changing people is the same as changing the world.
                 Reaper: If your presence brought your friends happiness, then you were bringing happiness into the world! Creating it out of thin air!
@@ -458,9 +458,9 @@ Reaper: Now, in your eyes, who do you think you've impacted the most by your pre
         Reaper: It's probably objectively true that you have impacted yourself the most, no? But there's no one who lives completely isolated.
         Reaper: Who knows how many countless small acts of kindness that you've done have made other people's days, or gave them hope, or granted them that courage they needed.
         Reaper: You've heard of the Butterfly Effect, I presume?
-        Reaper: I could wax poetic for days about what you may or may not have caused in the world. 
+        Reaper: I could wax poeticly for days about what you may or may not have caused in the world. 
         <<reaperPitch false>>
-        Cafe Ghost: But is that...enough?
+        Cafe Ghost: But is that... enough?
         <<reaperPitch true>>
         Reaper: I can't tell you that. That's a question for yourself.
         <<emotionChange Happy Flowers>>
@@ -472,7 +472,7 @@ Reaper: Now, in your eyes, who do you think you've impacted the most by your pre
         Reaper: Who knows how many countless small acts of kindness that you've done have made other people's days, or gave them hope, or granted them that courage they needed.
         Reaper: You've heard of the Butterfly Effect, I presume? I could wax poetic for days about what you may or may not have caused in the world. 
         <<reaperPitch false>>
-        Cafe Ghost: But is that...enough?
+        Cafe Ghost: But is that... enough?
         <<reaperPitch true>>
         Reaper: I can't tell you that. That's a question for yourself.
         <<emotionChange Happy Flowers>>
@@ -480,7 +480,7 @@ Reaper: Now, in your eyes, who do you think you've impacted the most by your pre
         Reaper: To me, no one has ever not been enough. 
         <<emotionChange Normal>>
 <<reaperPitch false>>
-Cafe Ghost: I think... I'm starting to understand what you mean, when you say that I've done is enough.
+Cafe Ghost: I think... I'm starting to understand what you mean, when you say that what I've done is enough.
 Cafe Ghost: I did do a lot of things, you know? And met a lot of people, and had a lot of wishes, and maybe even changed a tiny bit of the world.
 Cafe Ghost: Not a lot.
 Cafe Ghost: Not much at all.

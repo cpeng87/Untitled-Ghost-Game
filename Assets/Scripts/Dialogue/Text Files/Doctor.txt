@@ -1,51 +1,51 @@
 [Order]
-I’m feeling like having an {item} right now, think you can make me one real quick?
+I feel like having a {item} right now, think you can make me one real quick?
 [End]
 
 [Success]
-<wiggle>Ah~</wiggle> The drinks here really hit the spot. I should prescribe them to my patients next time~
+<wiggle>Ah~</wiggle> The drinks here really hit the spot. I should prescribe them to my patients next time~!
 [End]
 
 [Failure]
 Urp… I… think I need some medication for this… Sorry…
 [End]
 
-
 [Story]
-You know, this small little shop really reminds me of the coffee shop near the medical school I attended.
-The barista there always had a huge smile on her face as she gave everyone their orders. She messes up a few times, but she always tries her best.
-Keep it up, I’m sure it will all pay off one day.
+You know, this cute little cafe reminds me of the coffee shop near the medical school I attended.
+The barista there always had a huge smile on her face as she made everyone's orders. She messed up a few times, but she always tried her best.
+Her enthusiasm was simply infectious- pun not intended.
+Well, that just goes to show how much people recognize effort. I'm sure your efforts will pay off some day, too.
 [End]
 
 [Story]
-You know, it always amazes me how much someone’s life can change through someone else’s actions.
-As a doctor, I’ve treated so many patients. Some of them were old, barely hanging on to life but still fighting to stay with their loved ones as long as possible.
-Others were young, hurt by things out of their control. People of all ages and backgrounds all come to the hospital for the same purpose, for another chance at life.
+You know, it always amazes me how much actions can change another person’s life.
+As a doctor, I’ve treated so many patients. Some of them were old, barely hanging on to life. Still, they fought to stay with their loved ones as long as possible.
+Others were young, hurt by things out of their control. People of all ages and backgrounds all come to the hospital for the same purpose- for another chance at life.
 Whenever I see their smile or the smile of their loved ones, I realize how much I changed their lives.
 When I was young, I never could have imagined what direction my life would go. But it was all thanks to a stranger that I became who I am today.
-I hope I can find them one day so I can thank them.
+I hope I can find them one day, so I can thank them.
 [End]
 
 [Story]
-Hey… Have you seen… Never mind.
-This shouldn’t be something I should bother you with. If you wish to know, however, I’m looking for a certain soldier.
-He was the stranger I mentioned last time. I heard from some other ghosts that he might have been seen here.
+Hey… Have you seen…? Never mind.
+I shouldn't bother you with this. If you wish to know, however, I’m looking for a certain soldier.
+He was the stranger I mentioned last time. I heard from some other ghosts that he might have been here.
 I… I have to find him.
-He was the reason why I lived to be a doctor.
-Why I… even got a chance live in the first place.
-I had an illness when I was young. And because our village didn’t have a doctor, I was certain I was going to die.
-But when our village was attacked by some enemies, that soldier saved me
+He was the reason why I lived to become a doctor.
+Why I… even got the opportunity to live in the first place.
+I contracted a debilitating illness when I was young. And because our village didn’t have a doctor, I was certain I was going to die.
+A group of doctors from a neighboring town was dispatched to provide aid, but some bandits saw this as an opportunity to steal supplies and attacked our village. That soldier saved me… at the cost of his own life.
 I didn’t want his sacrifice to be in vain, so I pushed myself to live.
-When relief came and the doctors there cured me, I dedicated myself to become a doctor as well. 
+When the aid arrived, I dedicated myself to become a doctor as well. 
 [End]
 
 [Story]
 I finally found him! The Soldier!
-I’m so glad I was able to find him, though it seemed like he had forgotten all about me.
-I didn’t recognize him at first, but the dog tag he had was the one the soldier who saved me had, so it must be them!
-He tried to be humble when I thanked him for what he did, but there’s no way I could just brush it off!
-He was the one who motivated me to keep going! To live for others! If it weren’t for him, I would have either died by those enemy soldiers or died from my illness.
-I.. I think I’m ready to move on now that I was able to say my thanks.
-I’m really glad that this place existed.
-Thank you for the drinks. I’m sure that they helped change some people’s lives for the better. 
+I’m so glad I was able to find him… though, it seemed like he had forgotten all about me.
+I didn’t recognize him at first, but the dog tag he wore matched the one worn by the soldier who saved me, so it must be him!
+He tried to be humble when I thanked him for what he did, but there’s no way I could just brush it off!!
+He was the one who motivated me to keep going- to live for others! If it weren’t for him, I would have either died by those bandits or passed from my illness.
+Now that I've said my thanks, I… think I’m ready to move on.
+I’m really glad that this place exists.
+And thank you for the drinks. I’m sure that they've helped change some people’s lives for the better. 
 [End]

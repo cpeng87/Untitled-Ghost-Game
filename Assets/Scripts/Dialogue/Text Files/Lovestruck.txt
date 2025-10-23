@@ -2,39 +2,39 @@
 Hi! Your cafe is so cute… I’d like one {item} please!
 
 [Success]
-Thank you! This place would make such a cute first date…Maybe I’ll finally meet someone here!
+Thank you! This place would make for such a cute first date… Maybe I’ll finally meet someone here!
 
 [Failure]
-Oh…I don’t think this is what I asked for. I don’t think my date would be impressed…
+Oh… I don’t think this is what I asked for. I don’t think my date would be impressed…
 
 [Story 1]
 Are you looking for love? 
 Oh? Are you interested in anyone? Sorry, don’t mean to pry!
-Old habits…I used to be quite good at setting people up on dates!
+Old habits… You know, I used to be quite good at setting people up on dates!
 All my friends would come to me for dating advice…
-Hm? Oh, no, I never dated anyone myself. Never seemed to be able to find the right person.
-I’d like to, though…doesn’t everyone? Romance just sounds so dreamy…
+Hm? Oh, no… I never dated anyone myself. Never seemed to be able to find the right person.
+I’d like to, though- doesn’t everyone? Romance just sounds so dreamy…
 
 [Story 2]
 Did you watch that new rom-com that came out? 
 Could you keep an ear out to see if anyone else is interested in romance?
 Oh, really? You’d do that for me? Thanks so much! Let me know if anyone else is a romance fan! 
 
-
 [Story 4]
 Someone confessed to me, before I died. It was my best friend, actually! Totally caught me off guard. 
-I didn’t even know what to say. I told them I needed some time to respond, but then, well…I guess I never did. 
-I’ve had a lot of time to think about it but I still don’t really know what I would have said. 
-If there was anyone I was going to fall in love with, it would have been them - they were everything I ever wanted. But I didn’t. 
-Ah! Sorry, I’ve just been sitting here and taking up your time…Thanks for listening!
+I didn’t know what to say… I told them I needed some time to respond, but, well… I guess I never did. 
+I’ve had a lot of time to think about it, but I still don’t know what I would have said. 
+If there was anyone I was going to fall in love with, it would have been them- they were everything I ever wanted. 
+…But I didn’t. 
+Ah! Sorry, I’ve just been sitting here and taking up your time… Thanks for listening!
 
 
 [Story 5]
-Hi again! Oh, you found someone who wants to meet me? Oh…I…Thank you, but I think I have to turn them down. 
-I’ve been thinking a lot lately, and I’ve realized that I…I think I liked the idea of falling in love more than I actually really wanted to.
+Hi again! Oh, you found someone who wants to meet me? Oh… I… Thank you, but I think I'll have to turn them down. 
+I’ve been thinking a lot lately, and I’ve realized that… I think I liked the idea of falling in love more than I actually wanted to.
 Everyone always seemed so happy when I helped matchmake them, yknow? And I wanted that for myself. 
-But I think I’m happy, right now. And maybe I don’t need to fall in love.
-Maybe I never really wanted to.
-Here, I’ve got some bittersweet chocolates.
+But I think I’m happy right now. And maybe I don’t need to fall in love!
+Maybe… I never really wanted to.
+Here, take some bittersweet chocolates.
 I always wanted to give this to a crush, but I think you should have it.
 Thanks for always listening to me.

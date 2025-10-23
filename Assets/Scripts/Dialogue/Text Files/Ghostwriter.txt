@@ -1,73 +1,72 @@
 [Order]
-Ugh, I’ve got writer’s block again….oh, sorry, just one {item} please.
+Ugh, I’ve got writer’s block again… Oh, sorry, just one {item} please.
 [End]
 
 [Success]
-Oh, wow, this is delicious! You’re like a magical barista! Oh - that’s a new idea, I should write that down quickly….
+Oh, wow, this is delicious! You’re like… a magical barista! Oh- that’s a new idea, I should write that down quickly…
 [End]
 
 [Failure]
-Oh, that’s…a creative way of interpreting that...
+That’s a… creative way of interpreting that…
 [End]
 
 [Story]
-Oh, wait, you’re talking to me?
-Yes! Hi!! I see you run this cafe - I wrote a story about a cafe romance once, you know?
-It wasn’t anything great, and I wasn’t happy with it, but you know cafe stories are all the rage nowadays, so my author said it would sell…
+Oh, wait… you’re talking to me?
+Yes! Hi!! I see you run this cafe- I wrote a story about a cafe romance once, you know?
+It wasn’t anything great, and I wasn’t happy with it… But, cafe stories are all the rage nowadays, so my author said it would sell…
 Oh, not that I’m some money-chaser or anything!
-It’s just, well, I also need to eat…
+It’s just, well… I also need to eat…
 [End]
 
 [Story]
 Your cafe is really great!
-I used to come to places like this all the time to write.
+I used to come to places like this all~ the time to write.
 The author I worked for also liked cafes, so we often met over coffee or something.
 What?
-Oh, my author? Well, I’m a ghostwriter, after all.
+Oh, my author? Well, I am a ghostwriter, after all.
 I write the work, my author puts her name on it, and it gets shipped out!
-I’m really - quite fine with this, of course! I don’t do well with fame, and the spotlight, and all. Yeah.
+I’m quite fine with this, of course! I don’t do well with fame and the spotlight and all that… Yeah.
 [End]
 
 [Story]
-Hey, have you ever read anything I’ve written?
+Hey, I'm kinda curious. Have you ever read anything I’ve written?
 Maybe “Battle and Tranquility”? Or “Small Cottage on the Meadow”?
-Oh, yes, I wrote those! 
-I’m so happy you know them, I loved writing those so much!
-Did - do you know my name? I was listed as, uh, an editor on those books, I think - under the acknowledgements, for sure!
-- no? …well, no one remembers anyone except the author, of course.
-I shouldn’t be surprised. 
+Oh, yes! I wrote those! 
+I’m so happy you know them, I loved writing those so much~!
+D-did do you recognize my name? I was listed as, uh… an editor on those books, I think… under the acknowledgements, for sure!
+No…? …Well, I guess I shouldn't be surprised. No one remembers anyone except the author… haha…
 [End]
 
 [Story]
 Hi again!
-…Hm, you want to know why I kept ghostwriting instead of publishing?
+Hm? you want to know why I kept ghostwriting instead of publishing?
 Well, you see… when I first started as a writer, I couldn’t get anyone to publish my work.
-None of my works got any offers, and I just really, really wanted for people to be able to read my work.
+None of my works got any offers, even though I just really, really wanted for people to be able to read my work.
 I didn’t care that it was under a different name, at the time.
-I…I’m not sure when I suddenly started caring.
+I-I’m not sure when I suddenly started caring.
 [End]
 
 [Story]
-Hey, I thought about it more, and, well. I did want recognition.
-I wanted so badly to talk to the people I’ve inspired, to be able to speak publicly about my experience writing, to see that I had done something for the world, and have other people tell me that too.
-And, well, I’m still frustrated about it.
-That I never got to do that, that I never had the courage to become an author all on my own.
-But…maybe it’s not too late to?
+Hey, I thought about it more, and… I think I did actually want recognition.
+I wanted so badly to talk to the people I’ve inspired, to be able to speak publicly about my experience writing, to see that I had done something for the world, and to have other people tell me that too…
+And, well… I’m still frustrated about it.
+That I never got to do that- that I never had the courage to become an author all on my own.
+But… maybe it’s not too late?
 [End]
 
 [Story]
 Hey, do you think I should start writing again?
-No one will read it but ghosts, of course, but…I miss writing.
-Sometimes I forget why I became a writer in the first place - it wasn’t for money, or fame, or recognition, even if that’s what I died wishing for.
-I just wanted to write, and for someone to read my work, and feel touched.
-And - people did, right? Lots of people! Even if it wasn’t my name.
-Maybe that’s enough.
+No one will read it but ghosts, of course, but… I really miss writing.
+Sometimes, I forget why I became a writer in the first place. It wasn’t for money, or fame, or recognition- even if that’s what I died wishing for.
+I just wanted to write, and for someone to read my work and feel inspired.
+And people did, right? Lots of people! Even if it wasn’t under my name.
+Maybe… that’s enough.
 Maybe, now that I can write under my own name, I’ll feel like it’s enough.
 [End]
 
 [Story]
 Hey, Cafe Ghost! This might be the last time I see you, so here. It’s my new book!
-I just published it today, under my own name this time, and I wanted you to be the first to read it.
+I just published it today, under my own name this time. I wanted you to be the first to read it.
 I owe a lot to you for listening to me talk. It might not seem like much to you, but it helped me a bunch.
 I’ve done everything I wanted, really, and I think it’s time I let myself be happy with what I’ve accomplished.
 I hope you like my book!
