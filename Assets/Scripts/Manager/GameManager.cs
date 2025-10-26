@@ -27,9 +27,10 @@ public class GameManager : MonoBehaviour
     public State state;
     public int maxGhosts;
     public Arc arc;
+    public MCGhostController mcGhostController;
 
     public bool parsedDialogue = false;
-
+    public Vector3 MCStartPosition;
     // Singleton
     private void Awake()
     {
@@ -52,6 +53,7 @@ public class GameManager : MonoBehaviour
         ghostManager = GetComponent<GhostManager>();
         ghostManager.Setup();
         SetupTutorialDictionary();
+        Debug.Log("GameManager instance ID: " + GetInstanceID());
     }
 
     private void SetupTutorialDictionary()
@@ -264,11 +266,21 @@ public class GameManager : MonoBehaviour
     public void SwitchToMain()
     {
         state = State.Main;
+        if (mcGhostController != null)
+        {
+            mcGhostController.UnlockMovement();
+        }
     }
 
     public void SwitchToDialogue()
     {
         state = State.Dialogue;
+        if (mcGhostController != null)
+        {
+            mcGhostController.TeleportTo(MCStartPosition, Quaternion.identity);
+            mcGhostController.LockMovement();
+            Debug.Log("Switched to Dialogue locking movement");
+        }
     }
 
     public void AddCurrency(int added)
