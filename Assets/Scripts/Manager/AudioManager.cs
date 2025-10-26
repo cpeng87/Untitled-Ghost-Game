@@ -102,7 +102,11 @@ public class AudioManager : MonoBehaviour
 
             currentSong = songName;
 
-            if (currentFade != null) StopCoroutine(currentFade);
+            if (currentFade != null)
+        {
+            StopCoroutine(currentFade);
+            musicSource.volume = 0.5f;
+        }
             currentFade = StartCoroutine(FadeToNewTrack(clip, fadeTime));
 
             OnSongChanged?.Invoke(songName);
@@ -139,27 +143,34 @@ public class AudioManager : MonoBehaviour
         return true;
     }
 
-    private System.Collections.IEnumerator FadeToNewTrack(AudioClip newClip, float fadeTime)   {
-    float startVol = musicSource.volume;
+    private System.Collections.IEnumerator FadeToNewTrack(AudioClip newClip, float fadeTime)
+    {
+        float startVol = musicSource.volume;
+        float endVol = startVol;
 
-    // fade out
-    for (float t = 0; t < fadeTime; t += Time.unscaledDeltaTime)   {
-        musicSource.volume = Mathf.Lerp(startVol, 0, t / fadeTime);
-        yield return null;
+        // fade out
+        for (float t = 0; t < fadeTime; t += Time.unscaledDeltaTime)
+        {
+            musicSource.volume = Mathf.Lerp(startVol, 0, t / fadeTime);
+            yield return null;
+        }
+
+        musicSource.volume = 0;
+        musicSource.Stop();
+        musicSource.clip = newClip;
+        musicSource.Play();
+
+        // fade in
+        for (float t = 0; t < fadeTime; t += Time.unscaledDeltaTime)
+        {
+            musicSource.volume = Mathf.Lerp(0, endVol, t / fadeTime);
+            yield return null;
+        }
+
+        musicSource.volume = endVol;
+        currentFade = null;
     }
 
-    musicSource.Stop();
-    musicSource.clip = newClip;
-    musicSource.Play();
-
-    // fade in
-    for (float t = 0; t < fadeTime; t += Time.unscaledDeltaTime)   {
-        musicSource.volume = Mathf.Lerp(0, startVol, t / fadeTime);
-        yield return null;
-    }
-
-    musicSource.volume = startVol;
-}
 
     public void StopSong()
     {
@@ -222,7 +233,11 @@ public class AudioManager : MonoBehaviour
         Debug.Log("Music Index: " + currIndex);
         currentSong = music[currIndex].name;
 
-        if (currentFade != null) StopCoroutine(currentFade);
+        if (currentFade != null)
+        {
+            StopCoroutine(currentFade);
+            musicSource.volume = 0.5f;
+        }
         currentFade = StartCoroutine(FadeToNewTrack(musicDict[currentSong], fadeTime));
 
         // musicSource.Stop();
@@ -244,7 +259,11 @@ public class AudioManager : MonoBehaviour
             }
 
 
-            if (currentFade != null) StopCoroutine(currentFade);
+            if (currentFade != null)
+        {
+            StopCoroutine(currentFade);
+            musicSource.volume = 0.5f;
+        }
             currentFade = StartCoroutine(FadeToNewTrack(musicDict[currentSong], fadeTime));
 
             // musicSource.Stop();
