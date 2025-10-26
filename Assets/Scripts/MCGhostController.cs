@@ -93,7 +93,7 @@ public class MCGhostController : MonoBehaviour
     public void LockMovement()
     {
         canMove = false;
-        _rb.velocity = Vector3.zero;
+        _rb.linearVelocity = Vector3.zero;
     }
 
     public void UnlockMovement()
@@ -105,6 +105,6 @@ public class MCGhostController : MonoBehaviour
     {
         _rb.position = position;
         _rb.rotation = rotation;
-        _rb.velocity = Vector3.zero;
+        _rb.linearVelocity = Vector3.zero;
     }
 }
