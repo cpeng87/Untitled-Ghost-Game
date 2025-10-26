@@ -98,8 +98,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Minigames/Soup.unity
     guid: 901fa7f6cd76d4145a8a5c58dda1ebc9
-  - enabled: 0
-    path: Assets/Scenes/Minigames/New Cookie.unity
+  - enabled: 1
+    path: Assets/Scenes/Minigames/Cookie.unity
     guid: 0a19adc217253cd4884e6b4cd33bad8f
   - enabled: 1
     path: Assets/Scenes/MainStorefront.unity
@@ -110,8 +110,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Minigames/Boba.unity
     guid: cbf8d6c8c1052074992da754cb349260
-  - enabled: 1
-    path: Assets/Scenes/Minigames/Cookie.unity
+  - enabled: 0
+    path: Assets/Scenes/Minigames/Old Cookie.unity
     guid: 02bb84243f6c72e459b19e61452196d4
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

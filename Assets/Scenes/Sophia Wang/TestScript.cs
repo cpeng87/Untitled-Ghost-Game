@@ -6,8 +6,8 @@ class Draw : MinigameCompletion
 {
 
     [SerializeField] private Camera cam;
-    [SerializeField] private int totalXPixels = 1024;
-    [SerializeField] private int totalYPixels = 512;
+    [SerializeField] private int totalXPixels = 1920;
+    [SerializeField] private int totalYPixels = 1080;
     [SerializeField] private int brushSize = 2;
     [SerializeField] private Color brushColor;
     [SerializeField] private bool useInterpolation = true;
@@ -92,6 +92,7 @@ class Draw : MinigameCompletion
 
     private void ChangePixelsAroundPoint()
     {
+        xPixel = xPixel - 70;
         if (useInterpolation && pressedLastFrame && (lastX != xPixel || lastY != yPixel))
         {
             int dist = (int)Mathf.Sqrt((xPixel - lastX) * (xPixel - lastX) + (yPixel - lastY) * (yPixel - lastY));
