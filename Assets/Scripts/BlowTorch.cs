@@ -15,6 +15,10 @@ public class BlowTorch : MonoBehaviour
 
     public TMP_Text text;
 
+    [SerializeField] private Color green;
+    [SerializeField] private Color yellow;
+    [SerializeField] private Color red;
+
     private void Start()
     {
         fireEffect.Stop();
@@ -34,13 +38,12 @@ public class BlowTorch : MonoBehaviour
         if (!fireEffect.isPlaying)
         {
             fireEffect.Play();
-            AudioManager.Instance.PlaySound("Blowtorch");
             blowTorch.transform.Rotate(0, 0, -20f);
 
             int currScore = ringScript.GetScore();
             float scoreIncrement = RingScript.ScoreToSliderIncrement(currScore);
 
-            text.color = (scoreIncrement == 10) ? Color.green : (scoreIncrement > 0) ? Color.yellow : Color.red;
+            text.color = (scoreIncrement == 10) ? green : (scoreIncrement > 0) ? yellow : red;
             string toPlay = (scoreIncrement == 10) ? "Great" : (scoreIncrement > 0) ? "Okay" : "Bad";
             AudioManager.Instance.PlaySound(toPlay);
 

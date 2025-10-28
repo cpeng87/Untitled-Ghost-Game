@@ -12,10 +12,15 @@ public enum CakeState
 
 public class Rotate : MonoBehaviour
 {
-    private KeyCode leftArrow = KeyCode.A;
-    private KeyCode rightArrow = KeyCode.D;
-    private KeyCode upArrow = KeyCode.W;
-    private KeyCode downArrow = KeyCode.S;
+    private KeyCode a = KeyCode.A;
+    private KeyCode d = KeyCode.D;
+    private KeyCode w = KeyCode.W;
+    private KeyCode s = KeyCode.S;
+    private KeyCode leftArrow = KeyCode.LeftArrow;
+    private KeyCode rightArrow = KeyCode.RightArrow;
+    private KeyCode upArrow = KeyCode.UpArrow;
+    private KeyCode downArrow = KeyCode.DownArrow;
+    
     public int numFlourState = 2;
     [SerializeField] private CakeState cakeState = CakeState.LeftMix;
     [SerializeField] private float progress;
@@ -38,7 +43,8 @@ public class Rotate : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyUp(leftArrow) || Input.GetKeyUp(rightArrow) || Input.GetKeyUp(upArrow) || Input.GetKeyUp(downArrow))
+        if (Input.GetKeyUp(leftArrow) || Input.GetKeyUp(rightArrow) || Input.GetKeyUp(upArrow) || Input.GetKeyUp(downArrow) ||
+            Input.GetKeyUp(a) || Input.GetKeyUp(d) || Input.GetKeyUp(w) || Input.GetKeyUp(s))
         {
             AudioManager.Instance.StopSound();
         }
@@ -70,7 +76,7 @@ public class Rotate : MonoBehaviour
                 }
                 timer = 0;
             }
-            if (Input.GetKey(leftArrow))
+            if (Input.GetKey(leftArrow) || Input.GetKey(a))
             {
                 if (cakeState == CakeState.LeftMix)
                 {
@@ -87,7 +93,7 @@ public class Rotate : MonoBehaviour
                 }
 
             }
-            else if (Input.GetKey(rightArrow))
+            else if (Input.GetKey(rightArrow) || Input.GetKey(d))
             {
                 if (cakeState == CakeState.RightMix)
                 {
@@ -103,7 +109,7 @@ public class Rotate : MonoBehaviour
                     AudioManager.Instance.StopSound();
                 }
             }
-            else if (Input.GetKey(upArrow))
+            else if (Input.GetKey(upArrow) || Input.GetKey(w))
             {
                 if (cakeState == CakeState.UpMix)
                 {
@@ -119,7 +125,7 @@ public class Rotate : MonoBehaviour
                     AudioManager.Instance.StopSound();
                 }
             }
-            else if (Input.GetKey(downArrow))
+            else if (Input.GetKey(downArrow) || Input.GetKey(s))
             {
                 if (cakeState == CakeState.DownMix)
                 {

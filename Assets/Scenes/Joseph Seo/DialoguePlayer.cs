@@ -198,9 +198,14 @@ public class DialoguePlayer : MonoBehaviour
         }
         else
         {
-            GameManager.Instance.state = State.Main;
+            StartCoroutine(CountdownMain());
         }
 
         GameManager.Instance.SaveGame();
+    }
+
+    private IEnumerator CountdownMain () {
+        yield return new WaitForSeconds (0.25f);
+        GameManager.Instance.state = State.Main;
     }
 }
