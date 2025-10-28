@@ -108,7 +108,6 @@ public class DialoguePlayer : MonoBehaviour
     }
 
     public void StartStoryDialogue(string storyToStart) {
-        Debug.Log(storyToStart);
         StartCoroutine(StoryDialogue(storyToStart));
     }
 
@@ -134,6 +133,7 @@ public class DialoguePlayer : MonoBehaviour
     // Specific Order Dialogue
     // Function called to queue up the order dialogue
     public void StartOrderDialogue(string ghostName, string recipe, int seatNum) {
+        Reset();
         this.seatNum = seatNum;
         this.currentOrder = recipe;
         CameraManager.Instance.SwapToSeatCamera(seatNum);
@@ -147,6 +147,7 @@ public class DialoguePlayer : MonoBehaviour
     }
 
     public void CompleteOrderDialogue(string ghostName, int seatNum, bool result) {
+        Reset();
         CameraManager.Instance.SwapToSeatCamera(seatNum);
         this.seatNum = seatNum;
         string parsedName = ghostName.Replace(" Ghost", "");
