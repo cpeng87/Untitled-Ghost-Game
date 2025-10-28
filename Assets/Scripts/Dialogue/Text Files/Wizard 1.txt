@@ -11,7 +11,7 @@ Gah! This {item} reeks of a curse! Are you trying to damper my powers, dear mort
 [End]
 
 [Story]
-Ah, you want to know about me, dear mortal? Ohoho, I’m glad you’ve asked!
+Ah, you want to know about me, dear mortal? Ohoho, I'm glad you've asked!
 You may call me <wiggle> Emrys, master of the arcane arts! </wiggle>
 Say, have you ever thought about doing an apprenticeship in sorcery? I can show you the world in its purest form!
 Spectacle!
@@ -33,8 +33,8 @@ Today, I shall teach you… spellcasting!
 We shall start with a basic levitation spell. Try to levitate the dish you just served me!
 Close your eyes, and imagine it floating slowly upwards. As if it is weightless, similar to you and I…
 Aha!
-You’ve done- Huh?
-What do you mean, you “just picked it up”?
+You've done- Huh?
+What do you mean, you "just picked it up"?
 Nonsense, mortal, be proud of your magical abilities! You are not my apprentice for nothing!
 No need to fear, though, as the next lesson shall be much more challenging!
 Be prepared, dear mortal!
@@ -75,7 +75,7 @@ It becomes… incredibly difficult for me to find reasons I loved my past life e
 And when I do find the reasons, they appear incredibly… trivial, compared to what I spent most of my life doing.
 I was not a wizard in my past life, but with each passing day, I wished that I was.
 I yearned for control over my own destiny that I could never have - I only found it in my silly dreams of wizardry.
-But alas, not everyone’s life is meant to be what they desire. Or at least, that is what I have assured myself. Ah…
+But alas, not everyone's life is meant to be what they desire. Or at least, that is what I have assured myself. Ah…
 [End]
 
 
@@ -90,7 +90,7 @@ As for myself, well… Ever since our last session, I have been deep in thought.
 And now, I have decided to swear off necromancy. Our lesson made me realize that perhaps, I have been holding too tightly onto regrets from a life bygone, despite becoming what I so desperately wanted to be back then.
 I, Emrys Alistair Artemis Evander - <wiggle>perhaps I should shorten some of my names</wiggle> - am a wizard, and I am in control over my own destiny!
 I am no longer shackled to graphs and statistics!
-Now, I shall continue my journey to discover all of this realm’s secrets, and share the joys of magic with every soul I can find!
+Now, I shall continue my journey to discover all of this realm's secrets, and share the joys of magic with every soul I can find!
 And perhaps, once I learn enough, I can return to this humble cafe, and teach you all I know once again, dear mortal.
 I admit, I will miss our talks of sorcery over coffee for as long as we are separated.
 But this is not goodbye - In fact, this is only the start of our journey!

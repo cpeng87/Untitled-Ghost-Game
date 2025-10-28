@@ -21,7 +21,7 @@ public class GhostSpawningManager : MonoBehaviour
     [SerializeField] private float rotationSpeed = 135f;
     [SerializeField] private float minRotationSpeed = 90f;
     [SerializeField] private float spinSpeed = 125f;
-    private double sulkSpeed = 1f;
+    private double sulkSpeed = 1.5f;
     private Quaternion RotationGoal1 = Quaternion.Euler(0f, -90f, 0f);
     private Quaternion RotationGoal2 = Quaternion.Euler(0f, 0f, 0f);
     private bool isReaperSpawn = false;

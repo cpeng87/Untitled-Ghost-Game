@@ -1,9 +1,9 @@
 [Order]
-Just one {item}. If you could make it quickly, please? I’m afraid I’m in a bit of a rush…
+Just one {item}. If you could make it quickly, please? I'm afraid I'm in a bit of a rush…
 [End]
 
 [Success]
-Oh, this {item} is delicious. You’re quite good at your job, aren’t you?
+Oh, this {item} is delicious. You're quite good at your job, aren't you?
 [End]
 
 [Failure]
@@ -11,21 +11,21 @@ Oh, this {item} is delicious. You’re quite good at your job, aren’t you?
 [End]
 
 [Story]
-Can’t spend too much time here; I’ve got things to do.
-I’m looking for my son, you see. He’s my … he’s my one attachment.
+Can't spend too much time here; I've got things to do.
+I'm looking for my son, you see. He's my … he's my one attachment.
 Hey, you get plenty of ghosts around here, right?
 Would you keep an eye out for him?
 [End]
 
 [Story]
-Sorry if I’m being too short with you.
-It’s a bad habit from when I was alive, always…rushing through life.
+Sorry if I'm being too short with you.
+It's a bad habit from when I was alive, always…rushing through life.
 I never made time for anything except work, not even for my family.
 Not even for my son. 
 [End]
 
 [Story]
-Hey, you’re pretty young, aren’t you? My son was too. So I was wondering if, from your perspective…do you think he would hate me?
+Hey, you're pretty young, aren't you? My son was too. So I was wondering if, from your perspective…do you think he would hate me?
 I mean, I was never home.
 I hardly spoke to him, much less treated him like my son.
 I just thought that if I could support his passion — he loves video games, you see, always wanted to be a pro — then, maybe, that would be enough.
@@ -33,9 +33,9 @@ I just…wanted him to be happy.
 [End]
 
 [Story]
-Do you think he’d be lonely?
+Do you think he'd be lonely?
 My son, I mean.
-He must have been, I was hardly ever home, and he’s never been great at making new friends.
+He must have been, I was hardly ever home, and he's never been great at making new friends.
 I used to get on his case all the time for it back in the day, going on about how he needed to talk to people and go outside more, actually spend the money I was working so hard for him to have.
 I thought I was helping him, but…maybe I was just pushing him away more.
 [End]
@@ -44,14 +44,14 @@ I thought I was helping him, but…maybe I was just pushing him away more.
 I was wrong, by the way.
 It was never enough to just financially support my son.
 I thought he needed money, something to chase his dreams with.
-What he needed was my time, and I just couldn’t stay away from work long enough to see it.
+What he needed was my time, and I just couldn't stay away from work long enough to see it.
 All this time, his passion, his dreams — he did it to make me proud, did you know? And I was. And I am. 
 [End]
 
 
 [Story]
-Really, there’s so much I have to thank you for.
+Really, there's so much I have to thank you for.
 My son and I are much closer now, and I finally get to spend time with him.
-It’s all thanks to you, and your cafe; without you, I never would’ve realized what my son really wanted, and without your cafe, I never would’ve found him. 
+It's all thanks to you, and your cafe; without you, I never would've realized what my son really wanted, and without your cafe, I never would've found him. 
 So, if this is the last time I see you — thank you. Truly.
 [End]

@@ -43,7 +43,7 @@ Lovestruck Ghost: All my friends would come to me for dating advice... and it se
 <<emotionChange Normal>>
 Lovestruck Ghost: Hm? Oh, no... I never dated anyone myself. Never seemed to be able to find the right person.
 <<emotionChange Happy Flowers>>
-Lovestruck Ghost: I’d like to, though- doesn’t everyone? Romance just sounds so dreamy...
+Lovestruck Ghost: I'd like to, though- doesn't everyone? Romance just sounds so dreamy...
 Lovestruck Ghost: Let me know if anyone else is a romance fan, I'd love to get to know them!
 <<emotionChange Normal>>
 <<setCam "Main Camera">>
@@ -55,9 +55,9 @@ position: 0,0
 ---
 Lovestruck Ghost: Someone confessed to me, before I died. It was my best friend, actually! Totally caught me off guard. 
 <<emotionChange Sad>>
-Lovestruck Ghost: I didn’t know what to say... I told them I needed some time to respond, but, well... I guess I never did. 
+Lovestruck Ghost: I didn't know what to say... I told them I needed some time to respond, but, well... I guess I never did. 
 <<emotionChange Normal>>
-Lovestruck Ghost: I’ve had a lot of time to think about it, but I still don’t know what I would have said. 
+Lovestruck Ghost: I've had a lot of time to think about it, but I still don't know what I would have said. 
 Lovestruck Ghost: If there was anyone I was going to fall in love with, it would have been them- they were everything I ever wanted. 
 Lovestruck Ghost: ...But I didn't.
 Lovestruck Ghost: I guess that spark just wasn't there...
@@ -70,7 +70,7 @@ tags:
 position: 0,0
 ---
 Lovestruck Ghost: Hi again! I think I'll have to take back the request to romantically meet someone here...
-Lovestruck Ghost: I’ve been thinking a lot lately, and I’ve realized that... I think I liked the idea of falling in love more than I actually wanted to.
+Lovestruck Ghost: I've been thinking a lot lately, and I've realized that... I think I liked the idea of falling in love more than I actually wanted to.
 Lovestruck Ghost: Everyone always seemed so happy when I helped matchmake them, yknow? And I wanted that for myself. 
 <<emotionChange Happy>>
 Lovestruck Ghost: But I think I'm happy right now. And maybe I don't need to fall in love just because everyone around me does.

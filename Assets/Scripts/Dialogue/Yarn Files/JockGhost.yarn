@@ -57,7 +57,7 @@ Jock Ghost: Even got into the Spirit football team.
 <<emotionChange Sad None>>
 Jock Ghost: But, you know... there was somehow someone even more macho-ier than me. 
 Jock Ghost: Somehow more jacked, as if they got a headstart.
-Jock Ghost: It’s always been that way for me... there's always someone with the stronger PR, the bigger bulk, the nicer lats... Man, I wish I had my lats in the afterlife.
+Jock Ghost: It's always been that way for me... there's always someone with the stronger PR, the bigger bulk, the nicer lats... Man, I wish I had my lats in the afterlife.
 <<emotionChange Normal Sparkles>>
 Jock Ghost: Maybe I should try lat-tes to try and get them back?
 Jock Ghost: Get it?
@@ -74,13 +74,13 @@ position: 169,38
 Jock Ghost: I had a conversation with Musician Ghost earlier.
 Jock Ghost: Something about how we both peaked in our respective grindsets back then.
 <<emotionChange Sad Scribbles>>
-Jock Ghost: But was that really peaking for me? If I couldn’t even beat anyone?
+Jock Ghost: But was that really peaking for me? If I couldn't even beat anyone?
 <<emotionChange Normal None>>
-Jock Ghost: That’s what I told him, anyway. He looked at me funny, saying his Platinum records were all he needed to be content with his success and talent.
+Jock Ghost: That's what I told him, anyway. He looked at me funny, saying his Platinum records were all he needed to be content with his success and talent.
 Jock Ghost: Is my physique really that good?
 <<emotionChange Sad>>
 Jock Ghost: It always seems to dull in the reflection.
-Jock Ghost: Maybe... I’m just looking at the mirror wrong. 
+Jock Ghost: Maybe... I'm just looking at the mirror wrong. 
 <<emotionChange Normal>>
 <<setCam "Main Camera">>
 ===
@@ -100,6 +100,6 @@ Jock Ghost: And I <italic> worked </italic> for it.
 Jock Ghost: And... I deserve to revel in my hard-earned talents, don't I?
 Jock Ghost: I deserve to be confident... maybe as confident as Musician ghost is with his instruments.
 <<emotionChange Normal None>>
-Jock Ghost: Just... let me know when you need a gym bro, yeah? I’d love to share my workouts with you.
+Jock Ghost: Just... let me know when you need a gym bro, yeah? I'd love to share my workouts with you.
 <<setCam "Main Camera">>
 ===

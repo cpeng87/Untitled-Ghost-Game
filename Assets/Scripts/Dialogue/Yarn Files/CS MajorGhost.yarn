@@ -21,7 +21,7 @@ position: -112,-180
 <<emotionChange Sad>>
 CS Major Ghost: I... how could you betray me like this. I'm... a broke college student, you know?
 CS Major Ghost: Now my tuition money has gone to waste!
-CS Major Ghost: I can’t believe I spent my savings on this and got nothing but a treat that's more lifeless than me...
+CS Major Ghost: I can't believe I spent my savings on this and got nothing but a treat that's more lifeless than me...
 <<emotionChange Normal>>
 <<setCam "Main Camera">>
 ===
@@ -31,23 +31,23 @@ tags:
 position: 169,38
 ---
 CS Major Ghost: Ah... yeah, I've been told to touch grass more.
-CS Major Ghost: I’m not really ready to go run around and play in the fields or whatever “normal” people do, but I’ve heard socializing is a good start to get out of the slump I was in.
+CS Major Ghost: I'm not really ready to go run around and play in the fields or whatever "normal" people do, but I've heard socializing is a good start to get out of the slump I was in.
 CS Major Ghost: I'm CS Major ghost... at least as far as I remember.
-CS Major Ghost: The grind’s been hard, but apparently it was good enough to put me here... ish?
-CS Major Ghost: I’m not too sure, though... I’ve been busy catching up on sleep now that I have the time.
+CS Major Ghost: The grind's been hard, but apparently it was good enough to put me here... ish?
+CS Major Ghost: I'm not too sure, though... I've been busy catching up on sleep now that I have the time.
 CS Major Ghost: You know, I cut out a bunch of things to make time for CS.
 <<emotionChange None Scribbles>>
 CS Major Ghost: Who cares about sleep when you have SoulCode, grades, and 5 projects to worry about?
 <<emotionChange None>>
-CS Major Ghost: I mean, I didn’t just need the degree- I needed a guaranteed job. 
+CS Major Ghost: I mean, I didn't just need the degree- I needed a guaranteed job. 
 CS Major Ghost: I... think I got my degree? I'm not sure, I blacked out and ended up here before I could even process what was going on.
-CS Major Ghost: Anyway, I tried to look into technology while I was down here, but there are no jobs to be had... So what’s the point?
+CS Major Ghost: Anyway, I tried to look into technology while I was down here, but there are no jobs to be had... So what's the point?
 CS Major Ghost: I mean, I can still use my laptop to make things... but why would I? And now, without CS driving me anywhere... what do I do?
-CS Major Ghost: No, seriously- what do I do? You want me to... pfft... be in a play?? Go do arts and crafts?? Hah! I’m a CS Major, how could I possibly be creative??
+CS Major Ghost: No, seriously- what do I do? You want me to... pfft... be in a play?? Go do arts and crafts?? Hah! I'm a CS Major, how could I possibly be creative??
 <<emotionChange Sad Scribbles>>
 CS Major Ghost: Hah... haha... hah... how can I even find something to do if my only skill is useless here?
 <<emotionChange None>>
-CS Major Ghost: Eh, whatever... time to go crash at home. That’s enough touching grass for today.
+CS Major Ghost: Eh, whatever... time to go crash at home. That's enough touching grass for today.
 CS Major Ghost: Anyway, it was good chatting with you. Maybe I'll use our dialogue in the next application I create... if I ever decide to create again.
 <<setCam "Main Camera">>
 ===
@@ -59,15 +59,15 @@ position: 169,38
 <<emotionChange Sad>>
 CS Major Ghost: Oh God, how does one talk to women?
 <<emotionChange Normal Scribbles>>
-CS Major Ghost: I always dreamed of getting all the women in the world, and, since I’m dead... I might as well try everything I can to fill in the void.
+CS Major Ghost: I always dreamed of getting all the women in the world, and, since I'm dead... I might as well try everything I can to fill in the void.
 <<emotionChange Sad>>
 CS Major Ghost: Just gotta replace grinding SoulCode for... uh... farming women...?
-CS Major Ghost: No, I probably shouldn’t say that... uh... How does one talk to women?
+CS Major Ghost: No, I probably shouldn't say that... uh... How does one talk to women?
 <<emotionChange Normal>>
 CS Major Ghost: See, this is why I turned to CS. Computers are so much easier to understand.
-CS Major Ghost: Maybe because they’re just machines that do what I want, and I just wanted to play God and be someone in control of everything.
+CS Major Ghost: Maybe because they're just machines that do what I want, and I just wanted to play God and be someone in control of everything.
 <<emotionChange None Scribbles>>
-CS Major Ghost: Wow... I sound like a Philosophy major. No, I’m a CS major... but I’m dead, physically and mentally. And Computer Science is useless here.
+CS Major Ghost: Wow... I sound like a Philosophy major. No, I'm a CS major... but I'm dead, physically and mentally. And Computer Science is useless here.
 <<emotionChange None>>
 CS Major Ghost: Anyway, women.
 <<emotionChange Normal Scribbles>>
@@ -95,7 +95,7 @@ CS Major Ghost: What is my purpose?
 CS Major Ghost: What do I do when my one and only ambition gets stolen out of my hands???
 CS Major Ghost: Now I'm coping with the reality that the world I built is meaningless.
 CS Major Ghost: What - what the heck do I do??
-CS Major Ghost: Yeah... you know what? I’m just going to go back home and stare at the wall. I can’t do this right now.
+CS Major Ghost: Yeah... you know what? I'm just going to go back home and stare at the wall. I can't do this right now.
 <<emotionChange Normal None>>
 <<setCam "Main Camera">>
 ===
@@ -109,14 +109,14 @@ CS Major Ghost: They talked about... self-love.
 CS Major Ghost: I think I neglected that and the people in my life for my academics, and now I have no social intelligence or social life in general.
 CS Major Ghost: That void inside me... I filled it with the CS major grind, but to what avail?
 CS Major Ghost: Heh, Actor Ghost taught me that phrase.
-CS Major Ghost: Talking to the Humanities majors- I mean, the experts in the Arts- made me realize how much joy they have. They aren’t as consumed by their studies and growth, unlike me.
+CS Major Ghost: Talking to the Humanities majors- I mean, the experts in the Arts- made me realize how much joy they have. They aren't as consumed by their studies and growth, unlike me.
 <<emotionChange Happy>>
 CS Major Ghost: I think it also made me realize why I chose Computer Science in the first place- I love problem-solving!
-CS Major Ghost: In fact, I can still problem-solve here at the construction site or any one of Tycoon Ghost’s buildings. I just get to apply my knowledge differently.
+CS Major Ghost: In fact, I can still problem-solve here at the construction site or any one of Tycoon Ghost's buildings. I just get to apply my knowledge differently.
 CS Major Ghost: And maybe... slowly... I can get my joy back. By giving myself as much time as I need to finish the things I like to do, rather than always being pressed for time to complete assignments I may not even want to do in the first place.
 CS Major Ghost: Maybe... breaks are okay.
 CS Major Ghost: And... I should make more time for myself.
-CS Major Ghost: Now, if you’ll excuse me, I’m going to go outside and talk to my... acquaintances? Friends? Yeah... hopefully we’ll be friends soon. Thanks for everything.
+CS Major Ghost: Now, if you'll excuse me, I'm going to go outside and talk to my... acquaintances? Friends? Yeah... hopefully we'll be friends soon. Thanks for everything.
 <<emotionChange Normal>>
 <<setCam "Main Camera">>
 ===

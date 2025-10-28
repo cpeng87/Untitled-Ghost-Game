@@ -33,29 +33,29 @@ position: 169,38
 Ghostwriter Ghost: Oh, wait- you're talking to me?
 <<emotionChange None Flowers>>
 Ghostwriter Ghost: Yes! <wiggle> Hi!! </wiggle> I see you run this cafe- I wrote a story about a cafe romance once, you know?
-Ghostwriter Ghost: It wasn’t anything great, and I wasn’t happy with it... But, cafe stories are all the rage nowadays, so my author said it would sell...
+Ghostwriter Ghost: It wasn't anything great, and I wasn't happy with it... But, cafe stories are all the rage nowadays, so my author said it would sell...
 <<emotionChange None>>
 Ghostwriter Ghost: Oh, not that I'm some money-chaser or anything!
 <<emotionChange Sad>>
-Ghostwriter Ghost: It’s just, well... I also need to eat...
+Ghostwriter Ghost: It's just, well... I also need to eat...
 <<emotionChange Normal>>
 Ghostwriter Ghost: But I used to come to places like this all~ the time to write!
 Ghostwriter Ghost: The author I worked for also liked cafes, so we often met over coffee or something.
 Ghostwriter Ghost: What?
 Ghostwriter Ghost: Oh, my author? Well, I am a ghostwriter, after all.
 Ghostwriter Ghost: I write the work, my author puts her name on it, and it gets shipped out!
-Ghostwriter Ghost: Hey, I'm curious. Have you ever read anything I’ve written?
+Ghostwriter Ghost: Hey, I'm curious. Have you ever read anything I've written?
 Ghostwriter Ghost: Maybe "Battle and Tranquility"? Or "Small Cottage on the Meadow"?
 <<emotionChange None Flowers>>
 Ghostwriter Ghost: <wiggle> Oh, yes! I wrote those! </wiggle>
-Ghostwriter Ghost: I’m so happy you know them, I loved writing those so much~!
+Ghostwriter Ghost: I'm so happy you know them, I loved writing those so much~!
 <<emotionChange None>>
 Ghostwriter Ghost: D-did do you recognize my name? I was listed as, uh... an editor on those books, I think... under the acknowledgements, for sure!
 <<emotionChange Sad>>
 Ghostwriter Ghost: No...? ...Well, I guess I shouldn't be surprised.
 Ghostwriter Ghost: No one remembers anyone except the author... haha...
 <<emotionChange Normal>>
-Ghostwriter Ghost: I’m quite fine with this, of course! I don’t do well with fame and the spotlight and all that... Yeah.
+Ghostwriter Ghost: I'm quite fine with this, of course! I don't do well with fame and the spotlight and all that... Yeah.
 <<setCam "Main Camera">>
 ===
 
@@ -71,9 +71,9 @@ Ghostwriter Ghost: Well, you see... when I first started as a writer, I couldn't
 Ghostwriter Ghost: None of my works got any offers, even though I just really, <italic> really </italic> wanted for people to be able to read my work.
 Ghostwriter Ghost: I didn't care that it was under a different name, at the time.
 <<emotionChange Sad>>
-Ghostwriter Ghost: I-I’m not sure when I suddenly started caring.
+Ghostwriter Ghost: I-I'm not sure when I suddenly started caring.
 Ghostwriter Ghost: Well... I think I did want recognition.
-Ghostwriter Ghost: I wanted so badly to talk to the people I’ve inspired, to be able to speak publicly about my experience writing, to see that I had done something for the world, and to have other people tell me that too...
+Ghostwriter Ghost: I wanted so badly to talk to the people I've inspired, to be able to speak publicly about my experience writing, to see that I had done something for the world, and to have other people tell me that too...
 Ghostwriter Ghost: And, well... I'm still frustrated about it.
 Ghostwriter Ghost: That I never got to do that- that I never had the courage to become an author all on my own.
 <<emotionChange Normal>>
@@ -87,10 +87,10 @@ position: 169,38
 ---
 Ghostwriter Ghost: Hey, do you think I should start writing again?
 Ghostwriter Ghost: No one will read it but ghosts, of course, but... I really miss writing.
-Ghostwriter Ghost: Sometimes, I forget why I became a writer in the first place. It wasn’t for money, or fame, or recognition- even if that’s what I died wishing for.
+Ghostwriter Ghost: Sometimes, I forget why I became a writer in the first place. It wasn't for money, or fame, or recognition- even if that's what I died wishing for.
 Ghostwriter Ghost: I just wanted to write, and for someone to read my work and feel inspired.
 <<emotionChange None Flowers>>
-Ghostwriter Ghost: And people did, right? Lots of people! Even if it wasn’t under my name.
+Ghostwriter Ghost: And people did, right? Lots of people! Even if it wasn't under my name.
 Ghostwriter Ghost: Maybe... that's enough.
 Ghostwriter Ghost: Maybe, now that I can write under my own name, I'll feel like it's enough.
 <<emotionChange None>>

@@ -24,7 +24,7 @@ position: -112,-180
 Actor Ghost: Bleurgh- What is this?
 <<emotionChange Sad>>
 Actor Ghost: How could you serve something like this to someone as famous as ME?
-Actor Ghost: If I left a review on this place, you’d be out of business within minutes!
+Actor Ghost: If I left a review on this place, you'd be out of business within minutes!
 <<emotionChange Normal>>
 <<setCam "Main Camera">>
 ===
@@ -36,7 +36,7 @@ position: 169,38
 Actor Ghost: Yep, it's me. <italic> The one! </italic>
 <<emotionChange None Sparkles>>
 Actor Ghost: <italic> The only!! </italic> 
-Actor Ghost: You know me from the hit shows The Workplace, Acquaintances, Tournament of seats... Yep, it’s me in the flesh! ...or I guess in the spirit. And no, I don’t do autographs.
+Actor Ghost: You know me from the hit shows The Workplace, Acquaintances, Tournament of seats... Yep, it's me in the flesh! ...or I guess in the spirit. And no, I don't do autographs.
 <<emotionChange Shocked>>
 Actor Ghost: <wiggle> WHAT?! </wiggle>
 Actor Ghost: You don't know who I am?
@@ -60,11 +60,11 @@ Actor Ghost: Every!
 Actor Ghost: <italic> DAY! </italic>
 <<emotionChange Sad>>
 Actor Ghost: But you know, barista, it's kind of exhausting to stay under the spotlight for your whole life.
-Actor Ghost: Everyone’s always clamoring for that next opportunity.
+Actor Ghost: Everyone's always clamoring for that next opportunity.
 Actor Ghost: Hell, out of all my friends, who even knows me... for me?
-Actor Ghost: I’ve acted in countless movies that explore this very topic but funnily enough, I still haven’t found the answer myself.
-Actor Ghost: There’s this nagging voice in the back of my mind that tells me that everyone only loves the confident, cocky, world-famous actor persona I’ve built...
-Actor Ghost: That everyone just wants to use me as a stepping stone in their career... and sometimes I really believe it’s true. 
+Actor Ghost: I've acted in countless movies that explore this very topic but funnily enough, I still haven't found the answer myself.
+Actor Ghost: There's this nagging voice in the back of my mind that tells me that everyone only loves the confident, cocky, world-famous actor persona I've built...
+Actor Ghost: That everyone just wants to use me as a stepping stone in their career... and sometimes I really believe it's true. 
 <<emotionChange Normal>>
 <<setCam "Main Camera">>
 ===
@@ -73,11 +73,11 @@ title: ActorStory3
 tags:
 position: 169,38
 ---
-Actor Ghost: I know I’ve kinda just been one-sidedly ranting to you this whole time, but... I have to admit, it really helped me reflect on my life.
+Actor Ghost: I know I've kinda just been one-sidedly ranting to you this whole time, but... I have to admit, it really helped me reflect on my life.
 Actor Ghost: Feels like a weight got lifted off of me, though I'm not sure if that really means anything if I'm a ghost.
 Actor Ghost: Haha, this is so un-star-like. Like c'mon man.
-Actor Ghost: Still, it’s nice to actually have someone listen to you for once.
-Actor Ghost: Just me... not the persona that I’ve created. Made me really appreciate the ones that don’t just latch onto me and my stardom...
+Actor Ghost: Still, it's nice to actually have someone listen to you for once.
+Actor Ghost: Just me... not the persona that I've created. Made me really appreciate the ones that don't just latch onto me and my stardom...
 <<emotionChange None Sparkles>>
 Actor Ghost: Thanks, barista. <wiggle> I'll see you around~! </wiggle> Aaaaaand cut!
 <<emotionChange None>>

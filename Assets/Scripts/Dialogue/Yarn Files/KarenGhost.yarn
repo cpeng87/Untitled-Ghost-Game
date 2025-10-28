@@ -27,14 +27,14 @@ tags:
 position: 0,0
 ---
 Karen Ghost: Well, I certainly don't see what all the fuss is about. This looks like any old raggedy cafe to me.
-Karen Ghost: I’m only here because the other cafes always mess up my order. Hmph! Don’t get a big head about it.
+Karen Ghost: I'm only here because the other cafes always mess up my order. Hmph! Don't get a big head about it.
 <<emotionChange Sad>>
-Karen Ghost: How I died?? Do you have no manners?!? Not that it’s any of your business, but I was... left behind... during a camping trip. And... I didn’t have a way out of the forest.
+Karen Ghost: How I died?? Do you have no manners?!? Not that it's any of your business, but I was... left behind... during a camping trip. And... I didn't have a way out of the forest.
 <<emotionChange Normal>>
 Karen Ghost: There, happy?
 <<emotionChange Sad>>
 Karen Ghost: Why I'm still here? ...I guess I was just waiting for someone to look for me.
-Karen Ghost: Not that it matters, anyways. I’m a ghost now, and anyone who might’ve come for me is probably dead, too.
+Karen Ghost: Not that it matters, anyways. I'm a ghost now, and anyone who might've come for me is probably dead, too.
 <<emotionChange Normal>>
 <<setCam "Main Camera">>
 ===

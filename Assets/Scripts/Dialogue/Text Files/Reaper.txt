@@ -3,68 +3,68 @@ Could I get a {item}, please? As far as the decoration goes, surprise me!
 [End]
 
 [Success]
-Thank you very much, it’s delicious! What a creative design, as well. 
+Thank you very much, it's delicious! What a creative design, as well. 
 [End]
 
 [Story1]
 Hello, dear, how are you settling into purgatory? 
 {Good, I suppose…}
-That’s good to hear. 
-{Not too well, it’s a bit of an adjustment}
-That’s alright, it’s perfectly natural. You’ll find your place.
+That's good to hear. 
+{Not too well, it's a bit of an adjustment}
+That's alright, it's perfectly natural. You'll find your place.
 Have you thought about why you might be tied here?
 {I have an idea…}
-That’s wonderful, I’d love to hear what you think.
+That's wonderful, I'd love to hear what you think.
 		{Maybe, it was my lack of passion?}
 Passion, hm. 
-		{Or that I didn’t have a lot of meaningful relationships?}
+		{Or that I didn't have a lot of meaningful relationships?}
 Ahh, so the human connections were what you missed. 
-		{The fact that I didn’t leave anything behind?}
+		{The fact that I didn't leave anything behind?}
 You had regrets about your legacy, I see…
-{I don’t have a clue}
-Well, I’m here to help you work through it. We’ll find your peace together.
-Here, I’ll list some common reasons, and you can let me know which one sounds most like you. Sound good?
+{I don't have a clue}
+Well, I'm here to help you work through it. We'll find your peace together.
+Here, I'll list some common reasons, and you can let me know which one sounds most like you. Sound good?
 	{Sure}
-	{I don’t think that’ll work.}
+	{I don't think that'll work.}
 Well, no harm in trying, right? Give it a go, for my sake.
 I see quite a few residents come here for some version of the following three reasons: their dreams in life, their relationships with others, or the impact they left behind. Any of these strike a chord with you?
 		{Well, I feel like I never had a dream in life…}
 So you never had a passion, hm…
-		{I didn’t have a lot of meaningful relationships…}
+		{I didn't have a lot of meaningful relationships…}
 Ahh, so the human connections were what you missed. 
-		{I’m not sure I left anything behind at all.}
+		{I'm not sure I left anything behind at all.}
 You had regrets about your legacy, I see…
 Well, I am not able to define clearly what exactly it was that you regret. You are the only one who can answer that for yourself. But, I can recommend your cafe to a couple of ghosts I know well, who may have reasons for staying similar to your own. Perhaps by speaking to them, you may discover that you can learn about yourself as well. What do you say?
-	{I won’t turn down free customers}
-Good, then I’ll be directing some new faces your way soon. 
+	{I won't turn down free customers}
+Good, then I'll be directing some new faces your way soon. 
 	{I doubt that will help…}
-No use being pessimistic about it, is there? Give it a try. The ghosts here aren’t so different from you.
+No use being pessimistic about it, is there? Give it a try. The ghosts here aren't so different from you.
 Until the next time we cross paths, try to get to know some of them! I hope to hear good news during my next visit.
 [End]
 
 [Story2]
-Well, it’s been quite some time since I last visited. Your cafe looks lovely! So much livelier now, and I see quite a few new menu items? Though I didn’t come here to discuss pastries. Tell me, dear, how have you been? Have you gotten to know a few of the residents here? 
-{Yep, I’ve met several! I even helped some of them pass on.}
-My, you’ve been doing my job for me! I must thank you deeply; it was not your responsibility to help them pass on, but you were kind enough to help them anyways. 
-		{Well, I didn’t do it on purpose, so I don’t know about kind…}
-Regardless of intention, you did a kind deed. And listening to their stories, that was on purpose, yes? Sometimes that’s all the help one needs.
-		{It wasn’t very difficult, I’m sure you could’ve done it}
-Ahh, I’m not so sure. It’s quite intimidating to talk to the Grim Reaper, no? I suspect quite a few ghosts would be much more willing to talk to a fellow human soul. 
-And have you perhaps learned any clues about what might be tying you here, from hearing others’ stories?
-{Yeah, I’ve met some, but anyone I got to know well disappeared.}
-I’m sorry to hear that. Unfortunately, such is the norm in purgatory. Let’s try to be happy for them, at least, celebrate that they were able to find peace.
-		{Yeah, you’re right}
-		{I’m still upset about it}
-I understand, and that’s a natural reaction. You may take all the time you need to mourn their absence, and I hope you’ll eventually be able to find joy in theirs. 
-I know it’s bittersweet, but learning to move on is, after all, the purpose of purgatory. I daresay I’ve been the one left behind by “goodbye” more than any other in the world.
+Well, it's been quite some time since I last visited. Your cafe looks lovely! So much livelier now, and I see quite a few new menu items? Though I didn't come here to discuss pastries. Tell me, dear, how have you been? Have you gotten to know a few of the residents here? 
+{Yep, I've met several! I even helped some of them pass on.}
+My, you've been doing my job for me! I must thank you deeply; it was not your responsibility to help them pass on, but you were kind enough to help them anyways. 
+		{Well, I didn't do it on purpose, so I don't know about kind…}
+Regardless of intention, you did a kind deed. And listening to their stories, that was on purpose, yes? Sometimes that's all the help one needs.
+		{It wasn't very difficult, I'm sure you could've done it}
+Ahh, I'm not so sure. It's quite intimidating to talk to the Grim Reaper, no? I suspect quite a few ghosts would be much more willing to talk to a fellow human soul. 
+And have you perhaps learned any clues about what might be tying you here, from hearing others' stories?
+{Yeah, I've met some, but anyone I got to know well disappeared.}
+I'm sorry to hear that. Unfortunately, such is the norm in purgatory. Let's try to be happy for them, at least, celebrate that they were able to find peace.
+		{Yeah, you're right}
+		{I'm still upset about it}
+I understand, and that's a natural reaction. You may take all the time you need to mourn their absence, and I hope you'll eventually be able to find joy in theirs. 
+I know it's bittersweet, but learning to move on is, after all, the purpose of purgatory. I daresay I've been the one left behind by "goodbye" more than any other in the world.
 		{How do you get over it?}
 Well, there is no secret to it. Goodbye will always sting. But knowing the ghosts I help are better off at peace, knowing they are no longer bound by regret and remorse, helps settle my grief.
 		{Do you ever miss them? The ghosts who pass on.}
-Of course I do. Some stay in purgatory for much, much longer than they even stay alive, and I will admit to finding comfort in their companionship. But not only is it my duty, it is my life’s greatest wish that all ghosts may pass on peacefully. I would not, could not, give up that dream for anything. 
-Well, we’re getting quite off topic. From helping others pass on, have you perhaps discovered any insights into your own reason for lingering?
-{Well, quite a few ghosts have been talking about their life’s passions…}
+Of course I do. Some stay in purgatory for much, much longer than they even stay alive, and I will admit to finding comfort in their companionship. But not only is it my duty, it is my life's greatest wish that all ghosts may pass on peacefully. I would not, could not, give up that dream for anything. 
+Well, we're getting quite off topic. From helping others pass on, have you perhaps discovered any insights into your own reason for lingering?
+{Well, quite a few ghosts have been talking about their life's passions…}
 {I still have no clue.}
-Perhaps, have any of the ghosts you’ve spoken to had any similarities, any common themes in the reasons they stayed?
+Perhaps, have any of the ghosts you've spoken to had any similarities, any common themes in the reasons they stayed?
 		{Some of them talked about not fulfilling their goals.}
 		{Nope, no idea.}
 …really, none at all?
@@ -73,51 +73,51 @@ wanted to?}
 {Nah.}
 ……..well, the reason I sent them your way was because they all had very strong passions in life, left unfulfilled.
 To have unfulfilled dreams is a reason for many ghosts to stay behind. The unfinished masterpiece, the unachievable perfection, the single peak of their existence that they never quite reached. Have you ever sympathized with these sentiments? Perhaps, this cafe was a wish of yours?
-	{I wanted to open a cafe, but not ever as a life’s goal. I don’t think I had one.}
-	{No, I’ve never had any sort of deep passion. I had an aimless sort of life.}
-Well, nothing wrong with that, you certainly don’t need a goal in life. I never quite liked the idea that life is a thing that must have meaning attached to it. Do you regret not having a life’s goal, though? What you feel is most important.
+	{I wanted to open a cafe, but not ever as a life's goal. I don't think I had one.}
+	{No, I've never had any sort of deep passion. I had an aimless sort of life.}
+Well, nothing wrong with that, you certainly don't need a goal in life. I never quite liked the idea that life is a thing that must have meaning attached to it. Do you regret not having a life's goal, though? What you feel is most important.
 	{Yeah, I think I do regret that.}
-Ahh, that’s rare - not the regret that you never fulfilled your dream, but regretting that you never had one…well, but it’s never too late to start now. If you want a life’s goal, all you need is to let yourself.
-{Well, it’s not exactly that I want one.}
-You simply regret that you didn’t have one? I see, I see… while time travel is one thing I cannot do, I can reassure you that you did not and do not need a goal to reach for. All that matters is that you were content with your life.
+Ahh, that's rare - not the regret that you never fulfilled your dream, but regretting that you never had one…well, but it's never too late to start now. If you want a life's goal, all you need is to let yourself.
+{Well, it's not exactly that I want one.}
+You simply regret that you didn't have one? I see, I see… while time travel is one thing I cannot do, I can reassure you that you did not and do not need a goal to reach for. All that matters is that you were content with your life.
 {Everyone else seemed to have one, though.}
-Well, let me reassure you then, that you absolutely did not and do not need a goal to reach for. All that matters is that you were content with your life. And, besides, you’re hardly the first to go through life without a concrete dream. 
+Well, let me reassure you then, that you absolutely did not and do not need a goal to reach for. All that matters is that you were content with your life. And, besides, you're hardly the first to go through life without a concrete dream. 
 	{Not really, I just feel like I should have had one…}
 Well, let me reassure you then, that you absolutely did not and do not need a goal to reach for. All that matters is that you were content with your life.
-Safe to say, an unfulfilled life goal was not your reason for lingering. Unless you could consider having a life goal as your life goal? Hmm, goal-ception….but I digress. I hope some of what I’ve said has stuck with you; you need not regret the lack of a dream to chase. Coming to terms with that fact, feeling content about your life as it was, is all that you really need. And, I have a hunch, this might have a lot to do with why you’re still here. But I’ve talked too much, so I must say goodbye now. Until next time, dear. I’ll keep recommending customers here. Not only for the counseling, either - these pastries are delectable.
+Safe to say, an unfulfilled life goal was not your reason for lingering. Unless you could consider having a life goal as your life goal? Hmm, goal-ception….but I digress. I hope some of what I've said has stuck with you; you need not regret the lack of a dream to chase. Coming to terms with that fact, feeling content about your life as it was, is all that you really need. And, I have a hunch, this might have a lot to do with why you're still here. But I've talked too much, so I must say goodbye now. Until next time, dear. I'll keep recommending customers here. Not only for the counseling, either - these pastries are delectable.
 [End]
 
 [Story3]
-How are you doing, dear friend? It’s been a long while since we’ve last spoke; do tell, what new adventures have you experienced?
-{Well, I’ve met quite a few new customers on your recommendation, though I’m not sure that counts as an adventure.}
-{I don’t see anything outside of this cafe, I wouldn’t call that “new adventures”.}
-Well, meeting new people is always an adventure! The stories they have lived through, the insights they could share - even as one who has spent an eternity listening to people’s stories, there is still a sense of adventure I get from every new life’s tale. 
-	{Yeah, I guess so. In that case, I have plenty of “adventures” to share.}
-Oh, do tell! If you don’t mind, of course, and it isn’t anything too private to share.
+How are you doing, dear friend? It's been a long while since we've last spoke; do tell, what new adventures have you experienced?
+{Well, I've met quite a few new customers on your recommendation, though I'm not sure that counts as an adventure.}
+{I don't see anything outside of this cafe, I wouldn't call that "new adventures".}
+Well, meeting new people is always an adventure! The stories they have lived through, the insights they could share - even as one who has spent an eternity listening to people's stories, there is still a sense of adventure I get from every new life's tale. 
+	{Yeah, I guess so. In that case, I have plenty of "adventures" to share.}
+Oh, do tell! If you don't mind, of course, and it isn't anything too private to share.
 {Well, there was this father, who worked in an office…}
-Ah, Office Worker Ghost. I’m glad you got to speak with him; his regrets about his relationships in life are not an uncommon reason for ghosts to stay. Did you empathize with his situation?
+Ah, Office Worker Ghost. I'm glad you got to speak with him; his regrets about his relationships in life are not an uncommon reason for ghosts to stay. Did you empathize with his situation?
 	{I did empathize with him…}
-	{But I don’t think I’m here for a similar reason.}
+	{But I don't think I'm here for a similar reason.}
 I see, I see. Good that we have one option eliminated, hm? 
 {I met a boy who really loved video games…}
 Ah, Weeb Ghost? Yes, his unresolved relationship with his father is unfortunately not all that uncommon to see here in purgatory. Do you think your reason to stay may be similar?
 {I did empathize with him…}
-	{But I don’t think I’m here for a similar reason.}
+	{But I don't think I'm here for a similar reason.}
 I see, I see. Good that we have one option eliminated, hm? 
-	{Still, that’s not really a real adventure, is it? I’m trapped here.}
+	{Still, that's not really a real adventure, is it? I'm trapped here.}
 I see why you could feel trapped here. Purgatory is, in essence, a prison - a place where ghosts are forced to confront the life they lived, without the distractions that come with a full life. But I certainly never meant for it to feel like one. As limiting as purgatory is, it is also freeing. Free from the expectations and limitations of life, of common sense, and of many fears. You need not worry about making a living, or making an impact, or being remembered, or what people expect of you - here, you are nameless and needless, and all the freer for it to find what it is you truly want.
-{I guess so, yeah. I wouldn’t have been able to start this cafe otherwise.}
-And what a lovely cafe it is. I hope you are proud of what you’ve created here, regardless of whether it’s your heart’s desire or not.
-{Still, I don’t think owning a coffee shop is what I always wanted.}
+{I guess so, yeah. I wouldn't have been able to start this cafe otherwise.}
+And what a lovely cafe it is. I hope you are proud of what you've created here, regardless of whether it's your heart's desire or not.
+{Still, I don't think owning a coffee shop is what I always wanted.}
 Maybe not, or I suppose you would have already passed on, no? But rest assured, we have plenty of time to discover what it is that you wanted most in life. 
-	But let’s stay on topic, shall we?
+	But let's stay on topic, shall we?
 So then, did you determine if it was perhaps a relationship of any kind tying you to purgatory? 
-{I didn’t have any relationships that meaningful.}
-Well, let’s not look at it that way. All relationships are meaningful. The difference is that you passed on with all your relationships resolved or healthy enough that you don’t feel the need to change them. That’s a blessing, don’t you think?
+{I didn't have any relationships that meaningful.}
+Well, let's not look at it that way. All relationships are meaningful. The difference is that you passed on with all your relationships resolved or healthy enough that you don't feel the need to change them. That's a blessing, don't you think?
 {Yeah, that is good}
-{I don’t know, maybe.}
-{I had people important to me, but…I don’t think that’s why I’m here.}
-I see. There’s no obligation to stay for those important to you though, you know. Ending your life without regretting anything about the relationships you left behind is a blessing. 
+{I don't know, maybe.}
+{I had people important to me, but…I don't think that's why I'm here.}
+I see. There's no obligation to stay for those important to you though, you know. Ending your life without regretting anything about the relationships you left behind is a blessing. 
 	{Yeah, that is good}
-{I don’t know, maybe you’re right.}
-Well, unfortunately, I believe I’ve spent too much time enjoying this treat. It seems we can rule out relationships as your reason for staying, at least. As always, I’ll keep referring customers in your direction. Perhaps I shall look for a few who regret the impact they left behind on their passing, hm? Let us investigate this next. Until next time, Cafe Ghost! I look forward to our next meeting.
+{I don't know, maybe you're right.}
+Well, unfortunately, I believe I've spent too much time enjoying this treat. It seems we can rule out relationships as your reason for staying, at least. As always, I'll keep referring customers in your direction. Perhaps I shall look for a few who regret the impact they left behind on their passing, hm? Let us investigate this next. Until next time, Cafe Ghost! I look forward to our next meeting.

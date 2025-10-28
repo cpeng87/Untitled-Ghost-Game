@@ -3,49 +3,49 @@ Ughhh, that court case knocked the wind out of me… May I have a {item} to lift
 [End]
 
 [Success]
-WHOAH! I didn’t know how badly I needed this. I gotta go to the court hearing now, but you really made my morning.
+WHOAH! I didn't know how badly I needed this. I gotta go to the court hearing now, but you really made my morning.
 [End]
 
 [Failure]
-This case has been hell on earth- or I guess, hell in the afterlife- and this certainly didn’t help me as much as I thought it would.
-Thanks for trying, but I’ve gotta get back to solving this case… again…
+This case has been hell on earth- or I guess, hell in the afterlife- and this certainly didn't help me as much as I thought it would.
+Thanks for trying, but I've gotta get back to solving this case… again…
 [End]
 
 [Story]
-Hey, I’ve been meaning to ask you a couple questions. No, I’m not trying to interrogate you about a murder. You would know if I was, and nobody really gets murdered here.
+Hey, I've been meaning to ask you a couple questions. No, I'm not trying to interrogate you about a murder. You would know if I was, and nobody really gets murdered here.
 Have you heard anything about… a dog?
-I don’t even remember anything about my passing… I just hope he’s alright. I'm praying that I didn’t order a hot chocolate back then- my dog loves to try and steal my drinks.
-Anyway, I don’t mean to interrupt your services to others. Thanks for your time. 
+I don't even remember anything about my passing… I just hope he's alright. I'm praying that I didn't order a hot chocolate back then- my dog loves to try and steal my drinks.
+Anyway, I don't mean to interrupt your services to others. Thanks for your time. 
 [End]
 
 [Story]
 You know, being a lawyer down here is fascinating.
 Every case down here, such as theft or divorce, has a nicer and more clear-cut set of rules than the ones I tackled was when I was alive.
 Speaking of life… have you heard anything about my dog? Things are kind of hazy, but I remember a storm… did I die in a flood? A hurricane?
-No, no… it couldn’t have been a hurricane- I would’ve known about it at least week in advance, right…?
+No, no… it couldn't have been a hurricane- I would've known about it at least week in advance, right…?
 I… I need to think more about this. Thank you for your time. 
 [End]
 
 [Story]
 Relationships are a funny thing.
-I just settled a divorce case a few moons ago, and the wife was furious that she didn’t get the kid. …Even though she took all the property.
+I just settled a divorce case a few moons ago, and the wife was furious that she didn't get the kid. …Even though she took all the property.
 The husband was too tired to care… Did he even notice his kid, the person he had been fighting for?
-He looked like he hadn’t rested in so long… endlessly fighting for his dog. …Wait- no, that’s not right. He fought for his kid, not his dog… ah.
+He looked like he hadn't rested in so long… endlessly fighting for his dog. …Wait- no, that's not right. He fought for his kid, not his dog… ah.
 Seems I really DID need my cafe fix if I mixed up my dog with a kid, haha.
 Well, at least they still have some sense of value and love.
-The only thing I have left is my life’s work, and… honestly? I should be content with just that.
-Yet… you know you’re the only ghost that looks at me in the eye? The rest of them think I’m going to persecute them in court or interrogate them for a crime or even… take a bribe??
+The only thing I have left is my life's work, and… honestly? I should be content with just that.
+Yet… you know you're the only ghost that looks at me in the eye? The rest of them think I'm going to persecute them in court or interrogate them for a crime or even… take a bribe??
 What kind of ghost do they think I am!! Ah… I need to calm down. Thanks for your time, again.
 [End]
 
 [Story]
 Is there really a point to being a lawyer here?
-I’ve seen bankers switch to partying and partygoers switch to business… Maybe I can just go hide in the corner where nobody will dare to look at me.
-So many ghosts were wronged by society and the court, and I’m probably just a living embodiment of their regret… But I digress.
-I’ve been thinking a lot about my previous life. I’m pretty sure I did die in a hurricane… I was probably so tired and determined to finish my work that I ignored all warnings and stayed.
+I've seen bankers switch to partying and partygoers switch to business… Maybe I can just go hide in the corner where nobody will dare to look at me.
+So many ghosts were wronged by society and the court, and I'm probably just a living embodiment of their regret… But I digress.
+I've been thinking a lot about my previous life. I'm pretty sure I did die in a hurricane… I was probably so tired and determined to finish my work that I ignored all warnings and stayed.
 If I was more efficient at my casework, maybe I could have heeded the warning properly.
 But my poor, poor dog… He was just a little pup who wanted love.
-I loved him, I did… I just couldn’t love or take care of myself.
+I loved him, I did… I just couldn't love or take care of myself.
 I need to find my dog.
 Please tell me if you find him. Thank you for your time. 
 [End]
@@ -53,22 +53,22 @@ Please tell me if you find him. Thank you for your time.
 [Story]
 I finally found my boy… er… Dog Ghost, as he goes by now.
 After the hurricane hit, a tree fell on me. When he realized I was… gone… he curled up next to me until he passed, too.
-I… don’t think I can ever forgive myself for leaving him like that.
+I… don't think I can ever forgive myself for leaving him like that.
 But… you know what?
-Despite all of my self-deprecation and prejudice, I found that it’s okay and almost necessary to rely on others.
+Despite all of my self-deprecation and prejudice, I found that it's okay and almost necessary to rely on others.
 My mistakes are a part of my journey, and I need to learn to love myself before I can properly love others.
-I think I’m going to take a long break from the lawyer stuff to work on myself.
+I think I'm going to take a long break from the lawyer stuff to work on myself.
 Well, before I self-reflect some more, I need to meet Dog Ghost for a cup of mocha- ironically, he loves chocolate.
 Thanks for your time.
 [End]
 
 [Story]
 Hello again, and thanks for believing in me.
-Even though I’ve been unsure of a lot of things since I got here, I know I want to be a lawyer.
-I have all the time in the world to solve cases here, so I don’t need to push myself the way I did back then.
+Even though I've been unsure of a lot of things since I got here, I know I want to be a lawyer.
+I have all the time in the world to solve cases here, so I don't need to push myself the way I did back then.
 This is a new world, where justice is untouched by corruption. All I have to do is ensure that ghosts can get the justice they deserve.
-Dog Ghost can be my partner attorney- the ace up my sleeve. With his distinct sense of smell and my deduction skills, we’ll be unstoppable!
-We’ll restore justice to humanity the way the law intended to.
-I truly can’t wait… Thanks for listening to me, even if I just blabbed at you like you were my therapist. It means a lot to me.
-Now, go serve your other customers. I’m sure you’ll help them as much as you’ve helped me. 
+Dog Ghost can be my partner attorney- the ace up my sleeve. With his distinct sense of smell and my deduction skills, we'll be unstoppable!
+We'll restore justice to humanity the way the law intended to.
+I truly can't wait… Thanks for listening to me, even if I just blabbed at you like you were my therapist. It means a lot to me.
+Now, go serve your other customers. I'm sure you'll help them as much as you've helped me. 
 [End]

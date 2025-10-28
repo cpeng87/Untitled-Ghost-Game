@@ -3,20 +3,20 @@ Hey barista, one {item}, please!
 [End]
 
 [Success]
-Wow, this is amazing! I can see why you’re a barista! Truly a master at work~!
+Wow, this is amazing! I can see why you're a barista! Truly a master at work~!
 [End]
 
 [Failure]
 Bleurgh- What is this?
 How could you serve something like this to someone as famous as ME?
-If I left a review on this place, you’d be out of business within minutes!
+If I left a review on this place, you'd be out of business within minutes!
 [End]
 
 [Story]
-Yep, it’s me. The one! The only!!
-You know me from the hit shows The Workplace, Acquaintances, Tournament of seats… Yep, it’s me in the flesh! …or I guess in the spirit. And no, I don’t do autographs.
+Yep, it's me. The one! The only!!
+You know me from the hit shows The Workplace, Acquaintances, Tournament of seats… Yep, it's me in the flesh! …or I guess in the spirit. And no, I don't do autographs.
 WHAT?!
-You don’t know who I am?
+You don't know who I am?
 Have you been living under a rock for your whole life?! Well, I guess it is a nice change of pace though.
 Anyways, see ya around, barista~!
 [End]
@@ -38,25 +38,25 @@ Never a dull moment with those people. Man, those were the times.
 [Story]
 Why am I a ghost?
 Well, heh- I really did have everything anyone could imagine.
-But you know… what even comes after that? Amidst all of the flashing lights, the people, and the drinks… I just can’t shake off this sense of… loneliness?
+But you know… what even comes after that? Amidst all of the flashing lights, the people, and the drinks… I just can't shake off this sense of… loneliness?
 Like seriously, what comes after all of this? I have fun, but once the excitement leaves me and I find myself alone in my mansion, everything just feels so… empty.
 Ugh, this depressing stuff does NOT suit me at all.
-I’m a star, after all! I can’t be seen moping around like this!
+I'm a star, after all! I can't be seen moping around like this!
 [End]
 
 [Story]
-Say, barista. It’s kind of exhausting to stay under the spotlight for your whole life.
-Everyone’s always clamoring for that next opportunity.
+Say, barista. It's kind of exhausting to stay under the spotlight for your whole life.
+Everyone's always clamoring for that next opportunity.
 Hell, out of all my friends, who even knows me… for me?
-I’ve acted in countless movies that explore this very topic but funnily enough, I still haven’t found the answer myself.
-There’s this nagging voice in the back of my mind that tells me that everyone only loves the confident, cocky, world-famous actor persona I’ve built…
-That everyone just wants to use me as a stepping stone in their career… and sometimes I really believe it’s true. 
+I've acted in countless movies that explore this very topic but funnily enough, I still haven't found the answer myself.
+There's this nagging voice in the back of my mind that tells me that everyone only loves the confident, cocky, world-famous actor persona I've built…
+That everyone just wants to use me as a stepping stone in their career… and sometimes I really believe it's true. 
 [End]
 
 [Story]
-I know I’ve kinda just been one-sidedly ranting to you this whole time, but… I have to admit, it really helped me reflect on my life.
-Haha, this is so un-star-like. Like c’mon man.
-Still, it’s nice to actually have someone listen to you for once.
-Just me… not the persona that I’ve created. Made me really appreciate the ones that don’t just latch onto me and my stardom…
+I know I've kinda just been one-sidedly ranting to you this whole time, but… I have to admit, it really helped me reflect on my life.
+Haha, this is so un-star-like. Like c'mon man.
+Still, it's nice to actually have someone listen to you for once.
+Just me… not the persona that I've created. Made me really appreciate the ones that don't just latch onto me and my stardom…
 Thanks, barista. I'll see you around~. Aaaaaand cut!
 [End]

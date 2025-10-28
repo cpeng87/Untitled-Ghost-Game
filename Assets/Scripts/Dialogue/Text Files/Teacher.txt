@@ -8,63 +8,63 @@ You never fail to surprise me, my dear - take care!
 [End]
 
 [Failure]
-Oh, dear… thank you for your efforts, darling, but I’m afraid this wasn’t what I was asking for.
-It’s alright, I’m sure you’ll do better next time. 
+Oh, dear… thank you for your efforts, darling, but I'm afraid this wasn't what I was asking for.
+It's alright, I'm sure you'll do better next time. 
 [End]
 
 [Story1]
-Hello, my dear! I fear we haven’t had a proper introduction yet.
-I’m Teacher Ghost, and I teach the poor children who passed on too soon.
-It’s a dreadful outcome, but no matter how they came here, everyday in the classroom is another day of excitement!
+Hello, my dear! I fear we haven't had a proper introduction yet.
+I'm Teacher Ghost, and I teach the poor children who passed on too soon.
+It's a dreadful outcome, but no matter how they came here, everyday in the classroom is another day of excitement!
 The kids have so much energy - the other day, a girl flung a lizard into a water pitcher! How intriguing is that?
 And - ah, my apologies, I appear to be rambling.
 I love my students dearly, you see, almost as if they were my own children.
-Now, I believe it’s your turn. Cafe Ghost, is it?
-I love how you’ve made a home for yourself in the afterlife - such rich colors and inviting tones indeed! It shows your blooming character and your love to serve others.
+Now, I believe it's your turn. Cafe Ghost, is it?
+I love how you've made a home for yourself in the afterlife - such rich colors and inviting tones indeed! It shows your blooming character and your love to serve others.
 Now, I do have to get back to my students, so I bid you farewell. See you soon, dear!
 [End]
 
 [Story2]
-Hello, darling! I have a few inquiries for you, if you don’t mind.
-No? Oh, you’re so kind.
+Hello, darling! I have a few inquiries for you, if you don't mind.
+No? Oh, you're so kind.
 Well… I was wondering how you feel about talking about… life.
-It’s something I’ve wondered about quite some time. I try not to bring it up in the classroom… for kids to die so young, it must be horrible to recollect.
+It's something I've wondered about quite some time. I try not to bring it up in the classroom… for kids to die so young, it must be horrible to recollect.
 When newcomers trickle into my school, they often do it for normalcy in the afterlife.
-Having friends, learning new things… it’s almost as if they didn’t die.
+Having friends, learning new things… it's almost as if they didn't die.
 Like they were given a second chance.
-Ah, I’ve been rambling again.
-I know life’s end is a hard topic to bring up, so I understand why you haven’t told me yours - and you never have to, my dear!
-I’m sorry for intruding on such a personal topic, but thank you for patiently listening.
-I’ll be seeing you soon, darling.
+Ah, I've been rambling again.
+I know life's end is a hard topic to bring up, so I understand why you haven't told me yours - and you never have to, my dear!
+I'm sorry for intruding on such a personal topic, but thank you for patiently listening.
+I'll be seeing you soon, darling.
 [End]
 
 [Story3]
 Hello, dear! Thank you for conversing with me once more - that last conversation was quite unbecoming of me.
-I’ve just often wondered about what I did in my own life.
+I've just often wondered about what I did in my own life.
 I was in a small, desolate town, teaching at most fifteen third-grade children.
 Meanwhile, Ghostwriter Ghost touched millions of lives with their stories, Musician Ghost captivated millions with their songs, and Tycoon Ghost built capitalism empires.
 Did I truly make an impact on the world?
-My life’s end was quite abrupt and garish, but would anyone notice my legacy? Cry on my grave?
+My life's end was quite abrupt and garish, but would anyone notice my legacy? Cry on my grave?
 Hold my hand as I was lowered to the casket?
-I told myself I would take my anxiety over these… existential thoughts to the grave, but I’m here now, expressing the insecurities I never could in life.
+I told myself I would take my anxiety over these… existential thoughts to the grave, but I'm here now, expressing the insecurities I never could in life.
 Should I have gotten promoted?
 Been more ambitious?
 Written books?
-I… I’m sorry dear, was I saying all of that aloud?
-I… I think I’ll take a day off today. I think the children will understand.
-I’ll see you soon, dear.
+I… I'm sorry dear, was I saying all of that aloud?
+I… I think I'll take a day off today. I think the children will understand.
+I'll see you soon, dear.
 [End]
 
 [Story4]
-Ah, hello darling! I’m feeling a bit better… as one does with the passage of time.
+Ah, hello darling! I'm feeling a bit better… as one does with the passage of time.
 I was digging into the Strange Case of Dr. Jekyll and Mr. Hyde - you know the book?
-Phenomenal! Well, I looked into its author, Robert Louis Stevenson, and I found this interesting quote of his - “don’t judge each day by the harvest you reap but by the seeds that you plant.”
-I didn’t help just fifteen third-grade children in my life, but I planted the seed of curiosity, determination, and a drive to learn in fifteen children.
-I guess my life here counts, too - peculiar, isn’t it, that the place I share knowledge to the most people is in the afterlife?
+Phenomenal! Well, I looked into its author, Robert Louis Stevenson, and I found this interesting quote of his - "don't judge each day by the harvest you reap but by the seeds that you plant."
+I didn't help just fifteen third-grade children in my life, but I planted the seed of curiosity, determination, and a drive to learn in fifteen children.
+I guess my life here counts, too - peculiar, isn't it, that the place I share knowledge to the most people is in the afterlife?
 But, no matter.
 Those children need a place to relax and learn.
 They deserve knowledge as much as any other ghost, and I know it!
-They’re good kids… and I need to keep on helping them.
-You’re always welcome to my schoolhouse, my dear - I know it might not be below your level of knowledge, but you can always learn a thing or two from the children.
+They're good kids… and I need to keep on helping them.
+You're always welcome to my schoolhouse, my dear - I know it might not be below your level of knowledge, but you can always learn a thing or two from the children.
 See you soon, darling, and thank you! 
 [End]

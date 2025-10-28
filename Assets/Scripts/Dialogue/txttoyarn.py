@@ -36,7 +36,7 @@ def parse_dialogue(file_path):
                 # body_lines.append(file_path.rsplit('.',1)[0] + ": " + line)
                 new_line = ghost_title + " Ghost" + ": " + line
                 new_line = new_line.replace("{item}", "{GetOrder()}")
-                new_line = new_line.replace("’", "'")
+                new_line = new_line.replace("'", "'")
                 new_line = new_line.replace("…", "...")
                 body_lines.append(new_line)
         body = "\n".join(body_lines)

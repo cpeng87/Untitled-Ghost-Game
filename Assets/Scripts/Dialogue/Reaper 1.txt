@@ -3,38 +3,38 @@ Could I get a {item}, please? As far as the decoration goes, surprise me!
 [End]
 
 [Success]
-Thank you very much, it’s delicious! What a creative design, as well. 
+Thank you very much, it's delicious! What a creative design, as well. 
 [End]
 
 Story 1: start of game - Grim Reaper as first customer
 [Story]
-Hello, Cafe Ghost, and welcome to purgatory! I’m honored to be the first customer of your new cafe. Is everything about it to your tastes? Say the word, and I can have it tailored however you like.
+Hello, Cafe Ghost, and welcome to purgatory! I'm honored to be the first customer of your new cafe. Is everything about it to your tastes? Say the word, and I can have it tailored however you like.
 {Hi, uh, Mr. Grim Reaper. The cafe is great, yeah.}
-No need for such formalities. I’m not exactly the harbinger of death that everyone on Earth paints me to be, you know? Just a shepherd of lost souls like you, dear.
+No need for such formalities. I'm not exactly the harbinger of death that everyone on Earth paints me to be, you know? Just a shepherd of lost souls like you, dear.
 {Why exactly am I here, again?}
  This is where people go between life and death, when they have lingering regrets from their life that they need to resolve. Without the burden of needing to work, eat, sleep, or live by societal standards, ghosts come to purgatory to resolve their last regrets and move on peacefully into the afterlife. 
 
-Remember, feel free to ask me for anything you need. Your peace is my priority, and I’ll do all that is in my power to ensure you can reach your happy ending.
+Remember, feel free to ask me for anything you need. Your peace is my priority, and I'll do all that is in my power to ensure you can reach your happy ending.
 That being said, do you have any ideas as to why you might be tied here?
 
-{…I regret not doing more with my life - not having close relationships, not having any big dreams, no accomplishments to speak of…Well, thinking back, basically everything. I didn’t do anything with my life, and I feel like I wasted my precious time on Earth.}
+{…I regret not doing more with my life - not having close relationships, not having any big dreams, no accomplishments to speak of…Well, thinking back, basically everything. I didn't do anything with my life, and I feel like I wasted my precious time on Earth.}
 
-Oh, no time spent is ever a waste. And I quite disagree that you “didn’t do anything” with your life; but we have all the time in the world to go over it all. Try and remember some now. Were those memories really “nothing” to you?
+Oh, no time spent is ever a waste. And I quite disagree that you "didn't do anything" with your life; but we have all the time in the world to go over it all. Try and remember some now. Were those memories really "nothing" to you?
 {...not all of them, no.}
-{Do they really count if they didn’t affect anyone but me?}
+{Do they really count if they didn't affect anyone but me?}
 Of course! Would you count a moment as worthwhile if it made one person happy, even if they were a complete stranger to you?
 {Yeah, of course}
 {Mmm… I guess}
 Then, try extending that kindness to yourself. 
-Then, you see, you already have some memories of your life that meant something! We’ll work our way up to believing your entire life was meaningful.
+Then, you see, you already have some memories of your life that meant something! We'll work our way up to believing your entire life was meaningful.
 
-It seems we’ve discovered why you are here, at least. That’s a great start; many ghosts cannot identify one single regret when they first arrive. 
-Well, I'd like to guide you to believe that the life you lived held meaning - that yes, you did have worthwhile dreams and meaningful connections and a tangible impact. But of course, you have all the time in the world to do so, so don’t stress too much about it. I suspect you’ll need some time alone to think and reminisce on your life. 
+It seems we've discovered why you are here, at least. That's a great start; many ghosts cannot identify one single regret when they first arrive. 
+Well, I'd like to guide you to believe that the life you lived held meaning - that yes, you did have worthwhile dreams and meaningful connections and a tangible impact. But of course, you have all the time in the world to do so, so don't stress too much about it. I suspect you'll need some time alone to think and reminisce on your life. 
 But, in the meantime, I can recommend your cafe to a couple of ghosts I know well, who have various reasons for staying. Perhaps by speaking to them, you may discover that you can learn about yourself as well. What do you say?
-	{I won’t turn down free customers}
-Good, then I’ll be directing some new faces your way soon. 
+	{I won't turn down free customers}
+Good, then I'll be directing some new faces your way soon. 
 	{I doubt that will help…}
-No use being pessimistic about it, is there? Give it a try. The ghosts here aren’t so different from you.
+No use being pessimistic about it, is there? Give it a try. The ghosts here aren't so different from you.
 Until the next time we cross paths, try to get to know some of them! I hope to hear good news during my next visit.
 [End]
 
@@ -42,33 +42,33 @@ Until the next time we cross paths, try to get to know some of them! I hope to h
 Story 2: post passion arc
 
 [Story]
-How are you doing, dear friend? It’s been a long while since we’ve last spoken; do tell, what new adventures have you experienced?
-{Well, I’ve met quite a few new customers on your recommendation, though I’m not sure that counts as an adventure.}
-{I don’t see anything outside of this cafe, I wouldn’t call that “new adventures”.}
-Well, meeting new people is always an adventure! The stories they have lived through, the insights they could share - even as one who has spent an eternity listening to people’s stories, there is still a sense of adventure I get from every new life’s tale. 
-	{Yeah, I guess so. In that case, I have plenty of “adventures” to share.}
-Oh, do tell! If you don’t mind, of course, and it isn’t anything too private to share.
+How are you doing, dear friend? It's been a long while since we've last spoken; do tell, what new adventures have you experienced?
+{Well, I've met quite a few new customers on your recommendation, though I'm not sure that counts as an adventure.}
+{I don't see anything outside of this cafe, I wouldn't call that "new adventures".}
+Well, meeting new people is always an adventure! The stories they have lived through, the insights they could share - even as one who has spent an eternity listening to people's stories, there is still a sense of adventure I get from every new life's tale. 
+	{Yeah, I guess so. In that case, I have plenty of "adventures" to share.}
+Oh, do tell! If you don't mind, of course, and it isn't anything too private to share.
 {Well, there was this businessman, who was obsessed with money…}
-Ah, Tycoon Ghost. I’m glad you got to speak with him; his case was unique in that it’s rare ghosts come in with the wrong conception of what their greatest regret was. Did you empathize with his situation?
+Ah, Tycoon Ghost. I'm glad you got to speak with him; his case was unique in that it's rare ghosts come in with the wrong conception of what their greatest regret was. Did you empathize with his situation?
 	{I did empathize with him, to an extent…}
-	{But I don’t think I’m here for a similar reason.}
-I see, I see. We can’t yet eliminate all connections, but parental, at least, is out of the question then.
+	{But I don't think I'm here for a similar reason.}
+I see, I see. We can't yet eliminate all connections, but parental, at least, is out of the question then.
 {I met a boy who really loved working out…}
 Ah, Jock Ghost? Yes, his deep passion for athleticism made quite an impression, as did his regrets about never achieving his goals. Do you think your reason to stay may be similar?
 {I did empathize with him…}
-	{But I don’t think I’m here for a similar reason.}
-I see, I see. We can’t yet eliminate all connections, but parental, at least, is out of the question then.
-	{Still, that’s not really a real adventure, is it? I’m trapped here.}
+	{But I don't think I'm here for a similar reason.}
+I see, I see. We can't yet eliminate all connections, but parental, at least, is out of the question then.
+	{Still, that's not really a real adventure, is it? I'm trapped here.}
 I see why you could feel trapped here. Purgatory is, in essence, a prison - a place where ghosts are forced to confront the life they lived, without the distractions that come with a full life. But I certainly never meant for it to feel like one. As limiting as purgatory is, it is also freeing. Free from the expectations and limitations of life, of common sense, and of many fears. You need not worry about making a living, or making an impact, or being remembered, or what people expect of you - here, you are nameless and needless, and all the freer for it to find what it is you truly want.
-{I guess so, yeah. I wouldn’t have been able to start this cafe otherwise.}
-And what a lovely cafe it is. I hope you are proud of what you’ve created here, regardless of whether it’s your heart’s desire or not.
-{Still, I don’t think owning a coffee shop is what I always wanted.}
-Maybe not, or I suppose you would have already passed on, no? But that doesn’t mean it wasn’t still something you wanted to do. 
-	But let’s stay on topic, shall we?
+{I guess so, yeah. I wouldn't have been able to start this cafe otherwise.}
+And what a lovely cafe it is. I hope you are proud of what you've created here, regardless of whether it's your heart's desire or not.
+{Still, I don't think owning a coffee shop is what I always wanted.}
+Maybe not, or I suppose you would have already passed on, no? But that doesn't mean it wasn't still something you wanted to do. 
+	But let's stay on topic, shall we?
 From your conversations with customers, have you been able to reflect on your own life?
-{Well, quite a few ghosts have been talking about their life’s passions…}
-{No, didn’t really think about it}
-Perhaps, have any of the ghosts you’ve spoken to had any similarities, any common themes in the reasons they stayed?
+{Well, quite a few ghosts have been talking about their life's passions…}
+{No, didn't really think about it}
+Perhaps, have any of the ghosts you've spoken to had any similarities, any common themes in the reasons they stayed?
 		{Some of them talked about not fulfilling their goals.}
 		{Nope, no idea.}
 …really, none at all?
@@ -76,93 +76,93 @@ Perhaps, have any of the ghosts you’ve spoken to had any similarities, any com
 wanted to?}
 {Nah.}
 ……..well, the reason I sent them your way was because they all had very strong passions in life, left unfulfilled.
-To have unfulfilled dreams is a reason for many ghosts to stay behind. The unfinished masterpiece, the unachievable perfection, the single peak of their existence that they never quite reached. But for you, you’ve stated already that you had no dreams at all. Have you had time to think over that? I’m sure you had some wishes. Even opening this cafe could be considered a dream of sorts, no?
-	{I wanted to open a cafe, but not ever as a life’s goal. I don’t think I had one.}
-	{No, I’ve never had any sort of deep passion. I had an aimless sort of life.}
-Well, nothing wrong with that, you certainly don’t need a single goal in life. Do you regret not having a life’s goal, though? What you feel is most important.
+To have unfulfilled dreams is a reason for many ghosts to stay behind. The unfinished masterpiece, the unachievable perfection, the single peak of their existence that they never quite reached. But for you, you've stated already that you had no dreams at all. Have you had time to think over that? I'm sure you had some wishes. Even opening this cafe could be considered a dream of sorts, no?
+	{I wanted to open a cafe, but not ever as a life's goal. I don't think I had one.}
+	{No, I've never had any sort of deep passion. I had an aimless sort of life.}
+Well, nothing wrong with that, you certainly don't need a single goal in life. Do you regret not having a life's goal, though? What you feel is most important.
 	{Yeah, I think I do regret that.}
-Ahh, not the regret that you never fulfilled your dream, but regretting that you never had one…well, but it’s never too late to start now. If you want a life’s goal, all you need is to let yourself.
-{Well, it’s not exactly that I want one.}
-You simply regret that you didn’t have one? I see, I see… while time travel is one thing I cannot do, I can reassure you that you did not and do not need a goal to reach for. All that matters is that you were content with your life.
+Ahh, not the regret that you never fulfilled your dream, but regretting that you never had one…well, but it's never too late to start now. If you want a life's goal, all you need is to let yourself.
+{Well, it's not exactly that I want one.}
+You simply regret that you didn't have one? I see, I see… while time travel is one thing I cannot do, I can reassure you that you did not and do not need a goal to reach for. All that matters is that you were content with your life.
 {Everyone else seemed to have one during life, though.}
-Well, let me reassure you then, that you absolutely did not and do not need a goal to reach for. All that matters is that you were content with your life. And, besides, you’re hardly the first to go through life without a concrete dream. 
+Well, let me reassure you then, that you absolutely did not and do not need a goal to reach for. All that matters is that you were content with your life. And, besides, you're hardly the first to go through life without a concrete dream. 
 	{Not really, I just feel like I should have had one…}
 Well, let me reassure you then, that you absolutely did not and do not need a goal to reach for. All that matters is that you were content with your life.
-In your eyes, what really defines a “passion” or a “dream”? Is it a concrete destination?
-{Well, I guess the destination? That’s what defines a goal, right?}
+In your eyes, what really defines a "passion" or a "dream"? Is it a concrete destination?
+{Well, I guess the destination? That's what defines a goal, right?}
 Is that what you wanted from life, to have a destination to move towards? Is that the part you envied about people with dreams?
 {Yeah, the fact that they knew what they were working towards, and were so sure of it - it just felt like they had their whole life figured out.}
 Well, let me ask you this, then. Once they achieve their one magical dream - a gold medal, or a dream job, or fame and fortune - what then?
 {....}
 {They find a new dream?}
-Their passion doesn’t simply end, does it? The kind of passion you envy, is the kind that holds for life. These people achieve their dreams, and then aim higher. These people enjoy the journey, not just the destination. The illusion of “one singular life goal” blinds you to the truth; what belies a strong passion is a love for the act.
-{That doesn’t help me. You just said I’m not that kind of person.}
-{Well, how do I “enjoy the journey” then?}
+Their passion doesn't simply end, does it? The kind of passion you envy, is the kind that holds for life. These people achieve their dreams, and then aim higher. These people enjoy the journey, not just the destination. The illusion of "one singular life goal" blinds you to the truth; what belies a strong passion is a love for the act.
+{That doesn't help me. You just said I'm not that kind of person.}
+{Well, how do I "enjoy the journey" then?}
 Despite not having a life goal, did you not enjoy the charms of daily life? The outings with your friends, the hobbies you paid for through your job, the satisfaction of a comfortable life? Humans take many things for granted quite easily. I hope that you can look back on your life and see the journey you took - between goals, between small wishes, all the challenges and triumphs you had. There is no real difference between you and these people you envy. Both have dreams, even if you think your own are somehow less worthy. And when all is said and done and your goals have been achieved, you find new ones. There is not and has never been an end-all-be-all goal. 
 {No, I envied that they cared about something enough to dedicate their life to it.}
-In that case, I believe you’ll find it is much more similar to the journey which defines a passion. They loved what they were doing, yes? They loved it enough to dedicate their life, and make it the center of their dreams.
- These people, what set them apart is that they loved one single thing - a sport, or a craft, or a study - enough to dedicate their whole life to doing it. And that’s beautiful to behold, but your goals are no lesser just because they are non-singular. And you did have goals, no matter how you might protest it. You hoped for a good job, no? A stable income? Maybe a place of your own, or a good circle of friends?
+In that case, I believe you'll find it is much more similar to the journey which defines a passion. They loved what they were doing, yes? They loved it enough to dedicate their life, and make it the center of their dreams.
+ These people, what set them apart is that they loved one single thing - a sport, or a craft, or a study - enough to dedicate their whole life to doing it. And that's beautiful to behold, but your goals are no lesser just because they are non-singular. And you did have goals, no matter how you might protest it. You hoped for a good job, no? A stable income? Maybe a place of your own, or a good circle of friends?
 		{Small ones, I guess.}
-Right, and that’s all you needed to keep moving. Let me ask you this, then - did you not enjoy your journey? 
-Did you not enjoy the charms of daily life? The outings with your friends, the hobbies you paid for through your job, the satisfaction of a comfortable life? Humans take many things for granted quite easily. I hope that you can look back on your life and see the journey you took - between goals, between small wishes, all the challenges and triumphs you had. There is no real difference between you and these people you envy. Both have dreams, even if you think your own are somehow less worthy. And both have journeys. If you enjoyed yours, that’s all that matters. 
-{...No, I think it’s the journey.}
-And you’d be quite right, in my humble opinion. These people, what set them apart is that they loved one single thing - a sport, or a craft, or a study - enough to dedicate their whole life to doing it. And that’s beautiful to behold, but your goals are no lesser just because they are non-singular. And you did have goals, no matter how you might protest it. You hoped for a good job, no? A stable income? Maybe a place of your own, or a good circle of friends?
+Right, and that's all you needed to keep moving. Let me ask you this, then - did you not enjoy your journey? 
+Did you not enjoy the charms of daily life? The outings with your friends, the hobbies you paid for through your job, the satisfaction of a comfortable life? Humans take many things for granted quite easily. I hope that you can look back on your life and see the journey you took - between goals, between small wishes, all the challenges and triumphs you had. There is no real difference between you and these people you envy. Both have dreams, even if you think your own are somehow less worthy. And both have journeys. If you enjoyed yours, that's all that matters. 
+{...No, I think it's the journey.}
+And you'd be quite right, in my humble opinion. These people, what set them apart is that they loved one single thing - a sport, or a craft, or a study - enough to dedicate their whole life to doing it. And that's beautiful to behold, but your goals are no lesser just because they are non-singular. And you did have goals, no matter how you might protest it. You hoped for a good job, no? A stable income? Maybe a place of your own, or a good circle of friends?
 	{Small ones, I guess.}
-Right, and that’s all you needed to keep moving. Let me ask you this, then - did you not enjoy your journey? 
-Did you not enjoy the charms of daily life? The outings with your friends, the hobbies you paid for through your job, the satisfaction of a comfortable life? Humans take many things for granted quite easily. I hope that you can look back on your life and see the journey you took - between goals, between small wishes, all the challenges and triumphs you had. There is no real difference between you and these people you envy. Both have dreams, even if you think your own are somehow less worthy. And both have journeys. If you enjoyed yours, that’s all that matters. 
+Right, and that's all you needed to keep moving. Let me ask you this, then - did you not enjoy your journey? 
+Did you not enjoy the charms of daily life? The outings with your friends, the hobbies you paid for through your job, the satisfaction of a comfortable life? Humans take many things for granted quite easily. I hope that you can look back on your life and see the journey you took - between goals, between small wishes, all the challenges and triumphs you had. There is no real difference between you and these people you envy. Both have dreams, even if you think your own are somehow less worthy. And both have journeys. If you enjoyed yours, that's all that matters. 
 
-Oh dear, I do believe I’ve spent a tad too much time talking with you. My tea's gone cold! But, we’ll have plenty more time to discuss in the future. Think about what I’ve said, alright? Until next time, dear. I’ll keep recommending customers here. Not only for the counseling, either - these pastries are delectable.
+Oh dear, I do believe I've spent a tad too much time talking with you. My tea's gone cold! But, we'll have plenty more time to discuss in the future. Think about what I've said, alright? Until next time, dear. I'll keep recommending customers here. Not only for the counseling, either - these pastries are delectable.
 [End]
 
 Story 3: post relationship arc
 
 [Start]
-Well, it’s been quite some time since I last visited. Your cafe looks lovely! So much livelier now, and I see quite a few new menu items? Though I didn’t come here to discuss pastries. Tell me, dear, how have you been? Have you gotten to know a few of the residents here? 
-{Yep, I’ve met several! I even helped some of them pass on.}
-My, you’ve been doing my job for me! I must thank you deeply; it was not your responsibility to help them pass on, but you were kind enough to help them anyways. 
-		{Well, I didn’t do it on purpose, so I don’t know about kind…}
-Regardless of intention, you did a kind deed. And listening to their stories, that was on purpose, yes? Sometimes that’s all the help one needs.
-		{It wasn’t very difficult, I’m sure you could’ve done it}
-Ahh, I’m not so sure. It’s quite intimidating to talk to the Grim Reaper, no? I suspect quite a few ghosts would be much more willing to talk to a fellow human soul. 
-And by speaking to these ghosts, I’m sure you’ve connected with quite a few of them. You’ve mentioned previously that you felt as though none of the connections you made with other people held significance. Is that still true?
-{Yeah, I’ve met some, but anyone I got to know well disappeared.}
-I’m sorry to hear that. Unfortunately, such is the norm in purgatory. Let’s try to be happy for them, at least, celebrate that they were able to find peace.
-		{Yeah, you’re right}
-		{I’m still upset about it}
-I understand, and that’s a natural reaction. You may take all the time you need to mourn their absence, and I hope you’ll eventually be able to find joy in theirs. 
-I know it’s bittersweet, but learning to move on is, after all, the purpose of purgatory. I daresay I’ve been the one left behind by “goodbye” more than any other in the world.
+Well, it's been quite some time since I last visited. Your cafe looks lovely! So much livelier now, and I see quite a few new menu items? Though I didn't come here to discuss pastries. Tell me, dear, how have you been? Have you gotten to know a few of the residents here? 
+{Yep, I've met several! I even helped some of them pass on.}
+My, you've been doing my job for me! I must thank you deeply; it was not your responsibility to help them pass on, but you were kind enough to help them anyways. 
+		{Well, I didn't do it on purpose, so I don't know about kind…}
+Regardless of intention, you did a kind deed. And listening to their stories, that was on purpose, yes? Sometimes that's all the help one needs.
+		{It wasn't very difficult, I'm sure you could've done it}
+Ahh, I'm not so sure. It's quite intimidating to talk to the Grim Reaper, no? I suspect quite a few ghosts would be much more willing to talk to a fellow human soul. 
+And by speaking to these ghosts, I'm sure you've connected with quite a few of them. You've mentioned previously that you felt as though none of the connections you made with other people held significance. Is that still true?
+{Yeah, I've met some, but anyone I got to know well disappeared.}
+I'm sorry to hear that. Unfortunately, such is the norm in purgatory. Let's try to be happy for them, at least, celebrate that they were able to find peace.
+		{Yeah, you're right}
+		{I'm still upset about it}
+I understand, and that's a natural reaction. You may take all the time you need to mourn their absence, and I hope you'll eventually be able to find joy in theirs. 
+I know it's bittersweet, but learning to move on is, after all, the purpose of purgatory. I daresay I've been the one left behind by "goodbye" more than any other in the world.
 		{How do you get over it?}
 Well, there is no secret to it. Goodbye will always sting. But knowing the ghosts I help are better off at peace, knowing they are no longer bound by regret and remorse, helps settle my grief.
 		{Do you ever miss them? The ghosts who pass on.}
-Of course I do. Some stay in purgatory for much, much longer than they even stay alive, and I will admit to finding comfort in their companionship. But not only is it my duty, it is my life’s greatest wish that all ghosts may pass on peacefully. I would not, could not, give up that dream for anything. 
-You’ve clearly connected with quite a few of the residents of purgatory. Previously, you mentioned that you felt as though none of the connections you made with other people held significance. Is that still true?
-{Well, it’s not that they didn’t have significance, just that…they weren’t particularly unique, you know? The relationships themselves, I mean, not the people.}
-Hmm. Your relationships weren’t unique? I’m afraid I have a hard time understanding quite what you mean.
-{Just about everyone has family, and friends, and maybe a couple dates. There isn’t anyone I can point to and say, that person is everything to me. You know? I wish I could, I feel bad not being able to. But I can’t. It’s like my relationships were meaningless.}
-{Yeah, I just felt like…I didn’t have any relationships that held the sort of power and understanding and care that so many other people have.}
-You mean in comparison to others, your relationships didn’t feel strong enough?
-{Yeah, exactly. I didn’t have a perfect, ever-supportive family, or an unbreakable friendship, or a fairy-tale romance. I just had…people, who cared most of the time, and who I trusted most of the time. That doesn’t feel like enough. My relationships just didn’t feel…meaningful.}
-Well, let’s not look at it that way. All relationships are meaningful. The difference is that you passed on with all your relationships resolved or healthy enough that you don’t feel the need to change them. That’s a blessing, don’t you think?
-{But still, couldn’t it be that they didn’t mean enough to me to keep me here? My loved ones meant less to me than this stupid sense of inferiority I have with my own life. Isn’t that sad?}
-Let’s not invalidate your emotions like that. Your feelings aren’t “stupid”, and it is not a bad thing to have wanted more from your life. And you said so yourself - your loved ones are a part of why you are here. You wished to have more  “meaningful” relationships, no? You wanted to love them more, and be loved more in return. I think that is quite sufficient to conclude that they are a significant part of why you are here.
-{Maybe, but…I just don’t feel like I cared enough about them. Like, in the grand scheme of my life, they mattered less to me than they should have.}
-{I doubt all my relationships ended on a healthy note. Most of mine, at least, just faded away gradually until I didn’t know them at all. Can that really be called resolved? I think I just didn’t care enough about them.}
+Of course I do. Some stay in purgatory for much, much longer than they even stay alive, and I will admit to finding comfort in their companionship. But not only is it my duty, it is my life's greatest wish that all ghosts may pass on peacefully. I would not, could not, give up that dream for anything. 
+You've clearly connected with quite a few of the residents of purgatory. Previously, you mentioned that you felt as though none of the connections you made with other people held significance. Is that still true?
+{Well, it's not that they didn't have significance, just that…they weren't particularly unique, you know? The relationships themselves, I mean, not the people.}
+Hmm. Your relationships weren't unique? I'm afraid I have a hard time understanding quite what you mean.
+{Just about everyone has family, and friends, and maybe a couple dates. There isn't anyone I can point to and say, that person is everything to me. You know? I wish I could, I feel bad not being able to. But I can't. It's like my relationships were meaningless.}
+{Yeah, I just felt like…I didn't have any relationships that held the sort of power and understanding and care that so many other people have.}
+You mean in comparison to others, your relationships didn't feel strong enough?
+{Yeah, exactly. I didn't have a perfect, ever-supportive family, or an unbreakable friendship, or a fairy-tale romance. I just had…people, who cared most of the time, and who I trusted most of the time. That doesn't feel like enough. My relationships just didn't feel…meaningful.}
+Well, let's not look at it that way. All relationships are meaningful. The difference is that you passed on with all your relationships resolved or healthy enough that you don't feel the need to change them. That's a blessing, don't you think?
+{But still, couldn't it be that they didn't mean enough to me to keep me here? My loved ones meant less to me than this stupid sense of inferiority I have with my own life. Isn't that sad?}
+Let's not invalidate your emotions like that. Your feelings aren't "stupid", and it is not a bad thing to have wanted more from your life. And you said so yourself - your loved ones are a part of why you are here. You wished to have more  "meaningful" relationships, no? You wanted to love them more, and be loved more in return. I think that is quite sufficient to conclude that they are a significant part of why you are here.
+{Maybe, but…I just don't feel like I cared enough about them. Like, in the grand scheme of my life, they mattered less to me than they should have.}
+{I doubt all my relationships ended on a healthy note. Most of mine, at least, just faded away gradually until I didn't know them at all. Can that really be called resolved? I think I just didn't care enough about them.}
 And you want to care about them more?
 {Yes. I really wish that I could care that much about them.}
 In my humble opinion, that does sound quite a bit like you do care that much about them, no? Are wanting to care and caring truly so different?
 {...Yes. Because only one of them is the one I act on.}
-Is that what you envy, then? The lengths others go for the people they love? Every person is different, you know. Some feel less fear. Some people feel more loyalty. Some can’t think selflessly - it simply doesn’t occur to them to consider others. Comparing the lengths people would go for you - is that a fair assessment, for either you or them? Perhaps your mother would be too petrified with fear to fight off a robber for you, while a passing stranger would be confident enough to defend you. Does that mean that stranger cares for you? Even more than your mother?
-The lengths we go for people is important, yes, but even that is relative. It’s certainly no way to measure a relationship. At the end of the day, there is no way to measure a relationship against any other. Just answer this: did these people bring you joy? Comfort? Support, in hard times?
+Is that what you envy, then? The lengths others go for the people they love? Every person is different, you know. Some feel less fear. Some people feel more loyalty. Some can't think selflessly - it simply doesn't occur to them to consider others. Comparing the lengths people would go for you - is that a fair assessment, for either you or them? Perhaps your mother would be too petrified with fear to fight off a robber for you, while a passing stranger would be confident enough to defend you. Does that mean that stranger cares for you? Even more than your mother?
+The lengths we go for people is important, yes, but even that is relative. It's certainly no way to measure a relationship. At the end of the day, there is no way to measure a relationship against any other. Just answer this: did these people bring you joy? Comfort? Support, in hard times?
 {...Yes.}
 Then there you go. That means something to you, surely. Those emotions that they brought you.
 {...No.}
-Oh dear. Well, then, that’s certainly a tragic life to have led. None at all? No one in this world has ever touched your heart?
+Oh dear. Well, then, that's certainly a tragic life to have led. None at all? No one in this world has ever touched your heart?
 {...Ok, there were a couple.}
 Then there you go. That means something to you, surely. Those emotions that they brought you.
-{Nope. I’m entirely friendless, loveless, family-less.}
-Then, I do apologize, but that is entirely of your own making. I would call myself your friend, if you would let me. There are so many people, even in purgatory, who would call you a friend. You could even find ghosts desperate for some semblance of a family, if that’s what you wanted. If you isolate yourself and then despair a lack of relationships, I’m afraid the reason can only be yourself. You have to give others a chance to reach you, if you truly want a real connection.
-But, besides that, I don’t believe that you didn’t have any relations whatsoever. Even a stranger passing on the street can brighten your day. It’s not about the longevity, or the ending, or the effort put into a relationship - it’s only about how it makes you feel. And I know other humans have made you feel emotions. And, thus, I know that you have had meaningful relations.
+{Nope. I'm entirely friendless, loveless, family-less.}
+Then, I do apologize, but that is entirely of your own making. I would call myself your friend, if you would let me. There are so many people, even in purgatory, who would call you a friend. You could even find ghosts desperate for some semblance of a family, if that's what you wanted. If you isolate yourself and then despair a lack of relationships, I'm afraid the reason can only be yourself. You have to give others a chance to reach you, if you truly want a real connection.
+But, besides that, I don't believe that you didn't have any relations whatsoever. Even a stranger passing on the street can brighten your day. It's not about the longevity, or the ending, or the effort put into a relationship - it's only about how it makes you feel. And I know other humans have made you feel emotions. And, thus, I know that you have had meaningful relations.
 {...No, I suppose not.}
 Then there you go. Your relationships were meaningful, even to you. Recall just how much comfort, joy, and support you received from these people. Were those not significant to you? Everything is relative, even emotion, and so there is no logic dwelling in comparison. The people around you made you happy. That has meaning. 
 
-Well, unfortunately, I believe I’ve spent too much time enjoying this treat. I do hope you’ll think over what I’ve said about all relationships holding meaning. As always, I’ll keep referring customers in your direction. Perhaps I shall look for a few who regret the impact they left behind on their passing, hm? Let us investigate this next. Until next time, Cafe Ghost! I look forward to our next meeting.
+Well, unfortunately, I believe I've spent too much time enjoying this treat. I do hope you'll think over what I've said about all relationships holding meaning. As always, I'll keep referring customers in your direction. Perhaps I shall look for a few who regret the impact they left behind on their passing, hm? Let us investigate this next. Until next time, Cafe Ghost! I look forward to our next meeting.

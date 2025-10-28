@@ -3,48 +3,48 @@ Reporting live… or I guess dead, heh… may I have an {item}, please? Thanks�
 [End]
 
 [Success]
-Woah… if I had a broadcast still, I’d thank you live for the spark of joy you’ve given me.
+Woah… if I had a broadcast still, I'd thank you live for the spark of joy you've given me.
 [End]
 
 [Failure]
-Sadly not the kick I needed, but I guess it’s deserved… I’ll come again tomorrow… 
+Sadly not the kick I needed, but I guess it's deserved… I'll come again tomorrow… 
 [End]
 
 [Story]
-O-oh! I don’t think we’ve met yet… but I don’t think you want to.
-I’m News Reporter Ghost, but I don’t really run news stories or interviews anymore.
-While you’re here, I want to thank you for your service.
-If I still had a news station, I’d continuously advertise you. You’ve made a good impact on the ghosts, as far as I’ve seen, which… is more than I have done….
+O-oh! I don't think we've met yet… but I don't think you want to.
+I'm News Reporter Ghost, but I don't really run news stories or interviews anymore.
+While you're here, I want to thank you for your service.
+If I still had a news station, I'd continuously advertise you. You've made a good impact on the ghosts, as far as I've seen, which… is more than I have done….
 What? You want to know… my story?
-I thought it was well known enough, but… you’re the first ghost to ask me for my perspective directly from me.
+I thought it was well known enough, but… you're the first ghost to ask me for my perspective directly from me.
 Maybe I will… next time. 
 [End]
 
 [Story]
-Well, I’ve had a lot of time to think… and even though it’ll change your views on me, I think it’s worth it to tell you.
-Maybe it’ll help me… but I digress.
+Well, I've had a lot of time to think… and even though it'll change your views on me, I think it's worth it to tell you.
+Maybe it'll help me… but I digress.
 Where do I start?
 When I was but a small boy, I dreamed of giving every story light within the community.
-I watched my friends’ stories get trashed and erased, and I wanted to make an impact.
+I watched my friends' stories get trashed and erased, and I wanted to make an impact.
 So, I continued that pipedream, went to a couple universities, and became a pretty famous news reporter.
 The headlines I released, the stories I told… they were for the whole world to see every morning at 11 and every evening at 6.
 It was good. I felt like I could make a difference, like I could change the world… and then the story came.
-I… I don’t think I’m ready to tell you the rest of the pain yet.
-I’m sorry, but I need a bit of time. I’ve never communicated this to someone and it’s… hard.
-I’ll fill you in… next time.
+I… I don't think I'm ready to tell you the rest of the pain yet.
+I'm sorry, but I need a bit of time. I've never communicated this to someone and it's… hard.
+I'll fill you in… next time.
 [End]
 
 [Story]
 Sigh… I need to get this off my chest before it kills me.
-Well, the microphone through my chest did kill me, metaphorically, so it wouldn’t be the first time.
+Well, the microphone through my chest did kill me, metaphorically, so it wouldn't be the first time.
 Anyway… I had previously described my excitement to change the world.
 One fateful day, I had to research a court trial about a serial killer who hurt so many innocent people.
-One of those people… let’s just say I had personal stakes in this trial. So, when a person was brought to light, I immediately accused them… on live television.
-You know how the media is - it’s so easy to twist and spin into your own narrative, and because I was so well-known, it became other people’s narratives, too.
+One of those people… let's just say I had personal stakes in this trial. So, when a person was brought to light, I immediately accused them… on live television.
+You know how the media is - it's so easy to twist and spin into your own narrative, and because I was so well-known, it became other people's narratives, too.
 The person was hated across the world, and the trial was an easy one to predict with my hands in it.
 I continued to release press after press against them, consumed with a desire to prove the world that I was right… but I was really just trying to justify condemning a person to myself.
 I… I was selfish. I realize that now. And… as selfish as it is, I need a bit more time.
-I’ll finish the story… next time. 
+I'll finish the story… next time. 
 [End]
 
 [Story]
@@ -56,21 +56,21 @@ He ended up punching me in the eye, and I guess it stuck with me.
 He left me some evidence, too, and it showed what I had feared to be true.
 The person was innocent - they were a scapegoat to an undercover terrorist organization.
 How could I have been so wrong?
-I wanted to share everyone’s stories to the world, but I chose my own story, my own narrative, over them in the end.
+I wanted to share everyone's stories to the world, but I chose my own story, my own narrative, over them in the end.
 Eventually, I turned myself in, spent some time in prison, and let my successor tell the story of how I was wrong.
 It still haunts me to this day… as much as a memory can haunt a ghost.
 You see why it was so hard to tell you this?
-I made an impact on the world that I couldn’t fix or erase… and now I’m left to deal with it alone, because how could anyone love me or care for me after all I’ve done?
+I made an impact on the world that I couldn't fix or erase… and now I'm left to deal with it alone, because how could anyone love me or care for me after all I've done?
 I… oh, this ripped the memories out of my chest.
-I’ll see you… next time.
+I'll see you… next time.
 [End]
 
 [Story]
-Hi, again. I… I didn’t acknowledge your care last time to hear my side of the story, and I appreciate it.
-I don’t think I can do anything about this, and it’s going to be a scar that forever remains… but ultimately, it doesn’t have to define me.
-It’s a terrible thing I’ve done, but… if I’m willing to change, that’s what matters.
+Hi, again. I… I didn't acknowledge your care last time to hear my side of the story, and I appreciate it.
+I don't think I can do anything about this, and it's going to be a scar that forever remains… but ultimately, it doesn't have to define me.
+It's a terrible thing I've done, but… if I'm willing to change, that's what matters.
 I recognize my errors, and… I need to go find Lawyer Ghost and talk to him.
 I need to go find that person in the afterlife and apologize.
-I can’t fix everything, but I can at least make amends and give them and myself… peace.
-Thank you for providing me peace, and I’ll see you… next time.
+I can't fix everything, but I can at least make amends and give them and myself… peace.
+Thank you for providing me peace, and I'll see you… next time.
 [End]

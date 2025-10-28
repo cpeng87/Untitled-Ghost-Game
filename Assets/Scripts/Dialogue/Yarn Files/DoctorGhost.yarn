@@ -35,9 +35,9 @@ Doctor Ghost: You know, this cute little cafe reminds me of the coffee shop near
 Doctor Ghost: The barista there always had a huge smile on her face as she made everyone's orders. She messed up a few times, but she always tried her best.
 Doctor Ghost: Her enthusiasm was simply infectious- pun not intended.
 <<emotionChange Normal>>
-Doctor Ghost: It always amazes me how much actions can change another person’s life.
+Doctor Ghost: It always amazes me how much actions can change another person's life.
 <<emotionChange Concern>>
-Doctor Ghost: As a doctor, I’ve treated so many patients. Some of them were old, barely hanging on to life. Still, they fought to stay with their loved ones as long as possible.
+Doctor Ghost: As a doctor, I've treated so many patients. Some of them were old, barely hanging on to life. Still, they fought to stay with their loved ones as long as possible.
 Doctor Ghost: Others were young, hurt by things out of their control. People of all ages and backgrounds all come to the hospital for the same purpose: another chance at life.
 <<emotionChange Normal>>
 Doctor Ghost: Whenever I see their smile or the smile of their loved ones, I realize how much I changed their lives.
@@ -62,9 +62,9 @@ Doctor Ghost: I... I have to find him.
 Doctor Ghost: He was the reason why I lived to become a doctor.
 Doctor Ghost: Why I... even had the chance to live in the first place.
 <<emotionChange Concern>>
-Doctor Ghost: I contracted a debilitating illness when I was young. And because our village didn’t have a doctor, I was certain I was going to die.
+Doctor Ghost: I contracted a debilitating illness when I was young. And because our village didn't have a doctor, I was certain I was going to die.
 Doctor Ghost: A group of doctors from a neighboring town was dispatched to provide aid, but some bandits saw this as an opportunity to steal supplies and attacked our village. That soldier saved me... at the cost of his own life.
-Doctor Ghost: I didn’t want his sacrifice to be in vain, so I pushed myself to live.
+Doctor Ghost: I didn't want his sacrifice to be in vain, so I pushed myself to live.
 <<emotionChange Normal>>
 Doctor Ghost: When the aid arrived, I dedicated myself to become a doctor as well.
 <<setCam "Main Camera">>
@@ -77,15 +77,15 @@ position: 169,38
 <<emotionChange Happy Flowers>>
 Doctor Ghost: I finally found him! The Soldier!
 <<emotionChange Concern>>
-Doctor Ghost: I’m so glad I was able to find him... Though, it seemed like he had forgotten all about me.
+Doctor Ghost: I'm so glad I was able to find him... Though, it seemed like he had forgotten all about me.
 <<emotionChange Normal>>
-Doctor Ghost: I didn’t recognize him at first, but the dog tag he wore matched the one worn by the soldier who saved me, so it must be him!
-Doctor Ghost: He tried to be humble when I thanked him for what he did, but there’s no way I could just brush it off!!
+Doctor Ghost: I didn't recognize him at first, but the dog tag he wore matched the one worn by the soldier who saved me, so it must be him!
+Doctor Ghost: He tried to be humble when I thanked him for what he did, but there's no way I could just brush it off!!
 <<emotionChange Happy Flowers>>
-Doctor Ghost: He was the one who motivated me to keep going- to live for others! If it weren’t for him, I would have either died by those bandits or passed from my illness.
+Doctor Ghost: He was the one who motivated me to keep going- to live for others! If it weren't for him, I would have either died by those bandits or passed from my illness.
 <<emotionChange Normal Flowers>>
-Doctor Ghost: Now that I've said my thanks, I... think I’m ready to move on.
-Doctor Ghost: I’m really glad that this place exists.
+Doctor Ghost: Now that I've said my thanks, I... think I'm ready to move on.
+Doctor Ghost: I'm really glad that this place exists.
 Doctor Ghost: Thank you for the drinks. I'm sure that they've helped change some people's lives for the better.
 <<emotionChange Normal>>
 <<setCam "Main Camera">>

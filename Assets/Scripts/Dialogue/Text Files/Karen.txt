@@ -3,27 +3,27 @@ One {item} and a caramel iced coffee with extra whipped cream, sprinkles, 2 shot
 [End]
 
 [Success] 
-Success: This…! Wow, this is… hmph! You’re lucky I’m even paying for it!
+Success: This…! Wow, this is… hmph! You're lucky I'm even paying for it!
 [End]
 
 [Failure]
-Failure: What is this?! DISGUSTING!!! I want you FIRED! Who is your boss?!? …You’re self employed?
+Failure: What is this?! DISGUSTING!!! I want you FIRED! Who is your boss?!? …You're self employed?
 [End]
 
 [Story1]
-Well, I certainly don’t see what all the fuss is about. This looks like any old raggedy coffee shop to me.
+Well, I certainly don't see what all the fuss is about. This looks like any old raggedy coffee shop to me.
 [End]
 
 [Story2]
-I’m only here because the other cafes always mess up my order. Hmph! Don’t get a big head about it.
+I'm only here because the other cafes always mess up my order. Hmph! Don't get a big head about it.
 [End]
 
 [Story3]
-How I died?? Do you have no manners?!? Not that it’s any of your business, but I was… left behind… during a camping trip. And… I didn’t have a way out of the forest.
+How I died?? Do you have no manners?!? Not that it's any of your business, but I was… left behind… during a camping trip. And… I didn't have a way out of the forest.
 There, happy?
 [End]
 
 [Story4]
-Why I’m still here? …I guess I was just waiting for someone to come find me.
-Not that it matters, anyways. I’m a ghost now, and anyone who might’ve come for me is probably dead, too.
+Why I'm still here? …I guess I was just waiting for someone to come find me.
+Not that it matters, anyways. I'm a ghost now, and anyone who might've come for me is probably dead, too.
 [End]
