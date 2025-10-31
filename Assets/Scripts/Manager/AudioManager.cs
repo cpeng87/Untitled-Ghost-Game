@@ -341,4 +341,13 @@ public class AudioManager : MonoBehaviour
     public int GetMusicCount() => music.Length;
     public string GetMusicName(int index) => index >= 0 && index < music.Length ? music[index].name : null;
 
+    public void Reset()
+    {
+        currentSong = "Title";
+        currIndex = 0;
+        currentScene = null;
+        savedSong = null;
+        savedTime = 0f;
+    }
+
 }

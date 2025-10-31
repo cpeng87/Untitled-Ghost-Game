@@ -923,7 +923,7 @@ MonoBehaviour:
     m_Top: 30
     m_Bottom: 40
   m_ChildAlignment: 4
-  m_Spacing: 10
+  m_Spacing: 35
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
@@ -1266,7 +1266,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -12.075928, y: -98}
+  m_AnchoredPosition: {x: -600.2, y: -108.4}
   m_SizeDelta: {x: 175.1059, y: 56.742}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &6796395346565495082
@@ -1532,7 +1532,7 @@ RectTransform:
   m_Father: {fileID: 6093101383454670305}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1610,7 +1610,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4.999634, y: -5}
+  m_AnchoredPosition: {x: -15.300049, y: -13.5}
   m_SizeDelta: {x: 42.7395, y: 43.029}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &4383919440934807330
@@ -1828,7 +1828,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6375241207451315769}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Manager.RecipeShop.RecipeShopManager, Assembly-CSharp
         m_MethodName: CancelTransaction
         m_Mode: 1
@@ -3166,9 +3166,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4529931250005262155}
         m_TargetAssemblyTypeName: Yarn.Unity.LineView, Assembly-CSharp
         m_MethodName: OnContinueClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5741961006765652193}
+        m_TargetAssemblyTypeName: DialoguePlayer, Assembly-CSharp
+        m_MethodName: Reset
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3563,9 +3575,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3155839019358947692}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1224}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4102768215426040770}
@@ -3574,9 +3586,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 960, y: 540}
+  m_SizeDelta: {x: 1920, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &9208390728986250856
 Canvas:
   m_ObjectHideFlags: 0
@@ -3664,17 +3676,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3259301404138289898}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2016594622466532725}
   m_Father: {fileID: 365160623215059199}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -77.3, y: 22}
+  m_AnchoredPosition: {x: 83.1, y: 22}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &3025987930863257410
@@ -3849,6 +3861,7 @@ GameObject:
   - component: {fileID: 8742962167825859775}
   - component: {fileID: 8527741068322072930}
   - component: {fileID: 698995277853097077}
+  - component: {fileID: 4529931250005262155}
   m_Layer: 5
   m_Name: Line View
   m_TagString: Untagged
@@ -3931,6 +3944,42 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &4529931250005262155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3307724946566038336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ca0dec77ee1a742a000fa62ff3f5dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indicator: {fileID: 7068101067407172726}
+  canvasGroup: {fileID: 698995277853097077}
+  useFadeEffect: 0
+  fadeInTime: 0.25
+  fadeOutTime: 0.05
+  lineText: {fileID: 3263724020440712640}
+  showCharacterNameInLineView: 1
+  characterNameText: {fileID: 1650501368839124474}
+  characterNameContainer: {fileID: 2963304102291149428}
+  useTypewriterEffect: 1
+  onCharacterTyped:
+    m_PersistentCalls:
+      m_Calls: []
+  onPauseStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  onPauseEnded:
+    m_PersistentCalls:
+      m_Calls: []
+  typewriterEffectSpeed: 120
+  continueButton: {fileID: 2917533016175173561}
+  holdTime: 1
+  autoAdvance: 0
+  palette: {fileID: 0}
 --- !u!1 &3815855505156044742
 GameObject:
   m_ObjectHideFlags: 0
@@ -5082,7 +5131,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 25, y: -45}
+  m_AnchoredPosition: {x: 29.900024, y: -54.799988}
   m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &7153609335695302001
@@ -5113,7 +5162,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Currency: 0'
+  m_text: 'Coins: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d196d5669ef939d4eaea38e2eb818198, type: 2}
   m_sharedMaterial: {fileID: 5265687828343391479, guid: d196d5669ef939d4eaea38e2eb818198, type: 2}
@@ -5215,12 +5264,12 @@ Transform:
   m_GameObject: {fileID: 5346578281291840667}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1224}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -399.99997, y: -224.99998, z: 509.99994}
+  m_LocalScale: {x: 0.41666663, y: 0.41666663, z: 0.41666663}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4335658061153853476}
-  m_Father: {fileID: 4921587136092033621}
+  m_Father: {fileID: 520621558246656003}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4301581928161261872
 MonoBehaviour:
@@ -5237,7 +5286,7 @@ MonoBehaviour:
   yarnProject: {fileID: 7545569452688597077, guid: 5102439a78aab0c4591fb8aff34b05bb, type: 3}
   _variableStorage: {fileID: 4944100659763604410}
   dialogueViews:
-  - {fileID: 0}
+  - {fileID: 4529931250005262155}
   - {fileID: 840145258902238423}
   startNode: Start
   startAutomatically: 0
@@ -5319,7 +5368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63088b2f4531e9c4480767a23a379e61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lineView: {fileID: 0}
+  lineView: {fileID: 4529931250005262155}
   letterClips:
   - {fileID: 8300000, guid: 5e6d7f283c3829f4f97b83cf15c44320, type: 3}
   - {fileID: 8300000, guid: d6e1c768a2513214e980973f68a68a7b, type: 3}
@@ -5872,7 +5921,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4921587136092033621}
   - component: {fileID: 4880685547447475607}
-  - component: {fileID: 6375241207451315769}
   - component: {fileID: 6474247633930672802}
   - component: {fileID: 3878889779433555759}
   m_Layer: 0
@@ -5896,7 +5944,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 520621558246656003}
-  - {fileID: 7658327887689858988}
   - {fileID: 8181089336225879433}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5914,37 +5961,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currencyField: {fileID: 8292511265645242801}
   satisfactionField: {fileID: 0}
---- !u!114 &6375241207451315769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6252277254580641475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06e21842cb030a5409a027f76bc12138, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  recipeNotifAnimator: {fileID: 5828814708913442611}
-  recipePrefab: {fileID: 7703420820620632800, guid: 36fb202216d990e47a890a3af45eb289, type: 3}
-  shouldDebug: 0
-  recipes:
-  - {fileID: 11400000, guid: ea3987c484745a2438022c3ec953ace6, type: 2}
-  - {fileID: 11400000, guid: 572f15a56812c1d429c91069f69fe7dc, type: 2}
-  - {fileID: 11400000, guid: 105e795d82953114f959071cd672cfeb, type: 2}
-  - {fileID: 11400000, guid: 536cb770bc83d064eba8d39f5417fdfa, type: 2}
-  - {fileID: 11400000, guid: 2c8944e5acd276242a1dacb709fa93d3, type: 2}
-  - {fileID: 11400000, guid: bb3877ff9af98f74f9de8ff2bbd6eef4, type: 2}
-  recipePurchasePromptMessage: Confirm purchase
-  recipeSalePromptMessage: Confirm sale
-  recipeShopUI: {fileID: 5116653305666244201}
-  recipesContainer: {fileID: 8762285600720728763}
-  currencyText: {fileID: 4837725272693829640}
-  recipeShopOpenButton: {fileID: 6557100783851098312}
-  recipeShopReturnButton: {fileID: 8519277065712857487}
-  recipeTransactionConfirmationPromptUI: {fileID: 598200215953055866}
-  recipeTransactionMessagePromptText: {fileID: 6793676722300113493}
 --- !u!114 &6474247633930672802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6195,11 +6211,12 @@ RectTransform:
   - {fileID: 4416701039982350910}
   - {fileID: 6244743693883652370}
   - {fileID: 2364148925187160418}
-  - {fileID: 1934220032864558742}
   - {fileID: 3180539053584733543}
   - {fileID: 7882440903468999769}
   - {fileID: 365160623215059199}
   - {fileID: 8673651481954835815}
+  - {fileID: 7658327887689858988}
+  - {fileID: 1934220032864558742}
   m_Father: {fileID: 4921587136092033621}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -6546,7 +6563,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0c318cdbd690ffe499e48fa6b06894d0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a8bf431ac014a6a43bfd1545a868d04d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6813,7 +6830,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6375241207451315769}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Manager.RecipeShop.RecipeShopManager, Assembly-CSharp
         m_MethodName: CompleteTransaction
         m_Mode: 6
@@ -7036,7 +7053,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 35, y: 0}
-  m_SizeDelta: {x: 350, y: 50}
+  m_SizeDelta: {x: 474.2069, y: 50}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &6180885668912959834
 CanvasRenderer:
@@ -7310,7 +7327,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8901676409664676840}
   m_HandleRect: {fileID: 6826422743197176786}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -7697,7 +7714,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -313, y: 0.000019013882}
+  m_AnchoredPosition: {x: -313, y: 0.000029563904}
   m_SizeDelta: {x: 600, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &6549596716894865678
