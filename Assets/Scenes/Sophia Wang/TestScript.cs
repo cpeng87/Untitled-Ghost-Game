@@ -65,10 +65,7 @@ class Draw : MinigameCompletion
         }
         if (Input.GetMouseButton(0))
         {
-            if (!AudioManager.Instance.CheckPlaying())
-            {
-                AudioManager.Instance.PlaySound("Icing");
-            }
+            
             CalculatePixel();
         }
         else
@@ -81,6 +78,11 @@ class Draw : MinigameCompletion
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, 10f))
         {
+            if (!AudioManager.Instance.CheckPlaying())  // play sound if hit cookie
+            {
+                AudioManager.Instance.PlaySound("Icing");
+            }
+            isComplete = true; // mark as complete when hit
             point.position = hit.point;
             xPixel = (int)((point.localPosition.x - topLeftCorner.localPosition.x) * xMult);
             yPixel = (int)((point.localPosition.y - topLeftCorner.localPosition.y) * yMult);
@@ -194,11 +196,15 @@ class Draw : MinigameCompletion
     }
     public void onFinish()
     {
-        if (!isComplete)
+        if (isComplete)
         {
             AudioManager.Instance.StopSound();
             minigameResult.MinigameResult(true);
-            isComplete = true;
+
+        }
+        else
+        {
+            minigameResult.MinigameResult(false);
         }
     }
 
