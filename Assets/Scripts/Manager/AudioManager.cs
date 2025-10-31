@@ -94,7 +94,7 @@ public class AudioManager : MonoBehaviour
     /// Changes the song that's currently playing but now with fade
     /// </summary>
     /// <param name="songName"></param>
-    public void PlaySong(string songName, float fadeTime = 1f) {
+    public void PlaySong(string songName, float fadeTime = 0.5f) {
 
         if (musicDict.TryGetValue(songName, out var clip))  {
             if (musicSource.clip == clip && musicSource.isPlaying)
@@ -131,6 +131,7 @@ public class AudioManager : MonoBehaviour
             musicSource.time = savedTime;
             currentSong = savedSong;
             musicSource.Play();
+            OnSongChanged?.Invoke(savedSong);
         }
         else
         {
@@ -226,7 +227,7 @@ public class AudioManager : MonoBehaviour
     //         Debug.LogWarning("Song " + songName + " not found!");
     //     }
     // }
-    public void NextSong(float fadeTime = 1f)
+    public void NextSong(float fadeTime = 0.5f)
     {
         //pays the next song on the list
         currIndex = (currIndex + 1) % music.Length;
@@ -246,7 +247,7 @@ public class AudioManager : MonoBehaviour
 
         OnSongChanged?.Invoke(music[currIndex].name);
     }
-    public void NextSong(int index, float fadeTime = 1f)
+    public void NextSong(int index, float fadeTime = 0.5f)
     {
         if (index < music.Length)
         {
