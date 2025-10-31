@@ -82,7 +82,7 @@ class Draw : MinigameCompletion
             {
                 AudioManager.Instance.PlaySound("Icing");
             }
-            isComplete = true; // mark as complete when hit
+            
             point.position = hit.point;
             xPixel = (int)((point.localPosition.x - topLeftCorner.localPosition.x) * xMult);
             yPixel = (int)((point.localPosition.y - topLeftCorner.localPosition.y) * yMult);
@@ -196,15 +196,11 @@ class Draw : MinigameCompletion
     }
     public void onFinish()
     {
-        if (isComplete)
+        if (!isComplete)
         {
             AudioManager.Instance.StopSound();
             minigameResult.MinigameResult(true);
-
-        }
-        else
-        {
-            minigameResult.MinigameResult(false);
+            isComplete = true;
         }
     }
 
