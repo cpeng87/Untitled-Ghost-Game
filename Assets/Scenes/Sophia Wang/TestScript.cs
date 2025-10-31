@@ -79,7 +79,6 @@ class Draw : MinigameCompletion
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, 10f))
         {
-            Debug.Log("HITTTTT");
             if (!AudioManager.Instance.CheckPlaying())  // play sound if hit cookie
             {
                 AudioManager.Instance.PlaySound("Icing");
@@ -199,7 +198,7 @@ class Draw : MinigameCompletion
     }
     public void onFinish()
     {
-        AudioManager.Instance.StopSound();
+        // AudioManager.Instance.StopSound();
         if (decorated)
         {
             minigameResult.MinigameResult(true);
@@ -208,6 +207,7 @@ class Draw : MinigameCompletion
         {
             minigameResult.MinigameResult(true, false, true);
         }
+        isComplete = true;
     }
 
 }
