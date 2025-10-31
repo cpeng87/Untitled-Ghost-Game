@@ -16,16 +16,16 @@ public class MinigameSuccessFail : MonoBehaviour
         bg.SetActive(false);
     }
 
-    public void MinigameResult(bool result, bool chefSkip = false)
+    public void MinigameResult(bool result, bool chefSkip = false, bool specialCookie = false)
     {
         if (!isComplete)
         {
             isComplete = true;
-            StartCoroutine(ShowTextAndPauseGame(result, chefSkip));
+            StartCoroutine(ShowTextAndPauseGame(result, chefSkip, specialCookie));
         }
     }
 
-    private IEnumerator ShowTextAndPauseGame(bool result, bool chefSkip)
+    private IEnumerator ShowTextAndPauseGame(bool result, bool chefSkip, bool specialCookie)
     {
         Time.timeScale = 0;
         bg.SetActive(true);
@@ -46,6 +46,6 @@ public class MinigameSuccessFail : MonoBehaviour
 
         Time.timeScale = 1;
 
-        GameManager.Instance.CompleteMinigame(result, chefSkip);
+        GameManager.Instance.CompleteMinigame(result, chefSkip, specialCookie);
     }
 }

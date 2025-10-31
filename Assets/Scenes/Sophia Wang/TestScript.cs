@@ -27,6 +27,7 @@ class Draw : MinigameCompletion
     [SerializeField] private Material referenceMaterial;
     private Texture2D textureGoal;
     private bool isComplete;
+    private bool decorated;
 
     private void Start()
     {
@@ -78,6 +79,7 @@ class Draw : MinigameCompletion
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, 10f))
         {
+            Debug.Log("HITTTTT");
             if (!AudioManager.Instance.CheckPlaying())  // play sound if hit cookie
             {
                 AudioManager.Instance.PlaySound("Icing");
@@ -107,6 +109,7 @@ class Draw : MinigameCompletion
         lastX = xPixel;
         lastY = yPixel;
         SetTexture();
+        decorated = true;
     }
 
     private void DrawBrush(int xPix, int yPix)
@@ -196,11 +199,14 @@ class Draw : MinigameCompletion
     }
     public void onFinish()
     {
-        if (!isComplete)
+        AudioManager.Instance.StopSound();
+        if (decorated)
         {
-            AudioManager.Instance.StopSound();
             minigameResult.MinigameResult(true);
-            isComplete = true;
+        }
+        else
+        {
+            minigameResult.MinigameResult(true, false, true);
         }
     }
 
