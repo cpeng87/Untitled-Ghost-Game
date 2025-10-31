@@ -84,7 +84,7 @@ class Draw : MinigameCompletion
             {
                 AudioManager.Instance.PlaySound("Icing");
             }
-            isComplete = true; // mark as complete when hit
+            
             point.position = hit.point;
             xPixel = (int)((point.localPosition.x - topLeftCorner.localPosition.x) * xMult);
             yPixel = (int)((point.localPosition.y - topLeftCorner.localPosition.y) * yMult);
