@@ -20,7 +20,7 @@ public class MiniGame : MinigameCompletion {
     private float blockSpeedIncrement = 0.5f;
     private int blockDirection = 1;
     private float xLimit = 5;
-    private float timeBetweenRounds = 1f;
+    private float timeBetweenRounds = 1.5f;
     private int livesRemaining;
     private bool playing = true;
     private Transform[] sandwichOrder;
