@@ -77,7 +77,7 @@ public class OrderManager : MonoBehaviour
 
     //completes an order
     //if success, say success dialogue and get money, if fail say fail dialogue.
-    public void CompleteOrder(bool result, bool chefSkip)
+    public void CompleteOrder(bool result, bool chefSkip, bool specialCookie)
     {
         if (currActiveOrder == -1)
         {
@@ -85,7 +85,7 @@ public class OrderManager : MonoBehaviour
         }
         AudioManager.Instance.ContinueSong();
         Ghost currGhost = GameManager.Instance.ghostManager.GetGhostScriptableFromName(activeOrders[currActiveOrder].ghostName);
-        DialoguePlayer.Instance.CompleteOrderDialogue(currGhost.ghostName, activeOrders[currActiveOrder].seatNum, result);
+        DialoguePlayer.Instance.CompleteOrderDialogue(currGhost.ghostName, activeOrders[currActiveOrder].seatNum, result, specialCookie);
         
         if (!chefSkip && result)
         {

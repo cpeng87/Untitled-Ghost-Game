@@ -146,7 +146,7 @@ public class DialoguePlayer : MonoBehaviour
         GameManager.Instance.state = State.Dialogue;
     }
 
-    public void CompleteOrderDialogue(string ghostName, int seatNum, bool result) {
+    public void CompleteOrderDialogue(string ghostName, int seatNum, bool result, bool specialCookie) {
         Reset();
         CameraManager.Instance.SwapToSeatCamera(seatNum);
         this.seatNum = seatNum;
@@ -161,7 +161,14 @@ public class DialoguePlayer : MonoBehaviour
         
         if (result) {
             state = DialogueState.Success;
-            dialogueRunner.StartDialogue(parsedName + "Success");
+            if (specialCookie)
+            {
+                dialogueRunner.StartDialogue(parsedName + "SuccessSpecial");
+            }
+            else
+            {
+                dialogueRunner.StartDialogue(parsedName + "Success");
+            }
         } else {
             state = DialogueState.Fail;
             dialogueRunner.StartDialogue(parsedName + "Failure");

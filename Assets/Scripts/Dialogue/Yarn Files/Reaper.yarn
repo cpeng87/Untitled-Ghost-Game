@@ -20,6 +20,18 @@ Reaper: Thank you very much, it's delicious! What a creative design, as well.
 <<startStory ReaperStory>>
 ===
 
+title: ReaperSuccessSpecial
+tags:
+position: -173,132
+---
+<<reaperPitch true>>
+<<emotionChange Happy>>
+Reaper: Ah, I've noticed you haven't decorated it at all. No matter dear, if you can't seem to put a pen to paper, I'll try my best to help you gather the strength to.
+<<emotionChange Normal>>
+<<reaperPitch false>>
+<<startStory ReaperStory>>
+===
+
 title: ReaperStory1
 tags:
 position: 169,38
