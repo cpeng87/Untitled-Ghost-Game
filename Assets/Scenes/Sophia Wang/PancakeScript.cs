@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 public class PancakeScript : MonoBehaviour
@@ -8,9 +9,23 @@ public class PancakeScript : MonoBehaviour
     [SerializeField] GameObject pancakePrefab;
     private Vector3 startPosition;
     private bool hasBounced = false;
+    private Rigidbody rb;
+    private Collider col;
     private void Start()
     {
         startPosition = transform.position;
+        rb = GetComponent<Rigidbody>();
+        col = GetComponent<Collider>();
+
+        if (rb != null)
+        {
+            rb.isKinematic = false;
+        }
+        if (col != null)
+        {
+            col.enabled = true;
+        }
+
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private Vector3 getMousePos()
@@ -20,10 +35,19 @@ public class PancakeScript : MonoBehaviour
     private void OnMouseDown()
     {
         mousePosition = Input.mousePosition - getMousePos();
+
+        if (rb != null)
+        {
+            rb.isKinematic = true;
+        }
+        if (col != null)
+        {
+            col.enabled = false;
+        }
     }
     private void OnMouseDrag()
     {
-        if (moved == false)
+        if (!moved)
         {
             transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition - mousePosition);
             clicked = true;
@@ -31,11 +55,33 @@ public class PancakeScript : MonoBehaviour
     }
     private void OnMouseUp()
     {
-        if (clicked)
+        if (rb != null)
+        {
+            rb.isKinematic = false;
+        }
+        if (col != null)
+        {
+            col.enabled = true;
+        }
+
+
+
+        if (clicked && !moved)
         {
             moved = true;
             GameObject pancake = Instantiate(pancakePrefab, startPosition, Quaternion.identity);
             pancake.name = "Pancake";
+
+            Rigidbody newRb = pancake.GetComponent<Rigidbody>();
+            Collider newCol = pancake.GetComponent<Collider>();
+            if (newRb != null)
+            {
+                newRb.isKinematic = false;
+            }
+            if (newCol != null)
+            {
+                newCol.enabled = true;
+            }
         }
     }
 
