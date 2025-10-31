@@ -60,8 +60,8 @@ public class RingScript : MonoBehaviour
 
     public int GetScore()
     {
-        float diff = start_x-ring.transform.localScale.x;
-        score = Mathf.RoundToInt(diff/(ring.transform.localScale.x*2-ring.transform.localScale.x)*10);
+        float diff = start_x - ring.transform.localScale.x;
+        score = Mathf.FloorToInt(diff/(ring.transform.localScale.x*2-ring.transform.localScale.x)*10);
 
         Reset();
 
