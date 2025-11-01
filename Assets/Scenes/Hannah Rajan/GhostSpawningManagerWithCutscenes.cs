@@ -127,7 +127,7 @@ public class GhostSpawningManagerWithCutscenes : MonoBehaviour
                 ghostObj.SetSeatNum(i);
                 if (GameManager.Instance.orderManager.HasActiveOrder(ghostObj.GetScriptable().ghostName) == true)
                 {
-                    ghostObj.SetHasTakenOrder(true);
+                    ghostObj.SetHasTakenOrder();
                 }
 
                 //Add the GameObject to the two dictionaries, calculating the needed speed for the ghost_with_speed dictionary

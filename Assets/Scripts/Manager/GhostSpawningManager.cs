@@ -62,6 +62,7 @@ public class GhostSpawningManager : MonoBehaviour
         {
             ghostSpawnTimer += Time.deltaTime;
         }
+        // spawn faster when nobody in cafe
         if (GameManager.Instance.ghostManager.HasActive() == false && ghostSpawnTimer > 1.5f)
         {
             SpawnGhost();
@@ -112,10 +113,7 @@ public class GhostSpawningManager : MonoBehaviour
                             if (Math.Abs(Quaternion.Angle(spawnedGhosts[i].Item1.transform.rotation, RotationGoal2)) < 1f)
                             {
                                 spawnedGhosts[i].Item2 = false;
-                                spawnedGhosts[i].Item1.GetComponent<GhostObj>().SetSeated(true);
-                                //GameObject ghost = GameManager.Instance.ghostManager.GetGameObjFromName(spawnedGhosts[i].Item1.GetComponent<GhostObj>().GetScriptable().ghostName);
-                                //ghost.GetComponent<GhostObj>().SetSeated(true);
-                                //spawnedGhosts[i].Item1.transform.position = positions[i]; //lock ghost into position
+                                spawnedGhosts[i].Item1.GetComponent<GhostObj>().SetSeated();
                             }
                         }
                         break;
@@ -149,7 +147,7 @@ public class GhostSpawningManager : MonoBehaviour
                         if (Vector3.Distance(spawnedGhosts[i].Item1.transform.position, positions[i]) <= 0.1f || distanceDiff.x < 0f) //0.1f positional tolerance, extra check to make sure ghost doesnt walk into the counter erm
                         {
                             spawnedGhosts[i].Item2 = false;
-                            spawnedGhosts[i].Item1.GetComponent<GhostObj>().SetSeated(true);
+                            spawnedGhosts[i].Item1.GetComponent<GhostObj>().SetSeated();
                             //GameObject ghost = GameManager.Instance.ghostManager.GetGameObjFromName(spawnedGhosts[i].Item1.GetComponent<GhostObj>().GetScriptable().ghostName);
                             //ghost.GetComponent<GhostObj>().SetSeated(true);
                             //spawnedGhosts[i].Item1.transform.position = positions[i]; //lock ghost into position
@@ -193,7 +191,7 @@ public class GhostSpawningManager : MonoBehaviour
                         if (Vector3.Distance(spawnedGhosts[i].Item1.transform.position, positions[i]) <= 0.1f || distanceDiff.x < 0f) //0.1f positional tolerance, extra check to make sure ghost doesnt walk into the counter erm
                         {
                             spawnedGhosts[i].Item2 = false;
-                            spawnedGhosts[i].Item1.GetComponent<GhostObj>().SetSeated(true);
+                            spawnedGhosts[i].Item1.GetComponent<GhostObj>().SetSeated();
                             //GameObject ghost = GameManager.Instance.ghostManager.GetGameObjFromName(spawnedGhosts[i].Item1.GetComponent<GhostObj>().GetScriptable().ghostName);
                             //ghost.GetComponent<GhostObj>().SetSeated(true);
                             //spawnedGhosts[i].Item1.transform.position = positions[i]; //lock ghost into position
@@ -226,12 +224,13 @@ public class GhostSpawningManager : MonoBehaviour
                 currGhostObj.SetSeatNum(i);
                 if (GameManager.Instance.orderManager.HasActiveOrder(activeGhosts[i].ghostName))
                 {
-                    currGhostObj.SetSeated(true);
-                    currGhostObj.SetHasTakenOrder(true);
+                    Debug.Log("has order");
+                    currGhostObj.SetHasTakenOrder();
                 }
                 else
                 {
-                    currGhostObj.SetSeatedAndIdle();
+                    Debug.Log("SETTING CAN TAKE ORDER");
+                    currGhostObj.SetCanTakeOrder();
                 }
                 spawnedGhosts[i] = (newGhost, false);
             }

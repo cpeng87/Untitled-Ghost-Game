@@ -10,6 +10,14 @@ public enum ParticleState
     Scribbles
 }
 
+public enum GhostState
+{
+    Walking,
+    Idle,
+    CanTakeOrder,
+    TakenOrder
+}
+
 public class GhostObj : Clickable
 {
     [SerializeField] private Ghost scriptable;   //ghost information
@@ -20,15 +28,16 @@ public class GhostObj : Clickable
     [SerializeField] private ParticleSystem emotionParticles;
     [SerializeField] private List<Material> emotionMaterials = new List<Material>();
     private ParticleState particleState = ParticleState.Flowers;
-    private bool hasTakenOrder;   //flags whether order has been taken or not
+    // private bool hasTakenOrder;   //flags whether order has been taken or not
     private int seatNum;   //seat number of the current ghost
-    private bool isIdle = false; // flag to check if ghost is idle
+    // private bool isIdle = false; // flag to check if ghost is idle
     private float idleThreshold = 0.5f; // idle time threshold, can be set to higher value for longer idle time
     private float idleTime = 0f; // accumulates time until idle threshold is reached
-    private bool isSeated;
+    // private bool isSeated;
+    public GhostState state = GhostState.Walking;
 
-    void Start() {
-        isSeated = false;
+    void Start()
+    {
         // Get animator component from ghost prefab
         idleAnimator = GetComponentInChildren<Animator>();
         if (idleAnimator == null || orderNotificationAnimator == null)
@@ -46,14 +55,18 @@ public class GhostObj : Clickable
     //checks if the ghost order has been taken, if not, takes order when ghost is clicked on
     protected override void OnClicked()
     {
-        if (isIdle != true || hasTakenOrder || GameManager.Instance.state != State.Main)
+        if (state != GhostState.CanTakeOrder || GameManager.Instance.state != State.Main)
 
         {
             return;
         }
 
         SetOrderNotification(false);
-        hasTakenOrder = GameManager.Instance.orderManager.TakeOrder(scriptable.ghostName, scriptable.recipesOrdered, seatNum);
+        bool hasTakenOrder = GameManager.Instance.orderManager.TakeOrder(scriptable.ghostName, scriptable.recipesOrdered, seatNum);
+        if (hasTakenOrder)
+        {
+            state = GhostState.TakenOrder;
+        }
         TicketManager.Instance.SetMakeOrderNotif(true);
     }
 
@@ -71,41 +84,38 @@ public class GhostObj : Clickable
         return scriptable;
     }
 
-    public void SetHasTakenOrder(bool newStatus)
+    public void SetHasTakenOrder()
     {
-        hasTakenOrder = newStatus;
+        state = GhostState.TakenOrder;
     }
 
-    public void SetSeated(bool seatedStatus)
+    public void SetSeated()
     {
-        isSeated = seatedStatus;
+        state = GhostState.Idle;
         // Debug.Log("seated " + scriptable.ghostName + "'s ahh : " + isSeated);
     }
-    public bool GetSeated()
+    public void SetCanTakeOrder()
+    {
+        state = GhostState.CanTakeOrder;
+    }
+    public bool GetIdle()
     {
         // Debug.Log("fetching " + scriptable.ghostName + "'s seat status... : " + isSeated);
-        return isSeated;
+        return state == GhostState.Idle;
     }
 
-    public void SetSeatedAndIdle()
+    protected override void Update()
     {
-        isSeated = true;
-        isIdle = true;
-    }
-
-    protected override void Update() {
-        if (!isIdle && GetSeated())
+        if (state == GhostState.Idle)
         {
             idleTime += Time.deltaTime;
             if (idleTime >= idleThreshold)
             {
-                isIdle = true;
+                state = GhostState.CanTakeOrder;
             }
         }
-        if (isIdle && hasTakenOrder == false && GameManager.Instance.state == State.Main)
+        if (state == GhostState.CanTakeOrder && GameManager.Instance.state == State.Main)
         {
-            Debug.Log("SETTING ORDER NOTIF TO TRUE");
-            Debug.Log(GameManager.Instance.state);
             SetOrderNotification(true);
         }
         base.Update();

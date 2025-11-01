@@ -213,7 +213,7 @@ public class DialoguePlayer : MonoBehaviour
     }
 
     private IEnumerator CountdownMain () {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.25f);
         GameManager.Instance.state = State.Main;
     }
 }
