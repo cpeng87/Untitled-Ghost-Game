@@ -6,25 +6,27 @@ public class DonutSpawner : MonoBehaviour
     [SerializeField] private GameObject donut;
     [SerializeField] private BoxCollider spawnBoundaries;
     [SerializeField] private int numDonuts = 15;
-    [SerializeField] private float donutRadius = 0.25f;
-    [SerializeField] private int maxAttemptsPerDonut = 100;
+    //[SerializeField] private float donutRadius = 0.25f;
+    [SerializeField] private int maxAttemptsPerDonut = 200;
 
+    [SerializeField] private float donutRadius;
     private List<Vector3> donutPositions = new List<Vector3>();
 
     void Start()
     {
-        Vector3 center = spawnBoundaries.center + spawnBoundaries.transform.position;
-        Vector3 size = spawnBoundaries.size;
+        Vector3 center = spawnBoundaries.bounds.center;
+        Vector3 size = spawnBoundaries.bounds.size;
+
+        donutRadius = GetScaledDonutRadius(donut);
 
         for (int i = 0; i < numDonuts; i++)
         {
             for (int attempt = 0; attempt < maxAttemptsPerDonut; attempt++)
             {
-                Vector3 randomPosition = new Vector3(
-                    ((Random.value * 2) - 1) * (size.x / 2f) + center.x,
-                    ((Random.value * 2) - 1) * (size.y / 2f) + center.y,
-                    this.transform.position.z
-                );
+                float x = Random.Range(center.x - size.x / 2f + donutRadius, center.x + size.x / 2f - donutRadius);
+                float y = Random.Range(center.y - size.y / 2f + donutRadius, center.y + size.y / 2f - donutRadius);
+
+                Vector3 randomPosition = new Vector3(x, y, center.z);
 
                 if (IsPositionValid(randomPosition))
                 {
@@ -47,5 +49,14 @@ public class DonutSpawner : MonoBehaviour
                 return false;
         }
         return true;
+    }
+
+    float GetScaledDonutRadius(GameObject prefab)
+    {
+        GameObject temp = Instantiate(prefab);
+        temp.transform.localScale = new Vector3(950f, 950f, 950f);
+        float radius = temp.GetComponent<Renderer>().bounds.extents.x;
+        Destroy(temp);
+        return radius;
     }
 }
