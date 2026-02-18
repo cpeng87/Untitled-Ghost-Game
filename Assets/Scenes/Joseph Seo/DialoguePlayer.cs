@@ -17,9 +17,13 @@ public class DialoguePlayer : MonoBehaviour
     public static DialoguePlayer Instance { get; private set; }
     [SerializeField] private DialogueRunner dialogueRunner;
     [SerializeField] private FancyDialogue fd;
+    [SerializeField] private GameObject storyProgress;
+    [SerializeField] private GameObject emptyHeart;
+    [SerializeField] private GameObject emptyStar;
+    [SerializeField] private GameObject filledStar;
+    [SerializeField] private GameObject filledHeart;
 
     private string currentOrder;
-    private int storyNum;
     private int seatNum = -1;
 
     private DialogueState state = DialogueState.None;
@@ -143,6 +147,7 @@ public class DialoguePlayer : MonoBehaviour
         }
         ghostName = ghostName.Replace(" ", "");
         dialogueRunner.StartDialogue(ghostName + "Order");
+        LoadStoryProgress();
         GameManager.Instance.state = State.Dialogue;
     }
 
@@ -158,6 +163,8 @@ public class DialoguePlayer : MonoBehaviour
             //change to reaper song name if changed later on
             AudioManager.Instance.PlaySong("Reaper");
         }
+
+        LoadStoryProgress();
         
         if (result) {
             state = DialogueState.Success;
@@ -215,5 +222,34 @@ public class DialoguePlayer : MonoBehaviour
     private IEnumerator CountdownMain () {
         yield return new WaitForSeconds(0.25f);
         GameManager.Instance.state = State.Main;
+    }
+
+    public void LoadStoryProgress()
+    {
+        // foreach (Transform obj in storyProgress.GetComponentsInChildren<Transform>())
+        // {
+        //     Destroy(obj.gameObject);
+        // }
+        int storyIndex = GameManager.Instance.ghostManager.GetStoryIndex(GameManager.Instance.orderManager.GetCurrActiveOrderName());
+        Ghost ghost = GameManager.Instance.ghostManager.GetGhostScriptableFromName(GameManager.Instance.orderManager.GetCurrActiveOrderName());
+        for(int i = 0; i < ghost.numStory; i++)
+        {
+            if (i == storyIndex - 1 && storyIndex == ghost.numStory && ghost.arc == GameManager.Instance.arc)
+            {
+                Instantiate(filledStar, storyProgress.transform);
+            }
+            else if (i <= storyIndex - 1)
+            {
+                Instantiate(filledHeart, storyProgress.transform);
+            }
+            else if(ghost.arc == GameManager.Instance.arc && i == ghost.numStory - 1)
+            {
+                Instantiate(emptyStar, storyProgress.transform);
+            }
+            else
+            {
+                Instantiate(emptyHeart, storyProgress.transform);
+            }
+        }
     }
 }

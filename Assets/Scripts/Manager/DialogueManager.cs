@@ -10,7 +10,7 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager Instance { get; private set; }
     private DialoguePlayer _dialoguePlayer;
     private Dictionary<string, string> storyNameToNextDialogue;
-    private int currIndex; // index of current dialogue
+    // private int currIndex; // index of current dialogue
 
     // singleton
     private void Awake()
@@ -40,7 +40,7 @@ public class DialogueManager : MonoBehaviour
 
     public string GetNextDialogue(string storyName)
     {
-        string nextDialogue = null;
+        string nextDialogue;
         if (storyNameToNextDialogue.ContainsKey(storyName))
         {
             nextDialogue = storyNameToNextDialogue[storyName];

@@ -17043,6 +17043,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 176cbe09aa945404fb90285b77fdaf85, type: 3}
+--- !u!224 &567423033 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6019248670604679294, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
+  m_PrefabInstance: {fileID: 726103252}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &576448785
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17936,6 +17941,26 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5741961006765652193, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
+      propertyPath: emptyStar
+      value: 
+      objectReference: {fileID: 4645439588790517250, guid: 1bd1d8a12079aec4da05c0c0f3e8781f, type: 3}
+    - target: {fileID: 5741961006765652193, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
+      propertyPath: emptyHeart
+      value: 
+      objectReference: {fileID: 6875397137456788893, guid: ad82898f20fd58d48ad7d64b8ade5599, type: 3}
+    - target: {fileID: 5741961006765652193, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
+      propertyPath: filledStar
+      value: 
+      objectReference: {fileID: 2866418419561714372, guid: 43b8bd8aa0d74d041b72d372494a0f6c, type: 3}
+    - target: {fileID: 5741961006765652193, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
+      propertyPath: filledHeart
+      value: 
+      objectReference: {fileID: 5100898380579490583, guid: 77a3075e1e9ff5a48b7922302201780d, type: 3}
+    - target: {fileID: 5741961006765652193, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
+      propertyPath: storyProgress
+      value: 
+      objectReference: {fileID: 1187643266}
     - target: {fileID: 6252277254580641475, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
       propertyPath: m_Name
       value: UIManager
@@ -17974,7 +17999,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6019248670604679294, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 1187643267}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
 --- !u!1001 &734682179
@@ -19587,6 +19615,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1ce612df992ee2249bffba8776287f68, type: 3}
   m_PrefabInstance: {fileID: 1226274293}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1187643266
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1187643267}
+  - component: {fileID: 1187643268}
+  m_Layer: 0
+  m_Name: Story Progress
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1187643267
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187643266}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.00024414062}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 567423033}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1707.8, y: 27.7}
+  m_SizeDelta: {x: 319.6558, y: 47.6705}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1187643268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187643266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 5
+  m_Spacing: 5
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!4 &1201128822 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6cf282056f6912748ad95ec8e2ac7dd9, type: 3}
