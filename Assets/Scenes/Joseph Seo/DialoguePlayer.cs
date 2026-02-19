@@ -147,7 +147,7 @@ public class DialoguePlayer : MonoBehaviour
         }
         ghostName = ghostName.Replace(" ", "");
         dialogueRunner.StartDialogue(ghostName + "Order");
-        LoadStoryProgress();
+        LoadStoryProgress(false);
         GameManager.Instance.state = State.Dialogue;
     }
 
@@ -164,7 +164,7 @@ public class DialoguePlayer : MonoBehaviour
             AudioManager.Instance.PlaySong("Reaper");
         }
 
-        LoadStoryProgress();
+        LoadStoryProgress(result);
         
         if (result) {
             state = DialogueState.Success;
@@ -224,14 +224,21 @@ public class DialoguePlayer : MonoBehaviour
         GameManager.Instance.state = State.Main;
     }
 
-    public void LoadStoryProgress()
+    public void LoadStoryProgress(bool isStory)
     {
-        // foreach (Transform obj in storyProgress.GetComponentsInChildren<Transform>())
-        // {
-        //     Destroy(obj.gameObject);
-        // }
+        foreach (Transform obj in storyProgress.GetComponentsInChildren<Transform>())
+        {
+            if (obj != storyProgress.transform)
+            {
+                Destroy(obj.gameObject);
+            }
+        }
         int storyIndex = GameManager.Instance.ghostManager.GetStoryIndex(GameManager.Instance.orderManager.GetCurrActiveOrderName());
         Ghost ghost = GameManager.Instance.ghostManager.GetGhostScriptableFromName(GameManager.Instance.orderManager.GetCurrActiveOrderName());
+        if (isStory == false)
+        {
+            storyIndex -= 1;
+        }
         for(int i = 0; i < ghost.numStory; i++)
         {
             if (i == storyIndex - 1 && storyIndex == ghost.numStory && ghost.arc == GameManager.Instance.arc)
