@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using System.Collections.Generic;
 
@@ -13,6 +14,9 @@ public class GhostManager : MonoBehaviour
                                  // public Ghost reaper;
                                  // public GameObject reaperObj;
     public bool reaperPitch = false;
+    public int numArcGhosts;
+    public int arcProgress;
+    public Action OnArcProgressChanged;
 
     //setup dictionaries and activeghosts
     public void Setup()
@@ -72,23 +76,30 @@ public class GhostManager : MonoBehaviour
         {
             Ghost ghost = GetGhostScriptableFromName(name);
             if (ghost != null)
+            {
+                if (name == "Reaper")
+                {
+                    OnArcProgressChanged?.Invoke();
+                }
                 if (ghost.numStory == ghostNameToStoryIndex[name])
                 {
                     Debug.Log("Reached end of dialogue, will not increment");
                     completedGhostsDict[ghost] = true;
-                    if (ghost.arc != Arc.None)
+                    if (ghost.arc == GameManager.Instance.arc)
                     {
-                        if (IsArcComplete())
+                        if (IncrementArcProgress())
                         {
                             // set reaper to next spawn
                             GhostSpawningManager.Instance.SetIsReaperSpawn(true);
                         }
+                        OnArcProgressChanged?.Invoke();
                     }
                 }
                 else
                 {
                     ghostNameToStoryIndex[name] = ghostNameToStoryIndex[name] + 1;
                 }
+            }
             return;
         }
         Debug.Log("Ghost with name: " + name + " does not exist in the dictionary.");
@@ -106,6 +117,41 @@ public class GhostManager : MonoBehaviour
             }
         }
         return true;
+    }
+
+    public void CalculateArcGhosts()
+    {
+        int total = 0;
+        Arc currArc = GameManager.Instance.arc;
+
+        foreach (var (ghost, isComplete) in completedGhostsDict)
+        {
+            if (ghost.arc == currArc)
+            {
+                total += 1;
+            }
+        }
+        numArcGhosts = total;
+    }
+
+    public int GetArcGhosts()
+    {
+        return numArcGhosts;
+    }
+
+    public int GetArcProgress()
+    {
+        return arcProgress;
+    }
+
+    public bool IncrementArcProgress()
+    {
+        arcProgress += 1;
+        if (arcProgress == numArcGhosts)
+        {
+            return true;
+        }
+        return false;
     }
 
     public int GetStoryIndex(string name)

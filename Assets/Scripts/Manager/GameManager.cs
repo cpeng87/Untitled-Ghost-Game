@@ -358,6 +358,7 @@ public class GameManager : MonoBehaviour
             default:
                 break;
         }
+        ghostManager.CalculateArcGhosts();
         ArcEvent.TriggerArcChanged();
     }
 

@@ -194,13 +194,12 @@ public class DialoguePlayer : MonoBehaviour
         Reset();
         if (state == DialogueState.Story)
         {
-            GameManager.Instance.ghostManager.IncrementStoryIndex(GameManager.Instance.orderManager.GetCurrActiveOrderName());
-
             //reaper special case
             if (GameManager.Instance.orderManager.GetCurrActiveOrderName() == "Reaper")
             {
                 GameManager.Instance.UpdateArc();
             }
+            GameManager.Instance.ghostManager.IncrementStoryIndex(GameManager.Instance.orderManager.GetCurrActiveOrderName());
             GhostDialogueReset();
         }
         else if (state == DialogueState.Fail)
