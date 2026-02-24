@@ -53,7 +53,6 @@ public class GameManager : MonoBehaviour
         ghostManager = GetComponent<GhostManager>();
         ghostManager.Setup();
         SetupTutorialDictionary();
-        Debug.Log("GameManager instance ID: " + GetInstanceID());
     }
 
     private void SetupTutorialDictionary()
@@ -359,6 +358,7 @@ public class GameManager : MonoBehaviour
                 break;
         }
         ghostManager.CalculateArcGhosts();
+        ghostManager.ResetArcProgress();
         ArcEvent.TriggerArcChanged();
     }
 

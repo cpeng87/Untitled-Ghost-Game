@@ -153,6 +153,11 @@ public class GhostManager : MonoBehaviour
         }
         return false;
     }
+    
+    public void ResetArcProgress()
+    {
+        arcProgress = 0;
+    }
 
     public int GetStoryIndex(string name)
     {
