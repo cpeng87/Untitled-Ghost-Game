@@ -37,7 +37,7 @@ public class BobaCollision : MonoBehaviour
         GameObject boundsPrefab = GameObject.Find("StrainerAndBounds/Strainer/Bounds");
         if (collider.gameObject.name.Equals(boundsPrefab.name)) //if the boba leaves the bounds collider...
         {
-            if (transform.position.y > boundsPrefab.transform.position.y) { //only if the boba is above the collider!
+            if (transform.position.y > boundsPrefab.transform.position.y && isTriggered) { //only if the boba is above the collider!
                 isTriggered = false;
                 //Debug.Log("BobaLeftStrainer");
                 var script = potPrefab.GetComponent<BobaPotController>();

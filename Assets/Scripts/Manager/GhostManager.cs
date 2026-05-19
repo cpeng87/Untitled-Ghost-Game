@@ -87,11 +87,12 @@ public class GhostManager : MonoBehaviour
                     completedGhostsDict[ghost] = true;
                     if (ghost.arc == GameManager.Instance.arc)
                     {
-                        if (IncrementArcProgress())
-                        {
-                            // set reaper to next spawn
-                            GhostSpawningManager.Instance.SetIsReaperSpawn(true);
-                        }
+                        // if (IncrementArcProgress())
+                        // {
+                        //     // set reaper to next spawn
+                        //     GhostSpawningManager.Instance.SetIsReaperSpawn(true);
+                        // }
+                        IncrementArcProgress();
                         OnArcProgressChanged?.Invoke();
                     }
                 }

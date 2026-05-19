@@ -21,7 +21,7 @@ public class GhostSpawningManager : MonoBehaviour
     [SerializeField] private float rotationSpeed = 135f;
     [SerializeField] private float minRotationSpeed = 90f;
     [SerializeField] private float spinSpeed = 125f;
-    private double sulkSpeed = 1.5f;
+    private double sulkSpeed = 1f;
     private Quaternion RotationGoal1 = Quaternion.Euler(0f, -90f, 0f);
     private Quaternion RotationGoal2 = Quaternion.Euler(0f, 0f, 0f);
     private bool isReaperSpawn = false;
@@ -154,7 +154,7 @@ public class GhostSpawningManager : MonoBehaviour
                             spawnedGhosts[i].Item1.transform.rotation = RotationGoal2;
                         } else
                         {
-                            sulkSpeed -= 0.007;
+                            sulkSpeed -= 0.65f * Time.deltaTime;
                             if (sulkSpeed < 0)
                             {
                                 sulkSpeed = 1f;
@@ -224,17 +224,30 @@ public class GhostSpawningManager : MonoBehaviour
                 currGhostObj.SetSeatNum(i);
                 if (GameManager.Instance.orderManager.HasActiveOrder(activeGhosts[i].ghostName))
                 {
-                    Debug.Log("has order");
                     currGhostObj.SetHasTakenOrder();
                 }
                 else
                 {
-                    Debug.Log("SETTING CAN TAKE ORDER");
                     currGhostObj.SetCanTakeOrder();
                 }
                 spawnedGhosts[i] = (newGhost, false);
             }
         }
+    }
+
+    public void SpawnReaper()
+    {
+        Ghost reaperScriptable = GameManager.Instance.ghostManager.GetGhostScriptableFromName("Reaper");
+        if (GameManager.Instance.ghostManager.CheckGhostIsActive(reaperScriptable) == false)
+        {
+            GameManager.Instance.ghostManager.AddActiveGhost(reaperScriptable);
+            int reaperSeatNum = GameManager.Instance.ghostManager.GetSeatNum(reaperScriptable);
+            GameObject reaperObj = Instantiate(GameManager.Instance.ghostManager.GetGameObjFromName("Reaper"), door, Quaternion.identity);
+            reaperObj.GetComponent<GhostObj>().SetSeatNum(reaperSeatNum);
+            spawnedGhosts[reaperSeatNum] = (reaperObj, true);
+            AudioManager.Instance.PlaySound("DoorChime");
+        }
+        isReaperSpawn = false;
     }
     
     public void SpawnGhost()
@@ -246,35 +259,10 @@ public class GhostSpawningManager : MonoBehaviour
 
         int reaperIndex = GameManager.Instance.ghostManager.GetStoryIndex("Reaper");
 
-        //reaper spawns hardcoded >.> erm
-        if (reaperIndex == 1)
+        // spawns reaper if first or is 
+        if (reaperIndex == 1 || isReaperSpawn)
         {  
-            Ghost reaperScriptable = GameManager.Instance.ghostManager.GetGhostScriptableFromName("Reaper");
-            if (GameManager.Instance.ghostManager.CheckGhostIsActive(reaperScriptable) == false)
-            {
-                GameManager.Instance.ghostManager.AddActiveGhost(reaperScriptable);
-                int reaperSeatNum = GameManager.Instance.ghostManager.GetSeatNum(reaperScriptable);
-                GameObject reaperObj = Instantiate(GameManager.Instance.ghostManager.GetGameObjFromName("Reaper"), door, Quaternion.identity);
-                reaperObj.GetComponent<GhostObj>().SetSeatNum(reaperSeatNum);
-                spawnedGhosts[reaperSeatNum] = (reaperObj, true);
-                AudioManager.Instance.PlaySound("DoorChime");
-            }
-            return;
-        }
-
-        if (isReaperSpawn)
-        {
-            Ghost reaperScriptable = GameManager.Instance.ghostManager.GetGhostScriptableFromName("Reaper");
-            if (GameManager.Instance.ghostManager.CheckGhostIsActive(reaperScriptable) == false)
-            {
-                GameManager.Instance.ghostManager.AddActiveGhost(reaperScriptable);
-                int reaperSeatNum = GameManager.Instance.ghostManager.GetSeatNum(reaperScriptable);
-                GameObject reaperObj = Instantiate(GameManager.Instance.ghostManager.GetGameObjFromName("Reaper"), door, Quaternion.identity);
-                reaperObj.GetComponent<GhostObj>().SetSeatNum(reaperSeatNum);
-                spawnedGhosts[reaperSeatNum] = (reaperObj, true);
-                AudioManager.Instance.PlaySound("DoorChime");
-            }
-            isReaperSpawn = false;
+            SpawnReaper();
             return;
         }
 
@@ -308,6 +296,13 @@ public class GhostSpawningManager : MonoBehaviour
             }
         }
 
+        // this will probably make is so that reaper is the only thing spawned when all arc ghosts are complete
+        if (arcGhost.Count == 0)
+        {
+            SpawnReaper();
+            return;
+        }
+
         if (arcGhost.Count != 0 && sideGhost.Count != 0)
         {
             float rand = UnityEngine.Random.value;
@@ -320,32 +315,36 @@ public class GhostSpawningManager : MonoBehaviour
                 possibleGhost = sideGhost;
             }
         }
-        else if (arcGhost.Count == 0)
-        {
-            possibleGhost = sideGhost;
-        }
-        else
-        {
-            possibleGhost = arcGhost;
-        }
+
+        // else if (arcGhost.Count == 0)
+        // {
+        //     possibleGhost = sideGhost;
+        // }
+        // else
+        // {
+        //     possibleGhost = arcGhost;
+        // }
 
         int index = (int) (UnityEngine.Random.value * possibleGhost.Count);
         index = Math.Abs(index);
         int count = 0;
         
         if (possibleGhost.Count == 0) {
-            Debug.Log("No customers are left. All of them have been completed!");
-            RecipeShopManager.Instance.SetRecipeShopNotif(true);
-            return;
+            Debug.Log("No customers are left. All of them have been completed! Something went wrong since reaper is supposed to spawn.");
         }
         while (GameManager.Instance.ghostManager.CheckGhostIsActive(possibleGhost[index]) == true || possibleGhost[index].ghostName == "Reaper")
         {
             if (count > 100)
             {
-                Debug.Log("Cannot spawn any ghost, maxed rolls");
+                Debug.Log("Maxed rolls. Should not have happened.");
                 return;
             }
             index = (int) (UnityEngine.Random.value * possibleGhost.Count);
+            possibleGhost.RemoveAt(index);
+            if (possibleGhost.Count == 0)
+            {
+                return;
+            }
             count++;
         }
         GameManager.Instance.ghostManager.AddActiveGhost(possibleGhost[index]);

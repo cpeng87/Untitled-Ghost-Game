@@ -63,7 +63,9 @@ MonoBehaviour:
   state: 0
   maxGhosts: 3
   arc: 0
+  mcGhostController: {fileID: 0}
   parsedDialogue: 0
+  MCStartPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &7943552995929063478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,7 +107,7 @@ MonoBehaviour:
   - {fileID: 6711696958532938929, guid: 52adf1d60a08c9a4fa54f0ef30b91f8d, type: 3}
   - {fileID: 6521650740406013515, guid: c2614e72ea8008c48ac7fd1bed6c244b, type: 3}
   - {fileID: 5709744768835600226, guid: a40da57fd46b2274b933cbaef1590dd9, type: 3}
-  - {fileID: 4663965477092494701, guid: 349a0fc8233db06498bb68ccfbec84df, type: 3}
+  - {fileID: 5709744768835600226, guid: aa95e01d0b6566a4c8bb9702a43924e7, type: 3}
   - {fileID: 4663965477092494701, guid: 8949ce392f5f3104cbd54ff5d4b81830, type: 3}
   - {fileID: 4663965477092494701, guid: 8828647e6d4315f46bb6cf7882832668, type: 3}
   - {fileID: 4663965477092494701, guid: 9cdf08821252dfc42972ff6b886d0a0b, type: 3}
@@ -114,6 +116,8 @@ MonoBehaviour:
   - {fileID: 3913648602975631478, guid: c615c63fb07297144a542c91eae62998, type: 3}
   activeGhosts: []
   reaperPitch: 0
+  numArcGhosts: 0
+  arcProgress: 0
 --- !u!114 &4555743961995624
 MonoBehaviour:
   m_ObjectHideFlags: 0
