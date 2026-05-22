@@ -4915,6 +4915,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 15e80b453ae012043aeed18ddffdd7ee, type: 2}
   - {fileID: 2100000, guid: 44216238a91ca5b43875661ee3b6471d, type: 2}
   - {fileID: 2100000, guid: 9b66abb8ff53cce4094636ebcb7e65c6, type: 2}
+  state: 0
 --- !u!95 &1384690566036447604
 Animator:
   serializedVersion: 7
@@ -4948,7 +4949,7 @@ GameObject:
   - component: {fileID: 4787487650227581995}
   - component: {fileID: 6275183290301024273}
   - component: {fileID: 4647529855997026511}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Exclamation Mark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5125,7 +5126,7 @@ GameObject:
   - component: {fileID: 4837210087395677492}
   - component: {fileID: 8016026127187369671}
   - component: {fileID: 5908452037486837128}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5231,7 +5232,7 @@ GameObject:
   - component: {fileID: 6357432460594149767}
   - component: {fileID: 3872731191852219393}
   - component: {fileID: 1281035520826271994}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Speech Bubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}

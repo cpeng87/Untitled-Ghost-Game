@@ -61,6 +61,7 @@ public class TicketManager : MonoBehaviour
 
         // Set width and height of ticket
         ticket.transform.localScale = new Vector3(1f, 1f, 1f);
+        ticket.transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
 
         // Set ticket to active
         ticket.SetActive(true);

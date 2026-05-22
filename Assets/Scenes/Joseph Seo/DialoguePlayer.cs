@@ -91,24 +91,23 @@ public class DialoguePlayer : MonoBehaviour
         AudioManager.Instance.SetReaperPitch(val);
     }
 
-    // This function physically hurts me to write
-    // Also outdated with other camera changes
     public static void SetCamera(string cameraName)
     {
-        Transform cameras = CameraManager.Instance.transform;
-        Transform camToSwitchTo = cameras.Find(cameraName);
-        if (camToSwitchTo)
-        {
-            for (int i = 0; i < cameras.childCount; i++)
-            {
-                Transform cam = cameras.GetChild(i);
-                if (!cam.name.Equals(cameraName))
-                {
-                    cam.gameObject.SetActive(false);
-                }
-            }
-            camToSwitchTo.gameObject.SetActive(true);
-        }
+        CameraManager.Instance. SwapToMainCamera();
+        // Transform cameras = CameraManager.Instance.transform;
+        // Transform camToSwitchTo = cameras.Find(cameraName);
+        // if (camToSwitchTo)
+        // {
+        //     for (int i = 0; i < cameras.childCount; i++)
+        //     {
+        //         Transform cam = cameras.GetChild(i);
+        //         if (!cam.name.Equals(cameraName))
+        //         {
+        //             cam.gameObject.SetActive(false);
+        //         }
+        //     }
+        //     camToSwitchTo.gameObject.SetActive(true);
+        // }
     }
 
     public void StartStoryDialogue(string storyToStart) {

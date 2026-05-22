@@ -7,6 +7,7 @@ public class CameraManager : MonoBehaviour
     [SerializeField] private Camera frontCamera;
     [SerializeField] private Camera middleCamera;
     [SerializeField] private Camera backCamera;
+    // [SerializeField] private Camera uiCamera;
 
     private void Awake()
     {
