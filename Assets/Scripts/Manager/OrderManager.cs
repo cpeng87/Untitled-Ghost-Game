@@ -87,14 +87,14 @@ public class OrderManager : MonoBehaviour
         Ghost currGhost = GameManager.Instance.ghostManager.GetGhostScriptableFromName(activeOrders[currActiveOrder].ghostName);
         DialoguePlayer.Instance.CompleteOrderDialogue(currGhost.ghostName, activeOrders[currActiveOrder].seatNum, result, specialCookie);
         
-        if (!chefSkip && result)
-        {
-            GameManager.Instance.AddCurrency(1);
-        }
-        else
-        {
-            GameManager.Instance.UpdateCurrency();
-        }
+        // if (!chefSkip && result)
+        // {
+        //     GameManager.Instance.AddCurrency(1);
+        // }
+        // else
+        // {
+        //     GameManager.Instance.UpdateCurrency();
+        // }
     }
 
     public void RemoveCompletedOrder()

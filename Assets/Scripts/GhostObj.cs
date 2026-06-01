@@ -56,7 +56,6 @@ public class GhostObj : Clickable
     protected override void OnClicked()
     {
         if (state != GhostState.CanTakeOrder || GameManager.Instance.state != State.Main)
-
         {
             return;
         }
@@ -98,6 +97,10 @@ public class GhostObj : Clickable
     {
         state = GhostState.CanTakeOrder;
     }
+    public GhostState GetState()
+    {
+        return state;
+    }
     public bool GetIdle()
     {
         // Debug.Log("fetching " + scriptable.ghostName + "'s seat status... : " + isSeated);
@@ -121,7 +124,7 @@ public class GhostObj : Clickable
         base.Update();
     }
 
-    private void SetOrderNotification(bool b)
+    public void SetOrderNotification(bool b)
     {
         orderNotificationAnimator.SetBool("isActive", b);
     }

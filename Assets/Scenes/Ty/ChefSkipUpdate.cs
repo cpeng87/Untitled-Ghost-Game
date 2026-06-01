@@ -37,7 +37,7 @@ public class ChefSkipUpdate : MinigameCompletion
 
         if (currency >= chefCost)
         {
-            GameManager.Instance.SubtractCurrency(3);
+            // GameManager.Instance.SubtractCurrency(3);
             skipMinigamePopup.SetActive(false);
             minigameResult.MinigameResult(true);
         }

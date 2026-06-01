@@ -45,6 +45,22 @@ public class GhostManager : MonoBehaviour
         activeGhosts = new Ghost[GameManager.Instance.maxGhosts];
     }
 
+    // input whether u want to hide or show in the bool, doesn't change the actual order state, just ui visuals
+    public void ToggleShowOrderNotif(bool shown)
+    {
+        List<GameObject> ghosts = GhostSpawningManager.Instance.GetAllSpawnedGhost();
+        foreach (GameObject ghost in ghosts)
+        {
+
+            GhostObj ghostObj = ghost.GetComponent<GhostObj>();
+            if (ghostObj.GetState() == GhostState.CanTakeOrder)
+            {
+                ghostObj.SetOrderNotification(shown);
+            }
+        }
+    }
+
+
     public GameObject GetGameObjFromName(string name)
     {
         if (ghostNameToGameObjDict.ContainsKey(name))

@@ -332,6 +332,7 @@ public class GhostSpawningManager : MonoBehaviour
         if (possibleGhost.Count == 0) {
             Debug.Log("No customers are left. All of them have been completed! Something went wrong since reaper is supposed to spawn.");
         }
+        //TODO: sometime out of bounds
         while (GameManager.Instance.ghostManager.CheckGhostIsActive(possibleGhost[index]) == true || possibleGhost[index].ghostName == "Reaper")
         {
             if (count > 100)
@@ -365,6 +366,20 @@ public class GhostSpawningManager : MonoBehaviour
     public GameObject GetSpawnedGhost(int seatNum)
     {
         return spawnedGhosts[seatNum].Item1;
+    }
+
+    public List<GameObject> GetAllSpawnedGhost()
+    {
+        List<GameObject> rtn = new List<GameObject>();
+        foreach ((GameObject, bool) spawnedGhost in spawnedGhosts)
+        {
+            if (spawnedGhost.Item1 != null)
+            {
+                Debug.Log(spawnedGhost.Item1);
+                rtn.Add(spawnedGhost.Item1);
+            }
+        }
+        return rtn;
     }
 
     public GameObject GetSpawnedGhost(string name) {

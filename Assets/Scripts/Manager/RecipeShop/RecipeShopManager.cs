@@ -174,7 +174,7 @@ namespace Manager.RecipeShop
                     currentRecipe.Item2.SetRecipeSold();
                     GameManager.Instance.AddUnlockedRecipe(currentRecipe.Item1);
                     //Update currency
-                    GameManager.Instance.AddCurrency(-currentRecipe.Item1.buyPrice);
+                    // GameManager.Instance.AddCurrency(-currentRecipe.Item1.buyPrice);
                 }
                 else
                 {

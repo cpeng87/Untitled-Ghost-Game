@@ -148,6 +148,7 @@ public class DialoguePlayer : MonoBehaviour
         dialogueRunner.StartDialogue(ghostName + "Order");
         LoadStoryProgress(false);
         GameManager.Instance.state = State.Dialogue;
+        GameManager.Instance.ghostManager.ToggleShowOrderNotif(false);
     }
 
     public void CompleteOrderDialogue(string ghostName, int seatNum, bool result, bool specialCookie) {
@@ -219,6 +220,7 @@ public class DialoguePlayer : MonoBehaviour
 
     private IEnumerator CountdownMain () {
         yield return new WaitForSeconds(0.25f);
+        GameManager.Instance.ghostManager.ToggleShowOrderNotif(true);
         GameManager.Instance.state = State.Main;
     }
 

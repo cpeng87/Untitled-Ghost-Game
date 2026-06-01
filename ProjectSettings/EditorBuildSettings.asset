@@ -113,5 +113,11 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Minigames/Cookie.unity
     guid: 02bb84243f6c72e459b19e61452196d4
+  - enabled: 1
+    path: Assets/Scenes/Demo.unity
+    guid: 5ad8470f6fcc71e4ea8ffdce9a573622
+  - enabled: 1
+    path: Assets/Scenes/Cynthia Peng/Demo End Scene.unity
+    guid: a784c75bfaebad042aec86958c087b29
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

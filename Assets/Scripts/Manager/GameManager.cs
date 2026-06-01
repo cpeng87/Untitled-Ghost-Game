@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour
 
     public bool parsedDialogue = false;
     public Vector3 MCStartPosition;
+
+    public bool isDemo;
     // Singleton
     private void Awake()
     {
@@ -102,7 +104,14 @@ public class GameManager : MonoBehaviour
     public void CompleteMinigame(bool isSuccess, bool chefSkip = false, bool specialCookie = false)
     {
         state = State.Dialogue;
-        StartCoroutine(CompleteMinigameCoroutine("MainStorefront", isSuccess, chefSkip, specialCookie));
+        if (isDemo)
+        {
+            StartCoroutine(CompleteMinigameCoroutine("Demo", isSuccess, chefSkip, specialCookie));
+        }
+        else
+        {
+            StartCoroutine(CompleteMinigameCoroutine("MainStorefront", isSuccess, chefSkip, specialCookie));
+        }
     }
 
     private IEnumerator SwitchToSceneCoroutine(string sceneName)
@@ -282,33 +291,33 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void AddCurrency(int added)
-    {
-        currency += added;
-        UIManager.Instance.UpdateCurrency(currency);
-    }
+    // public void AddCurrency(int added)
+    // {
+    //     currency += added;
+    //     UIManager.Instance.UpdateCurrency(currency);
+    // }
 
-    public void UpdateCurrency()
-    {
-        UIManager.Instance.UpdateCurrency(currency);
-    }
+    // public void UpdateCurrency()
+    // {
+    //     UIManager.Instance.UpdateCurrency(currency);
+    // }
 
-    public bool SubtractCurrency(int subtracted)
-    {
-        currency -= subtracted;
-        bool rtn = true;
-        // if (currency < 0)
-        // {
-        //     currency = 0;
-        //     rtn = false;
-        // }
-        if (state == State.Main)
-        {
-            UIManager.Instance.UpdateCurrency(currency);
-        }
-        Debug.Log("Updated Currency: " + currency);
-        return rtn;
-    }
+    // public bool SubtractCurrency(int subtracted)
+    // {
+    //     currency -= subtracted;
+    //     bool rtn = true;
+    //     // if (currency < 0)
+    //     // {
+    //     //     currency = 0;
+    //     //     rtn = false;
+    //     // }
+    //     if (state == State.Main)
+    //     {
+    //         UIManager.Instance.UpdateCurrency(currency);
+    //     }
+    //     Debug.Log("Updated Currency: " + currency);
+    //     return rtn;
+    // }
 
     public void IncreaseSatisfaction()
     {
@@ -341,6 +350,11 @@ public class GameManager : MonoBehaviour
         }
 
         arc = (Arc) ((int) arc + 1);
+        if (isDemo && arc == Arc.Connection)
+        {
+            StartCoroutine(LoadDemoEndScene());
+            return;
+        }
 
         // TODO: Update the Tree Petal VFX based on the current arc
         switch (arc)
@@ -377,6 +391,15 @@ public class GameManager : MonoBehaviour
     private IEnumerator LoadEndScene()
     {
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("End Scene");
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+    }
+
+    private IEnumerator LoadDemoEndScene()
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Demo End Scene");
         while (!asyncLoad.isDone)
         {
             yield return null;
