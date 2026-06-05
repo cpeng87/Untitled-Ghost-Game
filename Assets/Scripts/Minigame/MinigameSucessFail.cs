@@ -4,15 +4,15 @@ using System.Collections;
 
 public class MinigameSuccessFail : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI successText;
-    [SerializeField] private TextMeshProUGUI failText;
+    [SerializeField] private GameObject successText;
+    [SerializeField] private GameObject failText;
     [SerializeField] private GameObject bg;
     private bool isComplete;
 
     private void Start()
     {
-        successText.enabled = false;
-        failText.enabled = false;
+        successText.SetActive(false);
+        failText.SetActive(false);
         bg.SetActive(false);
     }
 
@@ -31,13 +31,13 @@ public class MinigameSuccessFail : MonoBehaviour
         bg.SetActive(true);
         if (result)
         {
-            successText.enabled = true;
+            successText.SetActive(true);
             AudioManager.Instance.StopSong();
             AudioManager.Instance.PlaySound("Win");
         }
         else
         {
-            failText.enabled = true;
+            failText.SetActive(true);
             AudioManager.Instance.StopSong();
             AudioManager.Instance.PlaySound("Lose");
         }
