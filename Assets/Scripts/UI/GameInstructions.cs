@@ -56,7 +56,6 @@ public class GameInstructions : MonoBehaviour
         if (index == 0)
         {
             stepComplete = GameManager.Instance.state == State.Dialogue;
-            Debug.Log(stepComplete);
         }
         else if (index == 1)
         {
@@ -64,7 +63,9 @@ public class GameInstructions : MonoBehaviour
         }
         else if (index == 2)
         {
+            Debug.Log("Checking 2");
             stepComplete = TicketManager.Instance.IsTicketsActive();
+            Debug.Log(stepComplete);
         }
         if (stepComplete)
         {
@@ -78,15 +79,27 @@ public class GameInstructions : MonoBehaviour
         index += 1;
         if (index >= steps.Count)
         {
-            steps[index - 1].SetActive(false);
+            Debug.Log("OOBS");
+            // steps[index - 1].SetActive(false);
+            // GameManager.Instance.SetTutorialState("Game", true);   // done with tutorial
+            // Debug.Log("Done Tutorial!!");
+            // active = false;
+            // return;
+            return;
+        }
+        steps[index - 1].SetActive(false);
+        steps[index].SetActive(true);
+        if (index == 3)
+        {
             GameManager.Instance.SetTutorialState("Game", true);   // done with tutorial
+            Debug.Log("Done Tutorial!!");
             active = false;
             return;
         }
-        else
-        {
-            steps[index - 1].SetActive(false);
-            steps[index].SetActive(true);
-        }
+        // else
+        // {
+        //     steps[index - 1].SetActive(false);
+        //     steps[index].SetActive(true);
+        // }
     }
 }

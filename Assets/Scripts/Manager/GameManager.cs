@@ -60,6 +60,7 @@ public class GameManager : MonoBehaviour
     private void SetupTutorialDictionary()
     {
         hasOpenedTutorial.Add("Game", false);
+        hasOpenedTutorial.Add("Story", false);
         foreach (Recipe recipe in unlockedRecipes)
         {
             hasOpenedTutorial.Add(recipe.minigame, false);
