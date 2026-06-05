@@ -5,24 +5,33 @@ public class LoadingScreen : MonoBehaviour
 {
     [SerializeField] private CanvasGroup canvasGroup;
     [SerializeField] private float fadeDuration;
+    private Coroutine currentFade;
 
     private void Start()
     {
-        FadeOut();
+        StartCoroutine(FadeOut());
     }
 
-    public Coroutine FadeIn()
+    public IEnumerator FadeIn()
     {
+        if (currentFade != null)
+        {
+            StopCoroutine(currentFade);
+        }
         if (!canvasGroup.gameObject.activeSelf)
         {
             canvasGroup.gameObject.SetActive(true);
         }
-        return StartCoroutine(Fade(0, 1, deactivateAfterFade: false));
+        yield return Fade(0, 1, false);
     }
 
-    public Coroutine FadeOut()
+    public IEnumerator FadeOut()
     {
-        return StartCoroutine(Fade(1, 0, deactivateAfterFade: true));
+        if (currentFade != null)
+        {
+            StopCoroutine(currentFade);
+        }
+        yield return Fade(1, 0, true);
     }
 
     private IEnumerator Fade(float startAlpha, float endAlpha, bool deactivateAfterFade)
@@ -32,10 +41,12 @@ public class LoadingScreen : MonoBehaviour
         // Set the initial alpha
         canvasGroup.alpha = startAlpha;
 
-        while (elapsedTime < fadeDuration)
+        while (elapsedTime <= fadeDuration)
         {
             canvasGroup.alpha = Mathf.Lerp(startAlpha, endAlpha, elapsedTime / fadeDuration);
-            elapsedTime += Time.unscaledDeltaTime; // Use unscaled time to ensure real-world seconds
+            float dt = Mathf.Min(Time.unscaledDeltaTime, 0.05f);
+            elapsedTime += dt;
+            // elapsedTime += Time.unscaledDeltaTime;
             yield return null;
         }
 

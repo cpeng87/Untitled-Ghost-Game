@@ -59,6 +59,7 @@ public class GameManager : MonoBehaviour
 
     private void SetupTutorialDictionary()
     {
+        hasOpenedTutorial.Add("Game", false);
         foreach (Recipe recipe in unlockedRecipes)
         {
             hasOpenedTutorial.Add(recipe.minigame, false);
@@ -68,21 +69,32 @@ public class GameManager : MonoBehaviour
     public void SetTutorialState(bool state)
     {
         string recipe = SceneManager.GetActiveScene().name;
-        if (hasOpenedTutorial.ContainsKey(recipe))
+        SetTutorialState(recipe, state);
+    }
+
+    public void SetTutorialState(string name, bool state)
+    {
+        if (hasOpenedTutorial.ContainsKey(name))
         {
-            hasOpenedTutorial[recipe] = state;
+            hasOpenedTutorial[name] = state;
         }
     }
 
     public bool GetTutorialState()
     {
         string recipe = SceneManager.GetActiveScene().name;
-        if (hasOpenedTutorial.ContainsKey(recipe))
+        return GetTutorialState(recipe);
+    }
+
+    public bool GetTutorialState(string name)
+    {
+        if (hasOpenedTutorial.ContainsKey(name))
         {
-            return hasOpenedTutorial[recipe];
+            return hasOpenedTutorial[name];
         }
         return false;
     }
+
 
     public void AddUnlockedRecipe(Recipe recipe)
     {
@@ -116,11 +128,9 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator SwitchToSceneCoroutine(string sceneName)
     {
-        // Get the loading screen
         LoadingScreen loadingScreen = FindObjectOfType<LoadingScreen>();
         if (loadingScreen != null)
         {
-            // Wait for the fade-in to complete
             yield return loadingScreen.FadeIn();
         }
 

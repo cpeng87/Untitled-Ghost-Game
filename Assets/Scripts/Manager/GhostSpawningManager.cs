@@ -375,7 +375,6 @@ public class GhostSpawningManager : MonoBehaviour
         {
             if (spawnedGhost.Item1 != null)
             {
-                Debug.Log(spawnedGhost.Item1);
                 rtn.Add(spawnedGhost.Item1);
             }
         }

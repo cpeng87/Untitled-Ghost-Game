@@ -139,4 +139,9 @@ public class TicketManager : MonoBehaviour
     {
         makeOrderNotifAnimator.SetBool("isActive", b);
     }
+
+    public bool IsTicketsActive()
+    {
+        return ordersPanel.activeSelf;
+    }
 }

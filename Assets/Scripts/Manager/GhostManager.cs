@@ -82,7 +82,7 @@ public class GhostManager : MonoBehaviour
         {
             return ghostNameToScriptableDict[name];
         }
-        Debug.Log("Could not find ghost scriptable with name: " + name);
+        // Debug.Log("Could not find ghost scriptable with name: " + name);
         return null;
     }
 
