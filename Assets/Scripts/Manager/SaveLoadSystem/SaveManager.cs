@@ -23,7 +23,7 @@ public class SaveManager
         try
         {
             File.WriteAllText(FullPath, json);
-            Debug.Log($"Saved to {FullPath}");
+            // Debug.Log($"Saved to {FullPath}");
         }
         catch (Exception e)
         {
