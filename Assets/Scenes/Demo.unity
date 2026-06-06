@@ -18740,6 +18740,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 229255695082835063, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 229255695082835063, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
@@ -19040,6 +19044,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7220862737998873487, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220862737998873487, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
@@ -19073,6 +19081,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7521112618228274326, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
       propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7521112618228274326, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
+      propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7521112618228274326, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
@@ -23115,8 +23127,8 @@ MonoBehaviour:
   door: {x: -6, y: 0.5, z: -7}
   ghostSpeed: 3
   rotationSpeed: 300
-  minRotationSpeed: 90
   spinSpeed: 125
+  mainGhostChance: 0.95
 --- !u!4 &1443356589
 Transform:
   m_ObjectHideFlags: 0

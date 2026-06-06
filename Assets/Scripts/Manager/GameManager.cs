@@ -430,7 +430,7 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
 
-        AudioManager.Instance.PlaySong("Title");
+        AudioManager.Instance.PlaySong("Comic");
     }
 
 }

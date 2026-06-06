@@ -25,6 +25,7 @@ public class GhostSpawningManager : MonoBehaviour
     private Quaternion RotationGoal1 = Quaternion.Euler(0f, -90f, 0f);
     private Quaternion RotationGoal2 = Quaternion.Euler(0f, 0f, 0f);
     private bool isReaperSpawn = false;
+    [SerializeField] private float mainGhostChance;
 
 
     //singleton
@@ -306,7 +307,7 @@ public class GhostSpawningManager : MonoBehaviour
         if (arcGhost.Count != 0 && sideGhost.Count != 0)
         {
             float rand = UnityEngine.Random.value;
-            if (rand < 0.65f) // main story ghost
+            if (rand < mainGhostChance) // main story ghost
             {
                 possibleGhost = arcGhost;
             }
@@ -325,11 +326,6 @@ public class GhostSpawningManager : MonoBehaviour
         //     possibleGhost = arcGhost;
         // }
 
-        if (possibleGhost.Count == 0)
-        {
-            return;
-        }
-
         int index = (int) (UnityEngine.Random.value * possibleGhost.Count);
         index = Math.Abs(index);
         int count = 0;
@@ -337,20 +333,28 @@ public class GhostSpawningManager : MonoBehaviour
         if (possibleGhost.Count == 0) {
             Debug.Log("No customers are left. All of them have been completed! Something went wrong since reaper is supposed to spawn.");
         }
-        //TODO: sometime out of bounds
+        if (index >= possibleGhost.Count || index < 0)
+        {
+            return;
+        }
         while (GameManager.Instance.ghostManager.CheckGhostIsActive(possibleGhost[index]) == true || possibleGhost[index].ghostName == "Reaper")
         {
+            possibleGhost.RemoveAt(index);
+            if (possibleGhost.Count == 0)
+            {
+                return;
+            }
             if (count > 100)
             {
                 Debug.Log("Maxed rolls. Should not have happened.");
                 return;
             }
             index = (int) (UnityEngine.Random.value * possibleGhost.Count);
-            possibleGhost.RemoveAt(index);
-            if (possibleGhost.Count == 0)
-            {
-                return;
-            }
+            // possibleGhost.RemoveAt(index);
+            // if (possibleGhost.Count == 0)
+            // {
+            //     return;
+            // }
             count++;
         }
         GameManager.Instance.ghostManager.AddActiveGhost(possibleGhost[index]);

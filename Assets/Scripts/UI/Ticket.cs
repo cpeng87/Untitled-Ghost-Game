@@ -12,7 +12,7 @@ public class Ticket : MonoBehaviour
 
     public void SetTicket(string ghostName, string recipeName, Sprite foodImage, int seatNum)
     {
-        this.ghostName.text = name;
+        this.ghostName.text = ghostName;
         this.recipeName.text = recipeName;
         this.foodImage.sprite = foodImage;
         this.button.onClick.AddListener(() => GameManager.Instance.orderManager.MakeOrder(seatNum));
