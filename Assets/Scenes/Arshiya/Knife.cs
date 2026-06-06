@@ -11,7 +11,6 @@ public class Knife : DraggableObject
     }
     public override void OnPointerDown(PointerEventData eventData) {
 
-        Debug.Log("PICKING UP KNIFE");
         transform.rotation = Quaternion.Euler(90f, 90f, 90f);
         base.OnPointerDown(eventData);
     }

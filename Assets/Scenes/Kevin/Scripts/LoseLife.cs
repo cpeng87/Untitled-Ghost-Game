@@ -14,7 +14,6 @@ public class LoseLife : MonoBehaviour
         {
             // Call the RemoveLife method
             // miniGameController.RemoveLife();
-            Debug.Log("Call fail");
             miniGameController.Fail();
         }
     }

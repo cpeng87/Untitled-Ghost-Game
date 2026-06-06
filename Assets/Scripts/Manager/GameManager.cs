@@ -129,7 +129,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator SwitchToSceneCoroutine(string sceneName)
     {
-        LoadingScreen loadingScreen = FindObjectOfType<LoadingScreen>();
+        LoadingScreen loadingScreen = FindAnyObjectByType<LoadingScreen>();
         if (loadingScreen != null)
         {
             yield return loadingScreen.FadeIn();
@@ -146,7 +146,7 @@ public class GameManager : MonoBehaviour
     private IEnumerator CompleteMinigameCoroutine(string sceneName, bool isSuccess, bool chefSkip, bool specialCookie)
     {
         // Get the loading screen
-        LoadingScreen loadingScreen = FindObjectOfType<LoadingScreen>();
+        LoadingScreen loadingScreen = FindAnyObjectByType<LoadingScreen>();
         if (loadingScreen != null)
         {
             // Wait for the fade-in to complete
@@ -401,6 +401,13 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator LoadEndScene()
     {
+        LoadingScreen loadingScreen = FindAnyObjectByType<LoadingScreen>();
+        if (loadingScreen != null)
+        {
+            // Wait for the fade-in to complete
+            yield return loadingScreen.FadeIn();
+        }
+
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("End Scene");
         while (!asyncLoad.isDone)
         {
@@ -410,11 +417,20 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator LoadDemoEndScene()
     {
+        LoadingScreen loadingScreen = FindAnyObjectByType<LoadingScreen>();
+        if (loadingScreen != null)
+        {
+            // Wait for the fade-in to complete
+            yield return loadingScreen.FadeIn();
+        }
+
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Demo End Scene");
         while (!asyncLoad.isDone)
         {
             yield return null;
         }
+
+        AudioManager.Instance.PlaySong("Title");
     }
 
 }

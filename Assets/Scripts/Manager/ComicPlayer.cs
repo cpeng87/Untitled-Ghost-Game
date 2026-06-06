@@ -108,7 +108,13 @@ public class ComicPlayer : MonoBehaviour
     }
 
     private IEnumerator CompleteComic()
-    {
+    {   
+        LoadingScreen loadingScreen = FindAnyObjectByType<LoadingScreen>();
+        if (loadingScreen != null)
+        {
+            yield return loadingScreen.FadeIn();
+        }
+
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(nextScene);
         while (!asyncLoad.isDone)
         {

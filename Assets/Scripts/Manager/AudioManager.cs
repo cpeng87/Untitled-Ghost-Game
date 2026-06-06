@@ -13,7 +13,7 @@ public class AudioManager : MonoBehaviour
     private Dictionary<string, AudioClip> soundDict;
     private string currentSong;
     private int currIndex = 0;
-    private string currentScene;
+    // private string currentScene;
     private string savedSong;
     private float savedTime;
     
@@ -118,7 +118,6 @@ public class AudioManager : MonoBehaviour
 
     public void SaveSong()
     {
-        Debug.Log("Saving " +  currentSong);
         savedTime = musicSource.time;
         savedSong = currentSong;
     }
@@ -320,7 +319,6 @@ public class AudioManager : MonoBehaviour
     {
         if (sound == null)
         {
-            Debug.Log("Sound to play is null");
             return;
         }
         soundSource.PlayOneShot(sound);
@@ -345,7 +343,7 @@ public class AudioManager : MonoBehaviour
     {
         currentSong = "Title";
         currIndex = 0;
-        currentScene = null;
+        // currentScene = null;
         savedSong = null;
         savedTime = 0f;
     }

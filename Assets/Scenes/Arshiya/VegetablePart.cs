@@ -22,7 +22,7 @@ public class VegetablePart : Clickable
     
     protected override void OnClicked()
     {
-        SoupManager soupManager = FindObjectOfType<SoupManager>();
+        SoupManager soupManager = FindAnyObjectByType<SoupManager>();
         // soupManager.AddToProgress(inc);
         soupManager.AddChop();
         soupManager.SubtractNumPartOnBoard(1);

@@ -86,7 +86,7 @@ public class SoupManager : MinigameCompletion
         numChops++;
         if (numChops == 9)
         {
-            FindObjectOfType<Spoon>().GetComponent<Spoon>().enabled = true;
+            FindAnyObjectByType<Spoon>().GetComponent<Spoon>().enabled = true;
         }
     }
 

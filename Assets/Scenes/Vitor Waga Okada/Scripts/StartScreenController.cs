@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,9 +15,28 @@ public class StartScreenController : MonoBehaviour
         AudioManager.Instance.PlaySong("Title");
     }
 
-    public void startGame() {
+    public void startGame()
+    {
+        StartCoroutine(StartGame());
+    }
+
+    public IEnumerator StartGame() {
         AudioManager.Instance.PlaySound("ButtonDown");
-        SceneManager.LoadScene(StartGameAfterScreen);
+
+        LoadingScreen loadingScreen = FindAnyObjectByType<LoadingScreen>();
+        if (loadingScreen != null)
+        {
+            yield return loadingScreen.FadeIn();
+        }
+
+        // Load the new scene
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(StartGameAfterScreen);
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+
+        // SceneManager.LoadSceneAsync(StartGameAfterScreen);
     }
 
     public void goToOptions() {

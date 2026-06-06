@@ -7,7 +7,6 @@ public class IngredientCollide : MonoBehaviour
     private bool hasPlayedSfx = false;
     private void OnTriggerEnter(Collider c)
     {
-        Debug.Log("collide");
         AudioManager.Instance.PlaySound("Drop");
         if (c.attachedRigidbody != null && c.gameObject.CompareTag("Ingredient"))
         {

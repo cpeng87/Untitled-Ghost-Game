@@ -23,7 +23,7 @@ public class Vegetable : Clickable
         canChop = true;
         // originalY = transform.position.y;
         // originalZ = transform.position.z;
-        soupManager = FindObjectOfType<SoupManager>();
+        soupManager = FindAnyObjectByType<SoupManager>();
         isOnBoard = false;
     }
 

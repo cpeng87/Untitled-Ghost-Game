@@ -145,10 +145,8 @@ public class GhostSpawningManagerWithCutscenes : MonoBehaviour
     //spawns a new ghost, randomly selects ghost based on possible (recipes unlocked), adds to active ghosts and reloads ghost gameobjects
     public void SpawnGhost()
     {
-        Debug.Log("Spawning Ghost");
         if (GameManager.Instance.ghostManager.IsActiveFull() == true)
         {
-            Debug.Log("Full seats!");
             return;
         }
         List<Ghost> possibleGhost = new List<Ghost>();
@@ -171,7 +169,6 @@ public class GhostSpawningManagerWithCutscenes : MonoBehaviour
         }
 
         GameManager.Instance.ghostManager.AddActiveGhost(possibleGhost[index]);
-        Debug.Log(possibleGhost[index]);
 
         DoorSFX.Stop(); //stops all current SFX for door playing beforehand
         DoorSFX.Play();
@@ -182,7 +179,6 @@ public class GhostSpawningManagerWithCutscenes : MonoBehaviour
     //deletes gameobject and removes from spawned ghosts list
     public void DeleteSpawnedGhost(int seatNum)
     {
-        Debug.Log("seat num to destroy: " + seatNum);
         Destroy(spawnedGhosts[seatNum]);
         spawnedGhosts.RemoveAt(seatNum);
     }

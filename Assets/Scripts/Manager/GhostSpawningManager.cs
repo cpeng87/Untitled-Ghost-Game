@@ -19,7 +19,7 @@ public class GhostSpawningManager : MonoBehaviour
     [SerializeField] private Vector3 door = new Vector3(-6f, 0.5f,-7f);
     [SerializeField] private float ghostSpeed = 5f;
     [SerializeField] private float rotationSpeed = 135f;
-    [SerializeField] private float minRotationSpeed = 90f;
+    // [SerializeField] private float minRotationSpeed = 90f;
     [SerializeField] private float spinSpeed = 125f;
     private double sulkSpeed = 1f;
     private Quaternion RotationGoal1 = Quaternion.Euler(0f, -90f, 0f);
@@ -324,6 +324,11 @@ public class GhostSpawningManager : MonoBehaviour
         // {
         //     possibleGhost = arcGhost;
         // }
+
+        if (possibleGhost.Count == 0)
+        {
+            return;
+        }
 
         int index = (int) (UnityEngine.Random.value * possibleGhost.Count);
         index = Math.Abs(index);

@@ -15,7 +15,7 @@ public class Spoon : DraggableObject
 
     public override void Start()
     {
-        soupManager = FindObjectOfType<SoupManager>();
+        soupManager = FindAnyObjectByType<SoupManager>();
         base.Start();
     }
 
