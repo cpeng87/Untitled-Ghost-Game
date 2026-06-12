@@ -19,7 +19,7 @@ public class Spawner : MonoBehaviour
 
         if (timer > frequency)
         {
-            Debug.Log("placing boba");
+            // Debug.Log("placing boba");
             timer = 0;
             Vector3 randomPosition = new Vector3(
                 ((Random.value * 2) - 1) * (size.x / 2f) + center.x,

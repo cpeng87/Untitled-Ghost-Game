@@ -12,6 +12,7 @@ public class StartScreenController : MonoBehaviour
 
     private void Start()
     {
+        OptionsScreen.SetActive(false);
         AudioManager.Instance.PlaySong("Title");
     }
 
@@ -43,7 +44,7 @@ public class StartScreenController : MonoBehaviour
         AudioManager.Instance.PlaySound("ButtonDown");
         TitleScreen.SetActive(false);
         OptionsScreen.SetActive(true);
-        print("Going to Options");
+        // print("Going to Options");
     }
 
     public void goToTitle() {

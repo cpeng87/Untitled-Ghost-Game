@@ -65,7 +65,7 @@ public class OrderManager : MonoBehaviour
 
         if (orderIdx < 0 || orderIdx >= GetNumActiveOrder())
         {
-            Debug.Log("Invalid index for order.");
+            // Debug.Log("Invalid index for order.");
         }
 
         TicketManager.Instance.HideOrders();

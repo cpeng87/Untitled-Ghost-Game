@@ -99,7 +99,7 @@ public class GhostManager : MonoBehaviour
                 }
                 if (ghost.numStory == ghostNameToStoryIndex[name])
                 {
-                    Debug.Log("Reached end of dialogue, will not increment");
+                    // Debug.Log("Reached end of dialogue, will not increment");
                     completedGhostsDict[ghost] = true;
                     if (ghost.arc == GameManager.Instance.arc)
                     {

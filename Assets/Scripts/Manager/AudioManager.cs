@@ -16,6 +16,7 @@ public class AudioManager : MonoBehaviour
     // private string currentScene;
     private string savedSong;
     private float savedTime;
+    private float masterVolume;
     
 
     [SerializeField] private AudioSource musicSource;
@@ -43,6 +44,7 @@ public class AudioManager : MonoBehaviour
     }
     void Start()
     {
+        masterVolume = 1f;
         //Random Song for now
         // RandomSong();
         //change to play arc's song
@@ -346,6 +348,26 @@ public class AudioManager : MonoBehaviour
         // currentScene = null;
         savedSong = null;
         savedTime = 0f;
+    }
+
+    public AudioSource GetMusicSource()
+    {
+        return musicSource;
+    }
+
+    public AudioSource GetSoundSource()
+    {
+        return soundSource;
+    }
+
+    public float GetMasterVolume()
+    {
+        return masterVolume;
+    }
+
+    public void SetMasterVolume(float value)
+    {
+        masterVolume = value;
     }
 
 }

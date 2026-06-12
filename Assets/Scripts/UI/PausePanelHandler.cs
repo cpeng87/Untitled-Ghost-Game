@@ -4,6 +4,13 @@ using UnityEngine.SceneManagement;
 public class PausePanelHandler : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
+    [SerializeField] GameObject optionsMenu;
+
+    private void Start()
+    {
+        optionsMenu.SetActive(false);
+        pauseMenu.SetActive(false);
+    }
 
     public void Pause()
     {
@@ -18,6 +25,7 @@ public class PausePanelHandler : MonoBehaviour
     {
         AudioManager.Instance.PlaySound("ButtonUp");
         pauseMenu.SetActive(false);
+        optionsMenu.SetActive(false);
         //This removes a pause to prevent weird Timescale stuff when showing tutorial hints
         PauseManager.RemovePause(this.gameObject);
         PauseManager.SetPauseState(false);
@@ -43,5 +51,11 @@ public class PausePanelHandler : MonoBehaviour
         PauseManager.RemovePause(this.gameObject);
         PauseManager.SetPauseState(false);
         SceneManager.LoadScene("TitleScene");
+    }
+
+    public void OpenOptions()
+    {
+        pauseMenu.SetActive(false);
+        optionsMenu.SetActive(true);
     }
 }
