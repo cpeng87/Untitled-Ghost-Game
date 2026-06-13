@@ -157,13 +157,13 @@ namespace AutoLetterbox
 
         private void Start () {
             // If no cameras have been assigned in editor, search for cameras in the scene
-            if (findCamerasAutomatically) {
-                FindAllCamerasInScene();
-            } else if (cameras == null || cameras.Count == 0) {
-                cameras = new List<CameraRatio>();
-            }
+            // if (findCamerasAutomatically) {
+            //     FindAllCamerasInScene();
+            // } else if (cameras == null || cameras.Count == 0) {
+            //     cameras = new List<CameraRatio>();
+            // }
 
-            ValidateCameraArray();
+            // ValidateCameraArray();
 
             // Set the origin viewport space for each Camera
             for (int i = 0; i < cameras.Count; i++) {
