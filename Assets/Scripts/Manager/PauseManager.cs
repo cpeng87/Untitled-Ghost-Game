@@ -8,7 +8,7 @@ using System.Linq;
 //Last I checked, this code was written by Travis Bittel
 public class PauseManager : MonoBehaviour
 {
-    public static PauseManager Instance { get; private set; }
+    // public static PauseManager Instance { get; private set; }
     private static readonly List<Pause> pauses = new();
     
     /// <summary>
@@ -18,9 +18,26 @@ public class PauseManager : MonoBehaviour
     public static Action<bool> PauseStateChanged;
     public static bool IsPaused { get; private set; } = false;
 
+    public static PauseManager Instance { get; private set; }
+
     private void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        if (Instance == this)
+        {
+            Instance = null;
+        }
     }
     /// <summary>
     /// Prevents the player from opening the pause menu. This is setup to support multiple locations
