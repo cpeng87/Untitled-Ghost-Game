@@ -49,13 +49,29 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7918335002988649766, guid: 8d022e75e665f664c88daff1e53034ed, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7918335002988649766, guid: 8d022e75e665f664c88daff1e53034ed, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9f29fcfa9da3a93449e24e82b3457721, type: 2}
     - target: {fileID: -7601226680800833775, guid: 8d022e75e665f664c88daff1e53034ed, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7601226680800833775, guid: 8d022e75e665f664c88daff1e53034ed, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7601226680800833775, guid: 8d022e75e665f664c88daff1e53034ed, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: f34cabab733a1aa448483464b48418dc, type: 2}
+    - target: {fileID: -1461304994638716399, guid: 8d022e75e665f664c88daff1e53034ed, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -1461304994638716399, guid: 8d022e75e665f664c88daff1e53034ed, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -63,6 +79,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8d022e75e665f664c88daff1e53034ed, type: 3}
       propertyPath: m_Name
       value: reaper new (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1646733720424155422, guid: 8d022e75e665f664c88daff1e53034ed, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1646733720424155422, guid: 8d022e75e665f664c88daff1e53034ed, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'

@@ -31,6 +31,7 @@ public class LoadingScreen : MonoBehaviour
         {
             StopCoroutine(currentFade);
         }
+        yield return new WaitForSecondsRealtime(0.1f);
         yield return Fade(1, 0, true);
     }
 

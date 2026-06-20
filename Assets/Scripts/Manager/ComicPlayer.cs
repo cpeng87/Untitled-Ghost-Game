@@ -109,16 +109,40 @@ public class ComicPlayer : MonoBehaviour
 
     private IEnumerator CompleteComic()
     {   
-        LoadingScreen loadingScreen = FindAnyObjectByType<LoadingScreen>();
-        if (loadingScreen != null)
-        {
-            yield return loadingScreen.FadeIn();
-        }
+        // // LoadingScreen loadingScreen = FindAnyObjectByType<LoadingScreen>();
+        // // if (loadingScreen != null)
+        // // {
+        // //     yield return loadingScreen.FadeIn();
+        // // }
 
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(nextScene);
-        while (!asyncLoad.isDone)
-        {
-            yield return null;
-        }
+        // // AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(nextScene);
+        // // while (!asyncLoad.isDone)
+        // // {
+        // //     yield return null;
+        // // }
+        // LoadingScreen loadingScreen = FindAnyObjectByType<LoadingScreen>();
+        // if (loadingScreen != null)
+        // {
+        //     yield return loadingScreen.FadeIn();
+        // }
+
+        // yield return null;
+        // yield return new WaitForEndOfFrame();
+
+        // AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(nextScene);
+        // asyncLoad.allowSceneActivation = false;
+
+        // while (asyncLoad.progress < 0.9f)
+        // {
+        //     yield return null;
+        // }
+        // asyncLoad.allowSceneActivation = true;
+
+        // while (!asyncLoad.isDone)
+        // {
+        //     yield return null;
+        // }
+
+        yield return GameManager.Instance.SwitchToSceneCoroutine(nextScene);
     }
 }
