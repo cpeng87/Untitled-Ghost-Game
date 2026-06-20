@@ -115,10 +115,17 @@ public class ComicPlayer : MonoBehaviour
             yield return loadingScreen.FadeIn();
         }
 
+        yield return null;                 // let Unity actually render alpha = 1
+        yield return new WaitForEndOfFrame(); // ensure it's flushed to screen
+        yield return new WaitForSeconds(0.5f);
+        yield return null;    
+
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(nextScene);
         while (!asyncLoad.isDone)
         {
             yield return null;
         }
+
+        yield return GameManager.Instance.SwitchToSceneCoroutine(nextScene);
     }
 }

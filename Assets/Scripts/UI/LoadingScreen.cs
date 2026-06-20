@@ -31,6 +31,7 @@ public class LoadingScreen : MonoBehaviour
         {
             StopCoroutine(currentFade);
         }
+        yield return new WaitForSecondsRealtime(0.5f);
         yield return Fade(1, 0, true);
     }
 
@@ -49,7 +50,6 @@ public class LoadingScreen : MonoBehaviour
             // elapsedTime += Time.unscaledDeltaTime;
             yield return null;
         }
-
         canvasGroup.alpha = endAlpha;
 
         if (deactivateAfterFade && endAlpha == 0)

@@ -30,6 +30,11 @@ public class StartScreenController : MonoBehaviour
             yield return loadingScreen.FadeIn();
         }
 
+        yield return null;                 // let Unity actually render alpha = 1
+        yield return new WaitForEndOfFrame(); // ensure it's flushed to screen
+        yield return new WaitForSeconds(0.5f);
+        yield return null;    
+
         // Load the new scene
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(StartGameAfterScreen);
         while (!asyncLoad.isDone)
@@ -37,6 +42,7 @@ public class StartScreenController : MonoBehaviour
             yield return null;
         }
 
+        // yield return GameManager.Instance.SwitchToSceneCoroutine(StartGameAfterScreen);
         // SceneManager.LoadSceneAsync(StartGameAfterScreen);
     }
 

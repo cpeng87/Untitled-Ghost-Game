@@ -28,7 +28,7 @@ public class GhostSpawningManager : MonoBehaviour
     [SerializeField] private float mainGhostChance;
 
 
-    //singleton
+    // //singleton
     private void Awake()
     {
         if (Instance == null)
@@ -253,6 +253,7 @@ public class GhostSpawningManager : MonoBehaviour
     
     public void SpawnGhost()
     {
+        Debug.Log("TIME TO SPAWN");
         if (GameManager.Instance.ghostManager.IsActiveFull() == true)
         {
             return;

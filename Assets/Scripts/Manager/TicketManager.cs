@@ -11,6 +11,7 @@ public class TicketManager : MonoBehaviour
     [SerializeField] private GameObject ordersPanel; //full UI of the pop up
     [SerializeField] private GameObject orderTicket; //individual ticket prefab
     [SerializeField] private Animator makeOrderNotifAnimator;
+    [SerializeField] private MakeOrderButton makeOrderBtn;
     [SerializeField] private GameObject ticketParent;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
