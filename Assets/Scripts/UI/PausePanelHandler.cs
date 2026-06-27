@@ -14,12 +14,16 @@ public class PausePanelHandler : MonoBehaviour
 
     public void Pause()
     {
+        Debug.Log("Start pause");
         AudioManager.Instance.PlaySound("ButtonDown");
         pauseMenu.SetActive(true);
+        Debug.Log(AudioManager.Instance);
         //This layers a pause to prevent weird Timescale stuff when showing tutorial hints
 
         PauseManager.AddPause(this.gameObject);
+        Debug.Log(this.gameObject);
         PauseManager.SetPauseState(true);
+        Debug.Log("Finished pause");
     }
     public void Resume()
     {
@@ -45,6 +49,7 @@ public class PausePanelHandler : MonoBehaviour
         }
         if (AudioManager.Instance != null)
         {
+            Debug.Log("resetting");
             AudioManager.Instance.Reset();
         }
 

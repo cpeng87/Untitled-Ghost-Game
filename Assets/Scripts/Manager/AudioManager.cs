@@ -97,7 +97,7 @@ public class AudioManager : MonoBehaviour
     /// </summary>
     /// <param name="songName"></param>
     public void PlaySong(string songName, float fadeTime = 0.5f) {
-
+        Debug.Log("Swapping to " + songName);
         if (musicDict.TryGetValue(songName, out var clip))  {
             if (musicSource.clip == clip && musicSource.isPlaying)
                 return; // already playing

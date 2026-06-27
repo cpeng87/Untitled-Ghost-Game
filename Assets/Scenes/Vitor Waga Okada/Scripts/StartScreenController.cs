@@ -12,7 +12,7 @@ public class StartScreenController : MonoBehaviour
 
     private void Start()
     {
-        OptionsScreen.SetActive(false);
+        // OptionsScreen.SetActive(false);
         AudioManager.Instance.PlaySong("Title");
     }
 
@@ -22,47 +22,7 @@ public class StartScreenController : MonoBehaviour
     }
 
     public IEnumerator StartGame() {
-        // AudioManager.Instance.PlaySound("ButtonDown");
-
-        // // LoadingScreen loadingScreen = FindAnyObjectByType<LoadingScreen>();
-        // // if (loadingScreen != null)
-        // // {
-        // //     yield return loadingScreen.FadeIn();
-        // // }
-
-        // // // Load the new scene
-        // // AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(StartGameAfterScreen);
-        // // while (!asyncLoad.isDone)
-        // // {
-        // //     yield return null;
-        // // }
-
-        // LoadingScreen loadingScreen = FindAnyObjectByType<LoadingScreen>();
-        // if (loadingScreen != null)
-        // {
-        //     yield return loadingScreen.FadeIn();
-        // }
-
-        // yield return null;
-        // yield return new WaitForEndOfFrame();
-
-        // AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(StartGameAfterScreen);
-        // asyncLoad.allowSceneActivation = false;
-
-        // while (asyncLoad.progress < 0.9f)
-        // {
-        //     yield return null;
-        // }
-        // asyncLoad.allowSceneActivation = true;
-
-        // while (!asyncLoad.isDone)
-        // {
-        //     yield return null;
-        // }
-
         yield return GameManager.Instance.SwitchToSceneCoroutine(StartGameAfterScreen);
-
-        // SceneManager.LoadSceneAsync(StartGameAfterScreen);
     }
 
     public void goToOptions() {
