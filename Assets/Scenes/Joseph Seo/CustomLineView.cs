@@ -240,6 +240,15 @@ namespace Yarn.Unity
             canvasGroup = GetComponentInParent<CanvasGroup>();
         }
 
+        //custom line to allow for space bar dialogue increment
+        private void Update()
+        {
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                OnContinueClicked();
+            }
+        }
+
         /// <inheritdoc/>
         public override void DismissLine(Action onDismissalComplete)
         {
