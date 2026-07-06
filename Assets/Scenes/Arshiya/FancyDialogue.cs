@@ -40,7 +40,6 @@ public class FancyDialogue : MonoBehaviour
     void Start()
     {
         textInfo = textMesh.textInfo;
-        // Debug.Log(textInfo);
         // originalText = textMesh.text;
         finalText = "";
     }
@@ -136,7 +135,6 @@ public class FancyDialogue : MonoBehaviour
 
                 italicRanges.Add(new TagRanges { start = start, end = parsedText.Length - 1 });
                 i = endTagIndex + "</italic>".Length - 1;
-                // Debug.Log("Range is " + start + " to " + endTagIndex);
                 continue;
             }
 

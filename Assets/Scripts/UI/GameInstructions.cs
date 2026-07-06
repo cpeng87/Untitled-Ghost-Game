@@ -77,7 +77,6 @@ public class GameInstructions : MonoBehaviour
         index += 1;
         if (index >= steps.Count)
         {
-            Debug.Log("OOBS");
             return;
         }
         steps[index - 1].SetActive(false);

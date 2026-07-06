@@ -102,7 +102,7 @@ public class MiniGame : MinigameCompletion {
 
     void Update()
     {
-        if (currentBlock && playing)
+        if (currentBlock && Time.timeScale != 0)
         {
             currentRigidbody.isKinematic = true;
             float moveAmount = Time.deltaTime * blockSpeed * blockDirection;

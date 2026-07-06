@@ -59,7 +59,6 @@ public class OrderManager : MonoBehaviour
         AudioManager.Instance.PlaySound("ButtonDown");
         if (GetNumActiveOrder() == 0)
         {
-            Debug.Log("No active orders.");
             return;
         }
 

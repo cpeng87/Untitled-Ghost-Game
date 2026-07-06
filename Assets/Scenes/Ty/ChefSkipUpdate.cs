@@ -51,7 +51,6 @@ public class ChefSkipUpdate : MinigameCompletion
     public void UpdateCostField()
     {
         costField.text = "Minigame will be skipped. This action will cost " + chefCost + " currency.";
-        Debug.Log("current cost: " + chefCost);
     }
 
     public void UpdateCurrencyField() 

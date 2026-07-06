@@ -22,6 +22,7 @@ public class StartScreenController : MonoBehaviour
     }
 
     public IEnumerator StartGame() {
+        AudioManager.Instance.PlaySound("ButtonDown");
         yield return GameManager.Instance.SwitchToSceneCoroutine(StartGameAfterScreen);
     }
 

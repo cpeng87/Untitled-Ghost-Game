@@ -24,7 +24,6 @@ public class Timer : MinigameCompletion
             timeRemaining -= Time.deltaTime;
             timeRemaining = Mathf.Max(0, timeRemaining);
             UpdateTimerText(timeRemaining);
-            // Debug.Log("Time left: " + timeRemaining);
         }
         if (timeRemaining <= 0 && isRunning)
         {

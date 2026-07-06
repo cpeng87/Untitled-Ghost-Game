@@ -14,7 +14,6 @@ public class PotCollider : MonoBehaviour
 
     private void OnCollisionExit(Collision collision)
     {
-        //Debug.Log(collision.transform.GetComponent<Rigidbody>().linearVelocity.magnitude);
         if (collision.gameObject.GetComponent<BobaCollision>())
         {
             if (collision.transform.GetComponent<Rigidbody>().linearVelocity.magnitude > 6f)

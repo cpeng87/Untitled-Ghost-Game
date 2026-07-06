@@ -57,7 +57,6 @@ public class DialoguePlayer : MonoBehaviour
     }
 
     public static void PlayAnimation(string name, string animation) {
-        Debug.Log("Searching for ghost by then name" + name);
         GameObject target = GhostSpawningManager.Instance.GetSpawnedGhost(name);
         if (target == null) Debug.Log("Target is null");
         target.GetComponent<Animator>().Play(animation);
@@ -127,7 +126,6 @@ public class DialoguePlayer : MonoBehaviour
     public void EndDialogue()
     {
         CameraManager.Instance.SwapToMainCamera();
-        Debug.Log("SeatNumber is " + seatNum);
         GhostSpawningManager.Instance.DeleteSpawnedGhost(seatNum);
         GameManager.Instance.orderManager.RemoveCompletedOrder();
         GameManager.Instance.state = State.Main;

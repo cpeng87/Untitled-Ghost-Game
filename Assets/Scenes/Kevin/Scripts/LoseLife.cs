@@ -6,7 +6,6 @@ public class LoseLife : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        Debug.Log("Collission detected");
         // Get the MiniGame component attached to the MiniGame GameObject
         MiniGame miniGameController = MiniGame.GetComponent<MiniGame>();
 

@@ -50,7 +50,6 @@ namespace AutoLetterbox
             if (spinDirection == direc.random) {
                 int spinner = Random.Range(0, 99);
 
-                //Debug.Log(spinner);
 
                 if (spinner <= 49) {
                     spinDirection = direc.clockwise;
