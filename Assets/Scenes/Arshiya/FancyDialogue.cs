@@ -2,6 +2,8 @@ using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
+
 public class FancyDialogue : MonoBehaviour
 {
     //wiggly variables
@@ -36,18 +38,17 @@ public class FancyDialogue : MonoBehaviour
     private List<TagRanges> italicRanges = new List<TagRanges>();
     
     //private string originalText;
-    private string finalText;
     void Start()
     {
         textInfo = textMesh.textInfo;
         // originalText = textMesh.text;
-        finalText = "";
+        // textWithTags = "";
     }
 
     public void Evaluate() {
         textInfo = textMesh.textInfo;
         // originalText = textMesh.text;
-        finalText = "";
+        // textWithTags = "";
     }
 
     public void Reset() {
@@ -61,16 +62,48 @@ public class FancyDialogue : MonoBehaviour
     {
         // textInfo = textMesh.textInfo;
         // //originalText = textMesh.text;
-        // finalText = "";
+        // textWithTags = "";
         // textMesh.ClearMesh(false);
-        parseTags(textMesh.text);
-        textMesh.text = finalText;
+
+        // parseTags(textMesh.text);
+        // textMesh.text = textWithTags;
+        // textMesh.ForceMeshUpdate();
+        // textInfo = textMesh.textInfo;
+
+        textMesh.text = CleanTags(textMesh.text);
         textMesh.ForceMeshUpdate();
         textInfo = textMesh.textInfo;
+
         Italic();
         Bold();
         Shake();
         Wiggle();
+    }
+
+
+    // should be applied once the text is fully displayed
+    public void ApplyEffects(string text)
+    {
+        Reset();
+        text = Regex.Replace(text, @" (\{[^{}]*\})", "");
+        text = Regex.Replace(text, @"(\{[^{}]*\}) ", "");
+        parseTags(text);
+        textMesh.ForceMeshUpdate();
+        textInfo = textMesh.textInfo;
+    }
+
+    private string CleanTags(string text)
+    {
+        text = text.Replace("<wiggle>", "");
+        text = text.Replace("</wiggle>", "");
+        text = text.Replace("<shaky>", "");
+        text = text.Replace("</shaky>", "");
+        text = text.Replace("<bold>", "");
+        text = text.Replace("</bold>", "");
+        text = text.Replace("<italic>", "");
+        text = text.Replace("</italic>", "");
+
+        return text;
     }
 
     private void parseTags(string s) {
@@ -142,8 +175,9 @@ public class FancyDialogue : MonoBehaviour
             parsedText.Append(s[i]);
         }
 
-        finalText = parsedText.ToString();
+        // textWithTags = parsedText.ToString();
     }
+
     private void Shake() {
         for (int i = 0; i < textInfo.characterCount; i++) {
             TMP_CharacterInfo curChar = textInfo.characterInfo[i];
@@ -159,7 +193,6 @@ public class FancyDialogue : MonoBehaviour
                     {
                         lastJitterTime = Time.time;
                         jitterOffsets.Clear(); // Reset previous jitter offsets
-
                         for (int j = 0; j < textInfo.characterCount; j++)
                         {
                             jitterOffsets[j] = new Vector3(Random.Range(-jitterAmount, jitterAmount), 
@@ -167,15 +200,12 @@ public class FancyDialogue : MonoBehaviour
                         }
                     }
 
-                   
                     // Get the material and vertex indices for this character.
                     int materialIndex = curChar.materialReferenceIndex;
                     int vertexIndex = curChar.vertexIndex;
                     Vector3[] vertices = textInfo.meshInfo[materialIndex].vertices;
-
-                     // Apply stored jitter values instead of calling Random.Range() every frame
+                    // Apply stored jitter values instead of calling Random.Range() every frame
                     Vector3 jitter = jitterOffsets.ContainsKey(i) ? jitterOffsets[i] : Vector3.zero;
-
                     vertices[vertexIndex + 0] += jitter;
                     vertices[vertexIndex + 1] += jitter;
                     vertices[vertexIndex + 2] += jitter;
@@ -183,7 +213,7 @@ public class FancyDialogue : MonoBehaviour
                     break;
                 }
             }
-            
+
         }
         // Push the updated vertex data to the mesh.
         for (int i = 0; i < textInfo.meshInfo.Length; i++)
@@ -192,6 +222,54 @@ public class FancyDialogue : MonoBehaviour
             textMesh.UpdateGeometry(textInfo.meshInfo[i].mesh, i);
         }
     }
+    // private void Shake()
+    // {
+    //     bool updateJitter = Time.time - lastJitterTime > jitterUpdateTime;
+    //     if (updateJitter)
+    //     {
+    //         lastJitterTime = Time.time;
+    //         jitterOffsets.Clear();
+    //     }
+
+    //     for (int i = 0; i < textInfo.characterCount; i++)
+    //     {
+    //         TMP_CharacterInfo curChar = textInfo.characterInfo[i];
+    //         if (!curChar.isVisible) continue;
+
+    //         foreach (var range in shakyRanges)
+    //         {
+    //             if (i >= range.start && i <= range.end)
+    //             {
+    //                 if (updateJitter)
+    //                 {
+    //                     jitterOffsets[i] = new Vector3(
+    //                         Random.Range(-jitterAmount, jitterAmount),
+    //                         Random.Range(-jitterAmount, jitterAmount),
+    //                         0);
+    //                 }
+
+    //                 int materialIndex = curChar.materialReferenceIndex;
+    //                 int vertexIndex = curChar.vertexIndex;
+    //                 Vector3[] vertices = textInfo.meshInfo[materialIndex].vertices;
+
+    //                 Vector3 jitter = jitterOffsets.ContainsKey(i) ? jitterOffsets[i] : Vector3.zero;
+
+    //                 // Use TMP's own stored original corners as the anchor
+    //                 vertices[vertexIndex + 0] = curChar.bottomLeft + jitter;
+    //                 vertices[vertexIndex + 1] = curChar.topLeft + jitter;
+    //                 vertices[vertexIndex + 2] = curChar.topRight + jitter;
+    //                 vertices[vertexIndex + 3] = curChar.bottomRight + jitter;
+    //                 break;
+    //             }
+    //         }
+    //     }
+
+    //     for (int i = 0; i < textInfo.meshInfo.Length; i++)
+    //     {
+    //         textInfo.meshInfo[i].mesh.vertices = textInfo.meshInfo[i].vertices;
+    //         textMesh.UpdateGeometry(textInfo.meshInfo[i].mesh, i);
+    //     }
+    // }
     private void Wiggle() {
         for (int i = 0; i < textInfo.characterCount; i++) {
             TMP_CharacterInfo curChar = textInfo.characterInfo[i];

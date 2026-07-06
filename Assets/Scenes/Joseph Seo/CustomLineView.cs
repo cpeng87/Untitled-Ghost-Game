@@ -23,6 +23,7 @@ namespace Yarn.Unity
     public class LineView : DialogueViewBase
     {
         public GameObject indicator;
+        [SerializeField] private FancyDialogue fd;
 
         /// <summary>
         /// The canvas group that contains the UI elements used by this Line
@@ -464,10 +465,17 @@ namespace Yarn.Unity
             // All of our text should now be visible.
             lineText.maxVisibleCharacters = int.MaxValue;
 
+
+            // display indicator since line is complete
             if (indicator != null)
             {
                 indicator.SetActive(true);
             }
+            if (fd != null)
+            {
+                fd.ApplyEffects(currentLine.RawText);
+            }
+
 
             // Our view should at be at full opacity.
             canvasGroup.alpha = 1f;

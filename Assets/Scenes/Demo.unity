@@ -256,6 +256,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9885047}
   m_CullTransparentMesh: 1
+--- !u!114 &19658573 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2998349377929727597, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
+  m_PrefabInstance: {fileID: 726103252}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38923701cad22684db4651f79e1b1a2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &22449480 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f48207f8eccc21f4ea8f0c193663b0c6, type: 3}
@@ -19120,6 +19131,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2998349377929727597, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2998349377929727597, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
+      propertyPath: amplitude
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2998349377929727597, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
+      propertyPath: jitterAmount
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3424962728120957104, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OpenOptions
@@ -19144,6 +19167,10 @@ PrefabInstance:
       propertyPath: m_BlockingObjects
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4529931250005262155, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
+      propertyPath: fd
+      value: 
+      objectReference: {fileID: 19658573}
     - target: {fileID: 4634522873583523483, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
       propertyPath: m_Camera
       value: 
