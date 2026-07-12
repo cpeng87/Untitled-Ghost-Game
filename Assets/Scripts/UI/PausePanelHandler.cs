@@ -39,8 +39,7 @@ public class PausePanelHandler : MonoBehaviour
         AudioManager.Instance.PlaySound("ButtonDown");
         if (GameManager.Instance != null)
         {
-            GameManager.Instance = null;
-            Destroy(GameManager.Instance.gameObject, 1f);
+            GameManager.Instance.Reset();
         }
         if (AudioManager.Instance != null)
         {

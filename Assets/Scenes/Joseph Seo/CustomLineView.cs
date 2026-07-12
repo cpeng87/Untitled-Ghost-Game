@@ -244,7 +244,7 @@ namespace Yarn.Unity
         //custom line to allow for space bar dialogue increment
         private void Update()
         {
-            if (Input.GetKeyUp(KeyCode.Space))
+            if (Input.GetKeyUp(KeyCode.Space) && PauseManager.Instance.IsPaused() == false)
             {
                 OnContinueClicked();
             }
@@ -471,9 +471,12 @@ namespace Yarn.Unity
             {
                 indicator.SetActive(true);
             }
+
+            //TODO: fix fancy dialogue
             if (fd != null)
             {
-                fd.ApplyEffects(currentLine.RawText);
+                // Debug.Log(currentLine.Text.Text);
+                // fd.ApplyEffects(currentLine.Text.Text);
             }
 
 

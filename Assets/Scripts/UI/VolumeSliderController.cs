@@ -12,8 +12,8 @@ public class VolumeSliderController : MonoBehaviour
     {
         audioManager = AudioManager.Instance;
         master.value = audioManager.GetMasterVolume();
-        background.value = audioManager.GetMusicSource().volume;
-        sfx.value = audioManager.GetSoundSource().volume;
+        background.value = audioManager.GetMusicVolume();
+        sfx.value = audioManager.GetSoundVolume();
     }
 
     private void Update()
@@ -24,8 +24,8 @@ public class VolumeSliderController : MonoBehaviour
     private void Save()
     {
         audioManager.SetMasterVolume(master.value);
-        audioManager.GetMusicSource().volume = master.value * background.value;
-        audioManager.GetSoundSource().volume = master.value * sfx.value;
+        audioManager.SetMusicVolume(background.value);
+        audioManager.SetSoundVolume(sfx.value);
     }
 }
 

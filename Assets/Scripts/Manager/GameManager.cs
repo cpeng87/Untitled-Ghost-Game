@@ -59,6 +59,7 @@ public class GameManager : MonoBehaviour
 
     private void SetupTutorialDictionary()
     {
+        hasOpenedTutorial = new Dictionary<string, bool>();
         hasOpenedTutorial.Add("Game", false);
         hasOpenedTutorial.Add("Story", false);
         foreach (Recipe recipe in unlockedRecipes)
@@ -302,6 +303,19 @@ public class GameManager : MonoBehaviour
 
         Debug.Log("game manager");
         AudioManager.Instance.PlaySong("Comic");
+    }
+
+    public void Reset()
+    {
+        state = State.Main;
+        arc = Arc.Beginning;
+
+        //these need to be reset as well
+
+        orderManager.Reset();
+        ghostManager.Reset();
+
+        SetupTutorialDictionary();
     }
 
 }

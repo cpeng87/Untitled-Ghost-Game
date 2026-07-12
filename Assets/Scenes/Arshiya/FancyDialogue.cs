@@ -74,10 +74,11 @@ public class FancyDialogue : MonoBehaviour
         textMesh.ForceMeshUpdate();
         textInfo = textMesh.textInfo;
 
-        Italic();
-        Bold();
-        Shake();
-        Wiggle();
+        //TODO: fix fancy dialogue...
+        // Italic();
+        // Bold();
+        // Shake();
+        // Wiggle();
     }
 
 
@@ -85,9 +86,8 @@ public class FancyDialogue : MonoBehaviour
     public void ApplyEffects(string text)
     {
         Reset();
-        text = Regex.Replace(text, @" (\{[^{}]*\})", "");
-        text = Regex.Replace(text, @"(\{[^{}]*\}) ", "");
         parseTags(text);
+        textMesh.text = CleanTags(textMesh.text);
         textMesh.ForceMeshUpdate();
         textInfo = textMesh.textInfo;
     }
@@ -117,8 +117,9 @@ public class FancyDialogue : MonoBehaviour
             }
             // Handle <wiggle> tag
             if (s.Substring(i).StartsWith("<wiggle>", System.StringComparison.OrdinalIgnoreCase)) {
-                int start = parsedText.Length;
-                i += "<wiggle>".Length;
+                int start = parsedText.Length - 1;
+                // i += "<wiggle>".Length;
+                start -= "<wiggle> ".Length - 1;
                 int endTagIndex = s.IndexOf("</wiggle>", i, System.StringComparison.OrdinalIgnoreCase);
                 if (endTagIndex < 0) { parsedText.Append("<wiggle>"); continue; }
 
@@ -126,13 +127,17 @@ public class FancyDialogue : MonoBehaviour
 
                 wiggleRanges.Add(new TagRanges { start = start, end = parsedText.Length - 1 });
                 i = endTagIndex + "</wiggle>".Length - 1;
+
+                Debug.Log(start);
+                Debug.Log(parsedText.Length - 1);
                 continue;
             }
 
             // Handle <shaky> tag
             if (s.Substring(i).StartsWith("<shaky>", System.StringComparison.OrdinalIgnoreCase)) {
                 int start = parsedText.Length;
-                i += "<shaky>".Length;
+                // i += "<shaky>".Length;
+                start -= "<shaky>".Length;
                 int endTagIndex = s.IndexOf("</shaky>", i, System.StringComparison.OrdinalIgnoreCase);
                 if (endTagIndex < 0) { parsedText.Append("<shaky>"); continue; }
 
@@ -146,7 +151,8 @@ public class FancyDialogue : MonoBehaviour
             // Handle <bold> tag
             if (s.Substring(i).StartsWith("<bold>", System.StringComparison.OrdinalIgnoreCase)) {
                 int start = parsedText.Length;
-                i += "<bold>".Length;
+                // i += "<bold>".Length;
+                start -= "<bold>".Length;
                 int endTagIndex = s.IndexOf("</bold>", i, System.StringComparison.OrdinalIgnoreCase);
                 if (endTagIndex < 0) { parsedText.Append("<bold>"); continue; }
 
@@ -160,7 +166,8 @@ public class FancyDialogue : MonoBehaviour
             // Handle <italic> tag
             if (s.Substring(i).StartsWith("<italic>", System.StringComparison.OrdinalIgnoreCase)) {
                 int start = parsedText.Length;
-                i += "<italic>".Length;
+                // i += "<italic>".Length;
+                start -= "<italic>".Length;
                 int endTagIndex = s.IndexOf("</italic>", i, System.StringComparison.OrdinalIgnoreCase);
                 if (endTagIndex < 0) { parsedText.Append("<italic>"); continue; }
 
@@ -177,6 +184,78 @@ public class FancyDialogue : MonoBehaviour
 
         // textWithTags = parsedText.ToString();
     }
+
+    // private void parseTags(string s) {
+    //     StringBuilder parsedText = new StringBuilder();
+
+    //     for (int i = 0; i < s.Length; i++) {
+    //         // Preserve tabs and new lines
+    //         if (s[i] == '\t' || s[i] == '\n') {
+    //             parsedText.Append(s[i]);
+    //             continue;
+    //         }
+    //         // Handle <wiggle> tag
+    //         if (s.Substring(i).StartsWith("<wiggle>", System.StringComparison.OrdinalIgnoreCase)) {
+    //             int start = parsedText.Length;
+    //             i += "<wiggle>".Length;
+    //             int endTagIndex = s.IndexOf("</wiggle>", i, System.StringComparison.OrdinalIgnoreCase);
+    //             if (endTagIndex < 0) { parsedText.Append("<wiggle>"); continue; }
+
+    //             while (i < endTagIndex) parsedText.Append(s[i++]);
+
+    //             wiggleRanges.Add(new TagRanges { start = start, end = parsedText.Length - 1 });
+    //             i = endTagIndex + "</wiggle>".Length - 1;
+    //             continue;
+    //         }
+
+    //         // Handle <shaky> tag
+    //         if (s.Substring(i).StartsWith("<shaky>", System.StringComparison.OrdinalIgnoreCase)) {
+    //             int start = parsedText.Length;
+    //             i += "<shaky>".Length;
+    //             int endTagIndex = s.IndexOf("</shaky>", i, System.StringComparison.OrdinalIgnoreCase);
+    //             if (endTagIndex < 0) { parsedText.Append("<shaky>"); continue; }
+
+    //             while (i < endTagIndex) parsedText.Append(s[i++]);
+
+    //             shakyRanges.Add(new TagRanges { start = start, end = parsedText.Length - 1 });
+    //             i = endTagIndex + "</shaky>".Length - 1;
+    //             continue;
+    //         }
+
+    //         // Handle <bold> tag
+    //         if (s.Substring(i).StartsWith("<bold>", System.StringComparison.OrdinalIgnoreCase)) {
+    //             int start = parsedText.Length;
+    //             i += "<bold>".Length;
+    //             int endTagIndex = s.IndexOf("</bold>", i, System.StringComparison.OrdinalIgnoreCase);
+    //             if (endTagIndex < 0) { parsedText.Append("<bold>"); continue; }
+
+    //             while (i < endTagIndex) parsedText.Append(s[i++]);
+
+    //             boldRanges.Add(new TagRanges { start = start, end = parsedText.Length - 1 });
+    //             i = endTagIndex + "</bold>".Length - 1;
+    //             continue;
+    //         }
+
+    //         // Handle <italic> tag
+    //         if (s.Substring(i).StartsWith("<italic>", System.StringComparison.OrdinalIgnoreCase)) {
+    //             int start = parsedText.Length;
+    //             i += "<italic>".Length;
+    //             int endTagIndex = s.IndexOf("</italic>", i, System.StringComparison.OrdinalIgnoreCase);
+    //             if (endTagIndex < 0) { parsedText.Append("<italic>"); continue; }
+
+    //             while (i < endTagIndex) parsedText.Append(s[i++]);
+
+    //             italicRanges.Add(new TagRanges { start = start, end = parsedText.Length - 1 });
+    //             i = endTagIndex + "</italic>".Length - 1;
+    //             continue;
+    //         }
+
+    //         // Append all other characters normally
+    //         parsedText.Append(s[i]);
+    //     }
+
+    //     // textWithTags = parsedText.ToString();
+    // }
 
     private void Shake() {
         for (int i = 0; i < textInfo.characterCount; i++) {

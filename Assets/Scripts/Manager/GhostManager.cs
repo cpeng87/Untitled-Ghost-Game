@@ -296,4 +296,39 @@ public class GhostManager : MonoBehaviour
         return false;
     }
 
+    public void Reset()
+    {
+        reaperPitch = false;
+        ResetArcProgress();
+
+        completedGhostsDict = new Dictionary<Ghost, bool>();
+        ghostNameToScriptableDict = new Dictionary<string, Ghost>();
+        ghostNameToGameObjDict = new Dictionary<string, GameObject>();
+        ghostNameToStoryIndex = new Dictionary<string, int>();
+        recipeToGhostsDict = new Dictionary<Recipe, List<Ghost>>();
+
+        foreach (GameObject ghost in ghosts)
+        {
+            Ghost currGhost = ghost.GetComponent<GhostObj>().GetScriptable();
+            ghostNameToScriptableDict.Add(currGhost.ghostName, currGhost);
+            ghostNameToGameObjDict.Add(currGhost.ghostName, ghost);
+            ghostNameToStoryIndex.Add(currGhost.ghostName, 1);
+            completedGhostsDict.Add(currGhost, false);
+            foreach (Recipe recipe in currGhost.recipesOrdered)
+            {
+                if (recipeToGhostsDict.ContainsKey(recipe))
+                {
+                    recipeToGhostsDict[recipe].Add(currGhost);
+                }
+                else
+                {
+                    recipeToGhostsDict.Add(recipe, new List<Ghost>());
+                    recipeToGhostsDict[recipe].Add(currGhost);
+                }
+            }
+        }
+        activeGhosts = new Ghost[GameManager.Instance.maxGhosts];
+
+    }
+
 }

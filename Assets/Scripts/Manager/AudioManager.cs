@@ -17,6 +17,8 @@ public class AudioManager : MonoBehaviour
     private string savedSong;
     private float savedTime;
     private float masterVolume;
+    private float musicVolume;
+    private float soundVolume;
     
 
     [SerializeField] private AudioSource musicSource;
@@ -45,6 +47,8 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         masterVolume = 1f;
+        musicVolume = 1f;
+        soundVolume = 1f;
         //Random Song for now
         // RandomSong();
         //change to play arc's song
@@ -77,7 +81,6 @@ public class AudioManager : MonoBehaviour
     /// <param name="songName"></param>
     public void PlaySong(string songName)
     {
-        Debug.Log("Swapping to " + songName);
         if (musicDict.TryGetValue(songName, out var clip))
         {
             if (musicSource.clip == clip) return; //Already playing
@@ -98,7 +101,6 @@ public class AudioManager : MonoBehaviour
     /// </summary>
     /// <param name="songName"></param>
     public void PlaySong(string songName, float fadeTime = 0.5f) {
-        Debug.Log("Swapping to " + songName);
         if (musicDict.TryGetValue(songName, out var clip))  {
             if (musicSource.clip == clip && musicSource.isPlaying)
                 return; // already playing
@@ -108,7 +110,8 @@ public class AudioManager : MonoBehaviour
             if (currentFade != null)
         {
             StopCoroutine(currentFade);
-            musicSource.volume = 0.5f;
+            // musicSource.volume = 0.5f;
+            musicSource.volume = masterVolume * musicVolume;
         }
             currentFade = StartCoroutine(FadeToNewTrack(clip, fadeTime));
 
@@ -239,7 +242,7 @@ public class AudioManager : MonoBehaviour
         if (currentFade != null)
         {
             StopCoroutine(currentFade);
-            musicSource.volume = 0.5f;
+            musicSource.volume = masterVolume * musicVolume;
         }
         currentFade = StartCoroutine(FadeToNewTrack(musicDict[currentSong], fadeTime));
 
@@ -265,7 +268,7 @@ public class AudioManager : MonoBehaviour
             if (currentFade != null)
         {
             StopCoroutine(currentFade);
-            musicSource.volume = 0.5f;
+            musicSource.volume = masterVolume * musicVolume;
         }
             currentFade = StartCoroutine(FadeToNewTrack(musicDict[currentSong], fadeTime));
 
@@ -369,6 +372,24 @@ public class AudioManager : MonoBehaviour
     public void SetMasterVolume(float value)
     {
         masterVolume = value;
+    }
+    public void SetMusicVolume(float value)
+    {
+        musicVolume = value;
+        GetMusicSource().volume = masterVolume * musicVolume;
+    }
+    public float GetMusicVolume()
+    {
+        return musicVolume;
+    }
+    public void SetSoundVolume(float value)
+    {
+        soundVolume = value;
+        GetSoundSource().volume = masterVolume * soundVolume;
+    }
+    public float GetSoundVolume()
+    {
+        return soundVolume;
     }
 
 }

@@ -51,6 +51,11 @@ public class PauseManager : MonoBehaviour
             UnpauseGame();
         }
     }
+
+    public bool IsPaused()
+    {
+        return pauseState;
+    }
 }
 
 // using System;
