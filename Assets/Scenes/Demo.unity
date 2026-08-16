@@ -256,50 +256,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9885047}
   m_CullTransparentMesh: 1
---- !u!1 &14995863
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 14995864}
-  - component: {fileID: 14995865}
-  m_Layer: 0
-  m_Name: DialogueViewBase
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &14995864
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 14995863}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 111733506}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &14995865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 14995863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33ca92896e22f6449b55ebc51c0f67e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CustomDialogueViewBase
 --- !u!114 &19658573 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2998349377929727597, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
@@ -936,11 +892,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0e289a61dd7d24641bf44c6db7849637, type: 3}
   m_PrefabInstance: {fileID: 576486112}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &111733506 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7658327887689858988, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
-  m_PrefabInstance: {fileID: 726103252}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &128444878
 GameObject:
@@ -19218,12 +19169,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4301581928161261872, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
       propertyPath: dialogueViews.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4301581928161261872, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
       propertyPath: 'dialogueViews.Array.data[2]'
       value: 
-      objectReference: {fileID: 14995865}
+      objectReference: {fileID: 0}
     - target: {fileID: 4529931250005262155, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
       propertyPath: fd
       value: 
@@ -19546,9 +19497,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 520621558246656003, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
       insertIndex: 0
       addedObject: {fileID: 128444879}
-    - targetCorrespondingSourceObject: {fileID: 7658327887689858988, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 14995864}
     - targetCorrespondingSourceObject: {fileID: 6019248670604679294, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
       insertIndex: 0
       addedObject: {fileID: 1187643267}

@@ -3,7 +3,7 @@ tags:
 position: -54,-23
 ---
 <<reaperPitch true>>
-Reaper: Could I get a {GetOrder()}, please? As far as the decoration goes, <wiggle> surprise me! </wiggle>
+Reaper: Could I get a {GetOrder()}, please? As far as the decoration goes, <link=wiggle> surprise me! </link>
 <<reaperPitch false>>
 <<setCam "Main Camera">>
 ===
@@ -37,7 +37,7 @@ tags:
 position: 169,38
 ---
 <<reaperPitch true>>
-Reaper: Hello, <wiggle> Cafe Ghost </wiggle>, and welcome to purgatory! I'm honored to be the first customer of your new cafe.
+Reaper: Hello, <link=wiggle> Cafe Ghost </link>, and welcome to purgatory! I'm honored to be the first customer of your new cafe.
 Reaper: Is everything about it to your tastes? Say the word, and I can have it tailored however you like.
     -> Hi, uh, Mr. Grim Reaper. The cafe is great, yeah.
         <<emotionChange Happy Flowers>>

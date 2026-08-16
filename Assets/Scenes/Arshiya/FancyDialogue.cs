@@ -68,58 +68,21 @@ public class FancyDialogue : MonoBehaviour
         // italicRanges = new List<TagRanges>();
     }
 
-    void Update()
+    void LateUpdate()
     {
         // Italic();
         // Bold();
-        Shake();
-        Wiggle();
-    }
-
-    //built to be called every new line
-    public string ParseAndRemoveTags(string s)
-    {
-        int wiggleIndex = s.IndexOf("<wiggle>");
-        int shakyIndex = s.IndexOf("<shaky>");
-
-        while (wiggleIndex != -1 || shakyIndex != -1)
+        // Shake();
+        // Wiggle();
+        textInfo = textMesh.textInfo;
+        foreach (var link in textInfo.linkInfo)
         {
-            //check which is first bc indexing
-            bool isWiggle = false;
-            if (shakyIndex == -1)
+            if (link.GetLinkID() == "wiggle")
             {
-                isWiggle = true;
+                Wiggle(link.linkTextfirstCharacterIndex, link.linkTextLength);
             }
-            else if (wiggleIndex == -1)
-            {
-                //do nothing
-            }
-            else
-            {
-                if (wiggleIndex < shakyIndex)
-                {
-                    isWiggle = true;
-                }
-            }
-            if (isWiggle)
-            {
-                int wiggleEndIndex = s.IndexOf("</wiggle>");
-                wiggleRanges.Add(new TagRanges { start = wiggleIndex, end = wiggleEndIndex});
-                Debug.Log(s.Length);
-                Debug.Log(wiggleIndex);
-                s = s.Substring(0, wiggleIndex) + s.Substring(wiggleEndIndex + 8);
-                Debug.Log(s);
-            }
-            else
-            {
-                shakyRanges.Add(new TagRanges { start = shakyIndex, end = shakyIndex + 7});
-                s = s.Substring(shakyIndex, 7);
-            }
-            wiggleIndex = s.IndexOf("<wiggle>");
-            shakyIndex = s.IndexOf("<shaky>");
+            // else if (link)
         }
-
-        return s;
     }
 
     private void Shake() {
@@ -167,29 +130,25 @@ public class FancyDialogue : MonoBehaviour
         }
     }
 
-    private void Wiggle() {
+    private void Wiggle(int start, int length) {
         for (int i = 0; i < textInfo.characterCount; i++) {
             TMP_CharacterInfo curChar = textInfo.characterInfo[i];
             if (!curChar.isVisible) {
                 continue;
             }
             //check if our current character is in the wiggle range
-            foreach (var range in wiggleRanges)
+            if (i >= start && i <= start + length)
             {
-                if (i >= range.start && i <= range.end)
-                {
-                    // Get the material and vertex indices for this character.
-                    int materialIndex = curChar.materialReferenceIndex;
-                    int vertexIndex = curChar.vertexIndex;
-                    Vector3[] vertices = textInfo.meshInfo[materialIndex].vertices;
+                // Get the material and vertex indices for this character.
+                int materialIndex = curChar.materialReferenceIndex;
+                int vertexIndex = curChar.vertexIndex;
+                Vector3[] vertices = textInfo.meshInfo[materialIndex].vertices;
 
-                    float offset = Mathf.Sin(Time.time * speed + i * frequency) * amplitude;
-                    vertices[vertexIndex + 0].y += offset;
-                    vertices[vertexIndex + 1].y += offset;
-                    vertices[vertexIndex + 2].y += offset;
-                    vertices[vertexIndex + 3].y += offset;
-                    break;
-                }
+                float offset = Mathf.Sin(Time.time * speed + i * frequency) * amplitude;
+                vertices[vertexIndex + 0].y += offset;
+                vertices[vertexIndex + 1].y += offset;
+                vertices[vertexIndex + 2].y += offset;
+                vertices[vertexIndex + 3].y += offset;
             }
         }
         // Push the updated vertex data to the mesh.
