@@ -23,7 +23,6 @@ namespace Yarn.Unity
     public class LineView : DialogueViewBase
     {
         public GameObject indicator;
-        [SerializeField] private FancyDialogue fd;
 
         /// <summary>
         /// The canvas group that contains the UI elements used by this Line
@@ -470,13 +469,6 @@ namespace Yarn.Unity
             if (indicator != null)
             {
                 indicator.SetActive(true);
-            }
-
-            //TODO: fix fancy dialogue
-            if (fd != null)
-            {
-                // Debug.Log(currentLine.Text.Text);
-                // fd.ApplyEffects(currentLine.Text.Text);
             }
 
 

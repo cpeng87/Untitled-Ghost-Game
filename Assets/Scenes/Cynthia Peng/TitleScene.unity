@@ -22415,6 +22415,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1032994239143793005, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032994239143793005, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1227492989037166933, guid: c878a14d845f9264eab79af2d4aa4a04, type: 3}
       propertyPath: m_Name
       value: Start Screen

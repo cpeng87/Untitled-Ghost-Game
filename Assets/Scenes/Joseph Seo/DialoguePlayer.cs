@@ -16,7 +16,6 @@ public class DialoguePlayer : MonoBehaviour
 {
     public static DialoguePlayer Instance { get; private set; }
     [SerializeField] private DialogueRunner dialogueRunner;
-    [SerializeField] private FancyDialogue fd;
     [SerializeField] private GameObject storyProgress;
     [SerializeField] private GameObject emptyHeart;
     [SerializeField] private GameObject emptyStar;
@@ -82,7 +81,7 @@ public class DialoguePlayer : MonoBehaviour
     }
 
     public void Reset() {
-        fd.Reset();
+        FancyDialogue.Instance.Reset();
     }
 
     public void ReaperPitch(bool val)
