@@ -21,7 +21,7 @@ tags:
 position: -112,-180
 ---
 <<emotionChange None Scribbles>>
-Soldier Ghost: <shaky>Argh...</shaky> My headache is flaring up again... I should go...
+Soldier Ghost: <link=shaky>Argh...</link> My headache is flaring up again... I should go...
 <<emotionChange None>>
 <<setCam "Main Camera">>
 ===
@@ -45,7 +45,7 @@ tags:
 position: 169,38
 ---
 <<emotionChange War>>
-Soldier Ghost: The war... <shaky>The war...!</shaky>
+Soldier Ghost: The war... <link=shaky>The war...!</link>
 Soldier Ghost: How... how did I forget about the war? How is the war right now?
 Soldier Ghost: Are... Are we winning...?
 <<emotionChange Normal>>

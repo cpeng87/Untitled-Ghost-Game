@@ -19,7 +19,7 @@ tags:
 position: -112,-180
 ---
 <<emotionChange None Scribbles>>
-Goldfish Ghost: THE COUNCIL OF GOLDFISH IS <shaky> DISPLEASED </shaky>. YOU HAVE DISGRACED YOURSELF TO ALL GOLDFISH-KIND.
+Goldfish Ghost: THE COUNCIL OF GOLDFISH IS <link=shaky> DISPLEASED </link>. YOU HAVE DISGRACED YOURSELF TO ALL GOLDFISH-KIND.
 <<emotionChange None>>
 <<setCam "Main Camera">>
 ===

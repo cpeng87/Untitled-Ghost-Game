@@ -11,7 +11,7 @@ tags:
 position: -173,132
 ---
 <<emotionChange Happy Flowers>>
-Doctor Ghost: <wiggle>Ah~</wiggle> The drinks here really hit the spot. I should prescribe them to my patients next time~!
+Doctor Ghost: <link=wiggle>Ah~</link> The drinks here really hit the spot. I should prescribe them to my patients next time~!
 <<emotionChange Normal>>
 <<startStory DoctorStory>>
 ===

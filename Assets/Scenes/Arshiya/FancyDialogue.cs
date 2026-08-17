@@ -14,9 +14,11 @@ public class FancyDialogue : MonoBehaviour
 
     //shaky variables
     [SerializeField] private  float jitterAmount = 2f;  
-    private float jitterUpdateTime = 0.05f; // Time between jitter updates
+    private float jitterUpdateTime = 0.075f; // Time between jitter updates
     private float lastJitterTime = 0f;
     private Dictionary<int, Vector3> jitterOffsets = new Dictionary<int, Vector3>(); 
+    private Vector3[][] originalVertices; // cached once per text/layout change
+    
 
     //bold variables
     // [SerializeField] private float boldOffset = 0.5f;
@@ -42,6 +44,7 @@ public class FancyDialogue : MonoBehaviour
     void Start()
     {
         textInfo = textMesh.textInfo;
+        textMesh.OnPreRenderText += OnTextChanged;
     }
 
     public void Evaluate() {
@@ -81,48 +84,74 @@ public class FancyDialogue : MonoBehaviour
             {
                 Wiggle(link.linkTextfirstCharacterIndex, link.linkTextLength);
             }
+            else if (link.GetLinkID() == "shaky")
+            {
+                Shake(link.linkTextfirstCharacterIndex, link.linkTextLength);
+            }
             // else if (link)
         }
     }
 
-    private void Shake() {
-        for (int i = 0; i < textInfo.characterCount; i++) {
-            TMP_CharacterInfo curChar = textInfo.characterInfo[i];
-            if (!curChar.isVisible) {
-                continue;
-            }
-            //check if our current character is in the shaky range
-            foreach (var range in shakyRanges)
-            {
-                if (i >= range.start && i <= range.end)
-                {
-                    if (Time.time - lastJitterTime > jitterUpdateTime)
-                    {
-                        lastJitterTime = Time.time;
-                        jitterOffsets.Clear(); // Reset previous jitter offsets
-                        for (int j = 0; j < textInfo.characterCount; j++)
-                        {
-                            jitterOffsets[j] = new Vector3(Random.Range(-jitterAmount, jitterAmount), 
-                                                        Random.Range(-jitterAmount, jitterAmount), 0);
-                        }
-                    }
+    void OnTextChanged(TMP_TextInfo info)
+    {
+        CacheOriginalVertices();
+    }
 
-                    // Get the material and vertex indices for this character.
-                    int materialIndex = curChar.materialReferenceIndex;
-                    int vertexIndex = curChar.vertexIndex;
-                    Vector3[] vertices = textInfo.meshInfo[materialIndex].vertices;
-                    // Apply stored jitter values instead of calling Random.Range() every frame
-                    Vector3 jitter = jitterOffsets.ContainsKey(i) ? jitterOffsets[i] : Vector3.zero;
-                    vertices[vertexIndex + 0] += jitter;
-                    vertices[vertexIndex + 1] += jitter;
-                    vertices[vertexIndex + 2] += jitter;
-                    vertices[vertexIndex + 3] += jitter;
-                    break;
-                }
-            }
-
+    void CacheOriginalVertices()
+    {
+        textInfo = textMesh.textInfo;
+        originalVertices = new Vector3[textInfo.meshInfo.Length][];
+        for (int m = 0; m < textInfo.meshInfo.Length; m++)
+        {
+            Vector3[] src = textInfo.meshInfo[m].vertices;
+            originalVertices[m] = new Vector3[src.Length];
+            System.Array.Copy(src, originalVertices[m], src.Length);
         }
-        // Push the updated vertex data to the mesh.
+    }
+
+    private void Shake(int start, int length)
+    {
+        if (originalVertices == null || originalVertices.Length != textInfo.meshInfo.Length)
+        {
+            CacheOriginalVertices();
+        }
+
+        // Regenerate jitter offsets on a timer, once per call, not per character
+        if (Time.time - lastJitterTime > jitterUpdateTime)
+        {
+            lastJitterTime = Time.time;
+            jitterOffsets.Clear();
+            for (int j = start; j <= start + length && j < textInfo.characterCount; j++)
+            {
+                jitterOffsets[j] = new Vector3(
+                    Random.Range(-jitterAmount, jitterAmount),
+                    Random.Range(-jitterAmount, jitterAmount),
+                    0);
+            }
+        }
+
+        for (int i = 0; i < textInfo.characterCount; i++)
+        {
+            TMP_CharacterInfo curChar = textInfo.characterInfo[i];
+            if (!curChar.isVisible) continue;
+
+            int materialIndex = curChar.materialReferenceIndex;
+            int vertexIndex = curChar.vertexIndex;
+            Vector3[] vertices = textInfo.meshInfo[materialIndex].vertices;
+            Vector3[] baseVerts = originalVertices[materialIndex];
+
+            Vector3 jitter = Vector3.zero;
+            if (i >= start && i <= start + length && jitterOffsets.TryGetValue(i, out Vector3 j))
+            {
+                jitter = j;
+            }
+
+            vertices[vertexIndex + 0] = baseVerts[vertexIndex + 0] + jitter;
+            vertices[vertexIndex + 1] = baseVerts[vertexIndex + 1] + jitter;
+            vertices[vertexIndex + 2] = baseVerts[vertexIndex + 2] + jitter;
+            vertices[vertexIndex + 3] = baseVerts[vertexIndex + 3] + jitter;
+        }
+
         for (int i = 0; i < textInfo.meshInfo.Length; i++)
         {
             textInfo.meshInfo[i].mesh.vertices = textInfo.meshInfo[i].vertices;
@@ -137,7 +166,7 @@ public class FancyDialogue : MonoBehaviour
                 continue;
             }
             //check if our current character is in the wiggle range
-            if (i >= start && i <= start + length)
+            if (i >= start && i < start + length)
             {
                 // Get the material and vertex indices for this character.
                 int materialIndex = curChar.materialReferenceIndex;
@@ -157,6 +186,11 @@ public class FancyDialogue : MonoBehaviour
             textInfo.meshInfo[i].mesh.vertices = textInfo.meshInfo[i].vertices;
             textMesh.UpdateGeometry(textInfo.meshInfo[i].mesh, i);
         }
+    }
+    void OnDestroy()
+    {
+        if (textMesh != null)
+            textMesh.OnPreRenderText -= OnTextChanged;
     }
 }
 //     private void Bold() {

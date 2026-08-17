@@ -21,7 +21,7 @@ tags:
 position: -112,-180
 ---
 <<emotionChange Disapproval>>
-Tycoon Ghost: You use my money and generosity for garbage like this? <shaky> You're fired! </shaky>
+Tycoon Ghost: You use my money and generosity for garbage like this? <link=shaky> You're fired! </link>
 <<emotionChange Normal>>
 <<setCam "Main Camera">>
 ===

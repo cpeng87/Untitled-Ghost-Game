@@ -11,7 +11,7 @@ tags:
 position: -173,132
 ---
 <<emotionChange None Sparkles>>
-Actor Ghost: Wow, this is amazing! I can see why you're a barista! <wiggle> Truly a master at work~! </wiggle>
+Actor Ghost: Wow, this is amazing! I can see why you're a barista! <link=wiggle> Truly a master at work~! </link>
 <<emotionChange None>>
 <<startStory ActorStory>>
 ===
@@ -33,17 +33,17 @@ title: ActorStory1
 tags:
 position: 169,38
 ---
-Actor Ghost: Yep, it's me. <italic> The one! </italic>
+Actor Ghost: Yep, it's me.  The one! 
 <<emotionChange None Sparkles>>
-Actor Ghost: <italic> The only!! </italic> 
+Actor Ghost:  The only!!  
 Actor Ghost: You know me from the hit shows The Workplace, Acquaintances, Tournament of seats... Yep, it's me in the flesh! ...or I guess in the spirit. And no, I don't do autographs.
 <<emotionChange Shocked>>
-Actor Ghost: <wiggle> WHAT?! </wiggle>
+Actor Ghost: <link=wiggle> WHAT?! </link>
 Actor Ghost: You don't know who I am?
 Actor Ghost: Were you living under a rock for your whole life?! I'm possibly the most famous ghost to ever exist!!
 <<emotionChange Normal>>
 Actor Ghost: Well, I guess it is a nice change of pace though.
-Actor Ghost: Anyway, <wiggle> see ya around, barista~! </wiggle>
+Actor Ghost: Anyway, <link=wiggle> see ya around, barista~! </link>
 <<setCam "Main Camera">>
 ===
 
@@ -57,7 +57,7 @@ Actor Ghost: I got invites to all sorts of events in Hollyboo.
 Actor Ghost: You know, at some point in fame, people just start giving you free stuff: money, food, drinks, even property!
 Actor Ghost: But the best part was the parties!
 Actor Ghost: Every!
-Actor Ghost: <italic> DAY! </italic>
+Actor Ghost:  DAY! 
 <<emotionChange Sad>>
 Actor Ghost: But you know, barista, it's kind of exhausting to stay under the spotlight for your whole life.
 Actor Ghost: Everyone's always clamoring for that next opportunity.
@@ -79,7 +79,7 @@ Actor Ghost: Haha, this is so un-star-like. Like c'mon man.
 Actor Ghost: Still, it's nice to actually have someone listen to you for once.
 Actor Ghost: Just me... not the persona that I've created. Made me really appreciate the ones that don't just latch onto me and my stardom...
 <<emotionChange None Sparkles>>
-Actor Ghost: Thanks, barista. <wiggle> I'll see you around~! </wiggle> Aaaaaand cut!
+Actor Ghost: Thanks, barista. <link=wiggle> I'll see you around~! </link> Aaaaaand cut!
 <<emotionChange None>>
 <<setCam "Main Camera">>
 ===
