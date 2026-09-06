@@ -29,6 +29,8 @@ public class MiniGame : MinigameCompletion {
     private HashSet<GameObject> connectedIngredients = new HashSet<GameObject>();
     private HashSet<GameObject> placedIngredients = new HashSet<GameObject>();
     private Coroutine successCheckCoroutine;
+    private float finalTimer = 0;
+    private bool isFinalTimer = false;
 
     void Awake()
     {
@@ -122,6 +124,15 @@ public class MiniGame : MinigameCompletion {
             }
         }
 
+        if (isFinalTimer)
+        {
+            finalTimer += Time.deltaTime;
+            if (finalTimer >= 1f)
+            {
+                minigameResult.MinigameResult(true);
+            }
+        }
+
         // if (Input.GetKeyDown(KeyCode.Escape))
         // {
         //     UnityEngine.SceneManagement.SceneManager.LoadScene("SandwichGame");
@@ -144,7 +155,7 @@ public class MiniGame : MinigameCompletion {
     {
         if (allIngredientsPlaced && connectedIngredients.Count == placedIngredients.Count)
         {
-            minigameResult.MinigameResult(true);
+            isFinalTimer = true;
         }
         // else
         // {

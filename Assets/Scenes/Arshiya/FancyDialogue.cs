@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 
 public class FancyDialogue : MonoBehaviour
 {
-    public static FancyDialogue Instance;
+    // public static FancyDialogue Instance;
     //wiggly variables
     [SerializeField] private float frequency = 2f; 
     [SerializeField] private float amplitude = 5f; 
@@ -19,6 +19,7 @@ public class FancyDialogue : MonoBehaviour
     private Dictionary<int, Vector3> jitterOffsets = new Dictionary<int, Vector3>(); 
     private Vector3[][] originalVertices; // cached once per text/layout change
     
+    float canvasScale;
 
     //bold variables
     // [SerializeField] private float boldOffset = 0.5f;
@@ -43,6 +44,8 @@ public class FancyDialogue : MonoBehaviour
     private string originalText;
     void Start()
     {
+        canvasScale = textMesh.canvas.scaleFactor;
+
         textInfo = textMesh.textInfo;
         textMesh.OnPreRenderText += OnTextChanged;
     }
@@ -51,35 +54,27 @@ public class FancyDialogue : MonoBehaviour
         textInfo = textMesh.textInfo;
     }
 
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
-
-    public void Reset() {
-        wiggleRanges = new List<TagRanges>();
-        shakyRanges = new List<TagRanges>();
-        // boldRanges = new List<TagRanges>();
-        // italicRanges = new List<TagRanges>();
-    }
+    // private void Awake()
+    // {
+    //     if (Instance == null)
+    //     {
+    //         Instance = this;
+    //         DontDestroyOnLoad(gameObject);
+    //     }
+    //     else
+    //     {
+    //         Destroy(gameObject);
+    //     }
+    // }
 
     void LateUpdate()
     {
-        // Italic();
-        // Bold();
-        // Shake();
-        // Wiggle();
+        textMesh.ForceMeshUpdate();
         textInfo = textMesh.textInfo;
-        foreach (var link in textInfo.linkInfo)
+
+        for (int i = 0; i < textInfo.linkCount; i++)
         {
+            TMP_LinkInfo link = textInfo.linkInfo[i];
             if (link.GetLinkID() == "wiggle")
             {
                 Wiggle(link.linkTextfirstCharacterIndex, link.linkTextLength);
@@ -111,12 +106,11 @@ public class FancyDialogue : MonoBehaviour
 
     private void Shake(int start, int length)
     {
-        if (originalVertices == null || originalVertices.Length != textInfo.meshInfo.Length)
+        if (originalVertices == null || originalVertices.Length > textInfo.meshInfo.Length)
         {
             CacheOriginalVertices();
         }
 
-        // Regenerate jitter offsets on a timer, once per call, not per character
         if (Time.time - lastJitterTime > jitterUpdateTime)
         {
             lastJitterTime = Time.time;
@@ -130,7 +124,7 @@ public class FancyDialogue : MonoBehaviour
             }
         }
 
-        for (int i = 0; i < textInfo.characterCount; i++)
+        for (int i = start; i <= start + length && i < textInfo.characterCount; i++)
         {
             TMP_CharacterInfo curChar = textInfo.characterInfo[i];
             if (!curChar.isVisible) continue;
@@ -140,11 +134,8 @@ public class FancyDialogue : MonoBehaviour
             Vector3[] vertices = textInfo.meshInfo[materialIndex].vertices;
             Vector3[] baseVerts = originalVertices[materialIndex];
 
-            Vector3 jitter = Vector3.zero;
-            if (i >= start && i <= start + length && jitterOffsets.TryGetValue(i, out Vector3 j))
-            {
-                jitter = j;
-            }
+            if (!jitterOffsets.TryGetValue(i, out Vector3 jitter))
+                jitter = Vector3.zero;
 
             vertices[vertexIndex + 0] = baseVerts[vertexIndex + 0] + jitter;
             vertices[vertexIndex + 1] = baseVerts[vertexIndex + 1] + jitter;
@@ -159,34 +150,41 @@ public class FancyDialogue : MonoBehaviour
         }
     }
 
-    private void Wiggle(int start, int length) {
-        for (int i = 0; i < textInfo.characterCount; i++) {
+    private void Wiggle(int start, int length)
+    {
+        if (originalVertices == null || originalVertices.Length > textInfo.meshInfo.Length)
+        {
+            CacheOriginalVertices();
+        }
+
+        for (int i = 0; i < textInfo.characterCount; i++)
+        {
             TMP_CharacterInfo curChar = textInfo.characterInfo[i];
-            if (!curChar.isVisible) {
-                continue;
-            }
-            //check if our current character is in the wiggle range
+            if (!curChar.isVisible) continue;
+
             if (i >= start && i < start + length)
             {
-                // Get the material and vertex indices for this character.
                 int materialIndex = curChar.materialReferenceIndex;
                 int vertexIndex = curChar.vertexIndex;
                 Vector3[] vertices = textInfo.meshInfo[materialIndex].vertices;
+                Vector3[] baseVerts = originalVertices[materialIndex];
 
                 float offset = Mathf.Sin(Time.time * speed + i * frequency) * amplitude;
-                vertices[vertexIndex + 0].y += offset;
-                vertices[vertexIndex + 1].y += offset;
-                vertices[vertexIndex + 2].y += offset;
-                vertices[vertexIndex + 3].y += offset;
+
+                vertices[vertexIndex + 0] = baseVerts[vertexIndex + 0] + new Vector3(0, offset, 0);
+                vertices[vertexIndex + 1] = baseVerts[vertexIndex + 1] + new Vector3(0, offset, 0);
+                vertices[vertexIndex + 2] = baseVerts[vertexIndex + 2] + new Vector3(0, offset, 0);
+                vertices[vertexIndex + 3] = baseVerts[vertexIndex + 3] + new Vector3(0, offset, 0);
             }
         }
-        // Push the updated vertex data to the mesh.
+
         for (int i = 0; i < textInfo.meshInfo.Length; i++)
         {
             textInfo.meshInfo[i].mesh.vertices = textInfo.meshInfo[i].vertices;
             textMesh.UpdateGeometry(textInfo.meshInfo[i].mesh, i);
         }
     }
+
     void OnDestroy()
     {
         if (textMesh != null)

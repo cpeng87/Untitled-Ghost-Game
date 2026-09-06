@@ -80,9 +80,9 @@ public class DialoguePlayer : MonoBehaviour
         }
     }
 
-    public void Reset() {
-        FancyDialogue.Instance.Reset();
-    }
+    // public void Reset() {
+    //     FancyDialogue.Instance.Reset();
+    // }
 
     public void ReaperPitch(bool val)
     {
@@ -133,7 +133,7 @@ public class DialoguePlayer : MonoBehaviour
     // Specific Order Dialogue
     // Function called to queue up the order dialogue
     public void StartOrderDialogue(string ghostName, string recipe, int seatNum) {
-        Reset();
+        // Reset();
         this.seatNum = seatNum;
         this.currentOrder = recipe;
         CameraManager.Instance.SwapToSeatCamera(seatNum);
@@ -149,7 +149,7 @@ public class DialoguePlayer : MonoBehaviour
     }
 
     public void CompleteOrderDialogue(string ghostName, int seatNum, bool result, bool specialCookie) {
-        Reset();
+        // Reset();
         CameraManager.Instance.SwapToSeatCamera(seatNum);
         this.seatNum = seatNum;
         string parsedName = ghostName.Replace(" Ghost", "");
@@ -188,7 +188,7 @@ public class DialoguePlayer : MonoBehaviour
 
     private void OnDialogueComplete()
     {
-        Reset();
+        // Reset();
         if (state == DialogueState.Story)
         {
             //reaper special case

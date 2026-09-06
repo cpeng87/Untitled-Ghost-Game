@@ -19137,7 +19137,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2998349377929727597, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
       propertyPath: amplitude
-      value: 4
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2998349377929727597, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
+      propertyPath: frequency
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 2998349377929727597, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
       propertyPath: jitterAmount
