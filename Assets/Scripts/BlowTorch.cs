@@ -37,11 +37,14 @@ public class BlowTorch : MonoBehaviour
     {
         if (!fireEffect.isPlaying)
         {
-            fireEffect.Play();
             blowTorch.transform.Rotate(0, 0, -20f);
 
             int currScore = ringScript.GetScore();
             float scoreIncrement = RingScript.ScoreToSliderIncrement(currScore);
+            if (scoreIncrement == 10)
+            {
+                ringScript.PlayParticles();
+            }
 
             text.color = (scoreIncrement == 10) ? green : (scoreIncrement > 0) ? yellow : red;
             string toPlay = (scoreIncrement == 10) ? "Great" : (scoreIncrement > 0) ? "Okay" : "Bad";
@@ -49,6 +52,7 @@ public class BlowTorch : MonoBehaviour
 
             text.text = RingScript.ScoreToString(currScore);
             slider.IncreaseSlider(scoreIncrement);
+            fireEffect.Play();
             yield return new WaitForSeconds(0.3f);
 
 
