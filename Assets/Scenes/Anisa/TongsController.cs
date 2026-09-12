@@ -120,6 +120,22 @@ public class TongsController : MinigameCompletion
             transform.position = pos;
         }
 
+        float input2 = Input.GetAxis("Vertical");
+
+        // Horizontal movement
+        if (input2 != 0 && !isGrabbing)
+        {
+            Vector3 move = new Vector3(0f, 0f, input2 * speed * 0.5f * Time.deltaTime);
+            transform.position += move;
+
+            // Clamp position within camera bounds
+            Vector3 pos = transform.position;
+            float minZ = -2.5f;
+            float maxZ = 0f;
+            pos.z = Mathf.Clamp(transform.position.z, minZ, maxZ);
+            transform.position = pos;
+        }
+
         // Start grabbing donut
         if (!isGrabbing && Input.GetKeyDown(KeyCode.Space))
         {
