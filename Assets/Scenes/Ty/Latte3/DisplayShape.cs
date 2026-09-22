@@ -14,6 +14,7 @@ public class DisplayShape : MonoBehaviour
     [SerializeField] enum ShapeType { Circle, Heart }
     [SerializeField] ShapeType shapeType;
     [SerializeField] float radius = 0.8f;
+    [SerializeField, Range(0f, 1f)] float patternAlpha = 0.5f;
 
     [SerializeField] int segments = 100;
 
@@ -26,11 +27,41 @@ public class DisplayShape : MonoBehaviour
     {
         mesh = new Mesh { name = "TargetShapeMesh" };
         GetComponent<MeshFilter>().mesh = mesh;
+        var rend = GetComponent<Renderer>();
+        if (rend != null && rend.material != null)
+        {
+            Color c = rend.material.color;
+            c.a = patternAlpha;
+            rend.material.color = c;
+        }
         BuildShape();
     }
 
     void OnValidate()
     {
+        var rend = GetComponent<Renderer>();
+        if (rend != null)
+        {
+            if (Application.isPlaying)
+            {
+                if (rend.material != null)
+                {
+                    Color c = rend.material.color;
+                    c.a = patternAlpha;
+                    rend.material.color = c;
+                }
+            }
+            else
+            {
+                if (rend.sharedMaterial != null)
+                {
+                    Color c = rend.sharedMaterial.color;
+                    c.a = patternAlpha;
+                    rend.sharedMaterial.color = c;
+                }
+            }
+        }
+
         if (mesh != null)
             BuildShape();
     }
@@ -42,7 +73,7 @@ public class DisplayShape : MonoBehaviour
         switch (shapeType)
         {
             case ShapeType.Circle:
-                for (int i = 0; i <= segments; i++)
+                for (int i = 0; i < segments; i++)
                 {
                     float t = (i / (float)segments) * Mathf.PI * 2f;
                     shapePointsLocal.Add(new Vector3(Mathf.Cos(t) * radius, 0f, Mathf.Sin(t) * radius));
@@ -50,19 +81,21 @@ public class DisplayShape : MonoBehaviour
                 break;
 
             case ShapeType.Heart:
-                for (int i = 0; i <= segments; i++)
+                for (int i = 0; i < segments; i++)
                 {
-                    float t = (i / (float)segments) * Mathf.PI * 2f;
-                    
+                    // Offset the parameter so the closing seam lands on the heart's side,
+                    // away from the tip and the inward notch where stacked quads become too bright.
+                    float t = (i / (float)segments) * Mathf.PI * 2f + Mathf.PI * 0.5f;
+
                     // Parametric heart curve (scaled to fit in radius)
                     float x = 16f * Mathf.Pow(Mathf.Sin(t), 3f);
                     float y = 13f * Mathf.Cos(t) - 5f * Mathf.Cos(2f * t) - 2f * Mathf.Cos(3f * t) - Mathf.Cos(4f * t);
-                    
+
                     // Scale by radius (divide by max extent ~13)
                     float scale = radius / 13f;
                     x *= scale;
                     y *= scale;
-                    
+
                     shapePointsLocal.Add(new Vector3(x, 0f, y));
                 }
                 break;
@@ -87,27 +120,31 @@ public class DisplayShape : MonoBehaviour
         }
 
         int segmentCount = pointCount;
-        float overlapAmount = 0.05f; // Small overlap between segments
 
         for (int i = 0; i < segmentCount; i++)
         {
             Vector3 from = shapePointsLocal[i];
             Vector3 to = shapePointsLocal[(i + 1) % pointCount];
 
-            Vector3 direction = (to - from).normalized;
-            
-            // Extend slightly to create overlap with adjacent segments
-            Vector3 extendedFrom = from - direction * overlapAmount;
-            Vector3 extendedTo = to + direction * overlapAmount;
-            
-            Vector3 side = Vector3.Cross(direction, Vector3.up).normalized * (lineWidth * 0.5f);
+            Vector3 delta = to - from;
+            float segmentLength = delta.magnitude;
+            if (segmentLength < 0.0001f)
+                continue;
+
+            Vector3 direction = delta / segmentLength;
+            Vector3 side = Vector3.Cross(direction, Vector3.up);
+            if (side.sqrMagnitude < 0.0001f)
+            {
+                side = Vector3.Cross(direction, Vector3.right);
+            }
+            side = side.normalized * (lineWidth * 0.5f);
 
             int baseIndex = verts.Count;
 
-            verts.Add(extendedFrom - side);
-            verts.Add(extendedFrom + side);
-            verts.Add(extendedTo - side);
-            verts.Add(extendedTo + side);
+            verts.Add(from - side);
+            verts.Add(from + side);
+            verts.Add(to - side);
+            verts.Add(to + side);
 
             tris.Add(baseIndex + 0);
             tris.Add(baseIndex + 1);
