@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public enum CakeState
 {
@@ -80,7 +81,7 @@ public class Rotate : MonoBehaviour
             {
                 if (cakeState == CakeState.LeftMix)
                 {
-                    progress += progressIncrement;
+                    progress += progressIncrement * Time.deltaTime;
                     transform.Rotate(Vector3.forward * rotateSpeed * Time.deltaTime);
                     if (!AudioManager.Instance.CheckPlaying())
                     {
@@ -97,7 +98,7 @@ public class Rotate : MonoBehaviour
             {
                 if (cakeState == CakeState.RightMix)
                 {
-                    progress += progressIncrement;
+                    progress += progressIncrement * Time.deltaTime;
                     transform.Rotate(Vector3.forward * -1 * rotateSpeed * Time.deltaTime);
                     if (!AudioManager.Instance.CheckPlaying())
                     {
@@ -113,7 +114,7 @@ public class Rotate : MonoBehaviour
             {
                 if (cakeState == CakeState.UpMix)
                 {
-                    progress += progressIncrement;
+                    progress += progressIncrement * Time.deltaTime;
                     transform.Rotate(Vector3.forward * rotateSpeed * Time.deltaTime);
                     if (!AudioManager.Instance.CheckPlaying())
                     {
@@ -129,7 +130,7 @@ public class Rotate : MonoBehaviour
             {
                 if (cakeState == CakeState.DownMix)
                 {
-                    progress += progressIncrement;
+                    progress += progressIncrement * Time.deltaTime;
                     transform.Rotate(Vector3.forward * -1 * rotateSpeed * Time.deltaTime);
                     if (!AudioManager.Instance.CheckPlaying())
                     {
@@ -151,8 +152,16 @@ public class Rotate : MonoBehaviour
 
     private void StartCakeOven()
     {
-        goalCircle.SetActive(true);
-        movingCircle.SetActive(true); 
+        // goalCircle.SetActive(true);
+        // movingCircle.SetActive(true); 
+        if (GameManager.Instance)
+        {
+            GameManager.Instance.SwitchToSceneCoroutine("Cake 2");
+        }
+        else
+        {
+            SceneManager.LoadScene("Cake 2");
+        }
     }
 
 }

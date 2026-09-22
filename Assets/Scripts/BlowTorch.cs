@@ -53,9 +53,8 @@ public class BlowTorch : MonoBehaviour
             text.text = RingScript.ScoreToString(currScore);
             slider.IncreaseSlider(scoreIncrement);
             fireEffect.Play();
+
             yield return new WaitForSeconds(0.3f);
-
-
 
             fireEffect.Stop();
             blowTorch.transform.Rotate(0, 0, 20f);
