@@ -6,6 +6,7 @@ public class LatteManager : MonoBehaviour
 {
     [SerializeField] LatteDraw traceDrawer;
     [SerializeField] DisplayShape targetShape;
+    public float accuracyScore;
     [SerializeField] TMP_Text accuracyText;
     [SerializeField] int targetSampleCount = 100;
     [SerializeField] float coverageTolerance = 0.15f;
@@ -13,6 +14,11 @@ public class LatteManager : MonoBehaviour
     void Update()
     {
         Evaluate();
+    }
+
+    public float GetAccuracy()
+    {
+        return accuracyScore;
     }
 
     public void Evaluate()
@@ -42,6 +48,7 @@ public class LatteManager : MonoBehaviour
         }
 
         float accuracy = (covered / (float)targetSamples.Count) * 100f;
+        accuracyScore = accuracy;
         SetAccuracyText(accuracy);
     }
 

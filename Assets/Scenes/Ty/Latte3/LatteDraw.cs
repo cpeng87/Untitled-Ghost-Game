@@ -11,6 +11,7 @@ public class LatteDraw : MonoBehaviour
     private readonly List<int> tris = new List<int>();
     private bool isDrawing = false;
     private Vector3 lastPoint;
+    public bool isPaused = false;
 
     void Start()
     {
@@ -20,6 +21,9 @@ public class LatteDraw : MonoBehaviour
 
     void Update()
     {
+        if (isPaused) {
+            return;
+        }
         if (Input.GetMouseButtonDown(0)) {
             StartNewStroke();
         }
@@ -27,6 +31,15 @@ public class LatteDraw : MonoBehaviour
             TryAddPoint();
         }
         if (Input.GetMouseButtonUp(0)) {
+            isDrawing = false;
+        }
+    }
+
+    public void SetPaused(bool paused)
+    {
+        isPaused = paused;
+        if (isPaused)
+        {
             isDrawing = false;
         }
     }
