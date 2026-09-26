@@ -44,7 +44,7 @@ public class CreditsRoll : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        creditsNamePanel.transform.position += new Vector3(0f, speed * 0.85 * Time.deltaTime, 0f);
+        creditsNamePanel.transform.position += new Vector3(0f, speed * 0.86f * Time.deltaTime, 0f);
 
         if (!lawyerDogDone)
         {
@@ -131,7 +131,7 @@ public class CreditsRoll : MonoBehaviour
 
     private void WeebAndOffice()
     {
-        if (officeWorker.transform.position.x >= -4.09f)
+        if (officeWorker.transform.position.x >= -3.9f)
         {
             weeb.transform.position -= new Vector3(speed * 2f * Time.deltaTime, 0, 0);
             officeWorker.transform.position -= new Vector3(speed * 2f * Time.deltaTime, 0, 0);
