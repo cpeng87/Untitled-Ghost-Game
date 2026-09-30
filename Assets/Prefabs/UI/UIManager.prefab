@@ -681,7 +681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
+  m_IgnoreReversedGraphics: 0
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
@@ -6531,6 +6531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 416354333576775940}
+  optionsMenu: {fileID: 0}
 --- !u!114 &3878889779433555759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6547,6 +6548,7 @@ MonoBehaviour:
   ordersPanel: {fileID: 4508322166097965843}
   orderTicket: {fileID: 4662313240361741906, guid: 7d6ce6fe2e75e40449a13412f9a1a986, type: 3}
   makeOrderNotifAnimator: {fileID: 3025987930863257410}
+  makeOrderBtn: {fileID: 0}
   ticketParent: {fileID: 2531515582048833571}
 --- !u!1 &6277097268714668597
 GameObject:
