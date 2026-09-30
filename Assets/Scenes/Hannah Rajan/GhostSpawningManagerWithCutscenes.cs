@@ -161,7 +161,6 @@ public class GhostSpawningManagerWithCutscenes : MonoBehaviour
         {
             if (count > 100)
             {
-                Debug.Log("Cannot spawn any ghost, maxed rolls");
                 return;
             }
             index = (int) (Random.value * possibleGhost.Count);

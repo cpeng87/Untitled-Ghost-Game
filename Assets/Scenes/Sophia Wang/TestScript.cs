@@ -192,8 +192,6 @@ class Draw : MinigameCompletion
         //float percentOutside = pixelsOutside / totalPixels;
 
         //return (float)(percentInside - (0.5 * percentOutside));
-
-        Debug.Log("Inside: " + pixelsInside + "\nOutside: " + pixelsOutside);
         return (float)(percentInside);
     }
     public void onFinish()

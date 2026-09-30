@@ -40,14 +40,12 @@ public class SoupManager : MinigameCompletion
     //         if (timeLeft <= 0)
     //         {
     //             // Time.timeScale = 0f;
-    //             Debug.Log("you lost :(");
     //             GameManager.Instance.CompleteMinigame(false);
     //             isComplete = true;
     //         }
     //         // else if (mixProgress >= 100)
     //         // {
     //         //     // Time.timeScale = 0f;
-    //         //     Debug.Log("you win :D");
     //         //     GameManager.Instance.CompleteMinigame(true);
     //         //     isComplete = true;
     //         // }

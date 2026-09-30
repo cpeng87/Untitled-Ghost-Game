@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class BatterBowlController : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class BatterBowlController : MonoBehaviour
     public float pourThreshold = 20f;
     [Header("Muffin Fill Parameters")]
     public GameObject rayPoint;
+
+    [SerializeField] private List<GameObject> muffinTins = new List<GameObject>();
     void Start()
     {
         originalZ = transform.position.z;
@@ -60,20 +63,38 @@ public class BatterBowlController : MonoBehaviour
     }
 
     // Fill individual muffin cups by using a plane and updating its height to simulate filling process using particles
-    void FillMuffinCup(Collider cupCollider, FillTracker tracker) {
-        
-        Transform fillPlane = cupCollider.transform.GetChild(1);
+    void FillMuffinCup() {
+        // Debug.Log("ïn muffin tin");
+        // // Transform fillPlane = cupCollider.transform.GetChild(1);
+        // ParticleSystem.Particle[] particles = new ParticleSystem.Particle[pourParticles.particleCount];
+        // int numParticles = pourParticles.GetParticles(particles);
+        // foreach (var particle in particles)
+        // {
+        //     // Check if the particle is inside the cup
+        //     if (cupCollider.bounds.Contains(particle.position))
+        //     {
+        //         Debug.Log(particle.position);
+        //         Debug.Log(cupCollider.bounds);
+        //         Debug.Log(cupCollider.bounds.Contains(particle.position));
+        //         // Increase fill level based on particles in the cup
+        //         tracker.currentFillLevel += 1;
+                
+        //     }
+        // }
+        // Transform fillPlane = cupCollider.transform.GetChild(1);
         ParticleSystem.Particle[] particles = new ParticleSystem.Particle[pourParticles.particleCount];
         int numParticles = pourParticles.GetParticles(particles);
-
         foreach (var particle in particles)
         {
             // Check if the particle is inside the cup
-            if (cupCollider.bounds.Contains(particle.position))
+            foreach (GameObject tin in muffinTins)
             {
-                // Increase fill level based on particles in the cup
-                tracker.currentFillLevel += 1;
-                
+                if (tin.GetComponent<Collider>().bounds.Contains(particle.position))
+                {
+                    
+                    // Increase fill level based on particles in the cup
+                    tin.GetComponent<FillTracker>().currentFillLevel += 1;
+                }
             }
         }
     }
@@ -151,23 +172,32 @@ public class BatterBowlController : MonoBehaviour
             {
                 pourParticles.Play();
             }
-            Vector3 rayOrigin = rayPoint.transform.position;
-            Vector3 rayDirection = -transform.right;
-            if (Physics.Raycast(rayOrigin, rayDirection, out RaycastHit hit))
-            {
-                if (hit.collider.CompareTag("MuffinTin"))
-                {
-                    var fillTracker = hit.collider.GetComponent<FillTracker>();
-                    if (!fillTracker.isFull)
-                    {
-                        FillMuffinCup(hit.collider, fillTracker);
-                    }
-                }
-            }
+            // Vector3 rayOrigin = rayPoint.transform.position;
+            // Vector3 rayDirection = -transform.right;
+            // if (Physics.Raycast(rayOrigin, rayDirection, out RaycastHit hit))
+            // {
+            //     if (hit.collider.CompareTag("MuffinTin"))
+            //     {
+            //         var fillTracker = hit.collider.GetComponent<FillTracker>();
+            //         FillMuffinCup(hit.collider, fillTracker);
+            //     }
+            // }
         }
         else
         {
             pourParticles.Stop();
         }
+
+        FillMuffinCup();
+        // Vector3 rayOrigin = rayPoint.transform.position;
+        // Vector3 rayDirection = -transform.right;
+        // if (Physics.Raycast(rayOrigin, rayDirection, out RaycastHit hit2))
+        // {
+        //     if (hit2.collider.CompareTag("MuffinTin"))
+        //     {
+        //         var fillTracker = hit2.collider.GetComponent<FillTracker>();
+        //         FillMuffinCup(hit2.collider, fillTracker);
+        //     }
+        // }
     }
 }

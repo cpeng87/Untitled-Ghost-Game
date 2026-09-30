@@ -13,6 +13,7 @@ public class RingScript : MonoBehaviour
     private float speed=4f;
 
     public static int score;
+    public ParticleSystem particles;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -68,14 +69,19 @@ public class RingScript : MonoBehaviour
         return score;
     }
 
+    public void PlayParticles()
+    {
+        particles.Stop();
+        particles.Play();
+    }
+
     public static string ScoreToString(int score)
     {
-        Debug.Log(score);
-        if (score >= 0 && score <= 1)
+        if (score >= -0.5 && score <= 1.5)
         {
             return "Great! +10";
         }
-        else if (score >= -1 && score <= 2)
+        else if (score >= -1.5 && score <= 2.5)
         {
             return "Okay. +2";
         }

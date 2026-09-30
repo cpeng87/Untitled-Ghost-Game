@@ -21,13 +21,6 @@ public class CremeBrulee : MinigameCompletion
         CheckResults();
     }
 
-    
-    // private void GameSuccess()
-    // {
-    //     Debug.Log("You Win!");
-    //     //GameManager.Instance.CompleteMinigame(true);
-    // }
-
     public void CheckResults()
     {
         bool result = progressSlider.value >= 100;

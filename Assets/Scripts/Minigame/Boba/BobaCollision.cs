@@ -23,7 +23,6 @@ public class BobaCollision : MonoBehaviour
         if (collider.gameObject.name.Equals(boundsPrefab.name) && !isTriggered) //if the boba hits the bounds collider...
         {
             isTriggered = true;
-            //Debug.Log("BobaHitStrainer - " + collider.gameObject.name);
             var script = potPrefab.GetComponent<BobaPotController>();
             script.OnBobaAdd(); // update boba counter
             int bobaSound = (int) (Random.value * 3) + 1;
@@ -39,7 +38,6 @@ public class BobaCollision : MonoBehaviour
         {
             if (transform.position.y > boundsPrefab.transform.position.y && isTriggered) { //only if the boba is above the collider!
                 isTriggered = false;
-                //Debug.Log("BobaLeftStrainer");
                 var script = potPrefab.GetComponent<BobaPotController>();
                 script.OnBobaRemove(); //update boba counter
             }

@@ -21,7 +21,7 @@ tags:
 position: -112,-180
 ---
 <<emotionChange LockedIn>>
-Weeb Ghost: <shaky> Eugh, gross! </shaky> Barista diff for real, bro, just ff already...
+Weeb Ghost: <link=shaky> Eugh, gross! </link> Barista diff for real, bro, just ff already...
 <<emotionChange Normal>>
 <<setCam "Main Camera">>
 ===
@@ -33,7 +33,7 @@ position: 169,38
 <<emotionChange None Sparkles>>
 Weeb Ghost: Y'know, you're actually speaking to a Grandmaster player.
 <<emotionChange None>>
-Weeb Ghost: <italic> What? </italic>
+Weeb Ghost:  What? 
 Weeb Ghost: You don't know what that means?
 Weeb Ghost: Heh... normies... you wouldn't understand.
 Weeb Ghost: I'm going to be a huge pro gamer someday, and everyone will know my name.
@@ -54,7 +54,7 @@ Weeb Ghost: I wonder if I'll ever see him around in the afterlife.
 <<emotionChange Normal>>
 Weeb Ghost: I mean, I'm fine even if he doesn't!
 <<emotionChange LockedIn>>
-Weeb Ghost: I have my waifu <wiggle> Seraphine </wiggle> to keep me company.
+Weeb Ghost: I have my waifu <link=wiggle> Seraphine </link> to keep me company.
 <<emotionChange Normal>>
 Weeb Ghost: Anyways, once I hit Challenger, he'll HAVE to pay attention to me! I'll be famous! I'll be everywhere- on TV and everything. Just watch!
 Weeb Ghost: I'll be super famous!! And my dad will see me on TV, and I'll make loads of money so my dad won't have to work, and I'll get loads of ladies so my dad won't think I'm lonely!

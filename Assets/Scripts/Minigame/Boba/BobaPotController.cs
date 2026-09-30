@@ -90,16 +90,6 @@ public class BobaPotController : MinigameCompletion
     //Completes the minigame and passes result to the gameManager.
     public void CheckResults()
     {
-        // bool result = bobaCounter >= neededBoba;
-        // if (result)
-        // {
-        //     Debug.Log("success");
-        // }
-        // else
-        // {
-        //     Debug.Log("fail");
-        // }
-        // GameManager.Instance.CompleteMinigame(result);
         bool result = bobaCounter >= neededBoba;
         if (result)
         {

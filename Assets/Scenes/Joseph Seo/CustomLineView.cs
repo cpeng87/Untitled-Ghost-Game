@@ -240,6 +240,15 @@ namespace Yarn.Unity
             canvasGroup = GetComponentInParent<CanvasGroup>();
         }
 
+        //custom line to allow for space bar dialogue increment
+        private void Update()
+        {
+            if (Input.GetKeyUp(KeyCode.Space) && PauseManager.Instance.IsPaused() == false)
+            {
+                OnContinueClicked();
+            }
+        }
+
         /// <inheritdoc/>
         public override void DismissLine(Action onDismissalComplete)
         {
@@ -455,10 +464,13 @@ namespace Yarn.Unity
             // All of our text should now be visible.
             lineText.maxVisibleCharacters = int.MaxValue;
 
+
+            // display indicator since line is complete
             if (indicator != null)
             {
                 indicator.SetActive(true);
             }
+
 
             // Our view should at be at full opacity.
             canvasGroup.alpha = 1f;

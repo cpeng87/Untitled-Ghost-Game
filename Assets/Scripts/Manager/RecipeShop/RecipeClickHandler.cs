@@ -29,7 +29,6 @@ namespace Manager.RecipeShop
 
         public void RecipeClicked()
         {
-            // Debug.Log("Recipe clicked: " + currentRecipe.name);
             RecipeShopManager.Instance.HandleRecipeClick(currentRecipe, this);
         }
 

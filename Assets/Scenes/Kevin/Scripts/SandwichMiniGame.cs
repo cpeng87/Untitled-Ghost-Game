@@ -29,6 +29,8 @@ public class MiniGame : MinigameCompletion {
     private HashSet<GameObject> connectedIngredients = new HashSet<GameObject>();
     private HashSet<GameObject> placedIngredients = new HashSet<GameObject>();
     private Coroutine successCheckCoroutine;
+    private float finalTimer = 0;
+    private bool isFinalTimer = false;
 
     void Awake()
     {
@@ -102,7 +104,7 @@ public class MiniGame : MinigameCompletion {
 
     void Update()
     {
-        if (currentBlock && playing)
+        if (currentBlock && Time.timeScale != 0)
         {
             currentRigidbody.isKinematic = true;
             float moveAmount = Time.deltaTime * blockSpeed * blockDirection;
@@ -119,6 +121,15 @@ public class MiniGame : MinigameCompletion {
                 currentBlock = null;
                 currentRigidbody.isKinematic = false;
                 StartCoroutine(DelayedSpawn());
+            }
+        }
+
+        if (isFinalTimer)
+        {
+            finalTimer += Time.deltaTime;
+            if (finalTimer >= 1f)
+            {
+                minigameResult.MinigameResult(true);
             }
         }
 
@@ -144,7 +155,7 @@ public class MiniGame : MinigameCompletion {
     {
         if (allIngredientsPlaced && connectedIngredients.Count == placedIngredients.Count)
         {
-            minigameResult.MinigameResult(true);
+            isFinalTimer = true;
         }
         // else
         // {

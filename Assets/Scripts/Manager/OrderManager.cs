@@ -59,7 +59,6 @@ public class OrderManager : MonoBehaviour
         AudioManager.Instance.PlaySound("ButtonDown");
         if (GetNumActiveOrder() == 0)
         {
-            Debug.Log("No active orders.");
             return;
         }
 
@@ -173,5 +172,11 @@ public class OrderManager : MonoBehaviour
             }
         }
         return counter;
+    }
+
+    public void Reset()
+    {
+        activeOrders = new Order[3];
+        currActiveOrder = -1;
     }
 }

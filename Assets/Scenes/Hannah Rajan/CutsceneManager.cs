@@ -47,7 +47,6 @@ public class CutsceneManager : MonoBehaviour
     {
         if (TeleportNPCGhostToCutscene())
         {
-            Debug.Log("Cutscene Triggered");
             cutsceneTriggered = true;
             GhostSpawningManagerWithCutscenes.Instance.isCutscene = true;
 
@@ -87,14 +86,10 @@ public class CutsceneManager : MonoBehaviour
             GameObject ghostGameObject = GameManager.Instance.ghostManager.GetGameObjFromName(ghost.ghostName);
             ghostGameObject = GhostSpawningManagerWithCutscenes.Instance.getSpawnedGhostFromGameObject(ghostGameObject);
 
-            Debug.Log(ghost.name);
-            Debug.Log(ghostGameObject.transform.position);
             ghostGameObject.transform.position = spawnLocationOne.transform.position;
-            Debug.Log(ghost);
             currentCutsceneGhost = ghost;
             return true;
         }
-        Debug.Log(GameManager.Instance.ghostManager.activeGhosts);
         return false;
     }
 

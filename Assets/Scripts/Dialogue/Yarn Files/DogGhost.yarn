@@ -11,7 +11,7 @@ tags:
 position: -173,132
 ---
 <<emotionChange None Flowers>>
-Ghostwriter Ghost: <wiggle>Woof woof! WOOF!</wiggle>
+Ghostwriter Ghost: <link=wiggle>Woof woof! WOOF!</link>
 <<emotionChange None>>
 <<startStory DogStory>>
 ===
@@ -21,7 +21,7 @@ tags:
 position: -112,-180
 ---
 <<emotionChange Mad>>
-Dog Ghost: Woof... <shaky>grr...</shaky>
+Dog Ghost: Woof... <link=shaky>grr...</link>
 <<emotionChange Mad>>
 <<setCam "Main Camera">>
 ===
@@ -31,7 +31,7 @@ tags:
 position: 169,38
 ---
 <<emotionChange None Flowers>>
-Dog Ghost: Woof woof woof! woof! wo-woof!! <wiggle>Woof woof!</wiggle>
+Dog Ghost: Woof woof woof! woof! wo-woof!! <link=wiggle>Woof woof!</link>
 <<emotionChange None>>
 <<setCam "Main Camera">>
 ===

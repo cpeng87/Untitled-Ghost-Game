@@ -18,8 +18,7 @@ public class PausePanelHandler : MonoBehaviour
         pauseMenu.SetActive(true);
         //This layers a pause to prevent weird Timescale stuff when showing tutorial hints
 
-        PauseManager.AddPause(this.gameObject);
-        PauseManager.SetPauseState(true);
+        PauseManager.Instance.PauseGame();
     }
     public void Resume()
     {
@@ -27,8 +26,7 @@ public class PausePanelHandler : MonoBehaviour
         pauseMenu.SetActive(false);
         optionsMenu.SetActive(false);
         //This removes a pause to prevent weird Timescale stuff when showing tutorial hints
-        PauseManager.RemovePause(this.gameObject);
-        PauseManager.SetPauseState(false);
+        PauseManager.Instance.UnpauseGame();
     }
     public void ExitToDesktop()
     {
@@ -41,15 +39,14 @@ public class PausePanelHandler : MonoBehaviour
         AudioManager.Instance.PlaySound("ButtonDown");
         if (GameManager.Instance != null)
         {
-            Destroy(GameManager.Instance.gameObject, 1f);
+            GameManager.Instance.Reset();
         }
         if (AudioManager.Instance != null)
         {
             AudioManager.Instance.Reset();
         }
 
-        PauseManager.RemovePause(this.gameObject);
-        PauseManager.SetPauseState(false);
+        PauseManager.Instance.UnpauseGame();
         SceneManager.LoadScene("TitleScene");
     }
 
