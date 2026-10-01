@@ -11,7 +11,7 @@ using UnityEngine;
 [RequireComponent(typeof(MeshRenderer))]
 public class DisplayShape : MonoBehaviour
 {
-    [SerializeField] enum ShapeType { Circle, Heart }
+    public enum ShapeType { Circle, Heart }
     [SerializeField] ShapeType shapeType;
     [SerializeField] float radius = 0.8f;
     [SerializeField, Range(0f, 1f)] float patternAlpha = 0.5f;
