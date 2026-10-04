@@ -253,7 +253,6 @@ public class GhostSpawningManager : MonoBehaviour
     
     public void SpawnGhost()
     {
-        Debug.Log("TIME TO SPAWN");
         if (GameManager.Instance.ghostManager.IsActiveFull() == true)
         {
             return;

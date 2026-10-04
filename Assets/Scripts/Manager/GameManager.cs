@@ -301,7 +301,6 @@ public class GameManager : MonoBehaviour
     {
         yield return SwitchToSceneCoroutine("Demo End Scene");
 
-        Debug.Log("game manager");
         AudioManager.Instance.PlaySong("Comic");
     }
 
