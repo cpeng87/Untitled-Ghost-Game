@@ -6,11 +6,11 @@ public class LatteSubmit : MinigameCompletion {
     {
         if (latteManager.accuracyScore >= 80f)
         {
-            Debug.Log("Latte accuracy is above 80%");
+            // Debug.Log("Latte accuracy is above 80%");
             minigameResult.MinigameResult(true);
         } else
         {
-            Debug.Log("Latte accuracy is below 80%");
+            // Debug.Log("Latte accuracy is below 80%");
             minigameResult.MinigameResult(false);
         }
         
