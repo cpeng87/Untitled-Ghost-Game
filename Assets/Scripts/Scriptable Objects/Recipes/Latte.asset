@@ -17,4 +17,4 @@ MonoBehaviour:
   buyPrice: 0
   minigame: Latte
   unlockArc: 4
-  foodImage: {fileID: 0}
+  foodImage: {fileID: 21300000, guid: 898e9444963ad3f49ae9de5ee7c3fafd, type: 3}

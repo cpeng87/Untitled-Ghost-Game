@@ -102,7 +102,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Minigames/New Cookie.unity
     guid: 0a19adc217253cd4884e6b4cd33bad8f
   - enabled: 1
-    path: Assets/Scenes/MainStorefront.unity
+    path: Assets/Scenes/Cynthia Peng/MainStorefront- no demo.unity
     guid: 73952de2dffb11d4d9a5045827b64dc6
   - enabled: 1
     path: Assets/Scenes/Minigames/Donut.unity
@@ -122,5 +122,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Minigames/Cake 2.unity
     guid: ef83514caf1b21a47b4d1505691f48b7
+  - enabled: 1
+    path: Assets/Scenes/Cynthia Peng/Credits Scene.unity
+    guid: e34617a4852ad8d4aa5d2630b110ca64
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

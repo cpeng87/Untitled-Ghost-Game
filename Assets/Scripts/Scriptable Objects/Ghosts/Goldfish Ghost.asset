@@ -17,4 +17,6 @@ MonoBehaviour:
   numStory: 3
   recipesOrdered:
   - {fileID: 11400000, guid: c6441bc7088c07b47b4dbb5c91a3e436, type: 2}
+  - {fileID: 11400000, guid: bb3877ff9af98f74f9de8ff2bbd6eef4, type: 2}
   arc: -1
+  walking: 0
