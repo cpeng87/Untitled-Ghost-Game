@@ -24290,6 +24290,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1589442587085875816, guid: 3b09e429754326e4196ed1635846ddcb, type: 3}
+      propertyPath: unlockedRecipes.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1589442587085875816, guid: 3b09e429754326e4196ed1635846ddcb, type: 3}
+      propertyPath: 'unlockedRecipes.Array.data[10]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 7148b2db611575c428ea2d2c08a521b2, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

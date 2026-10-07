@@ -103,6 +103,10 @@ public class TongsController : MinigameCompletion
 
     void Update()
     {
+        if (Time.deltaTime == 0)
+        {
+            return;
+        }
 
         float input = Input.GetAxis("Horizontal");
 

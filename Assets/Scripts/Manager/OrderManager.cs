@@ -34,19 +34,19 @@ public class OrderManager : MonoBehaviour
     {
 
         List<Recipe> possibleRecipe = new List<Recipe>();
-        foreach(Recipe recipe in recipes)
-        {
-            if (GameManager.Instance.unlockedRecipes.Contains(recipe))
-            {
-                possibleRecipe.Add(recipe);
-            }
-        }
-        if (possibleRecipe.Count == 0)
-        {
-            Debug.Log("No possible recipes, something went terribly wrong.");
-            return false;
-        }
-        int selectedIndex = (int) (Random.value * possibleRecipe.Count);
+        // foreach(Recipe recipe in recipes)
+        // {
+        //     if (GameManager.Instance.unlockedRecipes.Contains(recipe))
+        //     {
+        //         possibleRecipe.Add(recipe);
+        //     }
+        // }
+        // if (possibleRecipe.Count == 0)
+        // {
+        //     Debug.Log("No possible recipes, something went terribly wrong.");
+        //     return false;
+        // }
+        int selectedIndex = (int) (Random.value * recipes.Count);
 
         activeOrders[seatNum] = new Order(name, recipes[selectedIndex].minigame, recipes[selectedIndex].recipeName, recipes[selectedIndex].sellPrice, seatNum, recipes[selectedIndex].foodImage);
         currActiveOrder = seatNum;

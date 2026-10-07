@@ -15,6 +15,14 @@ public class Cookbook : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Toggle();
+        }
+    }
+
     public void Resume() {
         cookbookUI.SetActive(false);
         Time.timeScale = 1f;
@@ -26,5 +34,17 @@ public class Cookbook : MonoBehaviour
         cookbookUI.SetActive(true);
         Time.timeScale = 0f;
         paused = true;
+    }
+
+    private void Toggle()
+    {
+        if (paused)
+        {
+            Resume();
+        }
+        else
+        {
+            Pause();
+        }
     }
 }
