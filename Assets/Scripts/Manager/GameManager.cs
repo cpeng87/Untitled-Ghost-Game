@@ -90,6 +90,11 @@ public class GameManager : MonoBehaviour
 
     public bool GetTutorialState(string name)
     {
+        if (hasOpenedTutorial == null)
+        {
+            // Debug.Log("No has opened tutorial");
+            return true;
+        }
         if (hasOpenedTutorial.ContainsKey(name))
         {
             return hasOpenedTutorial[name];
@@ -286,9 +291,21 @@ public class GameManager : MonoBehaviour
         {
             state = state,
             arc = arc,
-            ghostNameToStoryIndex = ghostManager.ghostNameToStoryIndex
+            ghostNameToStoryIndex = ghostManager.ghostNameToStoryIndex,
+            hasOpenedTutorial = hasOpenedTutorial
         };
         SaveManager.SaveGame(saveData);
+    }
+
+    public void LoadGame()
+    {
+        SaveData saveData = SaveManager.LoadGame();
+        Debug.Log(saveData.state);
+        Debug.Log(saveData.arc);
+        state = saveData.state;
+        arc = saveData.arc;
+        ghostManager.SetGhostNameToStoryIndex(saveData.ghostNameToStoryIndex);
+        hasOpenedTutorial = saveData.hasOpenedTutorial;
     }
 
 

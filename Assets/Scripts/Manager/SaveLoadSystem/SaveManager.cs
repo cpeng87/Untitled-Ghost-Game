@@ -10,6 +10,7 @@ public class SaveData
     public State state;
     public Arc arc;
     public Dictionary<string, int> ghostNameToStoryIndex;
+    public Dictionary<string, bool> hasOpenedTutorial;
 }
 
 public class SaveManager
@@ -23,7 +24,7 @@ public class SaveManager
         try
         {
             File.WriteAllText(FullPath, json);
-            // Debug.Log($"Saved to {FullPath}");
+            Debug.Log($"Saved to {FullPath}");
         }
         catch (Exception e)
         {
@@ -33,15 +34,16 @@ public class SaveManager
 
     public static SaveData LoadGame()
     {
-        if (!File.Exists(FullPath))
+        if (!HasSaveFile())
         {
-            Debug.LogWarning("No save file found.");
-            return null;
+            Debug.Log("No save file found.");
+            return null; 
         }
 
         try
         {
             string json = File.ReadAllText(FullPath);
+            Debug.Log(FullPath);
             SaveData data = JsonConvert.DeserializeObject<SaveData>(json);
             Debug.Log("Loaded save.");
             return data;
@@ -56,5 +58,15 @@ public class SaveManager
     public static void DeleteSave()
     {
         if (File.Exists(FullPath)) File.Delete(FullPath);
+    }
+
+    public static bool HasSaveFile()
+    {
+        if (!File.Exists(FullPath))
+        {
+            return false;
+        }
+        return true;
+
     }
 }

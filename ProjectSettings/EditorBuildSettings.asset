@@ -125,5 +125,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cynthia Peng/Credits Scene.unity
     guid: e34617a4852ad8d4aa5d2630b110ca64
+  - enabled: 1
+    path: Assets/Scenes/MainStorefront.unity
+    guid: af7f47fa6f9f71245a3dd0de7b201e4d
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

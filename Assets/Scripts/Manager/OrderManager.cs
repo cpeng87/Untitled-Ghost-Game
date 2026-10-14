@@ -102,6 +102,7 @@ public class OrderManager : MonoBehaviour
         GameManager.Instance.ghostManager.RemoveActiveGhost(currGhost);
         GhostSpawningManager.Instance.DeleteSpawnedGhost(activeOrders[currActiveOrder].seatNum);
         activeOrders[currActiveOrder] = null;
+        GameManager.Instance.SaveGame();
     }
 
     //helper method to replace tags in strings

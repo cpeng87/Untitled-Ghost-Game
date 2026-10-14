@@ -331,4 +331,9 @@ public class GhostManager : MonoBehaviour
 
     }
 
+    public void SetGhostNameToStoryIndex(Dictionary<string, int> newDict)
+    {
+        ghostNameToStoryIndex = newDict;
+    }
+
 }
