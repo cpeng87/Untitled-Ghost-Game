@@ -5,11 +5,48 @@ public class LoadingScreen : MonoBehaviour
 {
     [SerializeField] private CanvasGroup canvasGroup;
     [SerializeField] private float fadeDuration;
+    [SerializeField] private bool flashOnSave;
+    [SerializeField] private bool fadeOutOnStart = true;
+    [SerializeField] private float flashVisibleDuration = 1.5f; //idk arbitrary
     private Coroutine currentFade;
+
+    [SerializeField] private GameObject blackScreen;
+    private bool blackScreenWasActive;
+    private bool flashingSave;
+
+    [SerializeField] private GameObject autosaveText;
 
     private void Start()
     {
-        StartCoroutine(FadeOut());
+        autosaveText.SetActive(false);
+
+        if (fadeOutOnStart)
+        {
+            currentFade = StartCoroutine(FadeOut());
+        }
+        else
+        {
+            canvasGroup.alpha = 0;
+        }
+    }
+
+    private void OnEnable()
+    {
+        if (flashOnSave)
+        {
+            SaveManager.SaveSucceeded += Flash;
+        }
+    }
+
+    private void OnDisable()
+    {
+        SaveManager.SaveSucceeded -= Flash;
+
+        if (currentFade != null)
+        {
+            StopCoroutine(currentFade);
+            currentFade = null;
+        }
     }
 
     public IEnumerator FadeIn()
@@ -57,5 +94,40 @@ public class LoadingScreen : MonoBehaviour
         {
             canvasGroup.gameObject.SetActive(false);
         }
+    }
+
+    private void Flash()
+    {
+        if (currentFade != null)
+        {
+            StopCoroutine(currentFade);
+        }
+
+        // Restore the original state if another save interrupts the current flash.
+        if (flashingSave)
+        {
+            blackScreen.SetActive(blackScreenWasActive);
+            flashingSave = false;
+        }
+
+        blackScreenWasActive = blackScreen.activeSelf;
+        flashingSave = true;
+        currentFade = StartCoroutine(FlashRoutine());
+    }
+
+    private IEnumerator FlashRoutine()
+    {
+        canvasGroup.gameObject.SetActive(true);
+        blackScreen.SetActive(false);
+        autosaveText.SetActive(true);
+
+        yield return Fade(0, 1, false);
+        yield return new WaitForSecondsRealtime(flashVisibleDuration);
+        yield return Fade(1, 0, true);
+
+        autosaveText.SetActive(false);
+        blackScreen.SetActive(blackScreenWasActive);
+        flashingSave = false;
+        currentFade = null;
     }
 }

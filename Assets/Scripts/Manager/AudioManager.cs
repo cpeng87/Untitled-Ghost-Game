@@ -16,6 +16,7 @@ public class AudioManager : MonoBehaviour
     // private string currentScene;
     private string savedSong;
     private float savedTime;
+    private AudioClip fadingToClip;
     private float masterVolume;
     private float musicVolume;
     private float soundVolume;
@@ -40,15 +41,16 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
         musicDict = new Dictionary<string, AudioClip>();
         soundDict = new Dictionary<string, AudioClip>();
+        masterVolume = PlayerPrefs.GetFloat("masterVolume", 1f);
+        musicVolume = PlayerPrefs.GetFloat("musicVolume", 1f);
+        soundVolume = PlayerPrefs.GetFloat("soundVolume", 1f);
         if (musicSource == null) Debug.LogError("Music source in AudioManager is null");
         foreach (Music m in music) musicDict.Add(m.name, m.clip);
         foreach (Sound s in sound) soundDict.Add(s.name, s.clip);
+        ApplyVolumes();
     }
     void Start()
     {
-        masterVolume = 1f;
-        musicVolume = 1f;
-        soundVolume = 1f;
         //Random Song for now
         // RandomSong();
         //change to play arc's song
@@ -83,7 +85,8 @@ public class AudioManager : MonoBehaviour
     {
         if (musicDict.TryGetValue(songName, out var clip))
         {
-            if (musicSource.clip == clip) return; //Already playing
+            if ((musicSource.clip == clip && musicSource.isPlaying) || fadingToClip == clip) return;
+            StopCurrentFade();
             currentSong = songName;
             musicSource.Stop();
             musicSource.clip = clip;
@@ -102,18 +105,11 @@ public class AudioManager : MonoBehaviour
     /// <param name="songName"></param>
     public void PlaySong(string songName, float fadeTime = 0.5f) {
         if (musicDict.TryGetValue(songName, out var clip))  {
-            if (musicSource.clip == clip && musicSource.isPlaying)
+            if ((musicSource.clip == clip && musicSource.isPlaying) || fadingToClip == clip)
                 return; // already playing
 
             currentSong = songName;
-
-            if (currentFade != null)
-        {
-            StopCoroutine(currentFade);
-            // musicSource.volume = 0.5f;
-            musicSource.volume = masterVolume * musicVolume;
-        }
-            currentFade = StartCoroutine(FadeToNewTrack(clip, fadeTime));
+            FadeToTrack(clip, fadeTime);
 
             OnSongChanged?.Invoke(songName);
         }
@@ -132,10 +128,14 @@ public class AudioManager : MonoBehaviour
     {
         if (savedSong != null)
         {
-            musicSource.clip = musicDict[savedSong];
-            musicSource.time = savedTime;
+            AudioClip clip = musicDict[savedSong];
+            if (musicSource.clip != clip || !musicSource.isPlaying)
+            {
+                musicSource.clip = clip;
+                musicSource.time = savedTime;
+                musicSource.Play();
+            }
             currentSong = savedSong;
-            musicSource.Play();
             OnSongChanged?.Invoke(savedSong);
         }
         else
@@ -175,6 +175,24 @@ public class AudioManager : MonoBehaviour
 
         musicSource.volume = endVol;
         currentFade = null;
+        fadingToClip = null;
+    }
+
+    private void FadeToTrack(AudioClip clip, float fadeTime)
+    {
+        StopCurrentFade();
+        fadingToClip = clip;
+        currentFade = StartCoroutine(FadeToNewTrack(clip, fadeTime));
+    }
+
+    private void StopCurrentFade()
+    {
+        if (currentFade == null) return;
+
+        StopCoroutine(currentFade);
+        currentFade = null;
+        fadingToClip = null;
+        musicSource.volume = masterVolume * musicVolume;
     }
 
 
@@ -239,12 +257,7 @@ public class AudioManager : MonoBehaviour
         Debug.Log("Music Index: " + currIndex);
         currentSong = music[currIndex].name;
 
-        if (currentFade != null)
-        {
-            StopCoroutine(currentFade);
-            musicSource.volume = masterVolume * musicVolume;
-        }
-        currentFade = StartCoroutine(FadeToNewTrack(musicDict[currentSong], fadeTime));
+        FadeToTrack(musicDict[currentSong], fadeTime);
 
         // musicSource.Stop();
         // musicSource.clip = music[currIndex].clip;
@@ -260,17 +273,12 @@ public class AudioManager : MonoBehaviour
             currentSong = music[currIndex].name;
 
             if (musicDict.TryGetValue(currentSong, out var clip))  {
-                if (musicSource.clip == clip && musicSource.isPlaying)
+                if ((musicSource.clip == clip && musicSource.isPlaying) || fadingToClip == clip)
                     return; // already playing
             }
 
 
-            if (currentFade != null)
-        {
-            StopCoroutine(currentFade);
-            musicSource.volume = masterVolume * musicVolume;
-        }
-            currentFade = StartCoroutine(FadeToNewTrack(musicDict[currentSong], fadeTime));
+            FadeToTrack(musicDict[currentSong], fadeTime);
 
             // musicSource.Stop();
             // musicSource.clip = music[currIndex].clip;
@@ -344,6 +352,7 @@ public class AudioManager : MonoBehaviour
 
     public int GetMusicCount() => music.Length;
     public string GetMusicName(int index) => index >= 0 && index < music.Length ? music[index].name : null;
+    public string GetCurrentSong() => currentSong;
 
     public void Reset()
     {
@@ -372,11 +381,12 @@ public class AudioManager : MonoBehaviour
     public void SetMasterVolume(float value)
     {
         masterVolume = value;
+        ApplyVolumes();
     }
     public void SetMusicVolume(float value)
     {
         musicVolume = value;
-        GetMusicSource().volume = masterVolume * musicVolume;
+        ApplyVolumes();
     }
     public float GetMusicVolume()
     {
@@ -385,11 +395,39 @@ public class AudioManager : MonoBehaviour
     public void SetSoundVolume(float value)
     {
         soundVolume = value;
-        GetSoundSource().volume = masterVolume * soundVolume;
+        ApplyVolumes();
     }
     public float GetSoundVolume()
     {
         return soundVolume;
+    }
+
+    public void SaveAudioPreferences()
+    {
+        PlayerPrefs.SetFloat("masterVolume", masterVolume);
+        PlayerPrefs.SetFloat("musicVolume", musicVolume);
+        PlayerPrefs.SetFloat("soundVolume", soundVolume);
+        PlayerPrefs.Save();
+    }
+
+    public void ResetAudioToDefaults()
+    {
+        SetMasterVolume(1f);
+        SetMusicVolume(1f);
+        SetSoundVolume(1f);
+        SaveAudioPreferences();
+    }
+
+    private void ApplyVolumes()
+    {
+        if (musicSource != null)
+        {
+            musicSource.volume = masterVolume * musicVolume;
+        }
+        if (soundSource != null)
+        {
+            soundSource.volume = masterVolume * soundVolume;
+        }
     }
 
 }

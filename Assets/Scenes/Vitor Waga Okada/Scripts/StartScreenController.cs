@@ -11,6 +11,8 @@ public class StartScreenController : MonoBehaviour
     public GameObject OptionsScreen;
     public string StartGameAfterScreen;
     public string StartGameAfterScreenWithSave;
+    [SerializeField] private GameObject DeleteSaveButton;
+    [SerializeField] private GameObject DeleteSaveConfirmationPopup;
 
     [SerializeField] private TextMeshProUGUI startGameText;
 
@@ -18,19 +20,53 @@ public class StartScreenController : MonoBehaviour
     {
         // OptionsScreen.SetActive(false);
         AudioManager.Instance.PlaySong("Title");
-        //check if there is an existing save file
+        DeleteSaveConfirmationPopup.SetActive(false);
+        RefreshSaveUI();
+    }
+
+    private void RefreshSaveUI()
+    {
         if (SaveManager.HasSaveFile())
         {
             startGameText.text = "Load Game";
+            DeleteSaveButton.SetActive(true);
         }
         else
         {
             startGameText.text = "Start Game";
+            DeleteSaveButton.SetActive(false);
         }
+    }
+
+    public void DeleteSave()
+    {
+        AudioManager.Instance.PlaySound("ButtonDown");
+        TitleScreen.SetActive(false);
+        OptionsScreen.SetActive(false);
+        DeleteSaveConfirmationPopup.SetActive(true);
+    }
+
+    public void ConfirmDeleteSave()
+    {
+        AudioManager.Instance.PlaySound("ButtonDown");
+        GameManager.Instance.DeleteSave();
+        DeleteSaveConfirmationPopup.SetActive(false);
+        TitleScreen.SetActive(true);
+        RefreshSaveUI();
+    }
+
+    public void CancelDeleteSave()
+    {
+        AudioManager.Instance.PlaySound("ButtonUp");
+        DeleteSaveConfirmationPopup.SetActive(false);
+        TitleScreen.SetActive(true);
+        RefreshSaveUI();
     }
 
     public void startGame()
     {
+        TitleScreen.SetActive(false);
+        OptionsScreen.SetActive(false);
         if (SaveManager.HasSaveFile())
         {
             StartCoroutine(StartGameWithSave());
@@ -61,6 +97,7 @@ public class StartScreenController : MonoBehaviour
 
     public void goToTitle() {
         AudioManager.Instance.PlaySound("ButtonUp");
+        AudioManager.Instance.SaveAudioPreferences();
         TitleScreen.SetActive(true);
         OptionsScreen.SetActive(false);
     }

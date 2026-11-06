@@ -291,6 +291,7 @@ public class GameManager : MonoBehaviour
         {
             state = state,
             arc = arc,
+            currentSong = AudioManager.Instance != null ? AudioManager.Instance.GetCurrentSong() : null,
             ghostNameToStoryIndex = ghostManager.ghostNameToStoryIndex,
             hasOpenedTutorial = hasOpenedTutorial
         };
@@ -302,12 +303,23 @@ public class GameManager : MonoBehaviour
         SaveData saveData = SaveManager.LoadGame();
         Debug.Log(saveData.state);
         Debug.Log(saveData.arc);
-        state = saveData.state;
+        state = State.Main;
         arc = saveData.arc;
         ghostManager.SetGhostNameToStoryIndex(saveData.ghostNameToStoryIndex);
         hasOpenedTutorial = saveData.hasOpenedTutorial;
+        if (!string.IsNullOrEmpty(saveData.currentSong) && AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlaySong(saveData.currentSong);
+            AudioManager.Instance.SaveSong();
+        }
     }
 
+    public void DeleteSave()
+    {
+        SaveManager.DeleteSave();
+        Reset();
+        //Debug.Log("goobai save");
+    }
 
     private IEnumerator LoadEndScene()
     {
@@ -323,6 +335,8 @@ public class GameManager : MonoBehaviour
 
     public void Reset()
     {
+        SaveManager.DeleteSave();
+
         state = State.Main;
         arc = Arc.Beginning;
 

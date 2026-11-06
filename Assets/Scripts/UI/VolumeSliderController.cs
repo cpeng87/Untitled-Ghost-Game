@@ -27,6 +27,14 @@ public class VolumeSliderController : MonoBehaviour
         audioManager.SetMusicVolume(background.value);
         audioManager.SetSoundVolume(sfx.value);
     }
+
+    public void ResetAudioToDefaults()
+    {
+        audioManager.ResetAudioToDefaults();
+        master.value = audioManager.GetMasterVolume();
+        background.value = audioManager.GetMusicVolume();
+        sfx.value = audioManager.GetSoundVolume();
+    }
 }
 
 // using UnityEngine;

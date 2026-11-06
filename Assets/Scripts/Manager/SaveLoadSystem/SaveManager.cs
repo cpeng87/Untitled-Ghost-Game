@@ -9,6 +9,7 @@ public class SaveData
 {
     public State state;
     public Arc arc;
+    public string currentSong;
     public Dictionary<string, int> ghostNameToStoryIndex;
     public Dictionary<string, bool> hasOpenedTutorial;
 }
@@ -18,7 +19,7 @@ public class SaveManager
     private static string fileName = "savegame.json";
     private static string FullPath => Path.Combine(Application.persistentDataPath, fileName);
 
-    public static void SaveGame(SaveData saveData)
+    public static bool SaveGame(SaveData saveData)
     {
         string json = JsonConvert.SerializeObject(saveData, Formatting.Indented);
         try
@@ -29,7 +30,11 @@ public class SaveManager
         catch (Exception e)
         {
             Debug.LogError("Failed to save: " + e);
+            return false;
         }
+
+        SaveSucceeded?.Invoke();
+        return true;
     }
 
     public static SaveData LoadGame()
@@ -69,4 +74,6 @@ public class SaveManager
         return true;
 
     }
+
+    public static event Action SaveSucceeded;
 }

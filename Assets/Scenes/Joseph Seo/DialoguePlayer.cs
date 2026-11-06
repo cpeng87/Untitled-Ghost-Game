@@ -184,6 +184,7 @@ public class DialoguePlayer : MonoBehaviour
         GameManager.Instance.orderManager.RemoveCompletedOrder();
         GameManager.Instance.state = State.Main;
         state = DialogueState.None;
+        GameManager.Instance.SaveGame();
     }
 
     private void OnDialogueComplete()
@@ -212,7 +213,7 @@ public class DialoguePlayer : MonoBehaviour
             StartCoroutine(CountdownMain());
         }
 
-        GameManager.Instance.SaveGame();
+        //GameManager.Instance.SaveGame();
     }
 
     private IEnumerator CountdownMain () {
