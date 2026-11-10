@@ -65,6 +65,10 @@ public class GameInstructions : MonoBehaviour
         {
             stepComplete = TicketManager.Instance.IsTicketsActive();
         }
+        else if (index == 3)
+        {
+            stepComplete = TicketManager.Instance.IsTicketsActive() == false;
+        }
         if (stepComplete)
         {
             Progress();
@@ -81,7 +85,7 @@ public class GameInstructions : MonoBehaviour
         }
         steps[index - 1].SetActive(false);
         steps[index].SetActive(true);
-        if (index == 3)
+        if (index == 4)
         {
             GameManager.Instance.SetTutorialState("Game", true);   // done with tutorial
             active = false;
