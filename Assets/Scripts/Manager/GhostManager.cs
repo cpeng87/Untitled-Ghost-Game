@@ -331,25 +331,33 @@ public class GhostManager : MonoBehaviour
 
     }
 
-    public void SetGhostNameToStoryIndex(Dictionary<string, int> newDict)
+    public Dictionary<string, bool> GetGhostNameToCompleted()
     {
-        if (newDict != null)
+        Dictionary<string, bool> completedGhosts = new Dictionary<string, bool>();
+        foreach (KeyValuePair<Ghost, bool> entry in completedGhostsDict)
         {
-            ghostNameToStoryIndex = newDict;
+            completedGhosts[entry.Key.ghostName] = entry.Value;
         }
 
-        arcProgress = 0;
+        return completedGhosts;
+    }
+
+    public void SetGhostProgress(
+        Dictionary<string, int> storyIndices,
+        Dictionary<string, bool> completedStatuses)
+    {
+        if (storyIndices != null)
+        {
+            ghostNameToStoryIndex = storyIndices;
+        }
+
         List<Ghost> ghostsToRestore = new List<Ghost>(completedGhostsDict.Keys);
         foreach (Ghost ghost in ghostsToRestore)
         {
-            bool isComplete = ghostNameToStoryIndex.TryGetValue(ghost.ghostName, out int storyIndex)
-                && storyIndex >= ghost.numStory;
+            bool isComplete = completedStatuses != null
+                && completedStatuses.TryGetValue(ghost.ghostName, out bool savedStatus)
+                && savedStatus;
             completedGhostsDict[ghost] = isComplete;
-
-            if (isComplete && ghost.arc == GameManager.Instance.arc)
-            {
-                arcProgress++;
-            }
         }
 
         CalculateArcGhosts();

@@ -7,10 +7,11 @@ using UnityEngine;
 [Serializable]
 public class SaveData
 {
-    public State state;
     public Arc arc;
+    public int arcProgress;
     public string currentSong;
     public Dictionary<string, int> ghostNameToStoryIndex;
+    public Dictionary<string, bool> ghostNameToCompleted;
     public Dictionary<string, bool> hasOpenedTutorial;
 }
 
