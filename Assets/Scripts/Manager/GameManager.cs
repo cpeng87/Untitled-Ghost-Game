@@ -289,10 +289,11 @@ public class GameManager : MonoBehaviour
     {
         SaveData saveData = new SaveData()
         {
-            state = state,
             arc = arc,
+            arcProgress = ghostManager.GetArcProgress(),
             currentSong = AudioManager.Instance != null ? AudioManager.Instance.GetCurrentSong() : null,
             ghostNameToStoryIndex = ghostManager.ghostNameToStoryIndex,
+            ghostNameToCompleted = ghostManager.GetGhostNameToCompleted(),
             hasOpenedTutorial = hasOpenedTutorial
         };
         SaveManager.SaveGame(saveData);
@@ -301,11 +302,12 @@ public class GameManager : MonoBehaviour
     public void LoadGame()
     {
         SaveData saveData = SaveManager.LoadGame();
-        Debug.Log(saveData.state);
         Debug.Log(saveData.arc);
         state = State.Main;
         arc = saveData.arc;
-        ghostManager.SetGhostNameToStoryIndex(saveData.ghostNameToStoryIndex);
+        ghostManager.SetGhostProgress(saveData.ghostNameToStoryIndex, saveData.ghostNameToCompleted);
+        ghostManager.arcProgress = saveData.arcProgress;
+        ghostManager.OnArcProgressChanged?.Invoke();
         hasOpenedTutorial = saveData.hasOpenedTutorial;
         if (!string.IsNullOrEmpty(saveData.currentSong) && AudioManager.Instance != null)
         {
@@ -760,7 +762,6 @@ public class GameManager : MonoBehaviour
 //     {
 //         SaveData saveData = new SaveData()
 //         {
-//             state = state,
 //             arc = arc,
 //             ghostNameToStoryIndex = ghostManager.ghostNameToStoryIndex
 //         };
@@ -803,4 +804,3 @@ public class GameManager : MonoBehaviour
 //     }
 
 // }
-
