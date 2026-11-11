@@ -49,7 +49,7 @@ public class DialoguePlayer : MonoBehaviour
         // dialogueRunner.AddCommandHandler("reset", Reset);
         dialogueRunner.AddCommandHandler<bool>("reaperPitch", ReaperPitch);
         dialogueRunner.AddCommandHandler("emotionChange", (string[] args) => EmotionChange(args));
-        // dialogueRunner.AddFunction("GetOrder", () => currentOrder);
+        dialogueRunner.AddFunction("GetOrder", () => currentOrder);
 
         // dialogueRunner.onDialogueComplete += OnDialogueComplete;
         dialogueRunner.onDialogueComplete.AddListener(OnDialogueComplete);

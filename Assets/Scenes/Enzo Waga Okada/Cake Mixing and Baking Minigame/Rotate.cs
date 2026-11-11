@@ -152,16 +152,16 @@ public class Rotate : MonoBehaviour
 
     private void StartCakeOven()
     {
-        // goalCircle.SetActive(true);
-        // movingCircle.SetActive(true); 
-        if (GameManager.Instance)
-        {
-            GameManager.Instance.SwitchToSceneCoroutine("Cake 2");
-        }
-        else
-        {
-            SceneManager.LoadScene("Cake 2");
-        }
+        // if (GameManager.Instance)
+        // {
+        //     Debug.Log("swappin");
+        //     GameManager.Instance.SwitchToSceneCoroutine("Cake 2");
+        // }
+        // else
+        // {
+        //     SceneManager.LoadScene("Cake 2");
+        // }
+        SceneManager.LoadScene("Cake 2");
     }
 
 }

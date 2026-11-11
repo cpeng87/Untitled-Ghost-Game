@@ -85,6 +85,10 @@ public class GameManager : MonoBehaviour
     public bool GetTutorialState()
     {
         string recipe = SceneManager.GetActiveScene().name;
+        if (recipe == "Cake 2")
+        {
+            return true;
+        }
         return GetTutorialState(recipe);
     }
 
@@ -152,23 +156,23 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator SwitchToSceneCoroutine(string sceneName)
     {
+        Debug.Log("swapping scene in game maanger");
         LoadingScreen loadingScreen = FindAnyObjectByType<LoadingScreen>();
         if (loadingScreen != null)
         {
             yield return loadingScreen.FadeIn();
         }
 
-        yield return null;                 // let Unity actually render alpha = 1
-        yield return new WaitForEndOfFrame(); // ensure it's flushed to screen
-        yield return new WaitForSeconds(0.25f);
-        yield return null;                 // small buffer before the load spike
+        yield return null;
 
         // Load the new scene
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
+        Debug.Log("loding.");
         while (!asyncLoad.isDone)
         {
             yield return null;
         }
+        Debug.Log("Done");
     }
 
     private IEnumerator CompleteMinigameCoroutine(string sceneName, bool isSuccess, bool chefSkip, bool specialCookie)

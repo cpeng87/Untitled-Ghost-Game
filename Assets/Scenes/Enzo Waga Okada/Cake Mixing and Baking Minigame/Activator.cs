@@ -5,13 +5,13 @@ public class Activator : MinigameCompletion {
     public KeyCode key;
     bool active = false;
     GameObject note;
-    private SpriteRenderer spriteRenderer;
+    [SerializeField] private SpriteRenderer spriteRenderer;
     private Color green;
     private Color red;
     private ParticleSystem sparkles;
 
     void Start() {
-        spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
+        // spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
         green = new Color(0f, 203f/255f, 29f/255f, 1f);
         red = new Color(202f/255f, 6f/255f, 0f, 1f);
         sparkles = this.gameObject.GetComponent<ParticleSystem>();
@@ -19,7 +19,6 @@ public class Activator : MinigameCompletion {
 
     void Update() {
         spriteRenderer.color = Color.Lerp(green, red, (Mathf.Abs(note.transform.position.x)) / 5f);
-        Debug.Log(Mathf.Abs(note.transform.position.x) / 5f);
         if (active)
         {
             // spriteRenderer.color = Color.Lerp(green, red, Mathf.Abs(note.transform.position.x - 5) / 5f);
