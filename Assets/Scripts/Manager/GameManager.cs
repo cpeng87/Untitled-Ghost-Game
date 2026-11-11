@@ -156,7 +156,6 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator SwitchToSceneCoroutine(string sceneName)
     {
-        Debug.Log("swapping scene in game maanger");
         LoadingScreen loadingScreen = FindAnyObjectByType<LoadingScreen>();
         if (loadingScreen != null)
         {
@@ -167,12 +166,10 @@ public class GameManager : MonoBehaviour
 
         // Load the new scene
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
-        Debug.Log("loding.");
         while (!asyncLoad.isDone)
         {
             yield return null;
         }
-        Debug.Log("Done");
     }
 
     private IEnumerator CompleteMinigameCoroutine(string sceneName, bool isSuccess, bool chefSkip, bool specialCookie)
@@ -293,11 +290,10 @@ public class GameManager : MonoBehaviour
     {
         SaveData saveData = new SaveData()
         {
+            state = state,
             arc = arc,
-            arcProgress = ghostManager.GetArcProgress(),
             currentSong = AudioManager.Instance != null ? AudioManager.Instance.GetCurrentSong() : null,
             ghostNameToStoryIndex = ghostManager.ghostNameToStoryIndex,
-            ghostNameToCompleted = ghostManager.GetGhostNameToCompleted(),
             hasOpenedTutorial = hasOpenedTutorial
         };
         SaveManager.SaveGame(saveData);
@@ -306,12 +302,9 @@ public class GameManager : MonoBehaviour
     public void LoadGame()
     {
         SaveData saveData = SaveManager.LoadGame();
-        Debug.Log(saveData.arc);
         state = State.Main;
         arc = saveData.arc;
-        ghostManager.SetGhostProgress(saveData.ghostNameToStoryIndex, saveData.ghostNameToCompleted);
-        ghostManager.arcProgress = saveData.arcProgress;
-        ghostManager.OnArcProgressChanged?.Invoke();
+        ghostManager.SetGhostNameToStoryIndex(saveData.ghostNameToStoryIndex);
         hasOpenedTutorial = saveData.hasOpenedTutorial;
         if (!string.IsNullOrEmpty(saveData.currentSong) && AudioManager.Instance != null)
         {
@@ -324,7 +317,6 @@ public class GameManager : MonoBehaviour
     {
         SaveManager.DeleteSave();
         Reset();
-        //Debug.Log("goobai save");
     }
 
     private IEnumerator LoadEndScene()
@@ -766,6 +758,7 @@ public class GameManager : MonoBehaviour
 //     {
 //         SaveData saveData = new SaveData()
 //         {
+//             state = state,
 //             arc = arc,
 //             ghostNameToStoryIndex = ghostManager.ghostNameToStoryIndex
 //         };
@@ -808,3 +801,4 @@ public class GameManager : MonoBehaviour
 //     }
 
 // }
+
