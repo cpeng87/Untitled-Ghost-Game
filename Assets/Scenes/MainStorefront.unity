@@ -19491,6 +19491,26 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8676070822821560515, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 747.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 8676070822821560515, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 64.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 8676070822821560515, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8676070822821560515, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 178.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 8676070822821560515, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 192.4
+      objectReference: {fileID: 0}
     - target: {fileID: 8716906259618167843, guid: fa484f41417f7ec43bed7f8c2f935463, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
@@ -23934,7 +23954,7 @@ MonoBehaviour:
   ghostSpeed: 3
   rotationSpeed: 300
   spinSpeed: 125
-  mainGhostChance: 0.95
+  mainGhostChance: 0.7
 --- !u!4 &1443356589
 Transform:
   m_ObjectHideFlags: 0
