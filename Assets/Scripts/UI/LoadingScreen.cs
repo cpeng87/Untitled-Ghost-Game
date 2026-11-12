@@ -7,7 +7,7 @@ public class LoadingScreen : MonoBehaviour
     [SerializeField] private float fadeDuration;
     [SerializeField] private bool flashOnSave;
     [SerializeField] private bool fadeOutOnStart = true;
-    [SerializeField] private float flashVisibleDuration = 1.5f; //idk arbitrary
+    [SerializeField] private float flashVisibleDuration = 0.5f;
     private Coroutine currentFade;
 
     [SerializeField] private GameObject blackScreen;

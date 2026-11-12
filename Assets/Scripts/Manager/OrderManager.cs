@@ -69,6 +69,7 @@ public class OrderManager : MonoBehaviour
 
         TicketManager.Instance.HideOrders();
         AudioManager.Instance.SaveSong();
+        AudioManager.Instance.PlaySong("Minigame");
 
         GameManager.Instance.SwitchToMinigame(activeOrders[orderIdx].minigame);
         currActiveOrder = orderIdx;

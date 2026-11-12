@@ -26,6 +26,10 @@ public class Activator : MinigameCompletion {
             if (Input.GetKeyDown(key)) {
                 if (note.transform.position.x <= 0.4f && note.transform.position.x >= -0.4f)
                 {
+                    if (AudioManager.Instance != null)
+                    {
+                        AudioManager.Instance.PlaySound("Oven");
+                    }
                     Destroy(note);
                     sparkles.Play();
 

@@ -61,7 +61,10 @@ public class TeapotController : MinigameCompletion
             pourPauseTimer += Time.deltaTime;
             if (pourPauseTimer >= 0.1f)
             {
-                AudioManager.Instance.PauseSound();
+                if (AudioManager.Instance == null)
+                {
+                    AudioManager.Instance.PauseSound();
+                }
             }
             if (pourParticles.isEmitting)
             {

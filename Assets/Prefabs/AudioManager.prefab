@@ -106,6 +106,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 1751867db322ab148816dbde2afb6067, type: 3}
   - name: ButtonUp
     clip: {fileID: 8300000, guid: 51438a85387636b4d86b14c2d8826fd0, type: 3}
+  - name: Oven
+    clip: {fileID: 8300000, guid: e156caab9479a1041b417b9e93801f3e, type: 3}
   musicSource: {fileID: 2629506111582288496}
   soundSource: {fileID: 3933112506615878686}
 --- !u!1 &5323247890239993855

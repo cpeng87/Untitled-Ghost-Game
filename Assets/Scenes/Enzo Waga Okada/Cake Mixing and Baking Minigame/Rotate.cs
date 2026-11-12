@@ -161,6 +161,7 @@ public class Rotate : MonoBehaviour
         // {
         //     SceneManager.LoadScene("Cake 2");
         // }
+        AudioManager.Instance.StopSound();
         SceneManager.LoadScene("Cake 2");
     }
 

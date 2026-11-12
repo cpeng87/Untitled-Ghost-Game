@@ -298,7 +298,7 @@ public class GhostSpawningManager : MonoBehaviour
         }
 
         // this will probably make is so that reaper is the only thing spawned when all arc ghosts are complete
-        if (arcGhost.Count == 0)
+        if (arcGhost.Count == 0 && (GameManager.Instance.ghostManager.CheckGhostIsActive(GameManager.Instance.ghostManager.GetGhostScriptableFromName("Reaper")) == false))
         {
             SpawnReaper();
             return;

@@ -86,7 +86,7 @@ public class CreditsRoll : MonoBehaviour
         {
             ghost.transform.position -= new Vector3(0f, speed * Time.deltaTime * 1.05f, 0f);
             ghost.transform.Rotate(0f, speed * 100f * Time.deltaTime, 0f);
-            if (ghost.transform.position.y < -48.1f)
+            if (ghost.transform.position.y < -49f)
             {
                 spinnyDone = true;
             }

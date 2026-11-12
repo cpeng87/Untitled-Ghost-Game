@@ -77,27 +77,27 @@ public class AudioManager : MonoBehaviour
         // }
     }
 
-    /// <summary>
-    /// Changes the song that's currently playing.
-    /// </summary>
-    /// <param name="songName"></param>
-    public void PlaySong(string songName)
-    {
-        if (musicDict.TryGetValue(songName, out var clip))
-        {
-            if ((musicSource.clip == clip && musicSource.isPlaying) || fadingToClip == clip) return;
-            StopCurrentFade();
-            currentSong = songName;
-            musicSource.Stop();
-            musicSource.clip = clip;
-            musicSource.Play();
-            OnSongChanged?.Invoke(songName);
-        }
-        else
-        {
-            Debug.LogWarning("Song " + songName + " not found!");
-        }
-    }
+    // /// <summary>
+    // /// Changes the song that's currently playing.
+    // /// </summary>
+    // /// <param name="songName"></param>
+    // public void PlaySong(string songName)
+    // {
+    //     if (musicDict.TryGetValue(songName, out var clip))
+    //     {
+    //         if ((musicSource.clip == clip && musicSource.isPlaying) || fadingToClip == clip) return;
+    //         StopCurrentFade();
+    //         currentSong = songName;
+    //         musicSource.Stop();
+    //         musicSource.clip = clip;
+    //         musicSource.Play();
+    //         OnSongChanged?.Invoke(songName);
+    //     }
+    //     else
+    //     {
+    //         Debug.LogWarning("Song " + songName + " not found!");
+    //     }
+    // }
 
     /// <summary>
     /// Changes the song that's currently playing but now with fade
