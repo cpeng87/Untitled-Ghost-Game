@@ -22,7 +22,7 @@ public class TeapotController : MinigameCompletion
     public float pourThreshold = 20f;
 
     [SerializeField] private int teaCounter;
-    [SerializeField] private int maxTeaParticles = 200;
+    [SerializeField] private int maxTeaParticles;
     public bool outOfTea = false;
     private float totalEmittedParticles = 0;
     public Slider teaProgress;
@@ -39,8 +39,8 @@ public class TeapotController : MinigameCompletion
         originalZ = transform.position.z;
 
         //set slider values based on neededparticles
-        neededParticles = (int) (0.65f * 200);
-        overflowParticles = (int) (0.8f * 200);
+        neededParticles = (int) (0.65f * maxTeaParticles);
+        overflowParticles = (int) (0.8f * maxTeaParticles);
 
         teaProgress.minValue = 0;
         teaProgress.maxValue = 1;
@@ -49,11 +49,14 @@ public class TeapotController : MinigameCompletion
 
     void Update()
     {
-        if (teaCounter > 200 && !isComplete)
+        if (teaCounter > maxTeaParticles && !isComplete)
         {
             isComplete = true;
-            AudioManager.Instance.UnPauseSound();
-            AudioManager.Instance.StopSound();
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.UnPauseSound();
+                AudioManager.Instance.StopSound();
+            }
             minigameResult.MinigameResult(false);
         }
         if (!isComplete)
@@ -61,7 +64,7 @@ public class TeapotController : MinigameCompletion
             pourPauseTimer += Time.deltaTime;
             if (pourPauseTimer >= 0.1f)
             {
-                if (AudioManager.Instance == null)
+                if (AudioManager.Instance != null)
                 {
                     AudioManager.Instance.PauseSound();
                 }
@@ -153,10 +156,13 @@ public class TeapotController : MinigameCompletion
     private void OnParticleTrigger()
     {
         teaCounter += 1;
-        AudioManager.Instance.UnPauseSound();
-        if (!AudioManager.Instance.CheckPlaying())
+        if (AudioManager.Instance != null)
         {
-            AudioManager.Instance.PlaySound("Pour");
+            AudioManager.Instance.UnPauseSound();
+            if (!AudioManager.Instance.CheckPlaying())
+            {
+                AudioManager.Instance.PlaySound("Pour");
+            }
         }
 
         //update slider

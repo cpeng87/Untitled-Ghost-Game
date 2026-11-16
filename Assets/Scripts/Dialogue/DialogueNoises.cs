@@ -26,7 +26,7 @@ public class DialogueNoises : MonoBehaviour
     {
         if (Time.time - lastPlayedTime >= cooldownTime)
         {
-            int index = (int) (Random.value * letterClips.Count);
+            int index = Random.Range(0, letterClips.Count);
             AudioManager.Instance.PlaySound(letterClips[index]);
             lastPlayedTime = Time.time;
         }
