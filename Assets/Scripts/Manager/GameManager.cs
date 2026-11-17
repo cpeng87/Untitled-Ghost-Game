@@ -306,7 +306,6 @@ public class GameManager : MonoBehaviour
     public void LoadGame()
     {
         SaveData saveData = SaveManager.LoadGame();
-        Debug.Log(saveData.arc);
         state = State.Main;
         arc = saveData.arc;
         ghostManager.SetGhostProgress(saveData.ghostNameToStoryIndex, saveData.ghostNameToCompleted);

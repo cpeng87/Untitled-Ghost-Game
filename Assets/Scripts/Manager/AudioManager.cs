@@ -430,4 +430,12 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public bool IsSongInDict(string song)
+    {
+        if (musicDict.ContainsKey(song))
+        {
+            return true;
+        }
+        return false;
+    }
 }
